@@ -1,0 +1,153 @@
+---
+// Бренды: логотипы на главной и описания на страницах разделов.
+import AdminLayout from '../../../layouts/AdminLayout.astro';
+import { sql } from '../../../server/db.ts';
+import { getSections, type Brand } from '../../../server/sections.ts';
+import { formFiles, removeUploads, saveImage, uploadUrl } from '../../../server/uploads.ts';
+import { withFlash } from '../../../server/admin.ts';
+import { bool, int, intOrNull, str, toInt } from '../../../server/util.ts';
+
+const filter = toInt(Astro.url.searchParams.get('section'));
+const back = filter ? `/admin/brands?section=${filter}` : '/admin/brands';
+let error = '';
+if (Astro.request.method === 'POST') {
+  const data = await Astro.request.formData();
+  const action = str(data, '_action');
+  const id = toInt(str(data, 'id'));
+  try {
+    if (action === 'delete' && id) {
+      const [gone] = await sql<{ logo: string }[]>`DELETE FROM brands WHERE id = ${id} RETURNING logo`;
+      await removeUploads(gone?.logo);
+      return Astro.redirect(withFlash(back, 'ok', 'deleted'));
+    }
+    const values = {
+      name: str(data, 'name'),
+      sectionId: intOrNull(data, 'section_id'),
+      description: String(data.get('description') ?? '').trim(),
+      link: str(data, 'link'),
+      sortOrder: int(data, 'sort_order'),
+      isActive: bool(data, 'is_active'),
+    };
+    if (!values.name) throw new Error('Укажите название бренда');
+    const [file] = formFiles(data, 'logo');
+    const logo = file ? (await saveImage(Buffer.from(await file.arrayBuffer()), 'brand'))[0] : null;
+    const dropLogo = !logo && bool(data, 'logo__del');
+    if (id) {
+      const [old] = await sql<{ logo: string }[]>`SELECT logo FROM brands WHERE id = ${id}`;
+      await sql`UPDATE brands SET ${sql(logo || dropLogo ? { ...values, logo: logo ?? '' } : values)} WHERE id = ${id}`;
+      if (logo || dropLogo) await removeUploads(old?.logo);
+      return Astro.redirect(withFlash(back, 'ok', 'saved'));
+    }
+    await sql`INSERT INTO brands ${sql({ ...values, logo: logo ?? '' })}`;
+    return Astro.redirect(withFlash(back, 'ok', 'created'));
+  } catch (err) {
+    error = (err as Error).message;
+  }
+}
+
+const sections = await getSections();
+const brands = filter
+  ? await sql<Brand[]>`SELECT * FROM brands WHERE section_id = ${filter} ORDER BY sort_order, id`
+  : await sql<Brand[]>`SELECT b.* FROM brands b LEFT JOIN sections s ON s.id = b.section_id ORDER BY s.sort_order NULLS LAST, b.sort_order, b.id`;
+const nextOrder = (brands.at(-1)?.sortOrder ?? 0) + 10;
+const sectionName = (id: number | null) => sections.find((s) => s.id === id)?.name ?? '— без раздела —';
+---
+
+<AdminLayout title="Бренды" section="brands">
+  <div class="toolbar">
+    <h1>Бренды</h1>
+    <div class="actions">
+      <form method="get" class="inline">
+        <select name="section" onchange="this.form.submit()" aria-label="Раздел">
+          <option value="">Все разделы</option>
+          {sections.map((s) => <option value={s.id} selected={s.id === filter}>{s.name}</option>)}
+        </select>
+      </form>
+    </div>
+  </div>
+  <p class="muted">
+    Логотипы показываются на главной, описания — на странице раздела. Без логотипа на сайте пишется название бренда.
+    Ссылка ведёт на коллекции бренда: сайт производителя или ваша страница.
+  </p>
+  {error && <div class="flash err">{error}</div>}
+
+  {
+    brands.map((b) => (
+      <form class="card" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="id" value={b.id} />
+        <h2>{b.name} <span class="muted small">· {sectionName(b.sectionId)}</span></h2>
+        <div class="form-grid">
+          <div class="field">
+            <label>Название</label>
+            <input type="text" name="name" value={b.name} required />
+          </div>
+          <div class="field">
+            <label>Раздел</label>
+            <select name="section_id">
+              <option value="">— без раздела —</option>
+              {sections.map((s) => <option value={s.id} selected={s.id === b.sectionId}>{s.name}</option>)}
+            </select>
+          </div>
+          <div class="field full">
+            <label>Ссылка на коллекции</label>
+            <input type="text" name="link" value={b.link} placeholder="https://" />
+          </div>
+          <div class="field full">
+            <label>Описание</label>
+            <textarea name="description" rows="4">{b.description}</textarea>
+            <div class="hint">Можно с HTML-разметкой: &lt;p&gt;, &lt;b&gt;, &lt;a href="…"&gt;.</div>
+          </div>
+          <div class="field">
+            <label>Логотип</label>
+            {b.logo ? <img class="preview" src={uploadUrl(b.logo)} alt={b.name} style="max-width:200px;background:#fff;padding:6px" /> : <div class="muted small">не загружен</div>}
+            <input type="file" name="logo" accept="image/*" />
+            {b.logo && <label class="check small"><input type="checkbox" name="logo__del" /> удалить логотип</label>}
+          </div>
+          <div class="field inline">
+            <label class="small">Порядок <input type="number" name="sort_order" value={b.sortOrder} style="width:90px" /></label>
+            <label class="check"><input type="checkbox" name="is_active" checked={b.isActive} /> Показывать</label>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button class="btn" type="submit" name="_action" value="save">Сохранить</button>
+          <button class="btn danger" type="submit" name="_action" value="delete" formnovalidate data-confirm="Удалить бренд?">Удалить</button>
+        </div>
+      </form>
+    ))
+  }
+
+  <form class="card" method="post" enctype="multipart/form-data">
+    <h2>Добавить бренд</h2>
+    <div class="form-grid">
+      <div class="field">
+        <label for="new-name">Название *</label>
+        <input type="text" id="new-name" name="name" required />
+      </div>
+      <div class="field">
+        <label for="new-section">Раздел</label>
+        <select id="new-section" name="section_id">
+          <option value="">— без раздела —</option>
+          {sections.map((s) => <option value={s.id} selected={s.id === filter}>{s.name}</option>)}
+        </select>
+      </div>
+      <div class="field full">
+        <label for="new-link">Ссылка на коллекции</label>
+        <input type="text" id="new-link" name="link" placeholder="https://" />
+      </div>
+      <div class="field full">
+        <label for="new-description">Описание</label>
+        <textarea id="new-description" name="description" rows="4"></textarea>
+      </div>
+      <div class="field">
+        <label for="new-logo">Логотип</label>
+        <input type="file" id="new-logo" name="logo" accept="image/*" data-preview="new-logo-preview" />
+        <img id="new-logo-preview" class="preview" alt="" hidden style="margin-top:8px;max-width:200px" />
+      </div>
+      <div class="field inline">
+        <label class="small">Порядок <input type="number" name="sort_order" value={nextOrder} style="width:90px" /></label>
+        <label class="check"><input type="checkbox" name="is_active" checked /> Показывать</label>
+      </div>
+    </div>
+    <div class="form-actions"><button class="btn" type="submit" name="_action" value="save">Добавить</button></div>
+  </form>
+</AdminLayout>

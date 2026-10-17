@@ -1,0 +1,72 @@
+---
+// Подвал: колонки ссылок, контакты, логотип по центру, карта.
+import type { MenuName, MenuItem } from '../server/content.ts';
+import type { Settings } from '../server/settings.ts';
+import SocialIcon from './SocialIcon.astro';
+
+interface Props {
+  settings: Settings;
+  menus: Record<MenuName, MenuItem[]>;
+  maps: { src: string; title: string }[];
+  copyright: string;
+}
+const { settings, menus, maps, copyright } = Astro.props;
+const phoneHref = (p: string) => 'tel:' + p.replace(/[^\d+]/g, '');
+---
+
+<footer class="pf">
+  <div class="pf-cols">
+    <div class="pf-col">
+      <div class="pf-title">Компания</div>
+      {menus.footer_company.map((m) => <a href={m.url} target={m.newTab ? '_blank' : undefined}>{m.label}</a>)}
+    </div>
+    <div class="pf-col">
+      <div class="pf-title">Контакты</div>
+      <div class="pf-contact">
+        <span>{settings.address}</span>
+        <a href={phoneHref(settings.phone_main)}>{settings.phone_main}</a>
+        {settings.work_hours && <span class="pf-muted">{settings.work_hours}</span>}
+      </div>
+      {
+        (settings.phone_second || settings.address_second) && (
+          <div class="pf-contact">
+            <span>{settings.name_second}, {settings.address_second}</span>
+            {settings.phone_second && <a href={phoneHref(settings.phone_second)}>{settings.phone_second}</a>}
+            {settings.work_hours_second && <span class="pf-muted">{settings.work_hours_second}</span>}
+          </div>
+        )
+      }
+      {settings.email && <a href={`mailto:${settings.email}`}>{settings.email}</a>}
+    </div>
+    <div class="pf-col">
+      <div class="pf-title">Приходите в офис</div>
+      <p class="pf-muted">Покажем образцы, подберём покрытие под объект, рассчитаем количество.</p>
+      <a class="pbtn pbtn-outline" href="/contact">Контакты</a>
+    </div>
+  </div>
+
+  <div class="pf-logo">
+    <a href="/" aria-label={settings.site_name}><img src="/img/logo-white.svg" alt={settings.site_name} width="492" height="110" /></a>
+  </div>
+
+  <div class="pf-bottom">
+    <span class="pf-muted">{copyright}</span>
+    <div class="pf-social">
+      {settings.instagram_url && <a href={settings.instagram_url} target="_blank" rel="noopener" aria-label="Instagram"><SocialIcon name="instagram" />Instagram</a>}
+      {settings.facebook_url && <a href={settings.facebook_url} target="_blank" rel="noopener" aria-label="Facebook"><SocialIcon name="facebook" />Facebook</a>}
+    </div>
+  </div>
+
+  {
+    maps.length > 0 && (
+      <div class:list={['maps', { two: maps.length > 1 }]}>
+        {maps.map((m) => (
+          <div class="map">
+            {maps.length > 1 && <div class="map_title">{m.title}</div>}
+            <iframe data-src={m.src} title={`Карта: ${m.title}`} allowfullscreen referrerpolicy="strict-origin-when-cross-origin" />
+          </div>
+        ))}
+      </div>
+    )
+  }
+</footer>

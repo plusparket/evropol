@@ -1,0 +1,85 @@
+---
+// Ссылки в верхней полосе и в подвале. Вкладки разделов строятся из «Разделов» автоматически.
+import AdminLayout from '../../../layouts/AdminLayout.astro';
+import { sql } from '../../../server/db.ts';
+import { getMenus, MENUS, type MenuName } from '../../../server/content.ts';
+import { withFlash } from '../../../server/admin.ts';
+import { getSections } from '../../../server/sections.ts';
+import { str, strs } from '../../../server/util.ts';
+
+let error = '';
+if (Astro.request.method === 'POST') {
+  const data = await Astro.request.formData();
+  const menu = str(data, 'menu') as MenuName;
+  if (!MENUS.some((m) => m.key === menu)) {
+    error = 'Неизвестное меню';
+  } else {
+    const labels = strs(data, 'label');
+    const urls = strs(data, 'url');
+    const newTab = new Set(strs(data, 'new_tab').map(Number));
+    const items = labels
+      .map((label, i) => ({ label: label.trim(), url: (urls[i] ?? '').trim(), newTab: newTab.has(i) }))
+      .filter((it) => it.label && it.url);
+    await sql.begin(async (tx) => {
+      await tx`DELETE FROM menu_items WHERE menu = ${menu}`;
+      for (const [i, it] of items.entries()) {
+        await tx`INSERT INTO menu_items (menu, label, url, sort_order, new_tab) VALUES (${menu}, ${it.label}, ${it.url}, ${(i + 1) * 10}, ${it.newTab})`;
+      }
+    });
+    return Astro.redirect(withFlash('/admin/menus', 'ok', 'saved'));
+  }
+}
+
+const menus = await getMenus();
+const pages = await sql<{ slug: string; title: string }[]>`SELECT slug, title FROM pages ORDER BY title`;
+const sections = await getSections();
+---
+
+<AdminLayout title="Меню" section="menus">
+  <div class="toolbar"><h1>Меню</h1></div>
+  <p class="muted">
+    Меню каталога (Паркет, Ламинат…) формируется из раздела «Категории». Здесь — текстовые ссылки в верхней полосе и в подвале.
+    Порядок — стрелками ↑ ↓. Пустые строки удаляются при сохранении.
+  </p>
+  {error && <div class="flash err">{error}</div>}
+
+  {
+    MENUS.map((m) => (
+      <form class="card" method="post">
+        <h2>{m.title}</h2>
+        <input type="hidden" name="menu" value={m.key} />
+        <div class="rows" id={`menu-${m.key}`}>
+          {menus[m.key].map((it) => (
+            <div class="row-item">
+              <input type="text" name="label" value={it.label} placeholder="Текст ссылки" />
+              <input type="text" name="url" value={it.url} placeholder="/about" list="page-urls" />
+              <button type="button" class="btn secondary move" data-row-action="up">↑</button>
+              <button type="button" class="btn secondary move" data-row-action="down">↓</button>
+              <button type="button" class="btn danger" data-row-action="remove">✕</button>
+            </div>
+          ))}
+        </div>
+        <template id={`menu-${m.key}-tpl`}>
+          <div class="row-item">
+            <input type="text" name="label" placeholder="Текст ссылки" />
+            <input type="text" name="url" placeholder="/about" list="page-urls" />
+            <button type="button" class="btn secondary move" data-row-action="up">↑</button>
+            <button type="button" class="btn secondary move" data-row-action="down">↓</button>
+            <button type="button" class="btn danger" data-row-action="remove">✕</button>
+          </div>
+        </template>
+        <div class="form-actions">
+          <button type="button" class="btn secondary" data-row-action="add" data-target={`menu-${m.key}`}>+ Ссылка</button>
+          <button type="submit" class="btn">Сохранить</button>
+        </div>
+      </form>
+    ))
+  }
+
+  <datalist id="page-urls">
+    <option value="/">Главная</option>
+    <option value="/news">Новости и события</option>
+    {pages.map((p) => <option value={`/${p.slug}`}>{p.title}</option>)}
+    {sections.map((s) => <option value={`/${s.slug}`}>{s.name}</option>)}
+  </datalist>
+</AdminLayout>

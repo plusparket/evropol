@@ -1,0 +1,18 @@
+# База данных
+
+PostgreSQL 18. Схема — `db/migrations/001_init.sql`; новые миграции добавляются файлами со следующим номером и
+применяются при старте (список применённых — `schema_migrations`).
+
+| Таблица | Что хранит |
+|---|---|
+| `users`, `sessions` | администраторы и их сессии (в `sessions.id` — sha256 токена из cookie) |
+| `sections` | разделы: `slug` (адрес `/slug`), `name`, `heading`, `summary` (карточка на главной), `description` (HTML), `image`, `link` (сайт раздела), `link_label`, SEO-поля, `sort_order`, `is_published` |
+| `brands` | бренды: `section_id` (раздел, при удалении раздела — NULL), `name`, `logo`, `description` (HTML), `link` (коллекции), `sort_order`, `is_active` |
+| `pages` | текстовые страницы: `slug`, `title`, `content` (HTML с `{{placeholder}}`), SEO-поля, `is_published` |
+| `news` | новости: `slug` (адрес `/news/slug`), `title`, `excerpt`, `content`, `image`, `published_at`, `is_published`, `views`; у постов Instagram `source = 'instagram'`, `source_id`, `source_url` |
+| `menu_items` | ссылки меню: `menu` (`top` — шапка, `footer_company` — подвал), `label`, `url`, `sort_order`, `new_tab` |
+| `settings` | настройки «ключ — значение»; `home_content` — JSON главной, `instagram_token` — продлённый ключ Instagram |
+| `redirects` | 301: `from_path` → `to_path`, `hits`, `last_hit` |
+| `visits_daily` | посетители и просмотры по дням для обзора в админке |
+
+Пути картинок (`image`, `logo`) хранятся относительно тома `uploads` и отдаются по адресу `/uploads/…`.

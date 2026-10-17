@@ -1,0 +1,60 @@
+---
+import AdminLayout from '../../layouts/AdminLayout.astro';
+import { getSettings, saveSettings, SETTINGS_SCHEMA, type Settings } from '../../server/settings.ts';
+import { withFlash } from '../../server/admin.ts';
+
+if (Astro.request.method === 'POST') {
+  const data = await Astro.request.formData();
+  const values: Partial<Settings> = {};
+  for (const s of SETTINGS_SCHEMA) {
+    const type = 'type' in s ? s.type : 'text';
+    const raw = String(data.get(s.key) ?? '').trim();
+    if (type === 'checkbox') values[s.key] = data.has(s.key) ? '1' : '0';
+    else values[s.key] = raw;
+  }
+  await saveSettings(values);
+  return Astro.redirect(withFlash('/admin/settings', 'ok', 'saved'));
+}
+
+const settings = await getSettings();
+const groups = [...new Set(SETTINGS_SCHEMA.map((s) => s.group))];
+---
+
+<AdminLayout title="Настройки сайта" section="settings">
+  <div class="toolbar"><h1>Настройки сайта</h1></div>
+  <form method="post">
+    {
+      groups.map((group) => (
+        <div class="card">
+          <h2>{group}</h2>
+          <div class="form-grid">
+            {SETTINGS_SCHEMA.filter((s) => s.group === group).map((s) => {
+              const type = 'type' in s ? s.type : 'text';
+              return (
+                <div class:list={['field', { full: type !== 'text' }]}>
+                  {type === 'checkbox' ? (
+                    <label class="check">
+                      <input type="checkbox" name={s.key} checked={settings[s.key] === '1'} /> {s.label}
+                    </label>
+                  ) : (
+                    <Fragment>
+                      <label for={s.key}>{s.label}</label>
+                      {type === 'text' ? (
+                        <input type="text" id={s.key} name={s.key} value={settings[s.key]} />
+                      ) : (
+                        <textarea id={s.key} name={s.key} class:list={{ code: type === 'code' }} rows={type === 'code' ? 10 : 3}>
+                          {settings[s.key]}
+                        </textarea>
+                      )}
+                    </Fragment>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      ))
+    }
+    <div class="form-actions sticky-actions"><button class="btn" type="submit">Сохранить настройки</button></div>
+  </form>
+</AdminLayout>

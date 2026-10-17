@@ -1,0 +1,109 @@
+---
+import AdminLayout from '../../../layouts/AdminLayout.astro';
+import { sql } from '../../../server/db.ts';
+import { uniqueNewsSlug, type News } from '../../../server/content.ts';
+import { dbErrorMessage, withFlash } from '../../../server/admin.ts';
+import { bool, isValidSlug, slugify, str, toDatetimeLocal, toInt } from '../../../server/util.ts';
+
+const isNew = Astro.params.id === 'new';
+const id = isNew ? null : toInt(Astro.params.id);
+if (!isNew && !id) return Astro.redirect('/admin/news');
+
+const [existing] = id ? await sql<News[]>`SELECT * FROM news WHERE id = ${id}` : [];
+if (!isNew && !existing) return Astro.redirect(withFlash('/admin/news', 'err', 'Запись не найдена'));
+
+let error = '';
+let form = {
+  title: existing?.title ?? '',
+  slug: existing?.slug ?? '',
+  excerpt: existing?.excerpt ?? '',
+  content: existing?.content ?? '',
+  publishedAt: existing?.publishedAt ?? new Date(),
+  isPublished: existing?.isPublished ?? true,
+};
+
+if (Astro.request.method === 'POST') {
+  const data = await Astro.request.formData();
+  if (str(data, '_action') === 'delete' && id) {
+    await sql`DELETE FROM news WHERE id = ${id}`;
+    return Astro.redirect(withFlash('/admin/news', 'ok', 'deleted'));
+  }
+  const date = new Date(str(data, 'published_at'));
+  form = {
+    title: str(data, 'title'),
+    slug: slugify(str(data, 'slug')),
+    excerpt: str(data, 'excerpt'),
+    content: String(data.get('content') ?? '').trim(),
+    publishedAt: Number.isNaN(date.getTime()) ? new Date() : date,
+    isPublished: bool(data, 'is_published'),
+  };
+  if (!form.title) error = 'Укажите заголовок';
+  else if (form.slug && !isValidSlug(form.slug)) error = 'Адрес: латинские буквы, цифры и дефис';
+  // Пустой адрес — сайт сделает его из заголовка
+  if (!error && !form.slug) form.slug = await uniqueNewsSlug(form.title, id ?? 0);
+  if (!error) {
+    try {
+      if (id) {
+        await sql`UPDATE news SET ${sql(form)}, updated_at = now() WHERE id = ${id}`;
+        return Astro.redirect(withFlash(`/admin/news/${id}`, 'ok', 'saved'));
+      }
+      const [row] = await sql<{ id: number }[]>`INSERT INTO news ${sql(form)} RETURNING id`;
+      return Astro.redirect(withFlash(`/admin/news/${row.id}`, 'ok', 'created'));
+    } catch (err) {
+      error = dbErrorMessage(err);
+    }
+  }
+}
+const title = isNew ? 'Новая запись' : form.title;
+---
+
+<AdminLayout title={title} section="news">
+  <div class="toolbar">
+    <h1>{title}</h1>
+    <div class="actions">
+      {existing && <a class="btn secondary" href={`/news/${existing.slug}`} target="_blank" rel="noopener">Открыть на сайте ↗</a>}
+      <a class="btn secondary" href="/admin/news">← К списку</a>
+    </div>
+  </div>
+  {error && <div class="flash err">{error}</div>}
+
+  <form method="post">
+    <div class="card">
+      <div class="form-grid">
+        <div class="field full">
+          <label for="title">Заголовок *</label>
+          <input type="text" id="title" name="title" value={form.title} required />
+        </div>
+        <div class="field full">
+          <label for="slug">Адрес на сайте: /news/…</label>
+          <input type="text" id="slug" name="slug" value={form.slug} placeholder="new-carpet-collection" pattern="[a-z0-9][a-z0-9_-]*" />
+          <div class="hint">Английскими словами через дефис, по смыслу заголовка. Пусто — сайт сделает адрес из заголовка латиницей</div>
+        </div>
+        <div class="field">
+          <label for="published_at">Дата публикации</label>
+          <input type="datetime-local" id="published_at" name="published_at" value={toDatetimeLocal(form.publishedAt)} />
+          <div class="hint">Если дата в будущем — запись появится на сайте в этот момент</div>
+        </div>
+        <div class="field">
+          <span class="label">&nbsp;</span>
+          <label class="check"><input type="checkbox" name="is_published" checked={form.isPublished} /> Опубликована</label>
+        </div>
+        <div class="field full">
+          <label for="excerpt">Краткий анонс (в списке новостей)</label>
+          <textarea id="excerpt" name="excerpt" rows="2">{form.excerpt}</textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Текст записи</h2>
+      <textarea name="content" data-editor data-height="460">{form.content}</textarea>
+    </div>
+
+    <div class="form-actions sticky-actions">
+      <button class="btn" type="submit" name="_action" value="save">Сохранить</button>
+      <span class="spacer"></span>
+      {!isNew && <button class="btn danger" type="submit" name="_action" value="delete" formnovalidate data-confirm="Удалить запись?">Удалить</button>}
+    </div>
+  </form>
+</AdminLayout>

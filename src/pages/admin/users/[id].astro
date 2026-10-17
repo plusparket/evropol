@@ -1,0 +1,88 @@
+---
+import AdminLayout from '../../../layouts/AdminLayout.astro';
+import { sql } from '../../../server/db.ts';
+import { hashPassword } from '../../../server/auth.ts';
+import { dbErrorMessage, withFlash } from '../../../server/admin.ts';
+import { bool, str, toInt } from '../../../server/util.ts';
+
+const isNew = Astro.params.id === 'new';
+const id = isNew ? null : toInt(Astro.params.id);
+if (!isNew && !id) return Astro.redirect('/admin/users');
+const isSelf = id === Astro.locals.user?.id;
+
+const [existing] = id ? await sql<{ id: number; login: string; name: string; isActive: boolean }[]>`
+  SELECT id, login, name, is_active FROM users WHERE id = ${id}` : [];
+if (!isNew && !existing) return Astro.redirect(withFlash('/admin/users', 'err', 'Пользователь не найден'));
+
+let error = '';
+let form = { login: existing?.login ?? '', name: existing?.name ?? '', isActive: existing?.isActive ?? true };
+
+if (Astro.request.method === 'POST') {
+  const data = await Astro.request.formData();
+  if (str(data, '_action') === 'delete' && id) {
+    if (isSelf) error = 'Нельзя удалить самого себя';
+    else {
+      await sql`DELETE FROM users WHERE id = ${id}`;
+      return Astro.redirect(withFlash('/admin/users', 'ok', 'deleted'));
+    }
+  } else {
+    form = { login: str(data, 'login'), name: str(data, 'name'), isActive: isSelf ? true : bool(data, 'is_active') };
+    const password = String(data.get('password') ?? '');
+    if (!/^[a-zA-Z0-9._@-]{3,50}$/.test(form.login)) error = 'Логин: 3–50 символов, латиница, цифры, точка, дефис';
+    else if (isNew && password.length < 8) error = 'Пароль должен быть не короче 8 символов';
+    else if (password && password.length < 8) error = 'Пароль должен быть не короче 8 символов';
+
+    if (!error) {
+      try {
+        const values = password ? { ...form, passwordHash: await hashPassword(password) } : form;
+        if (id) {
+          await sql`UPDATE users SET ${sql(values)} WHERE id = ${id}`;
+          // Смена пароля или отключение выкидывает пользователя из всех сессий (кроме своей текущей)
+          if ((password || !form.isActive) && !isSelf) await sql`DELETE FROM sessions WHERE user_id = ${id}`;
+          return Astro.redirect(withFlash(`/admin/users/${id}`, 'ok', 'saved'));
+        }
+        const [row] = await sql<{ id: number }[]>`INSERT INTO users ${sql(values)} RETURNING id`;
+        return Astro.redirect(withFlash(`/admin/users/${row.id}`, 'ok', 'created'));
+      } catch (err) {
+        error = dbErrorMessage(err);
+      }
+    }
+  }
+}
+const title = isNew ? 'Новый пользователь' : form.login;
+---
+
+<AdminLayout title={title} section="users">
+  <div class="toolbar">
+    <h1>{title}</h1>
+    <div class="actions"><a class="btn secondary" href="/admin/users">← К списку</a></div>
+  </div>
+  {error && <div class="flash err">{error}</div>}
+
+  <form method="post" class="card" autocomplete="off">
+    <div class="form-grid">
+      <div class="field">
+        <label for="login">Логин *</label>
+        <input type="text" id="login" name="login" value={form.login} required autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="name">Имя</label>
+        <input type="text" id="name" name="name" value={form.name} />
+      </div>
+      <div class="field">
+        <label for="password">{isNew ? 'Пароль *' : 'Новый пароль'}</label>
+        <input type="password" id="password" name="password" minlength="8" autocomplete="new-password" required={isNew} />
+        {!isNew && <div class="hint">Оставьте пустым, чтобы не менять</div>}
+      </div>
+      <div class="field">
+        <span class="label">&nbsp;</span>
+        <label class="check"><input type="checkbox" name="is_active" checked={form.isActive} disabled={isSelf} /> Доступ разрешён</label>
+      </div>
+    </div>
+    <div class="form-actions">
+      <button class="btn" type="submit" name="_action" value="save">Сохранить</button>
+      <span class="spacer"></span>
+      {!isNew && !isSelf && <button class="btn danger" type="submit" name="_action" value="delete" formnovalidate data-confirm="Удалить пользователя?">Удалить</button>}
+    </div>
+  </form>
+</AdminLayout>

@@ -1,0 +1,127 @@
+{
+  "sections": [
+    {
+      "slug": "vinyl",
+      "name": "Винил",
+      "heading": "Виниловые полы",
+      "summary": "Кварцвиниловая плитка и доска Moduleo и BerryAlloc для квартир, офисов и магазинов.",
+      "description": "<p>Виниловый пол не боится воды, поэтому его кладут на кухне, в ванной, в прихожей и в торговом зале. Moduleo и BerryAlloc выпускают плитку и доску с рисунком дерева и камня.</p>"
+    },
+    {
+      "slug": "carpet-tiles",
+      "name": "Ковровая плитка",
+      "summary": "Модульный ковёр Modulyss, Betap, IVC Commercial и BLOQ для офисов, гостиниц и классов.",
+      "description": "<p>Ковровую плитку укладывают квадратами. Плитки разных цветов и фактур складываются в свой рисунок, а протёртую плитку у входа меняют одну, без перестилки всего пола. Ковёр гасит шаги и голоса, поэтому в офисе с ним тише.</p>"
+    },
+    {
+      "slug": "adhesives",
+      "name": "Строительная химия",
+      "heading": "Клеи и строительная химия",
+      "summary": "Клеи, грунтовки и выравнивающие смеси Forbo Eurocol для укладки полов.",
+      "description": "<p>Forbo Eurocol делает всё, что нужно для укладки пола: грунтовки, выравнивающие смеси, клеи для винила, линолеума, ковровых покрытий и паркета.</p>"
+    },
+    {
+      "slug": "decking",
+      "name": "Террасная доска",
+      "summary": "Доска CM Decking для террас, летних кухонь и дорожек.",
+      "description": "<p>Террасную доску кладут под открытым небом: на террасе, летней кухне, у бассейна, на садовой дорожке.</p>"
+    },
+    {
+      "slug": "linoleum",
+      "name": "Коммерческий линолеум",
+      "summary": "Линолеум IVC Commercial для офисов, школ, больниц и магазинов.",
+      "description": "<p>Коммерческий линолеум рассчитан на места, где за день проходят сотни людей: коридоры офисов, школы, больницы, магазины.</p>"
+    }
+  ],
+  "brands": [
+    {
+      "section": "vinyl",
+      "name": "Moduleo",
+      "link": "https://www.moduleo.com/ru-ru/%D0%BA%D0%B2%D0%B0%D1%80%D1%86%D0%B2%D0%B8%D0%BD%D0%B8%D0%BB%D0%BE%D0%B2%D0%B0%D1%8F-%D0%BF%D0%BB%D0%B8%D1%82%D0%BA%D0%B0?page=1&page_size=8&view_size=8",
+      "description": "<p>Бельгийский производитель виниловых полов из IVC Group, которая входит в Mohawk Industries. Moduleo сам ведёт всю цепочку: дизайн, производство, доставку, и выпускает полы по «зелёным» стандартам.</p>"
+    },
+    {
+      "section": "vinyl",
+      "name": "BerryAlloc",
+      "link": "https://www.berryalloc.com/global/en/Vinyl-Planks",
+      "description": "<p>Бельгийская компания: ламинат, винил, паркет и стеновые панели для домов и коммерческих объектов. Рисунки под дерево и под камень.</p>"
+    },
+    {
+      "section": "carpet-tiles",
+      "name": "Modulyss",
+      "link": "https://www.modulyss.com/ru-RU/kovrovaya-plitka/kollektsii",
+      "description": "<p>Бельгийский производитель коммерческой ковровой плитки. Цвета, фактуры и рисунки Modulyss подобраны так, чтобы дизайнеры и архитекторы сочетали коллекции между собой.</p>"
+    },
+    {
+      "section": "carpet-tiles",
+      "name": "Betap",
+      "link": "https://betap.com/segments/commercial-interiors?query=&collection=&color=&pattern=&material=&segment=1143&page=1",
+      "description": "<p>Нидерландский производитель ковров, поставляет их оптовым и розничным продавцам по всему миру. Betap делает дизайнерские ковры по доступной цене и следит за экологичностью производства.</p>"
+    },
+    {
+      "section": "carpet-tiles",
+      "name": "IVC Commercial",
+      "link": "https://www.ivc-commercial.com/ru-ru/%D0%BA%D0%BE%D0%B2%D1%80%D0%BE%D0%B2%D0%B0%D1%8F-%D0%BF%D0%BB%D0%B8%D1%82%D0%BA%D0%B0?page=1&page_size=0&view_size=9",
+      "description": "<p>Коммерческое направление IVC Group: покрытия для офисов, общественных зданий и жилья. В компании 1800 сотрудников, заводы работают в Европе, США и России.</p>"
+    },
+    {
+      "section": "carpet-tiles",
+      "name": "BLOQ",
+      "link": "https://bloq.nl/products",
+      "description": ""
+    },
+    {
+      "section": "adhesives",
+      "name": "Forbo Eurocol",
+      "link": "https://www.forbo.com/eurocol/ru/produkty/p8rzcp",
+      "description": "<p>Производитель клеев и материалов для укладки полов. Forbo Eurocol проверяет продукцию на каждом этапе производства, перевёл рецептуры на более натуральные компоненты и подтверждает безопасность материалов сертификатами.</p>"
+    },
+    {
+      "section": "decking",
+      "name": "CM Decking",
+      "link": "https://cottagemode.ru/products/terrasnaja-doska-cm-decking",
+      "description": ""
+    },
+    {
+      "section": "linoleum",
+      "name": "IVC Commercial",
+      "link": "https://www.ivc-commercial.com/ru-ru/%D0%BA%D0%BE%D0%BC%D0%BC%D0%B5%D1%80%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9-%D0%BB%D0%B8%D0%BD%D0%BE%D0%BB%D0%B5%D1%83%D0%BC?page=1&page_size=0&view_size=9",
+      "description": "<p>Коммерческий линолеум IVC Group для офисов, общественных зданий и жилья.</p>"
+    }
+  ],
+  "menus": {
+    "top": [
+      { "label": "О компании", "url": "/about" },
+      { "label": "Новости и события", "url": "/news" },
+      { "label": "Контакты", "url": "/contact" }
+    ],
+    "footer_company": [
+      { "label": "О компании", "url": "/about" },
+      { "label": "Новости и события", "url": "/news" },
+      { "label": "Контакты", "url": "/contact" }
+    ]
+  },
+  "pages": [
+    { "slug": "about", "title": "О компании" },
+    { "slug": "contact", "title": "Контакты" }
+  ],
+  "news": [
+    { "slug": "website-launch", "title": "Мы запустили свой вебсайт!", "date": "2021-08-02T12:00:00+06:00" },
+    { "slug": "new-carpet-collection", "title": "Новая коллекция ковролина", "date": "2021-08-04T12:00:00+06:00" },
+    { "slug": "decking-for-summer-terraces", "title": "Террасная доска: лучшее решение для летника", "date": "2021-08-05T12:00:00+06:00" }
+  ],
+  "redirects": [
+    { "from": "/index.php", "to": "/", "note": "старый сайт на PHP" },
+    { "from": "/o-kompanii.html", "to": "/about", "note": "старый сайт на PHP" },
+    { "from": "/o-kompanii", "to": "/about", "note": "старый сайт на PHP" },
+    { "from": "/kontakty.html", "to": "/contact", "note": "старый сайт на PHP" },
+    { "from": "/kontakty", "to": "/contact", "note": "старый сайт на PHP" },
+    { "from": "/novosti-i-sobytiya.html", "to": "/news", "note": "старый сайт на PHP" },
+    { "from": "/novosti-i-sobytiya", "to": "/news", "note": "старый сайт на PHP" },
+    { "from": "/produkty.html", "to": "/", "note": "старый сайт на PHP: разделы теперь на главной" },
+    { "from": "/produkty", "to": "/", "note": "старый сайт на PHP: разделы теперь на главной" },
+    { "from": "/143-my-zapustili-svoj-vebsajt.html", "to": "/news/website-launch", "note": "старый сайт на PHP" },
+    { "from": "/144-novaya-kollektsiya-kovrolina.html", "to": "/news/new-carpet-collection", "note": "старый сайт на PHP" },
+    { "from": "/145-terrasnaya-doska-luchshee-resheniya-dlya-letnika.html", "to": "/news/decking-for-summer-terraces", "note": "старый сайт на PHP" }
+  ]
+}

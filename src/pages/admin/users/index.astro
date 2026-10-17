@@ -1,0 +1,33 @@
+---
+import AdminLayout from '../../../layouts/AdminLayout.astro';
+import { sql } from '../../../server/db.ts';
+
+const users = await sql<{ id: number; login: string; name: string; isActive: boolean; lastLoginAt: Date | null }[]>`
+  SELECT id, login, name, is_active, last_login_at FROM users ORDER BY login`;
+---
+
+<AdminLayout title="Пользователи" section="users">
+  <div class="toolbar">
+    <h1>Пользователи панели управления</h1>
+    <div class="actions"><a class="btn" href="/admin/users/new">+ Добавить пользователя</a></div>
+  </div>
+  <div class="table-wrap">
+    <table class="list">
+      <thead><tr><th>Логин</th><th>Имя</th><th>Последний вход</th></tr></thead>
+      <tbody>
+        {
+          users.map((u) => (
+            <tr>
+              <td>
+                <a href={`/admin/users/${u.id}`}>{u.login}</a> {!u.isActive && <span class="tag off">отключён</span>}
+                {u.id === Astro.locals.user?.id && <span class="tag brand">это вы</span>}
+              </td>
+              <td>{u.name}</td>
+              <td class="muted">{u.lastLoginAt ? new Date(u.lastLoginAt).toLocaleString('ru-RU') : '—'}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+</AdminLayout>

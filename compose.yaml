@@ -1,0 +1,77 @@
+# Сайт «Европроект»: Postgres + приложение Astro + Caddy (reverse proxy, HTTPS).
+# Запуск:  docker compose up -d --build
+# Подробности: docs/development.md и docs/deployment.md
+
+name: europroject
+
+services:
+  db:
+    image: postgres:18-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-europroject}
+      POSTGRES_USER: ${POSTGRES_USER:-europroject}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Укажите POSTGRES_PASSWORD в файле .env}
+      TZ: ${TZ:-Asia/Bishkek}
+      PGTZ: ${TZ:-Asia/Bishkek}
+    volumes:
+      # С Postgres 18 том монтируется в /var/lib/postgresql (данные лежат в подпапке версии)
+      - db-data:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+
+  app:
+    build:
+      context: .
+      target: runtime
+    image: europroject-app
+    restart: unless-stopped
+    # Сигнал остановки доходит до node: при обновлении контейнер останавливается сразу, а не через 10 секунд
+    init: true
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      PGHOST: db
+      PGPORT: "5432"
+      PGDATABASE: ${POSTGRES_DB:-europroject}
+      PGUSER: ${POSTGRES_USER:-europroject}
+      PGPASSWORD: ${POSTGRES_PASSWORD}
+      SITE_URL: ${SITE_URL:-http://localhost}
+      ADMIN_LOGIN: ${ADMIN_LOGIN:-admin}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-}
+      SEED_ON_START: ${SEED_ON_START:-false}
+      # Ключ доступа Instagram для новостей (docs/news-instagram.md); пусто — посты не загружаются
+      INSTAGRAM_TOKEN: ${INSTAGRAM_TOKEN:-}
+      TZ: ${TZ:-Asia/Bishkek}
+      PGTZ: ${TZ:-Asia/Bishkek}
+    volumes:
+      - uploads:/app/data/uploads
+    expose:
+      - "4321"
+
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    depends_on:
+      - app
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    environment:
+      SITE_ADDRESS: ${SITE_ADDRESS:-http://localhost}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - uploads:/srv/uploads:ro
+      - caddy-data:/data
+      - caddy-config:/config
+
+volumes:
+  db-data:
+  uploads:
+  caddy-data:
+  caddy-config:

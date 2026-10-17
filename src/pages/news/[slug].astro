@@ -1,0 +1,61 @@
+---
+// Новость. У постов из Instagram внизу ссылка на оригинал.
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import PageView from '../../components/PageView.astro';
+import SocialIcon from '../../components/SocialIcon.astro';
+import NotFound from '../../components/NotFound.astro';
+import { getNews, getNewsBySlug } from '../../server/content.ts';
+import { sql } from '../../server/db.ts';
+import { formatDate, plainText, toInt } from '../../server/util.ts';
+import { fillPlaceholders, getSettings } from '../../server/settings.ts';
+import { uploadUrl } from '../../server/uploads.ts';
+
+// Адрес — по названию (/news/new-carpet-collection). Адрес по номеру (/news/2) ведёт сюда же (301)
+const param = Astro.params.slug ?? '';
+const id = /^\d+$/.test(param) ? toInt(param) : null;
+if (id) {
+  const old = await getNews(id);
+  if (old?.slug) return Astro.redirect(`/news/${old.slug}`, 301);
+}
+const item = id ? undefined : await getNewsBySlug(param);
+if (item) await sql`UPDATE news SET views = views + 1 WHERE id = ${item.id}`;
+else Astro.response.status = 404;
+const settings = await getSettings();
+const content = item ? fillPlaceholders(item.content, settings) : '';
+// Фото записи — сначала, небольшой сеткой (по нажатию — крупно), потом текст без фото
+const photos = [...content.matchAll(/<img[^>]*\ssrc="([^"]+)"[^>]*>/g)].map((m) => m[1]);
+const text = content.replace(/<p>\s*<img[^>]*>\s*<\/p>\s*/g, '').replace(/<img[^>]*>/g, '');
+---
+
+{
+  item ? (
+    <SiteLayout
+      title={`${item.title} | ${settings.site_name}`}
+      description={item.excerpt || plainText(content) || undefined}
+      canonicalPath={`/news/${item.slug}`}
+      ogType="article"
+      image={item.image ? uploadUrl(item.image) : undefined}
+    >
+      <PageView title={item.title} html={text} parents={[{ name: 'Новости и события', url: '/news' }]} meta={formatDate(item.publishedAt)}>
+        {photos.length > 0 && (
+          <div slot="before" class:list={['pblog-gallery', { 'pblog-gallery--one': photos.length === 1 }]}>
+            {photos.map((src, i) => (
+              <a class="pblog-thumb" href={src} data-lightbox={i} aria-label={`Фото ${i + 1} из ${photos.length}`}>
+                <img src={src} alt="" loading={i < 4 ? 'eager' : 'lazy'} />
+              </a>
+            ))}
+          </div>
+        )}
+        {item.sourceUrl && (
+          <p class="pblog-source">
+            <a href={item.sourceUrl} target="_blank" rel="noopener"><SocialIcon name="instagram" size={18} />Смотреть пост в Instagram ↗</a>
+          </p>
+        )}
+      </PageView>
+    </SiteLayout>
+  ) : (
+    <SiteLayout title="Новость не найдена" noindex>
+      <NotFound />
+    </SiteLayout>
+  )
+}

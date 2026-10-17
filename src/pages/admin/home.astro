@@ -1,0 +1,196 @@
+---
+// Редактор главной страницы: главный экран, о компании, заголовки блоков разделов, брендов, новостей и контактов.
+import AdminLayout from '../../layouts/AdminLayout.astro';
+import { getHome, homeImages, saveHome, type HomeContent } from '../../server/home.ts';
+import { PLACEHOLDER_KEYS } from '../../server/settings.ts';
+import { formFiles, removeUploads, saveImage, uploadUrl } from '../../server/uploads.ts';
+import { withFlash } from '../../server/admin.ts';
+import { int, str, strs } from '../../server/util.ts';
+
+let error = '';
+const current = await getHome();
+
+if (Astro.request.method === 'POST') {
+  const data = await Astro.request.formData();
+  const newFiles: string[] = [];
+  try {
+    // Фото главного экрана: порядок, удаление, добавление
+    const heroPaths = strs(data, 'hero_img');
+    const heroOrder = strs(data, 'hero_order').map(Number);
+    const heroDel = new Set(strs(data, 'hero_del'));
+    const hero = heroPaths
+      .map((p, i) => ({ p, o: heroOrder[i] || 0 }))
+      .filter((x) => !heroDel.has(x.p))
+      .sort((a, b) => a.o - b.o)
+      .map((x) => x.p);
+    for (const f of formFiles(data, 'hero_new')) {
+      const [p] = await saveImage(Buffer.from(await f.arrayBuffer()), 'home');
+      newFiles.push(p);
+      hero.push(p);
+    }
+
+    const next: HomeContent = {
+      hero: { title: str(data, 'hero_title'), text: str(data, 'hero_text'), button: str(data, 'hero_button'), link: str(data, 'hero_link'), images: hero },
+      about: {
+        title: str(data, 'about_title'),
+        text: String(data.get('about_text') ?? '').trim(),
+        linkText: str(data, 'about_linkText'),
+        link: str(data, 'about_link'),
+      },
+      sections: { title: str(data, 'sections_title'), text: str(data, 'sections_text') },
+      brands: { title: str(data, 'brands_title'), text: str(data, 'brands_text') },
+      news: { title: str(data, 'news_title'), count: Math.max(0, Math.min(12, int(data, 'news_count', 3))) },
+      contact: { title: str(data, 'contact_title'), text: str(data, 'contact_text') },
+    };
+    await saveHome(next);
+    // Удаляем файлы, на которые больше нет ссылок
+    const keep = new Set(homeImages(next));
+    await removeUploads(...homeImages(current).filter((p) => !keep.has(p)));
+    return Astro.redirect(withFlash('/admin/home', 'ok', 'saved'));
+  } catch (err) {
+    await removeUploads(...newFiles);
+    error = (err as Error).message;
+  }
+}
+
+const h = current;
+---
+
+<AdminLayout title="Главная страница" section="home">
+  <div class="toolbar">
+    <h1>Главная страница</h1>
+    <div class="actions"><a class="btn secondary" href="/" target="_blank" rel="noopener">Открыть сайт ↗</a></div>
+  </div>
+  {error && <div class="flash err">{error}</div>}
+  <p class="muted small">
+    Перенос строки в заголовке главного экрана — клавиша Enter. Пустой заголовок у блока — блок не показывается.
+    Карточки разделов и логотипы берутся из «Разделов» и «Брендов». В тексте о компании можно вставлять контакты:
+    {PLACEHOLDER_KEYS.map((k, i) => <Fragment>{i > 0 && ', '}<code>{`{{${k}}}`}</code></Fragment>)}.
+  </p>
+
+  <form method="post" enctype="multipart/form-data">
+    <div class="card">
+      <h2>1. Главный экран</h2>
+      <div class="form-grid">
+        <div class="field full">
+          <label for="hero_title">Заголовок</label>
+          <textarea id="hero_title" name="hero_title" rows="2">{h.hero.title}</textarea>
+        </div>
+        <div class="field full">
+          <label for="hero_text">Текст под заголовком</label>
+          <textarea id="hero_text" name="hero_text" rows="2">{h.hero.text}</textarea>
+        </div>
+        <div class="field">
+          <label for="hero_button">Текст кнопки</label>
+          <input type="text" id="hero_button" name="hero_button" value={h.hero.button} />
+        </div>
+        <div class="field">
+          <label for="hero_link">Ссылка кнопки</label>
+          <input type="text" id="hero_link" name="hero_link" value={h.hero.link} />
+          <div class="hint"><code>#razdely</code> — прокрутка к разделам на главной</div>
+        </div>
+      </div>
+      <div class="gallery" style="margin-top:14px">
+        {
+          h.hero.images.map((img, i) => (
+            <div class="img-card">
+              <img src={uploadUrl(img)} alt="" />
+              <input type="hidden" name="hero_img" value={img} />
+              <label class="small">Порядок <input type="number" name="hero_order" value={(i + 1) * 10} /></label>
+              <br />
+              <label class="check small"><input type="checkbox" name="hero_del" value={img} /> удалить</label>
+            </div>
+          ))
+        }
+      </div>
+      <div class="field" style="margin-top:12px">
+        <label for="hero_new">Добавить фото</label>
+        <input type="file" id="hero_new" name="hero_new" accept="image/*" multiple />
+        <div class="hint">Горизонтальные фото от 2000 px по ширине, несколько фото сменяют друг друга. Без фото — тёмный фон.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>2. О компании</h2>
+      <div class="form-grid">
+        <div class="field full">
+          <label for="about_title">Заголовок</label>
+          <input type="text" id="about_title" name="about_title" value={h.about.title} />
+        </div>
+        <div class="field full">
+          <label>Текст</label>
+          <textarea name="about_text" data-editor data-height="220">{h.about.text}</textarea>
+        </div>
+        <div class="field">
+          <label for="about_linkText">Текст ссылки</label>
+          <input type="text" id="about_linkText" name="about_linkText" value={h.about.linkText} />
+        </div>
+        <div class="field">
+          <label for="about_link">Ссылка</label>
+          <input type="text" id="about_link" name="about_link" value={h.about.link} />
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>3. Разделы</h2>
+      <div class="form-grid">
+        <div class="field">
+          <label for="sections_title">Заголовок</label>
+          <input type="text" id="sections_title" name="sections_title" value={h.sections.title} />
+        </div>
+        <div class="field">
+          <label for="sections_text">Текст под заголовком</label>
+          <input type="text" id="sections_text" name="sections_text" value={h.sections.text} />
+        </div>
+      </div>
+      <p class="hint">Сами карточки: <a href="/admin/sections">Разделы</a>.</p>
+    </div>
+
+    <div class="card">
+      <h2>4. Производители</h2>
+      <div class="form-grid">
+        <div class="field">
+          <label for="brands_title">Заголовок</label>
+          <input type="text" id="brands_title" name="brands_title" value={h.brands.title} />
+        </div>
+        <div class="field">
+          <label for="brands_text">Текст под заголовком</label>
+          <input type="text" id="brands_text" name="brands_text" value={h.brands.text} />
+        </div>
+      </div>
+      <p class="hint">Логотипы: <a href="/admin/brands">Бренды</a>.</p>
+    </div>
+
+    <div class="card">
+      <h2>5. Новости</h2>
+      <div class="form-grid">
+        <div class="field">
+          <label for="news_title">Заголовок</label>
+          <input type="text" id="news_title" name="news_title" value={h.news.title} />
+        </div>
+        <div class="field">
+          <label for="news_count">Сколько последних новостей показывать (0 — блок скрыт)</label>
+          <input type="number" id="news_count" name="news_count" value={h.news.count} min="0" max="12" />
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>6. Контакты</h2>
+      <div class="form-grid">
+        <div class="field">
+          <label for="contact_title">Заголовок</label>
+          <input type="text" id="contact_title" name="contact_title" value={h.contact.title} />
+        </div>
+        <div class="field">
+          <label for="contact_text">Текст</label>
+          <input type="text" id="contact_text" name="contact_text" value={h.contact.text} />
+        </div>
+      </div>
+      <p class="hint">Адрес, телефон и почта берутся из «Настроек сайта».</p>
+    </div>
+
+    <div class="form-actions sticky-actions"><button class="btn" type="submit">Сохранить главную</button></div>
+  </form>
+</AdminLayout>

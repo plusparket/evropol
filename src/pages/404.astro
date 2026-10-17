@@ -1,0 +1,10 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import NotFound from '../components/NotFound.astro';
+
+Astro.response.status = 404;
+---
+
+<SiteLayout title="Страница не найдена" noindex>
+  <NotFound />
+</SiteLayout>

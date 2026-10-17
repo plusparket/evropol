@@ -1,0 +1,60 @@
+---
+import '../../styles/admin.css';
+import { authenticate, createSession, isLoginLocked, registerLoginFailure, resetLoginFailures } from '../../server/auth.ts';
+import { str } from '../../server/util.ts';
+
+const next = Astro.url.searchParams.get('next');
+const safeNext = next && next.startsWith('/admin') && !next.startsWith('//') ? next : '/admin';
+
+if (Astro.locals.user) return Astro.redirect(safeNext);
+
+let error = '';
+let login = '';
+if (Astro.request.method === 'POST') {
+  const form = await Astro.request.formData();
+  login = str(form, 'login');
+  const password = String(form.get('password') ?? '');
+  const ip = Astro.request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || Astro.clientAddress || 'local';
+  const key = `${ip}|${login}`;
+  if (isLoginLocked(key)) {
+    error = 'Слишком много неудачных попыток. Попробуйте через 15 минут.';
+  } else {
+    const user = login && password ? await authenticate(login, password) : null;
+    if (user) {
+      resetLoginFailures(key);
+      await createSession(user.id, Astro.cookies, Astro.url.protocol === 'https:');
+      return Astro.redirect(safeNext);
+    }
+    registerLoginFailure(key);
+    error = 'Неверный логин или пароль';
+  }
+}
+---
+
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Авторизация</title>
+    <link rel="icon" href="/favicon.ico?v=2" sizes="48x48" />
+    <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2" />
+  </head>
+  <body>
+    <div class="login-page">
+      <div>
+        <img class="login-logo" src="/img/logo.svg" alt="Европроект" />
+        <form class="login_form" method="post">
+          <div class="title">Авторизация</div>
+          {error && <div class="flash err">{error}</div>}
+          <input type="text" name="login" placeholder="Логин" value={login} autocomplete="username" required autofocus />
+          <input type="password" name="password" placeholder="Пароль" autocomplete="current-password" required />
+          <button type="submit" class="btn">Войти</button>
+          <a href="/" class="back">На главную страницу</a>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

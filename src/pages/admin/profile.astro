@@ -1,0 +1,44 @@
+---
+import AdminLayout from '../../layouts/AdminLayout.astro';
+import { sql } from '../../server/db.ts';
+import { hashPassword, verifyPassword } from '../../server/auth.ts';
+import { withFlash } from '../../server/admin.ts';
+
+const user = Astro.locals.user!;
+let error = '';
+
+if (Astro.request.method === 'POST') {
+  const data = await Astro.request.formData();
+  const current = String(data.get('current') ?? '');
+  const next = String(data.get('password') ?? '');
+  const repeat = String(data.get('repeat') ?? '');
+  const [row] = await sql<{ passwordHash: string }[]>`SELECT password_hash FROM users WHERE id = ${user.id}`;
+  if (!row || !(await verifyPassword(current, row.passwordHash))) error = 'Текущий пароль указан неверно';
+  else if (next.length < 8) error = 'Новый пароль должен быть не короче 8 символов';
+  else if (next !== repeat) error = 'Пароли не совпадают';
+  else {
+    await sql`UPDATE users SET password_hash = ${await hashPassword(next)} WHERE id = ${user.id}`;
+    return Astro.redirect(withFlash('/admin/profile', 'ok', 'password'));
+  }
+}
+---
+
+<AdminLayout title="Мой пароль">
+  <div class="toolbar"><h1>Смена пароля — {user.login}</h1></div>
+  {error && <div class="flash err">{error}</div>}
+  <form method="post" class="card" style="max-width:480px">
+    <div class="field">
+      <label for="current">Текущий пароль</label>
+      <input type="password" id="current" name="current" required autocomplete="current-password" />
+    </div>
+    <div class="field" style="margin-top:12px">
+      <label for="password">Новый пароль</label>
+      <input type="password" id="password" name="password" required minlength="8" autocomplete="new-password" />
+    </div>
+    <div class="field" style="margin-top:12px">
+      <label for="repeat">Повторите новый пароль</label>
+      <input type="password" id="repeat" name="repeat" required minlength="8" autocomplete="new-password" />
+    </div>
+    <div class="form-actions"><button class="btn" type="submit">Сменить пароль</button></div>
+  </form>
+</AdminLayout>

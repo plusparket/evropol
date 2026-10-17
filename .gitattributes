@@ -1,0 +1,2 @@
+# Переводы строк — LF везде: сайт собирается и работает в Docker (Linux). На Windows git не переводит их в CRLF.
+* text=auto eol=lf

@@ -1,0 +1,61 @@
+---
+import AdminLayout from '../../layouts/AdminLayout.astro';
+import { sql } from '../../server/db.ts';
+import { visitStats } from '../../server/content.ts';
+import { getSections, isExternal } from '../../server/sections.ts';
+
+const [counts] = await sql<{ sections: number; brands: number; pages: number; news: number }[]>`
+  SELECT
+    (SELECT count(*) FROM sections WHERE is_published)::int AS sections,
+    (SELECT count(*) FROM brands WHERE is_active)::int AS brands,
+    (SELECT count(*) FROM pages)::int AS pages,
+    (SELECT count(*) FROM news)::int AS news`;
+const visits = await visitStats();
+const sections = await getSections();
+---
+
+<AdminLayout title="Обзор" section="dashboard">
+  <div class="toolbar">
+    <h1>Обзор</h1>
+    <div class="actions">
+      <a class="btn" href="/admin/news/new">+ Новость</a>
+      <a class="btn secondary" href="/admin/sections/new">+ Раздел</a>
+      <a class="btn secondary" href="/admin/pages/new">+ Страница</a>
+    </div>
+  </div>
+
+  <div class="stats">
+    <a class="stat" href="/admin/sections"><div class="num">{counts.sections}</div><div class="cap">разделов на сайте</div></a>
+    <a class="stat" href="/admin/brands"><div class="num">{counts.brands}</div><div class="cap">брендов</div></a>
+    <a class="stat" href="/admin/pages"><div class="num">{counts.pages}</div><div class="cap">страниц</div></a>
+    <a class="stat" href="/admin/news"><div class="num">{counts.news}</div><div class="cap">новостей</div></a>
+  </div>
+
+  <div class="card">
+    <h2>Посетители</h2>
+    <div class="stats" style="margin:0">
+      <div class="stat"><div class="num">{visits.today}</div><div class="cap">сегодня</div></div>
+      <div class="stat"><div class="num">{visits.yesterday}</div><div class="cap">вчера</div></div>
+      <div class="stat"><div class="num">{visits.week}</div><div class="cap">за 7 дней</div></div>
+      <div class="stat"><div class="num">{visits.month}</div><div class="cap">за 30 дней</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Куда ведут разделы</h2>
+    <div class="table-wrap">
+      <table class="list">
+        <tbody>
+          {
+            sections.map((s) => (
+              <tr>
+                <td><a href={`/admin/sections/${s.id}`}>{s.name}</a> {!s.isPublished && <span class="tag off">скрыт</span>}</td>
+                <td>{s.link ? <a class="muted" href={s.link} target={isExternal(s.link) ? '_blank' : undefined} rel="noopener">{s.link}</a> : <span class="tag off">сайт раздела не задан</span>}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</AdminLayout>

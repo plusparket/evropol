@@ -1,0 +1,29 @@
+---
+// Текстовая страница: крупный заголовок и текст в спокойной колонке на тёмной полосе.
+import Crumbs from './Crumbs.astro';
+
+interface Props {
+  title: string;
+  html: string;
+  /** Крошки между «Главная» и заголовком (например, «Новости») */
+  parents?: { name: string; url: string }[];
+  /** Строка под заголовком (дата новости и т.п.) */
+  meta?: string;
+}
+const { title, html, parents = [], meta } = Astro.props;
+---
+
+<article class="ppage">
+  <header class="ppage-head">
+    <div class="pin ppage-narrow">
+      <Crumbs items={[...parents, { name: title }]} />
+      <h1 class="ppage-title">{title}</h1>
+      {meta && <div class="ppage-meta">{meta}</div>}
+    </div>
+  </header>
+  <div class="pin ppage-narrow">
+    <slot name="before" />
+    <div class="ppage-text" set:html={html} />
+    <slot />
+  </div>
+</article>

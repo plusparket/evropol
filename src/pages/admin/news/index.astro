@@ -1,0 +1,35 @@
+---
+import AdminLayout from '../../../layouts/AdminLayout.astro';
+import { sql } from '../../../server/db.ts';
+import type { News } from '../../../server/content.ts';
+import { formatDate } from '../../../server/util.ts';
+
+const news = await sql<News[]>`SELECT id, title, published_at, is_published, views, source_url FROM news ORDER BY published_at DESC, id DESC`;
+---
+
+<AdminLayout title="Новости" section="news">
+  <div class="toolbar">
+    <h1>Новости</h1>
+    <div class="actions"><a class="btn" href="/admin/news/new">+ Добавить новость</a></div>
+  </div>
+  <div class="table-wrap">
+    <table class="list">
+      <thead><tr><th>Заголовок</th><th>Дата</th><th>Просм.</th></tr></thead>
+      <tbody>
+        {
+          news.map((n) => (
+            <tr>
+              <td>
+                <a href={`/admin/news/${n.id}`}>{n.title}</a> {n.sourceUrl && <span class="tag">Instagram</span>} {!n.isPublished && <span class="tag off">скрыта</span>}
+                {new Date(n.publishedAt) > new Date() && <span class="tag">запланирована</span>}
+              </td>
+              <td class="muted nowrap">{formatDate(n.publishedAt)}</td>
+              <td class="muted">{n.views}</td>
+            </tr>
+          ))
+        }
+        {news.length === 0 && <tr><td colspan="3" class="muted">Записей пока нет</td></tr>}
+      </tbody>
+    </table>
+  </div>
+</AdminLayout>

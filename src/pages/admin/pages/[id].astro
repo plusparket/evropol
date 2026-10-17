@@ -1,0 +1,119 @@
+---
+import AdminLayout from '../../../layouts/AdminLayout.astro';
+import { sql } from '../../../server/db.ts';
+import { RESERVED_SLUGS, type Page } from '../../../server/content.ts';
+import { dbErrorMessage, withFlash } from '../../../server/admin.ts';
+import { PLACEHOLDER_KEYS } from '../../../server/settings.ts';
+import { bool, isValidSlug, str, toInt } from '../../../server/util.ts';
+
+const isNew = Astro.params.id === 'new';
+const id = isNew ? null : toInt(Astro.params.id);
+if (!isNew && !id) return Astro.redirect('/admin/pages');
+
+const [existing] = id ? await sql<Page[]>`SELECT * FROM pages WHERE id = ${id}` : [];
+if (!isNew && !existing) return Astro.redirect(withFlash('/admin/pages', 'err', 'Страница не найдена'));
+
+let error = '';
+let form = {
+  title: existing?.title ?? '',
+  slug: existing?.slug ?? '',
+  content: existing?.content ?? '',
+  seoTitle: existing?.seoTitle ?? '',
+  seoDescription: existing?.seoDescription ?? '',
+  isPublished: existing?.isPublished ?? true,
+};
+
+if (Astro.request.method === 'POST') {
+  const data = await Astro.request.formData();
+  if (str(data, '_action') === 'delete' && id) {
+    await sql`DELETE FROM pages WHERE id = ${id}`;
+    return Astro.redirect(withFlash('/admin/pages', 'ok', 'deleted'));
+  }
+  form = {
+    title: str(data, 'title'),
+    slug: str(data, 'slug').toLowerCase(),
+    content: String(data.get('content') ?? '').trim(),
+    seoTitle: str(data, 'seo_title'),
+    seoDescription: str(data, 'seo_description'),
+    isPublished: bool(data, 'is_published'),
+  };
+  if (!form.title) error = 'Укажите заголовок';
+  else if (!isValidSlug(form.slug)) error = 'Адрес: только латинские буквы, цифры, «-» и «_»';
+  else if (RESERVED_SLUGS.has(form.slug)) error = `Адрес «${form.slug}» зарезервирован системой`;
+  else if ((await sql`SELECT 1 FROM sections WHERE slug = ${form.slug}`).length)
+    error = `Адрес «${form.slug}» уже занят разделом`;
+
+  if (!error) {
+    try {
+      if (id) {
+        await sql`UPDATE pages SET ${sql(form)}, updated_at = now() WHERE id = ${id}`;
+        return Astro.redirect(withFlash(`/admin/pages/${id}`, 'ok', 'saved'));
+      }
+      const [row] = await sql<{ id: number }[]>`INSERT INTO pages ${sql(form)} RETURNING id`;
+      return Astro.redirect(withFlash(`/admin/pages/${row.id}`, 'ok', 'created'));
+    } catch (err) {
+      error = dbErrorMessage(err);
+    }
+  }
+}
+const title = isNew ? 'Новая страница' : form.title;
+---
+
+<AdminLayout title={title} section="pages">
+  <div class="toolbar">
+    <h1>{title}</h1>
+    <div class="actions">
+      {existing && <a class="btn secondary" href={`/${existing.slug}`} target="_blank" rel="noopener">Открыть на сайте ↗</a>}
+      <a class="btn secondary" href="/admin/pages">← К списку</a>
+    </div>
+  </div>
+  {error && <div class="flash err">{error}</div>}
+
+  <form method="post">
+    <div class="card">
+      <div class="form-grid">
+        <div class="field">
+          <label for="title">Заголовок *</label>
+          <input type="text" id="title" name="title" value={form.title} required />
+        </div>
+        <div class="field">
+          <label for="slug">Адрес *</label>
+          <input type="text" id="slug" name="slug" value={form.slug} required data-slug-from="title" pattern="[a-z0-9][a-z0-9_\-]*" />
+          <div class="hint">Страница откроется по ссылке /{form.slug || 'adres'}</div>
+        </div>
+        <div class="field full">
+          <label class="check"><input type="checkbox" name="is_published" checked={form.isPublished} /> Опубликована</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Содержимое</h2>
+      <p class="muted small">
+        Контакты можно не вписывать, а вставлять из «Настроек сайта» — тогда при их смене текст обновится сам:
+        {PLACEHOLDER_KEYS.map((k, i) => <Fragment>{i > 0 && ', '}<code>{`{{${k}}}`}</code></Fragment>)}
+      </p>
+      <textarea name="content" data-editor data-height="520">{form.content}</textarea>
+    </div>
+
+    <div class="card">
+      <h2>SEO</h2>
+      <div class="form-grid">
+        <div class="field">
+          <label for="seo_title">Заголовок (title)</label>
+          <input type="text" id="seo_title" name="seo_title" value={form.seoTitle} placeholder="пусто — «Заголовок страницы | Европроект»" />
+        </div>
+        <div class="field">
+          <label for="seo_description">Описание (meta description)</label>
+          <input type="text" id="seo_description" name="seo_description" value={form.seoDescription} placeholder="пусто — начало текста страницы" />
+        </div>
+      </div>
+    </div>
+
+    <div class="form-actions sticky-actions">
+      <button class="btn" type="submit" name="_action" value="save">Сохранить</button>
+      <span class="spacer"></span>
+      {!isNew && <button class="btn danger" type="submit" name="_action" value="delete" formnovalidate data-confirm="Удалить страницу?">Удалить</button>}
+    </div>
+  </form>
+</AdminLayout>

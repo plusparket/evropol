@@ -1,0 +1,44 @@
+---
+import AdminLayout from '../../../layouts/AdminLayout.astro';
+import { sql } from '../../../server/db.ts';
+import { getSections, isExternal } from '../../../server/sections.ts';
+import { uploadUrl } from '../../../server/uploads.ts';
+
+const sections = await getSections();
+const brandCounts = new Map(
+  (await sql<{ sectionId: number; n: number }[]>`SELECT section_id, count(*)::int AS n FROM brands WHERE section_id IS NOT NULL GROUP BY section_id`)
+    .map((r) => [r.sectionId, r.n]),
+);
+---
+
+<AdminLayout title="Разделы" section="sections">
+  <div class="toolbar">
+    <h1>Разделы</h1>
+    <div class="actions"><a class="btn" href="/admin/sections/new">+ Добавить раздел</a></div>
+  </div>
+  <p class="muted">
+    Разделы показываются вкладками в шапке и карточками на главной. У каждого раздела своя страница на этом сайте
+    (описание и бренды) и ссылка на сайт раздела, где будут товары и заказ.
+  </p>
+  <div class="table-wrap">
+    <table class="list">
+      <thead><tr><th></th><th>Раздел</th><th>Адрес</th><th>Сайт раздела</th><th>Брендов</th><th>Порядок</th></tr></thead>
+      <tbody>
+        {
+          sections.map((s) => (
+            <tr>
+              <td style="width:70px">{s.image ? <img class="thumb" src={uploadUrl(s.image)} alt="" /> : <div class="thumb" />}</td>
+              <td>
+                <a href={`/admin/sections/${s.id}`}>{s.name}</a> {!s.isPublished && <span class="tag off">скрыт</span>}
+              </td>
+              <td><a class="muted" href={`/${s.slug}`} target="_blank" rel="noopener">/{s.slug}</a></td>
+              <td>{s.link ? <a class="muted" href={s.link} target={isExternal(s.link) ? '_blank' : undefined} rel="noopener">{s.link}</a> : <span class="tag off">не задан</span>}</td>
+              <td>{brandCounts.get(s.id) ?? 0}</td>
+              <td class="muted">{s.sortOrder}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+</AdminLayout>

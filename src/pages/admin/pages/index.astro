@@ -1,0 +1,33 @@
+---
+import AdminLayout from '../../../layouts/AdminLayout.astro';
+import { sql } from '../../../server/db.ts';
+import type { Page } from '../../../server/content.ts';
+
+const pages = await sql<Page[]>`SELECT id, slug, title, is_published, updated_at FROM pages ORDER BY title`;
+---
+
+<AdminLayout title="Страницы" section="pages">
+  <div class="toolbar">
+    <h1>Страницы</h1>
+    <div class="actions"><a class="btn" href="/admin/pages/new">+ Добавить страницу</a></div>
+  </div>
+  <p class="muted">Текстовые страницы сайта: «О компании», «Контакты» и другие. Ссылки на них добавляются в разделе «Меню».</p>
+  <div class="table-wrap">
+    <table class="list">
+      <thead><tr><th>Заголовок</th><th>Адрес</th><th>Изменена</th></tr></thead>
+      <tbody>
+        {
+          pages.map((p) => (
+            <tr>
+              <td>
+                <a href={`/admin/pages/${p.id}`}>{p.title}</a> {!p.isPublished && <span class="tag off">скрыта</span>}
+              </td>
+              <td><a class="muted" href={`/${p.slug}`} target="_blank" rel="noopener">/{p.slug}</a></td>
+              <td class="muted nowrap">{new Date(p.updatedAt).toLocaleString('ru-RU')}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+</AdminLayout>

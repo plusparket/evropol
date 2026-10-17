@@ -1,0 +1,22 @@
+# зависимости и сборка
+node_modules/
+dist/
+.astro/
+
+# локальные данные (тома Docker, загрузки)
+data/
+
+# окружение
+.env
+.env.*
+!.env.example
+
+# логи и системное
+npm-debug.log*
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+backup/

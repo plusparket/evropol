@@ -1,0 +1,43 @@
+---
+// Новости и события: записи с фото, в том числе посты из Instagram (src/server/instagram.ts).
+// Старый адрес /novosti-i-sobytiya.html ведёт сюда (таблица redirects).
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import Crumbs from '../../components/Crumbs.astro';
+import { listNews } from '../../server/content.ts';
+import { formatDate, plainText } from '../../server/util.ts';
+import { getSettings } from '../../server/settings.ts';
+import { withSiteName } from '../../server/seo.ts';
+import { uploadUrl } from '../../server/uploads.ts';
+
+const [posts, settings] = await Promise.all([listNews(200), getSettings()]);
+// Обложка: поле image, а у записей, добавленных вручную, первая картинка из текста
+const cover = (n: (typeof posts)[number]) => (n.image ? uploadUrl(n.image) : (n.content.match(/<img[^>]+src="([^"]+)"/)?.[1] ?? ''));
+---
+
+<SiteLayout title={withSiteName('Новости и события', settings)} description={`Новости компании «${settings.site_name}»: новые коллекции, поставки, выполненные объекты.`} canonicalPath="/news">
+  <section class="ppage">
+    <header class="ppage-head">
+      <div class="pin">
+        <Crumbs items={[{ name: 'Новости и события' }]} />
+        <h1 class="ppage-title">Новости и события</h1>
+      </div>
+    </header>
+    <div class="pin">
+      {posts.length === 0 && <p class="ppage-text">Новостей пока нет.</p>}
+      <div class="pgrid pblog">
+        {
+          posts.map((n) => (
+            <a class="pcard2" href={`/news/${n.slug}`}>
+              {cover(n) && <span class="pcard2-img pblog-img"><img src={cover(n)} alt="" loading="lazy" /></span>}
+              <span class="pcard2-body">
+                <span class="pcard2-sub">{formatDate(n.publishedAt)}</span>
+                <span class="pcard2-name">{n.title}</span>
+                {(n.excerpt || n.content) && <span class="pcard2-facts pblog-excerpt">{plainText(n.excerpt || n.content, 160)}</span>}
+              </span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</SiteLayout>

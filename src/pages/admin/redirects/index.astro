@@ -1,0 +1,99 @@
+---
+// Переадресации (301) со старых адресов: старые ссылки из Google и закладок ведут на новые страницы.
+import AdminLayout from '../../../layouts/AdminLayout.astro';
+import { deleteRedirect, listRedirects, normalizePath, saveRedirect } from '../../../server/redirects.ts';
+import { withFlash } from '../../../server/admin.ts';
+import { formatDate, str, toInt } from '../../../server/util.ts';
+
+const validTarget = (t: string) => /^\/(?!\/)/.test(t) || /^https?:\/\//i.test(t);
+
+let error = '';
+if (Astro.request.method === 'POST') {
+  const data = await Astro.request.formData();
+  const del = toInt(str(data, 'delete'));
+  if (del) {
+    await deleteRedirect(del);
+    return Astro.redirect(withFlash('/admin/redirects', 'ok', 'deleted'));
+  }
+  // Строки «старый адрес  новый адрес» (через пробел, табуляцию или →); пустые строки пропускаются
+  const lines = str(data, 'lines').split(/\r?\n/).map((l) => l.trim()).filter(Boolean);
+  const bad: string[] = [];
+  const pairs: [string, string][] = [];
+  for (const line of lines) {
+    const [from, to] = line.split(/\s*(?:→|->|\s)\s*/).filter(Boolean);
+    if (!from || !to || !validTarget(to) || normalizePath(from) === '/' || normalizePath(from) === normalizePath(to)) bad.push(line);
+    else pairs.push([from, to]);
+  }
+  if (bad.length) {
+    error = `Не сохранено — проверьте строки (новый адрес должен начинаться с / или https://): ${bad.join('; ')}`;
+  } else {
+    for (const [from, to] of pairs) await saveRedirect(from, to, str(data, 'note'));
+    return Astro.redirect(withFlash('/admin/redirects', 'ok', 'saved'));
+  }
+}
+
+const redirects = await listRedirects();
+---
+
+<AdminLayout title="Переадресации" section="redirects">
+  <div class="toolbar"><h1>Переадресации</h1></div>
+  <p class="muted">
+    Старый адрес, которого больше нет на сайте, постоянно (301) ведёт на новый — так Google переносит позиции старой страницы
+    на новую, а посетители со старых ссылок не видят «Страница не найдена». Срабатывает, только если по старому адресу нет
+    действующей категории, страницы или товара. Регистр букв и «/» в конце не важны.
+  </p>
+  {error && <div class="flash err">{error}</div>}
+
+  <form class="card" method="post">
+    <h2>Добавить</h2>
+    <label for="lines">По одной на строке: старый адрес, пробел, новый адрес</label>
+    <textarea id="lines" name="lines" rows="5" placeholder={'/o-kompanii.html /about\nhttps://europroject.kg/kontakty /contact'}></textarea>
+    <label for="note">Пометка (необязательно)</label>
+    <input id="note" type="text" name="note" placeholder="Например: раздел снят при переезде, 10.2026" />
+    <div class="form-actions"><button type="submit" class="btn">Сохранить</button></div>
+  </form>
+
+  {
+    redirects.length > 0 ? (
+      <form method="post" class="table-wrap">
+        <table class="list">
+          <thead>
+            <tr>
+              <th>Старый адрес</th>
+              <th>Новый адрес</th>
+              <th>Переходов</th>
+              <th>Пометка</th>
+              <th />
+            </tr>
+          </thead>
+          <tbody>
+            {redirects.map((r) => (
+              <tr>
+                <td>
+                  <code>{r.fromPath}</code>
+                </td>
+                <td>
+                  <a href={r.toPath} target="_blank" rel="noopener">
+                    {r.toPath}
+                  </a>
+                </td>
+                <td>
+                  {r.hits}
+                  {r.lastHit && <div class="muted">последний: {formatDate(r.lastHit)}</div>}
+                </td>
+                <td class="muted">{r.note}</td>
+                <td>
+                  <button type="submit" name="delete" value={r.id} class="btn danger" data-confirm="Удалить переадресацию?">
+                    Удалить
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </form>
+    ) : (
+      <p class="muted">Переадресаций пока нет.</p>
+    )
+  }
+</AdminLayout>

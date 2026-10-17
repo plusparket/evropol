@@ -1,0 +1,25 @@
+# Режим разработки: исходники монтируются в контейнер, Astro перезагружает страницы при изменениях.
+# Запуск:  docker compose -f compose.yaml -f compose.dev.yaml up --build
+# Сайт:    http://localhost:4321  (напрямую, с hot reload)  и  http://localhost  (через Caddy)
+
+services:
+  app:
+    build:
+      target: deps
+    command: sh -c "node scripts/prepare.ts && npm run dev"
+    environment:
+      NODE_ENV: development
+      UPLOADS_DIR: /app/data/uploads
+      # Docker Desktop на Windows не пробрасывает события файловой системы — нужен опрос
+      VITE_POLLING: "true"
+    volumes:
+      - .:/app
+      - node_modules:/app/node_modules
+      - uploads:/app/data/uploads
+    ports:
+      - "4321:4321"
+    healthcheck:
+      disable: true
+
+volumes:
+  node_modules:

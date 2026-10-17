@@ -1,0 +1,170 @@
+---
+// Главная: главный экран, о компании, карточки разделов (каждый ведёт на свой сайт), производители, новости, контакты.
+// Тексты редактируются в админке: «Главная страница» (src/server/home.ts), карточки — «Разделы», логотипы — «Бренды».
+import Lines from './Lines.astro';
+import type { HomeContent } from '../server/home.ts';
+import type { News } from '../server/content.ts';
+import { isExternal, linkLabel, sectionUrl, type Brand, type Section } from '../server/sections.ts';
+import type { Settings } from '../server/settings.ts';
+import { homeSrcset, uploadUrl } from '../server/uploads.ts';
+import { formatDate, plainText } from '../server/util.ts';
+
+interface Props {
+  home: HomeContent;
+  /** HTML текста о компании с уже подставленными контактами */
+  aboutHtml: string;
+  sections: Section[];
+  brands: Brand[];
+  news: News[];
+  settings: Settings;
+}
+const { home, aboutHtml, sections, brands, news, settings } = Astro.props;
+const heroImages = home.hero.images.filter(Boolean);
+const phoneHref = 'tel:' + settings.phone_main.replace(/[^\d+]/g, '');
+const waHref = 'https://wa.me/' + settings.panel_whatsapp.replace(/\D/g, '');
+// Логотип ведёт на страницу раздела бренда (там описание и ссылка на коллекции), без раздела — по ссылке бренда
+const brandHref = (b: Brand) => {
+  const s = sections.find((x) => x.id === b.sectionId);
+  return s ? sectionUrl(s) : b.link;
+};
+const cover = (n: News) => (n.image ? uploadUrl(n.image) : (n.content.match(/<img[^>]+src="([^"]+)"/)?.[1] ?? ''));
+---
+
+<section class:list={['phero', { 'phero--noimg': heroImages.length === 0 }]} data-hero aria-label="Главный экран">
+  {
+    heroImages.map((img, i) => (
+      <div class:list={['phero-slide', { active: i === 0 }]}>
+        {i === 0 ? (
+          <img src={uploadUrl(img)} srcset={homeSrcset(img)} sizes="100vw" alt="" width="2560" height="1440" fetchpriority="high" />
+        ) : (
+          <img data-src={uploadUrl(img)} data-srcset={homeSrcset(img)} sizes="100vw" alt="" width="2560" height="1440" />
+        )}
+      </div>
+    ))
+  }
+  <div class="phero-caption">
+    <h1 class="phero-title"><Lines text={home.hero.title} /></h1>
+    {home.hero.text && <p class="phero-text">{home.hero.text}</p>}
+    {home.hero.button && <a class="pbtn" href={home.hero.link}>{home.hero.button}</a>}
+  </div>
+  {
+    heroImages.length > 1 && (
+      <div class="phero-dots">
+        {heroImages.map((_, i) => (
+          <button type="button" class:list={{ active: i === 0 }} data-hero-dot={i} aria-label={`Фото ${i + 1}`} />
+        ))}
+      </div>
+    )
+  }
+</section>
+
+{
+  home.about.title && (
+    <section class="psec psalon">
+      <div class="pin">
+        <h2 class="ptitle">{home.about.title}</h2>
+        <div class="psalon-text" set:html={aboutHtml} />
+        {home.about.linkText && <a class="plink" href={home.about.link}>{home.about.linkText}</a>}
+      </div>
+    </section>
+  )
+}
+
+{
+  home.sections.title && sections.length > 0 && (
+    <section class="psec psections" id="razdely">
+      <div class="pin">
+        <h2 class="ptitle">{home.sections.title}</h2>
+        {home.sections.text && <p class="psub">{home.sections.text}</p>}
+        <div class="psections-grid">
+          {sections.map((s) => (
+            <article class="psection">
+              {s.image && (
+                <a class="psection-img" href={sectionUrl(s)} tabindex="-1" aria-hidden="true">
+                  <img src={uploadUrl(s.image)} srcset={homeSrcset(s.image)} sizes="(max-width: 768px) 96vw, 380px" alt="" width="760" height="500" loading="lazy" />
+                </a>
+              )}
+              <div class="psection-body">
+                <h3 class="psection-title"><a href={sectionUrl(s)}>{s.name}</a></h3>
+                {s.summary && <p class="psection-text">{s.summary}</p>}
+                <div class="psection-links">
+                  {s.link && (
+                    <a class="pbtn" href={s.link} target={isExternal(s.link) ? '_blank' : undefined} rel={isExternal(s.link) ? 'noopener' : undefined}>
+                      {linkLabel(s)}
+                    </a>
+                  )}
+                  <a class="plink" href={sectionUrl(s)}>Подробнее</a>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+{
+  home.brands.title && brands.length > 0 && (
+    <section class="psec pbrands">
+      <div class="pin">
+        <h2 class="ptitle">{home.brands.title}</h2>
+        {home.brands.text && <p class="psub">{home.brands.text}</p>}
+        <div class="pbrands-grid">
+          {brands.map((b) => (
+            <a class="pbrand" href={brandHref(b) || undefined} title={b.name}
+              target={isExternal(brandHref(b)) ? '_blank' : undefined} rel={isExternal(brandHref(b)) ? 'noopener' : undefined}>
+              {b.logo ? <img src={uploadUrl(b.logo)} alt={b.name} loading="lazy" /> : <span>{b.name}</span>}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+{
+  home.news.title && news.length > 0 && (
+    <section class="psec pnews">
+      <div class="pin">
+        <h2 class="ptitle">{home.news.title}</h2>
+        <div class="pgrid pblog">
+          {news.map((n) => (
+            <a class="pcard2" href={`/news/${n.slug}`}>
+              {cover(n) && <span class="pcard2-img pblog-img"><img src={cover(n)} alt="" loading="lazy" /></span>}
+              <span class="pcard2-body">
+                <span class="pcard2-sub">{formatDate(n.publishedAt)}</span>
+                <span class="pcard2-name">{n.title}</span>
+                {(n.excerpt || n.content) && <span class="pcard2-facts pblog-excerpt">{plainText(n.excerpt || n.content, 160)}</span>}
+              </span>
+            </a>
+          ))}
+        </div>
+        <p style="margin-top:28px"><a class="plink" href="/news">Все новости</a></p>
+      </div>
+    </section>
+  )
+}
+
+{
+  home.contact.title && (
+    <section class="psec pcontact">
+      <div class="pin pcontact-grid">
+        <div>
+          <h2 class="ptitle">{home.contact.title}</h2>
+          {home.contact.text && <p class="psub">{home.contact.text}</p>}
+        </div>
+        <div class="pcontact-list">
+          <a class="pcontact-phone" href={phoneHref}>{settings.phone_main}</a>
+          <span>{settings.address}</span>
+          {settings.work_hours && <span class="pf-muted">{settings.work_hours}</span>}
+          {settings.email && <a href={`mailto:${settings.email}`}>{settings.email}</a>}
+          <div class="psection-links">
+            <a class="pbtn" href={waHref} target="_blank" rel="noopener">Написать в WhatsApp</a>
+            <a class="pbtn pbtn-outline" href={phoneHref}>Позвонить</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}

@@ -1,0 +1,32 @@
+{
+  "name": "europroject",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Сайт «Европроект» (europroject.kg): Astro + Postgres + собственная панель управления",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "astro dev --host 0.0.0.0",
+    "build": "astro build",
+    "check": "astro check",
+    "start": "node scripts/start.ts",
+    "migrate": "node scripts/migrate.ts",
+    "seed": "node scripts/seed.ts",
+    "create-admin": "node scripts/create-admin.ts",
+    "instagram-sync": "node scripts/instagram-sync.ts"
+  },
+  "dependencies": {
+    "@astrojs/node": "^11.1.6",
+    "astro": "^7.3.5",
+    "postgres": "^3.4.9",
+    "sharp": "^0.35.5"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@types/node": "^24.0.0",
+    "jodit": "^4.15.16",
+    "typescript": "^6.0.3"
+  }
+}

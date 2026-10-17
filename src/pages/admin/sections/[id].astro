@@ -1,0 +1,186 @@
+---
+import AdminLayout from '../../../layouts/AdminLayout.astro';
+import { sql } from '../../../server/db.ts';
+import { RESERVED_SLUGS } from '../../../server/content.ts';
+import type { Section } from '../../../server/sections.ts';
+import { dbErrorMessage, withFlash } from '../../../server/admin.ts';
+import { bool, int, isValidSlug, str, toInt } from '../../../server/util.ts';
+import { formFiles, homeSrcset, removeUploads, saveImage, uploadUrl } from '../../../server/uploads.ts';
+
+const isNew = Astro.params.id === 'new';
+const id = isNew ? null : toInt(Astro.params.id);
+if (!isNew && !id) return Astro.redirect('/admin/sections');
+
+const [current] = id ? await sql<Section[]>`SELECT * FROM sections WHERE id = ${id}` : [];
+if (!isNew && !current) return Astro.redirect(withFlash('/admin/sections', 'err', 'Раздел не найден'));
+const [{ n: total }] = await sql<{ n: number }[]>`SELECT count(*)::int AS n FROM sections`;
+
+type Form = Omit<Section, 'id' | 'updatedAt'>;
+let error = '';
+let form: Form = current ?? {
+  slug: '', name: '', heading: '', summary: '', description: '', image: '', link: '', linkLabel: '',
+  seoTitle: '', seoDescription: '', sortOrder: (total + 1) * 10, isPublished: true,
+};
+let newImage = ''; // загруженное в этом запросе фото (удаляется, если сохранить не удалось)
+
+if (Astro.request.method === 'POST') {
+  const data = await Astro.request.formData();
+  if (str(data, '_action') === 'delete' && id) {
+    await sql`DELETE FROM sections WHERE id = ${id}`;
+    await removeUploads(current?.image);
+    return Astro.redirect(withFlash('/admin/sections', 'ok', 'deleted'));
+  }
+  form = {
+    slug: str(data, 'slug').toLowerCase(),
+    name: str(data, 'name'),
+    heading: str(data, 'heading'),
+    summary: str(data, 'summary'),
+    description: String(data.get('description') ?? '').trim(),
+    image: current?.image ?? '',
+    link: str(data, 'link'),
+    linkLabel: str(data, 'link_label'),
+    seoTitle: str(data, 'seo_title'),
+    seoDescription: str(data, 'seo_description'),
+    sortOrder: int(data, 'sort_order'),
+    isPublished: bool(data, 'is_published'),
+  };
+  const [file] = formFiles(data, 'image__file');
+  if (file) {
+    try {
+      [newImage] = await saveImage(Buffer.from(await file.arrayBuffer()), 'home');
+      form.image = newImage;
+    } catch (err) {
+      error = (err as Error).message;
+    }
+  } else if (bool(data, 'image__del')) {
+    form.image = '';
+  }
+  if (error) {
+    // ошибка фото уже записана
+  } else if (!form.name) error = 'Укажите название';
+  else if (!isValidSlug(form.slug)) error = 'Адрес: только латинские буквы, цифры, «-» и «_»';
+  else if (RESERVED_SLUGS.has(form.slug)) error = `Адрес «${form.slug}» зарезервирован системой`;
+  else if ((await sql`SELECT 1 FROM pages WHERE slug = ${form.slug}`).length) error = `Адрес «${form.slug}» уже занят страницей`;
+  else if (form.link && !/^(https?:\/\/|\/)/i.test(form.link)) error = 'Ссылка на сайт раздела начинается с https:// (или с / для страницы этого сайта)';
+
+  if (!error) {
+    const f = form;
+    try {
+      if (id) {
+        await sql`UPDATE sections SET ${sql(f)}, updated_at = now() WHERE id = ${id}`;
+        if (current?.image && current.image !== f.image) await removeUploads(current.image);
+        return Astro.redirect(withFlash(`/admin/sections/${id}`, 'ok', 'saved'));
+      }
+      const [row] = await sql<{ id: number }[]>`INSERT INTO sections ${sql(f)} RETURNING id`;
+      return Astro.redirect(withFlash(`/admin/sections/${row.id}`, 'ok', 'created'));
+    } catch (err) {
+      error = dbErrorMessage(err);
+    }
+  }
+  if (error && newImage) {
+    await removeUploads(newImage);
+    form.image = current?.image ?? '';
+  }
+}
+const title = isNew ? 'Новый раздел' : form.name;
+---
+
+<AdminLayout title={title} section="sections">
+  <div class="toolbar">
+    <h1>{title}</h1>
+    <div class="actions">
+      {current && <a class="btn secondary" href={`/${current.slug}`} target="_blank" rel="noopener">Открыть на сайте ↗</a>}
+      {current && <a class="btn secondary" href={`/admin/brands?section=${current.id}`}>Бренды раздела</a>}
+      <a class="btn secondary" href="/admin/sections">← К списку</a>
+    </div>
+  </div>
+  {error && <div class="flash err">{error}</div>}
+
+  <form method="post" enctype="multipart/form-data">
+    <div class="card">
+      <div class="form-grid">
+        <div class="field">
+          <label for="name">Название в меню *</label>
+          <input type="text" id="name" name="name" value={form.name} required />
+        </div>
+        <div class="field">
+          <label for="slug">Адрес страницы раздела *</label>
+          <input type="text" id="slug" name="slug" value={form.slug} required data-slug-from="name" pattern="[a-z0-9][a-z0-9_\-]*" />
+          <div class="hint">Например <code>vinyl</code> → europroject.kg/vinyl. Меняйте осторожно: старые ссылки перестанут работать.</div>
+        </div>
+        <div class="field">
+          <label for="heading">Заголовок на странице раздела</label>
+          <input type="text" id="heading" name="heading" value={form.heading} placeholder="по умолчанию — название" />
+        </div>
+        <div class="field">
+          <label for="sort_order">Порядок</label>
+          <input type="number" id="sort_order" name="sort_order" value={form.sortOrder} />
+        </div>
+        <div class="field full">
+          <label for="summary">Коротко для карточки на главной</label>
+          <input type="text" id="summary" name="summary" value={form.summary} />
+        </div>
+        <div class="field full inline">
+          <label class="check"><input type="checkbox" name="is_published" checked={form.isPublished} /> Показывать на сайте</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Сайт раздела</h2>
+      <p class="hint">Отдельный сайт или страница, где будут товары и онлайн-заказ. Пока ссылки нет, на странице раздела
+        вместо кнопки показываются телефон и WhatsApp.</p>
+      <div class="form-grid">
+        <div class="field">
+          <label for="link">Ссылка</label>
+          <input type="text" id="link" name="link" value={form.link} placeholder="https://vinyl.europroject.kg" />
+        </div>
+        <div class="field">
+          <label for="link_label">Подпись кнопки</label>
+          <input type="text" id="link_label" name="link_label" value={form.linkLabel} placeholder="Перейти на сайт раздела" />
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Фото раздела</h2>
+      <p class="hint">Горизонтальное фото в интерьере, от 2000 px по ширине: на карточке главной и вверху страницы раздела.</p>
+      {form.image && <img class="preview" src={uploadUrl(form.image)} srcset={homeSrcset(form.image)} sizes="400px" alt="" style="max-width:400px;border-radius:6px" />}
+      <div class="field" style="margin-top:10px">
+        <input type="file" name="image__file" accept="image/*" />
+        {form.image && <label class="check small"><input type="checkbox" name="image__del" /> удалить фото</label>}
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Текст на странице раздела</h2>
+      <textarea name="description" data-editor data-height="260">{form.description}</textarea>
+    </div>
+
+    <div class="card">
+      <h2>SEO</h2>
+      <div class="form-grid">
+        <div class="field">
+          <label for="seo_title">Заголовок (title)</label>
+          <input type="text" id="seo_title" name="seo_title" value={form.seoTitle} placeholder="пусто — «Название в Бишкеке | Европроект»" />
+        </div>
+        <div class="field">
+          <label for="seo_description">Описание (meta description)</label>
+          <input type="text" id="seo_description" name="seo_description" value={form.seoDescription} placeholder="пусто — начало текста раздела" />
+        </div>
+      </div>
+    </div>
+
+    <div class="form-actions sticky-actions">
+      <button class="btn" type="submit" name="_action" value="save">Сохранить</button>
+      <span class="spacer"></span>
+      {
+        !isNew && (
+          <button class="btn danger" type="submit" name="_action" value="delete" formnovalidate data-confirm="Удалить раздел? Бренды раздела останутся, но без раздела.">
+            Удалить
+          </button>
+        )
+      }
+    </div>
+  </form>
+</AdminLayout>

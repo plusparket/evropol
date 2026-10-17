@@ -1,0 +1,16 @@
+---
+// Текст с переносами строк: «строка 1\nстрока 2» → строка 1<br>строка 2
+interface Props {
+  text: string;
+}
+const lines = (Astro.props.text ?? '').split('\n');
+---
+
+{
+  lines.map((line, i) => (
+    <Fragment>
+      {i > 0 && <br />}
+      {line}
+    </Fragment>
+  ))
+}

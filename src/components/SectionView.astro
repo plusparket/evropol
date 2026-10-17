@@ -1,0 +1,79 @@
+---
+// Страница раздела: фото и текст, кнопка на сайт раздела (товары и заказ), бренды раздела, связь.
+import Crumbs from './Crumbs.astro';
+import { isExternal, linkLabel, type Brand, type Section } from '../server/sections.ts';
+import type { Settings } from '../server/settings.ts';
+import { homeSrcset, uploadUrl } from '../server/uploads.ts';
+
+interface Props {
+  section: Section;
+  brands: Brand[];
+  settings: Settings;
+}
+const { section: s, brands, settings } = Astro.props;
+const heading = s.heading || s.name;
+const external = isExternal(s.link);
+const phoneHref = 'tel:' + settings.phone_main.replace(/[^\d+]/g, '');
+const waHref = 'https://wa.me/' + settings.panel_whatsapp.replace(/\D/g, '');
+---
+
+<section class:list={['pcat-hero', { 'pcat-hero--noimg': !s.image }]}>
+  {s.image && <img class="pcat-hero-img" src={uploadUrl(s.image)} srcset={homeSrcset(s.image)} sizes="100vw" alt="" width="2560" height="1440" fetchpriority="high" />}
+  <div class="pcat-hero-card">
+    <Crumbs items={[{ name: s.name }]} />
+    <h1 class="pcat-title">{heading}</h1>
+    {s.description && <div class="pcat-text" set:html={s.description} />}
+    <div class="psection-links">
+      {
+        s.link ? (
+          <a class="pbtn" href={s.link} target={external ? '_blank' : undefined} rel={external ? 'noopener' : undefined}>{linkLabel(s)}</a>
+        ) : (
+          <Fragment>
+            <a class="pbtn" href={waHref} target="_blank" rel="noopener">Написать в WhatsApp</a>
+            <a class="pbtn pbtn-outline" href={phoneHref}>{settings.phone_main}</a>
+          </Fragment>
+        )
+      }
+    </div>
+  </div>
+</section>
+
+{
+  brands.length > 0 && (
+    <section class="psec">
+      <div class="pin">
+        <h2 class="ptitle">{brands.length > 1 ? 'Производители' : 'Производитель'}</h2>
+        <div class="psbrands">
+          {brands.map((b) => (
+            <article class="psbrand">
+              <div class="psbrand-logo">{b.logo ? <img src={uploadUrl(b.logo)} alt={b.name} loading="lazy" /> : <span>{b.name}</span>}</div>
+              <div class="psbrand-body">
+                <h3 class="psection-title">{b.name}</h3>
+                {b.description && <div class="psbrand-text" set:html={b.description} />}
+                {b.link && (
+                  <a class="plink" href={b.link} target={isExternal(b.link) ? '_blank' : undefined} rel={isExternal(b.link) ? 'noopener' : undefined}>
+                    Коллекции {b.name}
+                  </a>
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+<section class="psec pcontact">
+  <div class="pin pcontact-grid">
+    <div>
+      <h2 class="ptitle">Подберём покрытие</h2>
+      <p class="psub">Позвоните или напишите: расскажем о коллекциях, покажем образцы в офисе, рассчитаем количество.</p>
+    </div>
+    <div class="pcontact-list">
+      <a class="pcontact-phone" href={phoneHref}>{settings.phone_main}</a>
+      <span>{settings.address}</span>
+      {settings.email && <a href={`mailto:${settings.email}`}>{settings.email}</a>}
+    </div>
+  </div>
+</section>

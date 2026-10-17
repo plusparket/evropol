@@ -1,0 +1,22 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import Home from '../components/Home.astro';
+import { listNews } from '../server/content.ts';
+import { fillPlaceholders, getSettings } from '../server/settings.ts';
+import { getHome } from '../server/home.ts';
+import { getActiveBrands, getSections } from '../server/sections.ts';
+import { organizationJsonLd, siteBase } from '../server/seo.ts';
+
+const [settings, home, sections, brands] = await Promise.all([getSettings(), getHome(), getSections({ publishedOnly: true }), getActiveBrands()]);
+const news = home.news.count > 0 ? await listNews(home.news.count) : [];
+const aboutHtml = fillPlaceholders(home.about.text, settings);
+// Разметка для Google: организация и офис (адрес, телефон, часы, координаты)
+const base = siteBase(Astro.url.origin);
+const orgLd = organizationJsonLd(settings, base, `${base}/img/og.jpg`);
+const title = settings.seo_title || settings.site_name;
+const description = settings.seo_description || undefined;
+---
+
+<SiteLayout title={title} description={description} canonicalPath="/" jsonLd={orgLd}>
+  <Home home={home} aboutHtml={aboutHtml} sections={sections} brands={brands} news={news} settings={settings} />
+</SiteLayout>
