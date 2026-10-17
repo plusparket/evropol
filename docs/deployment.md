@@ -14,7 +14,7 @@
 ## Установка
 
 ```bash
-git clone https://github.com/plusparket/europroject.git /opt/europroject
+git clone https://github.com/plusparket/evropol.git /opt/europroject
 cd /opt/europroject
 cp .env.example .env
 nano .env
