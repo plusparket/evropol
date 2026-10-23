@@ -10,7 +10,7 @@ import { saveImage } from './uploads.ts';
 const OLD_SITE = process.env.LEGACY_SITE_URL || 'https://europroject.kg';
 const FLAG = 'legacy_photos_imported';
 /** Сколько фото слайдера взять с главной старого сайта */
-const HERO_MAX = 6;
+const HERO_MAX = 8;
 
 // Картинки брендов и новостей на главной старого сайта (по ответу europroject.kg 23.10.2026)
 const BRAND_FILES: Record<string, string> = {
@@ -45,7 +45,8 @@ function imageUrls(html: string): string[] {
     const path = new URL(m[1].replace(/\\\//g, '/'), OLD_SITE + '/').pathname;
     found.add(decodeURI(path));
   }
-  return [...found];
+  // По имени файла: sll1, sll2, sll31… — тот же порядок, что в слайдере старого сайта
+  return [...found].sort();
 }
 
 export async function importLegacyPhotos(log: (msg: string) => void = console.log): Promise<void> {

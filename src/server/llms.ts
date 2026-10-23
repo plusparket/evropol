@@ -113,7 +113,7 @@ function contacts(d: Data): string[] {
 export async function buildLlmsTxt(origin: string): Promise<string> {
   const d = await load(origin);
   const out: string[] = [`# ${d.settings.site_name}`, '', `> ${summary(d)}`, ''];
-  if (d.home.about.text) out.push(oneLine(htmlToMd(fillPlaceholders(d.home.about.text, d.settings), d.base), 600), '');
+  if (d.home.about.title && d.home.about.text) out.push(oneLine(htmlToMd(fillPlaceholders(d.home.about.text, d.settings), d.base), 600), '');
   out.push(
     'Этот сайт рассказывает о компании и разделах. Коллекции, цены и заказ — на сайте каждого раздела; ' +
       'если у раздела сайта пока нет, цену и наличие уточняйте по телефону или в WhatsApp.',
@@ -152,7 +152,7 @@ export async function buildLlmsFullTxt(origin: string): Promise<string> {
   const out: string[] = [`# ${d.settings.site_name}: полная информация`, '', `> ${summary(d)}`, ''];
   out.push(`Сайт: ${d.base}. Данные собраны с сайта ${new Date().toLocaleDateString('ru-RU')} и всегда совпадают с ним.`, '');
 
-  if (d.home.about.text) out.push('## О компании', '', md(d.home.about.text), '');
+  if (d.home.about.title && d.home.about.text) out.push('## О компании', '', md(d.home.about.text), '');
   out.push('Коллекции, цены и заказ — на сайте каждого раздела; если у раздела сайта пока нет, уточняйте по телефону или в WhatsApp.', '');
   out.push('## Контакты', '', ...contacts(d), '');
 
