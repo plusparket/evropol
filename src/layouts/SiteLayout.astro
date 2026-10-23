@@ -26,7 +26,7 @@ const [settings, menus, sections] = await Promise.all([getSettings(), getMenus()
 const countersOn = settings.counters_enabled === '1';
 const siteUrl = siteBase(Astro.url.origin);
 const canonical = siteUrl + (canonicalPath ?? Astro.url.pathname);
-const ogImage = siteUrl + (image || '/img/og.jpg');
+const ogImage = siteUrl + (image || '/img/og-europroject.jpg');
 const ldBlocks = (Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : []).map((o) => JSON.stringify(o).replace(/</g, '\\u003c'));
 const ga4 = countersOn && /^G-[A-Z0-9]+$/i.test(settings.ga4_id) ? settings.ga4_id : '';
 const copyright = settings.copyright.replaceAll('{year}', String(new Date().getFullYear()));
@@ -48,9 +48,9 @@ const maps = [
     {description && <meta name="description" content={description} />}
     {noindex && <meta name="robots" content="noindex" />}
     <link rel="canonical" href={canonical} />
-    <link rel="icon" href="/favicon.ico?v=2" sizes="48x48" />
-    <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2" />
+    <link rel="icon" href="/favicon.ico?v=3" sizes="48x48" />
+    <link rel="icon" href="/favicon.svg?v=3" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=3" />
     <meta property="og:type" content={ogType} />
     <meta property="og:title" content={title} />
     {description && <meta property="og:description" content={description} />}
@@ -61,7 +61,7 @@ const maps = [
     <meta name="twitter:card" content="summary_large_image" />
     {settings.google_site_verification && <meta name="google-site-verification" content={settings.google_site_verification} />}
     {settings.yandex_verification && <meta name="yandex-verification" content={settings.yandex_verification} />}
-    <meta name="theme-color" content="#0d1b2a" />
+    <meta name="theme-color" content="#ffffff" />
     {ldBlocks.map((json) => <script type="application/ld+json" set:html={json} />)}
     <ClientRouter fallback="swap" />
     {
@@ -90,7 +90,7 @@ const maps = [
       <slot />
     </main>
 
-    <Footer settings={settings} menus={menus} maps={maps} copyright={copyright} />
+    <Footer settings={settings} menus={menus} sections={sections} maps={maps} copyright={copyright} />
 
     {
       settings.panel_whatsapp && (

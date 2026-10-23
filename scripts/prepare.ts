@@ -1,11 +1,12 @@
 // Подготовка перед запуском: миграции → первый администратор → стартовый контент (если база пустая)
-// → недостающие уменьшенные копии фото главной.
+// → фото со старого сайта europroject.kg (один раз) → недостающие уменьшенные копии фото главной.
 import { migrate } from '../src/server/migrate.ts';
 import { ensureAdmin } from '../src/server/auth.ts';
 import { isDatabaseEmpty, seed } from '../src/server/seed.ts';
 import { ensureHomeVariants } from '../src/server/uploads.ts';
 import { sql } from '../src/server/db.ts';
 import { ensureNewsSlugs } from '../src/server/content.ts';
+import { importLegacyPhotos } from '../src/server/legacy-photos.ts';
 
 const log = (msg: string) => console.log(`[prepare] ${msg}`);
 
@@ -19,6 +20,7 @@ export async function prepare(): Promise<void> {
   }
   const slugs = await ensureNewsSlugs();
   if (slugs) log(`адреса новостей: ${slugs}`);
+  await importLegacyPhotos(log).catch((err) => log(`фото со старого сайта: ошибка ${err?.message ?? err}`));
   const made = await ensureHomeVariants();
   if (made) log(`созданы уменьшенные копии фото главной: ${made}`);
 }

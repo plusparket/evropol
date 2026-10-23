@@ -1,17 +1,10 @@
-// Поведение оформления: компактная шапка при прокрутке, выдвижное меню, слайдер главного экрана,
+// Поведение оформления: тень шапки при прокрутке, слайдер главного экрана (стрелки, пауза, свайп),
 // фото новостей крупно.
 // Всё инициализируется на astro:page-load и работает только если нужные элементы есть на странице.
 
 const timers: number[] = [];
 
-// Подразделы в выдвижном меню
-document.addEventListener('click', (e) => {
-  const target = e.target as HTMLElement;
-  const sub = target.closest<HTMLElement>('[data-drawer-sub]');
-  if (sub) sub.closest('.pdrawer-item')?.classList.toggle('open');
-});
-
-// Компактная шапка: меньше логотип, без адресов. Возвращается у самого верха страницы (разные пороги,
+// Компактная шапка: меньше логотип и тень снизу. Возвращается у самого верха страницы (разные пороги,
 // чтобы шапка не дёргалась: она становится ниже, и страница сдвигается на эту разницу)
 function onScroll(): void {
   const ph = document.getElementById('ph');
@@ -47,19 +40,29 @@ function initHero(): void {
     slides.forEach((s, k) => s.classList.toggle('active', k === current));
     dots.forEach((d, k) => d.classList.toggle('active', k === current));
   };
+  let paused = false;
   let timer = window.setInterval(() => show(current + 1), 6000);
   timers.push(timer);
   const restart = () => {
     window.clearInterval(timer);
+    if (paused) return;
     timer = window.setInterval(() => show(current + 1), 6000);
     timers.push(timer);
   };
+  // Пауза: слайды стоят, пока посетитель снова не нажмёт кнопку
+  const pause = hero.querySelector<HTMLElement>('[data-hero-pause]');
+  pause?.addEventListener('click', () => {
+    paused = !paused;
+    hero.classList.toggle('paused', paused);
+    pause.setAttribute('aria-label', paused ? 'Продолжить' : 'Пауза');
+    restart();
+  });
   hero.querySelector('[data-hero-prev]')?.addEventListener('click', () => { show(current - 1); restart(); });
   hero.querySelector('[data-hero-next]')?.addEventListener('click', () => { show(current + 1); restart(); });
   dots.forEach((d) => d.addEventListener('click', () => { show(Number(d.dataset.heroDot)); restart(); }));
   // Свайп на телефонах
   let startX: number | null = null;
-  hero.addEventListener('pointerdown', (e) => (startX = e.clientX));
+  hero.addEventListener('pointerdown', (e) => (startX = (e.target as HTMLElement).closest('button') ? null : e.clientX));
   hero.addEventListener('pointerup', (e) => {
     if (startX === null) return;
     const dx = e.clientX - startX;
