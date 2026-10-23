@@ -1,0 +1,417 @@
+.responsive body
+{
+    min-width: 320px;
+}
+  
+.responsive .content-layout img,
+.responsive .content-layout video
+{
+   max-width: 100%;
+   height: auto !important;
+}
+
+.responsive.responsive-phone .content-layout img 
+{
+ /*  float: none !important;
+   margin: 1%;*/
+}
+
+.responsive.responsive-phone .collage {
+   margin: 1% !important;
+}
+    
+.responsive .content-layout .sidebar0, 
+.responsive .content-layout .sidebar1, 
+.responsive .content-layout .sidebar2 
+{
+   width: auto !important;
+}
+    
+.responsive .content-layout, 
+.responsive .content-layout-row, 
+.responsive .layout-cell 
+{
+   display: block;
+}
+    
+.responsive .image-caption-wrapper 
+{
+   width: auto;
+}
+
+.responsive.responsive-tablet .vmenublock,
+.responsive.responsive-tablet .block
+{
+   margin-left: 1%;
+   margin-right: 1%;
+   width: 48%;
+   float: left;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+.responsive .responsive-embed 
+{
+ /*  position: relative;
+   padding-bottom: 56.25%;
+    16:9 
+	height: 0;*/
+}
+
+.responsive .responsive-embed iframe,
+.responsive .responsive-embed object,
+.responsive .responsive-embed embed
+{
+  position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+  /* height: 100%;*/
+}
+
+.custom_map iframe {
+    position: relative !important;
+}
+
+.responsive .sheet
+{
+   width: auto !important;
+   min-width: 320px !important;
+   max-width: none;
+ /*  margin-right: 1% !important;
+   margin-left: 1% !important;*/
+}
+
+#resp {
+   display: none;
+}
+
+@media all and (max-width: 768px)
+{
+    #resp, #resp-t { display: block; }
+    #resp-m { display: none; }
+}
+
+@media all and (max-width: 480px)
+{
+    #resp, #resp-m { display: block; }
+    #resp-t { display: none; }
+}
+
+.responsive .header 
+{
+   width: auto;
+   height: auto;
+   min-height: 190px;
+   min-width: 1%;
+   /*  background-position: center center !important;
+   background-size: cover !important;
+   background-repeat: repeat !important;*/
+   /*min-width: 425px !important;*/
+}
+
+.responsive .header .headline, 
+.responsive .header .slogan 
+{
+   display: block !important;
+   top: 0 !important;
+   left: 0 !important;
+   margin: 2% !important;
+}
+    
+.responsive .header .headline a, 
+.responsive .header .slogan 
+{
+   white-space: normal !important;
+}
+  
+.responsive .header *
+{
+   position: relative;
+/*   text-align: center;*/
+/*   -webkit-transform: none !important;
+   -moz-transform: none !important;
+   -o-transform: none !important;
+   -ms-transform: none !important;
+   transform: none !important;*/
+}
+
+.responsive .header #flash-area,
+.responsive .header .shapes>*
+{
+   display: none;
+}
+
+.responsive #header-bg 
+{
+   background-position: center center !important;
+   background-size: cover !important;
+   background-repeat: repeat !important;
+}
+
+/* Search and other elements in header element directly */
+.responsive .header>.textblock
+{
+   position: relative !important;
+   display: block !important;
+   margin: 1% auto !important;
+   width: 75% !important;
+   top: auto !important;
+   right: auto !important;
+   bottom: auto !important;
+   left: auto !important;
+}
+
+/* For icons like facebook, rss, etc. */
+.responsive .header>.textblock>div 
+{
+   width: 100%;
+}
+/* dynamic width nav */
+.responsive nav.nav,
+.responsive .nav-inner
+{
+    width: 100% !important;
+    position: absolute !important;
+    top: 80px !important;
+    left: auto !important;
+    right: 0 !important;
+    bottom: auto !important;
+    margin-top: 0;
+    margin-bottom: 0;
+    min-width: 0;
+    text-align: right !important;
+}
+
+.responsive nav.nav
+{
+   min-width: 1%;
+}
+
+.responsive .nav 
+{
+   padding-left: 0;
+   padding-right: 0;
+}
+
+/* full width hmenu, instead of inline-block */
+.responsive .nav ul.hmenu 
+{
+   float: none;
+   text-align: center;
+   display: none;
+}
+
+/* elements on different lines */
+.responsive .nav ul.hmenu li,
+.responsive .hmenu-extra1,
+.responsive .hmenu-extra2
+{
+   float: none;
+   width: 100%;
+}
+  
+/* horizontal margins */
+.responsive .nav ul.hmenu>li:first-child, 
+.responsive .nav ul.hmenu>li:last-child, 
+.responsive .nav ul.hmenu>li
+{
+   margin-left: 0;
+   margin-right: 0;
+}
+ 
+/* separator */ 
+.responsive .nav ul.hmenu>li:before
+{
+   display: none;
+}
+
+/* vertical distance between items */
+.responsive .nav ul.hmenu a
+{
+    margin-bottom: 0px !important;
+    height: auto;
+    white-space: normal;
+    background-color: rgb(255 255 255);
+    margin-right: 0px;
+    border: 1px solid #ececec;
+    text-align: left;
+    border-radius: 0;
+    margin-top: 0px !important;
+    font-size: 16px;
+}
+
+.responsive .nav ul.hmenu>li:first-child>a
+{
+   margin-top: 0 !important;
+}
+
+.responsive .nav ul.hmenu>li:last-child>a
+{
+   margin-bottom: 0 !important;
+}
+
+/* fixes for extended menu */
+.responsive .nav .ext, 
+.responsive .nav ul.hmenu>li>ul, 
+.responsive .nav ul.hmenu>li>ul>li,
+.responsive .nav ul.hmenu>li>ul>li a
+{
+   width: auto !important;
+}
+
+/* submenu position on hover */
+.responsive .nav ul.hmenu ul
+{
+   left: auto !important;
+   right: auto !important;
+   top: auto !important;
+   bottom: auto !important;
+   display: none !important;
+   position: relative !important;
+   visibility: visible !important;
+}
+
+.responsive .nav ul.hmenu li.active>ul
+{
+   display: block !important;
+}
+.responsive .nav ul.hmenu ul li.active>a
+{
+   font-weight: bold;
+}
+
+.nav .menu-btn 
+{
+    /* border: 1px solid #72959a; */
+    border-radius: 3px;
+    /* box-shadow: 0 0 3px 0 rgba(0, 0, 0, .2); */
+    display: none;
+    margin: 3px;
+    padding: 5px;
+    position: relative;
+    width: 35px;
+    /* background-color: #053a3f; */
+    margin-top: -25px;
+}
+
+.nav .menu-btn span 
+{
+    background: #011e46;
+    border-radius: 2px;
+    display: block;
+    height: 3px;
+    margin: 4px 2px;
+    position: relative;
+    -moz-transition: background .2s;
+    -o-transition: background .2s;
+    -webkit-transition: background .2s;
+    transition: background .2s;
+}
+
+.nav .menu-btn:hover span
+{
+   background: #0035d2;
+}
+
+.responsive .nav .menu-btn 
+{
+   display: inline-block;
+}
+
+.responsive .nav .hmenu.visible 
+{
+   display: block;
+}
+
+.responsive .nav ul.hmenu>li>ul>li:first-child:after 
+{
+   display: none;
+}
+.responsive .nav ul.hmenu ul a
+{
+   padding-left: 4% !important;
+}
+.responsive .nav ul.hmenu ul ul a
+{
+   padding-left: 10% !important;
+}
+.responsive .nav ul.hmenu ul ul ul a
+{
+   padding-left: 14% !important;
+}
+.responsive .nav ul.hmenu ul ul ul ul a
+{
+   padding-left: 10% !important;
+}
+.responsive .nav ul.hmenu ul ul ul ul ul a
+{
+   padding-left: 12% !important;
+}
+  
+.responsive .nav ul.hmenu>li>ul
+{
+    padding: 0px 0px 0px 10px;
+}
+  
+.responsive .nav ul.hmenu>li>ul:before
+{
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 0;
+    background: none;
+}
+
+.responsive .content-layout, 
+.responsive .content-layout-row, 
+.responsive .layout-cell 
+{
+   display: block;
+}
+
+.responsive .layout-cell 
+{
+   width: auto !important;
+   height: auto !important;
+   border-right-width: 0 !important;
+   border-left-width: 0 !important;
+   border-radius: 0 !important;
+}
+
+.responsive .content-layout:after, 
+.responsive .content-layout-row:after, 
+.responsive .layout-cell:after 
+{
+   content: ".";
+   display: block;
+   height: 0;
+   clear: both;
+   visibility: hidden;
+}
+
+.responsive .post
+{
+   border-radius: 0;
+}
+
+.responsive .footer-inner
+{
+   min-width: 0;
+}
+.responsive .footer
+{
+   margin-top: 1%;
+}
+
+.responsive .responsive-tablet-layout-cell 
+{
+   width: 50% !important;
+   float: left;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+

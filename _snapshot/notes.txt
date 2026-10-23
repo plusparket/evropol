@@ -1,0 +1,225 @@
+Snapshot of https://europroject.kg/ (homepage), taken 2026-10-23
+================================================================
+
+Folder contents
+- index.html, o-kompanii.html, kontakty.html, novosti-i-sobytiya.html: raw HTML of the live pages
+- files\<path>: CSS, JS and images the homepage references, at their original paths
+  (files\_ext\<host>\... = external hosts: Google Fonts CSS and font files, jQuery CDN)
+- live-1536.png / live-390.png: full-page screenshots of the live site (desktop 1536px, phone 390px, real mobile emulation)
+- local-1536.png / local-390.png: the same for http://localhost/ (the new site)
+  (on local-390 the floating WhatsApp button lands mid-page; that's a screenshot artefact of position:fixed)
+- fetch-errors.txt: 19 links that the live site itself returns 404 for (slider thumbnails images/th/*,
+  several old CSS backgrounds such as bgf.jpg, bg2.jpg, and js/wow.min.js). The files with those names under files\
+  hold the 404 error page, not images.
+
+Page size (live): desktop 1536 x 1539 px, phone 390 x 2321 px. Content container 1200px wide (padding 15px, so 1170px inner), centered.
+
+Fonts
+- Main font: Raleway (Google Fonts, weights 100/200/300/500/600; 400/700 fall back to the browser), fallback Arial, Helvetica, sans-serif
+- Lato: news dates and news excerpts
+- Font Awesome 5 Free: icons (files\fontawesome)
+
+Main colors (computed on the live page)
+- Page background #ffffff; footer background #000000
+- Headings and category-strip text: #000000
+- Body and secondary text: #777777 (rgb 119,119,119); menu items: #808080; active menu item: #011E46 (dark navy)
+- "Связаться" button: background #f1f1f1, text #808080
+- Category strip: white cells, cell border-left 1px #f1f1f1, bottom border 2px #dcdcdc; hover = black background, white text
+- News: title #000000, date #b2b2b2 (Lato 11px), excerpt #999999 (Lato 12px, weight 300), "Подробнее..." #585858 (14px, weight 500)
+- Footer: headings #ffffff (18px, weight 500); links #6b6b6b (11px); "Связаться с нами:" #b7b7b7 (13px); copyright #788594 (9px)
+- Thin dark-blue line along the very top of the page (header background image templates/webcontentresp/images/header.png)
+- Other CSS colors: #B9C2CB, #D9DEE3, #758799, #3a4f79, #364049, #404040, #696969, #FAFAFA
+
+Sections, top to bottom (exact visible texts)
+1. Top bar (right side, inside the 1200px container)
+   - "Связаться с нами" (Raleway 15px, #777, letter-spacing 0.5px) + round Instagram icon (/images/001-instagram.png).
+     The HTML also has facebook/linkedin icons (/images/007-facebook.png, /images/006-linkedin.png), but they're hidden.
+2. Header / menu (white, about 190px tall at desktop including the top bar)
+   - Logo on the left: /images/epro.png (black parallelogram "PROJECT", shown about 100x60)
+   - Menu: Главная | О компании | Продукты | Новости и события | Контакты
+     (Raleway 16px, weight 400, letter-spacing 1px, horizontal padding 22px; active item #011E46, others #808080)
+   - "Продукты" dropdown: Винил (Moduleo, Berry Alloc), Ковровая плитка (Modulyss, Betap, IVC Commercial, BLOQ),
+     Строительная химия, Террасная доска, Коммерческий линолеум
+   - Phone: logo centered, "Связаться с нами" + Instagram above it, hamburger icon on the right
+3. Slider (full width, about 608px tall at 1536px; Camera slideshow: height 40% of width, simpleFade, 3000ms per slide,
+   1000ms transition, autoplay, arrows and play/pause, no pagination or thumbnails)
+   - Slides: /images/sll1.jpg, sll2.jpg, sll31.jpg, sll4.jpg, sll5.jpg, sll6.jpg, sll7.jpg
+   - The captions are part of the photos themselves (for example "COCA COLA OFFICES SOFIA / Sofia - Bulgaria /
+     Surface area: 2.500 m2 ...", "Chicago O'Hare Int. Airport / USA"), not HTML text
+4. Category strip (overlaps the bottom of the slider by 55px; inside the 1170px container)
+   - Hidden text block (.lnkd): "Ассортимент товаров нашей компании занимает лидирующую позицию по соотношению цены и качества"
+   - 5 cells in one row: ВИНИЛ | КОВРОВАЯ ПЛИТКА | СТРОИТЕЛЬНАЯ ХИМИЯ | ТЕРРАСНАЯ ДОСКА | КОММЕРЧЕСКИЙ ЛИНОЛЕУМ
+     (Raleway 13px, weight 700, uppercase, letter-spacing 0.5px, padding 18px 0, centered). On a phone: 2 per row, the last full width.
+   - Clicking Винил or Ковровая плитка opens a "Выберите бренд" popup (#rmi) with brand logos:
+     carpet tiles: /images/mod.jpg, betap.jpg, ivc.jpg, bloq.jpg; vinyl: /images/moduleo.jpg, berry.jpg
+5. Contacts + news (padding 50px top, 70px bottom)
+   Left column, 200px wide: "Наши контакты" (H2, Raleway 24px, weight 500, #000)
+     "У вас есть вопросы о нашем сайте, продуктах или услугах?" (12px, #777, line-height 21px)
+     thin divider line
+     "г. Бишкек / ул. Токтогула 125/1, БЦ "Авангард", / Tower B, офис 212"
+     "Tel: +996 770 55 77 15 / WhatsApp: +996 770 55 77 15"
+     "info@europroject.kg"
+     [Связаться] button (#f1f1f1, 14px weight 600, height 38px, padding 0 20px)
+     thin divider line
+   Right: "Новости" (22px, #000), 3 columns:
+     - image /images/news/ws.jpg, "Мы запустили свой вебсайт!", 02.08.2021, Europroject, excerpt "Мы запустили свой вебсайт!", "Подробнее..."
+     - image /images/news/kkkk.jpg, "Новая коллекция ковролина", 04.08.2021, Europroject, excerpt "Новая коллекция ковролина", "Подробнее..."
+     - image /images/news/trrr.jpg, "Террасная доска - лучшее решения для летника", 05.08.2021, Europroject, same excerpt, "Подробнее..."
+     (title Raleway 16px #000; date and author in Lato 11px #b2b2b2 with calendar/tag icons)
+6. Footer (black, padding 25px, 4 columns)
+   - "О вебсайте": Контакты, Права, Конфиденциальность
+   - "Быстрые ссылки": О компании, Продукты, Новости
+   - "Публикации": Информационная брошюра о компании, Информационная брошюра о продуктах компании
+   - "Соц. сети": "Связаться с нами:" + round Instagram icon
+   - Bottom line: "Copyright © 2021 Европроект. Все права защищены" (9px, #788594)
+   - Links are bulleted with small dots
+
+Downloaded files (path, bytes)
+fetch-errors.txt  998
+files\_ext\code.jquery.com\jquery-3.2.1.min.js  86659
+files\_ext\fonts.googleapis.com\css  171
+files\_ext\fonts.googleapis.com\css2  1090
+files\_ext\fonts.gstatic.com\s\lato\v25\S6uyw4BMUTPHjx4wWw.ttf  60540
+files\_ext\fonts.gstatic.com\s\raleway\v37\1Ptxg8zYS_SKggPN4iEgvnHyvveLxVsEpYCP.ttf  138840
+files\_ext\fonts.gstatic.com\s\raleway\v37\1Ptxg8zYS_SKggPN4iEgvnHyvveLxVtaooCP.ttf  138920
+files\_ext\fonts.gstatic.com\s\raleway\v37\1Ptxg8zYS_SKggPN4iEgvnHyvveLxVuEooCP.ttf  138840
+files\_ext\fonts.gstatic.com\s\raleway\v37\1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvao4CP.ttf  138728
+files\_ext\fonts.gstatic.com\s\raleway\v37\1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvoooCP.ttf  138808
+files\_ext\html5shiv.googlecode.com\svn\trunk\html5.js  1579
+files\fontawesome\css\all.css  63304
+files\fontawesome\webfonts\fa-brands-400.eot  124904
+files\fontawesome\webfonts\fa-brands-400.svg  700331
+files\fontawesome\webfonts\fa-brands-400.ttf  124668
+files\fontawesome\webfonts\fa-brands-400.woff  80660
+files\fontawesome\webfonts\fa-brands-400.woff2  69020
+files\fontawesome\webfonts\fa-regular-400.eot  40576
+files\fontawesome\webfonts\fa-regular-400.svg  142267
+files\fontawesome\webfonts\fa-regular-400.ttf  40348
+files\fontawesome\webfonts\fa-regular-400.woff  18168
+files\fontawesome\webfonts\fa-regular-400.woff2  14872
+files\fontawesome\webfonts\fa-solid-900.eot  191512
+files\fontawesome\webfonts\fa-solid-900.svg  725973
+files\fontawesome\webfonts\fa-solid-900.ttf  191292
+files\fontawesome\webfonts\fa-solid-900.woff  92800
+files\fontawesome\webfonts\fa-solid-900.woff2  71952
+files\images\001-instagram.png  1104
+files\images\006-linkedin.png  1092
+files\images\007-facebook.png  935
+files\images\berry.jpg  9793
+files\images\betap.jpg  14267
+files\images\bg2.jpg  2103   (404 on the live site, not an image)
+files\images\bgcont.jpg  2103   (404 on the live site, not an image)
+files\images\bgf.jpg  2103   (404 on the live site, not an image)
+files\images\bggm.jpg  2103   (404 on the live site, not an image)
+files\images\bg-header.gif  1102
+files\images\bgm3.jpg  2103   (404 on the live site, not an image)
+files\images\bgpr.jpg  2103   (404 on the live site, not an image)
+files\images\bgt2.png  2103   (404 on the live site, not an image)
+files\images\bloq.jpg  4056
+files\images\bw.png  3213
+files\images\close4.png  2101
+files\images\epro.png  17872
+files\images\head_line1.jpg  2103   (404 on the live site, not an image)
+files\images\hx.png  13505
+files\images\ico-li2x.gif  1104
+files\images\ivc.jpg  17429
+files\images\mod.jpg  20571
+files\images\moduleo.jpg  12655
+files\images\news\kkkk.jpg  112982
+files\images\news\trrr.jpg  88375
+files\images\news\ws.jpg  60973
+files\images\services1.jpg  2103   (404 on the live site, not an image)
+files\images\sll1.jpg  465124
+files\images\sll2.jpg  291381
+files\images\sll31.jpg  436993
+files\images\sll4.jpg  414245
+files\images\sll5.jpg  429653
+files\images\sll6.jpg  421462
+files\images\sll7.jpg  511278
+files\images\th\sll1_th.jpg  2103   (404 on the live site, not an image)
+files\images\th\sll2_th.jpg  2103   (404 on the live site, not an image)
+files\images\th\sll31_th.jpg  2103   (404 on the live site, not an image)
+files\images\th\sll4_th.jpg  2103   (404 on the live site, not an image)
+files\images\th\sll5_th.jpg  2103   (404 on the live site, not an image)
+files\images\th\sll6_th.jpg  2103   (404 on the live site, not an image)
+files\images\th\sll7_th.jpg  2103   (404 on the live site, not an image)
+files\images\ukl.jpg  2103   (404 on the live site, not an image)
+files\images\w.png  48521
+files\js\wow.min.js  2100   (404 on the live site, not an image)
+files\media\com_slideshowck\assets\camera.min.js  43111
+files\media\com_slideshowck\assets\jquery.easing.1.3.js  3332
+files\media\jui\js\jquery.min.js  97646
+files\media\jui\js\jquery-migrate.min.js  10056
+files\media\jui\js\jquery-noconflict.js  21
+files\media\plg_content_mavikthumbnails\slimbox2\css\closelabel.gif  971
+files\media\plg_content_mavikthumbnails\slimbox2\css\loading.gif  1279
+files\media\plg_content_mavikthumbnails\slimbox2\css\nextlabel.gif  354
+files\media\plg_content_mavikthumbnails\slimbox2\css\prevlabel.gif  371
+files\media\plg_content_mavikthumbnails\slimbox2\css\slimbox2.css  1240
+files\media\plg_content_mavikthumbnails\slimbox2\js\slimbox2.js  4123
+files\media\system\css\system.css  1446
+files\media\system\js\core.js  12085
+files\media\system\js\mootools-core.js  83893
+files\media\system\js\mootools-more.js  236825
+files\modules\mod_slideshowck\themes\default\css\camera.css  26810
+files\modules\mod_slideshowck\themes\default\images\blank.gif  1093
+files\modules\mod_slideshowck\themes\default\images\camera_skins.png  24198
+files\modules\mod_slideshowck\themes\default\images\camera-loader.gif  9289
+files\modules\mod_slideshowck\themes\default\images\patterns\overlay1.png  937
+files\modules\mod_slideshowck\themes\default\images\patterns\overlay10.png  923
+files\modules\mod_slideshowck\themes\default\images\patterns\overlay2.png  935
+files\modules\mod_slideshowck\themes\default\images\patterns\overlay3.png  938
+files\modules\mod_slideshowck\themes\default\images\patterns\overlay4.png  924
+files\modules\mod_slideshowck\themes\default\images\patterns\overlay5.png  924
+files\modules\mod_slideshowck\themes\default\images\patterns\overlay6.png  959
+files\modules\mod_slideshowck\themes\default\images\patterns\overlay7.png  97
+files\modules\mod_slideshowck\themes\default\images\patterns\overlay8.png  948
+files\modules\mod_slideshowck\themes\default\images\patterns\overlay9.png  926
+files\templates\system\css\general.css  2730
+files\templates\system\css\system.css  894
+files\templates\system\images\calendar.png  592
+files\templates\system\images\j_button2_blank.png  169
+files\templates\system\images\j_button2_image.png  642
+files\templates\system\images\j_button2_left.png  175
+files\templates\system\images\j_button2_pagebreak.png  440
+files\templates\system\images\j_button2_readmore.png  514
+files\templates\system\images\j_button2_right.png  184
+files\templates\system\images\selector-arrow.png  197
+files\templates\webcontentresp\css\animate.css  57095
+files\templates\webcontentresp\css\jquery.fancybox.min.css  13515
+files\templates\webcontentresp\css\template.css  102428
+files\templates\webcontentresp\css\template.ie7.css  3501
+files\templates\webcontentresp\css\template.responsive.css  7509
+files\templates\webcontentresp\favicon.ico  1353
+files\templates\webcontentresp\images\blockbullets.png  134
+files\templates\webcontentresp\images\footerbullets.png  216
+files\templates\webcontentresp\images\footerfacebookicon.png  2411
+files\templates\webcontentresp\images\footerrssicon.png  1191
+files\templates\webcontentresp\images\footertwittericon.png  957
+files\templates\webcontentresp\images\header.png  3785
+files\templates\webcontentresp\images\menuseparator.png  101
+files\templates\webcontentresp\images\object227400126.png  192
+files\templates\webcontentresp\images\postauthoricon.png  212
+files\templates\webcontentresp\images\postbullets.png  113
+files\templates\webcontentresp\images\postdateicon.png  220
+files\templates\webcontentresp\images\postquote.png  360
+files\templates\webcontentresp\images\preloader-01.gif  3117
+files\templates\webcontentresp\images\searchicon.png  377
+files\templates\webcontentresp\images\spacer.gif  43
+files\templates\webcontentresp\images\system\edit.png  231
+files\templates\webcontentresp\images\vmenuactiveitemicon.png  132
+files\templates\webcontentresp\images\vmenuhovereditemicon.png  132
+files\templates\webcontentresp\images\vmenuitemicon.png  132
+files\templates\webcontentresp\jquery.fancybox.js  152441
+files\templates\webcontentresp\jquery.js  92629
+files\templates\webcontentresp\script.js  44025
+files\templates\webcontentresp\script.responsive.js  17677
+files\templates\webcontentresp\wow.min.js  8415
+index.html  20030
+kontakty.html  13766
+live-1536.png  1138258
+live-390.png  208802
+local-1536.png  1152114
+local-390.png  345123
+novosti-i-sobytiya.html  16838
+o-kompanii.html  24716
