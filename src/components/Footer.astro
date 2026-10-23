@@ -1,5 +1,6 @@
 ---
-// Подвал: логотип, колонки «Компания», «Продукты», «Контакты», «Соцсети», строка копирайта и карта.
+// Подвал как на europroject.kg: чёрный, четыре колонки с заголовками и ссылками с точками, внизу копирайт.
+// Карта выводится только на странице «Контакты».
 import type { MenuName, MenuItem } from '../server/content.ts';
 import { sectionUrl, type Section } from '../server/sections.ts';
 import type { Settings } from '../server/settings.ts';
@@ -14,60 +15,44 @@ interface Props {
 }
 const { settings, menus, sections, maps, copyright } = Astro.props;
 const phoneHref = (p: string) => 'tel:' + p.replace(/[^\d+]/g, '');
-const hasSocial = settings.instagram_url || settings.facebook_url;
 ---
 
 <footer class="pf">
   <div class="pf-cols">
-    <div class="pf-col pf-brand">
-      <a href="/" aria-label={settings.site_name}><img src="/img/europroject-logo-white.svg" alt={settings.site_name} width="142" height="90" /></a>
-    </div>
     <div class="pf-col">
-      <div class="pf-title">Компания</div>
-      {menus.footer_company.map((m) => <a href={m.url} target={m.newTab ? '_blank' : undefined}>{m.label}</a>)}
+      <div class="pf-title">О компании</div>
+      <ul>{menus.footer_company.map((m) => <li><a href={m.url} target={m.newTab ? '_blank' : undefined}>{m.label}</a></li>)}</ul>
     </div>
     {
       sections.length > 0 && (
         <div class="pf-col">
           <div class="pf-title">Продукты</div>
-          {sections.map((s) => <a href={sectionUrl(s)}>{s.name}</a>)}
+          <ul>{sections.map((s) => <li><a href={sectionUrl(s)}>{s.name}</a></li>)}</ul>
         </div>
       )
     }
     <div class="pf-col">
       <div class="pf-title">Контакты</div>
-      <div class="pf-contact">
-        <span>{settings.address}</span>
-        <a href={phoneHref(settings.phone_main)}>{settings.phone_main}</a>
-        {settings.work_hours && <span>{settings.work_hours}</span>}
-      </div>
-      {
-        (settings.phone_second || settings.address_second) && (
-          <div class="pf-contact">
-            <span>{settings.name_second}, {settings.address_second}</span>
-            {settings.phone_second && <a href={phoneHref(settings.phone_second)}>{settings.phone_second}</a>}
-            {settings.work_hours_second && <span>{settings.work_hours_second}</span>}
-          </div>
-        )
-      }
-      {settings.email && <a href={`mailto:${settings.email}`}>{settings.email}</a>}
+      <ul>
+        <li>{settings.address}</li>
+        <li><a href={phoneHref(settings.phone_main)}>{settings.phone_main}</a></li>
+        {settings.work_hours && <li>{settings.work_hours}</li>}
+        {settings.address_second && <li>{settings.name_second}, {settings.address_second}</li>}
+        {settings.phone_second && <li><a href={phoneHref(settings.phone_second)}>{settings.phone_second}</a></li>}
+        {settings.email && <li><a href={`mailto:${settings.email}`}>{settings.email}</a></li>}
+      </ul>
     </div>
-    {
-      hasSocial && (
-        <div class="pf-col">
-          <div class="pf-title">Соцсети</div>
-          <div class="pf-social">
-            {settings.instagram_url && <a href={settings.instagram_url} target="_blank" rel="noopener" aria-label="Instagram"><SocialIcon name="instagram" size={20} /></a>}
-            {settings.facebook_url && <a href={settings.facebook_url} target="_blank" rel="noopener" aria-label="Facebook"><SocialIcon name="facebook" size={20} /></a>}
-          </div>
-        </div>
-      )
-    }
+    <div class="pf-col">
+      <div class="pf-title">Соц. сети</div>
+      <p class="pf-note">Связаться с нами:</p>
+      <div class="pf-social">
+        {settings.instagram_url && <a href={settings.instagram_url} target="_blank" rel="noopener" aria-label="Instagram"><SocialIcon name="instagram" size={22} /></a>}
+        {settings.facebook_url && <a href={settings.facebook_url} target="_blank" rel="noopener" aria-label="Facebook"><SocialIcon name="facebook" size={22} /></a>}
+      </div>
+    </div>
   </div>
 
-  <div class="pf-bottom">
-    <span>{copyright}</span>
-  </div>
+  <div class="pf-bottom">{copyright}</div>
 
   {
     maps.length > 0 && (

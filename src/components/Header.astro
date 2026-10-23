@@ -1,10 +1,9 @@
 ---
-// Шапка как на europroject.kg: белая, логотип слева, меню в строку («Продукты» раскрывает список разделов),
-// справа «Связаться с нами» и Instagram. На телефонах меню выдвигается сбоку.
+// Шапка как на europroject.kg: тонкая синяя полоса сверху, логотип слева, меню в строку («Продукты» раскрывает
+// список разделов), справа сверху «Связаться с нами» и Instagram. На телефонах меню выдвигается сбоку.
 import type { MenuItem, MenuName } from '../server/content.ts';
 import { sectionUrl, type Section } from '../server/sections.ts';
 import type { Settings } from '../server/settings.ts';
-import SocialIcon from './SocialIcon.astro';
 
 interface Props {
   sections: Section[];
@@ -31,7 +30,7 @@ const here = (l: Link) =>
 <header class="ph" id="ph">
   <div class="ph-in">
     <a href="/" class="ph-logo" aria-label={settings.site_name}>
-      <img src="/img/europroject-logo.svg" alt={settings.site_name} width="142" height="90" />
+      <img src="/img/europroject-logo.png" alt={settings.site_name} width="513" height="325" />
     </a>
 
     <nav class="ph-nav" aria-label="Меню">
@@ -53,16 +52,16 @@ const here = (l: Link) =>
 
     <div class="ph-aside">
       <a class="ph-contact" href="/contact">Связаться с нами</a>
-      {settings.instagram_url && <a class="ph-insta" href={settings.instagram_url} target="_blank" rel="noopener" aria-label="Instagram"><SocialIcon name="instagram" /></a>}
-      <button type="button" class="ph-burger" id="burger" aria-controls="main-menu" aria-label="Меню"><i></i><i></i><i></i></button>
+      {settings.instagram_url && <a class="ph-insta" href={settings.instagram_url} target="_blank" rel="noopener" aria-label="Instagram"><img src="/img/instagram.png" alt="" width="32" height="32" /></a>}
     </div>
+    <button type="button" class="ph-burger" id="burger" aria-controls="main-menu" aria-label="Меню"><i></i><i></i><i></i></button>
   </div>
 </header>
 
 <!-- Выдвижное меню на телефонах: пункты меню, разделы, контакты -->
 <aside class="pdrawer" id="main-menu" aria-label="Меню">
   <div class="pdrawer-head">
-    <img src="/img/europroject-logo.svg" alt="" class="pdrawer-logo" width="142" height="90" />
+    <img src="/img/europroject-logo.png" alt="" class="pdrawer-logo" width="513" height="325" />
     <button type="button" class="pdrawer-close" data-menu-close aria-label="Закрыть меню">✕</button>
   </div>
   <nav class="pdrawer-nav" aria-label="Меню">

@@ -6,7 +6,7 @@ export const SETTINGS_SCHEMA = [
   { group: 'Общее', key: 'seo_title', label: 'Заголовок главной страницы (title)', default: 'Европроект: винил, ковровая плитка, коммерческий линолеум в Бишкеке' },
   { group: 'Общее', key: 'seo_description', label: 'Описание главной для поисковиков (meta description)', type: 'textarea',
     default: 'Европроект поставляет в Кыргызстан напольные покрытия Moduleo, BerryAlloc, Modulyss, Betap, IVC Commercial, BLOQ и клеи Forbo Eurocol: винил, ковровую плитку, коммерческий линолеум, террасную доску. Бишкек, ул. Токтогула 125/1, БЦ «Авангард».' },
-  { group: 'Общее', key: 'copyright', label: 'Текст в подвале ({year} — текущий год)', default: '© {year} Европроект' },
+  { group: 'Общее', key: 'copyright', label: 'Текст в подвале ({year} — текущий год)', default: 'Copyright © {year} Европроект. Все права защищены' },
 
   // Контакты со старого сайта europroject.kg (17.10.2026)
   { group: 'Контакты: офис', key: 'phone_main', label: 'Телефон', default: '+996 770 55 77 15' },

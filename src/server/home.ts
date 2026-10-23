@@ -21,9 +21,11 @@ export const DEFAULT_HOME: HomeContent = {
     link: '#razdely',
     images: [],
   },
+  // Блоки «О компании», «Разделы» и «Производители» на старом europroject.kg на главной не было: заголовки пустые,
+  // блоки скрыты. Чтобы показать блок, достаточно вписать заголовок в админке.
   about: {
     // По тексту старой страницы «О компании» (europroject.kg/o-kompanii.html)
-    title: 'Европроект',
+    title: '',
     text:
       '<p>Мы поставляем в Кыргызстан напольные покрытия Moduleo, BerryAlloc, Modulyss, Betap, IVC Commercial, BLOQ ' +
       'и клеи Forbo Eurocol. Подбираем покрытие под объект: офис, магазин, гостиницу, школу, квартиру.</p>' +
@@ -32,17 +34,18 @@ export const DEFAULT_HOME: HomeContent = {
     link: '/about',
   },
   sections: {
-    title: 'Разделы',
+    title: '',
     text: 'У каждого раздела свой сайт с коллекциями, ценами и заказом.',
   },
   brands: {
-    title: 'Производители',
+    title: '',
     text: '',
   },
-  news: { title: 'Новости и события', count: 3 },
+  // Как на старом europroject.kg
+  news: { title: 'Новости', count: 3 },
   contact: {
-    title: 'Свяжитесь с нами',
-    text: 'Позвоните или напишите в WhatsApp: подскажем, какое покрытие подойдёт, и пришлём образцы.',
+    title: 'Наши контакты',
+    text: 'У вас есть вопросы о нашем сайте, продуктах или услугах?',
   },
 };
 
@@ -73,4 +76,43 @@ export async function saveHome(content: HomeContent): Promise<void> {
 /** Все пути картинок, на которые ссылается контент (чтобы удалять ненужные файлы). */
 export function homeImages(c: HomeContent): string[] {
   return c.hero.images.filter(Boolean);
+}
+
+// Значения по умолчанию первой версии сайта (до 23.10.2026). Если владелец их не менял, upgradeHome() ставит
+// новые, как на старом europroject.kg. Изменённое в админке не трогается.
+const OLD_DEFAULTS = {
+  about: 'Европроект',
+  sections: 'Разделы',
+  brands: 'Производители',
+  news: 'Новости и события',
+  contactTitle: 'Свяжитесь с нами',
+  contactText: 'Позвоните или напишите в WhatsApp: подскажем, какое покрытие подойдёт, и пришлём образцы.',
+};
+const LAYOUT_KEY = 'home_layout';
+
+/** Один раз переводит сохранённую главную на вид старого europroject.kg. Возвращает true, если что-то поменялось. */
+export async function upgradeHome(): Promise<boolean> {
+  const [done] = await sql`SELECT 1 FROM settings WHERE key = ${LAYOUT_KEY} AND value = '2'`;
+  if (done) return false;
+  const [row] = await sql<{ value: string }[]>`SELECT value FROM settings WHERE key = ${KEY}`;
+  let changed = false;
+  if (row?.value) {
+    const home = await getHome();
+    const swap = (cur: string, old: string, next: string) => {
+      if (cur !== old) return cur;
+      changed = true;
+      return next;
+    };
+    home.about.title = swap(home.about.title, OLD_DEFAULTS.about, DEFAULT_HOME.about.title);
+    home.sections.title = swap(home.sections.title, OLD_DEFAULTS.sections, DEFAULT_HOME.sections.title);
+    home.brands.title = swap(home.brands.title, OLD_DEFAULTS.brands, DEFAULT_HOME.brands.title);
+    home.news.title = swap(home.news.title, OLD_DEFAULTS.news, DEFAULT_HOME.news.title);
+    home.contact.title = swap(home.contact.title, OLD_DEFAULTS.contactTitle, DEFAULT_HOME.contact.title);
+    home.contact.text = swap(home.contact.text, OLD_DEFAULTS.contactText, DEFAULT_HOME.contact.text);
+    if (changed) await saveHome(home);
+  }
+  const copyright = await sql`UPDATE settings SET value = 'Copyright © {year} Европроект. Все права защищены'
+                              WHERE key = 'copyright' AND value = '© {year} Европроект'`;
+  await sql`INSERT INTO settings (key, value) VALUES (${LAYOUT_KEY}, '2') ON CONFLICT (key) DO UPDATE SET value = '2'`;
+  return changed || copyright.count > 0;
 }

@@ -35,7 +35,7 @@ const secondName = settings.name_second || 'Второй адрес';
 const maps = [
   { src: settings.map_embed_url, title: `Офис: ${settings.address}` },
   { src: settings.map_embed_url_second, title: `${secondName}: ${settings.address_second}` },
-].filter((m) => m.src.startsWith('https://'));
+].filter((m) => m.src.startsWith('https://') && Astro.url.pathname === '/contact'); // карта — только на странице «Контакты»
 ---
 
 <!doctype html>
@@ -61,7 +61,7 @@ const maps = [
     <meta name="twitter:card" content="summary_large_image" />
     {settings.google_site_verification && <meta name="google-site-verification" content={settings.google_site_verification} />}
     {settings.yandex_verification && <meta name="yandex-verification" content={settings.yandex_verification} />}
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#011e46" />
     {ldBlocks.map((json) => <script type="application/ld+json" set:html={json} />)}
     <ClientRouter fallback="swap" />
     {
