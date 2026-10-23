@@ -63,13 +63,13 @@ h1, h2, h3 { font-weight: 500; }
 /* --- Шапка ----------------------------------------------------------------------- */
 .ph { position: sticky; top: 0; z-index: 100; background: #fff; transition: box-shadow .25s; }
 .ph--compact { box-shadow: 0 2px 14px rgba(0, 0, 0, .08); }
-.ph-in { display: flex; align-items: center; gap: 24px; max-width: 1840px; margin: 0 auto; padding: 22px 80px 20px; transition: padding .25s; }
-.ph--compact .ph-in { padding-top: 10px; padding-bottom: 10px; }
+.ph-in { display: flex; align-items: center; gap: 24px; max-width: 1600px; margin: 0 auto; padding: 18px 64px; transition: padding .25s; }
+.ph--compact .ph-in { padding-top: 8px; padding-bottom: 8px; }
 .ph-logo { flex: none; display: block; }
-.ph-logo img { display: block; height: 90px; width: auto; transition: height .25s; }
-.ph--compact .ph-logo img { height: 56px; }
-.ph-nav { display: flex; align-items: center; flex-wrap: wrap; gap: 0 clamp(18px, 4vw, 82px); margin-left: clamp(16px, 2.5vw, 40px); }
-.ph-nav > a, .ph-drop > a { display: block; padding: 12px 0; color: var(--menu); font: 400 19px var(--font); letter-spacing: .06em; white-space: nowrap; }
+.ph-logo img { display: block; height: 72px; width: auto; transition: height .25s; }
+.ph--compact .ph-logo img { height: 50px; }
+.ph-nav { display: flex; align-items: center; flex-wrap: nowrap; gap: clamp(20px, 3.4vw, 64px); margin-left: clamp(20px, 3vw, 48px); }
+.ph-nav > a, .ph-drop > a { display: block; padding: 12px 0; color: var(--menu); font: 400 16px var(--font); letter-spacing: .07em; white-space: nowrap; }
 .ph-nav > a:hover, .ph-drop > a:hover, .ph-nav a.active { color: var(--ink); }
 .ph-nav > a.active, .ph-drop > a.active { color: #1d3557; }
 .ph-drop { position: relative; }
@@ -80,10 +80,10 @@ h1, h2, h3 { font-weight: 500; }
 .ph-drop:hover .ph-drop-list, .ph-drop:focus-within .ph-drop-list { opacity: 1; visibility: visible; transform: none; }
 .ph-drop-list a { display: block; padding: 9px 22px; color: var(--text); font-size: 15px; letter-spacing: .03em; }
 .ph-drop-list a:hover, .ph-drop-list a.active { background: var(--band); color: var(--ink); }
-.ph-aside { display: flex; align-items: center; gap: 22px; margin-left: auto; align-self: flex-start; }
-.ph-contact { padding-right: 22px; border-right: 1px solid var(--line); color: var(--muted); font-size: 17px; letter-spacing: .04em; white-space: nowrap; }
+.ph-aside { display: flex; align-items: center; gap: 18px; margin-left: auto; align-self: flex-start; }
+.ph-contact { padding-right: 18px; border-right: 1px solid var(--line); color: var(--muted); font-size: 15px; letter-spacing: .04em; white-space: nowrap; }
 .ph-contact:hover { color: var(--ink); }
-.ph-insta { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--accent); color: #fff; }
+.ph-insta { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--accent); color: #fff; }
 .ph-insta:hover { background: var(--ink); color: #fff; }
 .ph-burger { display: none; width: 44px; height: 44px; padding: 13px 10px; background: none; border: 0; cursor: pointer; flex-direction: column; justify-content: space-between; }
 .ph-burger i { display: block; height: 2px; background: var(--ink); }
@@ -106,10 +106,13 @@ h1, h2, h3 { font-weight: 500; }
 .pdrawer-contacts a { color: var(--ink); }
 
 /* --- Слайдер на главной ------------------------------------------------------------ */
-.phero { position: relative; height: min(70vw, 760px); min-height: 380px; overflow: hidden; background: var(--band); }
+/* Высота слайдера — по пропорциям первого фото: фото старого сайта — широкие коллажи с подписью, обрезать их нельзя */
+.phero { position: relative; overflow: hidden; background: var(--band); }
 .phero-slide { position: absolute; inset: 0; opacity: 0; transition: opacity 1.1s ease; }
+.phero-slide:first-child { position: relative; }
 .phero-slide.active { opacity: 1; }
 .phero-slide img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.phero-slide:first-child img { height: auto; max-height: 82vh; }
 /* Без фото: светлый фон со штрихами, как полосы логотипа */
 .phero--noimg { height: min(48vw, 560px); background:
   repeating-linear-gradient(0deg, transparent 0 46px, rgba(0, 0, 0, .035) 46px 58px), var(--band); }
@@ -121,24 +124,25 @@ h1, h2, h3 { font-weight: 500; }
 .phero-title { margin: 0 0 12px; font: 600 clamp(22px, 2.4vw, 32px)/1.2 var(--font); letter-spacing: .02em; text-transform: uppercase; }
 .phero-text { margin: 0 0 20px; color: var(--text); font-size: clamp(15px, 1.3vw, 18px); line-height: 1.5; }
 .phero-arrow, .phero-pause {
-  display: grid; place-items: center; width: 60px; height: 60px; padding: 0; border: 0; background: rgba(255, 255, 255, .45);
-  color: #555; cursor: pointer; transition: background .2s, color .2s;
+  display: grid; place-items: center; width: 48px; height: 48px; padding: 0; border: 0; background: rgba(255, 255, 255, .5);
+  color: #444; cursor: pointer; transition: background .2s, color .2s;
 }
 .phero-arrow:hover, .phero-pause:hover { background: rgba(255, 255, 255, .85); color: var(--ink); }
 .phero-arrow--prev { position: absolute; left: 0; top: 50%; z-index: 3; transform: translateY(-50%); }
-.phero-controls { position: absolute; right: 0; top: 50%; z-index: 3; display: flex; gap: 2px; transform: translateY(-50%); }
+.phero-controls { position: absolute; right: 0; top: 50%; z-index: 3; display: flex; gap: 1px; transform: translateY(-50%); }
+.phero-arrow svg { height: 28px; width: auto; }
 .phero .i-play, .phero.paused .i-pause { display: none; }
 .phero.paused .i-play { display: block; }
 
 /* --- Плитки разделов под слайдером ------------------------------------------------------ */
 .ptiles {
   position: relative; z-index: 4; display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  max-width: 1760px; margin: -82px auto 0; padding: 0 70px;
+  max-width: 1600px; margin: -64px auto 0; padding: 0 56px;
 }
 .ptiles a {
-  display: flex; align-items: center; justify-content: center; min-height: 82px; padding: 14px 16px; background: #fff;
+  display: flex; align-items: center; justify-content: center; min-height: 64px; padding: 12px 8px; background: #fff;
   border-right: 1px solid var(--line); border-bottom: 2px solid var(--line); color: var(--ink);
-  font: 500 clamp(14px, 1.15vw, 20px)/1.25 var(--font); letter-spacing: .03em; text-align: center; text-transform: uppercase;
+  font: 500 clamp(13px, 1vw, 16px)/1.25 var(--font); letter-spacing: .02em; text-align: center; text-transform: uppercase;
 }
 .ptiles a:last-child { border-right: 0; }
 .ptiles a:hover { background: var(--ink); border-bottom-color: var(--ink); color: #fff; }
@@ -315,19 +319,19 @@ h1, h2, h3 { font-weight: 500; }
 .to-top:hover { opacity: 1; }
 
 /* --- Планшеты и телефоны ------------------------------------------------------------------- */
-@media (max-width: 1500px) {
-  .ph-in { padding-left: 40px; padding-right: 40px; }
-  .ph-logo img { height: 76px; }
-  .ph-nav > a, .ph-drop > a { font-size: 17px; }
-  .ph-contact { font-size: 15px; }
-  .ptiles { padding: 0 40px; }
+@media (max-width: 1400px) {
+  .ph-in { padding-left: 32px; padding-right: 32px; }
+  .ph-logo img { height: 62px; }
+  .ph-nav > a, .ph-drop > a { font-size: 15px; letter-spacing: .05em; }
+  .ph-contact { font-size: 14px; }
+  .ptiles { padding: 0 32px; }
 }
-@media (max-width: 1180px) {
+@media (max-width: 1100px) {
   .ph-nav, .ph-contact { display: none; }
   .ph-aside { align-self: center; }
   .ph-burger { display: flex; }
   .ph-in { padding: 12px 24px; }
-  .ph-logo img, .ph--compact .ph-logo img { height: 56px; }
+  .ph-logo img, .ph--compact .ph-logo img { height: 52px; }
   .ptiles { margin-top: 0; padding: 0; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); border-top: 1px solid var(--line); }
   .ptiles a { min-height: 64px; }
   .pgrid { grid-template-columns: repeat(2, 1fr); }
@@ -337,13 +341,12 @@ h1, h2, h3 { font-weight: 500; }
   .ph-in { padding: 10px 16px; }
   .ph-logo img, .ph--compact .ph-logo img { height: 46px; }
   .ph-insta { width: 36px; height: 36px; }
-  .phero { height: 72vw; min-height: 260px; }
   .phero--noimg { height: auto; min-height: 0; padding: 16px 0; }
   .phero--noimg .phero-caption { position: relative; top: auto; left: auto; margin: 0 16px; }
   .phero-caption { top: 12px; left: 12px; max-width: calc(100% - 24px); }
   .phero-text { display: none; }
-  .phero-arrow, .phero-pause { width: 40px; height: 40px; }
-  .phero-arrow svg { height: 26px; }
+  .phero-arrow, .phero-pause { width: 36px; height: 36px; }
+  .phero-arrow svg { height: 20px; }
   .ptiles { grid-template-columns: 1fr 1fr; }
   .ptiles a { min-height: 56px; border-bottom-width: 1px; font-size: 13px; }
   .ptiles a:nth-child(2n) { border-right: 0; }
