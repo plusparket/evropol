@@ -34,7 +34,7 @@ const base = siteBase(Astro.url.origin);
 const heading = section ? section.heading || section.name : '';
 const crumbsLd = section ? breadcrumbJsonLd(base, [{ name: heading, url: `/${section.slug}` }]) : undefined;
 // На странице «Контакты» — разметка компании (адрес, телефон, часы работы)
-const pageLd = page?.slug === 'contact' ? organizationJsonLd(settings, base, `${base}/img/og.jpg`) : undefined;
+const pageLd = page?.slug === 'contact' ? organizationJsonLd(settings, base, `${base}/img/og-europroject.jpg`) : undefined;
 ---
 
 {

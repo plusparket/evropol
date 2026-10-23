@@ -1,8 +1,10 @@
 ---
-// Шапка: строка ссылок компании, логотип по центру, адрес и телефон, вкладки разделов, выдвижное меню.
+// Шапка как на europroject.kg: белая, логотип слева, меню в строку («Продукты» раскрывает список разделов),
+// справа «Связаться с нами» и Instagram. На телефонах меню выдвигается сбоку.
 import type { MenuItem, MenuName } from '../server/content.ts';
 import { sectionUrl, type Section } from '../server/sections.ts';
 import type { Settings } from '../server/settings.ts';
+import SocialIcon from './SocialIcon.astro';
 
 interface Props {
   sections: Section[];
@@ -12,75 +14,75 @@ interface Props {
 const { sections, settings, menus } = Astro.props;
 const phoneHref = (p: string) => 'tel:' + p.replace(/[^\d+]/g, '');
 const path = Astro.url.pathname;
-// Ссылки компании (верхнее меню) — в строке над шапкой и в выдвижном меню после разделов
-type Link = { label: string; url: string; newTab?: boolean };
-const company: Link[] = [];
-const addLink = (l: Link) => company.some((x) => x.url === l.url) || company.push(l);
+// Пункты меню: «Главная», затем верхнее меню из админки; «Продукты» (разделы) встают после «О компании»
+type Link = { label: string; url: string; newTab?: boolean; products?: boolean };
+const links: Link[] = [];
+const addLink = (l: Link) => links.some((x) => x.url === l.url) || links.push(l);
 addLink({ label: 'Главная', url: '/' });
 menus.top.forEach(addLink);
-const here = (url: string) => (url === '/' ? path === '/' : path === url || path.startsWith(url + '/'));
+if (sections.length) {
+  const about = links.findIndex((l) => l.url === '/about');
+  links.splice(about >= 0 ? about + 1 : 1, 0, { label: 'Продукты', url: '/#razdely', products: true });
+}
+const here = (l: Link) =>
+  l.products ? sections.some((s) => path === sectionUrl(s)) : l.url === '/' ? path === '/' : path === l.url || path.startsWith(l.url + '/');
 ---
 
 <header class="ph" id="ph">
-  <div class="ph-top">
-    <nav class="ph-top-links" aria-label="Компания">
-      {company.map((m) => <a href={m.url} class:list={{ active: here(m.url) }} target={m.newTab ? '_blank' : undefined}>{m.label}</a>)}
-    </nav>
-  </div>
-  <div class="ph-bar">
-    <div class="ph-left">
-      <button type="button" class="ph-btn" id="burger" aria-controls="main-menu" aria-label="Меню">
-        <span class="ph-burger"><i></i><i></i><i></i></span>
-        <span class="ph-btn-text">Меню</span>
-      </button>
-    </div>
-
+  <div class="ph-in">
     <a href="/" class="ph-logo" aria-label={settings.site_name}>
-      <img class="ph-logo-full" src="/img/logo-white.svg" alt={settings.site_name} width="492" height="110" />
+      <img src="/img/europroject-logo.svg" alt={settings.site_name} width="142" height="90" />
     </a>
 
-    <div class="ph-right">
-      <span class="ph-addr">{settings.address}</span>
-      <a class="ph-phone" href={phoneHref(settings.phone_main)}><svg class="ph-phone-ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>{settings.phone_main}</a>
-      {settings.address_second && <span class="ph-addr ph-addr--next">{settings.name_second}: {settings.address_second}</span>}
-      {settings.phone_second && <a class="ph-phone" href={phoneHref(settings.phone_second)}><svg class="ph-phone-ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>{settings.phone_second}</a>}
+    <nav class="ph-nav" aria-label="Меню">
+      {
+        links.map((l) =>
+          l.products ? (
+            <div class="ph-drop">
+              <a href={l.url} class:list={{ active: here(l) }}>{l.label}</a>
+              <div class="ph-drop-list">
+                {sections.map((s) => <a href={sectionUrl(s)} class:list={{ active: path === sectionUrl(s) }}>{s.name}</a>)}
+              </div>
+            </div>
+          ) : (
+            <a href={l.url} class:list={{ active: here(l) }} target={l.newTab ? '_blank' : undefined}>{l.label}</a>
+          ),
+        )
+      }
+    </nav>
+
+    <div class="ph-aside">
+      <a class="ph-contact" href="/contact">Связаться с нами</a>
+      {settings.instagram_url && <a class="ph-insta" href={settings.instagram_url} target="_blank" rel="noopener" aria-label="Instagram"><SocialIcon name="instagram" /></a>}
+      <button type="button" class="ph-burger" id="burger" aria-controls="main-menu" aria-label="Меню"><i></i><i></i><i></i></button>
     </div>
   </div>
-
-  <nav class="ph-tabs" aria-label="Разделы">
-    {
-      sections.map((n) => (
-        <div class="ph-tab">
-          <a href={sectionUrl(n)} class:list={{ active: path === sectionUrl(n) }}>{n.name}</a>
-        </div>
-      ))
-    }
-  </nav>
 </header>
 
-<!-- Выдвижное меню: разделы, ссылки компании, контакты -->
+<!-- Выдвижное меню на телефонах: пункты меню, разделы, контакты -->
 <aside class="pdrawer" id="main-menu" aria-label="Меню">
   <div class="pdrawer-head">
-    <img src="/img/logo-white.svg" alt="" class="pdrawer-logo" />
+    <img src="/img/europroject-logo.svg" alt="" class="pdrawer-logo" width="142" height="90" />
     <button type="button" class="pdrawer-close" data-menu-close aria-label="Закрыть меню">✕</button>
   </div>
-  <nav class="pdrawer-nav" aria-label="Разделы">
-    <div class="pdrawer-label">Разделы</div>
+  <nav class="pdrawer-nav" aria-label="Меню">
     {
-      sections.map((n) => (
-        <div class="pdrawer-item">
-          <div class="pdrawer-row"><a href={sectionUrl(n)}>{n.name}</a></div>
-        </div>
-      ))
+      links.map((l) =>
+        l.products ? (
+          <Fragment>
+            <div class="pdrawer-label">{l.label}</div>
+            {sections.map((s) => <a href={sectionUrl(s)} class:list={['pdrawer-sub', { active: path === sectionUrl(s) }]}>{s.name}</a>)}
+          </Fragment>
+        ) : (
+          <a href={l.url} class:list={{ active: here(l) }} target={l.newTab ? '_blank' : undefined}>{l.label}</a>
+        ),
+      )
     }
-  </nav>
-  <nav class="pdrawer-links" aria-label="Компания">
-    <div class="pdrawer-label">Компания</div>
-    {company.filter((m) => m.url !== '/').map((m) => <a href={m.url} class:list={{ active: here(m.url) }} target={m.newTab ? '_blank' : undefined}>{m.label}</a>)}
   </nav>
   <div class="pdrawer-contacts">
     <a href={phoneHref(settings.phone_main)}>{settings.phone_main}</a>
     <span>{settings.address}</span>
+    {settings.email && <a href={`mailto:${settings.email}`}>{settings.email}</a>}
     {settings.phone_second && <a href={phoneHref(settings.phone_second)}>{settings.phone_second}</a>}
     {settings.address_second && <span>{settings.name_second}, {settings.address_second}</span>}
   </div>

@@ -12,7 +12,7 @@ const news = home.news.count > 0 ? await listNews(home.news.count) : [];
 const aboutHtml = fillPlaceholders(home.about.text, settings);
 // Разметка для Google: организация и офис (адрес, телефон, часы, координаты)
 const base = siteBase(Astro.url.origin);
-const orgLd = organizationJsonLd(settings, base, `${base}/img/og.jpg`);
+const orgLd = organizationJsonLd(settings, base, `${base}/img/og-europroject.jpg`);
 const title = settings.seo_title || settings.site_name;
 const description = settings.seo_description || undefined;
 ---
