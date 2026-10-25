@@ -9,7 +9,8 @@ cp .env.example .env
 docker compose up -d --build
 ```
 
-Сайт — http://localhost, админка — http://localhost/admin, сайт раздела «SPC / LVT / кварцвинил» — http://vinyl.localhost
+Сайт — http://localhost, админка — http://localhost/admin, сайты разделов — http://vinyl.localhost
+(«SPC / LVT / кварцвинил») и http://laminate.localhost («Ламинат»)
 (см. [section-sites.md](section-sites.md)).
 
 Режим разработки с перезагрузкой при правке файлов:

@@ -1,0 +1,1506 @@
+{
+ "section": "laminate",
+ "note": "Ламинат BerryAlloc Chateau+: данные и фото производителя (berryalloc.com), снимок 2026-10. Фото скачиваются при запуске (src/server/section-sites.ts).",
+ "brands": [
+  {
+   "name": "BerryAlloc",
+   "link": "https://www.berryalloc.com/global/en/laminate",
+   "description": "<p>Бельгийская компания: ламинат, винил, паркет и стеновые панели для домов и коммерческих объектов. Рисунки под дерево и под камень.</p>"
+  }
+ ],
+ "products": [
+  {
+   "brand": "BerryAlloc",
+   "name": "Bloom Light Brown",
+   "slug": "bloom-light-brown",
+   "collection": "Chateau+",
+   "sku": "62002710",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "светло-коричневый"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "живой"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    },
+    {
+     "label": "Степень блеска",
+     "value": "слабый блеск"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "62002710"
+    },
+    {
+     "label": "Серия",
+     "value": "Chateau+"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "красный"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Класс износостойкости",
+     "value": "AC5"
+    },
+    {
+     "label": "Замок",
+     "value": "OmniLoc A"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "504 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "84 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,01606 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "24"
+    }
+   ],
+   "description": "<p>Натуральный дуб с множеством сучков, матовой поверхностью и выраженной фактурой в светло-коричневом цвете.</p>\n<p>Ламинат BerryAlloc Chateau+ с рисунком «ёлочка» собирается на замок OmniLoc A без клея. Доска 504 × 84 мм, толщина 8 мм. Класс износостойкости AC5, класс использования 23 для дома и 33 для офиса. Сделано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5a3gs3u94etfpy/beaulieu_2000w,default/bloom_light_brown_lam_v4_504x84_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5aka8remrnbjt854e/beaulieu_2000w,default/bloom_light_brown_lam_v4_504x84_berryalloc_rsh_01"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/chateau-plus/62002710"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Bloom Sand Natural",
+   "slug": "bloom-sand-natural",
+   "collection": "Chateau+",
+   "sku": "62002712",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "светлый натуральный"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "живой"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    },
+    {
+     "label": "Степень блеска",
+     "value": "слабый блеск"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "62002712"
+    },
+    {
+     "label": "Серия",
+     "value": "Chateau+"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "жёлтый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Класс износостойкости",
+     "value": "AC5"
+    },
+    {
+     "label": "Замок",
+     "value": "OmniLoc A"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "504 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "84 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,01606 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "24"
+    }
+   ],
+   "description": "<p>Натуральный дуб с множеством сучков, матовой поверхностью и выраженной фактурой в светлом песочном оттенке.</p>\n<p>Ламинат BerryAlloc Chateau+ с рисунком «ёлочка» собирается на замок OmniLoc A без клея. Доска 504 × 84 мм, толщина 8 мм. Класс износостойкости AC5, класс использования 23 для дома и 33 для офиса. Сделано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak55hzhkfmscc7dy/beaulieu_2000w,default/bloom_sand_natural_lam_v4_504x84_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5akadjybb7dfx4owy/beaulieu_2000w,default/bloom_sand_natural_lam_v4_504x84_berryalloc_rsh_01"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/chateau-plus/62002712"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Charme Black",
+   "slug": "charme-black",
+   "collection": "Chateau+",
+   "sku": "62002722",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "чёрный"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "спокойный"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    },
+    {
+     "label": "Степень блеска",
+     "value": "слабый блеск"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "62002722"
+    },
+    {
+     "label": "Серия",
+     "value": "Chateau+"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "фиолетовый, красный"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Класс износостойкости",
+     "value": "AC5"
+    },
+    {
+     "label": "Замок",
+     "value": "OmniLoc A"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "504 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "84 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,01606 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "24"
+    }
+   ],
+   "description": "<p>Натуральный дуб с матовой поверхностью и выраженной фактурой в чёрном цвете.</p>\n<p>Ламинат BerryAlloc Chateau+ с рисунком «ёлочка» собирается на замок OmniLoc A без клея. Доска 504 × 84 мм, толщина 8 мм. Класс износостойкости AC5, класс использования 23 для дома и 33 для офиса. Сделано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5nnnj84kx4azay/beaulieu_2000w,default/charme_black_lam_v4_504x84_berryalloc_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak3ahjq478dmoaey/beaulieu_2000w,default/charme_black_lam_v4_504x84_berryalloc_rsh_02",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak37u3e1ohi4cp1o/beaulieu_2000w,default/charme_black_lam_v4_504x84_berryalloc_rsh_01"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/chateau-plus/62002722"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Charme Light Natural",
+   "slug": "charme-light-natural",
+   "collection": "Chateau+",
+   "sku": "62002720",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "светлый натуральный"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "спокойный"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    },
+    {
+     "label": "Степень блеска",
+     "value": "слабый блеск"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "62002720"
+    },
+    {
+     "label": "Серия",
+     "value": "Chateau+"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "жёлтый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Класс износостойкости",
+     "value": "AC5"
+    },
+    {
+     "label": "Замок",
+     "value": "OmniLoc A"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "504 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "84 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,01606 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "24"
+    }
+   ],
+   "description": "<p>Натуральный дуб с матовой поверхностью и выраженной фактурой в светлом натуральном цвете дерева.</p>\n<p>Ламинат BerryAlloc Chateau+ с рисунком «ёлочка» собирается на замок OmniLoc A без клея. Доска 504 × 84 мм, толщина 8 мм. Класс износостойкости AC5, класс использования 23 для дома и 33 для офиса. Сделано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak41q8mcec75teby/beaulieu_2000w,default/charme_light_natural_lam_v4_504x84_berryalloc_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak4j7dio8c6ay1pe/beaulieu_2000w,default/charme_light_natural_lam_v4_504x84_berryalloc_rsh_04",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak44z5dei5wfhszy/beaulieu_2000w,default/charme_light_natural_lam_v4_504x84_berryalloc_rsh_03"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/chateau-plus/62002720"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Chestnut White",
+   "slug": "chestnut-white",
+   "collection": "Chateau+",
+   "sku": "62002706",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "белый"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "живой"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "каштан"
+    },
+    {
+     "label": "Степень блеска",
+     "value": "слабый блеск"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "62002706"
+    },
+    {
+     "label": "Серия",
+     "value": "Chateau+"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "жёлтый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Класс износостойкости",
+     "value": "AC5"
+    },
+    {
+     "label": "Замок",
+     "value": "OmniLoc A"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "504 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "84 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,01606 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "24"
+    }
+   ],
+   "description": "<p>Матовая поверхность и мягкая фактура в цвете белёного шлифованного дерева.</p>\n<p>Ламинат BerryAlloc Chateau+ с рисунком «ёлочка» собирается на замок OmniLoc A без клея. Доска 504 × 84 мм, толщина 8 мм. Класс износостойкости AC5, класс использования 23 для дома и 33 для офиса. Сделано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak34pw5iza7hfs9e/beaulieu_2000w,default/chestnut_white_lam_v4_504x84_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak31shbzf14tpdpo/beaulieu_2000w,default/chestnut_white_lam_v4_504x84_berryalloc_rsh_04",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5pjw54ymqiyk4e/beaulieu_2000w,default/chestnut_white_lam_v4_504x84_berryalloc_rsh_03"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/chateau-plus/62002706"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Gyant Dark Brown",
+   "slug": "gyant-dark-brown",
+   "collection": "Chateau+",
+   "sku": "62002704",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-коричневый"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "рустикальный"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    },
+    {
+     "label": "Степень блеска",
+     "value": "экстраматовый"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "62002704"
+    },
+    {
+     "label": "Серия",
+     "value": "Chateau+"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "оранжевый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Класс износостойкости",
+     "value": "AC5"
+    },
+    {
+     "label": "Замок",
+     "value": "OmniLoc A"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "504 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "84 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,01606 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "24"
+    }
+   ],
+   "description": "<p>Выразительный дуб с множеством сучков, ультраматовой поверхностью и глубокой фактурой в тёмно-коричневом цвете.</p>\n<p>Ламинат BerryAlloc Chateau+ с рисунком «ёлочка» собирается на замок OmniLoc A без клея. Доска 504 × 84 мм, толщина 8 мм. Класс износостойкости AC5, класс использования 23 для дома и 33 для офиса. Сделано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak46tjgwwgqgy84a/beaulieu_2000w,default/gyant_dark_brown_lam_v4_504x84_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5aka95kh5xy44x8po/beaulieu_2000w,default/gyant_dark_brown_lam_v4_504x84_berryalloc_rsh_05",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5ghw1ba91qdx9y/beaulieu_2000w,default/gyant_dark_brown_lam_v4_504x84_berryalloc_rsh_07"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/chateau-plus/62002704"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Gyant Light",
+   "slug": "gyant-light",
+   "collection": "Chateau+",
+   "sku": "62002702",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "белый"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "рустикальный"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    },
+    {
+     "label": "Степень блеска",
+     "value": "экстраматовый"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "62002702"
+    },
+    {
+     "label": "Серия",
+     "value": "Chateau+"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "жёлтый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Класс износостойкости",
+     "value": "AC5"
+    },
+    {
+     "label": "Замок",
+     "value": "OmniLoc A"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "504 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "84 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,01606 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "24"
+    }
+   ],
+   "description": "<p>Выразительный дуб с множеством сучков, ультраматовой поверхностью и глубокой фактурой в светлом цвете дерева.</p>\n<p>Ламинат BerryAlloc Chateau+ с рисунком «ёлочка» собирается на замок OmniLoc A без клея. Доска 504 × 84 мм, толщина 8 мм. Класс износостойкости AC5, класс использования 23 для дома и 33 для офиса. Сделано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak38t8oqsuogc1gy/beaulieu_2000w,default/gyant_light_lam_v4_504x84_dsh"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/chateau-plus/62002702"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Java Brown",
+   "slug": "java-brown",
+   "collection": "Chateau+",
+   "sku": "62002718",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-коричневый"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "живой"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    },
+    {
+     "label": "Степень блеска",
+     "value": "слабый блеск"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "62002718"
+    },
+    {
+     "label": "Серия",
+     "value": "Chateau+"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "жёлтый, красный"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Класс износостойкости",
+     "value": "AC5"
+    },
+    {
+     "label": "Замок",
+     "value": "OmniLoc A"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "504 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "84 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,01606 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "24"
+    }
+   ],
+   "description": "<p>Натуральный дуб с матовой поверхностью и фактурой от мягкой до выраженной в тёмно-коричневом цвете.</p>\n<p>Ламинат BerryAlloc Chateau+ с рисунком «ёлочка» собирается на замок OmniLoc A без клея. Доска 504 × 84 мм, толщина 8 мм. Класс износостойкости AC5, класс использования 23 для дома и 33 для офиса. Сделано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5iiwi9dwdkyipo/beaulieu_2000w,default/java_brown_lam_v4_504x84_berryalloc_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5hdy9k191by1do/beaulieu_2000w,default/java_brown_lam_v4_504x84_berryalloc_rsh_01",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5op53p4q6wj5fo/beaulieu_2000w,default/java_brown_java_light_grey_lam_v4_504x84_berryalloc_rsh_05"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/chateau-plus/62002718"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Java Light Grey",
+   "slug": "java-light-grey",
+   "collection": "Chateau+",
+   "sku": "62002714",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "светло-серый"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "живой"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    },
+    {
+     "label": "Степень блеска",
+     "value": "слабый блеск"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "62002714"
+    },
+    {
+     "label": "Серия",
+     "value": "Chateau+"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "фиолетовый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Класс износостойкости",
+     "value": "AC5"
+    },
+    {
+     "label": "Замок",
+     "value": "OmniLoc A"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "504 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "84 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,01606 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "24"
+    }
+   ],
+   "description": "<p>Натуральный дуб с матовой поверхностью и фактурой от мягкой до выраженной в светло-сером цвете.</p>\n<p>Ламинат BerryAlloc Chateau+ с рисунком «ёлочка» собирается на замок OmniLoc A без клея. Доска 504 × 84 мм, толщина 8 мм. Класс износостойкости AC5, класс использования 23 для дома и 33 для офиса. Сделано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak4quxso1g185pxe/beaulieu_2000w,default/java_light_grey_lam_v4_504x84_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak4i6itmj5rjfkwe/beaulieu_2000w,default/java_light_grey_lam_v4_504x84_berryalloc_rsh_02",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak4u6dc7sxc9f1ma/beaulieu_2000w,default/java_light_grey_lam_v4_504x84_berryalloc_rsh_01"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/chateau-plus/62002714"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Java Natural",
+   "slug": "java-natural",
+   "collection": "Chateau+",
+   "sku": "62002716",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "натуральный"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "живой"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    },
+    {
+     "label": "Степень блеска",
+     "value": "слабый блеск"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "62002716"
+    },
+    {
+     "label": "Серия",
+     "value": "Chateau+"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "оранжевый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Класс износостойкости",
+     "value": "AC5"
+    },
+    {
+     "label": "Замок",
+     "value": "OmniLoc A"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "504 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "84 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,01606 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "24"
+    }
+   ],
+   "description": "<p>Натуральный дуб с матовой поверхностью и фактурой от мягкой до выраженной в натуральном цвете дерева.</p>\n<p>Ламинат BerryAlloc Chateau+ с рисунком «ёлочка» собирается на замок OmniLoc A без клея. Доска 504 × 84 мм, толщина 8 мм. Класс износостойкости AC5, класс использования 23 для дома и 33 для офиса. Сделано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5akax96nqcsrg6y1o/beaulieu_2000w,default/java_natural_lam_v4_504x84_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak4p9hkpk7o6eake/beaulieu_2000w,default/java_natural_lam_v4_504x84_berryalloc_rsh_01"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/chateau-plus/62002716"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Merbau Brown",
+   "slug": "merbau-brown",
+   "collection": "Chateau+",
+   "sku": "62002708",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-коричневый"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "спокойный"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "мербау"
+    },
+    {
+     "label": "Степень блеска",
+     "value": "глянцевый"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "62002708"
+    },
+    {
+     "label": "Серия",
+     "value": "Chateau+"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "красный"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Класс износостойкости",
+     "value": "AC5"
+    },
+    {
+     "label": "Замок",
+     "value": "OmniLoc A"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "504 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "84 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,01606 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "24"
+    }
+   ],
+   "description": "<p>Глянцевая поверхность и мягкая фактура в тёмном красно-коричневом цвете мербау.</p>\n<p>Ламинат BerryAlloc Chateau+ с рисунком «ёлочка» собирается на замок OmniLoc A без клея. Доска 504 × 84 мм, толщина 8 мм. Класс износостойкости AC5, класс использования 23 для дома и 33 для офиса. Сделано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak353sm99orxhxxe/beaulieu_2000w,default/merbau_brown_lam_v4_504x84_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5akantutnp6y7oqca/beaulieu_2000w,default/merbau_brown_lam_v4_504x84_berryalloc_rsh_01"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/chateau-plus/62002708"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Teak Brown",
+   "slug": "teak-brown",
+   "collection": "Chateau+",
+   "sku": "62002728",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-коричневый"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "спокойный"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "тик"
+    },
+    {
+     "label": "Степень блеска",
+     "value": "глянцевый"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "62002728"
+    },
+    {
+     "label": "Серия",
+     "value": "Chateau+"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "оранжевый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Класс износостойкости",
+     "value": "AC5"
+    },
+    {
+     "label": "Замок",
+     "value": "OmniLoc A"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "504 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "84 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,01606 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "24"
+    }
+   ],
+   "description": "<p>Глянцевая поверхность и мягкая структура в тёмном красно-коричневом цвете тика.</p>\n<p>Ламинат BerryAlloc Chateau+ с рисунком «ёлочка» собирается на замок OmniLoc A без клея. Доска 504 × 84 мм, толщина 8 мм. Класс износостойкости AC5, класс использования 23 для дома и 33 для офиса. Сделано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak48ufgxa4ngnh9y/beaulieu_2000w,default/teak_brown_lam_v4_504x84_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak4aczhrofc1ou5a/beaulieu_2000w,default/teak_brown_lam_v4_504x84_berryalloc_rsh_01"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/chateau-plus/62002728"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Texas Light Brown",
+   "slug": "texas-light-brown",
+   "collection": "Chateau+",
+   "sku": "62002726",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "натуральный"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "живой"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    },
+    {
+     "label": "Степень блеска",
+     "value": "слабый блеск"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "62002726"
+    },
+    {
+     "label": "Серия",
+     "value": "Chateau+"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "оранжевый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Класс износостойкости",
+     "value": "AC5"
+    },
+    {
+     "label": "Замок",
+     "value": "OmniLoc A"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "504 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "84 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,01606 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "24"
+    }
+   ],
+   "description": "<p>Выразительный дуб с матовой поверхностью и выраженной структурой в светло-коричневом цвете.</p>\n<p>Ламинат BerryAlloc Chateau+ с рисунком «ёлочка» собирается на замок OmniLoc A без клея. Доска 504 × 84 мм, толщина 8 мм. Класс износостойкости AC5, класс использования 23 для дома и 33 для офиса. Сделано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5akaeqehda398uj8e/beaulieu_2000w,default/texas_light_brown_lam_v4_504x84_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak4ur5wayf7u7hxe/beaulieu_2000w,default/texas_light_brown_lam_v4_504x84_berryalloc_rsh_01",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5j9kk5jqsh1cue/beaulieu_2000w,default/texas_light_brown_lam_v4_504x84_berryalloc_rsh_02"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/chateau-plus/62002726"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Texas Light Natural",
+   "slug": "texas-light-natural",
+   "collection": "Chateau+",
+   "sku": "62002724",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "светлый натуральный"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "живой"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    },
+    {
+     "label": "Степень блеска",
+     "value": "слабый блеск"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "62002724"
+    },
+    {
+     "label": "Серия",
+     "value": "Chateau+"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "жёлтый, оранжевый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Класс износостойкости",
+     "value": "AC5"
+    },
+    {
+     "label": "Замок",
+     "value": "OmniLoc A"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "504 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "84 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,01606 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "24"
+    }
+   ],
+   "description": "<p>Выразительный дуб с матовой поверхностью и выраженной структурой в светлом натуральном цвете дерева.</p>\n<p>Ламинат BerryAlloc Chateau+ с рисунком «ёлочка» собирается на замок OmniLoc A без клея. Доска 504 × 84 мм, толщина 8 мм. Класс износостойкости AC5, класс использования 23 для дома и 33 для офиса. Сделано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5ndfdhuzyxsa1o/beaulieu_2000w,default/texas_light_natural_lam_v4_504x84_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5z6ph8ox3apmfe/beaulieu_2000w,default/texas_light_natural_lam_v4_504x84_berryalloc_rsh_02",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak3s38ewm7tsnm3e/beaulieu_2000w,default/texas_light_natural_lam_v4_504x84_berryalloc_rsh_01"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/chateau-plus/62002724"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Walnut Brown",
+   "slug": "walnut-brown",
+   "collection": "Chateau+",
+   "sku": "62002730",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-коричневый"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "спокойный"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "орех"
+    },
+    {
+     "label": "Степень блеска",
+     "value": "глянцевый"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "62002730"
+    },
+    {
+     "label": "Серия",
+     "value": "Chateau+"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "красный, оранжевый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Класс износостойкости",
+     "value": "AC5"
+    },
+    {
+     "label": "Замок",
+     "value": "OmniLoc A"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "504 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "84 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,01606 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "24"
+    }
+   ],
+   "description": "<p>Глянцевая мягкая поверхность в тёмно-коричневом цвете ореха.</p>\n<p>Ламинат BerryAlloc Chateau+ с рисунком «ёлочка» собирается на замок OmniLoc A без клея. Доска 504 × 84 мм, толщина 8 мм. Класс износостойкости AC5, класс использования 23 для дома и 33 для офиса. Сделано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak39yojt8sx4dkso/beaulieu_2000w,default/walnut_brown_lam_v4_504x84_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak513ffeib3potky/beaulieu_2000w,default/walnut_brown_lam_v4_504x84_berryalloc_rsh_06",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5iidnx5h6wtfge/beaulieu_2000w,default/walnut_brown_lam_v4_504x84_berryalloc_rsh_9"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/chateau-plus/62002730"
+  }
+ ]
+}

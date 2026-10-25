@@ -12,7 +12,7 @@ PostgreSQL 18. Схема — `db/migrations/001_init.sql` и `002_section_sites
 | `pages` | текстовые страницы: `slug`, `title`, `content` (HTML с `{{placeholder}}`), SEO-поля, `is_published` |
 | `news` | новости: `slug` (адрес `/news/slug`), `title`, `excerpt`, `content`, `image`, `published_at`, `is_published`, `views`; у постов Instagram `source = 'instagram'`, `source_id`, `source_url` |
 | `menu_items` | ссылки меню: `menu` (`top` — шапка, `footer_company` — подвал), `label`, `url`, `sort_order`, `new_tab` |
-| `settings` | настройки «ключ — значение»; `home_content` — JSON главной, `instagram_token` — продлённый ключ Instagram, `section_sites` — отметка первичной настройки сайтов разделов |
+| `settings` | настройки «ключ — значение»; `home_content` — JSON главной, `instagram_token` — продлённый ключ Instagram, `section_site:<раздел>` — отметки первичной настройки сайтов разделов |
 | `redirects` | 301: `from_path` → `to_path`, `hits`, `last_hit` |
 | `visits_daily` | посетители и просмотры по дням для обзора в админке |
 

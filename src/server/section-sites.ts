@@ -1,27 +1,31 @@
 // Сайты разделов: первичная настройка и фото товаров.
 //
-// setupSectionSites() — один раз при запуске: включает сайт раздела «SPC / LVT / кварцвинил» по адресу
-// vinyl.<адрес главного сайта> (на компьютере — vinyl.localhost) и загружает товары из seed/catalog/<раздел>.json
-// в разделы, где товаров ещё нет. Адрес и цвет потом меняются в админке: «Разделы» → раздел → «Сайт раздела».
+// setupSectionSites() — при запуске, один раз для каждого раздела из SITES: включает сайт раздела по адресу
+// <раздел>.<адрес главного сайта> (на компьютере — vinyl.localhost, laminate.localhost), добавляет разделу бренды
+// и товары из seed/catalog/<раздел>.json, если товаров в разделе ещё нет. Отметка в настройках: section_site:<раздел>.
+// Адрес и цвет потом меняются в админке: «Разделы» → раздел → «Сайт раздела».
 //
 // importProductPhotos() — при каждом запуске, в фоне: скачивает фото производителя для товаров, у которых фото
 // ещё нет. Нет интернета — попробует при следующем запуске. Фото, загруженные в админке, не трогает.
-import { readdir, readFile } from 'node:fs/promises';
+import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { sql } from './db.ts';
 import { normalizeHost } from './sections.ts';
 import { removeUploads, saveImage } from './uploads.ts';
 import type { Attr } from './products.ts';
 
-const FLAG = 'section_sites';
 const CATALOG_DIR = path.resolve(process.cwd(), 'seed/catalog');
-/** Разделы, у которых сайт включается сразу (остальные — из админки) */
-const FIRST_SITES = ['vinyl'];
+/** Разделы, у которых сайт включается сам (по решению владельца); остальные — из админки */
+const SITES = ['vinyl', 'laminate'];
+/** Отметка первой версии, когда настраивался только vinyl */
+const OLD_FLAG = 'section_sites';
 
 type SeedProduct = {
   brand: string; name: string; slug: string; collection: string; sku: string; attributes: Attr[]; facets: Attr[];
   specs: Attr[]; description: string; images: string[]; sourceUrl: string;
 };
+type SeedBrand = { name: string; link?: string; description?: string };
+type SeedCatalog = { section: string; brands?: SeedBrand[]; products: SeedProduct[] };
 
 /** Адрес сайта раздела по адресу главного сайта: localhost → vinyl.localhost, europroject.kg → vinyl.europroject.kg */
 export function defaultSiteHost(slug: string): string {
@@ -31,53 +35,69 @@ export function defaultSiteHost(slug: string): string {
 
 /** Возвращает список изменений для журнала запуска. */
 export async function setupSectionSites(): Promise<string[]> {
-  const [done] = await sql`SELECT 1 FROM settings WHERE key = ${FLAG}`;
-  if (done) return [];
   const log: string[] = [];
+  const done = new Set((await sql<{ key: string }[]>`SELECT key FROM settings WHERE key LIKE 'section_site%'`).map((r) => r.key));
+  if (done.has(OLD_FLAG)) done.add('section_site:vinyl');
 
-  for (const slug of FIRST_SITES) {
-    const host = defaultSiteHost(slug);
-    const rows = await sql<{ name: string }[]>`
-      UPDATE sections SET site_host = ${host}, updated_at = now()
-      WHERE slug = ${slug} AND site_host = '' AND NOT EXISTS (SELECT 1 FROM sections WHERE lower(site_host) = ${host})
-      RETURNING name`;
-    for (const r of rows) log.push(`«${r.name}»: сайт раздела http://${host}`);
+  for (const slug of SITES) {
+    const flag = `section_site:${slug}`;
+    if (done.has(flag)) continue;
+    const [section] = await sql<{ id: number; name: string }[]>`SELECT id, name FROM sections WHERE slug = ${slug}`;
+    if (section) {
+      const host = defaultSiteHost(slug);
+      const on = await sql`
+        UPDATE sections SET site_host = ${host}, updated_at = now()
+        WHERE id = ${section.id} AND site_host = '' AND NOT EXISTS (SELECT 1 FROM sections WHERE lower(site_host) = ${host})`;
+      if (on.count) log.push(`«${section.name}»: сайт раздела http://${host}`);
+      const added = await loadCatalog(section.id, slug);
+      if (added) log.push(`«${section.name}»: товаров ${added}`);
+    }
+    await sql`INSERT INTO settings (key, value) VALUES (${flag}, ${new Date().toISOString()}) ON CONFLICT (key) DO NOTHING`;
   }
-
-  const files = (await readdir(CATALOG_DIR).catch(() => [] as string[])).filter((f) => f.endsWith('.json')).sort();
-  for (const file of files) {
-    const seed = JSON.parse(await readFile(path.join(CATALOG_DIR, file), 'utf8')) as { section: string; products: SeedProduct[] };
-    const [section] = await sql<{ id: number; name: string }[]>`SELECT id, name FROM sections WHERE slug = ${seed.section}`;
-    if (!section) continue;
-    const [{ n }] = await sql<{ n: number }[]>`SELECT count(*)::int AS n FROM products WHERE section_id = ${section.id}`;
-    if (n) continue;
-    const brands = new Map(
-      (await sql<{ id: number; name: string }[]>`SELECT id, name FROM brands WHERE section_id = ${section.id}`).map((b) => [b.name, b.id]),
-    );
-    await sql.begin(async (tx) => {
-      for (const [i, p] of seed.products.entries()) {
-        await tx`INSERT INTO products ${tx({
-          sectionId: section.id,
-          brandId: brands.get(p.brand) ?? null,
-          slug: p.slug,
-          name: p.name,
-          collection: p.collection,
-          sku: p.sku,
-          attributes: tx.json(p.attributes),
-          facets: tx.json(p.facets),
-          specs: tx.json(p.specs),
-          description: p.description,
-          sourceImages: tx.json(p.images),
-          sourceUrl: p.sourceUrl,
-          sortOrder: (i + 1) * 10,
-        })}`;
-      }
-    });
-    log.push(`«${section.name}»: товаров ${seed.products.length}`);
-  }
-
-  await sql`INSERT INTO settings (key, value) VALUES (${FLAG}, ${new Date().toISOString()}) ON CONFLICT (key) DO NOTHING`;
   return log;
+}
+
+/** Бренды и товары из seed/catalog/<раздел>.json — только в раздел без товаров. Возвращает число товаров. */
+async function loadCatalog(sectionId: number, slug: string): Promise<number> {
+  const raw = await readFile(path.join(CATALOG_DIR, `${slug}.json`), 'utf8').catch(() => '');
+  if (!raw) return 0;
+  const seed = JSON.parse(raw) as SeedCatalog;
+  const [{ n }] = await sql<{ n: number }[]>`SELECT count(*)::int AS n FROM products WHERE section_id = ${sectionId}`;
+  if (n) return 0;
+
+  return sql.begin(async (tx) => {
+    // Бренд, которого в разделе нет, добавляем; логотип берём у такого же бренда из другого раздела
+    for (const b of seed.brands ?? []) {
+      const [have] = await tx`SELECT 1 FROM brands WHERE section_id = ${sectionId} AND name = ${b.name}`;
+      if (have) continue;
+      const [same] = await tx<{ logo: string }[]>`SELECT logo FROM brands WHERE name = ${b.name} AND logo <> '' LIMIT 1`;
+      const [{ max }] = await tx<{ max: number }[]>`SELECT coalesce(max(sort_order), 0)::int AS max FROM brands WHERE section_id = ${sectionId}`;
+      await tx`INSERT INTO brands ${tx({
+        sectionId, name: b.name, logo: same?.logo ?? '', link: b.link ?? '', description: b.description ?? '', sortOrder: max + 10,
+      })}`;
+    }
+    const brands = new Map(
+      (await tx<{ id: number; name: string }[]>`SELECT id, name FROM brands WHERE section_id = ${sectionId}`).map((b) => [b.name, b.id]),
+    );
+    for (const [i, p] of seed.products.entries()) {
+      await tx`INSERT INTO products ${tx({
+        sectionId,
+        brandId: brands.get(p.brand) ?? null,
+        slug: p.slug,
+        name: p.name,
+        collection: p.collection,
+        sku: p.sku,
+        attributes: tx.json(p.attributes),
+        facets: tx.json(p.facets),
+        specs: tx.json(p.specs),
+        description: p.description,
+        sourceImages: tx.json(p.images),
+        sourceUrl: p.sourceUrl,
+        sortOrder: (i + 1) * 10,
+      })}`;
+    }
+    return seed.products.length;
+  });
 }
 
 async function download(url: string): Promise<Buffer | null> {
