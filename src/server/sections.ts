@@ -12,6 +12,8 @@ export type Section = {
   siteColor: string;
   /** Вид главной сайта раздела: '' — фото и блоки, 'catalog' — сразу каталог с фильтрами слева, без других разделов */
   siteLayout: string;
+  /** Адрес на сайте раздела вместо адреса офиса; пусто — адрес из настроек */
+  siteAddress: string;
   updatedAt: Date;
 };
 export type Brand = {

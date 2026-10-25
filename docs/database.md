@@ -6,7 +6,7 @@ PostgreSQL 18. Схема — `db/migrations/001_init.sql` и `002_section_sites
 | Таблица | Что хранит |
 |---|---|
 | `users`, `sessions` | администраторы и их сессии (в `sessions.id` — sha256 токена из cookie) |
-| `sections` | разделы: `slug` (адрес `/slug`), `name`, `heading`, `summary` (карточка на главной), `description` (HTML), `image`, `link` (внешний сайт раздела), `link_label`, `site_host` (адрес своего сайта раздела, пусто — нет), `site_color`, SEO-поля, `sort_order`, `is_published`, `is_new` (метка «Новинка»), `site_layout` (вид главной сайта раздела: пусто или `catalog`)|
+| `sections` | разделы: `slug` (адрес `/slug`), `name`, `heading`, `summary` (карточка на главной), `description` (HTML), `image`, `link` (внешний сайт раздела), `link_label`, `site_host` (адрес своего сайта раздела, пусто — нет), `site_color`, SEO-поля, `sort_order`, `is_published`, `is_new` (метка «Новинка»), `site_layout` (вид главной сайта раздела: пусто или `catalog`), `site_address` (свой адрес сайта раздела, пусто — адрес офиса)|
 | `products` | товары сайтов разделов: `section_id`, `brand_id`, `slug` (адрес на сайте раздела, уникален в разделе), `name`, `collection`, `sku`, `attributes` (коротко в карточке), `facets` (значения фильтров), `specs` (таблица) — JSON `[{label, value}]`; `description`, `images` (пути в uploads, первое — главное), `source_images` (фото производителя для скачивания), `source_url`, SEO-поля, `sort_order`, `is_published` |
 | `brands` | бренды: `section_id` (раздел, при удалении раздела — NULL), `name`, `logo`, `description` (HTML), `link` (коллекции), `sort_order`, `is_active` |
 | `pages` | текстовые страницы: `slug`, `title`, `content` (HTML с `{{placeholder}}`), SEO-поля, `is_published` |

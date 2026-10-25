@@ -10,7 +10,7 @@ import CatalogHome from '../../components/section-site/CatalogHome.astro';
 import ProductView from '../../components/section-site/ProductView.astro';
 import { getActiveBrands, siteUrl } from '../../server/sections.ts';
 import { applyFilters, getProducts, parseFilters, relatedProducts } from '../../server/products.ts';
-import { getSettings } from '../../server/settings.ts';
+import { getSettings, siteSettings } from '../../server/settings.ts';
 import { breadcrumbJsonLd, withSiteName } from '../../server/seo.ts';
 import { plainText } from '../../server/util.ts';
 
@@ -20,7 +20,8 @@ if (!site) return new Response('Not found', { status: 404 });
 const path = (Astro.params.path ?? '').replace(/\/+$/, '');
 if (path && Astro.url.pathname.endsWith('/')) return Astro.redirect(`/${path}${Astro.url.search}`, 301);
 
-const [settings, products] = await Promise.all([getSettings(), getProducts(site.id)]);
+const [allSettings, products] = await Promise.all([getSettings(), getProducts(site.id)]);
+const settings = siteSettings(allSettings, site);
 const product = path && !path.includes('/') ? products.find((p) => p.slug === path) : undefined;
 const isHome = !path;
 if (!isHome && !product) Astro.response.status = 404;

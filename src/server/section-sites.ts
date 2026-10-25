@@ -26,7 +26,7 @@ type SeedProduct = {
 };
 type SeedBrand = { name: string; link?: string; description?: string };
 /** Тексты и вид сайта раздела, которые ставятся вместе с каталогом (пустые поля не трогаются) */
-type SeedSite = { layout?: string; heading?: string; summary?: string; description?: string; seoTitle?: string; seoDescription?: string };
+type SeedSite = { layout?: string; address?: string; heading?: string; summary?: string; description?: string; seoTitle?: string; seoDescription?: string };
 /** hideBrands — убрать бренды раздела с сайта (товары без бренда, производитель указан в характеристиках) */
 type SeedCatalog = { section: string; site?: SeedSite; hideBrands?: boolean; brands?: SeedBrand[]; products: SeedProduct[] };
 
@@ -71,7 +71,7 @@ async function loadCatalog(sectionId: number, slug: string): Promise<number> {
   return sql.begin(async (tx) => {
     const site = seed.site ?? {};
     const texts = Object.fromEntries(
-      Object.entries({ siteLayout: site.layout, heading: site.heading, summary: site.summary, description: site.description,
+      Object.entries({ siteLayout: site.layout, siteAddress: site.address, heading: site.heading, summary: site.summary, description: site.description,
         seoTitle: site.seoTitle, seoDescription: site.seoDescription }).filter(([, v]) => v),
     );
     if (Object.keys(texts).length) await tx`UPDATE sections SET ${tx(texts)}, updated_at = now() WHERE id = ${sectionId}`;

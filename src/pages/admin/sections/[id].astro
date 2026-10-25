@@ -20,7 +20,7 @@ type Form = Omit<Section, 'id' | 'updatedAt'>;
 let error = '';
 let form: Form = current ?? {
   slug: '', name: '', heading: '', summary: '', description: '', image: '', link: '', linkLabel: '',
-  seoTitle: '', seoDescription: '', sortOrder: (total + 1) * 10, isPublished: true, siteHost: '', siteColor: '', siteLayout: '',
+  seoTitle: '', seoDescription: '', sortOrder: (total + 1) * 10, isPublished: true, siteHost: '', siteColor: '', siteLayout: '', siteAddress: '',
 };
 let newImage = ''; // загруженное в этом запросе фото (удаляется, если сохранить не удалось)
 
@@ -47,6 +47,7 @@ if (Astro.request.method === 'POST') {
     siteHost: normalizeHost(str(data, 'site_host')),
     siteColor: str(data, 'site_color').toLowerCase(),
     siteLayout: str(data, 'site_layout') === 'catalog' ? 'catalog' : '',
+    siteAddress: str(data, 'site_address'),
   };
   if (!bool(data, 'site_on')) form.siteHost = '';
   else if (!form.siteHost && form.slug) form.siteHost = defaultSiteHost(form.slug);
@@ -164,6 +165,11 @@ const title = isNew ? 'Новый раздел' : form.name;
             <option value="catalog" selected={form.siteLayout === 'catalog'}>Только каталог с фильтрами слева</option>
           </select>
           <div class="hint">«Только каталог»: без производителей и без ссылок на другие разделы.</div>
+        </div>
+        <div class="field">
+          <label for="site_address">Адрес на сайте раздела</label>
+          <input type="text" id="site_address" name="site_address" value={form.siteAddress} placeholder="пусто — адрес офиса из настроек" />
+          <div class="hint">Если у раздела свой магазин или склад: г. Бишкек, ул. Матросова 6/1.</div>
         </div>
       </div>
     </div>

@@ -10,7 +10,7 @@ import { getHome } from './home.ts';
 import { getActiveBrands, getSections, linkLabel, sectionLink, siteUrl, type Brand, type Section } from './sections.ts';
 import { getProducts, type ProductItem } from './products.ts';
 import { pluralRu } from './util.ts';
-import { fillPlaceholders, getSettings, type Settings } from './settings.ts';
+import { fillPlaceholders, getSettings, siteSettings, type Settings } from './settings.ts';
 
 const ENTITIES: Record<string, string> = {
   nbsp: ' ', amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", laquo: '«', raquo: '»',
@@ -95,7 +95,8 @@ function summary(d: Data): string {
     `Офис: ${s.address}. Телефон ${s.phone_main}.`;
 }
 
-function contacts(d: Data): string[] {
+/** mainContact — ссылка на страницу контактов главного сайта (у сайта раздела со своим адресом её нет) */
+function contacts(d: Data, mainContact = true): string[] {
   const s = d.settings;
   const wa = s.panel_whatsapp ? `, WhatsApp ${s.panel_whatsapp} (https://wa.me/${s.panel_whatsapp.replace(/\D/g, '')})` : '';
   const lines = [
@@ -110,7 +111,7 @@ function contacts(d: Data): string[] {
   }
   lines.push(`- Email: ${s.email}${wa}.`);
   if (s.instagram_url) lines.push(`- Instagram: ${s.instagram_url}`);
-  lines.push(`- [Контакты и карта](${d.base}/contact)`);
+  if (mainContact) lines.push(`- [Контакты и карта](${d.base}/contact)`);
   return lines;
 }
 
@@ -204,7 +205,7 @@ type SiteData = Data & { site: Section; siteBase: string; products: ProductItem[
 
 async function loadSite(site: Section): Promise<SiteData> {
   const d = await load('http://localhost');
-  return { ...d, site, siteBase: siteUrl(site), products: await getProducts(site.id) };
+  return { ...d, settings: siteSettings(d.settings, site), site, siteBase: siteUrl(site), products: await getProducts(site.id) };
 }
 
 const productLine = (p: ProductItem) => [p.brand, p.collection, p.name].filter(Boolean).join(' ');
@@ -228,7 +229,7 @@ export async function buildSiteLlmsTxt(site: Section): Promise<string> {
   const md = (html: string) => htmlToMd(fillPlaceholders(html, d.settings), d.siteBase);
   const out = siteHeader(d, false);
   if (site.description) out.push(oneLine(md(site.description), 600), '');
-  out.push('## Контакты', '', ...contacts(d), '');
+  out.push('## Контакты', '', ...contacts(d, !site.siteAddress && site.siteLayout !== 'catalog'), '');
   const brands = brandsOf(d, site);
   if (brands.length) {
     out.push('## Производители', '');
@@ -256,7 +257,7 @@ export async function buildSiteLlmsFullTxt(site: Section): Promise<string> {
   const out = siteHeader(d, true);
   out.push(`Сайт: ${d.siteBase}. Данные собраны с сайта ${new Date().toLocaleDateString('ru-RU')} и всегда совпадают с ним.`, '');
   if (site.description) out.push('## О покрытии', '', md(site.description), '');
-  out.push('## Контакты', '', ...contacts(d), '');
+  out.push('## Контакты', '', ...contacts(d, !site.siteAddress && site.siteLayout !== 'catalog'), '');
   const brands = brandsOf(d, site);
   if (brands.length) {
     out.push('## Производители', '');

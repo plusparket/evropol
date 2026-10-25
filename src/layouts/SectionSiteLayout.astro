@@ -6,7 +6,7 @@ import '../styles/site.css';
 import '../styles/section-site.css';
 import SiteHeader from '../components/section-site/SiteHeader.astro';
 import SiteFooter from '../components/section-site/SiteFooter.astro';
-import { getSettings } from '../server/settings.ts';
+import { getSettings, siteSettings } from '../server/settings.ts';
 import { DEFAULT_SITE_COLOR, getSections, siteUrl, type Section } from '../server/sections.ts';
 
 interface Props {
@@ -22,7 +22,8 @@ interface Props {
 }
 const { site, title, description, noindex = false, canonicalPath, image, jsonLd } = Astro.props;
 
-const [settings, sections] = await Promise.all([getSettings(), getSections({ publishedOnly: true })]);
+const [allSettings, sections] = await Promise.all([getSettings(), getSections({ publishedOnly: true })]);
+const settings = siteSettings(allSettings, site);
 const base = siteUrl(site);
 const canonical = base + (canonicalPath ?? (Astro.url.pathname.replace(/^\/section-site/, '') || '/'));
 const ogImage = base + (image || '/img/og-europroject.jpg');

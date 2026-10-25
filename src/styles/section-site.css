@@ -50,7 +50,7 @@
 
 /* Метка «Новинка» на фото товара */
 .ss-card .pcard2-img { position: relative; }
-.ss-badge { position: absolute; top: 12px; left: 12px; z-index: 1; padding: 4px 10px; background: #e30613; color: #fff; font: 600 12px/1.4 var(--font); letter-spacing: .04em; text-transform: uppercase; }
+.ss-badge { position: absolute; top: 12px; left: 12px; z-index: 1; padding: 4px 10px; background: var(--site); color: #fff; font: 600 12px/1.4 var(--font); letter-spacing: .04em; text-transform: uppercase; }
 .ss-badge--inline { position: static; display: inline-block; margin-bottom: 12px; }
 
 /* Страница товара */

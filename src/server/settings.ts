@@ -51,6 +51,15 @@ export async function getSettings(): Promise<Settings> {
   return result;
 }
 
+/**
+ * Настройки для сайта раздела: если у раздела свой адрес (sections.site_address), он заменяет адрес офиса,
+ * а координаты и второй адрес офиса не показываются — они относятся к другому месту.
+ */
+export function siteSettings(settings: Settings, site: { siteAddress: string }): Settings {
+  if (!site.siteAddress) return settings;
+  return { ...settings, address: site.siteAddress, geo: '', name_second: '', phone_second: '', address_second: '', work_hours_second: '', geo_second: '' };
+}
+
 export async function saveSettings(values: Partial<Settings>): Promise<void> {
   const rows = Object.entries(values).map(([key, value]) => ({ key, value: value ?? '' }));
   if (!rows.length) return;
