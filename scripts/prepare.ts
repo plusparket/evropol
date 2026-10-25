@@ -1,4 +1,5 @@
 // Подготовка перед запуском: миграции → первый администратор → стартовый контент (если база пустая)
+// → новый список разделов (один раз)
 // → фото со старого сайта europroject.kg (один раз) → недостающие уменьшенные копии фото главной.
 import { migrate } from '../src/server/migrate.ts';
 import { ensureAdmin } from '../src/server/auth.ts';
@@ -8,6 +9,7 @@ import { sql } from '../src/server/db.ts';
 import { ensureNewsSlugs } from '../src/server/content.ts';
 import { importLegacyPhotos } from '../src/server/legacy-photos.ts';
 import { upgradeHome } from '../src/server/home.ts';
+import { upgradeSections } from '../src/server/upgrade-sections.ts';
 
 const log = (msg: string) => console.log(`[prepare] ${msg}`);
 
@@ -22,6 +24,7 @@ export async function prepare(): Promise<void> {
   const slugs = await ensureNewsSlugs();
   if (slugs) log(`адреса новостей: ${slugs}`);
   if (await upgradeHome()) log('главная переведена на вид старого europroject.kg');
+  for (const msg of await upgradeSections()) log(`разделы: ${msg}`);
   await importLegacyPhotos(log).catch((err) => log(`фото со старого сайта: ошибка ${err?.message ?? err}`));
   const made = await ensureHomeVariants();
   if (made) log(`созданы уменьшенные копии фото главной: ${made}`);
