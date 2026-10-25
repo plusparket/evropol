@@ -3,9 +3,9 @@ import { sql } from './db.ts';
 /** Все настройки сайта с подписями для админки и значениями по умолчанию. */
 export const SETTINGS_SCHEMA = [
   { group: 'Общее', key: 'site_name', label: 'Название компании (в заголовках страниц и разметке для Google)', default: 'Европроект' },
-  { group: 'Общее', key: 'seo_title', label: 'Заголовок главной страницы (title)', default: 'Европроект: винил, ковровая плитка, коммерческий линолеум в Бишкеке' },
+  { group: 'Общее', key: 'seo_title', label: 'Заголовок главной страницы (title)', default: 'Европроект: линолеум, ковролин, ковровая плитка, кварцвинил и ламинат в Бишкеке' },
   { group: 'Общее', key: 'seo_description', label: 'Описание главной для поисковиков (meta description)', type: 'textarea',
-    default: 'Европроект поставляет в Кыргызстан напольные покрытия Moduleo, BerryAlloc, Modulyss, Betap, IVC Commercial, BLOQ и клеи Forbo Eurocol: винил, ковровую плитку, коммерческий линолеум, террасную доску. Бишкек, ул. Токтогула 125/1, БЦ «Авангард».' },
+    default: 'Европроект поставляет в Кыргызстан напольные покрытия IVC Commercial, Moduleo, BerryAlloc, Modulyss, Betap и BLOQ: линолеум, ковролин, ковровую плитку, кварцвинил SPC и LVT, ламинат. Бишкек, ул. Токтогула 125/1, БЦ «Авангард».' },
   { group: 'Общее', key: 'copyright', label: 'Текст в подвале ({year} — текущий год)', default: 'Copyright © {year} Европроект. Все права защищены' },
 
   // Контакты со старого сайта europroject.kg (17.10.2026)

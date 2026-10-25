@@ -16,7 +16,7 @@ export const HERO_SLOTS = 3;
 export const DEFAULT_HOME: HomeContent = {
   hero: {
     title: 'Напольные покрытия\nдля офисов, магазинов и домов',
-    text: 'Винил, ковровая плитка, коммерческий линолеум, террасная доска и клеи от европейских производителей.',
+    text: 'Линолеум, ковролин, ковровая плитка, кварцвинил SPC и LVT, ламинат от европейских производителей.',
     button: 'Разделы',
     link: '#razdely',
     images: [],
@@ -27,8 +27,8 @@ export const DEFAULT_HOME: HomeContent = {
     // По тексту старой страницы «О компании» (europroject.kg/o-kompanii.html)
     title: '',
     text:
-      '<p>Мы поставляем в Кыргызстан напольные покрытия Moduleo, BerryAlloc, Modulyss, Betap, IVC Commercial, BLOQ ' +
-      'и клеи Forbo Eurocol. Подбираем покрытие под объект: офис, магазин, гостиницу, школу, квартиру.</p>' +
+      '<p>Мы поставляем в Кыргызстан напольные покрытия IVC Commercial, Moduleo, BerryAlloc, Modulyss, Betap и BLOQ. ' +
+      'Подбираем покрытие под объект: офис, магазин, гостиницу, школу, квартиру.</p>' +
       '<p>Офис: {{address}}. Телефон и WhatsApp: {{phone_main}}.</p>',
     linkText: 'О компании',
     link: '/about',

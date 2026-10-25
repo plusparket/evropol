@@ -85,7 +85,9 @@ const looseBrands = (d: Data) => d.brands.filter((b) => !d.sections.some((s) => 
 
 function summary(d: Data): string {
   const s = d.settings;
-  const names = d.sections.map((x) => x.name.toLowerCase()).join(', ');
+  // «Ковровая плитка» → «ковровая плитка», но аббревиатуры («SPC / LVT …») не трогаем
+  const lower = (n: string) => (/^\p{Lu}\p{Ll}/u.test(n) ? n[0].toLowerCase() + n.slice(1) : n);
+  const names = d.sections.map((x) => lower(x.name)).join(', ');
   return `${s.site_name}: поставщик напольных покрытий в Бишкеке (Кыргызстан)${names ? `: ${names}` : ''}. ` +
     `Офис: ${s.address}. Телефон ${s.phone_main}.`;
 }
