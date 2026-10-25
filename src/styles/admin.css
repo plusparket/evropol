@@ -31,7 +31,7 @@ img { max-width: 100%; }
 .adm { display: grid; grid-template-columns: 230px 1fr; min-height: 100vh; }
 .adm-side { background: var(--ink); color: #bbb; padding: 0 0 24px; position: sticky; top: 0; height: 100vh; overflow-y: auto; }
 .adm-brand { display: flex; align-items: center; gap: 10px; padding: 16px; color: #fff; text-decoration: none; font-family: 'robotob'; letter-spacing: .5px; text-transform: uppercase; background: #0d1b2a; }
-.adm-brand .adm-logo-text { height: 40px; width: auto; }
+.adm-brand .adm-logo-text { height: 28px; width: auto; }
 .adm-brand:hover { color: #fff; }
 .adm-nav { padding: 8px 0; }
 .adm-nav .sec { padding: 14px 16px 4px; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #777; }
@@ -133,7 +133,7 @@ a.stat:hover { border-color: var(--brand); color: var(--text); }
 
 /* Страница входа (в стиле старой формы авторизации) */
 .login-page { min-height: 100vh; display: flex; align-items: flex-start; justify-content: center; padding-top: 100px; background: #eee; }
-.login-logo { display: block; width: 120px; margin: 0 auto 24px; }
+.login-logo { display: block; width: 220px; margin: 0 auto 24px; }
 .login_form { background: #fff; width: 340px; max-width: calc(100% - 32px); padding: 0 20px 20px; box-shadow: 0 0 10px #ccc; }
 .login_form .title { background: #0d1b2a; line-height: 40px; text-align: center; color: #fff; margin: 0 -20px 16px; }
 .login_form input { background: #f9f9f9; margin-bottom: 10px; }

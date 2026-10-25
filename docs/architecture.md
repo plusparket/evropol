@@ -38,7 +38,7 @@ src/pages/admin/      админка
 src/components/       Header, Footer, Home, SectionView, PageView и др.
 src/styles/site.css   оформление сайта; admin.css — админки
 src/scripts/          site.ts (меню, кнопка наверх, карты, счётчики), ui.ts (шапка, слайдер, просмотр фото)
-public/               шрифты (Montserrat), логотип EUROPROJECT, иконки
+public/               шрифты (Raleway), логотип ЕвроПол (img/evropol-logo*.svg), иконки
 ```
 
 ## Маршрутизация
