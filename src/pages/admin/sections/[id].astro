@@ -20,7 +20,7 @@ type Form = Omit<Section, 'id' | 'updatedAt'>;
 let error = '';
 let form: Form = current ?? {
   slug: '', name: '', heading: '', summary: '', description: '', image: '', link: '', linkLabel: '',
-  seoTitle: '', seoDescription: '', sortOrder: (total + 1) * 10, isPublished: true, siteHost: '', siteColor: '',
+  seoTitle: '', seoDescription: '', sortOrder: (total + 1) * 10, isPublished: true, siteHost: '', siteColor: '', siteLayout: '',
 };
 let newImage = ''; // загруженное в этом запросе фото (удаляется, если сохранить не удалось)
 
@@ -46,6 +46,7 @@ if (Astro.request.method === 'POST') {
     isPublished: bool(data, 'is_published'),
     siteHost: normalizeHost(str(data, 'site_host')),
     siteColor: str(data, 'site_color').toLowerCase(),
+    siteLayout: str(data, 'site_layout') === 'catalog' ? 'catalog' : '',
   };
   if (!bool(data, 'site_on')) form.siteHost = '';
   else if (!form.siteHost && form.slug) form.siteHost = defaultSiteHost(form.slug);
@@ -155,6 +156,14 @@ const title = isNew ? 'Новый раздел' : form.name;
           <label for="site_color">Цвет сайта</label>
           <input type="color" id="site_color" name="site_color" value={form.siteColor || DEFAULT_SITE_COLOR} style="width:80px;height:40px;padding:2px" />
           <div class="hint">Кнопки, полоса сверху, галочки фильтров. По умолчанию — зелёный логотипа.</div>
+        </div>
+        <div class="field">
+          <label for="site_layout">Вид главной</label>
+          <select id="site_layout" name="site_layout">
+            <option value="" selected={form.siteLayout !== 'catalog'}>Фото, каталог, о покрытии, производители</option>
+            <option value="catalog" selected={form.siteLayout === 'catalog'}>Только каталог с фильтрами слева</option>
+          </select>
+          <div class="hint">«Только каталог»: без производителей и без ссылок на другие разделы.</div>
         </div>
       </div>
     </div>

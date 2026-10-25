@@ -217,7 +217,8 @@ function siteHeader(d: SiteData, full: boolean): string[] {
     `Офис: ${d.settings.address}. Телефон ${d.settings.phone_main}.`, '');
   out.push(`Каталог на сайте: ${d.products.length} ${pluralRu(d.products.length, ['товар', 'товара', 'товаров'])}. ` +
     'Цен на сайте нет: цену и наличие сообщают по телефону или в WhatsApp. Образцы есть в офисе.', '');
-  out.push(`Главный сайт компании со всеми разделами: ${d.base}/`, '');
+  // Вид «только каталог» не ссылается на главный сайт — и здесь его нет
+  if (s.siteLayout !== 'catalog') out.push(`Главный сайт компании со всеми разделами: ${d.base}/`, '');
   return out;
 }
 
@@ -238,7 +239,7 @@ export async function buildSiteLlmsTxt(site: Section): Promise<string> {
     out.push('## Каталог', '');
     for (const p of d.products) {
       const facts = p.attributes.map((a) => a.value).join(', ');
-      out.push(`- [${productLine(p)}](${d.siteBase}/${p.slug})${p.sku ? ` · артикул ${p.sku}` : ''}${facts ? ` · ${facts}` : ''}`);
+      out.push(`- [${productLine(p)}](${d.siteBase}/${p.slug})${p.isNew ? ' · новинка' : ''}${p.sku ? ` · артикул ${p.sku}` : ''}${facts ? ` · ${facts}` : ''}`);
     }
     out.push('');
   }
@@ -268,7 +269,7 @@ export async function buildSiteLlmsFullTxt(site: Section): Promise<string> {
   if (d.products.length) {
     out.push('## Каталог', '');
     for (const p of d.products) {
-      out.push(`### ${productLine(p)}`, '', `Адрес: ${d.siteBase}/${p.slug}${p.sku ? ` · артикул ${p.sku}` : ''}`, '');
+      out.push(`### ${productLine(p)}`, '', `Адрес: ${d.siteBase}/${p.slug}${p.sku ? ` · артикул ${p.sku}` : ''}${p.isNew ? ' · новинка' : ''}`, '');
       if (p.description) out.push(md(p.description), '');
       for (const sp of p.specs) out.push(`- ${sp.label}: ${sp.value}`);
       if (p.specs.length) out.push('');

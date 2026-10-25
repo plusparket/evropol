@@ -1,5 +1,5 @@
 ---
-// Карточка товара в каталоге сайта раздела: фото, бренд и коллекция, название, коротко характеристики.
+// Карточка товара в каталоге сайта раздела: фото с меткой «Новинка», бренд и коллекция, название, коротко характеристики.
 import { productThumb, type ProductItem } from '../../server/products.ts';
 import { uploadUrl } from '../../server/uploads.ts';
 
@@ -13,6 +13,7 @@ const sub = [p.brand, p.collection].filter(Boolean).join(' · ');
 
 <a class="pcard2 ss-card" href={`/${p.slug}`}>
   <span class="pcard2-img">
+    {p.isNew && <span class="ss-badge">Новинка</span>}
     {img ? <img src={uploadUrl(productThumb(img))} alt={p.name} width="600" height="450" loading="lazy" /> : <span class="pcard2-noimg" />}
   </span>
   <span class="pcard2-body">

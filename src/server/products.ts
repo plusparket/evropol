@@ -7,7 +7,7 @@ export type Attr = { label: string; value: string };
 export type Product = {
   id: number; sectionId: number; brandId: number | null; slug: string; name: string; collection: string; sku: string;
   attributes: Attr[]; facets: Attr[]; specs: Attr[]; description: string; images: string[]; sourceImages: string[];
-  sourceUrl: string; seoTitle: string; seoDescription: string; sortOrder: number; isPublished: boolean; updatedAt: Date;
+  sourceUrl: string; seoTitle: string; seoDescription: string; sortOrder: number; isPublished: boolean; isNew: boolean; updatedAt: Date;
 };
 /** Товар в каталоге: с названием бренда */
 export type ProductItem = Product & { brand: string };
@@ -59,8 +59,13 @@ export function parseFilters(params: URLSearchParams): Map<string, Set<string>> 
  * Внутри группы значения складываются (Ёлочка или Плитка), группы между собой — пересекаются.
  * Счётчик значения учитывает выбор в других группах, как в каталогах HARO и BerryAlloc.
  * Группа показывается, если у товаров раздела в ней больше одного значения.
+ * Значения идут по первому появлению у товаров, с sortValues — по алфавиту и числам (2 мм, 2,5 мм, 3 мм).
  */
-export function applyFilters(products: ProductItem[], chosen: Map<string, Set<string>>): { items: ProductItem[]; groups: FilterGroup[] } {
+export function applyFilters(
+  products: ProductItem[],
+  chosen: Map<string, Set<string>>,
+  { sortValues = false } = {},
+): { items: ProductItem[]; groups: FilterGroup[] } {
   const matches = (p: ProductItem, skip?: string) =>
     [...chosen].every(([label, values]) => label === skip || facetPairs(p).some((f) => f.label === label && values.has(f.value)));
 
@@ -75,6 +80,7 @@ export function applyFilters(products: ProductItem[], chosen: Map<string, Set<st
   const groups: FilterGroup[] = [];
   for (const label of order) {
     const values = [...all.get(label)!];
+    if (sortValues) values.sort((a, b) => a.localeCompare(b, 'ru', { numeric: true }));
     if (values.length < 2) continue;
     const pool = products.filter((p) => matches(p, label));
     groups.push({

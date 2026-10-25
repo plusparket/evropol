@@ -16,16 +16,19 @@ import type { Attr } from './products.ts';
 
 const CATALOG_DIR = path.resolve(process.cwd(), 'seed/catalog');
 /** Разделы, у которых сайт включается сам (по решению владельца); остальные — из админки */
-const SITES = ['vinyl', 'laminate'];
+const SITES = ['vinyl', 'laminate', 'linoleum'];
 /** Отметка первой версии, когда настраивался только vinyl */
 const OLD_FLAG = 'section_sites';
 
 type SeedProduct = {
   brand: string; name: string; slug: string; collection: string; sku: string; attributes: Attr[]; facets: Attr[];
-  specs: Attr[]; description: string; images: string[]; sourceUrl: string;
+  specs: Attr[]; description: string; images: string[]; sourceUrl: string; isNew?: boolean;
 };
 type SeedBrand = { name: string; link?: string; description?: string };
-type SeedCatalog = { section: string; brands?: SeedBrand[]; products: SeedProduct[] };
+/** Тексты и вид сайта раздела, которые ставятся вместе с каталогом (пустые поля не трогаются) */
+type SeedSite = { layout?: string; heading?: string; summary?: string; description?: string; seoTitle?: string; seoDescription?: string };
+/** hideBrands — убрать бренды раздела с сайта (товары без бренда, производитель указан в характеристиках) */
+type SeedCatalog = { section: string; site?: SeedSite; hideBrands?: boolean; brands?: SeedBrand[]; products: SeedProduct[] };
 
 /** Адрес сайта раздела по адресу главного сайта: localhost → vinyl.localhost, europroject.kg → vinyl.europroject.kg */
 export function defaultSiteHost(slug: string): string {
@@ -66,6 +69,13 @@ async function loadCatalog(sectionId: number, slug: string): Promise<number> {
   if (n) return 0;
 
   return sql.begin(async (tx) => {
+    const site = seed.site ?? {};
+    const texts = Object.fromEntries(
+      Object.entries({ siteLayout: site.layout, heading: site.heading, summary: site.summary, description: site.description,
+        seoTitle: site.seoTitle, seoDescription: site.seoDescription }).filter(([, v]) => v),
+    );
+    if (Object.keys(texts).length) await tx`UPDATE sections SET ${tx(texts)}, updated_at = now() WHERE id = ${sectionId}`;
+    if (seed.hideBrands) await tx`UPDATE brands SET is_active = false WHERE section_id = ${sectionId}`;
     // Бренд, которого в разделе нет, добавляем; логотип берём у такого же бренда из другого раздела
     for (const b of seed.brands ?? []) {
       const [have] = await tx`SELECT 1 FROM brands WHERE section_id = ${sectionId} AND name = ${b.name}`;
@@ -93,6 +103,7 @@ async function loadCatalog(sectionId: number, slug: string): Promise<number> {
         description: p.description,
         sourceImages: tx.json(p.images),
         sourceUrl: p.sourceUrl,
+        isNew: p.isNew ?? false,
         sortOrder: (i + 1) * 10,
       })}`;
     }

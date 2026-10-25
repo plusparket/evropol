@@ -11,8 +11,10 @@ interface Props {
   product: ProductItem;
   related: ProductItem[];
   settings: Settings;
+  /** Крошка каталога: по умолчанию «Каталог» → /#catalog */
+  catalog?: { name: string; url: string };
 }
-const { product: p, related, settings } = Astro.props;
+const { product: p, related, settings, catalog = { name: 'Каталог', url: '/#catalog' } } = Astro.props;
 const sub = [p.brand, p.collection].filter(Boolean).join(' · ');
 const phoneHref = 'tel:' + settings.phone_main.replace(/[^\d+]/g, '');
 const waNumber = settings.panel_whatsapp.replace(/\D/g, '');
@@ -22,7 +24,7 @@ const area = packArea(p);
 ---
 
 <div class="pin ss-product">
-  <Crumbs items={[{ name: 'Каталог', url: '/#catalog' }, { name: p.name }]} />
+  <Crumbs items={[catalog, { name: p.name }]} />
 
   <div class="ss-product-grid">
     <div class="ss-gallery">
@@ -45,6 +47,7 @@ const area = packArea(p);
     </div>
 
     <div class="ss-product-info">
+      {p.isNew && <span class="ss-badge ss-badge--inline">Новинка</span>}
       {sub && <div class="pcard2-sub">{sub}</div>}
       <h1 class="pcat-title">{p.name}</h1>
       {p.sku && <div class="ss-sku">Артикул {p.sku}</div>}

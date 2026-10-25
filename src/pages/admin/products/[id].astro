@@ -23,11 +23,11 @@ const brands = await sql<Brand[]>`SELECT * FROM brands ORDER BY name, id`;
 type Form = {
   sectionId: number; brandId: number | null; slug: string; name: string; collection: string; sku: string;
   attributes: Attr[]; facets: Attr[]; specs: Attr[]; description: string; seoTitle: string; seoDescription: string;
-  sortOrder: number; isPublished: boolean;
+  sortOrder: number; isPublished: boolean; isNew: boolean;
 };
 let form: Form = current ?? {
   sectionId: toInt(Astro.url.searchParams.get('section')) ?? sections[0]?.id ?? 0, brandId: null, slug: '', name: '', collection: '', sku: '',
-  attributes: [], facets: [], specs: [], description: '', seoTitle: '', seoDescription: '', sortOrder: 0, isPublished: true,
+  attributes: [], facets: [], specs: [], description: '', seoTitle: '', seoDescription: '', sortOrder: 0, isPublished: true, isNew: false,
 };
 let images: string[] = current?.images ?? [];
 let error = '';
@@ -55,6 +55,7 @@ if (Astro.request.method === 'POST') {
     seoDescription: str(data, 'seo_description'),
     sortOrder: int(data, 'sort_order'),
     isPublished: bool(data, 'is_published'),
+    isNew: bool(data, 'is_new'),
   };
 
   // Фото: порядок (число у фото), удаление, новые файлы — в конец
@@ -155,6 +156,7 @@ const title = isNew ? 'Новый товар' : form.name || 'Товар';
         </div>
         <div class="field full inline">
           <label class="check"><input type="checkbox" name="is_published" checked={form.isPublished} /> Показывать на сайте</label>
+          <label class="check"><input type="checkbox" name="is_new" checked={form.isNew} /> Метка «Новинка»</label>
         </div>
       </div>
     </div>

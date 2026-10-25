@@ -6,6 +6,7 @@
 import SectionSiteLayout from '../../layouts/SectionSiteLayout.astro';
 import NotFound from '../../components/NotFound.astro';
 import SiteHome from '../../components/section-site/SiteHome.astro';
+import CatalogHome from '../../components/section-site/CatalogHome.astro';
 import ProductView from '../../components/section-site/ProductView.astro';
 import { getActiveBrands, siteUrl } from '../../server/sections.ts';
 import { applyFilters, getProducts, parseFilters, relatedProducts } from '../../server/products.ts';
@@ -26,8 +27,11 @@ if (!isHome && !product) Astro.response.status = 404;
 
 const base = siteUrl(site);
 const heading = site.heading || site.name;
-const brands = isHome ? await getActiveBrands(site.id) : [];
-const { items, groups } = isHome ? applyFilters(products, parseFilters(Astro.url.searchParams)) : { items: [], groups: [] };
+const catalogOnly = site.siteLayout === 'catalog';
+const brands = isHome && !catalogOnly ? await getActiveBrands(site.id) : [];
+const { items, groups } = isHome
+  ? applyFilters(products, parseFilters(Astro.url.searchParams), { sortValues: catalogOnly })
+  : { items: [], groups: [] };
 const related = product ? relatedProducts(products, product) : [];
 const productTitle = product ? [product.brand, product.name].filter(Boolean).join(' ') : '';
 ---
@@ -41,7 +45,11 @@ const productTitle = product ? [product.brand, product.name].filter(Boolean).joi
       canonicalPath="/"
       noindex={Astro.url.searchParams.has('f')}
     >
-      <SiteHome site={site} products={products} items={items} groups={groups} brands={brands} settings={settings} />
+      {catalogOnly ? (
+        <CatalogHome site={site} products={products} items={items} groups={groups} settings={settings} />
+      ) : (
+        <SiteHome site={site} products={products} items={items} groups={groups} brands={brands} settings={settings} />
+      )}
     </SectionSiteLayout>
   ) : product ? (
     <SectionSiteLayout
@@ -50,9 +58,9 @@ const productTitle = product ? [product.brand, product.name].filter(Boolean).joi
       description={product.seoDescription || plainText(product.description, 250) || undefined}
       canonicalPath={`/${product.slug}`}
       image={product.images[0] ? `/uploads/${product.images[0]}` : undefined}
-      jsonLd={breadcrumbJsonLd(base, [{ name: 'Каталог', url: '/#catalog' }, { name: product.name, url: `/${product.slug}` }])}
+      jsonLd={breadcrumbJsonLd(base, [{ name: catalogOnly ? site.name : 'Каталог', url: catalogOnly ? '/' : '/#catalog' }, { name: product.name, url: `/${product.slug}` }])}
     >
-      <ProductView product={product} related={related} settings={settings} />
+      <ProductView product={product} related={related} settings={settings} catalog={catalogOnly ? { name: site.name, url: '/' } : undefined} />
     </SectionSiteLayout>
   ) : (
     <SectionSiteLayout site={site} title="Страница не найдена" noindex>

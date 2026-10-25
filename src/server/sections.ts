@@ -10,6 +10,8 @@ export type Section = {
   siteHost: string;
   /** Основной цвет сайта раздела; пусто — зелёный логотипа */
   siteColor: string;
+  /** Вид главной сайта раздела: '' — фото и блоки, 'catalog' — сразу каталог с фильтрами слева, без других разделов */
+  siteLayout: string;
   updatedAt: Date;
 };
 export type Brand = {

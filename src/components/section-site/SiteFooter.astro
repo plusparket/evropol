@@ -12,7 +12,9 @@ interface Props {
 const { site, sections, settings } = Astro.props;
 const main = (process.env.SITE_URL || 'http://localhost').replace(/\/$/, '');
 const phoneHref = (p: string) => 'tel:' + p.replace(/[^\d+]/g, '');
-const others = sections.filter((s) => s.id !== site.id);
+// Вид «только каталог»: без других разделов, производителей и ссылки на главный сайт
+const catalogOnly = site.siteLayout === 'catalog';
+const others = catalogOnly ? [] : sections.filter((s) => s.id !== site.id);
 const copyright = settings.copyright.replaceAll('{year}', String(new Date().getFullYear()));
 ---
 
@@ -21,10 +23,10 @@ const copyright = settings.copyright.replaceAll('{year}', String(new Date().getF
     <div class="pf-col">
       <div class="pf-title">{site.name}</div>
       <ul>
-        <li><a href="/#catalog">Каталог</a></li>
-        <li><a href="/#about">О покрытии</a></li>
-        <li><a href="/#brands">Производители</a></li>
-        <li><a href={main + '/'}>{settings.site_name}: главный сайт</a></li>
+        <li><a href={catalogOnly ? '/' : '/#catalog'}>Каталог</a></li>
+        {(!catalogOnly || site.description) && <li><a href="/#about">О покрытии</a></li>}
+        {!catalogOnly && <li><a href="/#brands">Производители</a></li>}
+        {!catalogOnly && <li><a href={main + '/'}>{settings.site_name}: главный сайт</a></li>}
       </ul>
     </div>
     {

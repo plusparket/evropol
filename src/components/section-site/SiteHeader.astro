@@ -1,6 +1,7 @@
 ---
 // Шапка сайта раздела: сверху полоса цвета раздела со ссылкой на главный сайт и телефоном,
 // ниже логотип ЕвроПол с названием раздела и меню по блокам страницы. На телефонах меню выдвигается сбоку.
+// Вид «только каталог» (site.siteLayout = 'catalog'): без других разделов и без ссылки на главный сайт.
 import { sectionHref, siteUrl, type Section } from '../../server/sections.ts';
 import type { Settings } from '../../server/settings.ts';
 
@@ -13,18 +14,25 @@ const { site, sections, settings } = Astro.props;
 const main = (process.env.SITE_URL || 'http://localhost').replace(/\/$/, '');
 const phoneHref = 'tel:' + settings.phone_main.replace(/[^\d+]/g, '');
 // Другие разделы: на их сайты, если они есть, иначе на страницы разделов главного сайта
-const others = sections.filter((s) => s.id !== site.id).map((s) => ({ name: s.name, href: siteUrl(s) || main + sectionHref(s) }));
-const links = [
-  { label: 'Каталог', url: '/#catalog' },
-  { label: 'О покрытии', url: '/#about' },
-  { label: 'Производители', url: '/#brands' },
-  { label: 'Контакты', url: '/#contacts' },
-];
+const catalogOnly = site.siteLayout === 'catalog';
+const others = catalogOnly ? [] : sections.filter((s) => s.id !== site.id).map((s) => ({ name: s.name, href: siteUrl(s) || main + sectionHref(s) }));
+const links = catalogOnly
+  ? [
+      { label: 'Каталог', url: '/' },
+      ...(site.description ? [{ label: 'О покрытии', url: '/#about' }] : []),
+      { label: 'Контакты', url: '/#contacts' },
+    ]
+  : [
+      { label: 'Каталог', url: '/#catalog' },
+      { label: 'О покрытии', url: '/#about' },
+      { label: 'Производители', url: '/#brands' },
+      { label: 'Контакты', url: '/#contacts' },
+    ];
 ---
 
 <div class="ss-top">
   <div class="ss-top-in">
-    <a href={main + '/'}>← {settings.site_name}: все разделы</a>
+    {catalogOnly ? <span class="ss-top-addr">{settings.address}</span> : <a href={main + '/'}>← {settings.site_name}: все разделы</a>}
     <span class="ss-top-contacts">
       <a href={phoneHref}>{settings.phone_main}</a>
       {settings.work_hours && <span>{settings.work_hours}</span>}
@@ -66,7 +74,7 @@ const links = [
     {links.map((l) => <a href={l.url} class="pdrawer-sub" data-menu-close>{l.label}</a>)}
     {others.length > 0 && <div class="pdrawer-label">Другие разделы</div>}
     {others.map((o) => <a href={o.href} class="pdrawer-sub">{o.name}</a>)}
-    <a href={main + '/'}>{settings.site_name}: главный сайт</a>
+    {!catalogOnly && <a href={main + '/'}>{settings.site_name}: главный сайт</a>}
   </nav>
   <div class="pdrawer-contacts">
     <a href={phoneHref}>{settings.phone_main}</a>
