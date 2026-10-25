@@ -1,0 +1,76 @@
+---
+// Шапка сайта раздела: сверху полоса цвета раздела со ссылкой на главный сайт и телефоном,
+// ниже логотип ЕвроПол с названием раздела и меню по блокам страницы. На телефонах меню выдвигается сбоку.
+import { sectionHref, siteUrl, type Section } from '../../server/sections.ts';
+import type { Settings } from '../../server/settings.ts';
+
+interface Props {
+  site: Section;
+  sections: Section[];
+  settings: Settings;
+}
+const { site, sections, settings } = Astro.props;
+const main = (process.env.SITE_URL || 'http://localhost').replace(/\/$/, '');
+const phoneHref = 'tel:' + settings.phone_main.replace(/[^\d+]/g, '');
+// Другие разделы: на их сайты, если они есть, иначе на страницы разделов главного сайта
+const others = sections.filter((s) => s.id !== site.id).map((s) => ({ name: s.name, href: siteUrl(s) || main + sectionHref(s) }));
+const links = [
+  { label: 'Каталог', url: '/#catalog' },
+  { label: 'О покрытии', url: '/#about' },
+  { label: 'Производители', url: '/#brands' },
+  { label: 'Контакты', url: '/#contacts' },
+];
+---
+
+<div class="ss-top">
+  <div class="ss-top-in">
+    <a href={main + '/'}>← {settings.site_name}: все разделы</a>
+    <span class="ss-top-contacts">
+      <a href={phoneHref}>{settings.phone_main}</a>
+      {settings.work_hours && <span>{settings.work_hours}</span>}
+    </span>
+  </div>
+</div>
+
+<header class="ph ss-ph" id="ph">
+  <div class="ph-in">
+    <a href="/" class="ph-logo ss-logo" aria-label={`${site.name}: каталог`}>
+      <img src="/img/evropol-logo.svg" alt={settings.site_name} width="536" height="100" />
+      <span class="ss-logo-name">{site.name}</span>
+    </a>
+
+    <nav class="ph-nav ss-nav" aria-label="Меню">
+      {links.map((l) => <a href={l.url}>{l.label}</a>)}
+      {
+        others.length > 0 && (
+          <div class="ph-drop">
+            <a href={main + '/#razdely'}>Другие разделы</a>
+            <div class="ph-drop-list">
+              {others.map((o) => <a href={o.href}>{o.name}</a>)}
+            </div>
+          </div>
+        )
+      }
+    </nav>
+    <button type="button" class="ph-burger" id="burger" aria-controls="main-menu" aria-label="Меню"><i></i><i></i><i></i></button>
+  </div>
+</header>
+
+<aside class="pdrawer" id="main-menu" aria-label="Меню">
+  <div class="pdrawer-head">
+    <img src="/img/evropol-logo.svg" alt="" class="pdrawer-logo" width="536" height="100" />
+    <button type="button" class="pdrawer-close" data-menu-close aria-label="Закрыть меню">✕</button>
+  </div>
+  <nav class="pdrawer-nav" aria-label="Меню">
+    <div class="pdrawer-label">{site.name}</div>
+    {links.map((l) => <a href={l.url} class="pdrawer-sub" data-menu-close>{l.label}</a>)}
+    {others.length > 0 && <div class="pdrawer-label">Другие разделы</div>}
+    {others.map((o) => <a href={o.href} class="pdrawer-sub">{o.name}</a>)}
+    <a href={main + '/'}>{settings.site_name}: главный сайт</a>
+  </nav>
+  <div class="pdrawer-contacts">
+    <a href={phoneHref}>{settings.phone_main}</a>
+    <span>{settings.address}</span>
+    {settings.email && <a href={`mailto:${settings.email}`}>{settings.email}</a>}
+  </div>
+</aside>

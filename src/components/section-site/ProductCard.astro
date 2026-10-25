@@ -1,0 +1,23 @@
+---
+// Карточка товара в каталоге сайта раздела: фото, бренд и коллекция, название, коротко характеристики.
+import { productThumb, type ProductItem } from '../../server/products.ts';
+import { uploadUrl } from '../../server/uploads.ts';
+
+interface Props {
+  product: ProductItem;
+}
+const { product: p } = Astro.props;
+const img = p.images[0];
+const sub = [p.brand, p.collection].filter(Boolean).join(' · ');
+---
+
+<a class="pcard2 ss-card" href={`/${p.slug}`}>
+  <span class="pcard2-img">
+    {img ? <img src={uploadUrl(productThumb(img))} alt={p.name} width="600" height="450" loading="lazy" /> : <span class="pcard2-noimg" />}
+  </span>
+  <span class="pcard2-body">
+    {sub && <span class="pcard2-sub">{sub}</span>}
+    <span class="pcard2-name">{p.name}</span>
+    {p.attributes.length > 0 && <span class="pcard2-facts">{p.attributes.map((a) => a.value).join(' · ')}</span>}
+  </span>
+</a>

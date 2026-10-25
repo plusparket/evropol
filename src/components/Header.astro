@@ -2,7 +2,7 @@
 // Шапка как на europroject.kg: тонкая синяя полоса сверху, логотип слева, меню в строку («Продукты» раскрывает
 // список разделов), справа сверху «Связаться с нами» и Instagram. На телефонах меню выдвигается сбоку.
 import type { MenuItem, MenuName } from '../server/content.ts';
-import { sectionUrl, type Section } from '../server/sections.ts';
+import { sectionHref, sectionUrl, type Section } from '../server/sections.ts';
 import type { Settings } from '../server/settings.ts';
 
 interface Props {
@@ -40,7 +40,7 @@ const here = (l: Link) =>
             <div class="ph-drop">
               <a href={l.url} class:list={{ active: here(l) }}>{l.label}</a>
               <div class="ph-drop-list">
-                {sections.map((s) => <a href={sectionUrl(s)} class:list={{ active: path === sectionUrl(s) }}>{s.name}</a>)}
+                {sections.map((s) => <a href={sectionHref(s)} class:list={{ active: path === sectionUrl(s) }}>{s.name}</a>)}
               </div>
             </div>
           ) : (
@@ -70,7 +70,7 @@ const here = (l: Link) =>
         l.products ? (
           <Fragment>
             <div class="pdrawer-label">{l.label}</div>
-            {sections.map((s) => <a href={sectionUrl(s)} class:list={['pdrawer-sub', { active: path === sectionUrl(s) }]}>{s.name}</a>)}
+            {sections.map((s) => <a href={sectionHref(s)} class:list={['pdrawer-sub', { active: path === sectionUrl(s) }]}>{s.name}</a>)}
           </Fragment>
         ) : (
           <a href={l.url} class:list={{ active: here(l) }} target={l.newTab ? '_blank' : undefined}>{l.label}</a>

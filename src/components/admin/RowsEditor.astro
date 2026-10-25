@@ -1,0 +1,44 @@
+---
+// Редактор списка пар «подпись — значение» (характеристики товара).
+import type { Attr } from '../../server/products.ts';
+
+interface Props {
+  id: string;
+  prefix: string;
+  items: Attr[];
+  labelPlaceholder?: string;
+  valuePlaceholder?: string;
+  suggestions?: string[];
+}
+const { id, prefix, items, labelPlaceholder = 'Характеристика', valuePlaceholder = 'Значение', suggestions = [] } = Astro.props;
+const listId = `${id}-labels`;
+---
+
+<div class="rows" id={id}>
+  {
+    items.map((it) => (
+      <div class="row-item">
+        <input type="text" name={`${prefix}_label`} value={it.label} placeholder={labelPlaceholder} list={listId} />
+        <input type="text" name={`${prefix}_value`} value={it.value} placeholder={valuePlaceholder} />
+        <button type="button" class="btn secondary move" data-row-action="up" title="Выше">↑</button>
+        <button type="button" class="btn secondary move" data-row-action="down" title="Ниже">↓</button>
+        <button type="button" class="btn danger" data-row-action="remove" title="Удалить">✕</button>
+      </div>
+    ))
+  }
+</div>
+<template id={`${id}-tpl`}>
+  <div class="row-item">
+    <input type="text" name={`${prefix}_label`} placeholder={labelPlaceholder} list={listId} />
+    <input type="text" name={`${prefix}_value`} placeholder={valuePlaceholder} />
+    <button type="button" class="btn secondary move" data-row-action="up" title="Выше">↑</button>
+    <button type="button" class="btn secondary move" data-row-action="down" title="Ниже">↓</button>
+    <button type="button" class="btn danger" data-row-action="remove" title="Удалить">✕</button>
+  </div>
+</template>
+<datalist id={listId}>
+  {suggestions.map((s) => <option value={s} />)}
+</datalist>
+<p style="margin:8px 0 0">
+  <button type="button" class="btn secondary sm" data-row-action="add" data-target={id}>+ Добавить строку</button>
+</p>

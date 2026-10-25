@@ -1,0 +1,101 @@
+/*
+ * Сайт раздела (vinyl.localhost …): дополняет site.css. Основной цвет раздела — переменная --site
+ * (задаётся в админке, ставится на <body class="ss">). Остальные цвета и шрифт — общие с главным сайтом.
+ */
+
+.ss { --site: #006338; }
+.ss .pbtn { border-color: var(--site); background: var(--site); }
+.ss .pbtn:hover { background: transparent; color: var(--site); }
+.ss .pbtn-outline { background: transparent; color: var(--site); }
+.ss .pbtn-outline:hover { background: var(--site); color: #fff; }
+.ss .plink:hover, .ss .ph-nav > a:hover, .ss .ph-drop > a:hover { color: var(--site); }
+.ss .ph { border-top: 0; }
+.ss .ph-burger i { background: var(--site); }
+.ss .to-top { background: var(--site); }
+
+/* Полоса сверху: ссылка на главный сайт и телефон */
+.ss-top { background: var(--site); color: #fff; font-size: 13px; letter-spacing: .03em; }
+.ss-top-in { display: flex; justify-content: space-between; gap: 16px; max-width: 1200px; margin: 0 auto; padding: 7px 15px; }
+.ss-top a { color: #fff; opacity: .9; }
+.ss-top a:hover { color: #fff; opacity: 1; text-decoration: underline; }
+.ss-top-contacts { display: flex; gap: 18px; }
+
+/* Логотип и название раздела */
+.ss-logo { display: flex; align-items: center; gap: 16px; }
+.ss-logo-name { padding-left: 16px; border-left: 1px solid var(--line); color: var(--site); font: 500 18px/1.2 var(--font); letter-spacing: .02em; white-space: nowrap; }
+.ss-nav { margin-left: auto; }
+/* Последний пункт меню у правого края: список раскрывается влево, чтобы не вылезать за экран */
+.ss-nav .ph-drop:last-child .ph-drop-list { left: auto; right: 0; }
+
+/* Каталог */
+.ss-catalog-head { display: flex; align-items: baseline; gap: 16px; }
+.ss-count { color: var(--muted); font-size: 15px; }
+.ss-catalog-grid { display: grid; grid-template-columns: 240px 1fr; gap: 36px; align-items: start; }
+.ss-catalog-grid--nofilters { grid-template-columns: 1fr; }
+.ss-filters-box { position: sticky; top: 90px; }
+.ss-filters-box > summary { display: none; }
+.ss-filters { display: grid; gap: 22px; }
+.ss-filter { margin: 0; padding: 0; border: 0; }
+.ss-filter legend { margin-bottom: 8px; padding: 0; color: var(--ink); font-weight: 600; font-size: 14px; letter-spacing: .04em; text-transform: uppercase; }
+.ss-check { display: flex; align-items: center; gap: 8px; padding: 4px 0; color: var(--text); font-size: 15px; cursor: pointer; }
+.ss-check input { width: 17px; height: 17px; margin: 0; accent-color: var(--site); }
+.ss-check small { margin-left: auto; color: var(--muted); font-size: 12px; }
+.ss-check--empty { opacity: .45; }
+.ss-reset { font-size: 14px; }
+.ss-reset::after { content: ''; }
+.ss-grid .pcard2-name { font-size: 17px; }
+.ss-grid--4 { grid-template-columns: repeat(4, 1fr); }
+.ss-about { background: var(--band); padding-top: var(--pad) !important; }
+.ss-about + .psec { padding-top: var(--pad); }
+
+/* Страница товара */
+.ss-product { padding-top: 28px; padding-bottom: var(--pad); }
+.ss-product-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 44px; align-items: start; margin-bottom: 40px; }
+.ss-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.ss-gallery-main { grid-column: 1 / -1; display: block; aspect-ratio: 4 / 3; overflow: hidden; background: var(--band); }
+.ss-gallery-main img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.ss-gallery-thumb { display: block; aspect-ratio: 3 / 2; overflow: hidden; background: var(--band); }
+.ss-gallery-thumb img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+.ss-gallery-thumb:hover img { transform: scale(1.05); }
+.ss-sku { margin: -4px 0 18px; color: var(--muted); font-size: 14px; }
+.ss-attrs { display: grid; gap: 0; margin: 0 0 24px; border-top: 1px solid var(--line); }
+.ss-attrs > div { display: grid; grid-template-columns: 150px 1fr; gap: 12px; padding: 9px 0; border-bottom: 1px solid var(--line); }
+.ss-attrs dt { color: var(--muted); }
+.ss-attrs dd { margin: 0; color: var(--ink); }
+.ss-actions { margin-bottom: 14px; }
+.ss-note { margin: 0 0 24px; color: var(--muted); font-size: 14px; }
+.ss-calc { display: grid; gap: 8px; padding: 20px 22px; background: var(--band); }
+.ss-calc label { color: var(--ink); font-weight: 600; font-size: 14px; }
+.ss-calc input { max-width: 200px; padding: 10px 12px; border: 1px solid #cfcfcf; background: #fff; font: 16px var(--font); }
+.ss-calc input:focus { outline: 2px solid var(--site); outline-offset: -1px; }
+.ss-calc output { color: var(--text); font-size: 15px; }
+.ss-desc { max-width: 860px; margin-bottom: 40px; }
+.ss-specs { max-width: 860px; margin-bottom: 50px; }
+.ss-specs table { width: 100%; border-collapse: collapse; font-size: 15px; }
+.ss-specs th, .ss-specs td { padding: 10px 0; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.ss-specs th { width: 45%; padding-right: 16px; color: var(--muted); font-weight: 400; }
+.ss-specs td { color: var(--ink); }
+
+@media (max-width: 960px) {
+  .ss-catalog-grid { grid-template-columns: 200px 1fr; gap: 24px; }
+  .ss-grid--4 { grid-template-columns: repeat(2, 1fr); }
+  .ss-product-grid { grid-template-columns: 1fr; gap: 28px; }
+}
+@media (max-width: 860px) {
+  .ss-top-contacts span { display: none; }
+  .ss-logo { flex-direction: column; gap: 4px; }
+  .ss-logo-name { padding-left: 0; border-left: 0; font-size: 15px; white-space: normal; text-align: center; }
+  .ss-catalog-grid { grid-template-columns: 1fr; }
+  .ss-filters-box { position: static; background: var(--band); }
+  .ss-filters-box > summary { display: list-item; padding: 12px 16px; color: var(--ink); font-weight: 600; cursor: pointer; }
+  .ss-filters { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); padding: 4px 16px 16px; }
+}
+@media (max-width: 768px) {
+  .ss-top-in { padding: 6px 16px; font-size: 12px; }
+  .ss-grid, .ss-grid--4 { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .ss-grid .pcard2-body { padding: 12px 12px 14px; }
+  .ss-grid .pcard2-name { font-size: 15px; }
+  .ss-grid .pcard2-sub, .ss-grid .pcard2-facts { font-size: 12px; }
+  .ss-gallery { grid-template-columns: 1fr 1fr; }
+  .ss-attrs > div { grid-template-columns: 120px 1fr; }
+}

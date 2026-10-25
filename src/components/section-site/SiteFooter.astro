@@ -1,0 +1,56 @@
+---
+// Подвал сайта раздела: чёрный, как на главном сайте. Каталог, другие разделы, контакты, соцсети.
+import { sectionHref, siteUrl, type Section } from '../../server/sections.ts';
+import type { Settings } from '../../server/settings.ts';
+import SocialIcon from '../SocialIcon.astro';
+
+interface Props {
+  site: Section;
+  sections: Section[];
+  settings: Settings;
+}
+const { site, sections, settings } = Astro.props;
+const main = (process.env.SITE_URL || 'http://localhost').replace(/\/$/, '');
+const phoneHref = (p: string) => 'tel:' + p.replace(/[^\d+]/g, '');
+const others = sections.filter((s) => s.id !== site.id);
+const copyright = settings.copyright.replaceAll('{year}', String(new Date().getFullYear()));
+---
+
+<footer class="pf">
+  <div class="pf-cols">
+    <div class="pf-col">
+      <div class="pf-title">{site.name}</div>
+      <ul>
+        <li><a href="/#catalog">Каталог</a></li>
+        <li><a href="/#about">О покрытии</a></li>
+        <li><a href="/#brands">Производители</a></li>
+        <li><a href={main + '/'}>{settings.site_name}: главный сайт</a></li>
+      </ul>
+    </div>
+    {
+      others.length > 0 && (
+        <div class="pf-col">
+          <div class="pf-title">Другие разделы</div>
+          <ul>{others.map((s) => <li><a href={siteUrl(s) || main + sectionHref(s)}>{s.name}</a></li>)}</ul>
+        </div>
+      )
+    }
+    <div class="pf-col">
+      <div class="pf-title">Контакты</div>
+      <ul>
+        <li>{settings.address}</li>
+        <li><a href={phoneHref(settings.phone_main)}>{settings.phone_main}</a></li>
+        {settings.work_hours && <li>{settings.work_hours}</li>}
+        {settings.email && <li><a href={`mailto:${settings.email}`}>{settings.email}</a></li>}
+      </ul>
+    </div>
+    <div class="pf-col">
+      <div class="pf-title">Соц. сети</div>
+      <div class="pf-social">
+        {settings.instagram_url && <a href={settings.instagram_url} target="_blank" rel="noopener" aria-label="Instagram"><SocialIcon name="instagram" size={22} /></a>}
+        {settings.facebook_url && <a href={settings.facebook_url} target="_blank" rel="noopener" aria-label="Facebook"><SocialIcon name="facebook" size={22} /></a>}
+      </div>
+    </div>
+  </div>
+  <div class="pf-bottom">{copyright}</div>
+</footer>

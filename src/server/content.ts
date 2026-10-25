@@ -27,7 +27,7 @@ export const MENUS: { key: MenuName; title: string }[] = [
 /** Адреса, которые заняты системными разделами и не могут быть адресом страницы или категории. */
 export const RESERVED_SLUGS = new Set([
   'admin', 'news', 'uploads', 'img', 'fonts', 'css', 'healthz', 'sitemap.xml', 'robots.txt', 'favicon.ico', '_astro',
-  'llms.txt', 'llms-full.txt',
+  'llms.txt', 'llms-full.txt', 'section-site',
 ]);
 
 export async function getPageBySlug(slug: string): Promise<Page | undefined> {

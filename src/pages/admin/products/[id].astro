@@ -1,0 +1,230 @@
+---
+// Товар сайта раздела: название, раздел и бренд, характеристики, фото, описание.
+import AdminLayout from '../../../layouts/AdminLayout.astro';
+import RowsEditor from '../../../components/admin/RowsEditor.astro';
+import { sql } from '../../../server/db.ts';
+import { getSections, siteUrl, type Brand } from '../../../server/sections.ts';
+import { normalizeAttrs, productThumb, type Attr, type Product } from '../../../server/products.ts';
+import { formFiles, removeUploads, saveImage, uploadUrl } from '../../../server/uploads.ts';
+import { dbErrorMessage, withFlash } from '../../../server/admin.ts';
+import { RESERVED_SLUGS } from '../../../server/content.ts';
+import { bool, int, intOrNull, isValidSlug, slugify, str, strs, toInt } from '../../../server/util.ts';
+
+const isNew = Astro.params.id === 'new';
+const id = isNew ? null : toInt(Astro.params.id);
+if (!isNew && !id) return Astro.redirect('/admin/products');
+
+const [current] = id ? await sql<Product[]>`SELECT * FROM products WHERE id = ${id}` : [];
+if (!isNew && !current) return Astro.redirect(withFlash('/admin/products', 'err', 'Товар не найден'));
+
+const sections = await getSections();
+const brands = await sql<Brand[]>`SELECT * FROM brands ORDER BY name, id`;
+
+type Form = {
+  sectionId: number; brandId: number | null; slug: string; name: string; collection: string; sku: string;
+  attributes: Attr[]; facets: Attr[]; specs: Attr[]; description: string; seoTitle: string; seoDescription: string;
+  sortOrder: number; isPublished: boolean;
+};
+let form: Form = current ?? {
+  sectionId: toInt(Astro.url.searchParams.get('section')) ?? sections[0]?.id ?? 0, brandId: null, slug: '', name: '', collection: '', sku: '',
+  attributes: [], facets: [], specs: [], description: '', seoTitle: '', seoDescription: '', sortOrder: 0, isPublished: true,
+};
+let images: string[] = current?.images ?? [];
+let error = '';
+
+if (Astro.request.method === 'POST') {
+  const data = await Astro.request.formData();
+  const action = str(data, '_action');
+  if (action === 'delete' && id) {
+    const [gone] = await sql<{ images: string[] }[]>`DELETE FROM products WHERE id = ${id} RETURNING images`;
+    await removeUploads(...(gone?.images ?? []));
+    return Astro.redirect(withFlash('/admin/products', 'ok', 'deleted'));
+  }
+  form = {
+    sectionId: int(data, 'section_id'),
+    brandId: intOrNull(data, 'brand_id'),
+    slug: str(data, 'slug').toLowerCase() || slugify(str(data, 'name')),
+    name: str(data, 'name'),
+    collection: str(data, 'collection'),
+    sku: str(data, 'sku'),
+    attributes: normalizeAttrs(strs(data, 'attr_label'), strs(data, 'attr_value')),
+    facets: normalizeAttrs(strs(data, 'facet_label'), strs(data, 'facet_value')),
+    specs: normalizeAttrs(strs(data, 'spec_label'), strs(data, 'spec_value')),
+    description: String(data.get('description') ?? '').trim(),
+    seoTitle: str(data, 'seo_title'),
+    seoDescription: str(data, 'seo_description'),
+    sortOrder: int(data, 'sort_order'),
+    isPublished: bool(data, 'is_published'),
+  };
+
+  // Фото: порядок (число у фото), удаление, новые файлы — в конец
+  const removed = strs(data, 'img_delete');
+  const kept = strs(data, 'img_path')
+    .map((path, i) => ({ path, order: Number(strs(data, 'img_order')[i]) || 0 }))
+    .filter((x) => images.includes(x.path) && !removed.includes(x.path))
+    .sort((a, b) => a.order - b.order)
+    .map((x) => x.path);
+  const added: string[] = [];
+  try {
+    for (const file of formFiles(data, 'images')) added.push((await saveImage(Buffer.from(await file.arrayBuffer()), 'product'))[0]);
+  } catch (err) {
+    error = `Не удалось обработать фото: ${(err as Error).message}`;
+  }
+
+  if (!error) {
+    if (!form.name) error = 'Укажите название товара';
+    else if (!sections.some((s) => s.id === form.sectionId)) error = 'Выберите раздел';
+    else if (!isValidSlug(form.slug)) error = 'Адрес: только латинские буквы, цифры, «-» и «_»';
+    else if (RESERVED_SLUGS.has(form.slug)) error = `Адрес «${form.slug}» зарезервирован системой`;
+  }
+  if (!error) {
+    try {
+      const values = {
+        ...form,
+        attributes: sql.json(form.attributes),
+        facets: sql.json(form.facets),
+        specs: sql.json(form.specs),
+        images: sql.json([...kept, ...added]),
+      };
+      let productId = id;
+      if (productId) await sql`UPDATE products SET ${sql(values)}, updated_at = now() WHERE id = ${productId}`;
+      else [{ id: productId }] = await sql<{ id: number }[]>`INSERT INTO products ${sql(values)} RETURNING id`;
+      await removeUploads(...images.filter((p) => !kept.includes(p)));
+      return Astro.redirect(withFlash(`/admin/products/${productId}`, 'ok', isNew ? 'created' : 'saved'));
+    } catch (err) {
+      error = dbErrorMessage(err);
+    }
+  }
+  await removeUploads(...added);
+}
+
+const section = sections.find((s) => s.id === form.sectionId);
+const labelRows = await sql<{ label: string }[]>`
+  SELECT DISTINCT a->>'label' AS label FROM products, jsonb_array_elements(attributes || facets || specs) a
+  WHERE coalesce(a->>'label', '') <> '' ORDER BY 1 LIMIT 300`;
+const labels = labelRows.map((r) => r.label);
+const title = isNew ? 'Новый товар' : form.name || 'Товар';
+---
+
+<AdminLayout title={title} section="products">
+  <div class="toolbar">
+    <h1>{title}</h1>
+    <div class="actions">
+      {current && section?.siteHost && <a class="btn secondary" href={`${siteUrl(section)}/${current.slug}`} target="_blank" rel="noopener">Открыть на сайте ↗</a>}
+      <a class="btn secondary" href={`/admin/products${form.sectionId ? `?section=${form.sectionId}` : ''}`}>← К списку</a>
+    </div>
+  </div>
+  {error && <div class="flash err">{error}</div>}
+
+  <form method="post" enctype="multipart/form-data">
+    <div class="card">
+      <div class="form-grid">
+        <div class="field full">
+          <label for="name">Название *</label>
+          <input type="text" id="name" name="name" value={form.name} required />
+        </div>
+        <div class="field">
+          <label for="section_id">Раздел *</label>
+          <select id="section_id" name="section_id" required>
+            {sections.map((s) => <option value={s.id} selected={s.id === form.sectionId}>{s.name}{s.siteHost ? '' : ' (сайт выключен)'}</option>)}
+          </select>
+        </div>
+        <div class="field">
+          <label for="brand_id">Бренд</label>
+          <select id="brand_id" name="brand_id">
+            <option value="">— без бренда —</option>
+            {brands.map((b) => <option value={b.id} selected={b.id === form.brandId}>{b.name}{b.sectionId !== form.sectionId ? ` (${sections.find((s) => s.id === b.sectionId)?.name ?? 'без раздела'})` : ''}</option>)}
+          </select>
+        </div>
+        <div class="field">
+          <label for="collection">Коллекция или серия</label>
+          <input type="text" id="collection" name="collection" value={form.collection} placeholder="Click Comfort 55 Plank" />
+        </div>
+        <div class="field">
+          <label for="sku">Артикул</label>
+          <input type="text" id="sku" name="sku" value={form.sku} />
+        </div>
+        <div class="field">
+          <label for="slug">Адрес на сайте раздела</label>
+          <input type="text" id="slug" name="slug" value={form.slug} data-slug-from="name" pattern="[a-z0-9][a-z0-9_\-]*" />
+          <div class="hint">Например <code>cairo-doska</code> → {section?.siteHost || 'адрес-раздела'}/cairo-doska. Пусто — из названия.</div>
+        </div>
+        <div class="field">
+          <label for="sort_order">Порядок в каталоге</label>
+          <input type="number" id="sort_order" name="sort_order" value={form.sortOrder} />
+        </div>
+        <div class="field full inline">
+          <label class="check"><input type="checkbox" name="is_published" checked={form.isPublished} /> Показывать на сайте</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Фотографии</h2>
+      {
+        images.length > 0 && (
+          <div class="gallery" style="margin-bottom:14px">
+            {images.map((img, i) => (
+              <div class="img-card">
+                <a href={uploadUrl(img)} target="_blank" rel="noopener"><img src={uploadUrl(productThumb(img))} alt="" /></a>
+                <input type="hidden" name="img_path" value={img} />
+                <label class="small">Порядок <input type="number" name="img_order" value={(i + 1) * 10} /></label>
+                <br />
+                <label class="check small"><input type="checkbox" name="img_delete" value={img} /> удалить</label>
+              </div>
+            ))}
+          </div>
+        )
+      }
+      <div class="field">
+        <label for="images">Добавить фото</label>
+        <input type="file" id="images" name="images" accept="image/*" multiple />
+        <div class="hint">Первое фото — в каталоге, второе — на главном экране сайта раздела (лучше пол в комнате). Фото уменьшаются и сохраняются в WebP.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Коротко в карточке</h2>
+      <p class="muted small">Две-четыре строки: формат, толщина, класс. В каталоге видны значения через точку, на странице товара — подпись и значение.</p>
+      <RowsEditor id="attrs" prefix="attr" items={form.attributes} suggestions={labels} />
+    </div>
+
+    <div class="card">
+      <h2>Значения для фильтров</h2>
+      <p class="muted small">Из них собираются фильтры каталога: «Формат — Ёлочка», «Цвет пола — светло-серый». Одна подпись может
+        повторяться с разными значениями. Фильтр появляется, когда у товаров раздела в нём больше одного значения.</p>
+      <RowsEditor id="facets" prefix="facet" items={form.facets} suggestions={labels} />
+    </div>
+
+    <div class="card">
+      <h2>Описание</h2>
+      <textarea name="description" data-editor data-height="220">{form.description}</textarea>
+    </div>
+
+    <div class="card">
+      <h2>Таблица характеристик</h2>
+      <p class="muted small">Строка «М² в упаковке» включает на странице товара расчёт упаковок по площади.</p>
+      <RowsEditor id="specs" prefix="spec" items={form.specs} suggestions={labels} />
+    </div>
+
+    <div class="card">
+      <h2>SEO</h2>
+      <div class="form-grid">
+        <div class="field">
+          <label for="seo_title">Заголовок (title)</label>
+          <input type="text" id="seo_title" name="seo_title" value={form.seoTitle} placeholder="пусто — «Бренд Название, коллекция в Бишкеке | Европроект»" />
+        </div>
+        <div class="field">
+          <label for="seo_description">Описание (meta description)</label>
+          <input type="text" id="seo_description" name="seo_description" value={form.seoDescription} placeholder="пусто — начало описания" />
+        </div>
+      </div>
+    </div>
+
+    <div class="form-actions sticky-actions">
+      <button class="btn" type="submit" name="_action" value="save">Сохранить</button>
+      <span class="spacer"></span>
+      {!isNew && <button class="btn danger" type="submit" name="_action" value="delete" formnovalidate data-confirm="Удалить товар вместе с фото?">Удалить</button>}
+    </div>
+  </form>
+</AdminLayout>

@@ -3,10 +3,13 @@
 // Правила поддержки — AGENTS.md.
 //
 // В файлы попадает только то, что видно на сайте: опубликованные разделы с их сайтами, включённые бренды,
-// страницы и новости.
+// страницы и новости. У каждого сайта раздела (vinyl.localhost …) свои файлы: раздел, бренды, товары
+// (buildSiteLlmsTxt и buildSiteLlmsFullTxt).
 import { sql } from './db.ts';
 import { getHome } from './home.ts';
-import { getActiveBrands, getSections, linkLabel, type Brand, type Section } from './sections.ts';
+import { getActiveBrands, getSections, linkLabel, sectionLink, siteUrl, type Brand, type Section } from './sections.ts';
+import { getProducts, type ProductItem } from './products.ts';
+import { pluralRu } from './util.ts';
 import { fillPlaceholders, getSettings, type Settings } from './settings.ts';
 
 const ENTITIES: Record<string, string> = {
@@ -126,7 +129,8 @@ export async function buildLlmsTxt(origin: string): Promise<string> {
   out.push('## Разделы', '');
   for (const s of d.sections) {
     const brands = brandsOf(d, s).map((b) => b.name).join(', ');
-    const site = s.link ? ` · ${linkLabel(s)}: ${abs(d, s.link)}` : '';
+    const link = sectionLink(s);
+    const site = link ? ` · ${linkLabel(s)}: ${abs(d, link)}` : '';
     out.push(`- [${s.heading || s.name}](${d.base}/${s.slug})${brands ? `: ${brands}` : ''}${site}`);
   }
   for (const b of looseBrands(d)) out.push(`- ${b.name}${b.link ? `: ${abs(d, b.link)}` : ''}`);
@@ -161,7 +165,7 @@ export async function buildLlmsFullTxt(origin: string): Promise<string> {
   out.push('## Разделы', '');
   for (const s of d.sections) {
     out.push(`### ${s.heading || s.name}`, '', `Адрес: ${d.base}/${s.slug}`);
-    if (s.link) out.push(`${linkLabel(s)}: ${abs(d, s.link)}`);
+    if (sectionLink(s)) out.push(`${linkLabel(s)}: ${abs(d, sectionLink(s))}`);
     if (s.description) out.push('', md(s.description));
     for (const b of brandsOf(d, s)) {
       out.push('', `**${b.name}**${b.link ? ` (коллекции: ${abs(d, b.link)})` : ''}`);
@@ -189,6 +193,85 @@ export async function buildLlmsFullTxt(origin: string): Promise<string> {
       out.push(`### ${n.title}`, '', `Адрес: ${d.base}/news/${n.slug} · ${new Date(n.publishedAt).toLocaleDateString('ru-RU')}`, '');
       const text = md(n.content || n.excerpt);
       if (text) out.push(text, '');
+    }
+  }
+  return out.join('\n').replace(/\n{3,}/g, '\n\n') + '\n';
+}
+
+// --- Сайты разделов ------------------------------------------------------------------------------
+
+type SiteData = Data & { site: Section; siteBase: string; products: ProductItem[] };
+
+async function loadSite(site: Section): Promise<SiteData> {
+  const d = await load('http://localhost');
+  return { ...d, site, siteBase: siteUrl(site), products: await getProducts(site.id) };
+}
+
+const productLine = (p: ProductItem) => [p.brand, p.collection, p.name].filter(Boolean).join(' ');
+
+function siteHeader(d: SiteData, full: boolean): string[] {
+  const s = d.site;
+  const heading = s.heading || s.name;
+  const out = [`# ${heading}: ${d.settings.site_name}${full ? ', полная информация' : ''}`, ''];
+  out.push(`> ${(s.summary || heading).replace(/\.$/, '')}. Сайт раздела «${s.name}» компании «${d.settings.site_name}» (Бишкек, Кыргызстан). ` +
+    `Офис: ${d.settings.address}. Телефон ${d.settings.phone_main}.`, '');
+  out.push(`Каталог на сайте: ${d.products.length} ${pluralRu(d.products.length, ['товар', 'товара', 'товаров'])}. ` +
+    'Цен на сайте нет: цену и наличие сообщают по телефону или в WhatsApp. Образцы есть в офисе.', '');
+  out.push(`Главный сайт компании со всеми разделами: ${d.base}/`, '');
+  return out;
+}
+
+/** /llms.txt сайта раздела: раздел, контакты, бренды, список товаров */
+export async function buildSiteLlmsTxt(site: Section): Promise<string> {
+  const d = await loadSite(site);
+  const md = (html: string) => htmlToMd(fillPlaceholders(html, d.settings), d.siteBase);
+  const out = siteHeader(d, false);
+  if (site.description) out.push(oneLine(md(site.description), 600), '');
+  out.push('## Контакты', '', ...contacts(d), '');
+  const brands = brandsOf(d, site);
+  if (brands.length) {
+    out.push('## Производители', '');
+    for (const b of brands) out.push(`- ${b.name}${b.description ? `: ${oneLine(md(b.description), 160)}` : ''}${b.link ? ` (${abs(d, b.link)})` : ''}`);
+    out.push('');
+  }
+  if (d.products.length) {
+    out.push('## Каталог', '');
+    for (const p of d.products) {
+      const facts = p.attributes.map((a) => a.value).join(', ');
+      out.push(`- [${productLine(p)}](${d.siteBase}/${p.slug})${p.sku ? ` · артикул ${p.sku}` : ''}${facts ? ` · ${facts}` : ''}`);
+    }
+    out.push('');
+  }
+  out.push('## Optional', '');
+  out.push(`- [Полная версия](${d.siteBase}/llms-full.txt): описания и характеристики всех товаров`);
+  out.push(`- [Карта сайта](${d.siteBase}/sitemap.xml)`);
+  return out.join('\n') + '\n';
+}
+
+/** /llms-full.txt сайта раздела: всё о разделе и каждый товар с описанием и таблицей характеристик */
+export async function buildSiteLlmsFullTxt(site: Section): Promise<string> {
+  const d = await loadSite(site);
+  const md = (html: string) => htmlToMd(fillPlaceholders(html, d.settings), d.siteBase);
+  const out = siteHeader(d, true);
+  out.push(`Сайт: ${d.siteBase}. Данные собраны с сайта ${new Date().toLocaleDateString('ru-RU')} и всегда совпадают с ним.`, '');
+  if (site.description) out.push('## О покрытии', '', md(site.description), '');
+  out.push('## Контакты', '', ...contacts(d), '');
+  const brands = brandsOf(d, site);
+  if (brands.length) {
+    out.push('## Производители', '');
+    for (const b of brands) {
+      out.push(`### ${b.name}`, '');
+      if (b.link) out.push(`Коллекции: ${abs(d, b.link)}`, '');
+      if (b.description) out.push(md(b.description), '');
+    }
+  }
+  if (d.products.length) {
+    out.push('## Каталог', '');
+    for (const p of d.products) {
+      out.push(`### ${productLine(p)}`, '', `Адрес: ${d.siteBase}/${p.slug}${p.sku ? ` · артикул ${p.sku}` : ''}`, '');
+      if (p.description) out.push(md(p.description), '');
+      for (const sp of p.specs) out.push(`- ${sp.label}: ${sp.value}`);
+      if (p.specs.length) out.push('');
     }
   }
   return out.join('\n').replace(/\n{3,}/g, '\n\n') + '\n';

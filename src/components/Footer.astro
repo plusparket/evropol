@@ -2,7 +2,7 @@
 // Подвал как на europroject.kg: чёрный, четыре колонки с заголовками и ссылками с точками, внизу копирайт.
 // Карта выводится только на странице «Контакты».
 import type { MenuName, MenuItem } from '../server/content.ts';
-import { sectionUrl, type Section } from '../server/sections.ts';
+import { sectionHref, type Section } from '../server/sections.ts';
 import type { Settings } from '../server/settings.ts';
 import SocialIcon from './SocialIcon.astro';
 
@@ -27,7 +27,7 @@ const phoneHref = (p: string) => 'tel:' + p.replace(/[^\d+]/g, '');
       sections.length > 0 && (
         <div class="pf-col">
           <div class="pf-title">Продукты</div>
-          <ul>{sections.map((s) => <li><a href={sectionUrl(s)}>{s.name}</a></li>)}</ul>
+          <ul>{sections.map((s) => <li><a href={sectionHref(s)}>{s.name}</a></li>)}</ul>
         </div>
       )
     }

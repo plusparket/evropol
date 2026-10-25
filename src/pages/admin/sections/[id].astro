@@ -2,7 +2,8 @@
 import AdminLayout from '../../../layouts/AdminLayout.astro';
 import { sql } from '../../../server/db.ts';
 import { RESERVED_SLUGS } from '../../../server/content.ts';
-import type { Section } from '../../../server/sections.ts';
+import { DEFAULT_SITE_COLOR, normalizeHost, siteUrl, type Section } from '../../../server/sections.ts';
+import { defaultSiteHost } from '../../../server/section-sites.ts';
 import { dbErrorMessage, withFlash } from '../../../server/admin.ts';
 import { bool, int, isValidSlug, str, toInt } from '../../../server/util.ts';
 import { formFiles, homeSrcset, removeUploads, saveImage, uploadUrl } from '../../../server/uploads.ts';
@@ -19,7 +20,7 @@ type Form = Omit<Section, 'id' | 'updatedAt'>;
 let error = '';
 let form: Form = current ?? {
   slug: '', name: '', heading: '', summary: '', description: '', image: '', link: '', linkLabel: '',
-  seoTitle: '', seoDescription: '', sortOrder: (total + 1) * 10, isPublished: true,
+  seoTitle: '', seoDescription: '', sortOrder: (total + 1) * 10, isPublished: true, siteHost: '', siteColor: '',
 };
 let newImage = ''; // загруженное в этом запросе фото (удаляется, если сохранить не удалось)
 
@@ -43,7 +44,12 @@ if (Astro.request.method === 'POST') {
     seoDescription: str(data, 'seo_description'),
     sortOrder: int(data, 'sort_order'),
     isPublished: bool(data, 'is_published'),
+    siteHost: normalizeHost(str(data, 'site_host')),
+    siteColor: str(data, 'site_color').toLowerCase(),
   };
+  if (!bool(data, 'site_on')) form.siteHost = '';
+  else if (!form.siteHost && form.slug) form.siteHost = defaultSiteHost(form.slug);
+  if (form.siteColor === DEFAULT_SITE_COLOR) form.siteColor = '';
   const [file] = formFiles(data, 'image__file');
   if (file) {
     try {
@@ -62,6 +68,9 @@ if (Astro.request.method === 'POST') {
   else if (RESERVED_SLUGS.has(form.slug)) error = `Адрес «${form.slug}» зарезервирован системой`;
   else if ((await sql`SELECT 1 FROM pages WHERE slug = ${form.slug}`).length) error = `Адрес «${form.slug}» уже занят страницей`;
   else if (form.link && !/^(https?:\/\/|\/)/i.test(form.link)) error = 'Ссылка на сайт раздела начинается с https:// (или с / для страницы этого сайта)';
+  else if (form.siteHost && !/^[a-z0-9-]+(\.[a-z0-9-]+)+$/.test(form.siteHost)) error = 'Адрес сайта раздела: латинские буквы, цифры и точки, например vinyl.localhost или vinyl.europroject.kg';
+  else if (form.siteHost && (await sql`SELECT 1 FROM sections WHERE lower(site_host) = ${form.siteHost} AND id <> ${id ?? 0}`).length) error = `Адрес «${form.siteHost}» уже занят другим разделом`;
+  else if (form.siteColor && !/^#[0-9a-f]{6}$/.test(form.siteColor)) error = 'Цвет сайта: шесть знаков после #, например #006338';
 
   if (!error) {
     const f = form;
@@ -128,12 +137,36 @@ const title = isNew ? 'Новый раздел' : form.name;
 
     <div class="card">
       <h2>Сайт раздела</h2>
-      <p class="hint">Отдельный сайт или страница, где будут товары и онлайн-заказ. Пока ссылки нет, на странице раздела
-        вместо кнопки показываются телефон и WhatsApp.</p>
+      <p class="hint">Свой сайт раздела с каталогом товаров. Работает на этом же сервере, товары заводятся в «Товарах».
+        Если сайт включён, плитка и пункт меню раздела на главной ведут сразу на него.</p>
+      <div class="form-grid">
+        <div class="field full inline">
+          <label class="check"><input type="checkbox" name="site_on" checked={!!form.siteHost} /> Включить сайт раздела</label>
+          {current?.siteHost && <a href={siteUrl(current)} target="_blank" rel="noopener">{siteUrl(current)} ↗</a>}
+          {current && <a href={`/admin/products?section=${current.id}`}>Товары раздела</a>}
+        </div>
+        <div class="field">
+          <label for="site_host">Адрес сайта</label>
+          <input type="text" id="site_host" name="site_host" value={form.siteHost} placeholder={defaultSiteHost(form.slug || 'razdel')} />
+          <div class="hint">На компьютере: <code>{form.slug || 'razdel'}.localhost</code>. На сервере — свой домен или поддомен, например
+            <code>{form.slug || 'razdel'}.europroject.kg</code> (его нужно добавить и в настройки сервера, docs/deployment.md).</div>
+        </div>
+        <div class="field">
+          <label for="site_color">Цвет сайта</label>
+          <input type="color" id="site_color" name="site_color" value={form.siteColor || DEFAULT_SITE_COLOR} style="width:80px;height:40px;padding:2px" />
+          <div class="hint">Кнопки, полоса сверху, галочки фильтров. По умолчанию — зелёный логотипа.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Ссылка на другой сайт</h2>
+      <p class="hint">Если своего сайта раздела нет: адрес внешнего сайта или страницы с товарами. Пока ссылки нет, на странице
+        раздела вместо кнопки показываются телефон и WhatsApp.</p>
       <div class="form-grid">
         <div class="field">
           <label for="link">Ссылка</label>
-          <input type="text" id="link" name="link" value={form.link} placeholder="https://vinyl.europroject.kg" />
+          <input type="text" id="link" name="link" value={form.link} placeholder="https://" />
         </div>
         <div class="field">
           <label for="link_label">Подпись кнопки</label>

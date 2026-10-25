@@ -1,0 +1,140 @@
+---
+// Главная сайта раздела: фото и заголовок, каталог с фильтрами, текст о покрытии, производители, связь.
+// Фильтры — обычная форма GET (?f=Формат:Ёлочка): работают и без скриптов, со скриптом применяются сразу.
+import ProductCard from './ProductCard.astro';
+import { isExternal, type Brand, type Section } from '../../server/sections.ts';
+import type { FilterGroup, ProductItem } from '../../server/products.ts';
+import type { Settings } from '../../server/settings.ts';
+import { homeSrcset, uploadUrl } from '../../server/uploads.ts';
+import { pluralRu } from '../../server/util.ts';
+
+interface Props {
+  site: Section;
+  /** Все товары раздела (для фото на главном экране) */
+  products: ProductItem[];
+  /** Товары после фильтров */
+  items: ProductItem[];
+  groups: FilterGroup[];
+  brands: Brand[];
+  settings: Settings;
+}
+const { site, products, items, groups, brands, settings } = Astro.props;
+const heading = site.heading || site.name;
+const phoneHref = 'tel:' + settings.phone_main.replace(/[^\d+]/g, '');
+const waHref = 'https://wa.me/' + settings.panel_whatsapp.replace(/\D/g, '');
+// Фото главного экрана: фото раздела из админки, иначе фото товара в интерьере (второе фото товара)
+const withInterior = products.find((p) => p.images.length > 1) ?? products.find((p) => p.images.length);
+const heroImg = site.image ? uploadUrl(site.image) : withInterior ? uploadUrl(withInterior.images[1] ?? withInterior.images[0]) : '';
+const filtered = groups.some((g) => g.values.some((v) => v.checked));
+const countText = `${items.length} ${pluralRu(items.length, ['товар', 'товара', 'товаров'])}`;
+---
+
+<section class:list={['pcat-hero ss-hero', { 'pcat-hero--noimg': !heroImg }]}>
+  {heroImg && <img class="pcat-hero-img" src={heroImg} srcset={site.image ? homeSrcset(site.image) : undefined} sizes="100vw" alt="" width="1600" height="1067" fetchpriority="high" />}
+  <div class="pcat-hero-card">
+    <h1 class="pcat-title">{heading}</h1>
+    {site.summary && <p class="pcat-text">{site.summary}</p>}
+    <div class="psection-links">
+      {products.length > 0 && <a class="pbtn" href="#catalog">Смотреть каталог</a>}
+      {settings.panel_whatsapp && <a class="pbtn pbtn-outline" href={waHref} target="_blank" rel="noopener">Написать в WhatsApp</a>}
+    </div>
+  </div>
+</section>
+
+<section class="psec ss-catalog" id="catalog">
+  <div class="pin">
+    <div class="ss-catalog-head">
+      <h2 class="ptitle">Каталог</h2>
+      {products.length > 0 && <span class="ss-count">{countText}</span>}
+    </div>
+    {
+      products.length === 0 ? (
+        <p class="psub">Каталог пополняется. Позвоните или напишите в WhatsApp: расскажем о коллекциях и наличии.</p>
+      ) : (
+        <div class:list={['ss-catalog-grid', { 'ss-catalog-grid--nofilters': groups.length === 0 }]}>
+          {groups.length > 0 && (
+            <details class="ss-filters-box" open data-filters-box>
+            <summary>Фильтры{filtered && ' (выбраны)'}</summary>
+            <form class="ss-filters" method="get" action="/#catalog" data-filters>
+              {groups.map((g) => (
+                <fieldset class="ss-filter">
+                  <legend>{g.label}</legend>
+                  {g.values.map((v) => (
+                    <label class:list={['ss-check', { 'ss-check--empty': v.count === 0 && !v.checked }]}>
+                      <input type="checkbox" name="f" value={`${g.label}:${v.value}`} checked={v.checked} />
+                      <span>{v.value}</span>
+                      <small>{v.count}</small>
+                    </label>
+                  ))}
+                </fieldset>
+              ))}
+              <noscript><button class="pbtn" type="submit">Показать</button></noscript>
+              {filtered && <a class="plink ss-reset" href="/#catalog">Сбросить фильтры</a>}
+            </form>
+            </details>
+          )}
+          <div>
+            {items.length > 0 ? (
+              <div class="pgrid ss-grid">{items.map((p) => <ProductCard product={p} />)}</div>
+            ) : (
+              <p class="psub">Нет товаров с такими параметрами. <a href="/#catalog">Сбросить фильтры</a></p>
+            )}
+          </div>
+        </div>
+      )
+    }
+  </div>
+</section>
+
+{
+  site.description && (
+    <section class="psec psalon ss-about" id="about">
+      <div class="pin">
+        <h2 class="ptitle">О покрытии</h2>
+        <div class="psalon-text" set:html={site.description} />
+      </div>
+    </section>
+  )
+}
+
+{
+  brands.length > 0 && (
+    <section class="psec" id="brands">
+      <div class="pin">
+        <h2 class="ptitle">{brands.length > 1 ? 'Производители' : 'Производитель'}</h2>
+        <div class="psbrands">
+          {brands.map((b) => (
+            <article class="psbrand">
+              <div class="psbrand-logo">{b.logo ? <img src={uploadUrl(b.logo)} alt={b.name} loading="lazy" /> : <span>{b.name}</span>}</div>
+              <div class="psbrand-body">
+                <h3 class="psection-title">{b.name}</h3>
+                {b.description && <div class="psbrand-text" set:html={b.description} />}
+                {b.link && (
+                  <a class="plink" href={b.link} target={isExternal(b.link) ? '_blank' : undefined} rel={isExternal(b.link) ? 'noopener' : undefined}>
+                    Коллекции {b.name} на сайте производителя
+                  </a>
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+<section class="psec pcontact" id="contacts">
+  <div class="pin pcontact-grid">
+    <div>
+      <h2 class="ptitle">Подберём покрытие</h2>
+      <p class="psub">Позвоните или напишите: расскажем о коллекциях, покажем образцы в офисе, рассчитаем количество. Цену и наличие сообщим там же.</p>
+    </div>
+    <div class="pcontact-list">
+      <a class="pcontact-phone" href={phoneHref}>{settings.phone_main}</a>
+      {settings.panel_whatsapp && <a href={waHref} target="_blank" rel="noopener">WhatsApp {settings.panel_whatsapp}</a>}
+      <span>{settings.address}</span>
+      {settings.work_hours && <span>{settings.work_hours}</span>}
+      {settings.email && <a href={`mailto:${settings.email}`}>{settings.email}</a>}
+    </div>
+  </div>
+</section>

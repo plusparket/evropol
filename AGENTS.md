@@ -1,7 +1,8 @@
 # Инструкции для ИИ-агентов
 
 Проект — сайт компании «Европроект» (europroject.kg, Бишкек): Astro + Postgres + Caddy, всё в Docker.
-Сайт-визитка без товаров: каждый раздел ведёт на свой сайт или страницу (поле `sections.link`).
+Главный сайт — визитка без товаров. Раздел ведёт на свой сайт раздела с каталогом (то же приложение, адрес
+`sections.site_host`, см. [docs/section-sites.md](docs/section-sites.md)) или на внешнюю страницу (`sections.link`).
 Документация — в [docs/](docs/README.md), журнал изменений — [docs/changelog.md](docs/changelog.md).
 
 ## llms.txt и llms-full.txt — всегда актуальны
@@ -13,7 +14,8 @@
 - **`/llms-full.txt`** — всё содержимое: тексты разделов, описания брендов, тексты страниц и новостей.
 
 Файлы не хранятся готовыми, а собираются из базы при каждом запросе: `src/server/llms.ts`
-(маршруты `src/pages/llms.txt.ts` и `src/pages/llms-full.txt.ts`).
+(маршруты `src/pages/llms.txt.ts` и `src/pages/llms-full.txt.ts`). У каждого сайта раздела свои файлы с товарами
+(`buildSiteLlmsTxt`, `buildSiteLlmsFullTxt`, маршруты в `src/pages/section-site/`).
 
 Правила:
 

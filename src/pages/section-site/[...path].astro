@@ -1,0 +1,62 @@
+---
+// Страницы сайта раздела. Сюда попадают запросы на адрес сайта раздела (vinyl.localhost/…), см. src/middleware.ts:
+//   /            → главная сайта раздела с каталогом
+//   /<товар>     → страница товара
+//   остальное    → 404
+import SectionSiteLayout from '../../layouts/SectionSiteLayout.astro';
+import NotFound from '../../components/NotFound.astro';
+import SiteHome from '../../components/section-site/SiteHome.astro';
+import ProductView from '../../components/section-site/ProductView.astro';
+import { getActiveBrands, siteUrl } from '../../server/sections.ts';
+import { applyFilters, getProducts, parseFilters, relatedProducts } from '../../server/products.ts';
+import { getSettings } from '../../server/settings.ts';
+import { breadcrumbJsonLd, withSiteName } from '../../server/seo.ts';
+import { plainText } from '../../server/util.ts';
+
+const site = Astro.locals.site;
+if (!site) return new Response('Not found', { status: 404 });
+
+const path = (Astro.params.path ?? '').replace(/\/+$/, '');
+if (path && Astro.url.pathname.endsWith('/')) return Astro.redirect(`/${path}${Astro.url.search}`, 301);
+
+const [settings, products] = await Promise.all([getSettings(), getProducts(site.id)]);
+const product = path && !path.includes('/') ? products.find((p) => p.slug === path) : undefined;
+const isHome = !path;
+if (!isHome && !product) Astro.response.status = 404;
+
+const base = siteUrl(site);
+const heading = site.heading || site.name;
+const brands = isHome ? await getActiveBrands(site.id) : [];
+const { items, groups } = isHome ? applyFilters(products, parseFilters(Astro.url.searchParams)) : { items: [], groups: [] };
+const related = product ? relatedProducts(products, product) : [];
+const productTitle = product ? [product.brand, product.name].filter(Boolean).join(' ') : '';
+---
+
+{
+  isHome ? (
+    <SectionSiteLayout
+      site={site}
+      title={site.seoTitle || withSiteName(`${heading} в Бишкеке: каталог`, settings)}
+      description={site.seoDescription || site.summary || plainText(site.description) || undefined}
+      canonicalPath="/"
+      noindex={Astro.url.searchParams.has('f')}
+    >
+      <SiteHome site={site} products={products} items={items} groups={groups} brands={brands} settings={settings} />
+    </SectionSiteLayout>
+  ) : product ? (
+    <SectionSiteLayout
+      site={site}
+      title={product.seoTitle || withSiteName(`${productTitle}${product.collection ? `, ${product.collection}` : ''} в Бишкеке`, settings)}
+      description={product.seoDescription || plainText(product.description, 250) || undefined}
+      canonicalPath={`/${product.slug}`}
+      image={product.images[0] ? `/uploads/${product.images[0]}` : undefined}
+      jsonLd={breadcrumbJsonLd(base, [{ name: 'Каталог', url: '/#catalog' }, { name: product.name, url: `/${product.slug}` }])}
+    >
+      <ProductView product={product} related={related} settings={settings} />
+    </SectionSiteLayout>
+  ) : (
+    <SectionSiteLayout site={site} title="Страница не найдена" noindex>
+      <NotFound />
+    </SectionSiteLayout>
+  )
+}

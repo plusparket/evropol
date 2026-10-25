@@ -1,0 +1,1900 @@
+{
+ "section": "vinyl",
+ "note": "Кварцвинил BerryAlloc Click Comfort 55: данные и фото производителя (berryalloc.com), снимок 2026-10. Фото скачиваются при запуске (src/server/section-sites.ts).",
+ "products": [
+  {
+   "brand": "BerryAlloc",
+   "name": "Caïro (доска)",
+   "slug": "cairo-doska",
+   "collection": "Click Comfort 55 Plank",
+   "sku": "60002236",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-коричневый"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "рустикальный"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "60002236"
+    },
+    {
+     "label": "Серия",
+     "value": "Click Comfort 55 Plank"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "оранжевый, жёлтый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Замок",
+     "value": "2G/5G"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1219 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "177,8 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,73419 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "8"
+    }
+   ],
+   "description": "<p>Живой дуб с натуральными сучками, трещинами и «зеркалами» в тёплом оранжево-медовом цвете. Тон меняется от доски к доске, рисунок не повторяется.</p>\n<p>BerryAlloc Click Comfort 55 собирается на замок без клея. Звукоизолирующая подложка встроена в доску и гасит шаги. Покрытие не боится воды и царапин, его кладут на тёплый пол. Разработано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak34ibgejnum1p3a/beaulieu_2000w,default/cairo_lvt_1219x177_berryalloc_dsh_01",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak4rr8csw67xkrwy/beaulieu_2000w,default/cairo_delhi_lvt_1219x177_berryalloc_rsh_01"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/zenn/60002236"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Faro (доска)",
+   "slug": "faro-doska",
+   "collection": "Click Comfort 55 Plank",
+   "sku": "60002237",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светлый натуральный"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "рустикальный"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "60002237"
+    },
+    {
+     "label": "Серия",
+     "value": "Click Comfort 55 Plank"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "жёлтый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Замок",
+     "value": "2G/5G"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1219 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "177,8 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,73419 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "8"
+    }
+   ],
+   "description": "<p>Живой дуб с натуральными сучками, трещинами и «зеркалами» в среднем натуральном оттенке дерева. Тон меняется от доски к доске, рисунок не повторяется.</p>\n<p>BerryAlloc Click Comfort 55 собирается на замок без клея. Звукоизолирующая подложка встроена в доску и гасит шаги. Покрытие не боится воды и царапин, его кладут на тёплый пол. Разработано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5aka46k8pp7cd64ay/beaulieu_2000w,default/faro_lvt_1219x177_berryalloc_dsh_01",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5akatpr5zqicpe3da/beaulieu_2000w,default/faro_lvt_1219x177_berryalloc_rsh_01"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/zenn/60002237"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Monsanto (доска)",
+   "slug": "monsanto-doska",
+   "collection": "Click Comfort 55 Plank",
+   "sku": "60002231",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-коричневый"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "живой"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "60002231"
+    },
+    {
+     "label": "Серия",
+     "value": "Click Comfort 55 Plank"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "жёлтый, оранжевый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Замок",
+     "value": "2G/5G"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1219 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "177,8 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,73419 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "8"
+    }
+   ],
+   "description": "<p>Спокойный дуб с небольшими сучками в тёплом медовом цвете средней светлоты. Тон меняется от доски к доске, рисунок не повторяется.</p>\n<p>BerryAlloc Click Comfort 55 собирается на замок без клея. Звукоизолирующая подложка встроена в доску и гасит шаги. Покрытие не боится воды и царапин, его кладут на тёплый пол. Разработано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5ezf7pqk7x49mo/beaulieu_2000w,default/monsanto_lvt_1219x177_berryalloc_dsh_01",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak41ermc84tw8pky/beaulieu_2000w,default/monsanto_lvt_1219x177_berryalloc_rsh_01",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak3pnsoubkms4sza/beaulieu_2000w,default/monsanto_matching_skirting_lvt_1219x177_berryalloc_rsh_02"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/zenn/60002231"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Orlando (доска)",
+   "slug": "orlando-doska",
+   "collection": "Click Comfort 55 Plank",
+   "sku": "60002232",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светлый натуральный"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "живой"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "60002232"
+    },
+    {
+     "label": "Серия",
+     "value": "Click Comfort 55 Plank"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "жёлтый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Замок",
+     "value": "2G/5G"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1219 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "177,8 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,73419 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "8"
+    }
+   ],
+   "description": "<p>Спокойный дуб с небольшими сучками в среднем натуральном оттенке дерева. Тон меняется от доски к доске, рисунок не повторяется.</p>\n<p>BerryAlloc Click Comfort 55 собирается на замок без клея. Звукоизолирующая подложка встроена в доску и гасит шаги. Покрытие не боится воды и царапин, его кладут на тёплый пол. Разработано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5aka3z9qoe1juyfbo/beaulieu_2000w,default/orlando_lvt_1219x177_berryalloc_dsh_01",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak4z91eo1f868f7a/beaulieu_2000w,default/orlando_lvt_1219x177_berryalloc_rsh_02",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak31moeu4cefnaze/beaulieu_2000w,default/orlando_lvt_1219x177_berryalloc_rsh_01"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/zenn/60002232"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Oslo (доска)",
+   "slug": "oslo-doska",
+   "collection": "Click Comfort 55 Plank",
+   "sku": "60002233",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-серый"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "живой"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "60002233"
+    },
+    {
+     "label": "Серия",
+     "value": "Click Comfort 55 Plank"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "голубой, фиолетовый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Замок",
+     "value": "2G/5G"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1219 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "177,8 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,73419 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "8"
+    }
+   ],
+   "description": "<p>Спокойный дуб с небольшими сучками в среднем натуральном цвете. Тон меняется от доски к доске, рисунок не повторяется.</p>\n<p>BerryAlloc Click Comfort 55 собирается на замок без клея. Звукоизолирующая подложка встроена в доску и гасит шаги. Покрытие не боится воды и царапин, его кладут на тёплый пол. Разработано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5akawtibgmq6dy8sa/beaulieu_2000w,default/oslo_lvt_1219x177_berryalloc_dsh_01",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5akauwzxhyfkzcp7e/beaulieu_2000w,default/oslo_lvt_1219x177_berryalloc_rsh_01"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/zenn/60002233"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Palermo (доска)",
+   "slug": "palermo-doska",
+   "collection": "Click Comfort 55 Plank",
+   "sku": "60002234",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-коричневый"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "рустикальный"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "60002234"
+    },
+    {
+     "label": "Серия",
+     "value": "Click Comfort 55 Plank"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "оранжевый, красный"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Замок",
+     "value": "2G/5G"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1219 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "177,8 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,73419 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "8"
+    }
+   ],
+   "description": "<p>Живой дуб с натуральными сучками, трещинами и «зеркалами» в тёплом тёмно-коричневом цвете. Тон меняется от доски к доске, рисунок не повторяется.</p>\n<p>BerryAlloc Click Comfort 55 собирается на замок без клея. Звукоизолирующая подложка встроена в доску и гасит шаги. Покрытие не боится воды и царапин, его кладут на тёплый пол. Разработано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5n9pxxbtrm31by/beaulieu_2000w,default/palermo_lvt_1219x177_berryalloc_dsh_01",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak3kpqo4yr8mxwqe/beaulieu_2000w,default/palermo_lvt_1219x177_berryalloc_rsh_01"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/zenn/60002234"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Porto (доска)",
+   "slug": "porto-doska",
+   "collection": "Click Comfort 55 Plank",
+   "sku": "60002235",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-коричневый"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "рустикальный"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "60002235"
+    },
+    {
+     "label": "Серия",
+     "value": "Click Comfort 55 Plank"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "красный, оранжевый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Замок",
+     "value": "2G/5G"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1219 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "177,8 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,73419 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "8"
+    }
+   ],
+   "description": "<p>Живой дуб с натуральными сучками, трещинами и «зеркалами» в коричневом цвете с эффектом копчения. Тон меняется от доски к доске, рисунок не повторяется.</p>\n<p>BerryAlloc Click Comfort 55 собирается на замок без клея. Звукоизолирующая подложка встроена в доску и гасит шаги. Покрытие не боится воды и царапин, его кладут на тёплый пол. Разработано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak587toukyf5wmpe/beaulieu_2000w,default/porto_lvt_1219x177_berryalloc_dsh_01",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak3ek6dqtgttbdco/beaulieu_2000w,default/porto_lvt_1219x177_berryalloc_rsh_02",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5akaabjhmi8nbpuey/beaulieu_2000w,default/porto_matching_skirting_lvt_1219x177_berryalloc_rsh_01"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/zenn/60002235"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Sorrento (доска)",
+   "slug": "sorrento-doska",
+   "collection": "Click Comfort 55 Plank",
+   "sku": "60002230",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светлый натуральный"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "живой"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "60002230"
+    },
+    {
+     "label": "Серия",
+     "value": "Click Comfort 55 Plank"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "жёлтый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Замок",
+     "value": "2G/5G"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1219 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "177,8 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,73419 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "8"
+    }
+   ],
+   "description": "<p>Спокойный дуб с небольшими сучками в тёплом светлом натуральном цвете. Тон меняется от доски к доске, рисунок не повторяется.</p>\n<p>BerryAlloc Click Comfort 55 собирается на замок без клея. Звукоизолирующая подложка встроена в доску и гасит шаги. Покрытие не боится воды и царапин, его кладут на тёплый пол. Разработано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak3xgzytf9rg7tny/beaulieu_2000w,default/sorrento_lvt_1219x177_berryalloc_dsh_01",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak4dfqfrk3k456wa/beaulieu_2000w,default/bali_sorrento_lvt_914x457_berryalloc_rsh_01",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak4t5c7jcyom43ja/beaulieu_2000w,default/sorrento_lvt_1219x177_berryalloc_rsh_01"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/zenn/60002230"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Caïro (Ёлочка)",
+   "slug": "cairo-elochka",
+   "collection": "Click Comfort 55 Herringbone",
+   "sku": "60002248",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-коричневый"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "рустикальный"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "60002248"
+    },
+    {
+     "label": "Серия",
+     "value": "Click Comfort 55 Herringbone"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "оранжевый, жёлтый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Замок",
+     "value": "2G/5G"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "610 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "107,95 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,97419 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "30"
+    }
+   ],
+   "description": "<p>Живой дуб с натуральными сучками, трещинами и «зеркалами» в тёплом оранжево-медовом цвете. Тон меняется от доски к доске, рисунок не повторяется.</p>\n<p>BerryAlloc Click Comfort 55 собирается на замок без клея. Звукоизолирующая подложка встроена в доску и гасит шаги. Покрытие не боится воды и царапин, его кладут на тёплый пол. Разработано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5abfbdow7wtqdo/beaulieu_2000w,default/cairo_lvt_610x114_berryalloc_dsh_01",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak4zfswb8wdimzha/beaulieu_2000w,default/cairo_lvt_609x107_berryalloc_rsh_01"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/zenn/60002248"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Faro (Ёлочка)",
+   "slug": "faro-elochka",
+   "collection": "Click Comfort 55 Herringbone",
+   "sku": "60002249",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светлый натуральный"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "рустикальный"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "60002249"
+    },
+    {
+     "label": "Серия",
+     "value": "Click Comfort 55 Herringbone"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "жёлтый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Замок",
+     "value": "2G/5G"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "610 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "107,95 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,97419 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "30"
+    }
+   ],
+   "description": "<p>Живой дуб с натуральными сучками, трещинами и «зеркалами» в среднем натуральном оттенке дерева. Тон меняется от доски к доске, рисунок не повторяется.</p>\n<p>BerryAlloc Click Comfort 55 собирается на замок без клея. Звукоизолирующая подложка встроена в доску и гасит шаги. Покрытие не боится воды и царапин, его кладут на тёплый пол. Разработано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak3ur7j9wu1c1yho/beaulieu_2000w,default/faro_lvt_610x114_berryalloc_dsh_01",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5akay5jqubsq67m1o/beaulieu_2000w,default/faro_lvt_609x107_berryalloc_rsh_01",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak3crnkxnsw1ysde/beaulieu_2000w,default/faro_matching_skirting_lvt_609x107_berryalloc_rsh_02"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/zenn/60002249"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Monsanto (Ёлочка)",
+   "slug": "monsanto-elochka",
+   "collection": "Click Comfort 55 Herringbone",
+   "sku": "60002243",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-коричневый"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "живой"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "60002243"
+    },
+    {
+     "label": "Серия",
+     "value": "Click Comfort 55 Herringbone"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "жёлтый, оранжевый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Замок",
+     "value": "2G/5G"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "610 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "107,95 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,97419 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "30"
+    }
+   ],
+   "description": "<p>Спокойный дуб с небольшими сучками в тёплом медовом цвете средней светлоты. Тон меняется от доски к доске, рисунок не повторяется.</p>\n<p>BerryAlloc Click Comfort 55 собирается на замок без клея. Звукоизолирующая подложка встроена в доску и гасит шаги. Покрытие не боится воды и царапин, его кладут на тёплый пол. Разработано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5wmk3bt4aeccio/beaulieu_2000w,default/monsanto_lvt_610x114_berryalloc_dsh_01",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak33w7983zd7gpqe/beaulieu_2000w,default/monsanto_lvt_609x107_berryalloc_rsh_01"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/zenn/60002243"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Orlando (Ёлочка)",
+   "slug": "orlando-elochka",
+   "collection": "Click Comfort 55 Herringbone",
+   "sku": "60002244",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светлый натуральный"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "живой"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "60002244"
+    },
+    {
+     "label": "Серия",
+     "value": "Click Comfort 55 Herringbone"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "жёлтый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Замок",
+     "value": "2G/5G"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "610 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "107,95 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,97419 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "30"
+    }
+   ],
+   "description": "<p>Спокойный дуб с небольшими сучками в среднем натуральном оттенке дерева. Тон меняется от доски к доске, рисунок не повторяется.</p>\n<p>BerryAlloc Click Comfort 55 собирается на замок без клея. Звукоизолирующая подложка встроена в доску и гасит шаги. Покрытие не боится воды и царапин, его кладут на тёплый пол. Разработано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5c4fdxwrg8bfjy/beaulieu_2000w,default/orlando_lvt_610x114_berryalloc_dsh_01",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5osbsabgbeqi4a/beaulieu_2000w,default/orlando_lvt_609x107_berryalloc_rsh_01",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5akaxus7fojpd8nuo/beaulieu_2000w,default/orlando_lvt_609x107_berryalloc_rsh_02"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/zenn/60002244"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Oslo (Ёлочка)",
+   "slug": "oslo-elochka",
+   "collection": "Click Comfort 55 Herringbone",
+   "sku": "60002245",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-серый"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "живой"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "60002245"
+    },
+    {
+     "label": "Серия",
+     "value": "Click Comfort 55 Herringbone"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "голубой, фиолетовый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Замок",
+     "value": "2G/5G"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "610 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "107,95 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,97419 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "30"
+    }
+   ],
+   "description": "<p>Спокойный дуб с небольшими сучками в среднем натуральном цвете. Тон меняется от доски к доске, рисунок не повторяется.</p>\n<p>BerryAlloc Click Comfort 55 собирается на замок без клея. Звукоизолирующая подложка встроена в доску и гасит шаги. Покрытие не боится воды и царапин, его кладут на тёплый пол. Разработано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5akaruaz93pd6rkra/beaulieu_2000w,default/oslo_lvt_610x114_berryalloc_dsh_01",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak45hjb4n4jyfy7e/beaulieu_2000w,default/oslo_lvt_609x107_berryalloc_rsh_01"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/zenn/60002245"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Palermo (Ёлочка)",
+   "slug": "palermo-elochka",
+   "collection": "Click Comfort 55 Herringbone",
+   "sku": "60002246",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-коричневый"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "рустикальный"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "60002246"
+    },
+    {
+     "label": "Серия",
+     "value": "Click Comfort 55 Herringbone"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "оранжевый, красный"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Замок",
+     "value": "2G/5G"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "610 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "107,95 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,97419 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "30"
+    }
+   ],
+   "description": "<p>Живой дуб с натуральными сучками, трещинами и «зеркалами» в тёплом тёмно-коричневом цвете. Тон меняется от доски к доске, рисунок не повторяется.</p>\n<p>BerryAlloc Click Comfort 55 собирается на замок без клея. Звукоизолирующая подложка встроена в доску и гасит шаги. Покрытие не боится воды и царапин, его кладут на тёплый пол. Разработано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak4498crjh5h6mxo/beaulieu_2000w,default/palermo_lvt_610x114_berryalloc_dsh_01",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5ifqudjbtakm9e/beaulieu_2000w,default/palermo_lvt_609x107_berryalloc_rsh_01"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/zenn/60002246"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Porto (Ёлочка)",
+   "slug": "porto-elochka",
+   "collection": "Click Comfort 55 Herringbone",
+   "sku": "60002247",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-коричневый"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "рустикальный"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "60002247"
+    },
+    {
+     "label": "Серия",
+     "value": "Click Comfort 55 Herringbone"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "красный, оранжевый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Замок",
+     "value": "2G/5G"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "610 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "107,95 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,97419 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "30"
+    }
+   ],
+   "description": "<p>Живой дуб с натуральными сучками, трещинами и «зеркалами» в коричневом цвете с эффектом копчения. Тон меняется от доски к доске, рисунок не повторяется.</p>\n<p>BerryAlloc Click Comfort 55 собирается на замок без клея. Звукоизолирующая подложка встроена в доску и гасит шаги. Покрытие не боится воды и царапин, его кладут на тёплый пол. Разработано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5akaggix4yjo6pyjo/beaulieu_2000w,default/porto_lvt_610x114_berryalloc_dsh_01",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak31nqddcshr666e/beaulieu_2000w,default/porto_lvt_609x107_berryalloc_rsh_01",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak3ek6dqtgttbdco/beaulieu_2000w,default/porto_lvt_1219x177_berryalloc_rsh_02"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/zenn/60002247"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Sorrento (Ёлочка)",
+   "slug": "sorrento-elochka",
+   "collection": "Click Comfort 55 Herringbone",
+   "sku": "60002242",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светлый натуральный"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "живой"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "60002242"
+    },
+    {
+     "label": "Серия",
+     "value": "Click Comfort 55 Herringbone"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "жёлтый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Замок",
+     "value": "2G/5G"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "610 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "107,95 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,97419 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "30"
+    }
+   ],
+   "description": "<p>Спокойный дуб с небольшими сучками в тёплом светлом натуральном цвете. Тон меняется от доски к доске, рисунок не повторяется.</p>\n<p>BerryAlloc Click Comfort 55 собирается на замок без клея. Звукоизолирующая подложка встроена в доску и гасит шаги. Покрытие не боится воды и царапин, его кладут на тёплый пол. Разработано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak4ecgsn7y8x95ko/beaulieu_2000w,default/sorrento_lvt_610x114_berryalloc_dsh_01",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5h57pi7a5zxe9a/beaulieu_2000w,default/sorrento_lvt_609x107_berryalloc_rsh_01"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/zenn/60002242"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Bali",
+   "slug": "bali",
+   "collection": "Click Comfort 55 Tile",
+   "sku": "60002239",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-серый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под камень"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "60002239"
+    },
+    {
+     "label": "Серия",
+     "value": "Click Comfort 55 Tile"
+    },
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "фиолетовый, жёлтый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Замок",
+     "value": "2G/5G"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "914 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "457,2 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,67224 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "4"
+    }
+   ],
+   "description": "<p>Рисунок бетона с небольшими камешками и ракушками в среднем сером оттенке.</p>\n<p>BerryAlloc Click Comfort 55 собирается на замок без клея. Звукоизолирующая подложка встроена в доску и гасит шаги. Покрытие не боится воды и царапин, его кладут на тёплый пол. Разработано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5cfwt5p3nkrdje/beaulieu_2000w,default/bali_lvt_914x457_berryalloc_dsh_01",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak4dfqfrk3k456wa/beaulieu_2000w,default/bali_sorrento_lvt_914x457_berryalloc_rsh_01",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak3uebowntef4gda/beaulieu_2000w,default/sorrento_bali_lvt_1219x177_berryalloc_rsh_01"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/zenn/60002239"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Delhi",
+   "slug": "delhi",
+   "collection": "Click Comfort 55 Tile",
+   "sku": "60002238",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светлый натуральный"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под камень"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "60002238"
+    },
+    {
+     "label": "Серия",
+     "value": "Click Comfort 55 Tile"
+    },
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "жёлтый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Замок",
+     "value": "2G/5G"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "914 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "457,2 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,67224 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "4"
+    }
+   ],
+   "description": "<p>Рисунок бетона с небольшими камешками и ракушками в тёплом бежевом оттенке.</p>\n<p>BerryAlloc Click Comfort 55 собирается на замок без клея. Звукоизолирующая подложка встроена в доску и гасит шаги. Покрытие не боится воды и царапин, его кладут на тёплый пол. Разработано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak4tiyo89yhxkfca/beaulieu_2000w,default/delhi_lvt_914x457_berryalloc_dsh_01",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak4rr8csw67xkrwy/beaulieu_2000w,default/cairo_delhi_lvt_1219x177_berryalloc_rsh_01",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak3jtwx6rsbgw66y/beaulieu_2000w,default/delhi_lvt_914x457_berryalloc_rsh_01"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/zenn/60002238"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Fuji",
+   "slug": "fuji",
+   "collection": "Click Comfort 55 Tile",
+   "sku": "60002241",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-серый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под камень"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "60002241"
+    },
+    {
+     "label": "Серия",
+     "value": "Click Comfort 55 Tile"
+    },
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "голубой"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Замок",
+     "value": "2G/5G"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "914 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "457,2 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,67224 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "4"
+    }
+   ],
+   "description": "<p>Рисунок гладкого бетона в среднем сером оттенке.</p>\n<p>BerryAlloc Click Comfort 55 собирается на замок без клея. Звукоизолирующая подложка встроена в доску и гасит шаги. Покрытие не боится воды и царапин, его кладут на тёплый пол. Разработано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak4deq9cjkj9qcqa/beaulieu_2000w,default/fuji_lvt_914x457_berryalloc_dsh_01",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5aka44ur4m9swiyae/beaulieu_2000w,default/fuji_lvt_914x457_berryalloc_rsh_01"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/zenn/60002241"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Rimini",
+   "slug": "rimini",
+   "collection": "Click Comfort 55 Tile",
+   "sku": "60002240",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-серый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под камень"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "60002240"
+    },
+    {
+     "label": "Серия",
+     "value": "Click Comfort 55 Tile"
+    },
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "голубой, фиолетовый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Замок",
+     "value": "2G/5G"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "914 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "457,2 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,67224 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "4"
+    }
+   ],
+   "description": "<p>Рисунок бетона с небольшими камешками и ракушками в тёмно-сером оттенке.</p>\n<p>BerryAlloc Click Comfort 55 собирается на замок без клея. Звукоизолирующая подложка встроена в доску и гасит шаги. Покрытие не боится воды и царапин, его кладут на тёплый пол. Разработано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak3uewj55gn91aio/beaulieu_2000w,default/rimini_lvt_914x457_berryalloc_dsh_01",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5akazunwfzp5zymsy/beaulieu_2000w,default/rimini_lvt_914x457_berryalloc_rsh_02",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5akai7unx4o5cpijy/beaulieu_2000w,default/rimini_lvt_914x457_berryalloc_rsh_01"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/zenn/60002240"
+  }
+ ]
+}
