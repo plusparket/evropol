@@ -30,6 +30,19 @@
       "name": "Ламинат",
       "summary": "Ламинат для квартир, домов и офисов.",
       "description": "<p>Ламинат собирают на замках поверх подложки, без клея. Верхний слой защищает рисунок дерева или камня от царапин и выгорания. Класс износостойкости подбирают по месту: 32 для квартиры, 33 и 34 для офиса и магазина.</p>"
+    },
+    {
+      "slug": "decking",
+      "name": "Террасная доска",
+      "summary": "Доска CM Decking для террас, летних кухонь и дорожек.",
+      "description": "<p>Террасную доску кладут под открытым небом: на террасе, летней кухне, у бассейна, на садовой дорожке.</p>"
+    },
+    {
+      "slug": "adhesives",
+      "name": "Строительная химия",
+      "heading": "Клеи и строительная химия",
+      "summary": "Клеи, грунтовки и выравнивающие смеси Forbo Eurocol для укладки полов.",
+      "description": "<p>Forbo Eurocol выпускает материалы для укладки пола: грунтовки, выравнивающие смеси, клеи для винила, линолеума, ковровых покрытий и паркета.</p>"
     }
   ],
   "brands": [
@@ -74,41 +87,137 @@
       "name": "BerryAlloc",
       "link": "https://www.berryalloc.com/global/en/Vinyl-Planks",
       "description": "<p>Бельгийская компания: ламинат, винил, паркет и стеновые панели для домов и коммерческих объектов. Рисунки под дерево и под камень.</p>"
+    },
+    {
+      "section": "decking",
+      "name": "CM Decking",
+      "link": "https://cottagemode.ru/products/terrasnaja-doska-cm-decking",
+      "description": ""
+    },
+    {
+      "section": "adhesives",
+      "name": "Forbo Eurocol",
+      "link": "https://www.forbo.com/eurocol/ru/produkty/p8rzcp",
+      "description": "<p>Производитель клеев и материалов для укладки полов. Forbo Eurocol проверяет продукцию на каждом этапе производства, перевёл рецептуры на более натуральные компоненты и подтверждает безопасность материалов сертификатами.</p>"
     }
   ],
   "menus": {
     "top": [
-      { "label": "О компании", "url": "/about" },
-      { "label": "Новости и события", "url": "/news" },
-      { "label": "Контакты", "url": "/contact" }
+      {
+        "label": "О компании",
+        "url": "/about"
+      },
+      {
+        "label": "Новости и события",
+        "url": "/news"
+      },
+      {
+        "label": "Контакты",
+        "url": "/contact"
+      }
     ],
     "footer_company": [
-      { "label": "О компании", "url": "/about" },
-      { "label": "Новости и события", "url": "/news" },
-      { "label": "Контакты", "url": "/contact" }
+      {
+        "label": "О компании",
+        "url": "/about"
+      },
+      {
+        "label": "Новости и события",
+        "url": "/news"
+      },
+      {
+        "label": "Контакты",
+        "url": "/contact"
+      }
     ]
   },
   "pages": [
-    { "slug": "about", "title": "О компании" },
-    { "slug": "contact", "title": "Контакты" }
+    {
+      "slug": "about",
+      "title": "О компании"
+    },
+    {
+      "slug": "contact",
+      "title": "Контакты"
+    }
   ],
   "news": [
-    { "slug": "website-launch", "title": "Мы запустили свой вебсайт!", "date": "2021-08-02T12:00:00+06:00" },
-    { "slug": "new-carpet-collection", "title": "Новая коллекция ковролина", "date": "2021-08-04T12:00:00+06:00" },
-    { "slug": "decking-for-summer-terraces", "title": "Террасная доска: лучшее решение для летника", "date": "2021-08-05T12:00:00+06:00" }
+    {
+      "slug": "website-launch",
+      "title": "Мы запустили свой вебсайт!",
+      "date": "2021-08-02T12:00:00+06:00"
+    },
+    {
+      "slug": "new-carpet-collection",
+      "title": "Новая коллекция ковролина",
+      "date": "2021-08-04T12:00:00+06:00"
+    },
+    {
+      "slug": "decking-for-summer-terraces",
+      "title": "Террасная доска: лучшее решение для летника",
+      "date": "2021-08-05T12:00:00+06:00"
+    }
   ],
   "redirects": [
-    { "from": "/index.php", "to": "/", "note": "старый сайт на PHP" },
-    { "from": "/o-kompanii.html", "to": "/about", "note": "старый сайт на PHP" },
-    { "from": "/o-kompanii", "to": "/about", "note": "старый сайт на PHP" },
-    { "from": "/kontakty.html", "to": "/contact", "note": "старый сайт на PHP" },
-    { "from": "/kontakty", "to": "/contact", "note": "старый сайт на PHP" },
-    { "from": "/novosti-i-sobytiya.html", "to": "/news", "note": "старый сайт на PHP" },
-    { "from": "/novosti-i-sobytiya", "to": "/news", "note": "старый сайт на PHP" },
-    { "from": "/produkty.html", "to": "/", "note": "старый сайт на PHP: разделы теперь на главной" },
-    { "from": "/produkty", "to": "/", "note": "старый сайт на PHP: разделы теперь на главной" },
-    { "from": "/143-my-zapustili-svoj-vebsajt.html", "to": "/news/website-launch", "note": "старый сайт на PHP" },
-    { "from": "/144-novaya-kollektsiya-kovrolina.html", "to": "/news/new-carpet-collection", "note": "старый сайт на PHP" },
-    { "from": "/145-terrasnaya-doska-luchshee-resheniya-dlya-letnika.html", "to": "/news/decking-for-summer-terraces", "note": "старый сайт на PHP" }
+    {
+      "from": "/index.php",
+      "to": "/",
+      "note": "старый сайт на PHP"
+    },
+    {
+      "from": "/o-kompanii.html",
+      "to": "/about",
+      "note": "старый сайт на PHP"
+    },
+    {
+      "from": "/o-kompanii",
+      "to": "/about",
+      "note": "старый сайт на PHP"
+    },
+    {
+      "from": "/kontakty.html",
+      "to": "/contact",
+      "note": "старый сайт на PHP"
+    },
+    {
+      "from": "/kontakty",
+      "to": "/contact",
+      "note": "старый сайт на PHP"
+    },
+    {
+      "from": "/novosti-i-sobytiya.html",
+      "to": "/news",
+      "note": "старый сайт на PHP"
+    },
+    {
+      "from": "/novosti-i-sobytiya",
+      "to": "/news",
+      "note": "старый сайт на PHP"
+    },
+    {
+      "from": "/produkty.html",
+      "to": "/",
+      "note": "старый сайт на PHP: разделы теперь на главной"
+    },
+    {
+      "from": "/produkty",
+      "to": "/",
+      "note": "старый сайт на PHP: разделы теперь на главной"
+    },
+    {
+      "from": "/143-my-zapustili-svoj-vebsajt.html",
+      "to": "/news/website-launch",
+      "note": "старый сайт на PHP"
+    },
+    {
+      "from": "/144-novaya-kollektsiya-kovrolina.html",
+      "to": "/news/new-carpet-collection",
+      "note": "старый сайт на PHP"
+    },
+    {
+      "from": "/145-terrasnaya-doska-luchshee-resheniya-dlya-letnika.html",
+      "to": "/news/decking-for-summer-terraces",
+      "note": "старый сайт на PHP"
+    }
   ]
 }
