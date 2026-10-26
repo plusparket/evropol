@@ -26,6 +26,8 @@ const OLD_FLAG = 'section_sites';
 type SeedProduct = {
   brand: string; name: string; slug: string; collection: string; sku: string; attributes: Attr[]; facets: Attr[];
   specs: Attr[]; description: string; images: string[]; sourceUrl: string; isNew?: boolean;
+  /** Исправления в описании уже загруженного товара: «старый текст» → «новый» (например, битая ссылка на PDF) */
+  descriptionFixes?: Record<string, string>;
   /** Метка «В наличии» */
   inStock?: boolean;
   /** Адреса категорий товара (из categories файла) */
@@ -126,6 +128,10 @@ async function upgradeCatalog(sectionId: number, slug: string): Promise<{ added:
       const r = await tx`UPDATE products SET in_stock = ${p.inStock ?? false}, updated_at = now()
         WHERE section_id = ${sectionId} AND slug = ${p.slug} AND in_stock <> ${p.inStock ?? false}`;
       inStock += r.count;
+      for (const [from, to] of Object.entries(p.descriptionFixes ?? {})) {
+        await tx`UPDATE products SET description = replace(description, ${from}, ${to}), updated_at = now()
+          WHERE section_id = ${sectionId} AND slug = ${p.slug} AND strpos(description, ${from}) > 0 AND strpos(description, ${to}) = 0`;
+      }
       // Товар без фото: берём ссылки на фото производителя из файла (могли исправить), importProductPhotos скачает их
       await tx`UPDATE products SET source_images = ${tx.json(p.images)}, updated_at = now()
         WHERE section_id = ${sectionId} AND slug = ${p.slug} AND images = '[]'::jsonb AND source_images <> ${tx.json(p.images)}`;
