@@ -46,7 +46,7 @@ if (Astro.request.method === 'POST') {
     isPublished: bool(data, 'is_published'),
     siteHost: normalizeHost(str(data, 'site_host')),
     siteColor: str(data, 'site_color').toLowerCase(),
-    siteLayout: str(data, 'site_layout') === 'catalog' ? 'catalog' : '',
+    siteLayout: ['catalog', 'groups'].includes(str(data, 'site_layout')) ? str(data, 'site_layout') : '',
     siteAddress: str(data, 'site_address'),
   };
   if (!bool(data, 'site_on')) form.siteHost = '';
@@ -161,10 +161,12 @@ const title = isNew ? 'Новый раздел' : form.name;
         <div class="field">
           <label for="site_layout">Вид главной</label>
           <select id="site_layout" name="site_layout">
-            <option value="" selected={form.siteLayout !== 'catalog'}>Фото, каталог, о покрытии, производители</option>
+            <option value="" selected={!form.siteLayout}>Фото, каталог, о покрытии, производители</option>
             <option value="catalog" selected={form.siteLayout === 'catalog'}>Только каталог с фильтрами слева</option>
+            <option value="groups" selected={form.siteLayout === 'groups'}>Группы и категории товаров (как Forbo Eurocol)</option>
           </select>
-          <div class="hint">«Только каталог»: без производителей и без ссылок на другие разделы.</div>
+          <div class="hint">«Только каталог»: без производителей и без ссылок на другие разделы. «Группы и категории»: категории
+            задаются в <a href="/admin/categories">«Категориях товаров»</a>.</div>
         </div>
         <div class="field">
           <label for="site_address">Адрес на сайте раздела</label>

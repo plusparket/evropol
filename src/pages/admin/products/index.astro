@@ -10,18 +10,21 @@ import { toInt } from '../../../server/util.ts';
 const params = Astro.url.searchParams;
 const q = (params.get('q') ?? '').trim();
 const sectionId = toInt(params.get('section'));
+const stockOnly = params.get('stock') === '1';
 const sections = await getSections();
 const like = `%${q.replace(/[\\%_]/g, (m) => '\\' + m)}%`;
 
 const rows = await sql<{
-  id: number; name: string; sku: string; slug: string; collection: string; sectionId: number; isPublished: boolean; images: string[]; brand: string;
+  id: number; name: string; sku: string; slug: string; collection: string; sectionId: number; isPublished: boolean; inStock: boolean; images: string[];
+  brand: string;
 }[]>`
-  SELECT p.id, p.name, p.sku, p.slug, p.collection, p.section_id, p.is_published, p.images, coalesce(b.name, '') AS brand
+  SELECT p.id, p.name, p.sku, p.slug, p.collection, p.section_id, p.is_published, p.in_stock, p.images, coalesce(b.name, '') AS brand
   FROM products p LEFT JOIN brands b ON b.id = p.brand_id JOIN sections s ON s.id = p.section_id
   WHERE true
   ${q ? sql`AND (p.name ILIKE ${like} OR p.sku ILIKE ${like} OR p.collection ILIKE ${like})` : sql``}
   ${sectionId ? sql`AND p.section_id = ${sectionId}` : sql``}
-  ORDER BY s.sort_order, p.sort_order, p.id`;
+  ${stockOnly ? sql`AND p.in_stock` : sql``}
+  ORDER BY s.sort_order, p.in_stock DESC, p.sort_order, p.id`;
 const sectionOf = (id: number) => sections.find((s) => s.id === id);
 ---
 
@@ -32,7 +35,7 @@ const sectionOf = (id: number) => sections.find((s) => s.id === id);
   </div>
   <p class="muted">
     Товары показываются на сайте своего раздела (включается в «Разделах» → раздел → «Сайт раздела»). На главном сайте
-    товаров нет. По «Значениям для фильтров» строятся фильтры каталога.
+    товаров нет. По «Значениям для фильтров» строятся фильтры каталога. Товары с меткой «В наличии» идут в каталоге первыми.
   </p>
 
   <form class="card inline" method="get" style="padding:14px">
@@ -41,8 +44,9 @@ const sectionOf = (id: number) => sections.find((s) => s.id === id);
       <option value="">Все разделы</option>
       {sections.map((s) => <option value={s.id} selected={s.id === sectionId}>{s.name}</option>)}
     </select>
+    <label class="check"><input type="checkbox" name="stock" value="1" checked={stockOnly} /> только «В наличии»</label>
     <button class="btn secondary" type="submit">Найти</button>
-    {(q || sectionId) && <a href="/admin/products">Сбросить</a>}
+    {(q || sectionId || stockOnly) && <a href="/admin/products">Сбросить</a>}
   </form>
 
   <div class="table-wrap">
@@ -62,6 +66,7 @@ const sectionOf = (id: number) => sections.find((s) => s.id === id);
                 <td class="muted">{p.sku}</td>
                 <td>{s?.name}</td>
                 <td class="nowrap">
+                  {p.inStock && <span class="tag">в наличии</span>}{' '}
                   {!p.isPublished && <span class="tag off">скрыт</span>}{' '}
                   {s?.siteHost ? <a class="muted small" href={`${siteUrl(s)}/${p.slug}`} target="_blank" rel="noopener">на сайте ↗</a> : <span class="tag off">сайт раздела выключен</span>}
                 </td>

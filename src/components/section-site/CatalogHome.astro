@@ -79,7 +79,12 @@ const word = (n: number) => pluralRu(n, ['товар', 'товара', 'това
                     ) : (
                       <span class="pcard2-noimg" />
                     )}
-                    {p.isNew && <span class="ss-badge">Новинка</span>}
+                    {(p.isNew || p.inStock) && (
+                      <span class="ss-badges">
+                        {p.inStock && <span class="ss-badge ss-badge--stock">В наличии</span>}
+                        {p.isNew && <span class="ss-badge">Новинка</span>}
+                      </span>
+                    )}
                   </a>
                   <div class="cat-card-body">
                     {p.collection && <div class="cat-card-sub">{p.collection}</div>}

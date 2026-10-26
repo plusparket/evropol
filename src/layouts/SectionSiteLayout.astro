@@ -58,7 +58,7 @@ const countersOn = settings.counters_enabled === '1';
     <ClientRouter fallback="swap" />
     {countersOn && settings.head_code && <Fragment set:html={settings.head_code} />}
   </head>
-  <body class="ss" style={`--site: ${color}`}>
+  <body class:list={['ss', { 'ss--groups': site.siteLayout === 'groups' }]} style={`--site: ${color}`}>
     <div class="wrapper" id="overlay"></div>
 
     <SiteHeader site={site} sections={sections} settings={settings} />

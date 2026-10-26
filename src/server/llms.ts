@@ -8,7 +8,7 @@
 import { sql } from './db.ts';
 import { getHome } from './home.ts';
 import { getActiveBrands, getSections, linkLabel, sectionLink, siteUrl, type Brand, type Section } from './sections.ts';
-import { getProducts, type ProductItem } from './products.ts';
+import { categoryPaths, getCategoryTree, getProducts, type CategoryNode, type ProductItem } from './products.ts';
 import { pluralRu } from './util.ts';
 import { fillPlaceholders, getSettings, siteSettings, type Settings } from './settings.ts';
 
@@ -201,14 +201,32 @@ export async function buildLlmsFullTxt(origin: string): Promise<string> {
 
 // --- Сайты разделов ------------------------------------------------------------------------------
 
-type SiteData = Data & { site: Section; siteBase: string; products: ProductItem[] };
+type SiteData = Data & { site: Section; siteBase: string; products: ProductItem[]; tree: CategoryNode[] };
 
 async function loadSite(site: Section): Promise<SiteData> {
   const d = await load('http://localhost');
-  return { ...d, settings: siteSettings(d.settings, site), site, siteBase: siteUrl(site), products: await getProducts(site.id) };
+  // Группы и категории есть только у вида «Группы и категории товаров»: в других видах сайт их не показывает
+  const tree = site.siteLayout === 'groups' ? await getCategoryTree(site.id) : [];
+  return { ...d, settings: siteSettings(d.settings, site), site, siteBase: siteUrl(site), products: await getProducts(site.id), tree };
 }
 
 const productLine = (p: ProductItem) => [p.brand, p.collection, p.name].filter(Boolean).join(' ');
+
+/** Категории товара словами: «Подготовка основания › Грунтовки; Продукты ARLOK › …» */
+const categoriesOf = (d: SiteData, p: ProductItem) =>
+  categoryPaths(d.tree, p.id).map((path) => path.map((c) => c.name).join(' › ')).join('; ');
+
+/** Группы и категории со ссылками на страницы сайта */
+function categoryList(d: SiteData, md: (html: string) => string): string[] {
+  const out: string[] = [];
+  const line = (c: CategoryNode, indent: string) =>
+    `${indent}- [${c.name}](${d.siteBase}/${c.slug})${c.description ? `: ${oneLine(md(c.description), 200)}` : ''} (${c.productIds.length} ${pluralRu(c.productIds.length, ['товар', 'товара', 'товаров'])})`;
+  for (const g of d.tree) {
+    out.push(line(g, ''));
+    for (const c of g.children) out.push(line(c, '  '));
+  }
+  return out;
+}
 
 function siteHeader(d: SiteData, full: boolean): string[] {
   const s = d.site;
@@ -216,8 +234,10 @@ function siteHeader(d: SiteData, full: boolean): string[] {
   const out = [`# ${heading}: ${d.settings.site_name}${full ? ', полная информация' : ''}`, ''];
   out.push(`> ${(s.summary || heading).replace(/\.$/, '')}. Сайт раздела «${s.name}» компании «${d.settings.site_name}» (Бишкек, Кыргызстан). ` +
     `Офис: ${d.settings.address}. Телефон ${d.settings.phone_main}.`, '');
-  out.push(`Каталог на сайте: ${d.products.length} ${pluralRu(d.products.length, ['товар', 'товара', 'товаров'])}. ` +
-    'Цен на сайте нет: цену и наличие сообщают по телефону или в WhatsApp. Образцы есть в офисе.', '');
+  const stock = d.products.filter((p) => p.inStock).length;
+  out.push(`Каталог на сайте: ${d.products.length} ${pluralRu(d.products.length, ['товар', 'товара', 'товаров'])}` +
+    (stock ? `, из них ${stock} с меткой «В наличии» (в каталоге они идут первыми)` : '') + '. ' +
+    'Цен на сайте нет: цену и наличие сообщают по телефону или в WhatsApp.' + (s.siteLayout === 'groups' ? '' : ' Образцы есть в офисе.'), '');
   // Вид «только каталог» не ссылается на главный сайт — и здесь его нет
   if (s.siteLayout !== 'catalog') out.push(`Главный сайт компании со всеми разделами: ${d.base}/`, '');
   return out;
@@ -236,11 +256,14 @@ export async function buildSiteLlmsTxt(site: Section): Promise<string> {
     for (const b of brands) out.push(`- ${b.name}${b.description ? `: ${oneLine(md(b.description), 160)}` : ''}${b.link ? ` (${abs(d, b.link)})` : ''}`);
     out.push('');
   }
+  if (d.tree.length) out.push('## Группы и категории', '', ...categoryList(d, md), '');
   if (d.products.length) {
     out.push('## Каталог', '');
     for (const p of d.products) {
       const facts = p.attributes.map((a) => a.value).join(', ');
-      out.push(`- [${productLine(p)}](${d.siteBase}/${p.slug})${p.isNew ? ' · новинка' : ''}${p.sku ? ` · артикул ${p.sku}` : ''}${facts ? ` · ${facts}` : ''}`);
+      const cats = categoriesOf(d, p);
+      out.push(`- [${productLine(p)}](${d.siteBase}/${p.slug})${p.inStock ? ' · в наличии' : ''}${p.isNew ? ' · новинка' : ''}` +
+        `${p.sku ? ` · артикул ${p.sku}` : ''}${cats ? ` · категория: ${cats}` : ''}${facts ? ` · ${oneLine(facts, 200)}` : ''}`);
     }
     out.push('');
   }
@@ -256,7 +279,7 @@ export async function buildSiteLlmsFullTxt(site: Section): Promise<string> {
   const md = (html: string) => htmlToMd(fillPlaceholders(html, d.settings), d.siteBase);
   const out = siteHeader(d, true);
   out.push(`Сайт: ${d.siteBase}. Данные собраны с сайта ${new Date().toLocaleDateString('ru-RU')} и всегда совпадают с ним.`, '');
-  if (site.description) out.push('## О покрытии', '', md(site.description), '');
+  if (site.description) out.push(`## ${site.siteLayout === 'groups' ? 'О продукции' : 'О покрытии'}`, '', md(site.description), '');
   out.push('## Контакты', '', ...contacts(d, !site.siteAddress && site.siteLayout !== 'catalog'), '');
   const brands = brandsOf(d, site);
   if (brands.length) {
@@ -267,10 +290,14 @@ export async function buildSiteLlmsFullTxt(site: Section): Promise<string> {
       if (b.description) out.push(md(b.description), '');
     }
   }
+  if (d.tree.length) out.push('## Группы и категории', '', ...categoryList(d, md), '');
   if (d.products.length) {
     out.push('## Каталог', '');
     for (const p of d.products) {
-      out.push(`### ${productLine(p)}`, '', `Адрес: ${d.siteBase}/${p.slug}${p.sku ? ` · артикул ${p.sku}` : ''}${p.isNew ? ' · новинка' : ''}`, '');
+      const cats = categoriesOf(d, p);
+      out.push(`### ${productLine(p)}`, '',
+        `Адрес: ${d.siteBase}/${p.slug}${p.sku ? ` · артикул ${p.sku}` : ''}${p.inStock ? ' · в наличии' : ''}${p.isNew ? ' · новинка' : ''}`, '');
+      if (cats) out.push(`Категория: ${cats}`, '');
       if (p.description) out.push(md(p.description), '');
       for (const sp of p.specs) out.push(`- ${sp.label}: ${sp.value}`);
       if (p.specs.length) out.push('');

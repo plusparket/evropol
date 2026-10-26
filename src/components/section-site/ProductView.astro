@@ -11,10 +11,12 @@ interface Props {
   product: ProductItem;
   related: ProductItem[];
   settings: Settings;
-  /** Крошка каталога: по умолчанию «Каталог» → /#catalog */
-  catalog?: { name: string; url: string };
+  /** Крошки до товара: по умолчанию «Каталог» → /#catalog; на сайте с категориями — группа и категория */
+  crumbs?: { name: string; url: string }[];
+  /** Строка про образцы в офисе (у строительной химии её нет) */
+  samples?: boolean;
 }
-const { product: p, related, settings, catalog = { name: 'Каталог', url: '/#catalog' } } = Astro.props;
+const { product: p, related, settings, crumbs = [{ name: 'Каталог', url: '/#catalog' }], samples = true } = Astro.props;
 const sub = [p.brand, p.collection].filter(Boolean).join(' · ');
 const phoneHref = 'tel:' + settings.phone_main.replace(/[^\d+]/g, '');
 const waNumber = settings.panel_whatsapp.replace(/\D/g, '');
@@ -24,7 +26,7 @@ const area = packArea(p);
 ---
 
 <div class="pin ss-product">
-  <Crumbs items={[catalog, { name: p.name }]} />
+  <Crumbs items={[...crumbs, { name: p.name }]} />
 
   <div class="ss-product-grid">
     <div class="ss-gallery">
@@ -47,6 +49,7 @@ const area = packArea(p);
     </div>
 
     <div class="ss-product-info">
+      {p.inStock && <span class="ss-badge ss-badge--inline ss-badge--stock">В наличии</span>}
       {p.isNew && <span class="ss-badge ss-badge--inline">Новинка</span>}
       {sub && <div class="pcard2-sub">{sub}</div>}
       <h1 class="pcat-title">{p.name}</h1>
@@ -64,7 +67,10 @@ const area = packArea(p);
         {waNumber && <a class="pbtn" href={waHref} target="_blank" rel="noopener" data-wa data-wa-text={waText} data-wa-number={waNumber}>Написать в WhatsApp</a>}
         <a class="pbtn pbtn-outline" href={phoneHref}>{settings.phone_main}</a>
       </div>
-      <p class="ss-note">Цену и наличие сообщим по телефону или в WhatsApp. Образцы можно посмотреть в офисе: {settings.address}.</p>
+      <p class="ss-note">
+        {p.inStock ? 'Товар есть в наличии. Цену сообщим по телефону или в WhatsApp.' : 'Цену и наличие сообщим по телефону или в WhatsApp.'}
+        {samples && ` Образцы можно посмотреть в офисе: ${settings.address}.`}
+      </p>
 
       {
         area && (
@@ -94,7 +100,7 @@ const area = packArea(p);
   {
     related.length > 0 && (
       <section class="ss-related">
-        <h2 class="ptitle">Похожие</h2>
+        <h2 class="ptitle">{crumbs.length > 1 ? `Ещё в категории «${crumbs[crumbs.length - 1].name}»` : 'Похожие'}</h2>
         <div class="pgrid ss-grid ss-grid--4">{related.map((r) => <ProductCard product={r} />)}</div>
       </section>
     )

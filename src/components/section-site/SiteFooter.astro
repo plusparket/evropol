@@ -15,6 +15,7 @@ const phoneHref = (p: string) => 'tel:' + p.replace(/[^\d+]/g, '');
 // Вид «только каталог»: без других разделов, производителей и ссылки на главный сайт
 const catalogOnly = site.siteLayout === 'catalog';
 const others = catalogOnly ? [] : sections.filter((s) => s.id !== site.id);
+const withGroups = site.siteLayout === 'groups';
 const copyright = settings.copyright.replaceAll('{year}', String(new Date().getFullYear()));
 ---
 
@@ -23,9 +24,19 @@ const copyright = settings.copyright.replaceAll('{year}', String(new Date().getF
     <div class="pf-col">
       <div class="pf-title">{site.name}</div>
       <ul>
-        <li><a href={catalogOnly ? '/' : '/#catalog'}>Каталог</a></li>
-        {(!catalogOnly || site.description) && <li><a href="/#about">О покрытии</a></li>}
-        {!catalogOnly && <li><a href="/#brands">Производители</a></li>}
+        {withGroups ? (
+          <Fragment>
+            <li><a href="/#products">Продукция</a></li>
+            <li><a href="/#in-stock">В наличии</a></li>
+            {site.description && <li><a href="/#about">О продукции</a></li>}
+          </Fragment>
+        ) : (
+          <Fragment>
+            <li><a href={catalogOnly ? '/' : '/#catalog'}>Каталог</a></li>
+            {(!catalogOnly || site.description) && <li><a href="/#about">О покрытии</a></li>}
+            {!catalogOnly && <li><a href="/#brands">Производители</a></li>}
+          </Fragment>
+        )}
         {!catalogOnly && <li><a href={main + '/'}>{settings.site_name}: главный сайт</a></li>}
       </ul>
     </div>
