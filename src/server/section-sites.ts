@@ -3,8 +3,8 @@
 // setupSectionSites() — при запуске, один раз для каждого раздела из SITES: включает сайт раздела по адресу
 // <раздел>.<адрес главного сайта> (на компьютере — vinyl.localhost, laminate.localhost), добавляет разделу бренды
 // и товары из seed/catalog/<раздел>.json, если товаров в разделе ещё нет. Отметка в настройках: section_site:<раздел>.
-// При каждом запуске: если в файле выросло поле version, добавляет новые товары и обновляет метку «В наличии»
-// (upgradeCatalog, отметка catalog_version:<раздел>).
+// При каждом запуске: если в файле выросло поле version, добавляет новые товары, обновляет метку «В наличии»
+// и ссылки на фото у товаров, у которых фото ещё нет (upgradeCatalog, отметка catalog_version:<раздел>).
 // Адрес и цвет потом меняются в админке: «Разделы» → раздел → «Сайт раздела».
 //
 // importProductPhotos() — при каждом запуске, в фоне: скачивает фото производителя для товаров, у которых фото
@@ -126,6 +126,9 @@ async function upgradeCatalog(sectionId: number, slug: string): Promise<{ added:
       const r = await tx`UPDATE products SET in_stock = ${p.inStock ?? false}, updated_at = now()
         WHERE section_id = ${sectionId} AND slug = ${p.slug} AND in_stock <> ${p.inStock ?? false}`;
       inStock += r.count;
+      // Товар без фото: берём ссылки на фото производителя из файла (могли исправить), importProductPhotos скачает их
+      await tx`UPDATE products SET source_images = ${tx.json(p.images)}, updated_at = now()
+        WHERE section_id = ${sectionId} AND slug = ${p.slug} AND images = '[]'::jsonb AND source_images <> ${tx.json(p.images)}`;
     }
     await tx`INSERT INTO settings (key, value) VALUES (${key}, ${String(seed.version)}) ON CONFLICT (key) DO UPDATE SET value = EXCLUDED.value`;
     return { added, inStock };
