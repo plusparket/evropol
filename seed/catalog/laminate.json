@@ -1,7 +1,10 @@
 {
  "section": "laminate",
- "version": 2,
+ "version": 3,
  "note": "Ламинат BerryAlloc Chateau+ и Ocean 8 V4, HARO TRITTY: данные и фото производителей (berryalloc.com, haro.com), снимок 2026-10. inStock — позиции из таблиц владельца HARO_2026_R.xls и BERRYALLOC_2026_R.xls, лист «Октябрь». Фото скачиваются при запуске (src/server/section-sites.ts).",
+ "site": {
+  "layout": "catalog"
+ },
  "brands": [
   {
    "name": "BerryAlloc",

@@ -1,66 +1,24 @@
 ---
-// Главная сайта раздела в виде «группы и категории» (как сайт Forbo Eurocol): заголовок, плитки групп продукции,
-// товары в наличии, текст о продукции, связь. Группы и категории — src/server/products.ts (getCategoryTree).
-import CategoryTiles from './CategoryTiles.astro';
-import ProductCard from './ProductCard.astro';
+// Главная сайта раздела в виде «группы и категории» (структура Forbo Eurocol): сразу все товары с группами
+// и категориями слева (CategoryView), ниже текст о продукции и связь.
+import CategoryView from './CategoryView.astro';
 import type { CategoryNode, ProductItem } from '../../server/products.ts';
 import type { Section } from '../../server/sections.ts';
 import type { Settings } from '../../server/settings.ts';
-import { homeSrcset, uploadUrl } from '../../server/uploads.ts';
 
 interface Props {
   site: Section;
   products: ProductItem[];
   tree: CategoryNode[];
   settings: Settings;
+  stockOnly?: boolean;
 }
-const { site, products, tree, settings } = Astro.props;
-const heading = site.heading || site.name;
+const { site, products, tree, settings, stockOnly } = Astro.props;
 const phoneHref = 'tel:' + settings.phone_main.replace(/[^\d+]/g, '');
 const waHref = 'https://wa.me/' + settings.panel_whatsapp.replace(/\D/g, '');
-const inStock = products.filter((p) => p.inStock);
-const heroImg = site.image ? uploadUrl(site.image) : '';
 ---
 
-<section class:list={['pcat-hero ss-hero', { 'pcat-hero--noimg': !heroImg }]}>
-  {heroImg && <img class="pcat-hero-img" src={heroImg} srcset={homeSrcset(site.image)} sizes="100vw" alt="" width="1600" height="1067" fetchpriority="high" />}
-  <div class="pcat-hero-card">
-    <h1 class="pcat-title">{heading}</h1>
-    {site.summary && <p class="pcat-text">{site.summary}</p>}
-    <div class="psection-links">
-      {tree.length > 0 && <a class="pbtn" href="#products">Продукция</a>}
-      {inStock.length > 0 && <a class="pbtn pbtn-outline" href="#in-stock">В наличии</a>}
-    </div>
-  </div>
-</section>
-
-<section class="psec" id="products">
-  <div class="pin">
-    <h2 class="ptitle">Продукция</h2>
-    {
-      tree.length > 0 ? (
-        <Fragment>
-          <p class="psub">Выберите группу продуктов.</p>
-          <CategoryTiles items={tree} products={products} />
-        </Fragment>
-      ) : (
-        <p class="psub">Каталог пополняется. Позвоните или напишите в WhatsApp: подберём материалы и сообщим наличие.</p>
-      )
-    }
-  </div>
-</section>
-
-{
-  inStock.length > 0 && (
-    <section class="psec ss-stock" id="in-stock">
-      <div class="pin">
-        <h2 class="ptitle">В наличии</h2>
-        <p class="psub">Эти товары есть у нас сейчас. Остальные уточняйте по телефону или в WhatsApp.</p>
-        <div class="pgrid ss-grid ss-grid--4">{inStock.map((p) => <ProductCard product={p} />)}</div>
-      </div>
-    </section>
-  )
-}
+<CategoryView site={site} tree={tree} products={products} stockOnly={stockOnly} />
 
 {
   site.description && (

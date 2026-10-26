@@ -1,6 +1,6 @@
 ---
 // Страницы сайта раздела. Сюда попадают запросы на адрес сайта раздела (vinyl.localhost/…), см. src/middleware.ts:
-//   /            → главная сайта раздела с каталогом (или с группами продукции, вид 'groups')
+//   /            → главная сайта раздела с каталогом (вид 'groups': все товары, слева группы и категории)
 //   /<товар>     → страница товара
 //   /<категория> → группа или категория товаров (вид 'groups')
 //   остальное    → 404
@@ -54,12 +54,13 @@ const { items, groups } = isHome && !withGroups
 const productPath = product && withGroups ? categoryPaths(tree, product.id)[0] : undefined;
 const related = product ? (withGroups ? relatedInCategory(products, product, productPath?.at(-1)) : relatedProducts(products, product)) : [];
 const productCrumbs = withGroups
-  ? [{ name: 'Продукция', url: '/#products' }, ...(productPath ?? []).map((c) => ({ name: c.name, url: `/${c.slug}` }))]
+  ? [{ name: site.name, url: '/' }, ...(productPath ?? []).map((c) => ({ name: c.name, url: `/${c.slug}` }))]
   : catalogOnly
     ? [{ name: site.name, url: '/' }]
     : [{ name: 'Каталог', url: '/#catalog' }];
 const productTitle = product ? [product.brand, product.name].filter(Boolean).join(' ') : '';
 const cat = catPath?.at(-1);
+const stockOnly = withGroups && Astro.url.searchParams.get('stock') === '1';
 ---
 
 {
@@ -69,10 +70,10 @@ const cat = catPath?.at(-1);
       title={site.seoTitle || withSiteName(`${heading} в Бишкеке: каталог`, settings)}
       description={site.seoDescription || site.summary || plainText(site.description) || undefined}
       canonicalPath="/"
-      noindex={Astro.url.searchParams.has('f')}
+      noindex={Astro.url.searchParams.has('f') || stockOnly}
     >
       {withGroups ? (
-        <GroupsHome site={site} products={products} tree={tree} settings={settings} />
+        <GroupsHome site={site} products={products} tree={tree} settings={settings} stockOnly={stockOnly} />
       ) : catalogOnly ? (
         <CatalogHome site={site} products={products} items={items} groups={groups} settings={settings} />
       ) : (
@@ -96,9 +97,10 @@ const cat = catPath?.at(-1);
       title={withSiteName(`${cat.name}: ${heading} в Бишкеке`, settings)}
       description={cat.description || undefined}
       canonicalPath={`/${cat.slug}`}
-      jsonLd={breadcrumbJsonLd(base, [{ name: 'Продукция', url: '/#products' }, ...catPath.map((c) => ({ name: c.name, url: `/${c.slug}` }))])}
+      noindex={stockOnly}
+      jsonLd={breadcrumbJsonLd(base, [{ name: site.name, url: '/' }, ...catPath.map((c) => ({ name: c.name, url: `/${c.slug}` }))])}
     >
-      <CategoryView tree={tree} group={catPath[0]} category={catPath[1]} products={products} />
+      <CategoryView site={site} tree={tree} group={catPath[0]} category={catPath[1]} products={products} stockOnly={stockOnly} />
     </SectionSiteLayout>
   ) : (
     <SectionSiteLayout site={site} title="Страница не найдена" noindex>

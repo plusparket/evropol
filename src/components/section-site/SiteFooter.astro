@@ -12,8 +12,8 @@ interface Props {
 const { site, sections, settings } = Astro.props;
 const main = (process.env.SITE_URL || 'http://localhost').replace(/\/$/, '');
 const phoneHref = (p: string) => 'tel:' + p.replace(/[^\d+]/g, '');
-// Вид «только каталог»: без других разделов, производителей и ссылки на главный сайт
-const catalogOnly = site.siteLayout === 'catalog';
+// Виды «только каталог» и «группы и категории»: без других разделов, производителей и ссылки на главный сайт
+const catalogOnly = site.siteLayout === 'catalog' || site.siteLayout === 'groups';
 const others = catalogOnly ? [] : sections.filter((s) => s.id !== site.id);
 const withGroups = site.siteLayout === 'groups';
 const copyright = settings.copyright.replaceAll('{year}', String(new Date().getFullYear()));
@@ -26,8 +26,8 @@ const copyright = settings.copyright.replaceAll('{year}', String(new Date().getF
       <ul>
         {withGroups ? (
           <Fragment>
-            <li><a href="/#products">Продукция</a></li>
-            <li><a href="/#in-stock">В наличии</a></li>
+            <li><a href="/">Продукция</a></li>
+            <li><a href="/?stock=1">В наличии</a></li>
             {site.description && <li><a href="/#about">О продукции</a></li>}
           </Fragment>
         ) : (

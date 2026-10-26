@@ -1,6 +1,10 @@
 {
  "section": "vinyl",
+ "version": 1,
  "note": "Кварцвинил BerryAlloc Click Comfort 55: данные и фото производителя (berryalloc.com), снимок 2026-10. Фото скачиваются при запуске (src/server/section-sites.ts).",
+ "site": {
+  "layout": "catalog"
+ },
  "products": [
   {
    "brand": "BerryAlloc",

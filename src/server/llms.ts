@@ -238,8 +238,8 @@ function siteHeader(d: SiteData, full: boolean): string[] {
   out.push(`Каталог на сайте: ${d.products.length} ${pluralRu(d.products.length, ['товар', 'товара', 'товаров'])}` +
     (stock ? `, из них ${stock} с меткой «В наличии» (в каталоге они идут первыми)` : '') + '. ' +
     'Цен на сайте нет: цену и наличие сообщают по телефону или в WhatsApp.' + (s.siteLayout === 'groups' ? '' : ' Образцы есть в офисе.'), '');
-  // Вид «только каталог» не ссылается на главный сайт — и здесь его нет
-  if (s.siteLayout !== 'catalog') out.push(`Главный сайт компании со всеми разделами: ${d.base}/`, '');
+  // Виды «только каталог» и «группы и категории» не ссылаются на главный сайт — и здесь его нет
+  if (!['catalog', 'groups'].includes(s.siteLayout)) out.push(`Главный сайт компании со всеми разделами: ${d.base}/`, '');
   return out;
 }
 
@@ -249,7 +249,7 @@ export async function buildSiteLlmsTxt(site: Section): Promise<string> {
   const md = (html: string) => htmlToMd(fillPlaceholders(html, d.settings), d.siteBase);
   const out = siteHeader(d, false);
   if (site.description) out.push(oneLine(md(site.description), 600), '');
-  out.push('## Контакты', '', ...contacts(d, !site.siteAddress && site.siteLayout !== 'catalog'), '');
+  out.push('## Контакты', '', ...contacts(d, !site.siteAddress && !['catalog', 'groups'].includes(site.siteLayout)), '');
   const brands = brandsOf(d, site);
   if (brands.length) {
     out.push('## Производители', '');
@@ -280,7 +280,7 @@ export async function buildSiteLlmsFullTxt(site: Section): Promise<string> {
   const out = siteHeader(d, true);
   out.push(`Сайт: ${d.siteBase}. Данные собраны с сайта ${new Date().toLocaleDateString('ru-RU')} и всегда совпадают с ним.`, '');
   if (site.description) out.push(`## ${site.siteLayout === 'groups' ? 'О продукции' : 'О покрытии'}`, '', md(site.description), '');
-  out.push('## Контакты', '', ...contacts(d, !site.siteAddress && site.siteLayout !== 'catalog'), '');
+  out.push('## Контакты', '', ...contacts(d, !site.siteAddress && !['catalog', 'groups'].includes(site.siteLayout)), '');
   const brands = brandsOf(d, site);
   if (brands.length) {
     out.push('## Производители', '');

@@ -4,11 +4,11 @@
 // по четыре в ряд с меткой «Новинка» и кнопкой «Подробно», внизу связь.
 // Фильтры — обычная форма GET (?f=Цвет:Серый), как в SiteHome.astro.
 import Crumbs from '../Crumbs.astro';
+import CatalogCard from './CatalogCard.astro';
 import { facetIcon } from './facet-icons.ts';
-import { productThumb, type FilterGroup, type ProductItem } from '../../server/products.ts';
+import type { FilterGroup, ProductItem } from '../../server/products.ts';
 import type { Section } from '../../server/sections.ts';
 import type { Settings } from '../../server/settings.ts';
-import { uploadUrl } from '../../server/uploads.ts';
 import { pluralRu } from '../../server/util.ts';
 
 interface Props {
@@ -23,6 +23,7 @@ const heading = site.heading || site.name;
 const phoneHref = 'tel:' + settings.phone_main.replace(/[^\d+]/g, '');
 const waHref = 'https://wa.me/' + settings.panel_whatsapp.replace(/\D/g, '');
 const filtered = groups.some((g) => g.values.some((v) => v.checked));
+const showBrand = new Set(products.map((p) => p.brand).filter(Boolean)).size > 1;
 const word = (n: number) => pluralRu(n, ['товар', 'товара', 'товаров']);
 ---
 
@@ -71,28 +72,7 @@ const word = (n: number) => pluralRu(n, ['товар', 'товара', 'това
         <div>
           {items.length > 0 ? (
             <div class="cat-items">
-              {items.map((p) => (
-                <article class="cat-card">
-                  <a class="cat-card-img" href={`/${p.slug}`}>
-                    {p.images[0] ? (
-                      <img src={uploadUrl(productThumb(p.images[0]))} alt={p.name} width="600" height="600" loading="lazy" />
-                    ) : (
-                      <span class="pcard2-noimg" />
-                    )}
-                    {(p.isNew || p.inStock) && (
-                      <span class="ss-badges">
-                        {p.inStock && <span class="ss-badge ss-badge--stock">В наличии</span>}
-                        {p.isNew && <span class="ss-badge">Новинка</span>}
-                      </span>
-                    )}
-                  </a>
-                  <div class="cat-card-body">
-                    {p.collection && <div class="cat-card-sub">{p.collection}</div>}
-                    <h2 class="cat-card-name"><a href={`/${p.slug}`}>{p.name}</a></h2>
-                    <a class="pbtn cat-card-btn" href={`/${p.slug}`}>Подробно</a>
-                  </div>
-                </article>
-              ))}
+              {items.map((p) => <CatalogCard product={p} showBrand={showBrand} />)}
             </div>
           ) : (
             <p class="psub">Нет товаров с такими параметрами. <a href="/">Очистить фильтр</a></p>

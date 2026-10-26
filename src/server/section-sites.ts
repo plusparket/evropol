@@ -122,6 +122,8 @@ async function upgradeCatalog(sectionId: number, slug: string): Promise<{ added:
   const [row] = await sql<{ value: string }[]>`SELECT value FROM settings WHERE key = ${key}`;
   if (Number(row?.value ?? 0) >= seed.version) return null;
   return sql.begin(async (tx) => {
+    // Вид главной из файла ставим, только если в админке его не выбирали (пустой — вид по умолчанию)
+    if (seed.site?.layout) await tx`UPDATE sections SET site_layout = ${seed.site.layout}, updated_at = now() WHERE id = ${sectionId} AND site_layout = ''`;
     const added = await addSeedProducts(tx, sectionId, seed);
     let inStock = 0;
     for (const p of seed.products) {

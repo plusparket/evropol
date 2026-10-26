@@ -1,8 +1,8 @@
 ---
 // Шапка сайта раздела: сверху полоса цвета раздела со ссылкой на главный сайт и телефоном,
 // ниже логотип ЕвроПол с названием раздела и меню по блокам страницы. На телефонах меню выдвигается сбоку.
-// Вид «только каталог» (site.siteLayout = 'catalog'): без других разделов и без ссылки на главный сайт.
-// Вид «группы и категории» ('groups'): меню Продукция, В наличии, О продукции, Контакты.
+// Виды «только каталог» ('catalog') и «группы и категории» ('groups') — сайт-магазин: без других разделов
+// и без ссылки на главный сайт, в меню каталог, текст о товарах и контакты.
 import { sectionHref, siteUrl, type Section } from '../../server/sections.ts';
 import type { Settings } from '../../server/settings.ts';
 
@@ -15,13 +15,13 @@ const { site, sections, settings } = Astro.props;
 const main = (process.env.SITE_URL || 'http://localhost').replace(/\/$/, '');
 const phoneHref = 'tel:' + settings.phone_main.replace(/[^\d+]/g, '');
 // Другие разделы: на их сайты, если они есть, иначе на страницы разделов главного сайта
-const catalogOnly = site.siteLayout === 'catalog';
+const catalogOnly = site.siteLayout === 'catalog' || site.siteLayout === 'groups';
 const others = catalogOnly ? [] : sections.filter((s) => s.id !== site.id).map((s) => ({ name: s.name, href: siteUrl(s) || main + sectionHref(s) }));
 const links = site.siteLayout === 'groups'
   ? [
-      { label: 'Продукция', url: '/#products' },
-      { label: 'В наличии', url: '/#in-stock' },
-      { label: 'О продукции', url: '/#about' },
+      { label: 'Продукция', url: '/' },
+      { label: 'В наличии', url: '/?stock=1' },
+      ...(site.description ? [{ label: 'О продукции', url: '/#about' }] : []),
       { label: 'Контакты', url: '/#contacts' },
     ]
   : catalogOnly
