@@ -37,7 +37,7 @@ export const siteUrl = (s: Pick<Section, 'siteHost'>) =>
 /** Куда ведёт раздел: на свой сайт, иначе на ссылку из админки */
 export const sectionLink = (s: Pick<Section, 'siteHost' | 'link'>) => siteUrl(s) || s.link;
 /** Пункт меню и плитка раздела на главном сайте: сразу на сайт раздела, если он есть, иначе на страницу раздела */
-export const sectionHref = (s: Pick<Section, 'siteHost' | 'slug'>) => siteUrl(s) || sectionUrl(s);
+export const sectionHref = (s: Pick<Section, 'siteHost' | 'slug' | 'link'>) => siteUrl(s) || s.link || sectionUrl(s);
 /** Адрес без порта и в нижнем регистре: так он хранится в site_host */
 export const normalizeHost = (host: string) => host.trim().toLowerCase().replace(/^https?:\/\//, '').replace(/[:/].*$/, '');
 
