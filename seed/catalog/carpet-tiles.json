@@ -1,0 +1,2004 @@
+{
+  "section": "carpet-tiles",
+  "version": 1,
+  "note": "Ковровая плитка из таблицы владельца KOVR_PLITKA_2026.xls, лист «ОКТЯБРЬ»: все позиции «В наличии». Данные и фото с сайтов производителей (bloq.nl, mohawkgroup.eu, betap.com, modulyss.com, beaulieu-needlefelt.com, associated-weavers.com), снимок 2026-10. Не найдены у производителей: BLOQ Arizona 942, Achieve 523, Explore 126, 922, 923; Mohawk Fox 879, 989, Perspective 975 (снята); modulyss First Sway 322, First Forward 820, 668, 149; Balsan Carus 950, 970. Фото скачиваются при запуске (src/server/section-sites.ts).",
+  "site": {
+    "layout": "catalog",
+    "summary": "Ковровая плитка шести европейских производителей для офисов, гостиниц, школ и магазинов. Плитка из каталога есть на складе."
+  },
+  "brands": [
+    {
+      "name": "Mohawk Group",
+      "link": "https://www.mohawkgroup.eu/en/carpet-tiles",
+      "description": "<p>Европейское коммерческое направление американской Mohawk Industries, прежнее название IVC Commercial. Выпускает ковровую плитку и плитку-доску для офисов на подложке EcoFlex.</p>"
+    },
+    {
+      "name": "Beaulieu",
+      "link": "https://www.beaulieu-needlefelt.com/en/product-finder/collection/nf_needlefelt_commercial_bedford?page=1",
+      "description": "<p>Бельгийская группа Beaulieu International Group. Делает иглопробивные покрытия и плитку для офисов, школ и коридоров.</p>"
+    },
+    {
+      "name": "Associated Weavers",
+      "link": "https://associated-weavers.com/en/products/carpet-flooring/product-search?type=carpettile",
+      "description": "<p>Бельгийский производитель ковровых покрытий. Коммерческую плитку выпускает под маркой Maverick.</p>"
+    },
+    {
+      "name": "BLOQ",
+      "link": "https://bloq.nl/products",
+      "description": ""
+    },
+    {
+      "name": "Betap",
+      "link": "https://betap.com/segments/commercial-interiors",
+      "description": ""
+    },
+    {
+      "name": "Modulyss",
+      "link": "https://www.modulyss.com/ru-RU/kovrovaya-plitka/kollektsii",
+      "description": ""
+    }
+  ],
+  "products": [
+    {
+      "brand": "BLOQ",
+      "name": "Renegade 812 Coffee",
+      "slug": "renegade-812",
+      "collection": "The Binary Collection",
+      "sku": "812",
+      "attributes": [],
+      "facets": [
+        {
+          "label": "Формат",
+          "value": "50 × 50 см"
+        },
+        {
+          "label": "Цвет",
+          "value": "коричневый"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Коллекция",
+          "value": "Renegade"
+        },
+        {
+          "label": "Номер цвета",
+          "value": "812"
+        },
+        {
+          "label": "Цвет",
+          "value": "Coffee (коричневый)"
+        },
+        {
+          "label": "Размер плитки",
+          "value": "50 × 50 см"
+        },
+        {
+          "label": "Страна производства",
+          "value": "Нидерланды"
+        }
+      ],
+      "description": "<p>Ковровая плитка BLOQ Renegade, цвет 812 Coffee. Рисунок облаков в два оттенка: на каждой плитке он ложится по-своему.</p>\n<p>Размер плитки 50 × 50 см. Состав ворса, вес и класс использования приведены в техническом паспорте производителя.</p>\n<p><a href=\"https://bloq.nl/sites/default/files/2024-04/BLOQ_Binary_RENEGADE_TF_EN_MRT24.pdf\" target=\"_blank\" rel=\"noopener\">Технический паспорт (PDF, англ.)</a></p>",
+      "images": [
+        "https://bloq.nl/sites/default/files/styles/large/public/2021-09/Renegade_812.jpg?itok=bWDnaDSi"
+      ],
+      "sourceUrl": "https://bloq.nl/renegade-812",
+      "inStock": true
+    },
+    {
+      "brand": "BLOQ",
+      "name": "Renegade 942 Shadow",
+      "slug": "renegade-942",
+      "collection": "The Binary Collection",
+      "sku": "942",
+      "attributes": [],
+      "facets": [
+        {
+          "label": "Формат",
+          "value": "50 × 50 см"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Коллекция",
+          "value": "Renegade"
+        },
+        {
+          "label": "Номер цвета",
+          "value": "942"
+        },
+        {
+          "label": "Цвет",
+          "value": "Shadow"
+        },
+        {
+          "label": "Размер плитки",
+          "value": "50 × 50 см"
+        },
+        {
+          "label": "Страна производства",
+          "value": "Нидерланды"
+        }
+      ],
+      "description": "<p>Ковровая плитка BLOQ Renegade, цвет 942 Shadow. Рисунок облаков в два оттенка: на каждой плитке он ложится по-своему.</p>\n<p>Размер плитки 50 × 50 см. Состав ворса, вес и класс использования приведены в техническом паспорте производителя.</p>\n<p><a href=\"https://bloq.nl/sites/default/files/2024-04/BLOQ_Binary_RENEGADE_TF_EN_MRT24.pdf\" target=\"_blank\" rel=\"noopener\">Технический паспорт (PDF, англ.)</a></p>",
+      "images": [
+        "https://bloq.nl/sites/default/files/styles/large/public/2021-09/Renegade_942.jpg?itok=zZaAHIk1"
+      ],
+      "sourceUrl": "https://bloq.nl/renegade-942",
+      "inStock": true
+    },
+    {
+      "brand": "BLOQ",
+      "name": "Tradition 925 Flint",
+      "slug": "tradition-925",
+      "collection": "The Workplace Collection",
+      "sku": "925",
+      "attributes": [],
+      "facets": [
+        {
+          "label": "Формат",
+          "value": "50 × 50 см"
+        },
+        {
+          "label": "Цвет",
+          "value": "серый"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Коллекция",
+          "value": "Tradition"
+        },
+        {
+          "label": "Номер цвета",
+          "value": "925"
+        },
+        {
+          "label": "Цвет",
+          "value": "Flint (серый)"
+        },
+        {
+          "label": "Размер плитки",
+          "value": "50 × 50 см"
+        },
+        {
+          "label": "Страна производства",
+          "value": "Нидерланды"
+        }
+      ],
+      "description": "<p>Ковровая плитка BLOQ Tradition, цвет 925 Flint. Однотонный спокойный рисунок и много цветов в коллекции: из неё собирают пол офиса в цветах компании.</p>\n<p>Размер плитки 50 × 50 см. Состав ворса, вес и класс использования приведены в техническом паспорте производителя.</p>\n<p><a href=\"https://bloq.nl/sites/default/files/2024-04/BLOQ_Workplace_TRADITION_TF_EN_MRT24.pdf\" target=\"_blank\" rel=\"noopener\">Технический паспорт (PDF, англ.)</a></p>",
+      "images": [
+        "https://bloq.nl/sites/default/files/styles/large/public/2021-09/Tradition_925-FLINT.jpg?itok=LqKvV38E"
+      ],
+      "sourceUrl": "https://bloq.nl/tradition-925",
+      "inStock": true
+    },
+    {
+      "brand": "BLOQ",
+      "name": "Connexion 926 Silent Lane",
+      "slug": "connexion-926",
+      "collection": "The Workplace Collection",
+      "sku": "926",
+      "attributes": [],
+      "facets": [
+        {
+          "label": "Формат",
+          "value": "50 × 50 см"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Коллекция",
+          "value": "Connexion"
+        },
+        {
+          "label": "Номер цвета",
+          "value": "926"
+        },
+        {
+          "label": "Цвет",
+          "value": "Silent Lane"
+        },
+        {
+          "label": "Размер плитки",
+          "value": "50 × 50 см"
+        },
+        {
+          "label": "Страна производства",
+          "value": "Нидерланды"
+        }
+      ],
+      "description": "<p>Ковровая плитка BLOQ Connexion, цвет 926 Silent Lane. Рисунок в смешанную полоску. Полоса переходит от серого к цвету и соединяет серую часть пола с цветной из плитки Tradition.</p>\n<p>Размер плитки 50 × 50 см. Состав ворса, вес и класс использования приведены в техническом паспорте производителя.</p>\n<p><a href=\"https://bloq.nl/sites/default/files/2024-04/BLOQ_Workplace_CONNEXION_TF_EN_MRT24.pdf\" target=\"_blank\" rel=\"noopener\">Технический паспорт (PDF, англ.)</a></p>",
+      "images": [
+        "https://bloq.nl/sites/default/files/styles/large/public/2022-11/BLOQ_CONNEXION-926-A.jpg?itok=teCdb3Lu"
+      ],
+      "sourceUrl": "https://bloq.nl/connexion-926",
+      "inStock": true
+    },
+    {
+      "brand": "Mohawk Group",
+      "name": "Creative Spark 232 Orange",
+      "slug": "creative-spark-232",
+      "collection": "Art Intervention",
+      "sku": "232",
+      "attributes": [
+        {
+          "label": "Формат",
+          "value": "500 × 500 мм"
+        },
+        {
+          "label": "Вес ворса",
+          "value": "540 г/м²"
+        }
+      ],
+      "facets": [
+        {
+          "label": "Формат",
+          "value": "50 × 50 см"
+        },
+        {
+          "label": "Цвет",
+          "value": "оранжевый"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Коллекция",
+          "value": "Creative Spark"
+        },
+        {
+          "label": "Номер цвета",
+          "value": "232"
+        },
+        {
+          "label": "Цвет",
+          "value": "Orange (оранжевый)"
+        },
+        {
+          "label": "Формат",
+          "value": "500 × 500 мм"
+        },
+        {
+          "label": "Конструкция",
+          "value": "тафтинг, петлевой ворс 1/10\""
+        },
+        {
+          "label": "Ворс",
+          "value": "100% полиамид, окрашенный в массе"
+        },
+        {
+          "label": "Вес ворса",
+          "value": "540 г/м²"
+        },
+        {
+          "label": "Подложка",
+          "value": "EcoFlex™ Statera, общая толщина 6,3 мм"
+        },
+        {
+          "label": "Подложка",
+          "value": "EcoFlex™ Echo, общая толщина 8,4 мм"
+        },
+        {
+          "label": "Кресла на колёсиках",
+          "value": "класс A, интенсивное использование"
+        },
+        {
+          "label": "Изменение размеров",
+          "value": "≤0,20%"
+        },
+        {
+          "label": "Сертификаты",
+          "value": "ISO 9001 / ISO 14001"
+        }
+      ],
+      "description": "<p>Ковровая плитка Mohawk Group Creative Spark, цвет 232 (оранжевый). В коллекции яркие, природные и нейтральные цвета.</p>\n<p>Формат 500 × 500 мм, вес ворса 540 г/м², ворс: 100% полиамид, окрашенный в массе. Подложка EcoFlex™ Statera, общая толщина 6,3 мм или EcoFlex™ Echo, общая толщина 8,4 мм. Выдерживает офисные кресла на колёсиках при интенсивном использовании, изменение размеров не больше 0,2%.</p>",
+      "images": [
+        "https://cdn2.ivcgroup.com/-/media/imported%20assets/ivc/8/b/f/creative%20spark%20232packshotjpg250578/originalweb.ashx?rev=aedd4996e64d40448c2fb1ab3e028859&type=originalweb&hash=810F9DDE6A96A5E9A013AA42F1CE55B7"
+      ],
+      "sourceUrl": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-232",
+      "inStock": true
+    },
+    {
+      "brand": "Mohawk Group",
+      "name": "Creative Spark 566 Blue",
+      "slug": "creative-spark-566",
+      "collection": "Art Intervention",
+      "sku": "566",
+      "attributes": [
+        {
+          "label": "Формат",
+          "value": "500 × 500 мм"
+        },
+        {
+          "label": "Вес ворса",
+          "value": "540 г/м²"
+        }
+      ],
+      "facets": [
+        {
+          "label": "Формат",
+          "value": "50 × 50 см"
+        },
+        {
+          "label": "Цвет",
+          "value": "синий"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Коллекция",
+          "value": "Creative Spark"
+        },
+        {
+          "label": "Номер цвета",
+          "value": "566"
+        },
+        {
+          "label": "Цвет",
+          "value": "Blue (синий)"
+        },
+        {
+          "label": "Формат",
+          "value": "500 × 500 мм"
+        },
+        {
+          "label": "Конструкция",
+          "value": "тафтинг, петлевой ворс 1/10\""
+        },
+        {
+          "label": "Ворс",
+          "value": "100% полиамид, окрашенный в массе"
+        },
+        {
+          "label": "Вес ворса",
+          "value": "540 г/м²"
+        },
+        {
+          "label": "Подложка",
+          "value": "EcoFlex™ Echo, общая толщина 8,4 мм"
+        },
+        {
+          "label": "Подложка",
+          "value": "EcoFlex™ Statera, общая толщина 6,3 мм"
+        },
+        {
+          "label": "Кресла на колёсиках",
+          "value": "класс A, интенсивное использование"
+        },
+        {
+          "label": "Изменение размеров",
+          "value": "≤0,20%"
+        },
+        {
+          "label": "Сертификаты",
+          "value": "ISO 9001 / ISO 14001"
+        }
+      ],
+      "description": "<p>Ковровая плитка Mohawk Group Creative Spark, цвет 566 (синий). В коллекции яркие, природные и нейтральные цвета.</p>\n<p>Формат 500 × 500 мм, вес ворса 540 г/м², ворс: 100% полиамид, окрашенный в массе. Подложка EcoFlex™ Echo, общая толщина 8,4 мм или EcoFlex™ Statera, общая толщина 6,3 мм. Выдерживает офисные кресла на колёсиках при интенсивном использовании, изменение размеров не больше 0,2%.</p>",
+      "images": [
+        "https://cdn2.ivcgroup.com/-/media/imported%20assets/ivc/0/b/8/creative%20spark%20566packshottif257240/cq5dam%20web.ashx?rev=de106e1c60b843aa9386c686ae94a30e"
+      ],
+      "sourceUrl": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-566",
+      "inStock": true
+    },
+    {
+      "brand": "Mohawk Group",
+      "name": "Creative Spark 621 Green",
+      "slug": "creative-spark-621",
+      "collection": "Art Intervention",
+      "sku": "621",
+      "attributes": [
+        {
+          "label": "Формат",
+          "value": "500 × 500 мм"
+        },
+        {
+          "label": "Вес ворса",
+          "value": "540 г/м²"
+        }
+      ],
+      "facets": [
+        {
+          "label": "Формат",
+          "value": "50 × 50 см"
+        },
+        {
+          "label": "Цвет",
+          "value": "зелёный"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Коллекция",
+          "value": "Creative Spark"
+        },
+        {
+          "label": "Номер цвета",
+          "value": "621"
+        },
+        {
+          "label": "Цвет",
+          "value": "Green (зелёный)"
+        },
+        {
+          "label": "Формат",
+          "value": "500 × 500 мм"
+        },
+        {
+          "label": "Конструкция",
+          "value": "тафтинг, петлевой ворс 1/10\""
+        },
+        {
+          "label": "Ворс",
+          "value": "100% полиамид, окрашенный в массе"
+        },
+        {
+          "label": "Вес ворса",
+          "value": "540 г/м²"
+        },
+        {
+          "label": "Подложка",
+          "value": "EcoFlex™ Statera, общая толщина 6,3 мм"
+        },
+        {
+          "label": "Подложка",
+          "value": "EcoFlex™ Echo, общая толщина 8,4 мм"
+        },
+        {
+          "label": "Кресла на колёсиках",
+          "value": "класс A, интенсивное использование"
+        },
+        {
+          "label": "Изменение размеров",
+          "value": "≤0,20%"
+        },
+        {
+          "label": "Сертификаты",
+          "value": "ISO 9001 / ISO 14001"
+        }
+      ],
+      "description": "<p>Ковровая плитка Mohawk Group Creative Spark, цвет 621 (зелёный). В коллекции яркие, природные и нейтральные цвета.</p>\n<p>Формат 500 × 500 мм, вес ворса 540 г/м², ворс: 100% полиамид, окрашенный в массе. Подложка EcoFlex™ Statera, общая толщина 6,3 мм или EcoFlex™ Echo, общая толщина 8,4 мм. Выдерживает офисные кресла на колёсиках при интенсивном использовании, изменение размеров не больше 0,2%.</p>",
+      "images": [
+        "https://cdn2.ivcgroup.com/-/media/imported%20assets/ivc/b/4/d/creative%20spark%20621packshotjpg255890/originalweb.ashx?rev=78e35458d7624d28aee28a334cb88e53&type=originalweb&hash=13DC127397B567714CE965A59CCA8C66"
+      ],
+      "sourceUrl": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-621",
+      "inStock": true
+    },
+    {
+      "brand": "Mohawk Group",
+      "name": "Creative Spark 574 Blue",
+      "slug": "creative-spark-574",
+      "collection": "Art Intervention",
+      "sku": "574",
+      "attributes": [
+        {
+          "label": "Формат",
+          "value": "500 × 500 мм"
+        },
+        {
+          "label": "Вес ворса",
+          "value": "540 г/м²"
+        }
+      ],
+      "facets": [
+        {
+          "label": "Формат",
+          "value": "50 × 50 см"
+        },
+        {
+          "label": "Цвет",
+          "value": "синий"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Коллекция",
+          "value": "Creative Spark"
+        },
+        {
+          "label": "Номер цвета",
+          "value": "574"
+        },
+        {
+          "label": "Цвет",
+          "value": "Blue (синий)"
+        },
+        {
+          "label": "Формат",
+          "value": "500 × 500 мм"
+        },
+        {
+          "label": "Конструкция",
+          "value": "тафтинг, петлевой ворс 1/10\""
+        },
+        {
+          "label": "Ворс",
+          "value": "100% полиамид, окрашенный в массе"
+        },
+        {
+          "label": "Вес ворса",
+          "value": "540 г/м²"
+        },
+        {
+          "label": "Подложка",
+          "value": "EcoFlex™ Echo, общая толщина 8,4 мм"
+        },
+        {
+          "label": "Подложка",
+          "value": "EcoFlex™ Statera, общая толщина 6,3 мм"
+        },
+        {
+          "label": "Кресла на колёсиках",
+          "value": "класс A, интенсивное использование"
+        },
+        {
+          "label": "Изменение размеров",
+          "value": "≤0,20%"
+        },
+        {
+          "label": "Сертификаты",
+          "value": "ISO 9001 / ISO 14001"
+        }
+      ],
+      "description": "<p>Ковровая плитка Mohawk Group Creative Spark, цвет 574 (синий). В коллекции яркие, природные и нейтральные цвета.</p>\n<p>Формат 500 × 500 мм, вес ворса 540 г/м², ворс: 100% полиамид, окрашенный в массе. Подложка EcoFlex™ Echo, общая толщина 8,4 мм или EcoFlex™ Statera, общая толщина 6,3 мм. Выдерживает офисные кресла на колёсиках при интенсивном использовании, изменение размеров не больше 0,2%.</p>",
+      "images": [
+        "https://cdn2.ivcgroup.com/-/media/imported%20assets/ivc/1/1/f/creative%20spark%20574packshottif254089/cq5dam%20web.ashx?rev=695ccaec725842a789b42c66b58a19a9"
+      ],
+      "sourceUrl": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-574",
+      "inStock": true
+    },
+    {
+      "brand": "Mohawk Group",
+      "name": "Creative Spark 979 Grey",
+      "slug": "creative-spark-979",
+      "collection": "Art Intervention",
+      "sku": "979",
+      "attributes": [
+        {
+          "label": "Формат",
+          "value": "500 × 500 мм"
+        },
+        {
+          "label": "Вес ворса",
+          "value": "540 г/м²"
+        }
+      ],
+      "facets": [
+        {
+          "label": "Формат",
+          "value": "50 × 50 см"
+        },
+        {
+          "label": "Цвет",
+          "value": "серый"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Коллекция",
+          "value": "Creative Spark"
+        },
+        {
+          "label": "Номер цвета",
+          "value": "979"
+        },
+        {
+          "label": "Цвет",
+          "value": "Grey (серый)"
+        },
+        {
+          "label": "Формат",
+          "value": "500 × 500 мм"
+        },
+        {
+          "label": "Конструкция",
+          "value": "тафтинг, петлевой ворс 1/10\""
+        },
+        {
+          "label": "Ворс",
+          "value": "100% полиамид, окрашенный в массе"
+        },
+        {
+          "label": "Вес ворса",
+          "value": "540 г/м²"
+        },
+        {
+          "label": "Подложка",
+          "value": "EcoFlex™ Echo, общая толщина 8,4 мм"
+        },
+        {
+          "label": "Подложка",
+          "value": "EcoFlex™ Echo, общая толщина 6,3 мм"
+        },
+        {
+          "label": "Подложка",
+          "value": "EcoFlex™ Statera, общая толщина 6,3 мм"
+        },
+        {
+          "label": "Кресла на колёсиках",
+          "value": "класс A, интенсивное использование"
+        },
+        {
+          "label": "Изменение размеров",
+          "value": "≤0,20%"
+        },
+        {
+          "label": "Сертификаты",
+          "value": "ISO 9001 / ISO 14001"
+        }
+      ],
+      "description": "<p>Ковровая плитка Mohawk Group Creative Spark, цвет 979 (серый). В коллекции яркие, природные и нейтральные цвета.</p>\n<p>Формат 500 × 500 мм, вес ворса 540 г/м², ворс: 100% полиамид, окрашенный в массе. Подложка EcoFlex™ Echo, общая толщина 8,4 мм или EcoFlex™ Echo, общая толщина 6,3 мм или EcoFlex™ Statera, общая толщина 6,3 мм. Выдерживает офисные кресла на колёсиках при интенсивном использовании, изменение размеров не больше 0,2%.</p>",
+      "images": [
+        "https://cdn2.ivcgroup.com/-/media/imported%20assets/ivc/f/b/f/creative%20spark%20979packshottif241526/cq5dam%20web.ashx?rev=612ca6ade4f045f99960015997b512d9"
+      ],
+      "sourceUrl": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-979",
+      "inStock": true
+    },
+    {
+      "brand": "Mohawk Group",
+      "name": "Bruut 745 Brown",
+      "slug": "bruut-745",
+      "collection": "Imperfection",
+      "sku": "745",
+      "attributes": [
+        {
+          "label": "Формат",
+          "value": "250 × 1000 мм"
+        },
+        {
+          "label": "Вес ворса",
+          "value": "780 г/м²"
+        }
+      ],
+      "facets": [
+        {
+          "label": "Формат",
+          "value": "25 × 100 см"
+        },
+        {
+          "label": "Цвет",
+          "value": "коричневый"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Коллекция",
+          "value": "Bruut"
+        },
+        {
+          "label": "Номер цвета",
+          "value": "745"
+        },
+        {
+          "label": "Цвет",
+          "value": "Brown (коричневый)"
+        },
+        {
+          "label": "Формат",
+          "value": "250 × 1000 мм"
+        },
+        {
+          "label": "Конструкция",
+          "value": "тафтинг, петлевой ворс 1/12\""
+        },
+        {
+          "label": "Ворс",
+          "value": "ECONYL, 100% регенерированный полиамид"
+        },
+        {
+          "label": "Вес ворса",
+          "value": "780 г/м²"
+        },
+        {
+          "label": "Подложка",
+          "value": "EcoFlex™ One, общая толщина 8,5 мм"
+        },
+        {
+          "label": "Кресла на колёсиках",
+          "value": "класс A, интенсивное использование"
+        },
+        {
+          "label": "Изменение размеров",
+          "value": "≤0,20%"
+        }
+      ],
+      "description": "<p>Плитка-доска Mohawk Group Bruut, цвет 745 (коричневый). Рисунок напоминает необработанный материал, плотный ворс приглушает шаги.</p>\n<p>Формат 250 × 1000 мм, вес ворса 780 г/м², ворс: ECONYL, 100% регенерированный полиамид. Подложка EcoFlex™ One, общая толщина 8,5 мм. Выдерживает офисные кресла на колёсиках при интенсивном использовании, изменение размеров не больше 0,2%.</p>",
+      "images": [
+        "https://cdn2.ivcgroup.com/-/media/imported%20assets/ivc/b/5/3/bruut%20745packshotjpg253009/originalweb.ashx?rev=08f40c4a640740718bd3eaba7bca214f&type=originalweb&hash=8BB9F7AD4F3ECCA67BC416804034208E"
+      ],
+      "sourceUrl": "https://www.mohawkgroup.eu/en/carpet-tiles/imperfection/bruut-745",
+      "inStock": true
+    },
+    {
+      "brand": "Betap",
+      "name": "Vienna 7872",
+      "slug": "vienna-7872",
+      "collection": "Vienna",
+      "sku": "7872",
+      "attributes": [
+        {
+          "label": "Ворс",
+          "value": "полипропилен"
+        },
+        {
+          "label": "Общая толщина",
+          "value": "5,9 мм"
+        }
+      ],
+      "facets": [
+        {
+          "label": "Формат",
+          "value": "50 × 50 см"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Коллекция",
+          "value": "Vienna"
+        },
+        {
+          "label": "Номер цвета",
+          "value": "7872"
+        },
+        {
+          "label": "Размер плитки",
+          "value": "50 × 50 см"
+        },
+        {
+          "label": "Тип",
+          "value": "петлевой ворс букле"
+        },
+        {
+          "label": "Ворс",
+          "value": "100% полипропилен"
+        },
+        {
+          "label": "Высота ворса",
+          "value": "2,9 мм"
+        },
+        {
+          "label": "Общая толщина",
+          "value": "5,9 мм"
+        },
+        {
+          "label": "Подложка",
+          "value": "Actionback или Polyflex"
+        },
+        {
+          "label": "Класс использования",
+          "value": "33"
+        },
+        {
+          "label": "Пожарный класс",
+          "value": "Cfl-s1"
+        },
+        {
+          "label": "Защита от пятен",
+          "value": "Scotchgard"
+        },
+        {
+          "label": "Тёплый пол",
+          "value": "можно"
+        },
+        {
+          "label": "Страна производства",
+          "value": "Нидерланды"
+        }
+      ],
+      "description": "<p>Ковровая плитка Betap Vienna, цвет 7872. Петлевой ворс букле из 100% полипропилена, обработка Scotchgard от пятен.</p>\n<p>Высота ворса 2,9 мм, общая толщина 5,9 мм, подложка Actionback или Polyflex. Класс использования 33, пожарный класс Cfl-s1. Подходит для тёплого пола и домашних кресел на колёсиках.</p>\n<p><a href=\"https://betap.com/assets/uploads/Vienna_ab-lowres.pdf\" target=\"_blank\" rel=\"noopener\">Технический паспорт (PDF, англ.)</a></p>",
+      "images": [
+        "https://betap.com/assets/uploads/Producten/vienna/_big/57_BETAP_VIENNA-TILE_7872_006.jpg"
+      ],
+      "sourceUrl": "https://betap.com/products/vienna?color=15490",
+      "inStock": true
+    },
+    {
+      "brand": "Betap",
+      "name": "Larix 7578",
+      "slug": "larix-7578",
+      "collection": "Larix",
+      "sku": "7578",
+      "attributes": [
+        {
+          "label": "Ворс",
+          "value": "полиамид"
+        },
+        {
+          "label": "Высота ворса",
+          "value": "3,5 мм"
+        }
+      ],
+      "facets": [
+        {
+          "label": "Формат",
+          "value": "50 × 50 см"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Коллекция",
+          "value": "Larix"
+        },
+        {
+          "label": "Номер цвета",
+          "value": "7578"
+        },
+        {
+          "label": "Размер плитки",
+          "value": "50 × 50 см"
+        },
+        {
+          "label": "Тип",
+          "value": "петлевой ворс"
+        },
+        {
+          "label": "Ворс",
+          "value": "100% полиамид 6, окрашен в массе"
+        },
+        {
+          "label": "Высота ворса",
+          "value": "3,5 мм"
+        },
+        {
+          "label": "Подложка",
+          "value": "Polyflex"
+        },
+        {
+          "label": "Класс использования",
+          "value": "33"
+        },
+        {
+          "label": "Пожарный класс",
+          "value": "Bfl-s1"
+        },
+        {
+          "label": "Кресла на колёсиках",
+          "value": "можно"
+        },
+        {
+          "label": "Тёплый пол",
+          "value": "можно"
+        },
+        {
+          "label": "Страна производства",
+          "value": "Нидерланды"
+        }
+      ],
+      "description": "<p>Ковровая плитка Betap Larix, цвет 7578. Петлевой ворс из полиамида 6, окрашенного в массе: цвет не выгорает и не вымывается при чистке.</p>\n<p>Высота ворса 3,5 мм, подложка Polyflex. Класс использования 33, пожарный класс Bfl-s1. Выдерживает офисные кресла на колёсиках, подходит для тёплого пола.</p>\n<p><a href=\"https://betap.com/assets/uploads/Larix-Tile_251210_151841.pdf\" target=\"_blank\" rel=\"noopener\">Технический паспорт (PDF, англ.)</a></p>",
+      "images": [
+        "https://betap.com/assets/uploads/Producten/larix/_big/59_BETAP_LARIX-TILE_7578_002.jpg"
+      ],
+      "sourceUrl": "https://betap.com/products/larix-tile?color=90071",
+      "inStock": true
+    },
+    {
+      "brand": "Modulyss",
+      "name": "First Sway 957",
+      "slug": "first-sway-957",
+      "collection": "First",
+      "sku": "957",
+      "attributes": [],
+      "facets": [
+        {
+          "label": "Формат",
+          "value": "50 × 50 см"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Коллекция",
+          "value": "First Sway"
+        },
+        {
+          "label": "Номер цвета",
+          "value": "957"
+        },
+        {
+          "label": "Размер плитки",
+          "value": "50 × 50 см"
+        },
+        {
+          "label": "Другие размеры",
+          "value": "по заказу от 100 м²: 25 × 100, 50 × 100, 100 × 100 см"
+        },
+        {
+          "label": "Подложка",
+          "value": "back2back"
+        },
+        {
+          "label": "Другие подложки",
+          "value": "comfortBACK, ecoBACK, comfortBACK ECO (под заказ)"
+        },
+        {
+          "label": "Страна производства",
+          "value": "Бельгия"
+        }
+      ],
+      "description": "<p>Ковровая плитка modulyss First Sway, цвет 957. Петлевой ворс с подвижным рисунком: узор и фактура меняются от плитки к плитке. Палитра мягкая и насыщенная.</p>\n<p>Стандартный размер 50 × 50 см, подложка back2back. Другие размеры и подложки comfortBACK и ecoBACK modulyss делает под заказ от 100 м².</p>",
+      "images": [
+        "https://s3.eu-central-1.wasabisys.com/modulyss/styles/1_1_square_medium/s3/2024-03/First%20Sway%20957%20A.jpg.webp?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=XH517UJ1EXXACVGS9UIH/20261026/eu-central-1/s3/aws4_request&X-Amz-Date=20261026T190250Z&X-Amz-SignedHeaders=host&X-Amz-Expires=518400&X-Amz-Signature=65b2595cedc97e103bf607f8ea5eb54de389f23e20971ff7f8d41cc0a3e8d979&itok=92sg2mvC"
+      ],
+      "sourceUrl": "https://www.modulyss.com/en-INT/carpet/collections/first-sway",
+      "inStock": true
+    },
+    {
+      "brand": "Modulyss",
+      "name": "First Sway 965",
+      "slug": "first-sway-965",
+      "collection": "First",
+      "sku": "965",
+      "attributes": [],
+      "facets": [
+        {
+          "label": "Формат",
+          "value": "50 × 50 см"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Коллекция",
+          "value": "First Sway"
+        },
+        {
+          "label": "Номер цвета",
+          "value": "965"
+        },
+        {
+          "label": "Размер плитки",
+          "value": "50 × 50 см"
+        },
+        {
+          "label": "Другие размеры",
+          "value": "по заказу от 100 м²: 25 × 100, 50 × 100, 100 × 100 см"
+        },
+        {
+          "label": "Подложка",
+          "value": "back2back"
+        },
+        {
+          "label": "Другие подложки",
+          "value": "comfortBACK, ecoBACK, comfortBACK ECO (под заказ)"
+        },
+        {
+          "label": "Страна производства",
+          "value": "Бельгия"
+        }
+      ],
+      "description": "<p>Ковровая плитка modulyss First Sway, цвет 965. Петлевой ворс с подвижным рисунком: узор и фактура меняются от плитки к плитке. Палитра мягкая и насыщенная.</p>\n<p>Стандартный размер 50 × 50 см, подложка back2back. Другие размеры и подложки comfortBACK и ecoBACK modulyss делает под заказ от 100 м².</p>",
+      "images": [
+        "https://s3.eu-central-1.wasabisys.com/modulyss/styles/1_1_square_medium/s3/2024-03/First%20Sway%20965%20A.jpg.webp?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=XH517UJ1EXXACVGS9UIH/20261026/eu-central-1/s3/aws4_request&X-Amz-Date=20261026T190250Z&X-Amz-SignedHeaders=host&X-Amz-Expires=518400&X-Amz-Signature=06cccb684f50e40de1ef3b35ec4b4241cd448e8b99cb014106c02e085fffb9d5&itok=s5ymbaSw"
+      ],
+      "sourceUrl": "https://www.modulyss.com/en-INT/carpet/collections/first-sway",
+      "inStock": true
+    },
+    {
+      "brand": "Modulyss",
+      "name": "First Forward 140",
+      "slug": "first-forward-140",
+      "collection": "First",
+      "sku": "140",
+      "attributes": [],
+      "facets": [
+        {
+          "label": "Формат",
+          "value": "50 × 50 см"
+        },
+        {
+          "label": "Цвет",
+          "value": "бежевый"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Коллекция",
+          "value": "First Forward"
+        },
+        {
+          "label": "Номер цвета",
+          "value": "140"
+        },
+        {
+          "label": "Цвет",
+          "value": "бежевый"
+        },
+        {
+          "label": "Размер плитки",
+          "value": "50 × 50 см"
+        },
+        {
+          "label": "Другие размеры",
+          "value": "по заказу от 100 м²: 25 × 100, 50 × 100, 100 × 100 см"
+        },
+        {
+          "label": "Подложка",
+          "value": "back2back"
+        },
+        {
+          "label": "Другие подложки",
+          "value": "comfortBACK, ecoBACK, comfortBACK ECO (под заказ)"
+        },
+        {
+          "label": "Страна производства",
+          "value": "Бельгия"
+        }
+      ],
+      "description": "<p>Ковровая плитка modulyss First Forward, цвет 140 (бежевый). Петлевой ворс, сдержанный рисунок и широкая палитра. Цвета подобраны так, чтобы плитку сочетали с другими коллекциями First.</p>\n<p>Стандартный размер 50 × 50 см, подложка back2back. Другие размеры и подложки comfortBACK и ecoBACK modulyss делает под заказ от 100 м².</p>",
+      "images": [
+        "https://s3.eu-central-1.wasabisys.com/modulyss/styles/1_1_square_medium/s3/2020-08/24_First%20Forward_140_A.jpg.webp?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=XH517UJ1EXXACVGS9UIH/20261026/eu-central-1/s3/aws4_request&X-Amz-Date=20261026T190222Z&X-Amz-SignedHeaders=host&X-Amz-Expires=518400&X-Amz-Signature=9e175b23a93f049ee242f10d2629354e5548e947dfaf3bf19e28c23ed6438cb7&itok=52cNVgYh"
+      ],
+      "sourceUrl": "https://www.modulyss.com/en-INT/carpet/collections/first-forward",
+      "inStock": true
+    },
+    {
+      "brand": "Modulyss",
+      "name": "First Define 140",
+      "slug": "first-define-140",
+      "collection": "First",
+      "sku": "140",
+      "attributes": [],
+      "facets": [
+        {
+          "label": "Формат",
+          "value": "50 × 50 см"
+        },
+        {
+          "label": "Цвет",
+          "value": "оливковый"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Коллекция",
+          "value": "First Define"
+        },
+        {
+          "label": "Номер цвета",
+          "value": "140"
+        },
+        {
+          "label": "Цвет",
+          "value": "оливковый"
+        },
+        {
+          "label": "Размер плитки",
+          "value": "50 × 50 см"
+        },
+        {
+          "label": "Другие размеры",
+          "value": "по заказу от 100 м²: 25 × 100, 50 × 100, 100 × 100 см"
+        },
+        {
+          "label": "Подложка",
+          "value": "back2back"
+        },
+        {
+          "label": "Другие подложки",
+          "value": "comfortBACK, ecoBACK, comfortBACK ECO (под заказ)"
+        },
+        {
+          "label": "Страна производства",
+          "value": "Бельгия"
+        }
+      ],
+      "description": "<p>Ковровая плитка modulyss First Define, цвет 140 (оливковый). Петлевой ворс с рисунком из мягких линий. Палитра идёт от холодных светлых до тёплых насыщенных цветов.</p>\n<p>Стандартный размер 50 × 50 см, подложка back2back. Другие размеры и подложки comfortBACK и ecoBACK modulyss делает под заказ от 100 м².</p>",
+      "images": [
+        "https://s3.eu-central-1.wasabisys.com/modulyss/styles/1_1_square_medium/s3/2020-08/28_140_50x50_A.jpg.webp?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=XH517UJ1EXXACVGS9UIH/20261026/eu-central-1/s3/aws4_request&X-Amz-Date=20261026T190342Z&X-Amz-SignedHeaders=host&X-Amz-Expires=518400&X-Amz-Signature=46ec1239dcbcf3daf8b40fb92df24e7d0707d4b718be2ff29df651d77f0c0ba5&itok=Px7YsfWa"
+      ],
+      "sourceUrl": "https://www.modulyss.com/en-INT/carpet/collections/first-define",
+      "inStock": true
+    },
+    {
+      "brand": "Modulyss",
+      "name": "First Define 957",
+      "slug": "first-define-957",
+      "collection": "First",
+      "sku": "957",
+      "attributes": [],
+      "facets": [
+        {
+          "label": "Формат",
+          "value": "50 × 50 см"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Коллекция",
+          "value": "First Define"
+        },
+        {
+          "label": "Номер цвета",
+          "value": "957"
+        },
+        {
+          "label": "Размер плитки",
+          "value": "50 × 50 см"
+        },
+        {
+          "label": "Другие размеры",
+          "value": "по заказу от 100 м²: 25 × 100, 50 × 100, 100 × 100 см"
+        },
+        {
+          "label": "Подложка",
+          "value": "back2back"
+        },
+        {
+          "label": "Другие подложки",
+          "value": "comfortBACK, ecoBACK, comfortBACK ECO (под заказ)"
+        },
+        {
+          "label": "Страна производства",
+          "value": "Бельгия"
+        }
+      ],
+      "description": "<p>Ковровая плитка modulyss First Define, цвет 957. Петлевой ворс с рисунком из мягких линий. Палитра идёт от холодных светлых до тёплых насыщенных цветов.</p>\n<p>Стандартный размер 50 × 50 см, подложка back2back. Другие размеры и подложки comfortBACK и ecoBACK modulyss делает под заказ от 100 м².</p>",
+      "images": [
+        "https://s3.eu-central-1.wasabisys.com/modulyss/styles/1_1_square_medium/s3/2020-11/28_957_50x50_A.jpg.webp?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=XH517UJ1EXXACVGS9UIH/20261026/eu-central-1/s3/aws4_request&X-Amz-Date=20261026T190223Z&X-Amz-SignedHeaders=host&X-Amz-Expires=518400&X-Amz-Signature=12d26a7fe8e31a2474056dfcc791e2d3c6ca388e183564cc37e0cd7364e54ec1&itok=ctShw4VX"
+      ],
+      "sourceUrl": "https://www.modulyss.com/en-INT/carpet/collections/first-define",
+      "inStock": true
+    },
+    {
+      "brand": "Modulyss",
+      "name": "First Define 995",
+      "slug": "first-define-995",
+      "collection": "First",
+      "sku": "995",
+      "attributes": [],
+      "facets": [
+        {
+          "label": "Формат",
+          "value": "50 × 50 см"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Коллекция",
+          "value": "First Define"
+        },
+        {
+          "label": "Номер цвета",
+          "value": "995"
+        },
+        {
+          "label": "Размер плитки",
+          "value": "50 × 50 см"
+        },
+        {
+          "label": "Другие размеры",
+          "value": "по заказу от 100 м²: 25 × 100, 50 × 100, 100 × 100 см"
+        },
+        {
+          "label": "Подложка",
+          "value": "back2back"
+        },
+        {
+          "label": "Другие подложки",
+          "value": "comfortBACK, ecoBACK, comfortBACK ECO (под заказ)"
+        },
+        {
+          "label": "Страна производства",
+          "value": "Бельгия"
+        }
+      ],
+      "description": "<p>Ковровая плитка modulyss First Define, цвет 995. Петлевой ворс с рисунком из мягких линий. Палитра идёт от холодных светлых до тёплых насыщенных цветов.</p>\n<p>Стандартный размер 50 × 50 см, подложка back2back. Другие размеры и подложки comfortBACK и ecoBACK modulyss делает под заказ от 100 м².</p>",
+      "images": [
+        "https://s3.eu-central-1.wasabisys.com/modulyss/styles/1_1_square_medium/s3/2020-08/28_995_50x50_A.jpg.webp?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=XH517UJ1EXXACVGS9UIH/20261026/eu-central-1/s3/aws4_request&X-Amz-Date=20261026T190342Z&X-Amz-SignedHeaders=host&X-Amz-Expires=518400&X-Amz-Signature=05865db11a92399025b0fde908807e703d4ae94687ea745baec8ea27afe66ac2&itok=XhxRgYVH"
+      ],
+      "sourceUrl": "https://www.modulyss.com/en-INT/carpet/collections/first-define",
+      "inStock": true
+    },
+    {
+      "brand": "Modulyss",
+      "name": "First Streamline 106",
+      "slug": "first-streamline-106",
+      "collection": "First",
+      "sku": "106",
+      "attributes": [],
+      "facets": [
+        {
+          "label": "Формат",
+          "value": "50 × 50 см"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Коллекция",
+          "value": "First Streamline"
+        },
+        {
+          "label": "Номер цвета",
+          "value": "106"
+        },
+        {
+          "label": "Размер плитки",
+          "value": "50 × 50 см"
+        },
+        {
+          "label": "Другие размеры",
+          "value": "по заказу от 100 м²: 25 × 100, 50 × 100, 100 × 100 см"
+        },
+        {
+          "label": "Подложка",
+          "value": "back2back"
+        },
+        {
+          "label": "Другие подложки",
+          "value": "comfortBACK, ecoBACK, comfortBACK ECO (под заказ)"
+        },
+        {
+          "label": "Страна производства",
+          "value": "Бельгия"
+        }
+      ],
+      "description": "<p>Ковровая плитка modulyss First Streamline, цвет 106. Рисунок в тонкую полоску, как у костюмной ткани. Яркие цвета коллекции оживляют строгий офис.</p>\n<p>Стандартный размер 50 × 50 см, подложка back2back. Другие размеры и подложки comfortBACK и ecoBACK modulyss делает под заказ от 100 м².</p>",
+      "images": [
+        "https://s3.eu-central-1.wasabisys.com/modulyss/styles/1_1_square_medium/s3/2020-08/26_106_50x50_A_0.jpg.webp?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=XH517UJ1EXXACVGS9UIH/20261026/eu-central-1/s3/aws4_request&X-Amz-Date=20261026T190408Z&X-Amz-SignedHeaders=host&X-Amz-Expires=518400&X-Amz-Signature=ac261ae7cc0582f864d832e463616643e4c7a50845c1a98a65c1f5ea0b756cc7&itok=YJ50XfhG"
+      ],
+      "sourceUrl": "https://www.modulyss.com/en-INT/carpet/collections/first-streamline",
+      "inStock": true
+    },
+    {
+      "brand": "Modulyss",
+      "name": "Rocket 553",
+      "slug": "rocket-553",
+      "collection": "Rocket",
+      "sku": "553",
+      "attributes": [],
+      "facets": [
+        {
+          "label": "Формат",
+          "value": "50 × 50 см"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Коллекция",
+          "value": "Rocket"
+        },
+        {
+          "label": "Номер цвета",
+          "value": "553"
+        },
+        {
+          "label": "Размер плитки",
+          "value": "50 × 50 см"
+        },
+        {
+          "label": "Другие размеры",
+          "value": "по заказу от 100 м²: 25 × 100, 50 × 100, 100 × 100 см"
+        },
+        {
+          "label": "Подложка",
+          "value": "back2back"
+        },
+        {
+          "label": "Другие подложки",
+          "value": "comfortBACK, ecoBACK, comfortBACK ECO (под заказ)"
+        },
+        {
+          "label": "Страна производства",
+          "value": "Бельгия"
+        }
+      ],
+      "description": "<p>Ковровая плитка modulyss Rocket, цвет 553.</p>\n<p>Стандартный размер 50 × 50 см, подложка back2back. Другие размеры и подложки comfortBACK и ecoBACK modulyss делает под заказ от 100 м².</p>",
+      "images": [
+        "https://s3.eu-central-1.wasabisys.com/modulyss/styles/1_1_square_medium/s3/2023-02/ROCKET%20553.jpg.webp?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=XH517UJ1EXXACVGS9UIH/20261026/eu-central-1/s3/aws4_request&X-Amz-Date=20261026T191816Z&X-Amz-SignedHeaders=host&X-Amz-Expires=518400&X-Amz-Signature=c48791a60f5d8af48309b33ce9b76b3ec19c00b27e727b91b4daf3f863f9c070&itok=lxFsyNR7"
+      ],
+      "sourceUrl": "https://www.modulyss.com/en-INT/carpet/collections/rocket",
+      "inStock": true
+    },
+    {
+      "brand": "Beaulieu",
+      "name": "Bedford 5507 Blue",
+      "slug": "bedford-5507",
+      "collection": "Bedford",
+      "sku": "5507",
+      "attributes": [
+        {
+          "label": "Конструкция",
+          "value": "иглопробивная"
+        },
+        {
+          "label": "Общая толщина",
+          "value": "8 мм"
+        }
+      ],
+      "facets": [
+        {
+          "label": "Формат",
+          "value": "50 × 50 см"
+        },
+        {
+          "label": "Цвет",
+          "value": "синий"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Коллекция",
+          "value": "Bedford"
+        },
+        {
+          "label": "Номер цвета",
+          "value": "5507"
+        },
+        {
+          "label": "Цвет",
+          "value": "Blue (синий)"
+        },
+        {
+          "label": "Размер плитки",
+          "value": "50 × 50 см"
+        },
+        {
+          "label": "Конструкция",
+          "value": "иглопробивной войлок"
+        },
+        {
+          "label": "Ворс",
+          "value": "100% полипропилен"
+        },
+        {
+          "label": "Поверхность",
+          "value": "рубчик (1 Rib 4.7)"
+        },
+        {
+          "label": "Подложка",
+          "value": "битумная"
+        },
+        {
+          "label": "Высота ворса",
+          "value": "3,5 мм"
+        },
+        {
+          "label": "Общая толщина",
+          "value": "8 мм"
+        },
+        {
+          "label": "Вес ворса",
+          "value": "900 г/м²"
+        },
+        {
+          "label": "Общий вес",
+          "value": "3660 г/м²"
+        },
+        {
+          "label": "В коробке",
+          "value": "4 м²"
+        },
+        {
+          "label": "Страна производства",
+          "value": "Бельгия"
+        }
+      ],
+      "description": "<p>Иглопробивная плитка Beaulieu Bedford, цвет 5507 Blue. Ворс из 100% полипропилена с рельефом в рубчик, подложка битумная.</p>\n<p>Высота ворса 3,5 мм, общая толщина 8 мм, вес ворса 900 г/м², общий вес 3660 г/м². Размер 50 × 50 см, в коробке 4 м².</p>",
+      "images": [
+        "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5oy5i6enqgmrmo/beaulieu_1000w,default/bedford_tile_5507_nf_beaulieu_psh"
+      ],
+      "sourceUrl": "https://www.beaulieu-needlefelt.com/en/product-finder/color/nf_needlefelt_tiles_bedfordtile_5507",
+      "inStock": true
+    },
+    {
+      "brand": "Beaulieu",
+      "name": "Bedford 2531 Steel",
+      "slug": "bedford-2531",
+      "collection": "Bedford",
+      "sku": "2531",
+      "attributes": [
+        {
+          "label": "Конструкция",
+          "value": "иглопробивная"
+        },
+        {
+          "label": "Общая толщина",
+          "value": "8 мм"
+        }
+      ],
+      "facets": [
+        {
+          "label": "Формат",
+          "value": "50 × 50 см"
+        },
+        {
+          "label": "Цвет",
+          "value": "серый"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Коллекция",
+          "value": "Bedford"
+        },
+        {
+          "label": "Номер цвета",
+          "value": "2531"
+        },
+        {
+          "label": "Цвет",
+          "value": "Steel (серый)"
+        },
+        {
+          "label": "Размер плитки",
+          "value": "50 × 50 см"
+        },
+        {
+          "label": "Конструкция",
+          "value": "иглопробивной войлок"
+        },
+        {
+          "label": "Ворс",
+          "value": "100% полипропилен"
+        },
+        {
+          "label": "Поверхность",
+          "value": "рубчик (1 Rib 4.7)"
+        },
+        {
+          "label": "Подложка",
+          "value": "битумная"
+        },
+        {
+          "label": "Высота ворса",
+          "value": "3,5 мм"
+        },
+        {
+          "label": "Общая толщина",
+          "value": "8 мм"
+        },
+        {
+          "label": "Вес ворса",
+          "value": "900 г/м²"
+        },
+        {
+          "label": "Общий вес",
+          "value": "3660 г/м²"
+        },
+        {
+          "label": "В коробке",
+          "value": "4 м²"
+        },
+        {
+          "label": "Страна производства",
+          "value": "Бельгия"
+        }
+      ],
+      "description": "<p>Иглопробивная плитка Beaulieu Bedford, цвет 2531 Steel. Ворс из 100% полипропилена с рельефом в рубчик, подложка битумная.</p>\n<p>Высота ворса 3,5 мм, общая толщина 8 мм, вес ворса 900 г/м², общий вес 3660 г/м². Размер 50 × 50 см, в коробке 4 м².</p>",
+      "images": [
+        "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5z833thbzd6pao/beaulieu_1000w,default/bedford_tile_2531_nf_beaulieu_psh"
+      ],
+      "sourceUrl": "https://www.beaulieu-needlefelt.com/en/product-finder/color/nf_needlefelt_tiles_bedfordtile_2531",
+      "inStock": true
+    },
+    {
+      "brand": "Associated Weavers",
+      "name": "Mineral 29 Char Green",
+      "slug": "mineral-29",
+      "collection": "Maverick",
+      "sku": "29",
+      "attributes": [
+        {
+          "label": "Ворс",
+          "value": "полиамид"
+        },
+        {
+          "label": "Общая толщина",
+          "value": "5,2 мм"
+        }
+      ],
+      "facets": [
+        {
+          "label": "Формат",
+          "value": "50 × 50 см"
+        },
+        {
+          "label": "Цвет",
+          "value": "зелёный"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Коллекция",
+          "value": "Mineral"
+        },
+        {
+          "label": "Номер цвета",
+          "value": "29"
+        },
+        {
+          "label": "Цвет",
+          "value": "Char Green (зелёный)"
+        },
+        {
+          "label": "Код заказа",
+          "value": "TMNRLBA29050050N20"
+        },
+        {
+          "label": "Размер плитки",
+          "value": "50 × 50 см"
+        },
+        {
+          "label": "Тип",
+          "value": "петлевой ворс"
+        },
+        {
+          "label": "Ворс",
+          "value": "полиамид, окрашен в массе"
+        },
+        {
+          "label": "Подложка",
+          "value": "битумная"
+        },
+        {
+          "label": "Высота ворса",
+          "value": "2,2 мм"
+        },
+        {
+          "label": "Общая толщина",
+          "value": "5,2 мм"
+        },
+        {
+          "label": "Класс использования",
+          "value": "33 (коммерческий), 23 (бытовой)"
+        },
+        {
+          "label": "Пожарный класс",
+          "value": "Bfl-s1"
+        },
+        {
+          "label": "Термосопротивление",
+          "value": "0,06 м²·°C/Вт"
+        },
+        {
+          "label": "В коробке",
+          "value": "20 плиток, 5 м²"
+        },
+        {
+          "label": "Кресла на колёсиках",
+          "value": "можно"
+        },
+        {
+          "label": "Тёплый пол",
+          "value": "можно"
+        },
+        {
+          "label": "Антистатик",
+          "value": "да"
+        },
+        {
+          "label": "Страна производства",
+          "value": "Бельгия"
+        }
+      ],
+      "description": "<p>Ковровая плитка Associated Weavers Mineral из линии Maverick, цвет 29 Char Green. Петлевой ворс из полиамида, окрашенного в массе, подложка битумная.</p>\n<p>Высота ворса 2,2 мм, общая толщина 5,2 мм, размер 50 × 50 см, в коробке 20 плиток (5 м²). Класс использования 33 для офиса и 23 для дома, пожарный класс Bfl-s1. Плитка снижает ударный шум, не электризуется, выдерживает кресла на колёсиках и подходит для тёплого пола.</p>",
+      "images": [
+        "https://associated-weavers.com/-/media/foundation/products/product-shots/f_mnrlba/mnrlba_29.jpg",
+        "https://associated-weavers.com/-/media/foundation/products/product-shots/f_mnrlba/mnrlba_29_roomshot.jpg"
+      ],
+      "sourceUrl": "https://associated-weavers.com/en/carpet-tile-mineraltile-29",
+      "inStock": true
+    },
+    {
+      "brand": "Associated Weavers",
+      "name": "Mineral 79 Cool Grey",
+      "slug": "mineral-79",
+      "collection": "Maverick",
+      "sku": "79",
+      "attributes": [
+        {
+          "label": "Ворс",
+          "value": "полиамид"
+        },
+        {
+          "label": "Общая толщина",
+          "value": "5,2 мм"
+        }
+      ],
+      "facets": [
+        {
+          "label": "Формат",
+          "value": "50 × 50 см"
+        },
+        {
+          "label": "Цвет",
+          "value": "серый"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Коллекция",
+          "value": "Mineral"
+        },
+        {
+          "label": "Номер цвета",
+          "value": "79"
+        },
+        {
+          "label": "Цвет",
+          "value": "Cool Grey (серый)"
+        },
+        {
+          "label": "Код заказа",
+          "value": "TMNRLBA79050050N20"
+        },
+        {
+          "label": "Размер плитки",
+          "value": "50 × 50 см"
+        },
+        {
+          "label": "Тип",
+          "value": "петлевой ворс"
+        },
+        {
+          "label": "Ворс",
+          "value": "полиамид, окрашен в массе"
+        },
+        {
+          "label": "Подложка",
+          "value": "битумная"
+        },
+        {
+          "label": "Высота ворса",
+          "value": "2,2 мм"
+        },
+        {
+          "label": "Общая толщина",
+          "value": "5,2 мм"
+        },
+        {
+          "label": "Класс использования",
+          "value": "33 (коммерческий), 23 (бытовой)"
+        },
+        {
+          "label": "Пожарный класс",
+          "value": "Bfl-s1"
+        },
+        {
+          "label": "Термосопротивление",
+          "value": "0,06 м²·°C/Вт"
+        },
+        {
+          "label": "В коробке",
+          "value": "20 плиток, 5 м²"
+        },
+        {
+          "label": "Кресла на колёсиках",
+          "value": "можно"
+        },
+        {
+          "label": "Тёплый пол",
+          "value": "можно"
+        },
+        {
+          "label": "Антистатик",
+          "value": "да"
+        },
+        {
+          "label": "Страна производства",
+          "value": "Бельгия"
+        }
+      ],
+      "description": "<p>Ковровая плитка Associated Weavers Mineral из линии Maverick, цвет 79 Cool Grey. Петлевой ворс из полиамида, окрашенного в массе, подложка битумная.</p>\n<p>Высота ворса 2,2 мм, общая толщина 5,2 мм, размер 50 × 50 см, в коробке 20 плиток (5 м²). Класс использования 33 для офиса и 23 для дома, пожарный класс Bfl-s1. Плитка снижает ударный шум, не электризуется, выдерживает кресла на колёсиках и подходит для тёплого пола.</p>",
+      "images": [
+        "https://associated-weavers.com/-/media/foundation/products/product-shots/f_mnrlba/mnrlba_79.jpg"
+      ],
+      "sourceUrl": "https://associated-weavers.com/en/carpet-tile-mineraltile-79",
+      "inStock": true
+    },
+    {
+      "brand": "Associated Weavers",
+      "name": "Medusa 99 Raven",
+      "slug": "medusa-99",
+      "collection": "Maverick",
+      "sku": "99",
+      "attributes": [
+        {
+          "label": "Ворс",
+          "value": "полиамид"
+        },
+        {
+          "label": "Общая толщина",
+          "value": "5,5 мм"
+        }
+      ],
+      "facets": [
+        {
+          "label": "Формат",
+          "value": "50 × 50 см"
+        },
+        {
+          "label": "Цвет",
+          "value": "тёмно-серый"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Коллекция",
+          "value": "Medusa"
+        },
+        {
+          "label": "Номер цвета",
+          "value": "99"
+        },
+        {
+          "label": "Цвет",
+          "value": "Raven (тёмно-серый)"
+        },
+        {
+          "label": "Код заказа",
+          "value": "TMDTIBA99050050N20"
+        },
+        {
+          "label": "Размер плитки",
+          "value": "50 × 50 см"
+        },
+        {
+          "label": "Тип",
+          "value": "петлевой ворс"
+        },
+        {
+          "label": "Ворс",
+          "value": "полиамид, окрашен в массе"
+        },
+        {
+          "label": "Подложка",
+          "value": "битумная"
+        },
+        {
+          "label": "Высота ворса",
+          "value": "2,5 мм"
+        },
+        {
+          "label": "Общая толщина",
+          "value": "5,5 мм"
+        },
+        {
+          "label": "Класс использования",
+          "value": "33 (коммерческий), 23 (бытовой)"
+        },
+        {
+          "label": "Пожарный класс",
+          "value": "Bfl-s1"
+        },
+        {
+          "label": "Термосопротивление",
+          "value": "0,09 м²·°C/Вт"
+        },
+        {
+          "label": "В коробке",
+          "value": "20 плиток, 5 м²"
+        },
+        {
+          "label": "Кресла на колёсиках",
+          "value": "можно"
+        },
+        {
+          "label": "Тёплый пол",
+          "value": "можно"
+        },
+        {
+          "label": "Антистатик",
+          "value": "да"
+        },
+        {
+          "label": "Страна производства",
+          "value": "Бельгия"
+        }
+      ],
+      "description": "<p>Ковровая плитка Associated Weavers Medusa из линии Maverick, цвет 99 Raven. Петлевой ворс из полиамида, окрашенного в массе, подложка битумная.</p>\n<p>Высота ворса 2,5 мм, общая толщина 5,5 мм, размер 50 × 50 см, в коробке 20 плиток (5 м²). Класс использования 33 для офиса и 23 для дома, пожарный класс Bfl-s1. Плитка снижает ударный шум, не электризуется, выдерживает кресла на колёсиках и подходит для тёплого пола.</p>",
+      "images": [
+        "https://associated-weavers.com/-/media/foundation/products/product-shots/f_mdtiba/mdtiba_99.jpg",
+        "https://associated-weavers.com/-/media/foundation/products/product-shots/f_mdtiba/mdtiba_99_office.jpg"
+      ],
+      "sourceUrl": "https://associated-weavers.com/en/carpet-tile-medusatile-99",
+      "inStock": true
+    },
+    {
+      "brand": "Associated Weavers",
+      "name": "Medusa 40 Bistro",
+      "slug": "medusa-40",
+      "collection": "Maverick",
+      "sku": "40",
+      "attributes": [
+        {
+          "label": "Ворс",
+          "value": "полиамид"
+        },
+        {
+          "label": "Общая толщина",
+          "value": "5,5 мм"
+        }
+      ],
+      "facets": [
+        {
+          "label": "Формат",
+          "value": "50 × 50 см"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Коллекция",
+          "value": "Medusa"
+        },
+        {
+          "label": "Номер цвета",
+          "value": "40"
+        },
+        {
+          "label": "Цвет",
+          "value": "Bistro"
+        },
+        {
+          "label": "Код заказа",
+          "value": "TMDTIBA40050050N20"
+        },
+        {
+          "label": "Размер плитки",
+          "value": "50 × 50 см"
+        },
+        {
+          "label": "Тип",
+          "value": "петлевой ворс"
+        },
+        {
+          "label": "Ворс",
+          "value": "полиамид, окрашен в массе"
+        },
+        {
+          "label": "Подложка",
+          "value": "битумная"
+        },
+        {
+          "label": "Высота ворса",
+          "value": "2,5 мм"
+        },
+        {
+          "label": "Общая толщина",
+          "value": "5,5 мм"
+        },
+        {
+          "label": "Класс использования",
+          "value": "33 (коммерческий), 23 (бытовой)"
+        },
+        {
+          "label": "Пожарный класс",
+          "value": "Bfl-s1"
+        },
+        {
+          "label": "Термосопротивление",
+          "value": "0,09 м²·°C/Вт"
+        },
+        {
+          "label": "В коробке",
+          "value": "20 плиток, 5 м²"
+        },
+        {
+          "label": "Кресла на колёсиках",
+          "value": "можно"
+        },
+        {
+          "label": "Тёплый пол",
+          "value": "можно"
+        },
+        {
+          "label": "Антистатик",
+          "value": "да"
+        },
+        {
+          "label": "Страна производства",
+          "value": "Бельгия"
+        }
+      ],
+      "description": "<p>Ковровая плитка Associated Weavers Medusa из линии Maverick, цвет 40 Bistro. Петлевой ворс из полиамида, окрашенного в массе, подложка битумная.</p>\n<p>Высота ворса 2,5 мм, общая толщина 5,5 мм, размер 50 × 50 см, в коробке 20 плиток (5 м²). Класс использования 33 для офиса и 23 для дома, пожарный класс Bfl-s1. Плитка снижает ударный шум, не электризуется, выдерживает кресла на колёсиках и подходит для тёплого пола.</p>",
+      "images": [
+        "https://associated-weavers.com/-/media/foundation/products/product-shots/f_mdtiba/mdtiba_40.jpg",
+        "https://associated-weavers.com/-/media/foundation/products/product-shots/f_mdtiba/mdtiba_40_office.jpg"
+      ],
+      "sourceUrl": "https://associated-weavers.com/en/carpet-tile-medusatile-40",
+      "inStock": true
+    },
+    {
+      "brand": "Associated Weavers",
+      "name": "Medusa 77 Royale",
+      "slug": "medusa-77",
+      "collection": "Maverick",
+      "sku": "77",
+      "attributes": [
+        {
+          "label": "Ворс",
+          "value": "полиамид"
+        },
+        {
+          "label": "Общая толщина",
+          "value": "5,5 мм"
+        }
+      ],
+      "facets": [
+        {
+          "label": "Формат",
+          "value": "50 × 50 см"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Коллекция",
+          "value": "Medusa"
+        },
+        {
+          "label": "Номер цвета",
+          "value": "77"
+        },
+        {
+          "label": "Цвет",
+          "value": "Royale"
+        },
+        {
+          "label": "Код заказа",
+          "value": "TMDTIBA77050050N20"
+        },
+        {
+          "label": "Размер плитки",
+          "value": "50 × 50 см"
+        },
+        {
+          "label": "Тип",
+          "value": "петлевой ворс"
+        },
+        {
+          "label": "Ворс",
+          "value": "полиамид, окрашен в массе"
+        },
+        {
+          "label": "Подложка",
+          "value": "битумная"
+        },
+        {
+          "label": "Высота ворса",
+          "value": "2,5 мм"
+        },
+        {
+          "label": "Общая толщина",
+          "value": "5,5 мм"
+        },
+        {
+          "label": "Класс использования",
+          "value": "33 (коммерческий), 23 (бытовой)"
+        },
+        {
+          "label": "Пожарный класс",
+          "value": "Bfl-s1"
+        },
+        {
+          "label": "Термосопротивление",
+          "value": "0,09 м²·°C/Вт"
+        },
+        {
+          "label": "В коробке",
+          "value": "20 плиток, 5 м²"
+        },
+        {
+          "label": "Кресла на колёсиках",
+          "value": "можно"
+        },
+        {
+          "label": "Тёплый пол",
+          "value": "можно"
+        },
+        {
+          "label": "Антистатик",
+          "value": "да"
+        },
+        {
+          "label": "Страна производства",
+          "value": "Бельгия"
+        }
+      ],
+      "description": "<p>Ковровая плитка Associated Weavers Medusa из линии Maverick, цвет 77 Royale. Петлевой ворс из полиамида, окрашенного в массе, подложка битумная.</p>\n<p>Высота ворса 2,5 мм, общая толщина 5,5 мм, размер 50 × 50 см, в коробке 20 плиток (5 м²). Класс использования 33 для офиса и 23 для дома, пожарный класс Bfl-s1. Плитка снижает ударный шум, не электризуется, выдерживает кресла на колёсиках и подходит для тёплого пола.</p>",
+      "images": [
+        "https://associated-weavers.com/-/media/foundation/products/product-shots/f_mdtiba/mdtiba_77.jpg",
+        "https://associated-weavers.com/-/media/foundation/products/product-shots/f_mdtiba/mdtiba_77_office.jpg"
+      ],
+      "sourceUrl": "https://associated-weavers.com/en/carpet-tile-medusatile-77",
+      "inStock": true
+    }
+  ]
+}

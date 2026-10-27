@@ -19,7 +19,7 @@ import type { Attr } from './products.ts';
 
 const CATALOG_DIR = path.resolve(process.cwd(), 'seed/catalog');
 /** Разделы, у которых сайт включается сам (по решению владельца); остальные — из админки */
-const SITES = ['vinyl', 'laminate', 'linoleum', 'adhesives'];
+const SITES = ['vinyl', 'laminate', 'linoleum', 'adhesives', 'carpet-tiles'];
 /** Отметка первой версии, когда настраивался только vinyl */
 const OLD_FLAG = 'section_sites';
 
