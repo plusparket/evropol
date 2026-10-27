@@ -98,7 +98,7 @@ const word = (n: number) => pluralRu(n, ['товар', 'товара', 'това
 <section class="psec pcontact" id="contacts">
   <div class="pin pcontact-grid">
     <div>
-      <h2 class="ptitle">Подберём {site.name.toLowerCase()}</h2>
+      <h2 class="ptitle">Подберём {/^\p{Lu}\p{Ll}/u.test(site.name) ? site.name[0].toLowerCase() + site.name.slice(1) : site.name}</h2>
       <p class="psub">Позвоните или напишите: покажем образцы в офисе и рассчитаем количество. Цену и наличие сообщим там же.</p>
     </div>
     <div class="pcontact-list">

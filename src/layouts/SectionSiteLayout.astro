@@ -31,10 +31,11 @@ const ldBlocks = (Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : []).map((
 const color = /^#[0-9a-f]{6}$/i.test(site.siteColor) ? site.siteColor : DEFAULT_SITE_COLOR;
 const waHref = 'https://wa.me/' + settings.panel_whatsapp.replace(/\D/g, '');
 const countersOn = settings.counters_enabled === '1';
+const forest = settings.forest_design === '1'; // цвета «Лесной», как на главном сайте
 ---
 
 <!doctype html>
-<html lang="ru">
+<html lang="ru" class:list={{ 'theme-forest': forest }}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />

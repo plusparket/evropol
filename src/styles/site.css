@@ -434,3 +434,5 @@ h1, h2, h3 { font-weight: 500; }
 .theme-forest .pf-social a { background: rgba(255, 255, 255, .12); }
 .theme-forest .pf-social a:hover { background: #fff; color: var(--g); }
 .theme-forest .pf-bottom { color: #8fae9b; }
+/* Сайты разделов (body.ss): заголовок страницы зелёный, остальное — из переменных выше */
+.theme-forest .ss h1 { color: var(--g); }
