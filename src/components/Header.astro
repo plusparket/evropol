@@ -4,6 +4,7 @@
 import type { MenuItem, MenuName } from '../server/content.ts';
 import { sectionHref, sectionUrl, type Section } from '../server/sections.ts';
 import type { Settings } from '../server/settings.ts';
+import SocialIcon from './SocialIcon.astro';
 
 interface Props {
   sections: Section[];
@@ -13,6 +14,9 @@ interface Props {
 const { sections, settings, menus } = Astro.props;
 const phoneHref = (p: string) => 'tel:' + p.replace(/[^\d+]/g, '');
 const path = Astro.url.pathname;
+// В зелёном дизайне шапка и меню на телефоне зелёные, логотип на них белый
+const green = settings.green_design === '1';
+const logo = green ? '/img/evropol-logo-white.svg' : '/img/evropol-logo.svg';
 // Пункты меню: «Главная», затем верхнее меню из админки; «Продукты» (разделы) встают после «О компании»
 type Link = { label: string; url: string; newTab?: boolean; products?: boolean };
 const links: Link[] = [];
@@ -30,7 +34,7 @@ const here = (l: Link) =>
 <header class="ph" id="ph">
   <div class="ph-in">
     <a href="/" class="ph-logo" aria-label={settings.site_name}>
-      <img src="/img/evropol-logo.svg" alt={settings.site_name} width="536" height="100" />
+      <img src={logo} alt={settings.site_name} width="536" height="100" />
     </a>
 
     <nav class="ph-nav" aria-label="Меню">
@@ -52,7 +56,7 @@ const here = (l: Link) =>
 
     <div class="ph-aside">
       <a class="ph-contact" href="/contact">Связаться с нами</a>
-      {settings.instagram_url && <a class="ph-insta" href={settings.instagram_url} target="_blank" rel="noopener" aria-label="Instagram"><img src="/img/instagram.png" alt="" width="32" height="32" /></a>}
+      {settings.instagram_url && <a class="ph-insta" href={settings.instagram_url} target="_blank" rel="noopener" aria-label="Instagram">{green ? <SocialIcon name="instagram" size={24} /> : <img src="/img/instagram.png" alt="" width="32" height="32" />}</a>}
     </div>
     <button type="button" class="ph-burger" id="burger" aria-controls="main-menu" aria-label="Меню"><i></i><i></i><i></i></button>
   </div>
@@ -61,7 +65,7 @@ const here = (l: Link) =>
 <!-- Выдвижное меню на телефонах: пункты меню, разделы, контакты -->
 <aside class="pdrawer" id="main-menu" aria-label="Меню">
   <div class="pdrawer-head">
-    <img src="/img/evropol-logo.svg" alt="" class="pdrawer-logo" width="536" height="100" />
+    <img src={logo} alt="" class="pdrawer-logo" width="536" height="100" />
     <button type="button" class="pdrawer-close" data-menu-close aria-label="Закрыть меню">✕</button>
   </div>
   <nav class="pdrawer-nav" aria-label="Меню">
