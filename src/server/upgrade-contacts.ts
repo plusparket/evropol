@@ -1,6 +1,7 @@
 // Новый адрес и телефон по просьбе владельца от 27.10.2026: г. Бишкек, ул. Матросова 6/1, +996 (779) 37 72 73.
 // Один раз при запуске заменяет старый адрес офиса (ул. Токтогула 125/1) и старый телефон в настройках, текстах
-// страниц и разделов и ставит карту на новый адрес. Номер WhatsApp не меняется: это отдельная настройка.
+// страниц и разделов и ставит карту на новый адрес. WhatsApp владелец перевёл на тот же номер позже, отдельным
+// шагом upgradeWhatsapp().
 import { sql } from './db.ts';
 import { SETTINGS_SCHEMA } from './settings.ts';
 
@@ -49,4 +50,15 @@ export async function upgradeContacts(): Promise<number> {
     await tx`INSERT INTO settings (key, value) VALUES (${FLAG}, ${new Date().toISOString()}) ON CONFLICT (key) DO NOTHING`;
   });
   return changed;
+}
+
+const WA_FLAG = 'whatsapp_2026_10_27';
+
+/** Номер WhatsApp — тот же, что новый телефон. Меняет только старый номер, другой номер из админки не трогает. */
+export async function upgradeWhatsapp(): Promise<boolean> {
+  const [done] = await sql`SELECT 1 FROM settings WHERE key = ${WA_FLAG}`;
+  if (done) return false;
+  const res = await sql`UPDATE settings SET value = ${NEW_PHONE} WHERE key = 'panel_whatsapp' AND value = '+996 770 55 77 15'`;
+  await sql`INSERT INTO settings (key, value) VALUES (${WA_FLAG}, ${new Date().toISOString()}) ON CONFLICT (key) DO NOTHING`;
+  return res.count > 0;
 }

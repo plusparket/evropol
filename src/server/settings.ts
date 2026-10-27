@@ -24,7 +24,7 @@ export const SETTINGS_SCHEMA = [
   { group: 'Контакты: второй адрес', key: 'hours_schema_second', label: 'Часы работы для Google (Mo-Sa 09:00-17:00)', default: '' },
   { group: 'Контакты: второй адрес', key: 'geo_second', label: 'Координаты на карте для Google (широта, долгота)', default: '' },
 
-  { group: 'WhatsApp', key: 'panel_whatsapp', label: 'Номер WhatsApp для зелёной кнопки на сайте и кнопок «Написать в WhatsApp» (пусто — кнопки нет)', default: '+996 770 55 77 15' },
+  { group: 'WhatsApp', key: 'panel_whatsapp', label: 'Номер WhatsApp для зелёной кнопки на сайте и кнопок «Написать в WhatsApp» (пусто — кнопки нет)', default: '+996 (779) 37 72 73' },
 
   { group: 'Соцсети и карта', key: 'instagram_url', label: 'Instagram', default: 'https://www.instagram.com/europroject.kg/' },
   { group: 'Соцсети и карта', key: 'facebook_url', label: 'Facebook', default: '' },
