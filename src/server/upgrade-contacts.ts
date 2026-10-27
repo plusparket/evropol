@@ -62,3 +62,24 @@ export async function upgradeWhatsapp(): Promise<boolean> {
   await sql`INSERT INTO settings (key, value) VALUES (${WA_FLAG}, ${new Date().toISOString()}) ON CONFLICT (key) DO NOTHING`;
   return res.count > 0;
 }
+
+const EMAIL_FLAG = 'email_2026_10_27';
+const OLD_EMAIL = 'info@europroject.kg';
+const NEW_EMAIL = 'info@bino.kg';
+
+/** Почта info@bino.kg вместо info@europroject.kg: в настройках, текстах страниц и разделов. Возвращает число записей. */
+export async function upgradeEmail(): Promise<number> {
+  const [done] = await sql`SELECT 1 FROM settings WHERE key = ${EMAIL_FLAG}`;
+  if (done) return 0;
+  let changed = 0;
+  await sql.begin(async (tx) => {
+    changed += (await tx`UPDATE settings SET value = replace(value, ${OLD_EMAIL}, ${NEW_EMAIL})
+                         WHERE position(${OLD_EMAIL} in value) > 0`).count;
+    changed += (await tx`UPDATE pages SET content = replace(content, ${OLD_EMAIL}, ${NEW_EMAIL}), updated_at = now()
+                         WHERE position(${OLD_EMAIL} in content) > 0`).count;
+    changed += (await tx`UPDATE sections SET description = replace(description, ${OLD_EMAIL}, ${NEW_EMAIL}), updated_at = now()
+                         WHERE position(${OLD_EMAIL} in description) > 0`).count;
+    await tx`INSERT INTO settings (key, value) VALUES (${EMAIL_FLAG}, ${new Date().toISOString()}) ON CONFLICT (key) DO NOTHING`;
+  });
+  return changed;
+}

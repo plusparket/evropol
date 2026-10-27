@@ -9,11 +9,11 @@ export const SETTINGS_SCHEMA = [
   { group: 'Общее', key: 'forest_design', label: 'Лесной дизайн главного сайта: зелёная полоса сверху, зелёные кнопки и заголовки, тёмно-зелёный подвал (снимите галочку — вернутся прежние цвета)', type: 'checkbox', default: '1' },
   { group: 'Общее', key: 'copyright', label: 'Текст в подвале ({year} — текущий год)', default: 'Copyright © {year} Европроект. Все права защищены' },
 
-  // Контакты: адрес и телефон по просьбе владельца от 27.10.2026, почта со старого сайта europroject.kg
+  // Контакты: адрес, телефон и почта по просьбе владельца от 27.10.2026
   { group: 'Контакты: офис', key: 'phone_main', label: 'Телефон', default: '+996 (779) 37 72 73' },
   { group: 'Контакты: офис', key: 'address', label: 'Адрес', default: 'г. Бишкек, ул. Матросова 6/1' },
   { group: 'Контакты: офис', key: 'work_hours', label: 'Режим работы (пусто — не показывается)', default: '' },
-  { group: 'Контакты: офис', key: 'email', label: 'Email', default: 'info@europroject.kg' },
+  { group: 'Контакты: офис', key: 'email', label: 'Email', default: 'info@bino.kg' },
   { group: 'Контакты: офис', key: 'hours_schema', label: 'Часы работы для Google (Mo-Sa 09:00-17:00; дни: Mo Tu We Th Fr Sa Su)', default: '' },
   { group: 'Контакты: офис', key: 'geo', label: 'Координаты на карте для Google (широта, долгота)', default: '' },
 

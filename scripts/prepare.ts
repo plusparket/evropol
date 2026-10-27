@@ -10,7 +10,7 @@ import { ensureNewsSlugs } from '../src/server/content.ts';
 import { importLegacyPhotos } from '../src/server/legacy-photos.ts';
 import { upgradeHome } from '../src/server/home.ts';
 import { upgradeSections } from '../src/server/upgrade-sections.ts';
-import { upgradeContacts, upgradeWhatsapp } from '../src/server/upgrade-contacts.ts';
+import { upgradeContacts, upgradeEmail, upgradeWhatsapp } from '../src/server/upgrade-contacts.ts';
 import { setupSectionSites } from '../src/server/section-sites.ts';
 
 const log = (msg: string) => console.log(`[prepare] ${msg}`);
@@ -30,6 +30,8 @@ export async function prepare(): Promise<void> {
   const contacts = await upgradeContacts();
   if (contacts) log(`новый адрес и телефон (ул. Матросова 6/1): изменено записей ${contacts}`);
   if (await upgradeWhatsapp()) log('WhatsApp: новый номер +996 (779) 37 72 73');
+  const emails = await upgradeEmail();
+  if (emails) log(`почта info@bino.kg: изменено записей ${emails}`);
   for (const msg of await setupSectionSites()) log(`сайты разделов: ${msg}`);
   await importLegacyPhotos(log).catch((err) => log(`фото со старого сайта: ошибка ${err?.message ?? err}`));
   const made = await ensureHomeVariants();
