@@ -394,66 +394,43 @@ h1, h2, h3 { font-weight: 500; }
   .fab-wa { right: 16px; bottom: 16px; }
   .to-top { right: 24px; bottom: 84px; }
 }
-
-/* --- Зелёный дизайн (настройка «Зелёный дизайн главного сайта», класс theme-green на <html>) ----------------------
- * По образцу wholefoodsmarket.com: зелёная шапка с белым логотипом ЕвроПол и белым меню, тёмно-зелёная полоса
- * разделов под слайдером, зелёные заголовки страниц, тёмно-зелёный подвал. Зелёный — цвет логотипа #006338. */
-.theme-green {
-  --g: #006338;          /* цвет логотипа: шапка, кнопки, заголовки страниц */
-  --g-dark: #004b2a;     /* полоса разделов, наведение */
-  --g-line: rgba(255, 255, 255, .2);
-  --navy: #006338;
-  --accent: #00573a;
-  --band: #eef4f0;
-  --dark: #00331d;
-  --dark-line: #0d4a2e;
-  --on-dark-muted: #a6c2b1;
+/* --- Лесной дизайн (настройка «Лесной дизайн главного сайта», класс theme-forest на <html>) ----------------------
+ * Набор №1 «Лесной», выбран владельцем 27.10.2026: белая шапка с зелёным логотипом ЕвроПол, тонкая зелёная полоса
+ * сверху, зелёные активный пункт меню, кнопки, заголовки и наведение на плитки, светло-зелёный фон блока контактов
+ * и новостей, тёмно-зелёный подвал. Зелёный — цвет логотипа #006338. */
+.theme-forest {
+  --g: #006338;          /* цвет логотипа */
+  --navy: #006338;       /* полоса сверху, активный пункт меню, наведение */
+  --accent: #006338;
+  --menu: #6b736e;
+  --muted: #6b736e;
+  --band: #f3f6f4;
+  --line: #e4ebe6;
+  --dark: #0f2a1d;       /* подвал */
+  --dark-line: #24402f;
+  --on-dark-muted: #c3d2c9;
 }
-.theme-green .ph { border-top: 0; background: var(--g); }
-.theme-green .ph--compact { box-shadow: 0 2px 14px rgba(0, 0, 0, .25); }
-.theme-green .ph-nav > a, .theme-green .ph-drop > a { color: rgba(255, 255, 255, .88); }
-.theme-green .ph-nav > a:hover, .theme-green .ph-drop > a:hover,
-.theme-green .ph-nav > a.active, .theme-green .ph-drop > a.active { color: #fff; }
-.theme-green .ph-nav > a.active, .theme-green .ph-drop > a.active { text-decoration: underline; text-underline-offset: 8px; text-decoration-thickness: 2px; }
-.theme-green .ph-drop-list a:hover, .theme-green .ph-drop-list a.active { color: var(--g); }
-.theme-green .ph-contact { border-right-color: var(--g-line); color: rgba(255, 255, 255, .88); }
-.theme-green .ph-contact:hover { color: #fff; }
-.theme-green .ph-insta { display: grid; place-items: center; color: #fff; }
-.theme-green .ph-burger i { background: #fff; }
+.theme-forest .ph { border-top-width: 4px; }
+.theme-forest .ph-insta { display: grid; place-items: center; color: var(--g); }
+.theme-forest .ph-insta:hover { opacity: 1; color: #004b2a; }
+.theme-forest .ph-burger i { background: var(--g); }
 
-.theme-green .pdrawer { background: var(--g); color: #fff; }
-.theme-green .pdrawer-close { color: #fff; }
-.theme-green .pdrawer-nav > a { border-bottom-color: var(--g-line); color: rgba(255, 255, 255, .9); }
-.theme-green .pdrawer-nav > a.active { color: #fff; }
-.theme-green .pdrawer-label { color: rgba(255, 255, 255, .65); }
-.theme-green .pdrawer-contacts, .theme-green .pdrawer-contacts a { color: rgba(255, 255, 255, .85); }
+.theme-forest .ptiles a { border-left-color: var(--line); border-bottom-color: var(--line); color: #1d2a23; }
+.theme-forest .ptiles a:hover { background: var(--g); color: #fff; }
 
-/* Разделы — сплошная тёмно-зелёная полоса во всю ширину сразу под слайдером */
-.theme-green .ptiles { max-width: none; margin: 0; background: var(--g-dark); }
-.theme-green .ptiles a { background: transparent; border-left: 1px solid var(--g-line); border-bottom: 0; color: #fff; }
-.theme-green .ptiles a:first-child { border-left: 0; }
-.theme-green .ptiles a:hover { background: var(--g); color: #fff; }
+.theme-forest .pinfo { background: var(--band); }
+.theme-forest .pinfo-title, .theme-forest .pinfo-title a { color: var(--g); }
+.theme-forest .pinfo-contacts hr { border-top-color: #d9e3dc; }
+.theme-forest .pbtn-light { background: var(--g); color: #fff !important; }
+.theme-forest .pbtn-light:hover { background: #004b2a; }
+.theme-forest .pbtn { border-color: var(--g); background: var(--g); }
+.theme-forest .pbtn:hover { background: transparent; color: var(--g); }
+.theme-forest .pnews-title a:hover, .theme-forest .pnews-more { color: var(--g); }
 
-.theme-green .pinfo-title, .theme-green .pinfo-title a { color: var(--g); }
-.theme-green .pbtn-light { background: var(--g); color: #fff !important; }
-.theme-green .pbtn-light:hover { background: var(--g-dark); }
-.theme-green .pbtn { border-color: var(--g); background: var(--g); }
-.theme-green .pbtn:hover { background: transparent; color: var(--g); }
+.theme-forest .ppage-head .ppage-title { color: var(--g); }
 
-/* Заголовок внутренних страниц — тёмно-зелёная полоса с белым текстом под зелёной шапкой */
-.theme-green .ppage-head { background: var(--g-dark); }
-.theme-green .ppage-head .ppage-title { color: #fff; }
-.theme-green .ppage-head .ppage-meta, .theme-green .ppage-head .pcrumbs,
-.theme-green .ppage-head .pcrumbs a { color: rgba(255, 255, 255, .8); }
-.theme-green .ppage-head .pcrumbs a:hover, .theme-green .ppage-head .pcrumbs [aria-current] { color: #fff; }
-
-.theme-green .pf-col li::before { background: var(--on-dark-muted); }
-.theme-green .pf-note { color: #cfe0d5; }
-.theme-green .pf-social a { background: rgba(255, 255, 255, .15); }
-.theme-green .pf-social a:hover { background: #fff; color: var(--g); }
-.theme-green .pf-bottom { color: var(--on-dark-muted); }
-
-@media (max-width: 860px) {
-  .theme-green .ptiles a, .theme-green .ptiles a:first-child { border-left: 0; border-right: 1px solid var(--g-line); border-top: 1px solid var(--g-line); }
-  .theme-green .ptiles a:nth-child(2n) { border-right: 0; }
-}
+.theme-forest .pf-col li::before { background: var(--on-dark-muted); }
+.theme-forest .pf-note { color: var(--on-dark-muted); }
+.theme-forest .pf-social a { background: rgba(255, 255, 255, .12); }
+.theme-forest .pf-social a:hover { background: #fff; color: var(--g); }
+.theme-forest .pf-bottom { color: #8fae9b; }
