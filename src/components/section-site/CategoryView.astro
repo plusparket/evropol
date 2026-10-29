@@ -1,0 +1,91 @@
+---
+// Каталог сайта с категориями (вид 'groups', структура как у Forbo Eurocol), оформлен как «только каталог»:
+// крошки, заголовок, слева группы и категории (у открытой группы раскрыты её категории) и «Только в наличии»,
+// справа плитка товаров по четыре в ряд, сначала «В наличии». Без группы — все товары (главная сайта).
+import Crumbs from '../Crumbs.astro';
+import CatalogCard from './CatalogCard.astro';
+import { productsOf, type CategoryNode, type ProductItem } from '../../server/products.ts';
+import type { Section } from '../../server/sections.ts';
+import { pluralRu } from '../../server/util.ts';
+
+interface Props {
+  site: Section;
+  tree: CategoryNode[];
+  /** Открытая группа; для категории — её группа. Пусто — все товары */
+  group?: CategoryNode;
+  /** Категория внутри группы */
+  category?: CategoryNode;
+  products: ProductItem[];
+  /** Показать только товары «В наличии» (?stock=1) */
+  stockOnly?: boolean;
+}
+const { site, tree, group, category, products, stockOnly = false } = Astro.props;
+const current = category ?? group;
+const all = current ? productsOf(products, current) : products;
+const items = stockOnly ? all.filter((p) => p.inStock) : all;
+const stock = all.filter((p) => p.inStock).length;
+const here = current ? `/${current.slug}` : '/';
+const crumbs = current
+  ? [{ name: site.name, url: '/' }, ...(category && group ? [{ name: group.name, url: `/${group.slug}` }] : []), { name: current.name }]
+  : [{ name: site.name }];
+const word = (n: number) => pluralRu(n, ['товар', 'товара', 'товаров']);
+---
+
+<div class="pin cat">
+  <Crumbs items={crumbs} />
+
+  <div class="cat-head">
+    <h1 class="cat-title">{current ? current.name : site.heading || site.name}</h1>
+    {(current ? current.description : site.summary) && <p class="cat-lead">{current ? current.description : site.summary}</p>}
+  </div>
+
+  <div class="cat-grid" id="catalog">
+    <details class="cat-filters-box" open data-filters-box>
+      <summary>Категории{current && `: ${current.name}`}</summary>
+      <nav class="ss-cat-nav" aria-label="Группы продукции">
+        <ul>
+          <li><a href="/" aria-current={!current ? 'page' : undefined}>Все товары</a></li>
+          {
+            tree.map((g) => (
+              <li class:list={{ 'is-open': g.id === group?.id }}>
+                <a href={`/${g.slug}`} aria-current={g.id === current?.id ? 'page' : undefined}>{g.name}</a>
+                {g.id === group?.id && g.children.length > 0 && (
+                  <ul>
+                    {g.children.map((c) => (
+                      <li><a href={`/${c.slug}`} aria-current={c.id === current?.id ? 'page' : undefined}>{c.name}</a></li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ))
+          }
+        </ul>
+        {
+          stock > 0 && (
+            <a class="ss-cat-stock" href={stockOnly ? here : `${here}?stock=1`} aria-pressed={stockOnly ? 'true' : 'false'}>
+              <span class="ss-cat-box" aria-hidden="true">{stockOnly ? '✓' : ''}</span> Только в наличии ({stock})
+            </a>
+          )
+        }
+      </nav>
+    </details>
+
+    <div>
+      {
+        group && !category && group.children.length > 0 && (
+          <div class="ss-chips">
+            {group.children.map((c) => <a class="ss-chip" href={`/${c.slug}`}>{c.name}</a>)}
+          </div>
+        )
+      }
+      {
+        items.length > 0 ? (
+          <div class="cat-items">{items.map((p) => <CatalogCard product={p} />)}</div>
+        ) : (
+          <p class="psub">Каталог пополняется. Позвоните или напишите в WhatsApp: подберём материалы и сообщим наличие.</p>
+        )
+      }
+      <p class="cat-count">Показано {items.length} из {all.length} {word(all.length)}</p>
+    </div>
+  </div>
+</div>

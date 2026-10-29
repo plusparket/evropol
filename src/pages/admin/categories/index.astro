@@ -1,0 +1,155 @@
+---
+// Категории товаров сайтов разделов: группы и категории внутри групп (вид сайта «Группы и категории», как у Forbo Eurocol).
+// Товары в категории отмечаются на странице товара.
+import AdminLayout from '../../../layouts/AdminLayout.astro';
+import { sql } from '../../../server/db.ts';
+import { getSections, siteUrl } from '../../../server/sections.ts';
+import type { Category } from '../../../server/products.ts';
+import { dbErrorMessage, withFlash } from '../../../server/admin.ts';
+import { RESERVED_SLUGS } from '../../../server/content.ts';
+import { bool, int, intOrNull, isValidSlug, slugify, str, toInt } from '../../../server/util.ts';
+
+const sections = await getSections();
+const withCats = (await sql<{ sectionId: number }[]>`SELECT DISTINCT section_id FROM product_categories`).map((r) => r.sectionId);
+const sectionId =
+  toInt(Astro.url.searchParams.get('section')) ?? sections.find((s) => s.siteLayout === 'groups' || withCats.includes(s.id))?.id ?? sections[0]?.id ?? 0;
+const back = `/admin/categories?section=${sectionId}`;
+let error = '';
+
+if (Astro.request.method === 'POST') {
+  const data = await Astro.request.formData();
+  const action = str(data, '_action');
+  const id = toInt(str(data, 'id'));
+  try {
+    if (action === 'delete' && id) {
+      await sql`DELETE FROM product_categories WHERE id = ${id} AND section_id = ${sectionId}`;
+      return Astro.redirect(withFlash(back, 'ok', 'deleted'));
+    }
+    const values = {
+      name: str(data, 'name'),
+      slug: (str(data, 'slug') || slugify(str(data, 'name'))).toLowerCase(),
+      description: str(data, 'description'),
+      parentId: intOrNull(data, 'parent_id'),
+      sortOrder: int(data, 'sort_order'),
+      isActive: bool(data, 'is_active'),
+    };
+    if (!values.name) throw new Error('Укажите название');
+    if (!isValidSlug(values.slug)) throw new Error('Адрес: только латинские буквы, цифры, «-» и «_»');
+    if (RESERVED_SLUGS.has(values.slug)) throw new Error(`Адрес «${values.slug}» зарезервирован системой`);
+    const [product] = await sql`SELECT 1 FROM products WHERE section_id = ${sectionId} AND slug = ${values.slug}`;
+    if (product) throw new Error(`Адрес «${values.slug}» занят товаром`);
+    // Вложенность одна: группа → категория. Родитель — группа этого же раздела, не сама категория.
+    if (values.parentId) {
+      const [parent] = await sql<Category[]>`SELECT * FROM product_categories WHERE id = ${values.parentId} AND section_id = ${sectionId}`;
+      if (!parent || parent.parentId || parent.id === id) throw new Error('Группой может быть только категория верхнего уровня');
+      if (id) {
+        const [kids] = await sql`SELECT 1 FROM product_categories WHERE parent_id = ${id}`;
+        if (kids) throw new Error('У этой группы есть свои категории: её нельзя вложить в другую группу');
+      }
+    }
+    if (id) await sql`UPDATE product_categories SET ${sql(values)}, updated_at = now() WHERE id = ${id} AND section_id = ${sectionId}`;
+    else await sql`INSERT INTO product_categories ${sql({ ...values, sectionId })}`;
+    return Astro.redirect(withFlash(back, 'ok', id ? 'saved' : 'created'));
+  } catch (err) {
+    error = err instanceof Error && !('code' in err) ? err.message : dbErrorMessage(err);
+  }
+}
+
+const section = sections.find((s) => s.id === sectionId);
+const all = await sql<(Category & { products: number })[]>`
+  SELECT c.*, (SELECT count(*)::int FROM product_category_items i WHERE i.category_id = c.id) AS products
+  FROM product_categories c WHERE c.section_id = ${sectionId} ORDER BY c.sort_order, c.id`;
+const groups = all.filter((c) => !c.parentId);
+const rows = groups.flatMap((g) => [g, ...all.filter((c) => c.parentId === g.id)]);
+const nextOrder = (groups.at(-1)?.sortOrder ?? 0) + 10;
+---
+
+<AdminLayout title="Категории товаров" section="categories">
+  <div class="toolbar">
+    <h1>Категории товаров</h1>
+    <div class="actions">
+      <form method="get" class="inline">
+        <select name="section" onchange="this.form.submit()" aria-label="Раздел">
+          {sections.map((s) => <option value={s.id} selected={s.id === sectionId}>{s.name}</option>)}
+        </select>
+      </form>
+    </div>
+  </div>
+  <p class="muted">
+    Группы и категории показываются на сайте раздела с видом «Группы и категории товаров» (Разделы → раздел → Вид главной).
+    Группа без своих категорий сразу показывает товары. Товары отмечаются на странице товара, в одной категории сначала идут
+    товары «В наличии». Пустые категории на сайте не видны.
+    {section?.siteHost && <Fragment> Сайт раздела: <a href={siteUrl(section)} target="_blank" rel="noopener">{section.siteHost} ↗</a></Fragment>}
+  </p>
+  {error && <div class="flash err">{error}</div>}
+
+  {
+    rows.length > 0 && (
+      <div class="table-wrap">
+        <table class="list">
+          <thead><tr><th>Название и описание</th><th>Адрес</th><th>Группа</th><th>Порядок</th><th>Товаров</th><th></th></tr></thead>
+          <tbody>
+            {rows.map((c) => (
+              <tr>
+                <td style={c.parentId ? 'padding-left:32px' : undefined}>
+                  <input type="hidden" name="id" value={c.id} form={`c${c.id}`} />
+                  <input type="text" name="name" value={c.name} required form={`c${c.id}`} style={c.parentId ? undefined : 'font-weight:600'} />
+                  <input type="text" name="description" value={c.description} placeholder="одна-две фразы" form={`c${c.id}`} style="margin-top:6px" />
+                </td>
+                <td><input type="text" name="slug" value={c.slug} form={`c${c.id}`} style="width:180px" /></td>
+                <td>
+                  <select name="parent_id" form={`c${c.id}`}>
+                    <option value="">— верхний уровень —</option>
+                    {groups.filter((g) => g.id !== c.id).map((g) => <option value={g.id} selected={g.id === c.parentId}>{g.name}</option>)}
+                  </select>
+                </td>
+                <td><input type="number" name="sort_order" value={c.sortOrder} form={`c${c.id}`} style="width:80px" /></td>
+                <td class="muted">
+                  <a href={`/admin/products?section=${sectionId}`}>{c.products}</a>
+                  <label class="check small"><input type="checkbox" name="is_active" checked={c.isActive} form={`c${c.id}`} /> показывать</label>
+                </td>
+                <td class="nowrap">
+                  <form id={`c${c.id}`} method="post" class="inline">
+                    <button class="btn secondary" type="submit" name="_action" value="save">Сохранить</button>
+                    <button class="btn danger" type="submit" name="_action" value="delete" formnovalidate data-confirm="Удалить категорию? Её категории тоже удалятся, товары останутся.">✕</button>
+                  </form>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    )
+  }
+
+  <form class="card" method="post">
+    <h2>Добавить группу или категорию</h2>
+    <div class="form-grid">
+      <div class="field">
+        <label for="new-name">Название *</label>
+        <input type="text" id="new-name" name="name" required />
+      </div>
+      <div class="field">
+        <label for="new-parent">Группа</label>
+        <select id="new-parent" name="parent_id">
+          <option value="">— верхний уровень (новая группа) —</option>
+          {groups.map((g) => <option value={g.id}>{g.name}</option>)}
+        </select>
+      </div>
+      <div class="field">
+        <label for="new-slug">Адрес</label>
+        <input type="text" id="new-slug" name="slug" data-slug-from="new-name" pattern="[a-z0-9][a-z0-9_\-]*" />
+        <div class="hint">Пусто — из названия. Не должен совпадать с адресом товара.</div>
+      </div>
+      <div class="field">
+        <label for="new-description">Описание</label>
+        <input type="text" id="new-description" name="description" />
+      </div>
+      <div class="field inline">
+        <label class="small">Порядок <input type="number" name="sort_order" value={nextOrder} style="width:90px" /></label>
+        <label class="check"><input type="checkbox" name="is_active" checked /> Показывать</label>
+      </div>
+    </div>
+    <div class="form-actions"><button class="btn" type="submit" name="_action" value="save">Добавить</button></div>
+  </form>
+</AdminLayout>

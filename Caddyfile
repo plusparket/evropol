@@ -1,8 +1,12 @@
 # Адрес сайта берётся из переменной SITE_ADDRESS (.env):
 #   http://localhost                     — локально, без HTTPS
 #   europroject.kg, www.europroject.kg     — на сервере; Caddy сам получит и продлит сертификаты Let's Encrypt
+# Сайты разделов — из переменной SECTION_SITES_ADDRESS. Это то же приложение: оно узнаёт раздел по адресу запроса
+# (поле «Адрес сайта» у раздела в админке).
+#   http://*.localhost                   — локально: vinyl.localhost, carpet.localhost …
+#   vinyl.europroject.kg, carpet.europroject.kg — на сервере, каждый адрес через запятую
 
-{$SITE_ADDRESS} {
+{$SITE_ADDRESS}, {$SECTION_SITES_ADDRESS:http://*.localhost} {
 	encode zstd gzip
 
 	header {

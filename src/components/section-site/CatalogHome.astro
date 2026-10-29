@@ -1,0 +1,112 @@
+---
+// Главная сайта раздела в виде «только каталог» (поле «Вид главной» у раздела): крошки, заголовок,
+// слева фильтры раскрывающимися группами (у типа дизайна и цвета — значки), справа плитка товаров
+// по четыре в ряд с меткой «Новинка» и кнопкой «Подробно», внизу связь.
+// Фильтры — обычная форма GET (?f=Цвет:Серый), как в SiteHome.astro.
+import Crumbs from '../Crumbs.astro';
+import CatalogCard from './CatalogCard.astro';
+import { facetIcon } from './facet-icons.ts';
+import type { FilterGroup, ProductItem } from '../../server/products.ts';
+import type { Section } from '../../server/sections.ts';
+import type { Settings } from '../../server/settings.ts';
+import { pluralRu } from '../../server/util.ts';
+
+interface Props {
+  site: Section;
+  products: ProductItem[];
+  items: ProductItem[];
+  groups: FilterGroup[];
+  settings: Settings;
+}
+const { site, products, items, groups, settings } = Astro.props;
+const heading = site.heading || site.name;
+const phoneHref = 'tel:' + settings.phone_main.replace(/[^\d+]/g, '');
+const waHref = 'https://wa.me/' + settings.panel_whatsapp.replace(/\D/g, '');
+const filtered = groups.some((g) => g.values.some((v) => v.checked));
+const showBrand = new Set(products.map((p) => p.brand).filter(Boolean)).size > 1;
+const word = (n: number) => pluralRu(n, ['товар', 'товара', 'товаров']);
+---
+
+<div class="pin cat">
+  <Crumbs items={[{ name: site.name }]} />
+
+  <div class="cat-head">
+    <h1 class="cat-title">{heading}</h1>
+    {site.summary && <p class="cat-lead">{site.summary}</p>}
+  </div>
+
+  {
+    products.length === 0 ? (
+      <p class="psub">Каталог пополняется. Позвоните или напишите в WhatsApp: расскажем о коллекциях и наличии.</p>
+    ) : (
+      <div class="cat-grid" id="catalog">
+        <details class="cat-filters-box" open data-filters-box>
+          <summary>Фильтры{filtered && ' (выбраны)'}</summary>
+          <form class="cat-filters" method="get" action="/" data-filters>
+            <div class="cat-filters-head">
+              <span class="cat-filters-title">Фильтры</span>
+              {filtered && <a class="cat-reset" href="/">Очистить фильтр</a>}
+            </div>
+            {groups.map((g) => (
+              <details class="cat-filter" open={g.values.some((v) => v.checked)}>
+                <summary>{g.label}</summary>
+                <div class="cat-filter-list">
+                  {g.values.map((v) => {
+                    const icon = facetIcon(g.label, v.value);
+                    return (
+                      <label class:list={['cat-check', { 'cat-check--empty': v.count === 0 && !v.checked }]}>
+                        <input type="checkbox" name="f" value={`${g.label}:${v.value}`} checked={v.checked} />
+                        {icon && <img src={icon} alt="" width="22" height="22" loading="lazy" />}
+                        <span>{v.value}</span>
+                        <small>({v.count})</small>
+                      </label>
+                    );
+                  })}
+                </div>
+              </details>
+            ))}
+            <noscript><button class="pbtn" type="submit">Показать</button></noscript>
+          </form>
+        </details>
+
+        <div>
+          {items.length > 0 ? (
+            <div class="cat-items">
+              {items.map((p) => <CatalogCard product={p} showBrand={showBrand} />)}
+            </div>
+          ) : (
+            <p class="psub">Нет товаров с такими параметрами. <a href="/">Очистить фильтр</a></p>
+          )}
+          <p class="cat-count">Показано {items.length} из {products.length} {word(products.length)}</p>
+        </div>
+      </div>
+    )
+  }
+</div>
+
+{
+  site.description && (
+    <section class="psec psalon ss-about" id="about">
+      <div class="pin">
+        <h2 class="ptitle">О покрытии</h2>
+        <div class="psalon-text" set:html={site.description} />
+      </div>
+    </section>
+  )
+}
+
+<section class="psec pcontact" id="contacts">
+  <div class="pin pcontact-grid">
+    <div>
+      <h2 class="ptitle">Подберём {/^\p{Lu}\p{Ll}/u.test(site.name) ? site.name[0].toLowerCase() + site.name.slice(1) : site.name}</h2>
+      <p class="psub">Позвоните или напишите: покажем образцы в офисе и рассчитаем количество. Цену и наличие сообщим там же.</p>
+    </div>
+    <div class="pcontact-list">
+      <a class="pcontact-phone" href={phoneHref}>{settings.phone_main}</a>
+      {settings.panel_whatsapp && <a href={waHref} target="_blank" rel="noopener">WhatsApp {settings.panel_whatsapp}</a>}
+      <span>{settings.address}</span>
+      {settings.work_hours && <span>{settings.work_hours}</span>}
+      {settings.email && <a href={`mailto:${settings.email}`}>{settings.email}</a>}
+    </div>
+  </div>
+</section>

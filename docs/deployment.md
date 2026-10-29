@@ -25,6 +25,8 @@ docker compose up -d --build
 
 - `SITE_ADDRESS=europroject.kg, www.europroject.kg`
 - `SITE_URL=https://europroject.kg`
+- `SECTION_SITES_ADDRESS=vinyl.europroject.kg` — адреса сайтов разделов через запятую; те же адреса — в админке
+  у разделов («Адрес сайта») и DNS-записями на сервер, см. [section-sites.md](section-sites.md);
 - свои `POSTGRES_PASSWORD` и `ADMIN_PASSWORD`. Пароль базы задаётся один раз: база создаётся с ним при первом запуске;
 - `INSTAGRAM_TOKEN` — по желанию, см. [news-instagram.md](news-instagram.md).
 

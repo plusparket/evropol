@@ -3,11 +3,14 @@
 // Правила поддержки — AGENTS.md.
 //
 // В файлы попадает только то, что видно на сайте: опубликованные разделы с их сайтами, включённые бренды,
-// страницы и новости.
+// страницы и новости. У каждого сайта раздела (vinyl.localhost …) свои файлы: раздел, бренды, товары
+// (buildSiteLlmsTxt и buildSiteLlmsFullTxt).
 import { sql } from './db.ts';
 import { getHome } from './home.ts';
-import { getActiveBrands, getSections, linkLabel, type Brand, type Section } from './sections.ts';
-import { fillPlaceholders, getSettings, type Settings } from './settings.ts';
+import { getActiveBrands, getSections, linkLabel, sectionLink, siteUrl, type Brand, type Section } from './sections.ts';
+import { categoryPaths, getCategoryTree, getProducts, type CategoryNode, type ProductItem } from './products.ts';
+import { pluralRu } from './util.ts';
+import { fillPlaceholders, getSettings, siteSettings, type Settings } from './settings.ts';
 
 const ENTITIES: Record<string, string> = {
   nbsp: ' ', amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", laquo: '«', raquo: '»',
@@ -92,7 +95,8 @@ function summary(d: Data): string {
     `Офис: ${s.address}. Телефон ${s.phone_main}.`;
 }
 
-function contacts(d: Data): string[] {
+/** mainContact — ссылка на страницу контактов главного сайта (у сайта раздела со своим адресом её нет) */
+function contacts(d: Data, mainContact = true): string[] {
   const s = d.settings;
   const wa = s.panel_whatsapp ? `, WhatsApp ${s.panel_whatsapp} (https://wa.me/${s.panel_whatsapp.replace(/\D/g, '')})` : '';
   const lines = [
@@ -107,7 +111,7 @@ function contacts(d: Data): string[] {
   }
   lines.push(`- Email: ${s.email}${wa}.`);
   if (s.instagram_url) lines.push(`- Instagram: ${s.instagram_url}`);
-  lines.push(`- [Контакты и карта](${d.base}/contact)`);
+  if (mainContact) lines.push(`- [Контакты и карта](${d.base}/contact)`);
   return lines;
 }
 
@@ -126,7 +130,8 @@ export async function buildLlmsTxt(origin: string): Promise<string> {
   out.push('## Разделы', '');
   for (const s of d.sections) {
     const brands = brandsOf(d, s).map((b) => b.name).join(', ');
-    const site = s.link ? ` · ${linkLabel(s)}: ${abs(d, s.link)}` : '';
+    const link = sectionLink(s);
+    const site = link ? ` · ${linkLabel(s)}: ${abs(d, link)}` : '';
     out.push(`- [${s.heading || s.name}](${d.base}/${s.slug})${brands ? `: ${brands}` : ''}${site}`);
   }
   for (const b of looseBrands(d)) out.push(`- ${b.name}${b.link ? `: ${abs(d, b.link)}` : ''}`);
@@ -161,7 +166,7 @@ export async function buildLlmsFullTxt(origin: string): Promise<string> {
   out.push('## Разделы', '');
   for (const s of d.sections) {
     out.push(`### ${s.heading || s.name}`, '', `Адрес: ${d.base}/${s.slug}`);
-    if (s.link) out.push(`${linkLabel(s)}: ${abs(d, s.link)}`);
+    if (sectionLink(s)) out.push(`${linkLabel(s)}: ${abs(d, sectionLink(s))}`);
     if (s.description) out.push('', md(s.description));
     for (const b of brandsOf(d, s)) {
       out.push('', `**${b.name}**${b.link ? ` (коллекции: ${abs(d, b.link)})` : ''}`);
@@ -189,6 +194,113 @@ export async function buildLlmsFullTxt(origin: string): Promise<string> {
       out.push(`### ${n.title}`, '', `Адрес: ${d.base}/news/${n.slug} · ${new Date(n.publishedAt).toLocaleDateString('ru-RU')}`, '');
       const text = md(n.content || n.excerpt);
       if (text) out.push(text, '');
+    }
+  }
+  return out.join('\n').replace(/\n{3,}/g, '\n\n') + '\n';
+}
+
+// --- Сайты разделов ------------------------------------------------------------------------------
+
+type SiteData = Data & { site: Section; siteBase: string; products: ProductItem[]; tree: CategoryNode[] };
+
+async function loadSite(site: Section): Promise<SiteData> {
+  const d = await load('http://localhost');
+  // Группы и категории есть только у вида «Группы и категории товаров»: в других видах сайт их не показывает
+  const tree = site.siteLayout === 'groups' ? await getCategoryTree(site.id) : [];
+  return { ...d, settings: siteSettings(d.settings, site), site, siteBase: siteUrl(site), products: await getProducts(site.id), tree };
+}
+
+const productLine = (p: ProductItem) => [p.brand, p.collection, p.name].filter(Boolean).join(' ');
+
+/** Категории товара словами: «Подготовка основания › Грунтовки; Продукты ARLOK › …» */
+const categoriesOf = (d: SiteData, p: ProductItem) =>
+  categoryPaths(d.tree, p.id).map((path) => path.map((c) => c.name).join(' › ')).join('; ');
+
+/** Группы и категории со ссылками на страницы сайта */
+function categoryList(d: SiteData, md: (html: string) => string): string[] {
+  const out: string[] = [];
+  const line = (c: CategoryNode, indent: string) =>
+    `${indent}- [${c.name}](${d.siteBase}/${c.slug})${c.description ? `: ${oneLine(md(c.description), 200)}` : ''} (${c.productIds.length} ${pluralRu(c.productIds.length, ['товар', 'товара', 'товаров'])})`;
+  for (const g of d.tree) {
+    out.push(line(g, ''));
+    for (const c of g.children) out.push(line(c, '  '));
+  }
+  return out;
+}
+
+function siteHeader(d: SiteData, full: boolean): string[] {
+  const s = d.site;
+  const heading = s.heading || s.name;
+  const out = [`# ${heading}: ${d.settings.site_name}${full ? ', полная информация' : ''}`, ''];
+  out.push(`> ${(s.summary || heading).replace(/\.$/, '')}. Сайт раздела «${s.name}» компании «${d.settings.site_name}» (Бишкек, Кыргызстан). ` +
+    `Офис: ${d.settings.address}. Телефон ${d.settings.phone_main}.`, '');
+  const stock = d.products.filter((p) => p.inStock).length;
+  out.push(`Каталог на сайте: ${d.products.length} ${pluralRu(d.products.length, ['товар', 'товара', 'товаров'])}` +
+    (stock ? `, из них ${stock} с меткой «В наличии» (в каталоге они идут первыми)` : '') + '. ' +
+    'Цен на сайте нет: цену и наличие сообщают по телефону или в WhatsApp.' + (s.siteLayout === 'groups' ? '' : ' Образцы есть в офисе.'), '');
+  // Виды «только каталог» и «группы и категории» не ссылаются на главный сайт — и здесь его нет
+  if (!['catalog', 'groups'].includes(s.siteLayout)) out.push(`Главный сайт компании со всеми разделами: ${d.base}/`, '');
+  return out;
+}
+
+/** /llms.txt сайта раздела: раздел, контакты, бренды, список товаров */
+export async function buildSiteLlmsTxt(site: Section): Promise<string> {
+  const d = await loadSite(site);
+  const md = (html: string) => htmlToMd(fillPlaceholders(html, d.settings), d.siteBase);
+  const out = siteHeader(d, false);
+  if (site.description) out.push(oneLine(md(site.description), 600), '');
+  out.push('## Контакты', '', ...contacts(d, !site.siteAddress && !['catalog', 'groups'].includes(site.siteLayout)), '');
+  const brands = brandsOf(d, site);
+  if (brands.length) {
+    out.push('## Производители', '');
+    for (const b of brands) out.push(`- ${b.name}${b.description ? `: ${oneLine(md(b.description), 160)}` : ''}${b.link ? ` (${abs(d, b.link)})` : ''}`);
+    out.push('');
+  }
+  if (d.tree.length) out.push('## Группы и категории', '', ...categoryList(d, md), '');
+  if (d.products.length) {
+    out.push('## Каталог', '');
+    for (const p of d.products) {
+      const facts = p.attributes.map((a) => a.value).join(', ');
+      const cats = categoriesOf(d, p);
+      out.push(`- [${productLine(p)}](${d.siteBase}/${p.slug})${p.inStock ? ' · в наличии' : ''}${p.isNew ? ' · новинка' : ''}` +
+        `${p.sku ? ` · артикул ${p.sku}` : ''}${cats ? ` · категория: ${cats}` : ''}${facts ? ` · ${oneLine(facts, 200)}` : ''}`);
+    }
+    out.push('');
+  }
+  out.push('## Optional', '');
+  out.push(`- [Полная версия](${d.siteBase}/llms-full.txt): описания и характеристики всех товаров`);
+  out.push(`- [Карта сайта](${d.siteBase}/sitemap.xml)`);
+  return out.join('\n') + '\n';
+}
+
+/** /llms-full.txt сайта раздела: всё о разделе и каждый товар с описанием и таблицей характеристик */
+export async function buildSiteLlmsFullTxt(site: Section): Promise<string> {
+  const d = await loadSite(site);
+  const md = (html: string) => htmlToMd(fillPlaceholders(html, d.settings), d.siteBase);
+  const out = siteHeader(d, true);
+  out.push(`Сайт: ${d.siteBase}. Данные собраны с сайта ${new Date().toLocaleDateString('ru-RU')} и всегда совпадают с ним.`, '');
+  if (site.description) out.push(`## ${site.siteLayout === 'groups' ? 'О продукции' : 'О покрытии'}`, '', md(site.description), '');
+  out.push('## Контакты', '', ...contacts(d, !site.siteAddress && !['catalog', 'groups'].includes(site.siteLayout)), '');
+  const brands = brandsOf(d, site);
+  if (brands.length) {
+    out.push('## Производители', '');
+    for (const b of brands) {
+      out.push(`### ${b.name}`, '');
+      if (b.link) out.push(`Коллекции: ${abs(d, b.link)}`, '');
+      if (b.description) out.push(md(b.description), '');
+    }
+  }
+  if (d.tree.length) out.push('## Группы и категории', '', ...categoryList(d, md), '');
+  if (d.products.length) {
+    out.push('## Каталог', '');
+    for (const p of d.products) {
+      const cats = categoriesOf(d, p);
+      out.push(`### ${productLine(p)}`, '',
+        `Адрес: ${d.siteBase}/${p.slug}${p.sku ? ` · артикул ${p.sku}` : ''}${p.inStock ? ' · в наличии' : ''}${p.isNew ? ' · новинка' : ''}`, '');
+      if (cats) out.push(`Категория: ${cats}`, '');
+      if (p.description) out.push(md(p.description), '');
+      for (const sp of p.specs) out.push(`- ${sp.label}: ${sp.value}`);
+      if (p.specs.length) out.push('');
     }
   }
   return out.join('\n').replace(/\n{3,}/g, '\n\n') + '\n';

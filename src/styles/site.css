@@ -394,3 +394,45 @@ h1, h2, h3 { font-weight: 500; }
   .fab-wa { right: 16px; bottom: 16px; }
   .to-top { right: 24px; bottom: 84px; }
 }
+/* --- Лесной дизайн (настройка «Лесной дизайн главного сайта», класс theme-forest на <html>) ----------------------
+ * Набор №1 «Лесной», выбран владельцем 27.10.2026: белая шапка с зелёным логотипом ЕвроПол, тонкая зелёная полоса
+ * сверху, зелёные активный пункт меню, кнопки, заголовки и наведение на плитки, светло-зелёный фон блока контактов
+ * и новостей, тёмно-зелёный подвал. Зелёный — цвет логотипа #006338. */
+.theme-forest {
+  --g: #006338;          /* цвет логотипа */
+  --navy: #006338;       /* полоса сверху, активный пункт меню, наведение */
+  --accent: #006338;
+  --menu: #6b736e;
+  --muted: #6b736e;
+  --band: #f3f6f4;
+  --line: #e4ebe6;
+  --dark: #0f2a1d;       /* подвал */
+  --dark-line: #24402f;
+  --on-dark-muted: #c3d2c9;
+}
+.theme-forest .ph { border-top-width: 4px; }
+.theme-forest .ph-insta { display: grid; place-items: center; color: var(--g); }
+.theme-forest .ph-insta:hover { opacity: 1; color: #004b2a; }
+.theme-forest .ph-burger i { background: var(--g); }
+
+.theme-forest .ptiles a { border-left-color: var(--line); border-bottom-color: var(--line); color: #1d2a23; }
+.theme-forest .ptiles a:hover { background: var(--g); color: #fff; }
+
+.theme-forest .pinfo { background: var(--band); }
+.theme-forest .pinfo-title, .theme-forest .pinfo-title a { color: var(--g); }
+.theme-forest .pinfo-contacts hr { border-top-color: #d9e3dc; }
+.theme-forest .pbtn-light { background: var(--g); color: #fff !important; }
+.theme-forest .pbtn-light:hover { background: #004b2a; }
+.theme-forest .pbtn { border-color: var(--g); background: var(--g); }
+.theme-forest .pbtn:hover { background: transparent; color: var(--g); }
+.theme-forest .pnews-title a:hover, .theme-forest .pnews-more { color: var(--g); }
+
+.theme-forest .ppage-head .ppage-title { color: var(--g); }
+
+.theme-forest .pf-col li::before { background: var(--on-dark-muted); }
+.theme-forest .pf-note { color: var(--on-dark-muted); }
+.theme-forest .pf-social a { background: rgba(255, 255, 255, .12); }
+.theme-forest .pf-social a:hover { background: #fff; color: var(--g); }
+.theme-forest .pf-bottom { color: #8fae9b; }
+/* Сайты разделов (body.ss): заголовок страницы зелёный, остальное — из переменных выше */
+.theme-forest .ss h1 { color: var(--g); }

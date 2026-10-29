@@ -1,0 +1,4866 @@
+{
+ "section": "laminate",
+ "version": 3,
+ "note": "Ламинат BerryAlloc Chateau+ и Ocean 8 V4, HARO TRITTY: данные и фото производителей (berryalloc.com, haro.com), снимок 2026-10. inStock — позиции из таблиц владельца HARO_2026_R.xls и BERRYALLOC_2026_R.xls, лист «Октябрь». Фото скачиваются при запуске (src/server/section-sites.ts).",
+ "site": {
+  "layout": "catalog"
+ },
+ "brands": [
+  {
+   "name": "BerryAlloc",
+   "link": "https://www.berryalloc.com/global/en/laminate",
+   "description": "<p>Бельгийская компания: ламинат, винил, паркет и стеновые панели для домов и коммерческих объектов. Рисунки под дерево и под камень.</p>"
+  },
+  {
+   "name": "HARO",
+   "link": "https://www.haro.com/en/products/laminate/assortment/",
+   "description": "<p>Немецкий производитель паркета, ламината и дизайнерских полов из Розенхайма. Ламинат TRITTY выпускает на своём заводе в Германии.</p>"
+  }
+ ],
+ "products": [
+  {
+   "brand": "BerryAlloc",
+   "name": "Bloom Light Brown",
+   "slug": "bloom-light-brown",
+   "collection": "Chateau+",
+   "sku": "62002710",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "светло-коричневый"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "живой"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    },
+    {
+     "label": "Степень блеска",
+     "value": "слабый блеск"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "62002710"
+    },
+    {
+     "label": "Серия",
+     "value": "Chateau+"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "красный"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Класс износостойкости",
+     "value": "AC5"
+    },
+    {
+     "label": "Замок",
+     "value": "OmniLoc A"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "504 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "84 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,01606 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "24"
+    }
+   ],
+   "description": "<p>Натуральный дуб с множеством сучков, матовой поверхностью и выраженной фактурой в светло-коричневом цвете.</p>\n<p>Ламинат BerryAlloc Chateau+ с рисунком «ёлочка» собирается на замок OmniLoc A без клея. Доска 504 × 84 мм, толщина 8 мм. Класс износостойкости AC5, класс использования 23 для дома и 33 для офиса. Сделано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5a3gs3u94etfpy/beaulieu_2000w,default/bloom_light_brown_lam_v4_504x84_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5aka8remrnbjt854e/beaulieu_2000w,default/bloom_light_brown_lam_v4_504x84_berryalloc_rsh_01"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/chateau-plus/62002710",
+   "inStock": true
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Bloom Sand Natural",
+   "slug": "bloom-sand-natural",
+   "collection": "Chateau+",
+   "sku": "62002712",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "светлый натуральный"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "живой"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    },
+    {
+     "label": "Степень блеска",
+     "value": "слабый блеск"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "62002712"
+    },
+    {
+     "label": "Серия",
+     "value": "Chateau+"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "жёлтый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Класс износостойкости",
+     "value": "AC5"
+    },
+    {
+     "label": "Замок",
+     "value": "OmniLoc A"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "504 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "84 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,01606 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "24"
+    }
+   ],
+   "description": "<p>Натуральный дуб с множеством сучков, матовой поверхностью и выраженной фактурой в светлом песочном оттенке.</p>\n<p>Ламинат BerryAlloc Chateau+ с рисунком «ёлочка» собирается на замок OmniLoc A без клея. Доска 504 × 84 мм, толщина 8 мм. Класс износостойкости AC5, класс использования 23 для дома и 33 для офиса. Сделано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak55hzhkfmscc7dy/beaulieu_2000w,default/bloom_sand_natural_lam_v4_504x84_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5akadjybb7dfx4owy/beaulieu_2000w,default/bloom_sand_natural_lam_v4_504x84_berryalloc_rsh_01"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/chateau-plus/62002712",
+   "inStock": true
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Charme Black",
+   "slug": "charme-black",
+   "collection": "Chateau+",
+   "sku": "62002722",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "чёрный"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "спокойный"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    },
+    {
+     "label": "Степень блеска",
+     "value": "слабый блеск"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "62002722"
+    },
+    {
+     "label": "Серия",
+     "value": "Chateau+"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "фиолетовый, красный"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Класс износостойкости",
+     "value": "AC5"
+    },
+    {
+     "label": "Замок",
+     "value": "OmniLoc A"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "504 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "84 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,01606 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "24"
+    }
+   ],
+   "description": "<p>Натуральный дуб с матовой поверхностью и выраженной фактурой в чёрном цвете.</p>\n<p>Ламинат BerryAlloc Chateau+ с рисунком «ёлочка» собирается на замок OmniLoc A без клея. Доска 504 × 84 мм, толщина 8 мм. Класс износостойкости AC5, класс использования 23 для дома и 33 для офиса. Сделано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5nnnj84kx4azay/beaulieu_2000w,default/charme_black_lam_v4_504x84_berryalloc_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak3ahjq478dmoaey/beaulieu_2000w,default/charme_black_lam_v4_504x84_berryalloc_rsh_02",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak37u3e1ohi4cp1o/beaulieu_2000w,default/charme_black_lam_v4_504x84_berryalloc_rsh_01"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/chateau-plus/62002722",
+   "inStock": true
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Charme Light Natural",
+   "slug": "charme-light-natural",
+   "collection": "Chateau+",
+   "sku": "62002720",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "светлый натуральный"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "спокойный"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    },
+    {
+     "label": "Степень блеска",
+     "value": "слабый блеск"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "62002720"
+    },
+    {
+     "label": "Серия",
+     "value": "Chateau+"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "жёлтый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Класс износостойкости",
+     "value": "AC5"
+    },
+    {
+     "label": "Замок",
+     "value": "OmniLoc A"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "504 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "84 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,01606 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "24"
+    }
+   ],
+   "description": "<p>Натуральный дуб с матовой поверхностью и выраженной фактурой в светлом натуральном цвете дерева.</p>\n<p>Ламинат BerryAlloc Chateau+ с рисунком «ёлочка» собирается на замок OmniLoc A без клея. Доска 504 × 84 мм, толщина 8 мм. Класс износостойкости AC5, класс использования 23 для дома и 33 для офиса. Сделано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak41q8mcec75teby/beaulieu_2000w,default/charme_light_natural_lam_v4_504x84_berryalloc_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak4j7dio8c6ay1pe/beaulieu_2000w,default/charme_light_natural_lam_v4_504x84_berryalloc_rsh_04",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak44z5dei5wfhszy/beaulieu_2000w,default/charme_light_natural_lam_v4_504x84_berryalloc_rsh_03"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/chateau-plus/62002720",
+   "inStock": true
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Chestnut White",
+   "slug": "chestnut-white",
+   "collection": "Chateau+",
+   "sku": "62002706",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "белый"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "живой"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "каштан"
+    },
+    {
+     "label": "Степень блеска",
+     "value": "слабый блеск"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "62002706"
+    },
+    {
+     "label": "Серия",
+     "value": "Chateau+"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "жёлтый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Класс износостойкости",
+     "value": "AC5"
+    },
+    {
+     "label": "Замок",
+     "value": "OmniLoc A"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "504 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "84 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,01606 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "24"
+    }
+   ],
+   "description": "<p>Матовая поверхность и мягкая фактура в цвете белёного шлифованного дерева.</p>\n<p>Ламинат BerryAlloc Chateau+ с рисунком «ёлочка» собирается на замок OmniLoc A без клея. Доска 504 × 84 мм, толщина 8 мм. Класс износостойкости AC5, класс использования 23 для дома и 33 для офиса. Сделано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak34pw5iza7hfs9e/beaulieu_2000w,default/chestnut_white_lam_v4_504x84_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak31shbzf14tpdpo/beaulieu_2000w,default/chestnut_white_lam_v4_504x84_berryalloc_rsh_04",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5pjw54ymqiyk4e/beaulieu_2000w,default/chestnut_white_lam_v4_504x84_berryalloc_rsh_03"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/chateau-plus/62002706",
+   "inStock": false
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Gyant Dark Brown",
+   "slug": "gyant-dark-brown",
+   "collection": "Chateau+",
+   "sku": "62002704",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-коричневый"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "рустикальный"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    },
+    {
+     "label": "Степень блеска",
+     "value": "экстраматовый"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "62002704"
+    },
+    {
+     "label": "Серия",
+     "value": "Chateau+"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "оранжевый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Класс износостойкости",
+     "value": "AC5"
+    },
+    {
+     "label": "Замок",
+     "value": "OmniLoc A"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "504 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "84 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,01606 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "24"
+    }
+   ],
+   "description": "<p>Выразительный дуб с множеством сучков, ультраматовой поверхностью и глубокой фактурой в тёмно-коричневом цвете.</p>\n<p>Ламинат BerryAlloc Chateau+ с рисунком «ёлочка» собирается на замок OmniLoc A без клея. Доска 504 × 84 мм, толщина 8 мм. Класс износостойкости AC5, класс использования 23 для дома и 33 для офиса. Сделано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak46tjgwwgqgy84a/beaulieu_2000w,default/gyant_dark_brown_lam_v4_504x84_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5aka95kh5xy44x8po/beaulieu_2000w,default/gyant_dark_brown_lam_v4_504x84_berryalloc_rsh_05",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5ghw1ba91qdx9y/beaulieu_2000w,default/gyant_dark_brown_lam_v4_504x84_berryalloc_rsh_07"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/chateau-plus/62002704",
+   "inStock": true
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Gyant Light",
+   "slug": "gyant-light",
+   "collection": "Chateau+",
+   "sku": "62002702",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "белый"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "рустикальный"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    },
+    {
+     "label": "Степень блеска",
+     "value": "экстраматовый"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "62002702"
+    },
+    {
+     "label": "Серия",
+     "value": "Chateau+"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "жёлтый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Класс износостойкости",
+     "value": "AC5"
+    },
+    {
+     "label": "Замок",
+     "value": "OmniLoc A"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "504 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "84 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,01606 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "24"
+    }
+   ],
+   "description": "<p>Выразительный дуб с множеством сучков, ультраматовой поверхностью и глубокой фактурой в светлом цвете дерева.</p>\n<p>Ламинат BerryAlloc Chateau+ с рисунком «ёлочка» собирается на замок OmniLoc A без клея. Доска 504 × 84 мм, толщина 8 мм. Класс износостойкости AC5, класс использования 23 для дома и 33 для офиса. Сделано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak38t8oqsuogc1gy/beaulieu_2000w,default/gyant_light_lam_v4_504x84_dsh"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/chateau-plus/62002702",
+   "inStock": false
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Java Brown",
+   "slug": "java-brown",
+   "collection": "Chateau+",
+   "sku": "62002718",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-коричневый"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "живой"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    },
+    {
+     "label": "Степень блеска",
+     "value": "слабый блеск"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "62002718"
+    },
+    {
+     "label": "Серия",
+     "value": "Chateau+"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "жёлтый, красный"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Класс износостойкости",
+     "value": "AC5"
+    },
+    {
+     "label": "Замок",
+     "value": "OmniLoc A"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "504 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "84 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,01606 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "24"
+    }
+   ],
+   "description": "<p>Натуральный дуб с матовой поверхностью и фактурой от мягкой до выраженной в тёмно-коричневом цвете.</p>\n<p>Ламинат BerryAlloc Chateau+ с рисунком «ёлочка» собирается на замок OmniLoc A без клея. Доска 504 × 84 мм, толщина 8 мм. Класс износостойкости AC5, класс использования 23 для дома и 33 для офиса. Сделано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5iiwi9dwdkyipo/beaulieu_2000w,default/java_brown_lam_v4_504x84_berryalloc_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5hdy9k191by1do/beaulieu_2000w,default/java_brown_lam_v4_504x84_berryalloc_rsh_01",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5op53p4q6wj5fo/beaulieu_2000w,default/java_brown_java_light_grey_lam_v4_504x84_berryalloc_rsh_05"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/chateau-plus/62002718",
+   "inStock": true
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Java Light Grey",
+   "slug": "java-light-grey",
+   "collection": "Chateau+",
+   "sku": "62002714",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "светло-серый"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "живой"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    },
+    {
+     "label": "Степень блеска",
+     "value": "слабый блеск"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "62002714"
+    },
+    {
+     "label": "Серия",
+     "value": "Chateau+"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "фиолетовый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Класс износостойкости",
+     "value": "AC5"
+    },
+    {
+     "label": "Замок",
+     "value": "OmniLoc A"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "504 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "84 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,01606 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "24"
+    }
+   ],
+   "description": "<p>Натуральный дуб с матовой поверхностью и фактурой от мягкой до выраженной в светло-сером цвете.</p>\n<p>Ламинат BerryAlloc Chateau+ с рисунком «ёлочка» собирается на замок OmniLoc A без клея. Доска 504 × 84 мм, толщина 8 мм. Класс износостойкости AC5, класс использования 23 для дома и 33 для офиса. Сделано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak4quxso1g185pxe/beaulieu_2000w,default/java_light_grey_lam_v4_504x84_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak4i6itmj5rjfkwe/beaulieu_2000w,default/java_light_grey_lam_v4_504x84_berryalloc_rsh_02",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak4u6dc7sxc9f1ma/beaulieu_2000w,default/java_light_grey_lam_v4_504x84_berryalloc_rsh_01"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/chateau-plus/62002714",
+   "inStock": true
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Java Natural",
+   "slug": "java-natural",
+   "collection": "Chateau+",
+   "sku": "62002716",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "натуральный"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "живой"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    },
+    {
+     "label": "Степень блеска",
+     "value": "слабый блеск"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "62002716"
+    },
+    {
+     "label": "Серия",
+     "value": "Chateau+"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "оранжевый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Класс износостойкости",
+     "value": "AC5"
+    },
+    {
+     "label": "Замок",
+     "value": "OmniLoc A"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "504 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "84 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,01606 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "24"
+    }
+   ],
+   "description": "<p>Натуральный дуб с матовой поверхностью и фактурой от мягкой до выраженной в натуральном цвете дерева.</p>\n<p>Ламинат BerryAlloc Chateau+ с рисунком «ёлочка» собирается на замок OmniLoc A без клея. Доска 504 × 84 мм, толщина 8 мм. Класс износостойкости AC5, класс использования 23 для дома и 33 для офиса. Сделано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5akax96nqcsrg6y1o/beaulieu_2000w,default/java_natural_lam_v4_504x84_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak4p9hkpk7o6eake/beaulieu_2000w,default/java_natural_lam_v4_504x84_berryalloc_rsh_01"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/chateau-plus/62002716",
+   "inStock": true
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Merbau Brown",
+   "slug": "merbau-brown",
+   "collection": "Chateau+",
+   "sku": "62002708",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-коричневый"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "спокойный"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "мербау"
+    },
+    {
+     "label": "Степень блеска",
+     "value": "глянцевый"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "62002708"
+    },
+    {
+     "label": "Серия",
+     "value": "Chateau+"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "красный"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Класс износостойкости",
+     "value": "AC5"
+    },
+    {
+     "label": "Замок",
+     "value": "OmniLoc A"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "504 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "84 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,01606 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "24"
+    }
+   ],
+   "description": "<p>Глянцевая поверхность и мягкая фактура в тёмном красно-коричневом цвете мербау.</p>\n<p>Ламинат BerryAlloc Chateau+ с рисунком «ёлочка» собирается на замок OmniLoc A без клея. Доска 504 × 84 мм, толщина 8 мм. Класс износостойкости AC5, класс использования 23 для дома и 33 для офиса. Сделано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak353sm99orxhxxe/beaulieu_2000w,default/merbau_brown_lam_v4_504x84_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5akantutnp6y7oqca/beaulieu_2000w,default/merbau_brown_lam_v4_504x84_berryalloc_rsh_01"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/chateau-plus/62002708",
+   "inStock": false
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Teak Brown",
+   "slug": "teak-brown",
+   "collection": "Chateau+",
+   "sku": "62002728",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-коричневый"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "спокойный"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "тик"
+    },
+    {
+     "label": "Степень блеска",
+     "value": "глянцевый"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "62002728"
+    },
+    {
+     "label": "Серия",
+     "value": "Chateau+"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "оранжевый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Класс износостойкости",
+     "value": "AC5"
+    },
+    {
+     "label": "Замок",
+     "value": "OmniLoc A"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "504 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "84 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,01606 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "24"
+    }
+   ],
+   "description": "<p>Глянцевая поверхность и мягкая структура в тёмном красно-коричневом цвете тика.</p>\n<p>Ламинат BerryAlloc Chateau+ с рисунком «ёлочка» собирается на замок OmniLoc A без клея. Доска 504 × 84 мм, толщина 8 мм. Класс износостойкости AC5, класс использования 23 для дома и 33 для офиса. Сделано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak48ufgxa4ngnh9y/beaulieu_2000w,default/teak_brown_lam_v4_504x84_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak4aczhrofc1ou5a/beaulieu_2000w,default/teak_brown_lam_v4_504x84_berryalloc_rsh_01"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/chateau-plus/62002728",
+   "inStock": true
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Texas Light Brown",
+   "slug": "texas-light-brown",
+   "collection": "Chateau+",
+   "sku": "62002726",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "натуральный"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "живой"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    },
+    {
+     "label": "Степень блеска",
+     "value": "слабый блеск"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "62002726"
+    },
+    {
+     "label": "Серия",
+     "value": "Chateau+"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "оранжевый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Класс износостойкости",
+     "value": "AC5"
+    },
+    {
+     "label": "Замок",
+     "value": "OmniLoc A"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "504 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "84 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,01606 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "24"
+    }
+   ],
+   "description": "<p>Выразительный дуб с матовой поверхностью и выраженной структурой в светло-коричневом цвете.</p>\n<p>Ламинат BerryAlloc Chateau+ с рисунком «ёлочка» собирается на замок OmniLoc A без клея. Доска 504 × 84 мм, толщина 8 мм. Класс износостойкости AC5, класс использования 23 для дома и 33 для офиса. Сделано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5akaeqehda398uj8e/beaulieu_2000w,default/texas_light_brown_lam_v4_504x84_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak4ur5wayf7u7hxe/beaulieu_2000w,default/texas_light_brown_lam_v4_504x84_berryalloc_rsh_01",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5j9kk5jqsh1cue/beaulieu_2000w,default/texas_light_brown_lam_v4_504x84_berryalloc_rsh_02"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/chateau-plus/62002726",
+   "inStock": true
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Texas Light Natural",
+   "slug": "texas-light-natural",
+   "collection": "Chateau+",
+   "sku": "62002724",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "светлый натуральный"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "живой"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    },
+    {
+     "label": "Степень блеска",
+     "value": "слабый блеск"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "62002724"
+    },
+    {
+     "label": "Серия",
+     "value": "Chateau+"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "жёлтый, оранжевый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Класс износостойкости",
+     "value": "AC5"
+    },
+    {
+     "label": "Замок",
+     "value": "OmniLoc A"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "504 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "84 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,01606 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "24"
+    }
+   ],
+   "description": "<p>Выразительный дуб с матовой поверхностью и выраженной структурой в светлом натуральном цвете дерева.</p>\n<p>Ламинат BerryAlloc Chateau+ с рисунком «ёлочка» собирается на замок OmniLoc A без клея. Доска 504 × 84 мм, толщина 8 мм. Класс износостойкости AC5, класс использования 23 для дома и 33 для офиса. Сделано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5ndfdhuzyxsa1o/beaulieu_2000w,default/texas_light_natural_lam_v4_504x84_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5z6ph8ox3apmfe/beaulieu_2000w,default/texas_light_natural_lam_v4_504x84_berryalloc_rsh_02",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak3s38ewm7tsnm3e/beaulieu_2000w,default/texas_light_natural_lam_v4_504x84_berryalloc_rsh_01"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/chateau-plus/62002724",
+   "inStock": false
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Walnut Brown",
+   "slug": "walnut-brown",
+   "collection": "Chateau+",
+   "sku": "62002730",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-коричневый"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "спокойный"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "орех"
+    },
+    {
+     "label": "Степень блеска",
+     "value": "глянцевый"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "62002730"
+    },
+    {
+     "label": "Серия",
+     "value": "Chateau+"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "красный, оранжевый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Класс износостойкости",
+     "value": "AC5"
+    },
+    {
+     "label": "Замок",
+     "value": "OmniLoc A"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "504 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "84 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,01606 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "24"
+    }
+   ],
+   "description": "<p>Глянцевая мягкая поверхность в тёмно-коричневом цвете ореха.</p>\n<p>Ламинат BerryAlloc Chateau+ с рисунком «ёлочка» собирается на замок OmniLoc A без клея. Доска 504 × 84 мм, толщина 8 мм. Класс износостойкости AC5, класс использования 23 для дома и 33 для офиса. Сделано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak39yojt8sx4dkso/beaulieu_2000w,default/walnut_brown_lam_v4_504x84_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak513ffeib3potky/beaulieu_2000w,default/walnut_brown_lam_v4_504x84_berryalloc_rsh_06",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5iidnx5h6wtfge/beaulieu_2000w,default/walnut_brown_lam_v4_504x84_berryalloc_rsh_9"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/chateau-plus/62002730",
+   "inStock": true
+  },
+  {
+   "brand": "HARO",
+   "name": "Oak Contura Smoked",
+   "slug": "haro-tritty-100-oak-contura-smoked",
+   "collection": "TRITTY 100",
+   "sku": "538697",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 32"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-коричневый"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "538697"
+    },
+    {
+     "label": "Серия",
+     "value": "TRITTY 100"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Рисунок",
+     "value": "Oak Contura Smoked"
+    },
+    {
+     "label": "Поверхность",
+     "value": "authentic, повторяет поры дерева"
+    },
+    {
+     "label": "Фаска",
+     "value": "фаска с четырёх сторон"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 32"
+    },
+    {
+     "label": "Замок",
+     "value": "Top Connect"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1282 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "193 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,98 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "8"
+    },
+    {
+     "label": "Влагостойкость",
+     "value": "для сухих помещений"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно"
+    },
+    {
+     "label": "Гарантия",
+     "value": "25 лет для дома"
+    },
+    {
+     "label": "Страна",
+     "value": "Германия"
+    }
+   ],
+   "description": "<p>Рисунок Oak Contura Smoked: копчёный дуб с сучками и трещинами, тёмно-коричневый.</p>\n<p>Ламинат HARO TRITTY 100 собирается на замок Top Connect без клея. Однополосная доска 1282 × 193 мм, толщина 8 мм, фаска с четырёх сторон. Поверхность authentic, повторяет поры дерева. Класс использования 23 для дома и 32 для офиса, гарантия производителя 25 лет для дома. Ламинат можно класть на тёплый пол. Сделано в Германии.</p>",
+   "images": [
+    "https://api.haro.com/media/img/haro/en/1046x773/538697_haro_plank_1_strip_4v_oak_contura_smoked_authentic_int02.jpg",
+    "https://www.haro.com/site/assets/files/2137/538697_haro_laminatboden_landhausdiele_4v_eiche_contura_geraeuchert_authentic_ver-1.1200x630.jpg"
+   ],
+   "sourceUrl": "https://www.haro.com/en/find-flooring/laminate/538697/",
+   "inStock": true
+  },
+  {
+   "brand": "HARO",
+   "name": "Acacia Vario",
+   "slug": "haro-tritty-100-acacia-vario",
+   "collection": "TRITTY 100",
+   "sku": "544723",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 32"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "коричневый"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "акация"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "544723"
+    },
+    {
+     "label": "Серия",
+     "value": "TRITTY 100"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Рисунок",
+     "value": "Acacia Vario"
+    },
+    {
+     "label": "Поверхность",
+     "value": "authentic soft, мягкая структура дерева"
+    },
+    {
+     "label": "Фаска",
+     "value": "фаска с четырёх сторон"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 32"
+    },
+    {
+     "label": "Замок",
+     "value": "Top Connect"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1282 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "193 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,98 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "8"
+    },
+    {
+     "label": "Влагостойкость",
+     "value": "для сухих помещений"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно"
+    },
+    {
+     "label": "Гарантия",
+     "value": "25 лет для дома"
+    },
+    {
+     "label": "Страна",
+     "value": "Германия"
+    }
+   ],
+   "description": "<p>Рисунок Acacia Vario: акация с перепадом цвета от светлого до тёмно-коричневого.</p>\n<p>Ламинат HARO TRITTY 100 собирается на замок Top Connect без клея. Однополосная доска 1282 × 193 мм, толщина 8 мм, фаска с четырёх сторон. Поверхность authentic soft, мягкая структура дерева. Класс использования 23 для дома и 32 для офиса, гарантия производителя 25 лет для дома. Ламинат можно класть на тёплый пол. Сделано в Германии.</p>",
+   "images": [
+    "https://api.haro.com/media/img/haro/en/1046x773/544723_haro_laminate_floor_plank_1_strip_4v_acacia_vario_authentic_soft_int.jpg",
+    "https://www.haro.com/site/assets/files/91306/544723_haro_laminatboden_landhausdiele_4v_akazie_vario_authentic_soft_ver-1.1200x630.jpg"
+   ],
+   "sourceUrl": "https://www.haro.com/en/find-flooring/laminate/544723/",
+   "inStock": true
+  },
+  {
+   "brand": "HARO",
+   "name": "Elm Vario",
+   "slug": "haro-tritty-100-elm-vario",
+   "collection": "TRITTY 100",
+   "sku": "544720",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 32"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "натуральный"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "вяз"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "544720"
+    },
+    {
+     "label": "Серия",
+     "value": "TRITTY 100"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Рисунок",
+     "value": "Elm Vario"
+    },
+    {
+     "label": "Поверхность",
+     "value": "authentic soft, мягкая структура дерева"
+    },
+    {
+     "label": "Фаска",
+     "value": "фаска с четырёх сторон"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 32"
+    },
+    {
+     "label": "Замок",
+     "value": "Top Connect"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1282 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "193 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,98 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "8"
+    },
+    {
+     "label": "Влагостойкость",
+     "value": "для сухих помещений"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно"
+    },
+    {
+     "label": "Гарантия",
+     "value": "25 лет для дома"
+    },
+    {
+     "label": "Страна",
+     "value": "Германия"
+    }
+   ],
+   "description": "<p>Рисунок Elm Vario: вяз с выраженным рисунком и перепадом тона.</p>\n<p>Ламинат HARO TRITTY 100 собирается на замок Top Connect без клея. Однополосная доска 1282 × 193 мм, толщина 8 мм, фаска с четырёх сторон. Поверхность authentic soft, мягкая структура дерева. Класс использования 23 для дома и 32 для офиса, гарантия производителя 25 лет для дома. Ламинат можно класть на тёплый пол. Сделано в Германии.</p>",
+   "images": [
+    "https://api.haro.com/media/img/haro/en/1046x773/544720_haro_laminate_floor_plank_1_strip_4v_elm_vario_authentic_soft_int.jpg",
+    "https://www.haro.com/site/assets/files/91282/544720_haro_laminatboden_landhausdiele_4v_ulme_vario_authentic_soft_ver-1.1200x630.jpg"
+   ],
+   "sourceUrl": "https://www.haro.com/en/find-flooring/laminate/544720/",
+   "inStock": true
+  },
+  {
+   "brand": "HARO",
+   "name": "Oak Flavia Grey",
+   "slug": "haro-tritty-100-oak-flavia-grey",
+   "collection": "TRITTY 100",
+   "sku": "544702",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 32"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "серый"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "544702"
+    },
+    {
+     "label": "Серия",
+     "value": "TRITTY 100"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Рисунок",
+     "value": "Oak Flavia Grey"
+    },
+    {
+     "label": "Поверхность",
+     "value": "authentic, повторяет поры дерева"
+    },
+    {
+     "label": "Фаска",
+     "value": "фаска с четырёх сторон"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 32"
+    },
+    {
+     "label": "Замок",
+     "value": "Top Connect"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1282 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "193 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,98 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "8"
+    },
+    {
+     "label": "Влагостойкость",
+     "value": "для сухих помещений"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно"
+    },
+    {
+     "label": "Гарантия",
+     "value": "25 лет для дома"
+    },
+    {
+     "label": "Страна",
+     "value": "Германия"
+    }
+   ],
+   "description": "<p>Рисунок Oak Flavia Grey: дуб с сучками в сером цвете.</p>\n<p>Ламинат HARO TRITTY 100 собирается на замок Top Connect без клея. Однополосная доска 1282 × 193 мм, толщина 8 мм, фаска с четырёх сторон. Поверхность authentic, повторяет поры дерева. Класс использования 23 для дома и 32 для офиса, гарантия производителя 25 лет для дома. Ламинат можно класть на тёплый пол. Сделано в Германии.</p>",
+   "images": [
+    "https://api.haro.com/media/img/haro/en/1046x773/544702_haro_laminate_floor_plank_1_strip_4v_oak_flavia_grey_authentic_int.jpg",
+    "https://www.haro.com/site/assets/files/91270/544702_haro_laminatboden_landhausdiele_4v_eiche_flavia_grau_authentic_ver-1.1200x630.jpg"
+   ],
+   "sourceUrl": "https://www.haro.com/en/find-flooring/laminate/544702/",
+   "inStock": true
+  },
+  {
+   "brand": "HARO",
+   "name": "Oak Flavia Smoked",
+   "slug": "haro-tritty-100-oak-flavia-smoked",
+   "collection": "TRITTY 100",
+   "sku": "544705",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 32"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-коричневый"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "544705"
+    },
+    {
+     "label": "Серия",
+     "value": "TRITTY 100"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Рисунок",
+     "value": "Oak Flavia Smoked"
+    },
+    {
+     "label": "Поверхность",
+     "value": "authentic, повторяет поры дерева"
+    },
+    {
+     "label": "Фаска",
+     "value": "фаска с четырёх сторон"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 32"
+    },
+    {
+     "label": "Замок",
+     "value": "Top Connect"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1282 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "193 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,98 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "8"
+    },
+    {
+     "label": "Влагостойкость",
+     "value": "для сухих помещений"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно"
+    },
+    {
+     "label": "Гарантия",
+     "value": "25 лет для дома"
+    },
+    {
+     "label": "Страна",
+     "value": "Германия"
+    }
+   ],
+   "description": "<p>Рисунок Oak Flavia Smoked: дуб с сучками в тёмном копчёном цвете.</p>\n<p>Ламинат HARO TRITTY 100 собирается на замок Top Connect без клея. Однополосная доска 1282 × 193 мм, толщина 8 мм, фаска с четырёх сторон. Поверхность authentic, повторяет поры дерева. Класс использования 23 для дома и 32 для офиса, гарантия производителя 25 лет для дома. Ламинат можно класть на тёплый пол. Сделано в Германии.</p>",
+   "images": [
+    "https://api.haro.com/media/img/haro/en/1046x773/544705_haro_laminate_floor_plank_1_strip_4v_oak_flavia_smoked_authentic_qv.jpg",
+    "https://www.haro.com/site/assets/files/91294/544705_haro_laminatboden_landhausdiele_4v_eiche_flavia_geraeuchert_authentic_ver.1200x630.jpg"
+   ],
+   "sourceUrl": "https://www.haro.com/en/find-flooring/laminate/544705/",
+   "inStock": true
+  },
+  {
+   "brand": "HARO",
+   "name": "Oak Nature",
+   "slug": "haro-tritty-200-aqua-chevron-oak-nature",
+   "collection": "TRITTY 200 Aqua",
+   "sku": "545180",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Французская ёлка"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "натуральный"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "545180"
+    },
+    {
+     "label": "Серия",
+     "value": "TRITTY 200 Aqua"
+    },
+    {
+     "label": "Формат",
+     "value": "Французская ёлка"
+    },
+    {
+     "label": "Рисунок",
+     "value": "Oak Nature"
+    },
+    {
+     "label": "Поверхность",
+     "value": "authentic, повторяет поры дерева"
+    },
+    {
+     "label": "Фаска",
+     "value": "микрофаска с четырёх сторон"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Замок",
+     "value": "Lock Connect plus"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1330 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "320 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,13 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "5"
+    },
+    {
+     "label": "Влагостойкость",
+     "value": "для кухни, прихожей и ванной"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно"
+    },
+    {
+     "label": "Гарантия",
+     "value": "25 лет для дома"
+    },
+    {
+     "label": "Страна",
+     "value": "Германия"
+    }
+   ],
+   "description": "<p>Рисунок Oak Nature: дуб в натуральном цвете.</p>\n<p>Ламинат HARO TRITTY 200 Aqua собирается на замок Lock Connect plus без клея. Французская ёлка 1330 × 320 мм, толщина 8 мм, микрофаска с четырёх сторон. Поверхность authentic, повторяет поры дерева. Класс использования 23 для дома и 33 для офиса, гарантия производителя 25 лет для дома. Ламинат можно класть на тёплый пол. Серия Aqua не боится влаги: её кладут на кухне, в прихожей и в ванной. Сделано в Германии.</p>",
+   "images": [
+    "https://api.haro.com/media/img/haro/en/1046x773/545180_haro_laminate_floor_chevron_4vm_oak_nature_authentic_int.jpg",
+    "https://www.haro.com/site/assets/files/91539/545180_haro_laminatboden_chevron_4vm_eiche_natur_authentic_ver-2.1200x630.jpg"
+   ],
+   "sourceUrl": "https://www.haro.com/en/find-flooring/laminate/545180/",
+   "inStock": true
+  },
+  {
+   "brand": "HARO",
+   "name": "Oak Grey",
+   "slug": "haro-tritty-200-aqua-chevron-oak-grey",
+   "collection": "TRITTY 200 Aqua",
+   "sku": "545182",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Французская ёлка"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "серый"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "545182"
+    },
+    {
+     "label": "Серия",
+     "value": "TRITTY 200 Aqua"
+    },
+    {
+     "label": "Формат",
+     "value": "Французская ёлка"
+    },
+    {
+     "label": "Рисунок",
+     "value": "Oak Grey"
+    },
+    {
+     "label": "Поверхность",
+     "value": "authentic, повторяет поры дерева"
+    },
+    {
+     "label": "Фаска",
+     "value": "микрофаска с четырёх сторон"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Замок",
+     "value": "Lock Connect plus"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1330 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "320 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,13 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "5"
+    },
+    {
+     "label": "Влагостойкость",
+     "value": "для кухни, прихожей и ванной"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно"
+    },
+    {
+     "label": "Гарантия",
+     "value": "25 лет для дома"
+    },
+    {
+     "label": "Страна",
+     "value": "Германия"
+    }
+   ],
+   "description": "<p>Рисунок Oak Grey: дуб в сером цвете.</p>\n<p>Ламинат HARO TRITTY 200 Aqua собирается на замок Lock Connect plus без клея. Французская ёлка 1330 × 320 мм, толщина 8 мм, микрофаска с четырёх сторон. Поверхность authentic, повторяет поры дерева. Класс использования 23 для дома и 33 для офиса, гарантия производителя 25 лет для дома. Ламинат можно класть на тёплый пол. Серия Aqua не боится влаги: её кладут на кухне, в прихожей и в ванной. Сделано в Германии.</p>",
+   "images": [
+    "https://api.haro.com/media/img/haro/en/1046x773/545182_haro_laminate_floor_chevron_4vm_oak_grey_authentic_int.jpg",
+    "https://www.haro.com/site/assets/files/91543/545182_haro_laminatboden_chevron_4vm_eiche_grau_authentic_ver-1.1200x630.jpg"
+   ],
+   "sourceUrl": "https://www.haro.com/en/find-flooring/laminate/545182/",
+   "inStock": true
+  },
+  {
+   "brand": "HARO",
+   "name": "Oak Metallic Black",
+   "slug": "haro-tritty-200-aqua-oak-metallic-black",
+   "collection": "TRITTY 200 Aqua",
+   "sku": "544772",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "чёрный"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "544772"
+    },
+    {
+     "label": "Серия",
+     "value": "TRITTY 200 Aqua"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Рисунок",
+     "value": "Oak Metallic Black"
+    },
+    {
+     "label": "Поверхность",
+     "value": "authentic, повторяет поры дерева"
+    },
+    {
+     "label": "Фаска",
+     "value": "фаска с четырёх сторон"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Замок",
+     "value": "Top Connect"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1282 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "193 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,98 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "8"
+    },
+    {
+     "label": "Влагостойкость",
+     "value": "для кухни, прихожей и ванной"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно"
+    },
+    {
+     "label": "Гарантия",
+     "value": "25 лет для дома"
+    },
+    {
+     "label": "Страна",
+     "value": "Германия"
+    }
+   ],
+   "description": "<p>Рисунок Oak Metallic Black: чёрный дуб с металлическим отливом.</p>\n<p>Ламинат HARO TRITTY 200 Aqua собирается на замок Top Connect без клея. Однополосная доска 1282 × 193 мм, толщина 8 мм, фаска с четырёх сторон. Поверхность authentic, повторяет поры дерева. Класс использования 23 для дома и 33 для офиса, гарантия производителя 25 лет для дома. Ламинат можно класть на тёплый пол. Серия Aqua не боится влаги: её кладут на кухне, в прихожей и в ванной. Сделано в Германии.</p>",
+   "images": [
+    "https://api.haro.com/media/img/haro/en/1046x773/544772_haro_laminate_floor_plank_1_strip_4v_oak_metallic_black_authentic_qv.jpg",
+    "https://www.haro.com/site/assets/files/91454/544772_haro_laminatboden_landhausdiele_4v_eiche_metallic_schwarz_authentic_ver.1200x630.jpg"
+   ],
+   "sourceUrl": "https://www.haro.com/en/find-flooring/laminate/544772/",
+   "inStock": true
+  },
+  {
+   "brand": "HARO",
+   "name": "Oak Metallic Nature",
+   "slug": "haro-tritty-200-aqua-oak-metallic-nature",
+   "collection": "TRITTY 200 Aqua",
+   "sku": "544775",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "натуральный"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "544775"
+    },
+    {
+     "label": "Серия",
+     "value": "TRITTY 200 Aqua"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Рисунок",
+     "value": "Oak Metallic Nature"
+    },
+    {
+     "label": "Поверхность",
+     "value": "authentic, повторяет поры дерева"
+    },
+    {
+     "label": "Фаска",
+     "value": "фаска с четырёх сторон"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Замок",
+     "value": "Top Connect"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1282 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "193 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,98 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "8"
+    },
+    {
+     "label": "Влагостойкость",
+     "value": "для кухни, прихожей и ванной"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно"
+    },
+    {
+     "label": "Гарантия",
+     "value": "25 лет для дома"
+    },
+    {
+     "label": "Страна",
+     "value": "Германия"
+    }
+   ],
+   "description": "<p>Рисунок Oak Metallic Nature: натуральный дуб с металлическим отливом.</p>\n<p>Ламинат HARO TRITTY 200 Aqua собирается на замок Top Connect без клея. Однополосная доска 1282 × 193 мм, толщина 8 мм, фаска с четырёх сторон. Поверхность authentic, повторяет поры дерева. Класс использования 23 для дома и 33 для офиса, гарантия производителя 25 лет для дома. Ламинат можно класть на тёплый пол. Серия Aqua не боится влаги: её кладут на кухне, в прихожей и в ванной. Сделано в Германии.</p>",
+   "images": [
+    "https://api.haro.com/media/img/haro/en/1046x773/544775_haro_laminate_floor_plank_1_strip_4v_oak_metallic_nature_authentic_int.jpg",
+    "https://www.haro.com/site/assets/files/91478/544775_haro_laminatboden_landhausdiele_4v_eiche_metallic_natur_authentic_ver.1200x630.jpg"
+   ],
+   "sourceUrl": "https://www.haro.com/en/find-flooring/laminate/544775/",
+   "inStock": true
+  },
+  {
+   "brand": "HARO",
+   "name": "Oak Flavia Nature",
+   "slug": "haro-tritty-100-oak-flavia-nature",
+   "collection": "TRITTY 100",
+   "sku": "544708",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 32"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "натуральный"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "544708"
+    },
+    {
+     "label": "Серия",
+     "value": "TRITTY 100"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Рисунок",
+     "value": "Oak Flavia Nature"
+    },
+    {
+     "label": "Поверхность",
+     "value": "authentic, повторяет поры дерева"
+    },
+    {
+     "label": "Фаска",
+     "value": "фаска с четырёх сторон"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 32"
+    },
+    {
+     "label": "Замок",
+     "value": "Top Connect"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1282 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "193 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,98 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "8"
+    },
+    {
+     "label": "Влагостойкость",
+     "value": "для сухих помещений"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно"
+    },
+    {
+     "label": "Гарантия",
+     "value": "25 лет для дома"
+    },
+    {
+     "label": "Страна",
+     "value": "Германия"
+    }
+   ],
+   "description": "<p>Рисунок Oak Flavia Nature: дуб с сучками в натуральном цвете.</p>\n<p>Ламинат HARO TRITTY 100 собирается на замок Top Connect без клея. Однополосная доска 1282 × 193 мм, толщина 8 мм, фаска с четырёх сторон. Поверхность authentic, повторяет поры дерева. Класс использования 23 для дома и 32 для офиса, гарантия производителя 25 лет для дома. Ламинат можно класть на тёплый пол. Сделано в Германии.</p>",
+   "images": [
+    "https://api.haro.com/media/img/haro/en/1046x773/544708_haro_laminate_floor_plank_1_strip_4v_oak_flavia_nature_authentic_int02.jpg",
+    "https://www.haro.com/site/assets/files/91288/544708_haro_laminatboden_landhausdiele_4v_eiche_flavia_natur_authentic_ver-1.1200x630.jpg"
+   ],
+   "sourceUrl": "https://www.haro.com/en/find-flooring/laminate/544708/",
+   "inStock": true
+  },
+  {
+   "brand": "HARO",
+   "name": "Silver Maple Vario",
+   "slug": "haro-tritty-100-silver-maple-vario",
+   "collection": "TRITTY 100",
+   "sku": "544717",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 32"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "светлый натуральный"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "клён"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "544717"
+    },
+    {
+     "label": "Серия",
+     "value": "TRITTY 100"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Рисунок",
+     "value": "Silver Maple Vario"
+    },
+    {
+     "label": "Поверхность",
+     "value": "authentic soft, мягкая структура дерева"
+    },
+    {
+     "label": "Фаска",
+     "value": "фаска с четырёх сторон"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 32"
+    },
+    {
+     "label": "Замок",
+     "value": "Top Connect"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1282 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "193 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,98 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "8"
+    },
+    {
+     "label": "Влагостойкость",
+     "value": "для сухих помещений"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно"
+    },
+    {
+     "label": "Гарантия",
+     "value": "25 лет для дома"
+    },
+    {
+     "label": "Страна",
+     "value": "Германия"
+    }
+   ],
+   "description": "<p>Рисунок Silver Maple Vario: светлый серебристый клён с перепадом тона.</p>\n<p>Ламинат HARO TRITTY 100 собирается на замок Top Connect без клея. Однополосная доска 1282 × 193 мм, толщина 8 мм, фаска с четырёх сторон. Поверхность authentic soft, мягкая структура дерева. Класс использования 23 для дома и 32 для офиса, гарантия производителя 25 лет для дома. Ламинат можно класть на тёплый пол. Сделано в Германии.</p>",
+   "images": [
+    "https://api.haro.com/media/img/haro/en/1046x773/544717_haro_laminate_floor_plank_1_strip_4v_silver_maple_vario_authentic_soft_int.jpg",
+    "https://www.haro.com/site/assets/files/91264/544717_haro_laminatboden_landhausdiele_4v_silberahorn_vario_authentic_soft_ver.1200x630.jpg"
+   ],
+   "sourceUrl": "https://www.haro.com/en/find-flooring/laminate/544717/",
+   "inStock": true
+  },
+  {
+   "brand": "HARO",
+   "name": "Oak Emilia Puro",
+   "slug": "haro-tritty-100-oak-emilia-puro",
+   "collection": "TRITTY 100",
+   "sku": "538691",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 32"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "светлый натуральный"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "538691"
+    },
+    {
+     "label": "Серия",
+     "value": "TRITTY 100"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Рисунок",
+     "value": "Oak Emilia Puro"
+    },
+    {
+     "label": "Поверхность",
+     "value": "authentic soft, мягкая структура дерева"
+    },
+    {
+     "label": "Фаска",
+     "value": "фаска с четырёх сторон"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 32"
+    },
+    {
+     "label": "Замок",
+     "value": "Top Connect"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1282 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "193 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,98 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "8"
+    },
+    {
+     "label": "Влагостойкость",
+     "value": "для сухих помещений"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно"
+    },
+    {
+     "label": "Гарантия",
+     "value": "25 лет для дома"
+    },
+    {
+     "label": "Страна",
+     "value": "Германия"
+    }
+   ],
+   "description": "<p>Рисунок Oak Emilia Puro: спокойный дуб в светлом цвете беленого дерева.</p>\n<p>Ламинат HARO TRITTY 100 собирается на замок Top Connect без клея. Однополосная доска 1282 × 193 мм, толщина 8 мм, фаска с четырёх сторон. Поверхность authentic soft, мягкая структура дерева. Класс использования 23 для дома и 32 для офиса, гарантия производителя 25 лет для дома. Ламинат можно класть на тёплый пол. Сделано в Германии.</p>",
+   "images": [
+    "https://api.haro.com/media/img/haro/en/1046x773/538691_haro_laminatboden_plank_1_strip_4v_oak_emilia_puro_authentic_soft_int.jpg",
+    "https://www.haro.com/site/assets/files/2142/538691_haro_laminatboden_landhausdiele_4v_eiche_emilia_puro_authentic_soft_ver-1.1200x630.jpg"
+   ],
+   "sourceUrl": "https://www.haro.com/en/find-flooring/laminate/538691/",
+   "inStock": true
+  },
+  {
+   "brand": "HARO",
+   "name": "Oak Eleganza Creme White",
+   "slug": "haro-tritty-100-oak-eleganza-creme-white",
+   "collection": "TRITTY 100",
+   "sku": "541475",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 32"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "белый"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "541475"
+    },
+    {
+     "label": "Серия",
+     "value": "TRITTY 100"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Рисунок",
+     "value": "Oak Eleganza Creme White"
+    },
+    {
+     "label": "Поверхность",
+     "value": "authentic, повторяет поры дерева"
+    },
+    {
+     "label": "Фаска",
+     "value": "фаска с четырёх сторон"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 32"
+    },
+    {
+     "label": "Замок",
+     "value": "Top Connect"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1282 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "193 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,98 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "8"
+    },
+    {
+     "label": "Влагостойкость",
+     "value": "для сухих помещений"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно"
+    },
+    {
+     "label": "Гарантия",
+     "value": "25 лет для дома"
+    },
+    {
+     "label": "Страна",
+     "value": "Германия"
+    }
+   ],
+   "description": "<p>Рисунок Oak Eleganza Creme White: дуб в кремово-белом цвете.</p>\n<p>Ламинат HARO TRITTY 100 собирается на замок Top Connect без клея. Однополосная доска 1282 × 193 мм, толщина 8 мм, фаска с четырёх сторон. Поверхность authentic, повторяет поры дерева. Класс использования 23 для дома и 32 для офиса, гарантия производителя 25 лет для дома. Ламинат можно класть на тёплый пол. Сделано в Германии.</p>",
+   "images": [
+    "https://api.haro.com/media/img/haro/en/1046x773/541475_haro_laminatboden_plank_1_strip_4v_oak_eleganza_creme_white_authentic_qv.jpg",
+    "https://www.haro.com/site/assets/files/2009/541475_haro_laminatboden_landhausdiele_4v_eiche_eleganza_cremeweiss_authentic_ver-1.1200x630.jpg"
+   ],
+   "sourceUrl": "https://www.haro.com/en/find-flooring/laminate/541475/",
+   "inStock": true
+  },
+  {
+   "brand": "HARO",
+   "name": "Oak Eleganza Puro",
+   "slug": "haro-tritty-100-oak-eleganza-puro",
+   "collection": "TRITTY 100",
+   "sku": "541474",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 32"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "светлый натуральный"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "541474"
+    },
+    {
+     "label": "Серия",
+     "value": "TRITTY 100"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Рисунок",
+     "value": "Oak Eleganza Puro"
+    },
+    {
+     "label": "Поверхность",
+     "value": "authentic, повторяет поры дерева"
+    },
+    {
+     "label": "Фаска",
+     "value": "фаска с четырёх сторон"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 32"
+    },
+    {
+     "label": "Замок",
+     "value": "Top Connect"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1282 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "193 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,98 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "8"
+    },
+    {
+     "label": "Влагостойкость",
+     "value": "для сухих помещений"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно"
+    },
+    {
+     "label": "Гарантия",
+     "value": "25 лет для дома"
+    },
+    {
+     "label": "Страна",
+     "value": "Германия"
+    }
+   ],
+   "description": "<p>Рисунок Oak Eleganza Puro: дуб в светлом цвете беленого дерева.</p>\n<p>Ламинат HARO TRITTY 100 собирается на замок Top Connect без клея. Однополосная доска 1282 × 193 мм, толщина 8 мм, фаска с четырёх сторон. Поверхность authentic, повторяет поры дерева. Класс использования 23 для дома и 32 для офиса, гарантия производителя 25 лет для дома. Ламинат можно класть на тёплый пол. Сделано в Германии.</p>",
+   "images": [
+    "https://api.haro.com/media/img/haro/en/1046x773/541474_haro_laminatboden_plank_1_strip_4v_oak_eleganza_puro_authentic_qv.jpg",
+    "https://www.haro.com/site/assets/files/2010/541474_haro_laminatboden_landhausdiele_4v_eiche_eleganza_puro_authentic_ver-1.1200x630.jpg"
+   ],
+   "sourceUrl": "https://www.haro.com/en/find-flooring/laminate/541474/",
+   "inStock": true
+  },
+  {
+   "brand": "HARO",
+   "name": "Oak Eleganza Nature",
+   "slug": "haro-tritty-100-oak-eleganza-nature",
+   "collection": "TRITTY 100",
+   "sku": "541473",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 32"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "натуральный"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "541473"
+    },
+    {
+     "label": "Серия",
+     "value": "TRITTY 100"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Рисунок",
+     "value": "Oak Eleganza Nature"
+    },
+    {
+     "label": "Поверхность",
+     "value": "authentic, повторяет поры дерева"
+    },
+    {
+     "label": "Фаска",
+     "value": "фаска с четырёх сторон"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 32"
+    },
+    {
+     "label": "Замок",
+     "value": "Top Connect"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1282 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "193 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,98 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "8"
+    },
+    {
+     "label": "Влагостойкость",
+     "value": "для сухих помещений"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно"
+    },
+    {
+     "label": "Гарантия",
+     "value": "25 лет для дома"
+    },
+    {
+     "label": "Страна",
+     "value": "Германия"
+    }
+   ],
+   "description": "<p>Рисунок Oak Eleganza Nature: дуб в натуральном цвете.</p>\n<p>Ламинат HARO TRITTY 100 собирается на замок Top Connect без клея. Однополосная доска 1282 × 193 мм, толщина 8 мм, фаска с четырёх сторон. Поверхность authentic, повторяет поры дерева. Класс использования 23 для дома и 32 для офиса, гарантия производителя 25 лет для дома. Ламинат можно класть на тёплый пол. Сделано в Германии.</p>",
+   "images": [
+    "https://api.haro.com/media/img/haro/en/1046x773/541473_haro_laminatboden_plank_1_strip_4v_oak_eleganza_nature_authentic_qv.jpg",
+    "https://www.haro.com/site/assets/files/2011/541473_haro_laminatboden_landhausdiele_4v_eiche_eleganza_natur_authentic_ver-1.1200x630.jpg"
+   ],
+   "sourceUrl": "https://www.haro.com/en/find-flooring/laminate/541473/",
+   "inStock": true
+  },
+  {
+   "brand": "HARO",
+   "name": "Oak Eleganza Smoked",
+   "slug": "haro-tritty-100-oak-eleganza-smoked",
+   "collection": "TRITTY 100",
+   "sku": "542050",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 32"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-коричневый"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "542050"
+    },
+    {
+     "label": "Серия",
+     "value": "TRITTY 100"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Рисунок",
+     "value": "Oak Eleganza Smoked"
+    },
+    {
+     "label": "Поверхность",
+     "value": "authentic, повторяет поры дерева"
+    },
+    {
+     "label": "Фаска",
+     "value": "фаска с четырёх сторон"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 32"
+    },
+    {
+     "label": "Замок",
+     "value": "Top Connect"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1282 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "193 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,98 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "8"
+    },
+    {
+     "label": "Влагостойкость",
+     "value": "для сухих помещений"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно"
+    },
+    {
+     "label": "Гарантия",
+     "value": "25 лет для дома"
+    },
+    {
+     "label": "Страна",
+     "value": "Германия"
+    }
+   ],
+   "description": "<p>Рисунок Oak Eleganza Smoked: копчёный дуб, тёмно-коричневый.</p>\n<p>Ламинат HARO TRITTY 100 собирается на замок Top Connect без клея. Однополосная доска 1282 × 193 мм, толщина 8 мм, фаска с четырёх сторон. Поверхность authentic, повторяет поры дерева. Класс использования 23 для дома и 32 для офиса, гарантия производителя 25 лет для дома. Ламинат можно класть на тёплый пол. Сделано в Германии.</p>",
+   "images": [
+    "https://api.haro.com/media/img/haro/en/1046x773/542050_haro_laminatboden_plank_1_strip_4v_oak_eleganza_smoked_authentic_qv.jpg",
+    "https://www.haro.com/site/assets/files/1898/542050_haro_laminatboden_landhausdiele_4v_eiche_eleganza_geraeuchert_authentic_ver-2.1200x630.jpg"
+   ],
+   "sourceUrl": "https://www.haro.com/en/find-flooring/laminate/542050/",
+   "inStock": true
+  },
+  {
+   "brand": "HARO",
+   "name": "Oak Eleganza Nutmeg",
+   "slug": "haro-tritty-100-oak-eleganza-nutmeg",
+   "collection": "TRITTY 100",
+   "sku": "541472",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 32"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "коричневый"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "541472"
+    },
+    {
+     "label": "Серия",
+     "value": "TRITTY 100"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Рисунок",
+     "value": "Oak Eleganza Nutmeg"
+    },
+    {
+     "label": "Поверхность",
+     "value": "authentic, повторяет поры дерева"
+    },
+    {
+     "label": "Фаска",
+     "value": "фаска с четырёх сторон"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 32"
+    },
+    {
+     "label": "Замок",
+     "value": "Top Connect"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1282 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "193 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,98 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "8"
+    },
+    {
+     "label": "Влагостойкость",
+     "value": "для сухих помещений"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно"
+    },
+    {
+     "label": "Гарантия",
+     "value": "25 лет для дома"
+    },
+    {
+     "label": "Страна",
+     "value": "Германия"
+    }
+   ],
+   "description": "<p>Рисунок Oak Eleganza Nutmeg: дуб в цвете мускатного ореха.</p>\n<p>Ламинат HARO TRITTY 100 собирается на замок Top Connect без клея. Однополосная доска 1282 × 193 мм, толщина 8 мм, фаска с четырёх сторон. Поверхность authentic, повторяет поры дерева. Класс использования 23 для дома и 32 для офиса, гарантия производителя 25 лет для дома. Ламинат можно класть на тёплый пол. Сделано в Германии.</p>",
+   "images": [
+    "https://api.haro.com/media/img/haro/en/1046x773/541472_haro_laminatboden_plank_1_strip_4v_oak_eleganza_nutmeg_authentic_qv.jpg",
+    "https://www.haro.com/site/assets/files/2012/541472_haro_laminatboden_landhausdiele_4v_eiche_eleganza_muskat_authentic_ver-1.1200x630.jpg"
+   ],
+   "sourceUrl": "https://www.haro.com/en/find-flooring/laminate/541472/",
+   "inStock": true
+  },
+  {
+   "brand": "HARO",
+   "name": "Oak Eleganza Antique Grey",
+   "slug": "haro-tritty-100-oak-eleganza-antique-grey",
+   "collection": "TRITTY 100",
+   "sku": "541471",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 32"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "серый"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "541471"
+    },
+    {
+     "label": "Серия",
+     "value": "TRITTY 100"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Рисунок",
+     "value": "Oak Eleganza Antique Grey"
+    },
+    {
+     "label": "Поверхность",
+     "value": "authentic, повторяет поры дерева"
+    },
+    {
+     "label": "Фаска",
+     "value": "фаска с четырёх сторон"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 32"
+    },
+    {
+     "label": "Замок",
+     "value": "Top Connect"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1282 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "193 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,98 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "8"
+    },
+    {
+     "label": "Влагостойкость",
+     "value": "для сухих помещений"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно"
+    },
+    {
+     "label": "Гарантия",
+     "value": "25 лет для дома"
+    },
+    {
+     "label": "Страна",
+     "value": "Германия"
+    }
+   ],
+   "description": "<p>Рисунок Oak Eleganza Antique Grey: дуб в состаренном сером цвете.</p>\n<p>Ламинат HARO TRITTY 100 собирается на замок Top Connect без клея. Однополосная доска 1282 × 193 мм, толщина 8 мм, фаска с четырёх сторон. Поверхность authentic, повторяет поры дерева. Класс использования 23 для дома и 32 для офиса, гарантия производителя 25 лет для дома. Ламинат можно класть на тёплый пол. Сделано в Германии.</p>",
+   "images": [
+    "https://api.haro.com/media/img/haro/en/1046x773/541471_haro_laminatboden_plank_1_strip_4v_oak_eleganza_antique_grey_authentic_qv.jpg",
+    "https://www.haro.com/site/assets/files/2013/541471_haro_laminatboden_landhausdiele_4v_eiche_eleganza_antikgrau_authentic_ver-1.1200x630.jpg"
+   ],
+   "sourceUrl": "https://www.haro.com/en/find-flooring/laminate/541471/",
+   "inStock": true
+  },
+  {
+   "brand": "HARO",
+   "name": "Oak Contura Stone Grey",
+   "slug": "haro-tritty-100-oak-contura-stone-grey",
+   "collection": "TRITTY 100",
+   "sku": "538696",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 32"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "серый"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "538696"
+    },
+    {
+     "label": "Серия",
+     "value": "TRITTY 100"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Рисунок",
+     "value": "Oak Contura Stone Grey"
+    },
+    {
+     "label": "Поверхность",
+     "value": "authentic, повторяет поры дерева"
+    },
+    {
+     "label": "Фаска",
+     "value": "фаска с четырёх сторон"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 32"
+    },
+    {
+     "label": "Замок",
+     "value": "Top Connect"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1282 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "193 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,98 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "8"
+    },
+    {
+     "label": "Влагостойкость",
+     "value": "для сухих помещений"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно"
+    },
+    {
+     "label": "Гарантия",
+     "value": "25 лет для дома"
+    },
+    {
+     "label": "Страна",
+     "value": "Германия"
+    }
+   ],
+   "description": "<p>Рисунок Oak Contura Stone Grey: дуб с сучками и трещинами в цвете серого камня.</p>\n<p>Ламинат HARO TRITTY 100 собирается на замок Top Connect без клея. Однополосная доска 1282 × 193 мм, толщина 8 мм, фаска с четырёх сторон. Поверхность authentic, повторяет поры дерева. Класс использования 23 для дома и 32 для офиса, гарантия производителя 25 лет для дома. Ламинат можно класть на тёплый пол. Сделано в Германии.</p>",
+   "images": [
+    "https://api.haro.com/media/img/haro/en/1046x773/538696_haro_laminatboden_plank_1_strip_4v_oak_contura_stone_grey_authentic_int02.jpg",
+    "https://www.haro.com/site/assets/files/2138/538696_haro_laminatboden_landhausdiele_4v_eiche_contura_steingrau_authentic_ver-1.1200x630.jpg"
+   ],
+   "sourceUrl": "https://www.haro.com/en/find-flooring/laminate/538696/",
+   "inStock": true
+  },
+  {
+   "brand": "HARO",
+   "name": "Oak Bergamo Silver Grey",
+   "slug": "haro-tritty-100-oak-bergamo-silver-grey",
+   "collection": "TRITTY 100",
+   "sku": "541470",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 32"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "светло-серый"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "541470"
+    },
+    {
+     "label": "Серия",
+     "value": "TRITTY 100"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Рисунок",
+     "value": "Oak Bergamo Silver Grey"
+    },
+    {
+     "label": "Поверхность",
+     "value": "authentic soft, мягкая структура дерева"
+    },
+    {
+     "label": "Фаска",
+     "value": "фаска с четырёх сторон"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 32"
+    },
+    {
+     "label": "Замок",
+     "value": "Top Connect"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1282 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "193 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,98 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "8"
+    },
+    {
+     "label": "Влагостойкость",
+     "value": "для сухих помещений"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно"
+    },
+    {
+     "label": "Гарантия",
+     "value": "25 лет для дома"
+    },
+    {
+     "label": "Страна",
+     "value": "Германия"
+    }
+   ],
+   "description": "<p>Рисунок Oak Bergamo Silver Grey: дуб в серебристо-сером цвете.</p>\n<p>Ламинат HARO TRITTY 100 собирается на замок Top Connect без клея. Однополосная доска 1282 × 193 мм, толщина 8 мм, фаска с четырёх сторон. Поверхность authentic soft, мягкая структура дерева. Класс использования 23 для дома и 32 для офиса, гарантия производителя 25 лет для дома. Ламинат можно класть на тёплый пол. Сделано в Германии.</p>",
+   "images": [
+    "https://api.haro.com/media/img/haro/en/1046x773/541470_haro_laminatboden_plank_1_strip_4v_oak_bergamo_silver_grey_authentic_soft_int.jpg",
+    "https://www.haro.com/site/assets/files/2014/541470_haro_laminatboden_landhausdiele_4v_eiche_bergamo_silbergrau_authentic_soft_ver-2.1200x630.jpg"
+   ],
+   "sourceUrl": "https://www.haro.com/en/find-flooring/laminate/541470/",
+   "inStock": true
+  },
+  {
+   "brand": "HARO",
+   "name": "Oak Contura Smoked",
+   "slug": "haro-tritty-200-aqua-oak-contura-smoked",
+   "collection": "TRITTY 200 Aqua",
+   "sku": "540240",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-коричневый"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "540240"
+    },
+    {
+     "label": "Серия",
+     "value": "TRITTY 200 Aqua"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Рисунок",
+     "value": "Oak Contura Smoked"
+    },
+    {
+     "label": "Поверхность",
+     "value": "authentic, повторяет поры дерева"
+    },
+    {
+     "label": "Фаска",
+     "value": "фаска с четырёх сторон"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Замок",
+     "value": "Top Connect"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1282 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "193 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,98 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "8"
+    },
+    {
+     "label": "Влагостойкость",
+     "value": "для кухни, прихожей и ванной"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно"
+    },
+    {
+     "label": "Гарантия",
+     "value": "25 лет для дома"
+    },
+    {
+     "label": "Страна",
+     "value": "Германия"
+    }
+   ],
+   "description": "<p>Рисунок Oak Contura Smoked: копчёный дуб с сучками и трещинами, тёмно-коричневый.</p>\n<p>Ламинат HARO TRITTY 200 Aqua собирается на замок Top Connect без клея. Однополосная доска 1282 × 193 мм, толщина 8 мм, фаска с четырёх сторон. Поверхность authentic, повторяет поры дерева. Класс использования 23 для дома и 33 для офиса, гарантия производителя 25 лет для дома. Ламинат можно класть на тёплый пол. Серия Aqua не боится влаги: её кладут на кухне, в прихожей и в ванной. Сделано в Германии.</p>",
+   "images": [
+    "https://api.haro.com/media/img/haro/en/1046x773/540240_haro_laminatboden_plank_1_strip_4v_oak_contura_smoked_authentic_int.jpg",
+    "https://www.haro.com/site/assets/files/2061/540240_haro_laminatboden_landhausdiele_4v_eiche_contura_geraeuchert_authentic_ver-1.1200x630.jpg"
+   ],
+   "sourceUrl": "https://www.haro.com/en/find-flooring/laminate/540240/",
+   "inStock": true
+  },
+  {
+   "brand": "HARO",
+   "name": "Oak Emilia Honey",
+   "slug": "haro-tritty-100-oak-emilia-honey",
+   "collection": "TRITTY 100",
+   "sku": "538692",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 32"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "светло-коричневый"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "538692"
+    },
+    {
+     "label": "Серия",
+     "value": "TRITTY 100"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Рисунок",
+     "value": "Oak Emilia Honey"
+    },
+    {
+     "label": "Поверхность",
+     "value": "authentic soft, мягкая структура дерева"
+    },
+    {
+     "label": "Фаска",
+     "value": "фаска с четырёх сторон"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 32"
+    },
+    {
+     "label": "Замок",
+     "value": "Top Connect"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1282 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "193 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,98 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "8"
+    },
+    {
+     "label": "Влагостойкость",
+     "value": "для сухих помещений"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно"
+    },
+    {
+     "label": "Гарантия",
+     "value": "25 лет для дома"
+    },
+    {
+     "label": "Страна",
+     "value": "Германия"
+    }
+   ],
+   "description": "<p>Рисунок Oak Emilia Honey: спокойный дуб медового цвета.</p>\n<p>Ламинат HARO TRITTY 100 собирается на замок Top Connect без клея. Однополосная доска 1282 × 193 мм, толщина 8 мм, фаска с четырёх сторон. Поверхность authentic soft, мягкая структура дерева. Класс использования 23 для дома и 32 для офиса, гарантия производителя 25 лет для дома. Ламинат можно класть на тёплый пол. Сделано в Германии.</p>",
+   "images": [
+    "https://api.haro.com/media/img/haro/en/1046x773/538692_haro_plank_1_strip_4v_oak_emilia_honey_authentic_soft_int.jpg",
+    "https://www.haro.com/site/assets/files/2141/538692_haro_laminatboden_landhausdiele_4v_eiche_emilia_honig_authentic_soft_ver-2.1200x630.jpg"
+   ],
+   "sourceUrl": "https://www.haro.com/en/find-flooring/laminate/538692/",
+   "inStock": true
+  },
+  {
+   "brand": "HARO",
+   "name": "Oak Flavia Puro",
+   "slug": "haro-tritty-100-oak-flavia-puro",
+   "collection": "TRITTY 100",
+   "sku": "544711",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 32"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "светлый натуральный"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "544711"
+    },
+    {
+     "label": "Серия",
+     "value": "TRITTY 100"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Рисунок",
+     "value": "Oak Flavia Puro"
+    },
+    {
+     "label": "Поверхность",
+     "value": "authentic, повторяет поры дерева"
+    },
+    {
+     "label": "Фаска",
+     "value": "фаска с четырёх сторон"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 32"
+    },
+    {
+     "label": "Замок",
+     "value": "Top Connect"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1282 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "193 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,98 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "8"
+    },
+    {
+     "label": "Влагостойкость",
+     "value": "для сухих помещений"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно"
+    },
+    {
+     "label": "Гарантия",
+     "value": "25 лет для дома"
+    },
+    {
+     "label": "Страна",
+     "value": "Германия"
+    }
+   ],
+   "description": "<p>Рисунок Oak Flavia Puro: дуб с сучками в светлом цвете беленого дерева.</p>\n<p>Ламинат HARO TRITTY 100 собирается на замок Top Connect без клея. Однополосная доска 1282 × 193 мм, толщина 8 мм, фаска с четырёх сторон. Поверхность authentic, повторяет поры дерева. Класс использования 23 для дома и 32 для офиса, гарантия производителя 25 лет для дома. Ламинат можно класть на тёплый пол. Сделано в Германии.</p>",
+   "images": [
+    "https://api.haro.com/media/img/haro/en/1046x773/544711_haro_laminate_floor_plank_1_strip_4v_oak_flavia_puro_authentic_int.jpg",
+    "https://www.haro.com/site/assets/files/91276/544711_haro_laminatboden_landhausdiele_4v_eiche_flavia_puro_authentic_ver-1.1200x630.jpg"
+   ],
+   "sourceUrl": "https://www.haro.com/en/find-flooring/laminate/544711/",
+   "inStock": true
+  },
+  {
+   "brand": "HARO",
+   "name": "Oak Flavia Puro",
+   "slug": "haro-tritty-200-aqua-oak-flavia-puro",
+   "collection": "TRITTY 200 Aqua",
+   "sku": "544769",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "светлый натуральный"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "544769"
+    },
+    {
+     "label": "Серия",
+     "value": "TRITTY 200 Aqua"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Рисунок",
+     "value": "Oak Flavia Puro"
+    },
+    {
+     "label": "Поверхность",
+     "value": "authentic, повторяет поры дерева"
+    },
+    {
+     "label": "Фаска",
+     "value": "фаска с четырёх сторон"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Замок",
+     "value": "Top Connect"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1282 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "193 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,98 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "8"
+    },
+    {
+     "label": "Влагостойкость",
+     "value": "для кухни, прихожей и ванной"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно"
+    },
+    {
+     "label": "Гарантия",
+     "value": "25 лет для дома"
+    },
+    {
+     "label": "Страна",
+     "value": "Германия"
+    }
+   ],
+   "description": "<p>Рисунок Oak Flavia Puro: дуб с сучками в светлом цвете беленого дерева.</p>\n<p>Ламинат HARO TRITTY 200 Aqua собирается на замок Top Connect без клея. Однополосная доска 1282 × 193 мм, толщина 8 мм, фаска с четырёх сторон. Поверхность authentic, повторяет поры дерева. Класс использования 23 для дома и 33 для офиса, гарантия производителя 25 лет для дома. Ламинат можно класть на тёплый пол. Серия Aqua не боится влаги: её кладут на кухне, в прихожей и в ванной. Сделано в Германии.</p>",
+   "images": [
+    "https://api.haro.com/media/img/haro/en/1046x773/544769_haro_laminate_floor_plank_1_strip_4v_oak_flavia_puro_authentic_int.jpg",
+    "https://www.haro.com/site/assets/files/91460/544769_haro_laminatboden_landhausdiele_4v_eiche_flavia_puro_authentic_ver-2.1200x630.jpg"
+   ],
+   "sourceUrl": "https://www.haro.com/en/find-flooring/laminate/544769/",
+   "inStock": true
+  },
+  {
+   "brand": "HARO",
+   "name": "Oak Contura Smoked",
+   "slug": "haro-tritty-100-loft-oak-contura-smoked",
+   "collection": "TRITTY 100",
+   "sku": "538721",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Узкая доска Loft"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 32"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-коричневый"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "538721"
+    },
+    {
+     "label": "Серия",
+     "value": "TRITTY 100"
+    },
+    {
+     "label": "Формат",
+     "value": "Узкая доска Loft"
+    },
+    {
+     "label": "Рисунок",
+     "value": "Oak Contura Smoked"
+    },
+    {
+     "label": "Поверхность",
+     "value": "authentic, повторяет поры дерева"
+    },
+    {
+     "label": "Фаска",
+     "value": "фаска с четырёх сторон"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 32"
+    },
+    {
+     "label": "Замок",
+     "value": "Top Connect"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1282 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "135 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,38 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "8"
+    },
+    {
+     "label": "Влагостойкость",
+     "value": "для сухих помещений"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно"
+    },
+    {
+     "label": "Гарантия",
+     "value": "25 лет для дома"
+    },
+    {
+     "label": "Страна",
+     "value": "Германия"
+    }
+   ],
+   "description": "<p>Рисунок Oak Contura Smoked: копчёный дуб с сучками и трещинами, тёмно-коричневый.</p>\n<p>Ламинат HARO TRITTY 100 собирается на замок Top Connect без клея. Узкая доска Loft 1282 × 135 мм, толщина 8 мм, фаска с четырёх сторон. Поверхность authentic, повторяет поры дерева. Класс использования 23 для дома и 32 для офиса, гарантия производителя 25 лет для дома. Ламинат можно класть на тёплый пол. Сделано в Германии.</p>",
+   "images": [
+    "https://api.haro.com/media/img/haro/en/1046x773/538721_haro_laminatboden_loft_4v_oak_contura_smoked_authentic_qv.jpg",
+    "https://www.haro.com/site/assets/files/2117/538721_haro_laminatboden_loft_4v_eiche_contura_geraeuchert_authentic_ver-2.1200x630.jpg"
+   ],
+   "sourceUrl": "https://www.haro.com/en/find-flooring/laminate/538721/",
+   "inStock": true
+  },
+  {
+   "brand": "HARO",
+   "name": "Oak Italica Creme",
+   "slug": "haro-tritty-100-campus-oak-italica-creme",
+   "collection": "TRITTY 100",
+   "sku": "532060",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Широкая доска Campus"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 32"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "светлый натуральный"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "532060"
+    },
+    {
+     "label": "Серия",
+     "value": "TRITTY 100"
+    },
+    {
+     "label": "Формат",
+     "value": "Широкая доска Campus"
+    },
+    {
+     "label": "Рисунок",
+     "value": "Oak Italica Creme"
+    },
+    {
+     "label": "Поверхность",
+     "value": "authentic, повторяет поры дерева"
+    },
+    {
+     "label": "Фаска",
+     "value": "фаска с четырёх сторон"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 32"
+    },
+    {
+     "label": "Замок",
+     "value": "Top Connect"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1282 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "243 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,49 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "8"
+    },
+    {
+     "label": "Влагостойкость",
+     "value": "для сухих помещений"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно"
+    },
+    {
+     "label": "Гарантия",
+     "value": "25 лет для дома"
+    },
+    {
+     "label": "Страна",
+     "value": "Германия"
+    }
+   ],
+   "description": "<p>Рисунок Oak Italica Creme: дуб в кремовом цвете.</p>\n<p>Ламинат HARO TRITTY 100 собирается на замок Top Connect без клея. Широкая доска Campus 1282 × 243 мм, толщина 8 мм, фаска с четырёх сторон. Поверхность authentic, повторяет поры дерева. Класс использования 23 для дома и 32 для офиса, гарантия производителя 25 лет для дома. Ламинат можно класть на тёплый пол. Сделано в Германии.</p>",
+   "images": [
+    "https://api.haro.com/media/img/haro/en/1046x773/532060_haro_laminatboden_campus_4v_oak_italica_creme_authentic_int.jpg",
+    "https://www.haro.com/site/assets/files/2277/532060_haro_laminatboden_campus_4v_eiche_italica_creme_authentic_ver-2.1200x630.jpg"
+   ],
+   "sourceUrl": "https://www.haro.com/en/find-flooring/laminate/532060/",
+   "inStock": true
+  },
+  {
+   "brand": "HARO",
+   "name": "Oak Portland Nature",
+   "slug": "haro-tritty-100-oak-portland-nature",
+   "collection": "TRITTY 100",
+   "sku": "533123",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 32"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "натуральный"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "533123"
+    },
+    {
+     "label": "Серия",
+     "value": "TRITTY 100"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Рисунок",
+     "value": "Oak Portland Nature"
+    },
+    {
+     "label": "Поверхность",
+     "value": "authentic, повторяет поры дерева"
+    },
+    {
+     "label": "Фаска",
+     "value": "фаска с четырёх сторон"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 32"
+    },
+    {
+     "label": "Замок",
+     "value": "Top Connect"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1282 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "193 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,98 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "8"
+    },
+    {
+     "label": "Влагостойкость",
+     "value": "для сухих помещений"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно"
+    },
+    {
+     "label": "Гарантия",
+     "value": "25 лет для дома"
+    },
+    {
+     "label": "Страна",
+     "value": "Германия"
+    }
+   ],
+   "description": "<p>Рисунок Oak Portland Nature: дуб с сучками в натуральном цвете.</p>\n<p>Ламинат HARO TRITTY 100 собирается на замок Top Connect без клея. Однополосная доска 1282 × 193 мм, толщина 8 мм, фаска с четырёх сторон. Поверхность authentic, повторяет поры дерева. Класс использования 23 для дома и 32 для офиса, гарантия производителя 25 лет для дома. Ламинат можно класть на тёплый пол. Сделано в Германии.</p>",
+   "images": [
+    "https://api.haro.com/media/img/haro/en/1046x773/533123_haro_plank_1_strip_4v_oak_portland_nature_authentic_int02.jpg",
+    "https://www.haro.com/site/assets/files/2269/533123_haro_laminatboden_landhausdiele_4v_eiche_portland_natur_authentic_ver-2.1200x630.jpg"
+   ],
+   "sourceUrl": "https://www.haro.com/en/find-flooring/laminate/533123/",
+   "inStock": true
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Bloom Light Brown",
+   "slug": "ocean-8-v4-bloom-light-brown",
+   "collection": "Ocean 8 V4",
+   "sku": "62003050",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "светло-коричневый"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "живой"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    },
+    {
+     "label": "Степень блеска",
+     "value": "экстраматовый"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "62003050"
+    },
+    {
+     "label": "Серия",
+     "value": "Ocean 8 V4"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Фаска",
+     "value": "фаска с четырёх сторон"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Класс износостойкости",
+     "value": "AC5"
+    },
+    {
+     "label": "Замок",
+     "value": "DuoLoc"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1288 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "190 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,20248 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "9"
+    },
+    {
+     "label": "Влагостойкость",
+     "value": "водостойкий"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно"
+    }
+   ],
+   "description": "<p>Светло-коричневый дуб с множеством сучков, матовой поверхностью и выраженной фактурой.</p>\n<p>Ламинат BerryAlloc Ocean 8 V4 не боится воды, его кладут и на кухне, и в прихожей. Доски собираются на замок DuoLoc без клея. Доска 1288 × 190 мм, толщина 8 мм, фаска с четырёх сторон. Класс износостойкости AC5, класс использования 23 для дома и 33 для офиса. Ламинат можно класть на тёплый пол. Сделано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak4ibgopqftn1u9e/beaulieu_2000w,default/bloom_light_brown_lam_v4_1288x190_berryalloc_psh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5uzt4pqgs4ya4e/beaulieu_2000w,default/bloom_light_brown_lam_v4_1288x190_berryalloc_rsh_1",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5akaeos93m6tbok1o/beaulieu_2000w,default/bloom_light_brown_lam_v4_1288x190_berryalloc_rsh_2"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/ocean-plus/62003050",
+   "inStock": true
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Charme Light Natural",
+   "slug": "ocean-8-v4-charme-light-natural",
+   "collection": "Ocean 8 V4",
+   "sku": "62003058",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "светлый натуральный"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "спокойный"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    },
+    {
+     "label": "Степень блеска",
+     "value": "экстраматовый"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "62003058"
+    },
+    {
+     "label": "Серия",
+     "value": "Ocean 8 V4"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Фаска",
+     "value": "фаска с четырёх сторон"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Класс износостойкости",
+     "value": "AC5"
+    },
+    {
+     "label": "Замок",
+     "value": "DuoLoc"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1288 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "190 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,20248 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "9"
+    },
+    {
+     "label": "Влагостойкость",
+     "value": "водостойкий"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно"
+    }
+   ],
+   "description": "<p>Светлый натуральный дуб с матовой поверхностью и выраженной фактурой.</p>\n<p>Ламинат BerryAlloc Ocean 8 V4 не боится воды, его кладут и на кухне, и в прихожей. Доски собираются на замок DuoLoc без клея. Доска 1288 × 190 мм, толщина 8 мм, фаска с четырёх сторон. Класс износостойкости AC5, класс использования 23 для дома и 33 для офиса. Ламинат можно класть на тёплый пол. Сделано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5akafebzndgcrrube/beaulieu_2000w,default/charme_light_natural_lam_v4_1288x190_berryalloc_psh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak516ofac8na1kee/beaulieu_2000w,default/charme_light_natural_lam_v4_1288x190_berryalloc_rsh_01",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5akajppj95ijgjc8a/beaulieu_2000w,default/charme_light_natural_lam_v4_1288x190_berryalloc_rsh_02"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/ocean-plus/62003058",
+   "inStock": true
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Gyant Dark Brown",
+   "slug": "ocean-8-v4-gyant-dark-brown",
+   "collection": "Ocean 8 V4",
+   "sku": "62003071",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-коричневый"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "рустикальный"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "дуб"
+    },
+    {
+     "label": "Степень блеска",
+     "value": "экстраматовый"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "62003071"
+    },
+    {
+     "label": "Серия",
+     "value": "Ocean 8 V4"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Фаска",
+     "value": "фаска с четырёх сторон"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Класс износостойкости",
+     "value": "AC5"
+    },
+    {
+     "label": "Замок",
+     "value": "DuoLoc"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1288 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "190 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,20248 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "9"
+    },
+    {
+     "label": "Влагостойкость",
+     "value": "водостойкий"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно"
+    }
+   ],
+   "description": "<p>Выразительный дуб с множеством сучков, глубоко-матовой поверхностью и тонкой фактурой в тёмно-коричневом цвете.</p>\n<p>Ламинат BerryAlloc Ocean 8 V4 не боится воды, его кладут и на кухне, и в прихожей. Доски собираются на замок DuoLoc без клея. Доска 1288 × 190 мм, толщина 8 мм, фаска с четырёх сторон. Класс износостойкости AC5, класс использования 23 для дома и 33 для офиса. Ламинат можно класть на тёплый пол. Сделано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak4i3a34pysb8x7y/beaulieu_2000w,default/gyant_dark_brown_lam_v4_1288x190_berryalloc_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak38fmissn8eym6a/beaulieu_2000w,default/gyant_dark_brown_lam_v4_1288x190_berryalloc_rsh_03",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak3kb7fbzfk1hpaa/beaulieu_2000w,default/gyant_dark_brown_lam_v4_1288x190_berryalloc_rsh_6"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/ocean-plus/62003071",
+   "inStock": true
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Walnut Brown",
+   "slug": "ocean-8-v4-walnut-brown",
+   "collection": "Ocean 8 V4",
+   "sku": "62003098",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-коричневый"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "спокойный"
+    },
+    {
+     "label": "Порода / материал",
+     "value": "орех"
+    },
+    {
+     "label": "Степень блеска",
+     "value": "глянцевый"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "62003098"
+    },
+    {
+     "label": "Серия",
+     "value": "Ocean 8 V4"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Фаска",
+     "value": "фаска с четырёх сторон"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Класс износостойкости",
+     "value": "AC5"
+    },
+    {
+     "label": "Замок",
+     "value": "DuoLoc"
+    },
+    {
+     "label": "Толщина",
+     "value": "8 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1288 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "190 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,20248 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "9"
+    },
+    {
+     "label": "Влагостойкость",
+     "value": "водостойкий"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно"
+    }
+   ],
+   "description": "<p>Тёмно-коричневый орех с глянцевой поверхностью.</p>\n<p>Ламинат BerryAlloc Ocean 8 V4 не боится воды, его кладут и на кухне, и в прихожей. Доски собираются на замок DuoLoc без клея. Доска 1288 × 190 мм, толщина 8 мм, фаска с четырёх сторон. Класс износостойкости AC5, класс использования 23 для дома и 33 для офиса. Ламинат можно класть на тёплый пол. Сделано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5akawnwiwnt4c5udy/beaulieu_2000w,default/walnut_brown_lam_v4_1288x190_berryalloc_psh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5akagwxjbotm69e8e/beaulieu_2000w,default/walnut_brown_lam_v4_1288x190_berryalloc_rsh_3",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak4xj8h79jh1ei4y/beaulieu_2000w,default/walnut_brown_lam_v4_1288x190_berryalloc_dsh"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/ocean-plus/62003098",
+   "inStock": true
+  }
+ ]
+}

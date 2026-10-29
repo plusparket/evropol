@@ -1,0 +1,35 @@
+---
+// Карточка товара в плитке каталога (виды «только каталог» и «группы и категории»): квадратное фото с метками
+// «В наличии» и «Новинка», бренд (если их в разделе несколько) и коллекция, название, кнопка «Подробно».
+import { productThumb, type ProductItem } from '../../server/products.ts';
+import { uploadUrl } from '../../server/uploads.ts';
+
+interface Props {
+  product: ProductItem;
+  /** Писать бренд перед коллекцией (в разделе несколько брендов) */
+  showBrand?: boolean;
+}
+const { product: p, showBrand = false } = Astro.props;
+const sub = [showBrand && p.brand, p.collection].filter(Boolean).join(' · ');
+---
+
+<article class="cat-card">
+  <a class="cat-card-img" href={`/${p.slug}`}>
+    {p.images[0] ? (
+      <img src={uploadUrl(productThumb(p.images[0]))} alt={p.name} width="600" height="600" loading="lazy" />
+    ) : (
+      <span class="pcard2-noimg" />
+    )}
+    {(p.isNew || p.inStock) && (
+      <span class="ss-badges">
+        {p.inStock && <span class="ss-badge ss-badge--stock">В наличии</span>}
+        {p.isNew && <span class="ss-badge">Новинка</span>}
+      </span>
+    )}
+  </a>
+  <div class="cat-card-body">
+    {sub && <div class="cat-card-sub">{sub}</div>}
+    <h2 class="cat-card-name"><a href={`/${p.slug}`}>{p.name}</a></h2>
+    <a class="pbtn cat-card-btn" href={`/${p.slug}`}>Подробно</a>
+  </div>
+</article>

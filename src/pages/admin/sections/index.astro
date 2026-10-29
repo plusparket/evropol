@@ -1,7 +1,7 @@
 ---
 import AdminLayout from '../../../layouts/AdminLayout.astro';
 import { sql } from '../../../server/db.ts';
-import { getSections, isExternal } from '../../../server/sections.ts';
+import { getSections, isExternal, sectionLink } from '../../../server/sections.ts';
 import { uploadUrl } from '../../../server/uploads.ts';
 
 const sections = await getSections();
@@ -17,8 +17,8 @@ const brandCounts = new Map(
     <div class="actions"><a class="btn" href="/admin/sections/new">+ Добавить раздел</a></div>
   </div>
   <p class="muted">
-    Разделы показываются вкладками в шапке и карточками на главной. У каждого раздела своя страница на этом сайте
-    (описание и бренды) и ссылка на сайт раздела, где будут товары и заказ.
+    Разделы показываются вкладками в шапке и карточками на главной. У раздела может быть свой сайт с каталогом товаров
+    (включается в карточке раздела) или ссылка на другой сайт.
   </p>
   <div class="table-wrap">
     <table class="list">
@@ -32,7 +32,7 @@ const brandCounts = new Map(
                 <a href={`/admin/sections/${s.id}`}>{s.name}</a> {!s.isPublished && <span class="tag off">скрыт</span>}
               </td>
               <td><a class="muted" href={`/${s.slug}`} target="_blank" rel="noopener">/{s.slug}</a></td>
-              <td>{s.link ? <a class="muted" href={s.link} target={isExternal(s.link) ? '_blank' : undefined} rel="noopener">{s.link}</a> : <span class="tag off">не задан</span>}</td>
+              <td>{sectionLink(s) ? <a class="muted" href={sectionLink(s)} target={isExternal(sectionLink(s)) ? '_blank' : undefined} rel="noopener">{sectionLink(s)}</a> : <span class="tag off">не задан</span>}{s.siteHost && <Fragment> · <a href={`/admin/products?section=${s.id}`}>товары</a></Fragment>}</td>
               <td>{brandCounts.get(s.id) ?? 0}</td>
               <td class="muted">{s.sortOrder}</td>
             </tr>

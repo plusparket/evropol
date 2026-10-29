@@ -24,6 +24,7 @@ const { title, description, noindex = false, canonicalPath, image, ogType = 'web
 
 const [settings, menus, sections] = await Promise.all([getSettings(), getMenus(), getSections({ publishedOnly: true })]);
 const countersOn = settings.counters_enabled === '1';
+const forest = settings.forest_design === '1'; // набор цветов «Лесной» (настройка «Лесной дизайн главного сайта»)
 const siteUrl = siteBase(Astro.url.origin);
 const canonical = siteUrl + (canonicalPath ?? Astro.url.pathname);
 const ogImage = siteUrl + (image || '/img/og-europroject.jpg');
@@ -39,7 +40,7 @@ const maps = [
 ---
 
 <!doctype html>
-<html lang="ru">
+<html lang="ru" class:list={{ 'theme-forest': forest }}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -61,7 +62,7 @@ const maps = [
     <meta name="twitter:card" content="summary_large_image" />
     {settings.google_site_verification && <meta name="google-site-verification" content={settings.google_site_verification} />}
     {settings.yandex_verification && <meta name="yandex-verification" content={settings.yandex_verification} />}
-    <meta name="theme-color" content="#011e46" />
+    <meta name="theme-color" content={forest ? '#006338' : '#011e46'} />
     {ldBlocks.map((json) => <script type="application/ld+json" set:html={json} />)}
     <ClientRouter fallback="swap" />
     {

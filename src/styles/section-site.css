@@ -1,0 +1,184 @@
+/*
+ * Сайт раздела (vinyl.localhost …): дополняет site.css. Основной цвет раздела — переменная --site
+ * (задаётся в админке, ставится на <body class="ss">). Остальные цвета и шрифт — общие с главным сайтом.
+ */
+
+.ss { --site: #006338; }
+.ss .pbtn { border-color: var(--site); background: var(--site); }
+.ss .pbtn:hover { background: transparent; color: var(--site); }
+.ss .pbtn-outline { background: transparent; color: var(--site); }
+.ss .pbtn-outline:hover { background: var(--site); color: #fff; }
+.ss .plink:hover, .ss .ph-nav > a:hover, .ss .ph-drop > a:hover { color: var(--site); }
+.ss .ph { border-top: 0; }
+.ss .ph-burger i { background: var(--site); }
+.ss .to-top { background: var(--site); }
+
+/* Полоса сверху: ссылка на главный сайт и телефон */
+.ss-top { background: var(--site); color: #fff; font-size: 13px; letter-spacing: .03em; }
+.ss-top-in { display: flex; justify-content: space-between; gap: 16px; max-width: 1200px; margin: 0 auto; padding: 7px 15px; }
+.ss-top a { color: #fff; opacity: .9; }
+.ss-top a:hover { color: #fff; opacity: 1; text-decoration: underline; }
+.ss-top-contacts { display: flex; gap: 18px; }
+
+/* Логотип и название раздела */
+.ss-logo { display: flex; align-items: center; gap: 16px; }
+.ss-logo-name { padding-left: 16px; border-left: 1px solid var(--line); color: var(--site); font: 500 18px/1.2 var(--font); letter-spacing: .02em; white-space: nowrap; }
+.ss-nav { margin-left: auto; }
+/* Последний пункт меню у правого края: список раскрывается влево, чтобы не вылезать за экран */
+.ss-nav .ph-drop:last-child .ph-drop-list { left: auto; right: 0; }
+
+/* Каталог */
+.ss-catalog-head { display: flex; align-items: baseline; gap: 16px; }
+.ss-count { color: var(--muted); font-size: 15px; }
+.ss-catalog-grid { display: grid; grid-template-columns: 240px 1fr; gap: 36px; align-items: start; }
+.ss-catalog-grid--nofilters { grid-template-columns: 1fr; }
+.ss-filters-box { position: sticky; top: 90px; }
+.ss-filters-box > summary { display: none; }
+.ss-filters { display: grid; gap: 22px; }
+.ss-filter { margin: 0; padding: 0; border: 0; }
+.ss-filter legend { margin-bottom: 8px; padding: 0; color: var(--ink); font-weight: 600; font-size: 14px; letter-spacing: .04em; text-transform: uppercase; }
+.ss-check { display: flex; align-items: center; gap: 8px; padding: 4px 0; color: var(--text); font-size: 15px; cursor: pointer; }
+.ss-check input { width: 17px; height: 17px; margin: 0; accent-color: var(--site); }
+.ss-check small { margin-left: auto; color: var(--muted); font-size: 12px; }
+.ss-check--empty { opacity: .45; }
+.ss-reset { font-size: 14px; }
+.ss-reset::after { content: ''; }
+.ss-grid .pcard2-name { font-size: 17px; }
+.ss-grid--4 { grid-template-columns: repeat(4, 1fr); }
+.ss-about { background: var(--band); padding-top: var(--pad) !important; }
+.ss-about + .psec { padding-top: var(--pad); }
+
+/* Метки «В наличии» и «Новинка» на фото товара */
+.ss-card .pcard2-img { position: relative; }
+.ss-badges { position: absolute; top: 12px; left: 12px; z-index: 1; display: flex; flex-wrap: wrap; gap: 6px; }
+.ss-badge { padding: 4px 10px; background: var(--site); color: #fff; font: 600 12px/1.4 var(--font); letter-spacing: .04em; text-transform: uppercase; }
+.ss-badge--stock { background: #fff; color: var(--site); box-shadow: inset 0 0 0 2px var(--site); }
+.ss-badge--inline { display: inline-block; margin: 0 6px 12px 0; }
+
+/* Страница товара */
+.ss-product { padding-top: 28px; padding-bottom: var(--pad); }
+.ss-product-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 44px; align-items: start; margin-bottom: 40px; }
+.ss-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.ss-gallery-main { grid-column: 1 / -1; display: block; aspect-ratio: 4 / 3; overflow: hidden; background: var(--band); }
+.ss-gallery-main img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.ss-gallery-thumb { display: block; aspect-ratio: 3 / 2; overflow: hidden; background: var(--band); }
+.ss-gallery-thumb img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+.ss-gallery-thumb:hover img { transform: scale(1.05); }
+.ss-sku { margin: -4px 0 18px; color: var(--muted); font-size: 14px; }
+.ss-attrs { display: grid; gap: 0; margin: 0 0 24px; border-top: 1px solid var(--line); }
+.ss-attrs > div { display: grid; grid-template-columns: 150px 1fr; gap: 12px; padding: 9px 0; border-bottom: 1px solid var(--line); }
+.ss-attrs dt { color: var(--muted); }
+.ss-attrs dd { margin: 0; color: var(--ink); }
+.ss-actions { margin-bottom: 14px; }
+.ss-note { margin: 0 0 24px; color: var(--muted); font-size: 14px; }
+.ss-calc { display: grid; gap: 8px; padding: 20px 22px; background: var(--band); }
+.ss-calc label { color: var(--ink); font-weight: 600; font-size: 14px; }
+.ss-calc input { max-width: 200px; padding: 10px 12px; border: 1px solid #cfcfcf; background: #fff; font: 16px var(--font); }
+.ss-calc input:focus { outline: 2px solid var(--site); outline-offset: -1px; }
+.ss-calc output { color: var(--text); font-size: 15px; }
+.ss-desc { max-width: 860px; margin-bottom: 40px; }
+.ss-specs { max-width: 860px; margin-bottom: 50px; }
+.ss-specs table { width: 100%; border-collapse: collapse; font-size: 15px; }
+.ss-specs th, .ss-specs td { padding: 10px 0; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.ss-specs th { width: 45%; padding-right: 16px; color: var(--muted); font-weight: 400; }
+.ss-specs td { color: var(--ink); }
+
+@media (max-width: 960px) {
+  .ss-catalog-grid { grid-template-columns: 200px 1fr; gap: 24px; }
+  .ss-grid--4 { grid-template-columns: repeat(2, 1fr); }
+  .ss-product-grid { grid-template-columns: 1fr; gap: 28px; }
+}
+@media (max-width: 860px) {
+  .ss-top-contacts span, .ss-top-addr { display: none; }
+  .ss-logo { flex-direction: column; gap: 4px; }
+  .ss-logo-name { padding-left: 0; border-left: 0; font-size: 15px; white-space: normal; text-align: center; }
+  .ss-catalog-grid { grid-template-columns: 1fr; }
+  .ss-filters-box { position: static; background: var(--band); }
+  .ss-filters-box > summary { display: list-item; padding: 12px 16px; color: var(--ink); font-weight: 600; cursor: pointer; }
+  .ss-filters { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); padding: 4px 16px 16px; }
+}
+@media (max-width: 768px) {
+  .ss-top-in { padding: 6px 16px; font-size: 12px; }
+  .ss-grid, .ss-grid--4 { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .ss-grid .pcard2-body { padding: 12px 12px 14px; }
+  .ss-grid .pcard2-name { font-size: 15px; }
+  .ss-grid .pcard2-sub, .ss-grid .pcard2-facts { font-size: 12px; }
+  .ss-gallery { grid-template-columns: 1fr 1fr; }
+  .ss-attrs > div { grid-template-columns: 120px 1fr; }
+}
+
+/*
+ * Вид «только каталог» (CatalogHome.astro): заголовок, слева фильтры раскрывающимися группами,
+ * справа плитка по четыре в ряд с квадратными фото и кнопкой «Подробно».
+ */
+.cat { padding-top: 22px; padding-bottom: var(--pad); }
+.cat-head { margin: 18px 0 30px; }
+.cat-title { margin: 0 0 8px; color: var(--ink); font: 500 clamp(28px, 3.4vw, 40px)/1.15 var(--font); }
+.cat-lead { max-width: 760px; margin: 0; color: var(--muted); font-size: 16px; }
+.cat-grid { display: grid; grid-template-columns: 270px 1fr; gap: 40px; align-items: start; }
+.cat-filters-box { position: sticky; top: 90px; }
+.cat-filters-box > summary { display: none; }
+.cat-filters-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding-bottom: 12px; border-bottom: 2px solid var(--ink); }
+.cat-filters-title { color: var(--ink); font-weight: 600; font-size: 20px; }
+.cat-reset { color: var(--muted); font-size: 13px; text-decoration: underline; }
+.cat-reset:hover { color: var(--site); }
+.cat-filter { border-bottom: 1px solid var(--line); }
+.cat-filter > summary { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; color: var(--ink); font-size: 15px; letter-spacing: .02em; cursor: pointer; list-style: none; }
+.cat-filter > summary::-webkit-details-marker { display: none; }
+.cat-filter > summary::after { content: ''; width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 6px solid var(--ink); transition: transform .2s; }
+.cat-filter[open] > summary::after { transform: rotate(180deg); }
+.cat-filter-list { display: grid; gap: 2px; padding: 0 0 14px; max-height: 340px; overflow-y: auto; }
+.cat-check { display: flex; align-items: center; gap: 10px; padding: 5px 0; color: var(--text); font-size: 14px; cursor: pointer; }
+.cat-check input { flex: none; width: 17px; height: 17px; margin: 0; accent-color: var(--site); }
+.cat-check img { flex: none; width: 22px; height: 22px; object-fit: cover; border-radius: 50%; border: 1px solid var(--line); }
+.cat-check small { color: var(--muted); font-size: 12px; }
+.cat-check--empty { opacity: .45; }
+
+.cat-items { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px 20px; }
+.cat-card { display: flex; flex-direction: column; }
+.cat-card-img { position: relative; display: block; aspect-ratio: 1; overflow: hidden; background: var(--band); }
+.cat-card-img img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+.cat-card-img:hover img { transform: scale(1.04); }
+.cat-card-body { display: flex; flex-direction: column; flex: 1; padding-top: 12px; }
+.cat-card-sub { margin-bottom: 4px; color: var(--muted); font-size: 12px; letter-spacing: .03em; text-transform: uppercase; }
+.cat-card-name { flex: 1; margin: 0 0 12px; font: 500 17px/1.3 var(--font); }
+.cat-card-name a { color: var(--ink); }
+.cat-card-name a:hover { color: var(--site); }
+.cat-card-btn { width: 100%; padding-left: 10px; padding-right: 10px; text-align: center; }
+.cat-count { margin: 34px 0 0; color: var(--site); font-size: 13px; font-weight: 600; letter-spacing: .05em; text-align: center; text-transform: uppercase; }
+
+@media (max-width: 1100px) {
+  .cat-items { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 860px) {
+  .cat-grid { grid-template-columns: 1fr; gap: 20px; }
+  .cat-filters-box { position: static; background: var(--band); }
+  .cat-filters-box > summary { display: list-item; padding: 12px 16px; color: var(--ink); font-weight: 600; cursor: pointer; }
+  .cat-filters { padding: 0 16px 12px; }
+  .cat-filters-head { display: none; }
+  .cat-items { grid-template-columns: repeat(2, 1fr); gap: 20px 12px; }
+  .cat-card-name { font-size: 15px; }
+}
+
+/* Вид «группы и категории» (строительная химия, структура Forbo Eurocol): слева группы и категории */
+.ss-cat-nav { padding: 10px 0 14px; border-top: 3px solid var(--site); background: var(--band); }
+.ss-cat-nav ul { margin: 0; padding: 0; list-style: none; }
+.ss-cat-nav a { display: block; padding: 7px 18px; color: var(--text); font-size: 15px; line-height: 1.35; }
+.ss-cat-nav a:hover, .ss-cat-nav a[aria-current] { color: var(--site); }
+.ss-cat-nav a[aria-current] { font-weight: 600; }
+.ss-cat-nav ul ul a { padding: 5px 18px 5px 32px; font-size: 14px; }
+.ss-cat-nav li.is-open > a { color: var(--ink); font-weight: 600; }
+.ss-cat-nav .ss-cat-stock { display: flex; align-items: center; gap: 10px; margin: 10px 18px 0; padding: 12px 0 0; border-top: 1px solid var(--line); font-size: 14px; }
+.ss-cat-box { display: inline-flex; align-items: center; justify-content: center; flex: none; width: 17px; height: 17px; border: 1px solid var(--muted); background: #fff; color: #fff; font-size: 12px; line-height: 1; }
+.ss-cat-stock[aria-pressed="true"] .ss-cat-box { border-color: var(--site); background: var(--site); }
+.ss-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 24px; }
+.ss-chip { padding: 7px 14px; border: 1px solid var(--line); color: var(--text); font-size: 14px; }
+.ss-chip:hover { border-color: var(--site); color: var(--site); }
+/* Фото упаковок целиком, на белом */
+.ss--groups .cat-card-img, .ss--groups .pcard2-img, .ss--groups .ss-gallery-main { background: #fff; border: 1px solid var(--line); }
+.ss--groups .cat-card-img img, .ss--groups .pcard2-img img, .ss--groups .ss-gallery-main img { object-fit: contain; }
+.ss--groups .pcard2-img { border: 0; }
+
+@media (max-width: 960px) {
+  .ss-cat-nav { border-top: 0; background: none; }
+}
