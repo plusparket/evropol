@@ -1,5 +1,15 @@
 # Журнал изменений
 
+## 2026-10-29 — линолеум: ещё 29 позиций «В наличии» по данным продавцов
+
+- `seed/catalog/linoleum.json`, версия 2: 29 позиций из таблицы владельца, которых нет на ivc.ru (старые коллекции
+  IVC: Texmark, Texart, Silverline, Ecotex, Neotex, Greenline, Vision, Corsa и другие). Характеристики и фото взяты
+  с сайтов продавцов (linoleum.msk.ru, ivc-rus.ru, bmb.by и др.), все с меткой «В наличии». Всего «В наличии» 60.
+- Не добавлены: Texmark Toronto (в таблице нет номера цвета), Texmark Kirov 563 и Sequoia Monetta 032 (фото или
+  совпадение под вопросом, ждём владельца); Ambassador Tundra 532, Atlas Нардо 552 и Гранада 564, Ultimate Oak Camargue 545,
+  Verdi Paradise 534, Woodland Sintra 537 нигде не найдены.
+- Толщина в текстах сайта линолеума: от 1,8 до 4,1 мм (`siteFixes`). `/llms.txt` и `/llms-full.txt` показывают новые товары.
+
 ## 2026-10-29 — линолеум «В наличии» по таблице владельца
 
 - `seed/catalog/linoleum.json`, версия 1: метка «В наличии» у 31 позиции с остатком на складе из таблицы
