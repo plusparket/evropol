@@ -1,0 +1,3131 @@
+[
+  {
+    "excel": "AMBASSADOR | TUNDRA/532",
+    "found": false,
+    "pageUrl": null,
+    "name": null,
+    "collection": null,
+    "colourCode": null,
+    "country": null,
+    "description": null,
+    "specs": [],
+    "images": [],
+    "note": "на ivc.ru нет коллекции Ambassador и нет Тундры 532 (есть Тундра 808 Onyx, 843 Benefit, 838 Neotex)"
+  },
+  {
+    "excel": "АТЛАС | Нардо/552",
+    "found": false,
+    "pageUrl": null,
+    "name": null,
+    "collection": null,
+    "colourCode": null,
+    "country": null,
+    "description": null,
+    "specs": [],
+    "images": [],
+    "note": "на ivc.ru нет коллекции Атлас и дизайна Нардо"
+  },
+  {
+    "excel": "АТЛАС | Гранада/564",
+    "found": false,
+    "pageUrl": null,
+    "name": null,
+    "collection": null,
+    "colourCode": null,
+    "country": null,
+    "description": null,
+    "specs": [],
+    "images": [],
+    "note": "на ivc.ru нет коллекции Атлас и дизайна Гранада"
+  },
+  {
+    "excel": "АТЛАС | Гранада/764",
+    "found": false,
+    "pageUrl": null,
+    "name": null,
+    "collection": null,
+    "colourCode": null,
+    "country": null,
+    "description": null,
+    "specs": [],
+    "images": [],
+    "note": "на ivc.ru нет коллекции Атлас и дизайна Гранада"
+  },
+  {
+    "excel": "ECOTEKS | SHATEL/531",
+    "found": false,
+    "pageUrl": null,
+    "name": null,
+    "collection": null,
+    "colourCode": null,
+    "country": null,
+    "description": null,
+    "specs": [],
+    "images": [],
+    "note": "дизайна Shatel/Шатель на ivc.ru нет"
+  },
+  {
+    "excel": "ECOTEKS | КЬЯНТИ/532",
+    "found": false,
+    "pageUrl": null,
+    "name": null,
+    "collection": null,
+    "colourCode": null,
+    "country": null,
+    "description": null,
+    "specs": [],
+    "images": [],
+    "note": "дизайна Кьянти на ivc.ru нет"
+  },
+  {
+    "excel": "ECOTEKS | АСПИН/505",
+    "found": true,
+    "pageUrl": "https://ivc.ru/floors/aspin_505/",
+    "name": "Дуб Аспин 505",
+    "collection": "Ecotex/Экотекс",
+    "brand": "Leoline",
+    "colourCode": "505",
+    "country": null,
+    "description": null,
+    "specs": [
+      {
+        "label": "Общая толщина",
+        "value": "2.10 мм"
+      },
+      {
+        "label": "Защитный слой",
+        "value": "0.15 мм"
+      },
+      {
+        "label": "Основа",
+        "value": "Дублированная"
+      },
+      {
+        "label": "Класс нагрузки",
+        "value": "21"
+      },
+      {
+        "label": "Повторяемость рисунка",
+        "value": "100x100 см"
+      },
+      {
+        "label": "Доступный формат 300 см",
+        "value": "V3890.479T505G300"
+      },
+      {
+        "label": "Доступный формат 350 см",
+        "value": "V3890.479T505G350"
+      },
+      {
+        "label": "Доступный формат 400 см",
+        "value": "V3890.479T505G400"
+      },
+      {
+        "label": "Пожарная опасность",
+        "value": "КМ5"
+      },
+      {
+        "label": "Эмиссия ЛОС",
+        "value": "Очень низкая эмиссия ЛОС"
+      },
+      {
+        "label": "Сопротивление скольжению, R",
+        "value": "R9"
+      },
+      {
+        "label": "Остаточная деформация",
+        "value": "≤0.35 мм"
+      },
+      {
+        "label": "Теплопроводность",
+        "value": "0.25 Вт/мК"
+      },
+      {
+        "label": "Теплоизоляция",
+        "value": "0.0084 м²K/Вт"
+      },
+      {
+        "label": "Срок службы бытовой, лет",
+        "value": "10"
+      }
+    ],
+    "images": [
+      "https://ivc.ru/upload/iblock/f7d/m4ivdi8swfh9h09doo8n2bkt1fanom8u.png"
+    ],
+    "pdf": [
+      "https://ivc.ru/upload/iblock/ce5/i9nw8rbz0ru3fhbv7rws5bef3qbotmb6.pdf"
+    ],
+    "note": "Ecotex = ECOTEKS, Аспин 505 — точное совпадение. страна производства на странице товара ivc.ru не указана; текста описания на странице нет"
+  },
+  {
+    "excel": "ECOTEKS | Либерти/592",
+    "found": false,
+    "pageUrl": null,
+    "name": null,
+    "collection": null,
+    "colourCode": null,
+    "country": null,
+    "description": null,
+    "specs": [],
+    "images": [],
+    "note": "Либерти 592 на ivc.ru нет (есть 591 и 544 в Ecotex, 593 и 597 в Benefit)"
+  },
+  {
+    "excel": "ECOTEKS | АСПИН/565",
+    "found": false,
+    "pageUrl": null,
+    "name": null,
+    "collection": null,
+    "colourCode": null,
+    "country": null,
+    "description": null,
+    "specs": [],
+    "images": [],
+    "note": "Аспин 565 на ivc.ru нет (есть Аспин 505 Ecotex, 561 Benefit)"
+  },
+  {
+    "excel": "ECOTEKS | АРДЕШ/532",
+    "found": false,
+    "pageUrl": null,
+    "name": null,
+    "collection": null,
+    "colourCode": null,
+    "country": null,
+    "description": null,
+    "specs": [],
+    "images": [],
+    "note": "Ардеш 532 на ivc.ru нет (есть только Ардеш 796 Benefit)"
+  },
+  {
+    "excel": "EKO | Либерти/593",
+    "found": true,
+    "pageUrl": "https://ivc.ru/floors/dub-liberti-593/",
+    "name": "Дуб Либерти 593",
+    "collection": "Benefit/Бенефит",
+    "brand": "Leoline",
+    "colourCode": "593",
+    "country": null,
+    "description": null,
+    "specs": [
+      {
+        "label": "Общая толщина",
+        "value": "2.20 мм"
+      },
+      {
+        "label": "Защитный слой",
+        "value": "0.18 мм"
+      },
+      {
+        "label": "Основа",
+        "value": "Вспененный ПВХ"
+      },
+      {
+        "label": "Класс нагрузки",
+        "value": "22"
+      },
+      {
+        "label": "Повторяемость рисунка",
+        "value": "120х100 см"
+      },
+      {
+        "label": "Доступный формат 200 см",
+        "value": "V6245.B73C593G200"
+      },
+      {
+        "label": "Доступный формат 250 см",
+        "value": "V6245.B73C593G250"
+      },
+      {
+        "label": "Доступный формат 300 см",
+        "value": "V6245.B73C593G300"
+      },
+      {
+        "label": "Доступный формат 350 см",
+        "value": "V6245.B73C593G350"
+      },
+      {
+        "label": "Доступный формат 400 см",
+        "value": "V6245.B73C593G400"
+      },
+      {
+        "label": "Пожарная опасность",
+        "value": "КМ5"
+      },
+      {
+        "label": "Эмиссия ЛОС",
+        "value": ""
+      },
+      {
+        "label": "Сопротивление скольжению, R",
+        "value": "R9"
+      },
+      {
+        "label": "Остаточная деформация",
+        "value": "≤0.60"
+      },
+      {
+        "label": "Теплопроводность",
+        "value": "0.25 Вт/мК"
+      },
+      {
+        "label": "Теплоизоляция",
+        "value": "0.0108 м²K/Вт"
+      },
+      {
+        "label": "Срок службы бытовой, лет",
+        "value": "15"
+      }
+    ],
+    "images": [
+      "https://ivc.ru/upload/iblock/a3e/bxecb7us8zs8pilnm7u76k6siu7cniue.jpg",
+      "https://ivc.ru/upload/iblock/3df/78ce1plw2o8dxmkqifxgsmi30zoxqs12.jpg"
+    ],
+    "pdf": [
+      "https://ivc.ru/upload/iblock/23c/ymxzeteapz2ple2r0ddsc8pk088xzsu9.pdf"
+    ],
+    "note": "Либерти 593 есть только в коллекции Benefit/Бенефит (артикул V6245.B73C593); в таблице коллекция EKO — сомнение по коллекции, дизайн и номер совпадают. страна производства на странице товара ivc.ru не указана; текста описания на странице нет"
+  },
+  {
+    "excel": "EKO | АРДЕШ/796",
+    "found": true,
+    "pageUrl": "https://ivc.ru/floors/dub-ardesh-796/",
+    "name": "Дуб Ардеш 796",
+    "collection": "Benefit/Бенефит",
+    "brand": "Leoline",
+    "colourCode": "796",
+    "country": null,
+    "description": null,
+    "specs": [
+      {
+        "label": "Общая толщина",
+        "value": "2.20 мм"
+      },
+      {
+        "label": "Защитный слой",
+        "value": "0.18 мм"
+      },
+      {
+        "label": "Основа",
+        "value": "Вспененный ПВХ"
+      },
+      {
+        "label": "Класс нагрузки",
+        "value": "22"
+      },
+      {
+        "label": "Повторяемость рисунка",
+        "value": "100x100 см"
+      },
+      {
+        "label": "Доступный формат 200 см",
+        "value": "V3500.B73C796G200"
+      },
+      {
+        "label": "Доступный формат 250 см",
+        "value": "V3500.B73C796G250"
+      },
+      {
+        "label": "Доступный формат 300 см",
+        "value": "V3500.B73C796G300"
+      },
+      {
+        "label": "Доступный формат 350 см",
+        "value": "V3500.B73C796G350"
+      },
+      {
+        "label": "Доступный формат 400 см",
+        "value": "V3500.B73C796G400"
+      },
+      {
+        "label": "Пожарная опасность",
+        "value": "КМ5"
+      },
+      {
+        "label": "Эмиссия ЛОС",
+        "value": ""
+      },
+      {
+        "label": "Сопротивление скольжению, R",
+        "value": "R9"
+      },
+      {
+        "label": "Остаточная деформация",
+        "value": "≤0.60"
+      },
+      {
+        "label": "Теплопроводность",
+        "value": "0.25 Вт/мК"
+      },
+      {
+        "label": "Теплоизоляция",
+        "value": "0.0108 м²K/Вт"
+      },
+      {
+        "label": "Срок службы бытовой, лет",
+        "value": "15"
+      }
+    ],
+    "images": [
+      "https://ivc.ru/upload/iblock/a95/bexipqx6a3w9m9yl8svzh4acjmcd6mox.jpg",
+      "https://ivc.ru/upload/iblock/8d3/ibbrcpxwcp2dokzlysizu0ipn45j6tx8.jpg",
+      "https://ivc.ru/upload/iblock/120/2qlnarw0xk9cq30y6uaqjv3r76c53fqx.jpg"
+    ],
+    "pdf": [
+      "https://ivc.ru/upload/iblock/23c/ymxzeteapz2ple2r0ddsc8pk088xzsu9.pdf"
+    ],
+    "note": "Ардеш 796 есть только в коллекции Benefit/Бенефит (V3500.B73C796); в таблице коллекция EKO — сомнение по коллекции, дизайн и номер совпадают. страна производства на странице товара ivc.ru не указана; текста описания на странице нет"
+  },
+  {
+    "excel": "ECOTEKS | Либерти/591",
+    "found": true,
+    "pageUrl": "https://ivc.ru/floors/dub_liberti_591/",
+    "name": "Дуб Либерти 591",
+    "collection": "Ecotex/Экотекс",
+    "brand": "Leoline",
+    "colourCode": "591",
+    "country": null,
+    "description": null,
+    "specs": [
+      {
+        "label": "Общая толщина",
+        "value": "2.10 мм"
+      },
+      {
+        "label": "Защитный слой",
+        "value": "0.15 мм"
+      },
+      {
+        "label": "Основа",
+        "value": "Дублированная"
+      },
+      {
+        "label": "Класс нагрузки",
+        "value": "21"
+      },
+      {
+        "label": "Повторяемость рисунка",
+        "value": "120x100 см"
+      },
+      {
+        "label": "Доступный формат 250 см",
+        "value": "V6245.479T591G250"
+      },
+      {
+        "label": "Доступный формат 300 см",
+        "value": "V6245.479T591G300"
+      },
+      {
+        "label": "Доступный формат 350 см",
+        "value": "V6245.479T591G350"
+      },
+      {
+        "label": "Доступный формат 400 см",
+        "value": "V6245.479T591G400"
+      },
+      {
+        "label": "Пожарная опасность",
+        "value": "КМ5"
+      },
+      {
+        "label": "Эмиссия ЛОС",
+        "value": "Очень низкая эмиссия ЛОС"
+      },
+      {
+        "label": "Сопротивление скольжению, R",
+        "value": "R9"
+      },
+      {
+        "label": "Остаточная деформация",
+        "value": "≤0.35 мм"
+      },
+      {
+        "label": "Теплопроводность",
+        "value": "0.25 Вт/мК"
+      },
+      {
+        "label": "Теплоизоляция",
+        "value": "0.0084 м²K/Вт"
+      },
+      {
+        "label": "Срок службы бытовой, лет",
+        "value": "10"
+      }
+    ],
+    "images": [
+      "https://ivc.ru/upload/iblock/da6/omefo5mvrvn95vkhjb0nofmj3yzcnj03.jpeg"
+    ],
+    "pdf": [
+      "https://ivc.ru/upload/iblock/ce5/i9nw8rbz0ru3fhbv7rws5bef3qbotmb6.pdf"
+    ],
+    "note": "Ecotex = ECOTEKS, Либерти 591 — точное совпадение. страна производства на странице товара ivc.ru не указана; текста описания на странице нет"
+  },
+  {
+    "excel": "ИНТЕР | ГРАНЕРО/538",
+    "found": true,
+    "pageUrl": "https://ivc.ru/floors/granero_538/",
+    "name": "Дуб Гранеро 538",
+    "collection": "Inter/Интер",
+    "brand": "Leoline",
+    "colourCode": "538",
+    "country": null,
+    "description": null,
+    "specs": [
+      {
+        "label": "Общая толщина",
+        "value": "2.00 мм"
+      },
+      {
+        "label": "Защитный слой",
+        "value": "0.40 мм"
+      },
+      {
+        "label": "Основа",
+        "value": "Вспененный ПВХ"
+      },
+      {
+        "label": "Класс нагрузки",
+        "value": "23-32"
+      },
+      {
+        "label": "Повторяемость рисунка",
+        "value": "150x100 см"
+      },
+      {
+        "label": "Доступный формат 200 см",
+        "value": "V6635.561C538G200"
+      },
+      {
+        "label": "Доступный формат 300 см",
+        "value": "V6635.561C538G300"
+      },
+      {
+        "label": "Доступный формат 350 см",
+        "value": "V6635.561C538G350"
+      },
+      {
+        "label": "Доступный формат 400 см",
+        "value": "V6635.561C538G400"
+      },
+      {
+        "label": "Пожарная опасность",
+        "value": "КМ2"
+      },
+      {
+        "label": "Эмиссия ЛОС",
+        "value": "Очень низкая эмиссия ЛОС"
+      },
+      {
+        "label": "Сопротивление скольжению, R",
+        "value": "R9"
+      },
+      {
+        "label": "Остаточная деформация",
+        "value": "≤0.35 мм"
+      },
+      {
+        "label": "Теплопроводность",
+        "value": "0.25 Вт/мК"
+      },
+      {
+        "label": "Теплоизоляция",
+        "value": "0.0092 м²K/Вт"
+      },
+      {
+        "label": "Срок службы бытовой, лет",
+        "value": "15"
+      }
+    ],
+    "images": [
+      "https://ivc.ru/upload/iblock/d6a/9dz8sbps5gg7xr64di8kxwkebtxfxt68.jpg",
+      "https://ivc.ru/upload/iblock/42d/cmyfasnvah1j186rlvtzral14ll3zn90.jpg"
+    ],
+    "pdf": [
+      "https://ivc.ru/upload/iblock/5bb/48m2omj17wzo8uwoqwhgevf1uh8povov.pdf"
+    ],
+    "note": "Inter = ИНТЕР, Гранеро 538 — точное совпадение. страна производства на странице товара ivc.ru не указана; текста описания на странице нет"
+  },
+  {
+    "excel": "ИНТЕР | САМСОН/94",
+    "found": true,
+    "pageUrl": "https://ivc.ru/floors/samson_t94/",
+    "name": "Самсон T94",
+    "collection": "Inter/Интер",
+    "brand": "Leoline",
+    "colourCode": "T94",
+    "country": null,
+    "description": null,
+    "specs": [
+      {
+        "label": "Общая толщина",
+        "value": "2.00 мм"
+      },
+      {
+        "label": "Защитный слой",
+        "value": "0.40 мм"
+      },
+      {
+        "label": "Основа",
+        "value": "Вспененный ПВХ"
+      },
+      {
+        "label": "Класс нагрузки",
+        "value": "23-32"
+      },
+      {
+        "label": "Повторяемость рисунка",
+        "value": "100x100 см"
+      },
+      {
+        "label": "Доступный формат 250 см",
+        "value": "V8314.561CT94G250"
+      },
+      {
+        "label": "Доступный формат 300 см",
+        "value": "V8314.561CT94G300"
+      },
+      {
+        "label": "Доступный формат 350 см",
+        "value": "V8314.561CT94G350"
+      },
+      {
+        "label": "Доступный формат 400 см",
+        "value": "V8314.561CT94G400"
+      },
+      {
+        "label": "Пожарная опасность",
+        "value": "КМ2"
+      },
+      {
+        "label": "Эмиссия ЛОС",
+        "value": "Очень низкая эмиссия ЛОС"
+      },
+      {
+        "label": "Сопротивление скольжению, R",
+        "value": "R9"
+      },
+      {
+        "label": "Остаточная деформация",
+        "value": "≤0.35 мм"
+      },
+      {
+        "label": "Теплопроводность",
+        "value": "0.25 Вт/мК"
+      },
+      {
+        "label": "Теплоизоляция",
+        "value": "0.0092 м²K/Вт"
+      },
+      {
+        "label": "Срок службы бытовой, лет",
+        "value": "15"
+      }
+    ],
+    "images": [
+      "https://ivc.ru/upload/iblock/624/eitikbe4yswm065i3trkcnzcd79q8ch3.jpg",
+      "https://ivc.ru/upload/iblock/9b0/nhksb1axxupyer3l2zjwtczhi8sblez5.jpg"
+    ],
+    "pdf": [
+      "https://ivc.ru/upload/iblock/5bb/48m2omj17wzo8uwoqwhgevf1uh8povov.pdf"
+    ],
+    "note": "Inter = ИНТЕР, Самсон T94 — совпадение (в таблице 94). страна производства на странице товара ivc.ru не указана; текста описания на странице нет"
+  },
+  {
+    "excel": "BINGO | TAVEL/042",
+    "found": false,
+    "pageUrl": null,
+    "name": null,
+    "collection": null,
+    "colourCode": null,
+    "country": null,
+    "description": null,
+    "specs": [],
+    "images": [],
+    "note": "Тавел 042 на ivc.ru нет (есть Тавел 539 Inter, Тавел T48 Vision); в Bingo Тавела нет"
+  },
+  {
+    "excel": "CORSA | MARRAS/T44 кор",
+    "found": false,
+    "pageUrl": null,
+    "name": null,
+    "collection": null,
+    "colourCode": null,
+    "country": null,
+    "description": null,
+    "specs": [],
+    "images": [],
+    "note": "Марас T44 на ivc.ru нет (есть только Марас T96 Elite)"
+  },
+  {
+    "excel": "CORSA | Камарг/504",
+    "found": true,
+    "pageUrl": "https://ivc.ru/floors/camargue_504/",
+    "name": "Дуб Чарли 504",
+    "collection": "Elite/Элит",
+    "brand": "IVC Home",
+    "colourCode": "504",
+    "country": null,
+    "description": null,
+    "specs": [
+      {
+        "label": "Общая толщина",
+        "value": "2.00 мм"
+      },
+      {
+        "label": "Защитный слой",
+        "value": "0.40 мм"
+      },
+      {
+        "label": "Основа",
+        "value": "Компактный ПВХ"
+      },
+      {
+        "label": "Класс нагрузки",
+        "value": "23-32"
+      },
+      {
+        "label": "Повторяемость рисунка",
+        "value": "100x120 см"
+      },
+      {
+        "label": "Доступный формат 250 см",
+        "value": "V8267.531K504G250"
+      },
+      {
+        "label": "Доступный формат 300 см",
+        "value": "V8267.531K504G300"
+      },
+      {
+        "label": "Доступный формат 350 см",
+        "value": "V8267.531K504G350"
+      },
+      {
+        "label": "Доступный формат 400 см",
+        "value": "V8267.531K504G400"
+      },
+      {
+        "label": "Пожарная опасность",
+        "value": "КМ2"
+      },
+      {
+        "label": "Эмиссия ЛОС",
+        "value": "Очень низкая эмиссия ЛОС"
+      },
+      {
+        "label": "Сопротивление скольжению, R",
+        "value": "R9"
+      },
+      {
+        "label": "Остаточная деформация",
+        "value": "≤0.20 мм"
+      },
+      {
+        "label": "Теплопроводность",
+        "value": "0.25 Вт/мК"
+      },
+      {
+        "label": "Теплоизоляция",
+        "value": "0.0092 м²K/Вт"
+      },
+      {
+        "label": "Срок службы бытовой, лет",
+        "value": "15"
+      }
+    ],
+    "images": [
+      "https://ivc.ru/upload/iblock/a3a/s7mc878bqtoplye6nqihrqqw65hn94s6.jpg",
+      "https://ivc.ru/upload/iblock/40e/qcfaxp9jr2ndmz2stqrl3ahb9i1rephv.jpg",
+      "https://ivc.ru/upload/iblock/087/0fmph6z43e58vhvh0klh5x837i3ud8hz.jpg"
+    ],
+    "pdf": [
+      "https://ivc.ru/upload/iblock/fd1/3hygvdo9ccd6fvtmwtpx0o39ilu9befi.pdf"
+    ],
+    "note": "на сайте «Дуб Чарли 504», адрес страницы camargue_504 (дизайн Camargue), коллекция Elite/Элит, а не CORSA — сомнение по коллекции. страна производства на странице товара ivc.ru не указана; текста описания на странице нет"
+  },
+  {
+    "excel": "CORSA | MARRAS/T96 сер",
+    "found": true,
+    "pageUrl": "https://ivc.ru/floors/maras_t96/",
+    "name": "Марас T96",
+    "collection": "Elite/Элит",
+    "brand": "IVC Home",
+    "colourCode": "T96",
+    "country": null,
+    "description": null,
+    "specs": [
+      {
+        "label": "Общая толщина",
+        "value": "2.00 мм"
+      },
+      {
+        "label": "Защитный слой",
+        "value": "0.40 мм"
+      },
+      {
+        "label": "Основа",
+        "value": "Компактный ПВХ"
+      },
+      {
+        "label": "Класс нагрузки",
+        "value": "23-32"
+      },
+      {
+        "label": "Повторяемость рисунка",
+        "value": "100x100 см"
+      },
+      {
+        "label": "Доступный формат 300 см",
+        "value": "V9825.531KT96G300"
+      },
+      {
+        "label": "Доступный формат 350 см",
+        "value": "V9825.531KT96G350"
+      },
+      {
+        "label": "Доступный формат 400 см",
+        "value": "V9825.531KT96G400"
+      },
+      {
+        "label": "Пожарная опасность",
+        "value": "КМ2"
+      },
+      {
+        "label": "Эмиссия ЛОС",
+        "value": "Очень низкая эмиссия ЛОС"
+      },
+      {
+        "label": "Сопротивление скольжению, R",
+        "value": "R9"
+      },
+      {
+        "label": "Остаточная деформация",
+        "value": "≤0.20 мм"
+      },
+      {
+        "label": "Теплопроводность",
+        "value": "0.25 Вт/мК"
+      },
+      {
+        "label": "Теплоизоляция",
+        "value": "0.0092 м²K/Вт"
+      },
+      {
+        "label": "Срок службы бытовой, лет",
+        "value": "15"
+      }
+    ],
+    "images": [
+      "https://ivc.ru/upload/iblock/10d/eo922fk3hj6wm6hfic8tjm1i8z06oq50.jpg",
+      "https://ivc.ru/upload/iblock/c36/wypdpxnhy6trsxhdmr63kxnws4dk3ei8.jpg"
+    ],
+    "pdf": [
+      "https://ivc.ru/upload/iblock/fd1/3hygvdo9ccd6fvtmwtpx0o39ilu9befi.pdf"
+    ],
+    "note": "на сайте «Марас T96» в коллекции Elite/Элит, а не CORSA — сомнение по коллекции, дизайн и номер совпадают. страна производства на странице товара ivc.ru не указана; текста описания на странице нет"
+  },
+  {
+    "excel": "ГОЛЬФ | ЭСТЕЙТ ОАК/593",
+    "found": true,
+    "pageUrl": "https://ivc.ru/floors/estate_oak_593/",
+    "name": "Дуб Ретро 593",
+    "collection": "Golf/Гольф",
+    "brand": "IVC Home",
+    "colourCode": "593",
+    "country": null,
+    "description": null,
+    "specs": [
+      {
+        "label": "Общая толщина",
+        "value": "3.00 мм"
+      },
+      {
+        "label": "Защитный слой",
+        "value": "0.25 мм"
+      },
+      {
+        "label": "Основа",
+        "value": "Вспененный ПВХ"
+      },
+      {
+        "label": "Класс нагрузки",
+        "value": "23"
+      },
+      {
+        "label": "Повторяемость рисунка",
+        "value": "120x106 см"
+      },
+      {
+        "label": "Доступный формат 250 см",
+        "value": "V6285.B10C593G250"
+      },
+      {
+        "label": "Доступный формат 300 см",
+        "value": "V6285.B10C593G300"
+      },
+      {
+        "label": "Доступный формат 350 см",
+        "value": "V6285.B10C593G350"
+      },
+      {
+        "label": "Доступный формат 400 см",
+        "value": "V6285.B10C593G400"
+      },
+      {
+        "label": "Пожарная опасность",
+        "value": "КМ5"
+      },
+      {
+        "label": "Эмиссия ЛОС",
+        "value": "Очень низкая эмиссия ЛОС"
+      },
+      {
+        "label": "Сопротивление скольжению, R",
+        "value": "R9"
+      },
+      {
+        "label": "Остаточная деформация",
+        "value": "≤0.50 мм"
+      },
+      {
+        "label": "Теплопроводность",
+        "value": "0.25 Вт/мК"
+      },
+      {
+        "label": "Теплоизоляция",
+        "value": "0.0120 м²K/Вт"
+      },
+      {
+        "label": "Срок службы бытовой, лет",
+        "value": "15"
+      }
+    ],
+    "images": [
+      "https://ivc.ru/upload/iblock/7db/sw1orwq0gnhs4bkjpjebzy7wtknxbtrz.jpg",
+      "https://ivc.ru/upload/iblock/f11/3uwpj9u3jq7ruyvcarwbczwnw3b6w6f8.jpg"
+    ],
+    "pdf": [
+      "https://ivc.ru/upload/iblock/85b/ggfl54hwvw1twkq5ntd7ek584n5m7biy.pdf"
+    ],
+    "note": "Golf = ГОЛЬФ; на сайте «Дуб Ретро 593», адрес страницы estate_oak_593 (дизайн Estate Oak) — совпадение по коллекции, дизайну и номеру. страна производства на странице товара ivc.ru не указана; текста описания на странице нет"
+  },
+  {
+    "excel": "COSMOLIKE | CARTIER/W36 свет",
+    "found": false,
+    "pageUrl": null,
+    "name": null,
+    "collection": null,
+    "colourCode": null,
+    "country": null,
+    "description": null,
+    "specs": [],
+    "images": [],
+    "note": "коллекции Cosmolike и дизайна Cartier на ivc.ru нет (W36 есть у Benefit «Дуб Хоббс» и Vivatex «Дуб Суприм» — другие дизайны)"
+  },
+  {
+    "excel": "GREENLINE | CHAPARAL OAK/544",
+    "found": true,
+    "pageUrl": "https://ivc.ru/floors/chaparral_oak_544/",
+    "name": "Дуб Шёлковый 44",
+    "collection": "Greenline/Гринлайн",
+    "brand": "IVC Home",
+    "colourCode": "44",
+    "country": null,
+    "description": null,
+    "specs": [
+      {
+        "label": "Общая толщина",
+        "value": "4.00 мм"
+      },
+      {
+        "label": "Защитный слой",
+        "value": "0.40 мм"
+      },
+      {
+        "label": "Основа",
+        "value": "Дублированная"
+      },
+      {
+        "label": "Класс нагрузки",
+        "value": "23-32"
+      },
+      {
+        "label": "Повторяемость рисунка",
+        "value": "100x100 см"
+      },
+      {
+        "label": "Доступный формат 150 см",
+        "value": "V6470.229T544G150"
+      },
+      {
+        "label": "Доступный формат 200 см",
+        "value": "V6470.229T544G200"
+      },
+      {
+        "label": "Доступный формат 250 см",
+        "value": "V6470.229T544G250"
+      },
+      {
+        "label": "Доступный формат 300 см",
+        "value": "V6470.229T544G300"
+      },
+      {
+        "label": "Доступный формат 350 см",
+        "value": "V6470.229T544G350"
+      },
+      {
+        "label": "Доступный формат 400 см",
+        "value": "V6470.229T544G400"
+      },
+      {
+        "label": "Пожарная опасность",
+        "value": "КМ5"
+      },
+      {
+        "label": "Эмиссия ЛОС",
+        "value": "Очень низкая эмиссия ЛОС"
+      },
+      {
+        "label": "Сопротивление скольжению, R",
+        "value": "R9"
+      },
+      {
+        "label": "Остаточная деформация",
+        "value": "≤0.70 мм"
+      },
+      {
+        "label": "Теплопроводность",
+        "value": "0.25 Вт/мК"
+      },
+      {
+        "label": "Теплоизоляция",
+        "value": "0.0168 м²K/Вт"
+      },
+      {
+        "label": "Срок службы бытовой, лет",
+        "value": "15"
+      }
+    ],
+    "images": [
+      "https://ivc.ru/upload/iblock/0a9/wg1f37s2mnf084v56jl1z12iy1heo3f1.jpg",
+      "https://ivc.ru/upload/iblock/ef4/s90x6s5r6cbo1q3pqlp2has9m5nt3s6s.jpg"
+    ],
+    "pdf": [
+      "https://ivc.ru/upload/iblock/dc2/exlyu5qddxfymn7ns9zt3to1fc50pn2v.pdf"
+    ],
+    "note": "Greenline; на сайте «Дуб Шёлковый 44», адрес chaparral_oak_544, артикул V6470.229T544 — совпадение. страна производства на странице товара ivc.ru не указана; текста описания на странице нет"
+  },
+  {
+    "excel": "GREENLINE | CHERBOURG/W32",
+    "found": true,
+    "pageUrl": "https://ivc.ru/floors/cherbourg_oak_w32/",
+    "name": "Дуб Топлёное Молоко 32",
+    "collection": "Greenline/Гринлайн",
+    "brand": "IVC Home",
+    "colourCode": "32",
+    "country": null,
+    "description": null,
+    "specs": [
+      {
+        "label": "Общая толщина",
+        "value": "4.00 мм"
+      },
+      {
+        "label": "Защитный слой",
+        "value": "0.40 мм"
+      },
+      {
+        "label": "Основа",
+        "value": "Дублированная"
+      },
+      {
+        "label": "Класс нагрузки",
+        "value": "23-32"
+      },
+      {
+        "label": "Повторяемость рисунка",
+        "value": "150x200 см"
+      },
+      {
+        "label": "Доступный формат 150 см",
+        "value": "V9375.229TW32G150"
+      },
+      {
+        "label": "Доступный формат 200 см",
+        "value": "V9375.229TW32G200"
+      },
+      {
+        "label": "Доступный формат 250 см",
+        "value": "V9375.229TW32G250"
+      },
+      {
+        "label": "Доступный формат 300 см",
+        "value": "V9375.229TW32G300"
+      },
+      {
+        "label": "Доступный формат 350 см",
+        "value": "V9375.229TW32G350"
+      },
+      {
+        "label": "Доступный формат 400 см",
+        "value": "V9375.229TW32G400"
+      },
+      {
+        "label": "Пожарная опасность",
+        "value": "КМ5"
+      },
+      {
+        "label": "Эмиссия ЛОС",
+        "value": "Очень низкая эмиссия ЛОС"
+      },
+      {
+        "label": "Сопротивление скольжению, R",
+        "value": "R9"
+      },
+      {
+        "label": "Остаточная деформация",
+        "value": "≤0.70 мм"
+      },
+      {
+        "label": "Теплопроводность",
+        "value": "0.25 Вт/мК"
+      },
+      {
+        "label": "Теплоизоляция",
+        "value": "0.0168 м²K/Вт"
+      },
+      {
+        "label": "Срок службы бытовой, лет",
+        "value": "15"
+      }
+    ],
+    "images": [
+      "https://ivc.ru/upload/iblock/e09/4qsoh724v1f7cnub11gh1h17qispmdnv.jpg",
+      "https://ivc.ru/upload/iblock/903/mym0egbzujy4w4zpbxednaq1tty9purh.jpg",
+      "https://ivc.ru/upload/iblock/f80/5naquqie9b8zwlsd41rxria50srtvb1u.jpg"
+    ],
+    "pdf": [
+      "https://ivc.ru/upload/iblock/dc2/exlyu5qddxfymn7ns9zt3to1fc50pn2v.pdf"
+    ],
+    "note": "Greenline; на сайте «Дуб Топлёное Молоко 32», адрес cherbourg_oak_w32, артикул V9375.229TW32 — совпадение. страна производства на странице товара ivc.ru не указана; текста описания на странице нет"
+  },
+  {
+    "excel": "GREENLINE | CHERBOURG/W48",
+    "found": false,
+    "pageUrl": null,
+    "name": null,
+    "collection": null,
+    "colourCode": null,
+    "country": null,
+    "description": null,
+    "specs": [],
+    "images": [],
+    "note": "Cherbourg W48 на ivc.ru нет; в Greenline есть «Дуб Кофейный 48», но это другой дизайн (артикул V9034, у Cherbourg — V9375)"
+  },
+  {
+    "excel": "GREENLINE | OSLO/538",
+    "found": false,
+    "pageUrl": null,
+    "name": null,
+    "collection": null,
+    "colourCode": null,
+    "country": null,
+    "description": null,
+    "specs": [],
+    "images": [],
+    "note": "Осло 538 на ivc.ru нет (Осло только W39, W35, W09); в Greenline есть «Дуб Осенний мёд 538», но это другой дизайн (V9036, у Осло — V9285)"
+  },
+  {
+    "excel": "GREENLINE | RANCHO/591",
+    "found": true,
+    "pageUrl": "https://ivc.ru/floors/dub-rancho-591/",
+    "name": "Дуб Ранчо 591",
+    "collection": "Verdi/Верди",
+    "brand": "Leoline",
+    "colourCode": "591",
+    "country": null,
+    "description": null,
+    "specs": [
+      {
+        "label": "Общая толщина",
+        "value": "4.00 мм"
+      },
+      {
+        "label": "Защитный слой",
+        "value": "0.40 мм"
+      },
+      {
+        "label": "Основа",
+        "value": "Дублированная"
+      },
+      {
+        "label": "Класс нагрузки",
+        "value": "23-32"
+      },
+      {
+        "label": "Повторяемость рисунка",
+        "value": "120x100 см"
+      },
+      {
+        "label": "Доступный формат 250 см",
+        "value": "V9181.229T591G250"
+      },
+      {
+        "label": "Доступный формат 300 см",
+        "value": "V9181.229T591G300"
+      },
+      {
+        "label": "Доступный формат 350 см",
+        "value": "V9181.229T591G350"
+      },
+      {
+        "label": "Доступный формат 400 см",
+        "value": "V9181.229T591G400"
+      },
+      {
+        "label": "Пожарная опасность",
+        "value": "КМ5"
+      },
+      {
+        "label": "Эмиссия ЛОС",
+        "value": "Очень низкая эмиссия ЛОС"
+      },
+      {
+        "label": "Сопротивление скольжению, R",
+        "value": "R9"
+      },
+      {
+        "label": "Остаточная деформация",
+        "value": "≤0.80 мм"
+      },
+      {
+        "label": "Теплопроводность",
+        "value": "0.25 Вт/мК"
+      },
+      {
+        "label": "Теплоизоляция",
+        "value": "0.0168 м²K/Вт"
+      },
+      {
+        "label": "Срок службы бытовой, лет",
+        "value": "15"
+      }
+    ],
+    "images": [
+      "https://ivc.ru/upload/iblock/f00/mle12xdvv92e3nnc55r6x189h1zv1i0c.jpg",
+      "https://ivc.ru/upload/iblock/58a/2rhpws16qz0cutin13fh095af9rqke6i.jpg"
+    ],
+    "pdf": [
+      "https://ivc.ru/upload/iblock/bf9/9jn0v5p69yawh54y5w0l83bt8w9gmm3s.pdf"
+    ],
+    "note": "Ранчо 591 на сайте только в коллекции Verdi/Верди, но код коллекции в артикуле V9181.229T591 — 229, как у товаров Greenline; в таблице GREENLINE — сомнение по коллекции. страна производства на странице товара ivc.ru не указана; текста описания на странице нет"
+  },
+  {
+    "excel": "NEOTEX | ALLURE/569",
+    "found": false,
+    "pageUrl": null,
+    "name": null,
+    "collection": null,
+    "colourCode": null,
+    "country": null,
+    "description": null,
+    "specs": [],
+    "images": [],
+    "note": "дизайна Allure на ivc.ru нет"
+  },
+  {
+    "excel": "NEOTEX | BOURBON/532",
+    "found": true,
+    "pageUrl": "https://ivc.ru/floors/bourbon_532/",
+    "name": "Дуб Карамельный 532",
+    "collection": "Neotex/Неотекс",
+    "brand": "IVC Home",
+    "colourCode": "532",
+    "country": null,
+    "description": null,
+    "specs": [
+      {
+        "label": "Общая толщина",
+        "value": "2.50 мм"
+      },
+      {
+        "label": "Защитный слой",
+        "value": "0.20 мм"
+      },
+      {
+        "label": "Основа",
+        "value": "Дублированная"
+      },
+      {
+        "label": "Класс нагрузки",
+        "value": "22"
+      },
+      {
+        "label": "Повторяемость рисунка",
+        "value": "120x100 см"
+      },
+      {
+        "label": "Доступный формат 300 см",
+        "value": "V6960.538T532G300"
+      },
+      {
+        "label": "Доступный формат 350 см",
+        "value": "V6960.538T532G350"
+      },
+      {
+        "label": "Доступный формат 400 см",
+        "value": "V6960.538T532G400"
+      },
+      {
+        "label": "Пожарная опасность",
+        "value": "КМ5"
+      },
+      {
+        "label": "Эмиссия ЛОС",
+        "value": "Очень низкая эмиссия ЛОС"
+      },
+      {
+        "label": "Сопротивление скольжению, R",
+        "value": "R9"
+      },
+      {
+        "label": "Остаточная деформация",
+        "value": "≤0.45 мм"
+      },
+      {
+        "label": "Теплопроводность",
+        "value": "0.25 Вт/мК"
+      },
+      {
+        "label": "Теплоизоляция",
+        "value": "0.0100 м²K/Вт"
+      },
+      {
+        "label": "Срок службы бытовой, лет",
+        "value": "15"
+      }
+    ],
+    "images": [
+      "https://ivc.ru/upload/iblock/77f/onm2aity23baqd7du2rwsau35qh32v7k.jpg",
+      "https://ivc.ru/upload/iblock/bf0/ojr08x1072ieqll6g4hes72nhge1luir.jpg"
+    ],
+    "pdf": [
+      "https://ivc.ru/upload/iblock/8f3/yxmoaegkplwl7uv0t3z73etv9g2uqa5a.pdf"
+    ],
+    "note": "Neotex; на сайте «Дуб Карамельный 532», адрес bourbon_532 — совпадение. страна производства на странице товара ivc.ru не указана; текста описания на странице нет"
+  },
+  {
+    "excel": "NEOTEX | BOURBON/596",
+    "found": true,
+    "pageUrl": "https://ivc.ru/floors/bourbon_596/",
+    "name": "Дуб Бурбон 596",
+    "collection": "Neotex/Неотекс",
+    "brand": "IVC Home",
+    "colourCode": "596",
+    "country": null,
+    "description": null,
+    "specs": [
+      {
+        "label": "Общая толщина",
+        "value": "2.50 мм"
+      },
+      {
+        "label": "Защитный слой",
+        "value": "0.20 мм"
+      },
+      {
+        "label": "Основа",
+        "value": "Дублированная"
+      },
+      {
+        "label": "Класс нагрузки",
+        "value": "22"
+      },
+      {
+        "label": "Повторяемость рисунка",
+        "value": "120x100 см"
+      },
+      {
+        "label": "Доступный формат 200 см",
+        "value": "V6960.538T596G200"
+      },
+      {
+        "label": "Доступный формат 250 см",
+        "value": "V6960.538T596G250"
+      },
+      {
+        "label": "Доступный формат 300 см",
+        "value": "V6960.538T596G300"
+      },
+      {
+        "label": "Доступный формат 350 см",
+        "value": "V6960.538T596G350"
+      },
+      {
+        "label": "Доступный формат 400 см",
+        "value": "V6960.538T596G400"
+      },
+      {
+        "label": "Пожарная опасность",
+        "value": "КМ5"
+      },
+      {
+        "label": "Эмиссия ЛОС",
+        "value": "Очень низкая эмиссия ЛОС"
+      },
+      {
+        "label": "Сопротивление скольжению, R",
+        "value": "R9"
+      },
+      {
+        "label": "Остаточная деформация",
+        "value": "≤0.45 мм"
+      },
+      {
+        "label": "Теплопроводность",
+        "value": "0.25 Вт/мК"
+      },
+      {
+        "label": "Теплоизоляция",
+        "value": "0.0100 м²K/Вт"
+      },
+      {
+        "label": "Срок службы бытовой, лет",
+        "value": "15"
+      }
+    ],
+    "images": [
+      "https://ivc.ru/upload/iblock/a83/vshwi4vw144hgsklhf1cyirmi6khhhjl.jpg",
+      "https://ivc.ru/upload/iblock/41a/ncphde5p2mvzjy7koh7k1jnhckoi6n7p.jpg"
+    ],
+    "pdf": [
+      "https://ivc.ru/upload/iblock/8f3/yxmoaegkplwl7uv0t3z73etv9g2uqa5a.pdf"
+    ],
+    "note": "Neotex, «Дуб Бурбон 596» — точное совпадение. страна производства на странице товара ivc.ru не указана; текста описания на странице нет"
+  },
+  {
+    "excel": "NEOTEX | MORZINE/547",
+    "found": false,
+    "pageUrl": null,
+    "name": null,
+    "collection": null,
+    "colourCode": null,
+    "country": null,
+    "description": null,
+    "specs": [],
+    "images": [],
+    "note": "Морзин 547 на ivc.ru нет (есть Морзин 508 Inter, 830 и 849 Chrometex)"
+  },
+  {
+    "excel": "NEOTEX | TORONTO/506",
+    "found": false,
+    "pageUrl": null,
+    "name": null,
+    "collection": null,
+    "colourCode": null,
+    "country": null,
+    "description": null,
+    "specs": [],
+    "images": [],
+    "note": "Торонто 506 на ivc.ru нет (есть только Торонто 501 Ecotex)"
+  },
+  {
+    "excel": "ОНИКС | Премиум/761",
+    "found": true,
+    "pageUrl": "https://ivc.ru/floors/dub-premium-761/",
+    "name": "Дуб Премиум 761",
+    "collection": "Onyx/Оникс",
+    "brand": "Leoline",
+    "colourCode": "761",
+    "country": null,
+    "description": null,
+    "specs": [
+      {
+        "label": "Общая толщина",
+        "value": "3.00 мм"
+      },
+      {
+        "label": "Защитный слой",
+        "value": "0.20 мм"
+      },
+      {
+        "label": "Основа",
+        "value": "Дублированная"
+      },
+      {
+        "label": "Класс нагрузки",
+        "value": "22"
+      },
+      {
+        "label": "Повторяемость рисунка",
+        "value": "120x100 см"
+      },
+      {
+        "label": "Доступный формат 250 см",
+        "value": "V5700.B68T761P250"
+      },
+      {
+        "label": "Доступный формат 300 см",
+        "value": "V5700.B68T761P300"
+      },
+      {
+        "label": "Доступный формат 350 см",
+        "value": "V5700.B68T761P350"
+      },
+      {
+        "label": "Доступный формат 400 см",
+        "value": "V5700.B68T761P400"
+      },
+      {
+        "label": "Пожарная опасность",
+        "value": "КМ5"
+      },
+      {
+        "label": "Эмиссия ЛОС",
+        "value": "Очень низкая эмиссия ЛОС"
+      },
+      {
+        "label": "Сопротивление скольжению, R",
+        "value": "R10"
+      },
+      {
+        "label": "Остаточная деформация",
+        "value": "≤0.70"
+      },
+      {
+        "label": "Теплопроводность",
+        "value": "0,25 м²K/Вт"
+      },
+      {
+        "label": "Теплоизоляция",
+        "value": "0,0104 м²K/Вт"
+      },
+      {
+        "label": "Срок службы бытовой, лет",
+        "value": "15"
+      }
+    ],
+    "images": [
+      "https://ivc.ru/upload/iblock/08c/gek96tj76s04oh0yihm1shklphdfudpw.png",
+      "https://ivc.ru/upload/iblock/f50/dc3t54zxiiso3ythrb12flf9nv05g4w4.jpg"
+    ],
+    "pdf": [
+      "https://ivc.ru/upload/iblock/08b/ntycnki83ahwyp5vsjp72guk24fbkroa.pdf"
+    ],
+    "note": "Onyx = ОНИКС, Дуб Премиум 761 — точное совпадение. страна производства на странице товара ivc.ru не указана; текста описания на странице нет"
+  },
+  {
+    "excel": "ОНИКС | Премиум/790",
+    "found": true,
+    "pageUrl": "https://ivc.ru/floors/dub-premium-790/",
+    "name": "Дуб Премиум 790",
+    "collection": "Onyx/Оникс",
+    "brand": "Leoline",
+    "colourCode": "790",
+    "country": null,
+    "description": null,
+    "specs": [
+      {
+        "label": "Общая толщина",
+        "value": "3.00 мм"
+      },
+      {
+        "label": "Защитный слой",
+        "value": "0.20 мм"
+      },
+      {
+        "label": "Основа",
+        "value": "Дублированная"
+      },
+      {
+        "label": "Класс нагрузки",
+        "value": "22"
+      },
+      {
+        "label": "Повторяемость рисунка",
+        "value": "120x100 см"
+      },
+      {
+        "label": "Доступный формат 250 см",
+        "value": "V5700.B68T790P250"
+      },
+      {
+        "label": "Доступный формат 300 см",
+        "value": "V5700.B68T790P300"
+      },
+      {
+        "label": "Доступный формат 350 см",
+        "value": "V5700.B68T790P350"
+      },
+      {
+        "label": "Доступный формат 400 см",
+        "value": "V5700.B68T790P400"
+      },
+      {
+        "label": "Пожарная опасность",
+        "value": "КМ5"
+      },
+      {
+        "label": "Эмиссия ЛОС",
+        "value": "Очень низкая эмиссия ЛОС"
+      },
+      {
+        "label": "Сопротивление скольжению, R",
+        "value": "R10"
+      },
+      {
+        "label": "Остаточная деформация",
+        "value": "≤0.70"
+      },
+      {
+        "label": "Теплопроводность",
+        "value": "0,25 м²K/Вт"
+      },
+      {
+        "label": "Теплоизоляция",
+        "value": "0,0104 м²K/Вт"
+      },
+      {
+        "label": "Срок службы бытовой, лет",
+        "value": "15"
+      }
+    ],
+    "images": [
+      "https://ivc.ru/upload/iblock/2e6/hosk4hnslyq0a2gwhn5zqvth9wd73xx4.png",
+      "https://ivc.ru/upload/iblock/1bd/hvc523bifuv9jys26cbvv02z9v6n70l4.jpg"
+    ],
+    "pdf": [
+      "https://ivc.ru/upload/iblock/08b/ntycnki83ahwyp5vsjp72guk24fbkroa.pdf"
+    ],
+    "note": "Onyx = ОНИКС, Дуб Премиум 790 — точное совпадение. страна производства на странице товара ivc.ru не указана; текста описания на странице нет"
+  },
+  {
+    "excel": "ОНИКС | Премиум/844",
+    "found": true,
+    "pageUrl": "https://ivc.ru/floors/dub-premium-844/",
+    "name": "Дуб Премиум 844",
+    "collection": "Onyx/Оникс",
+    "brand": "Leoline",
+    "colourCode": "844",
+    "country": null,
+    "description": null,
+    "specs": [
+      {
+        "label": "Общая толщина",
+        "value": "3.00 мм"
+      },
+      {
+        "label": "Защитный слой",
+        "value": "0.20 мм"
+      },
+      {
+        "label": "Основа",
+        "value": "Дублированная"
+      },
+      {
+        "label": "Класс нагрузки",
+        "value": "22"
+      },
+      {
+        "label": "Повторяемость рисунка",
+        "value": "120x100 см"
+      },
+      {
+        "label": "Доступный формат 250 см",
+        "value": "V5700.B68T844P250"
+      },
+      {
+        "label": "Доступный формат 300 см",
+        "value": "V5700.B68T844P300"
+      },
+      {
+        "label": "Доступный формат 350 см",
+        "value": "V5700.B68T844P350"
+      },
+      {
+        "label": "Доступный формат 400 см",
+        "value": "V5700.B68T844P400"
+      },
+      {
+        "label": "Пожарная опасность",
+        "value": "КМ5"
+      },
+      {
+        "label": "Эмиссия ЛОС",
+        "value": "Очень низкая эмиссия ЛОС"
+      },
+      {
+        "label": "Сопротивление скольжению, R",
+        "value": "R10"
+      },
+      {
+        "label": "Остаточная деформация",
+        "value": "≤0.70"
+      },
+      {
+        "label": "Теплопроводность",
+        "value": "0,25 м²K/Вт"
+      },
+      {
+        "label": "Теплоизоляция",
+        "value": "0,0104 м²K/Вт"
+      },
+      {
+        "label": "Срок службы бытовой, лет",
+        "value": "15"
+      }
+    ],
+    "images": [
+      "https://ivc.ru/upload/iblock/73b/1acz72cw64w1lzl50zormwjek3qi9i9d.png",
+      "https://ivc.ru/upload/iblock/430/axpggjr5je10tiwjvv36191dvz302m1i.jpg"
+    ],
+    "pdf": [
+      "https://ivc.ru/upload/iblock/08b/ntycnki83ahwyp5vsjp72guk24fbkroa.pdf"
+    ],
+    "note": "Onyx = ОНИКС, Дуб Премиум 844 — точное совпадение. страна производства на странице товара ivc.ru не указана; текста описания на странице нет"
+  },
+  {
+    "excel": "ОНИКС | Модерн/52",
+    "found": true,
+    "pageUrl": "https://ivc.ru/floors/dub-modern-w52/",
+    "name": "Дуб Модерн W52",
+    "collection": "Onyx/Оникс",
+    "brand": "Leoline",
+    "colourCode": "W52",
+    "country": null,
+    "description": null,
+    "specs": [
+      {
+        "label": "Общая толщина",
+        "value": "3.00 мм"
+      },
+      {
+        "label": "Защитный слой",
+        "value": "0.20 мм"
+      },
+      {
+        "label": "Основа",
+        "value": "Дублированная"
+      },
+      {
+        "label": "Класс нагрузки",
+        "value": "22"
+      },
+      {
+        "label": "Повторяемость рисунка",
+        "value": "150х200 см"
+      },
+      {
+        "label": "Доступный формат 250 см",
+        "value": "V9016.B68TW52P250"
+      },
+      {
+        "label": "Доступный формат 300 см",
+        "value": "V9016.B68TW52P300"
+      },
+      {
+        "label": "Доступный формат 350 см",
+        "value": "V9016.B68TW52P350"
+      },
+      {
+        "label": "Доступный формат 400 см",
+        "value": "V9016.B68TW52P400"
+      },
+      {
+        "label": "Пожарная опасность",
+        "value": "КМ5"
+      },
+      {
+        "label": "Эмиссия ЛОС",
+        "value": "Очень низкая эмиссия ЛОС"
+      },
+      {
+        "label": "Сопротивление скольжению, R",
+        "value": "R10"
+      },
+      {
+        "label": "Остаточная деформация",
+        "value": "≤0.70"
+      },
+      {
+        "label": "Теплопроводность",
+        "value": "0,25 м²K/Вт"
+      },
+      {
+        "label": "Теплоизоляция",
+        "value": "0,0104 м²K/Вт"
+      },
+      {
+        "label": "Срок службы бытовой, лет",
+        "value": "15"
+      }
+    ],
+    "images": [
+      "https://ivc.ru/upload/iblock/576/o3rqcufxshshks2ovcm140d38w7feyen.png",
+      "https://ivc.ru/upload/iblock/3b4/i05povxldgwc6nojz9uw0b92l2ctr34w.jpg"
+    ],
+    "pdf": [
+      "https://ivc.ru/upload/iblock/08b/ntycnki83ahwyp5vsjp72guk24fbkroa.pdf"
+    ],
+    "note": "Onyx = ОНИКС, Дуб Модерн W52 — совпадение (в таблице 52). страна производства на странице товара ivc.ru не указана; текста описания на странице нет"
+  },
+  {
+    "excel": "TEXMARK | FORESTER/837",
+    "found": false,
+    "pageUrl": null,
+    "name": null,
+    "collection": null,
+    "colourCode": null,
+    "country": null,
+    "description": null,
+    "specs": [],
+    "images": [],
+    "note": "Forester 837 на ivc.ru нет (837 есть только у Texville «Дуб Лесная Тропа» — другой дизайн)"
+  },
+  {
+    "excel": "TEXMARK | KIROV/563",
+    "found": false,
+    "pageUrl": null,
+    "name": null,
+    "collection": null,
+    "colourCode": null,
+    "country": null,
+    "description": null,
+    "specs": [],
+    "images": [],
+    "note": "дизайна Киров на ivc.ru нет"
+  },
+  {
+    "excel": "TEXMARK | ОСТИН/796",
+    "found": false,
+    "pageUrl": null,
+    "name": null,
+    "collection": null,
+    "colourCode": null,
+    "country": null,
+    "description": null,
+    "specs": [],
+    "images": [],
+    "note": "дизайна Остин на ivc.ru нет"
+  },
+  {
+    "excel": "TEXMARK | БЕРЛИН/556",
+    "found": false,
+    "pageUrl": null,
+    "name": null,
+    "collection": null,
+    "colourCode": null,
+    "country": null,
+    "description": null,
+    "specs": [],
+    "images": [],
+    "note": "Берлин 556 на ivc.ru нет (есть Берлин 589 Neotex, 561 Golf)"
+  },
+  {
+    "excel": "TEXMARK | САТИН/750",
+    "found": false,
+    "pageUrl": null,
+    "name": null,
+    "collection": null,
+    "colourCode": null,
+    "country": null,
+    "description": null,
+    "specs": [],
+    "images": [],
+    "note": "дизайна Сатин на ivc.ru нет"
+  },
+  {
+    "excel": "TEXMARK | ШЕЛДОН/42",
+    "found": false,
+    "pageUrl": null,
+    "name": null,
+    "collection": null,
+    "colourCode": null,
+    "country": null,
+    "description": null,
+    "specs": [],
+    "images": [],
+    "note": "Шелдон 42 на ivc.ru нет (есть только «Дуб Тёплый W91» Velvet, адрес sheldon_oak_w91)"
+  },
+  {
+    "excel": "TEXMARK | TORONTO",
+    "found": false,
+    "pageUrl": null,
+    "name": null,
+    "collection": null,
+    "colourCode": null,
+    "country": null,
+    "description": null,
+    "specs": [],
+    "images": [],
+    "note": "Торонто в Texmark на ivc.ru нет (есть только Торонто 501 Ecotex); номер цвета в таблице не указан"
+  },
+  {
+    "excel": "TEXNO | JACOBSEN/W32",
+    "found": false,
+    "pageUrl": null,
+    "name": null,
+    "collection": null,
+    "colourCode": null,
+    "country": null,
+    "description": null,
+    "specs": [],
+    "images": [],
+    "note": "коллекции Texno и дизайна Jacobsen на ivc.ru нет"
+  },
+  {
+    "excel": "ULTIMATE OAK | CAMARGUE/545",
+    "found": false,
+    "pageUrl": null,
+    "name": null,
+    "collection": null,
+    "colourCode": null,
+    "country": null,
+    "description": null,
+    "specs": [],
+    "images": [],
+    "note": "Camargue 545 на ivc.ru нет (есть только camargue_504 Elite)"
+  },
+  {
+    "excel": "SEQUOIA | MONETTA/032",
+    "found": false,
+    "pageUrl": null,
+    "name": null,
+    "collection": null,
+    "colourCode": null,
+    "country": null,
+    "description": null,
+    "specs": [],
+    "images": [],
+    "note": "коллекции Sequoia и дизайна Monetta на ivc.ru нет"
+  },
+  {
+    "excel": "SILVERLINE | HELENA/569",
+    "found": false,
+    "pageUrl": null,
+    "name": null,
+    "collection": null,
+    "colourCode": null,
+    "country": null,
+    "description": null,
+    "specs": [],
+    "images": [],
+    "note": "коллекции Silverline и дизайна Helena на ivc.ru нет"
+  },
+  {
+    "excel": "SILVERLINE | VALENTINA/558",
+    "found": false,
+    "pageUrl": null,
+    "name": null,
+    "collection": null,
+    "colourCode": null,
+    "country": null,
+    "description": null,
+    "specs": [],
+    "images": [],
+    "note": "коллекции Silverline и дизайна Valentina на ivc.ru нет"
+  },
+  {
+    "excel": "SILVERLINE | ANYA/589 сер",
+    "found": false,
+    "pageUrl": null,
+    "name": null,
+    "collection": null,
+    "colourCode": null,
+    "country": null,
+    "description": null,
+    "specs": [],
+    "images": [],
+    "note": "коллекции Silverline и дизайна Anya на ivc.ru нет (589 есть у Neotex «Дуб Стальной», дизайн Berlin)"
+  },
+  {
+    "excel": "VERDI | BERLIN/506",
+    "found": false,
+    "pageUrl": null,
+    "name": null,
+    "collection": null,
+    "colourCode": null,
+    "country": null,
+    "description": null,
+    "specs": [],
+    "images": [],
+    "note": "Берлин 506 на ivc.ru нет"
+  },
+  {
+    "excel": "VERDI | BERLIN/531",
+    "found": false,
+    "pageUrl": null,
+    "name": null,
+    "collection": null,
+    "colourCode": null,
+    "country": null,
+    "description": null,
+    "specs": [],
+    "images": [],
+    "note": "Берлин 531 на ivc.ru нет"
+  },
+  {
+    "excel": "VERDI | PARADISE/534",
+    "found": false,
+    "pageUrl": null,
+    "name": null,
+    "collection": null,
+    "colourCode": null,
+    "country": null,
+    "description": null,
+    "specs": [],
+    "images": [],
+    "note": "дизайна Paradise на ivc.ru нет"
+  },
+  {
+    "excel": "VERDI | MORZINE/832",
+    "found": false,
+    "pageUrl": null,
+    "name": null,
+    "collection": null,
+    "colourCode": null,
+    "country": null,
+    "description": null,
+    "specs": [],
+    "images": [],
+    "note": "Морзин 832 на ivc.ru нет"
+  },
+  {
+    "excel": "VICTORIA | MORZINE/748",
+    "found": false,
+    "pageUrl": null,
+    "name": null,
+    "collection": null,
+    "colourCode": null,
+    "country": null,
+    "description": null,
+    "specs": [],
+    "images": [],
+    "note": "коллекции Victoria и Морзин 748 на ivc.ru нет"
+  },
+  {
+    "excel": "VISION | AVALON/995",
+    "found": true,
+    "pageUrl": "https://ivc.ru/floors/avalon_995/",
+    "name": "Авалон 995",
+    "collection": "Vision/Вижн",
+    "brand": "IVC Home",
+    "colourCode": "995",
+    "country": null,
+    "description": null,
+    "specs": [
+      {
+        "label": "Общая толщина",
+        "value": "2.20 мм"
+      },
+      {
+        "label": "Защитный слой",
+        "value": "0.50 мм"
+      },
+      {
+        "label": "Основа",
+        "value": "Компактный ПВХ"
+      },
+      {
+        "label": "Класс нагрузки",
+        "value": "23-33-41"
+      },
+      {
+        "label": "Повторяемость рисунка",
+        "value": "100x100 см"
+      },
+      {
+        "label": "Доступный формат 250 см",
+        "value": "V2170.B25K995G250"
+      },
+      {
+        "label": "Доступный формат 300 см",
+        "value": "V2170.B25K995G300"
+      },
+      {
+        "label": "Доступный формат 350 см",
+        "value": "V2170.B25K995G350"
+      },
+      {
+        "label": "Доступный формат 400 см",
+        "value": "V2170.B25K995G400"
+      },
+      {
+        "label": "Пожарная опасность",
+        "value": "КМ2"
+      },
+      {
+        "label": "Эмиссия ЛОС",
+        "value": "Очень низкая эмиссия ЛОС"
+      },
+      {
+        "label": "Сопротивление скольжению, R",
+        "value": "R10"
+      },
+      {
+        "label": "Остаточная деформация",
+        "value": "≤0.20 мм"
+      },
+      {
+        "label": "Теплопроводность",
+        "value": "0.25 Вт/мК"
+      },
+      {
+        "label": "Теплоизоляция",
+        "value": "0.0088 м²K/Вт"
+      },
+      {
+        "label": "Срок службы бытовой, лет",
+        "value": "15"
+      }
+    ],
+    "images": [
+      "https://ivc.ru/upload/iblock/b2f/ftph3uw7f7ud6a8icxuu3bcp1hnnswld.jpg"
+    ],
+    "pdf": [
+      "https://ivc.ru/upload/iblock/159/xlci8484c1xb6w9uj9rars88qq3yo3ay.pdf"
+    ],
+    "note": "Vision, Авалон 995 — точное совпадение. страна производства на странице товара ivc.ru не указана; текста описания на странице нет"
+  },
+  {
+    "excel": "VISION | AVALON/934",
+    "found": true,
+    "pageUrl": "https://ivc.ru/floors/avalon_934/",
+    "name": "Авалон 934",
+    "collection": "Vision/Вижн",
+    "brand": "IVC Home",
+    "colourCode": "934",
+    "country": null,
+    "description": null,
+    "specs": [
+      {
+        "label": "Общая толщина",
+        "value": "2.20 мм"
+      },
+      {
+        "label": "Защитный слой",
+        "value": "0.50 мм"
+      },
+      {
+        "label": "Основа",
+        "value": "Компактный ПВХ"
+      },
+      {
+        "label": "Класс нагрузки",
+        "value": "23-33-41"
+      },
+      {
+        "label": "Повторяемость рисунка",
+        "value": "100x100 см"
+      },
+      {
+        "label": "Доступный формат 300 см",
+        "value": "V2170.B25K934G300"
+      },
+      {
+        "label": "Доступный формат 400 см",
+        "value": "V2170.B25K934G400"
+      },
+      {
+        "label": "Пожарная опасность",
+        "value": "КМ2"
+      },
+      {
+        "label": "Эмиссия ЛОС",
+        "value": "Очень низкая эмиссия ЛОС"
+      },
+      {
+        "label": "Сопротивление скольжению, R",
+        "value": "R10"
+      },
+      {
+        "label": "Остаточная деформация",
+        "value": "≤0.20 мм"
+      },
+      {
+        "label": "Теплопроводность",
+        "value": "0.25 Вт/мК"
+      },
+      {
+        "label": "Теплоизоляция",
+        "value": "0.0088 м²K/Вт"
+      },
+      {
+        "label": "Срок службы бытовой, лет",
+        "value": "15"
+      }
+    ],
+    "images": [
+      "https://ivc.ru/upload/iblock/9be/ghi0ninv8e4k88sly1qqwcj73cnc4tud.jpg"
+    ],
+    "pdf": [
+      "https://ivc.ru/upload/iblock/159/xlci8484c1xb6w9uj9rars88qq3yo3ay.pdf"
+    ],
+    "note": "Vision, Авалон 934 — точное совпадение. страна производства на странице товара ivc.ru не указана; текста описания на странице нет"
+  },
+  {
+    "excel": "VISION | AVALON/991",
+    "found": false,
+    "pageUrl": null,
+    "name": null,
+    "collection": null,
+    "colourCode": null,
+    "country": null,
+    "description": null,
+    "specs": [],
+    "images": [],
+    "note": "Авалон 991 на ivc.ru нет (есть 995, 978, 934)"
+  },
+  {
+    "excel": "VISION | AVALON/917",
+    "found": false,
+    "pageUrl": null,
+    "name": null,
+    "collection": null,
+    "colourCode": null,
+    "country": null,
+    "description": null,
+    "specs": [],
+    "images": [],
+    "note": "Авалон 917 на ivc.ru нет (есть 995, 978, 934)"
+  },
+  {
+    "excel": "СЕДНА | Центра/93",
+    "found": true,
+    "pageUrl": "https://ivc.ru/floors/sedna_t93/",
+    "name": "Седна T93",
+    "collection": "Centra/Центра",
+    "brand": "by IVC",
+    "colourCode": "T93",
+    "country": null,
+    "description": null,
+    "specs": [
+      {
+        "label": "Общая толщина",
+        "value": "2.00 мм"
+      },
+      {
+        "label": "Защитный слой",
+        "value": "0.70 мм"
+      },
+      {
+        "label": "Основа",
+        "value": "Компактный ПВХ"
+      },
+      {
+        "label": "Класс нагрузки",
+        "value": "23-34-43"
+      },
+      {
+        "label": "Повторяемость рисунка",
+        "value": "100x100 см"
+      },
+      {
+        "label": "Доступный формат 200 см",
+        "value": "V5790.247KT93P200"
+      },
+      {
+        "label": "Доступный формат 300 см",
+        "value": "V5790.247KT93P300"
+      },
+      {
+        "label": "Доступный формат 400 см",
+        "value": "V5790.247KT93P400"
+      },
+      {
+        "label": "Пожарная опасность",
+        "value": "КМ2"
+      },
+      {
+        "label": "Эмиссия ЛОС",
+        "value": "Очень низкая эмиссия ЛОС"
+      },
+      {
+        "label": "Сопротивление скольжению, R",
+        "value": "R10"
+      },
+      {
+        "label": "Остаточная деформация",
+        "value": "≤0.10 мм"
+      },
+      {
+        "label": "Теплопроводность",
+        "value": "0.25 Вт/мК"
+      },
+      {
+        "label": "Теплоизоляция",
+        "value": "0.0080 м²K/Вт"
+      },
+      {
+        "label": "Срок службы бытовой, лет",
+        "value": "15"
+      }
+    ],
+    "images": [
+      "https://ivc.ru/upload/iblock/81e/p2r378k7e1m270ugy6rmk3usqf3fhrmj.jpg"
+    ],
+    "pdf": [
+      "https://ivc.ru/upload/iblock/cc2/l135pqi2y02z0vgzgdv0nhe5flghd7fs.pdf"
+    ],
+    "note": "Centra/Центра, Седна T93 — совпадение (в таблице коллекция и дизайн переставлены: «СЕДНА | Центра/93»). страна производства на странице товара ivc.ru не указана; текста описания на странице нет"
+  },
+  {
+    "excel": "СЕДНА | Центра/94",
+    "found": true,
+    "pageUrl": "https://ivc.ru/floors/sedna_t94/",
+    "name": "Седна T94",
+    "collection": "Centra/Центра",
+    "brand": "by IVC",
+    "colourCode": "T94",
+    "country": null,
+    "description": null,
+    "specs": [
+      {
+        "label": "Общая толщина",
+        "value": "2.00 мм"
+      },
+      {
+        "label": "Защитный слой",
+        "value": "0.70 мм"
+      },
+      {
+        "label": "Основа",
+        "value": "Компактный ПВХ"
+      },
+      {
+        "label": "Класс нагрузки",
+        "value": "23-34-43"
+      },
+      {
+        "label": "Повторяемость рисунка",
+        "value": "100x100 см"
+      },
+      {
+        "label": "Доступный формат 200 см",
+        "value": "V5790.247KT94P200"
+      },
+      {
+        "label": "Доступный формат 250 см",
+        "value": "V5790.247KT94P250"
+      },
+      {
+        "label": "Доступный формат 300 см",
+        "value": "V5790.247KT94P300"
+      },
+      {
+        "label": "Доступный формат 350 см",
+        "value": "V5790.247KT94P350"
+      },
+      {
+        "label": "Доступный формат 400 см",
+        "value": "V5790.247KT94P400"
+      },
+      {
+        "label": "Пожарная опасность",
+        "value": "КМ2"
+      },
+      {
+        "label": "Эмиссия ЛОС",
+        "value": "Очень низкая эмиссия ЛОС"
+      },
+      {
+        "label": "Сопротивление скольжению, R",
+        "value": "R10"
+      },
+      {
+        "label": "Остаточная деформация",
+        "value": "≤0.10 мм"
+      },
+      {
+        "label": "Теплопроводность",
+        "value": "0.25 Вт/мК"
+      },
+      {
+        "label": "Теплоизоляция",
+        "value": "0.0080 м²K/Вт"
+      },
+      {
+        "label": "Срок службы бытовой, лет",
+        "value": "15"
+      }
+    ],
+    "images": [
+      "https://ivc.ru/upload/iblock/525/efiig8ug2f03u4djlsz4rmm5wi1h459j.jpg"
+    ],
+    "pdf": [
+      "https://ivc.ru/upload/iblock/cc2/l135pqi2y02z0vgzgdv0nhe5flghd7fs.pdf"
+    ],
+    "note": "Centra/Центра, Седна T94 — совпадение (в таблице «СЕДНА | Центра/94»). страна производства на странице товара ivc.ru не указана; текста описания на странице нет"
+  },
+  {
+    "excel": "WOODLAND | SINTRA/537",
+    "found": false,
+    "pageUrl": null,
+    "name": null,
+    "collection": null,
+    "colourCode": null,
+    "country": null,
+    "description": null,
+    "specs": [],
+    "images": [],
+    "note": "коллекции Woodland и дизайна Sintra на ivc.ru нет"
+  },
+  {
+    "excel": "CHOMOTEKS | MORZIN/830",
+    "found": true,
+    "pageUrl": "https://ivc.ru/floors/morzine_830/",
+    "name": "Морзин 830",
+    "collection": "Chrometex/Хромтекс",
+    "brand": "by IVC",
+    "colourCode": "830",
+    "country": null,
+    "description": null,
+    "specs": [
+      {
+        "label": "Общая толщина",
+        "value": "3.80 мм"
+      },
+      {
+        "label": "Защитный слой",
+        "value": "0.50 мм"
+      },
+      {
+        "label": "Основа",
+        "value": "Дублированная"
+      },
+      {
+        "label": "Класс нагрузки",
+        "value": "23-32"
+      },
+      {
+        "label": "Повторяемость рисунка",
+        "value": "120x100 см"
+      },
+      {
+        "label": "Доступный формат 250 см",
+        "value": "V5700.557T830P250"
+      },
+      {
+        "label": "Доступный формат 300 см",
+        "value": "V5700.557T830P300"
+      },
+      {
+        "label": "Доступный формат 350 см",
+        "value": "V5700.557T830P350"
+      },
+      {
+        "label": "Доступный формат 400 см",
+        "value": "V5700.557T830P400"
+      },
+      {
+        "label": "Пожарная опасность",
+        "value": "КМ5"
+      },
+      {
+        "label": "Эмиссия ЛОС",
+        "value": "Очень низкая эмиссия ЛОС"
+      },
+      {
+        "label": "Сопротивление скольжению, R",
+        "value": "R10"
+      },
+      {
+        "label": "Остаточная деформация",
+        "value": "≤0.80 мм"
+      },
+      {
+        "label": "Теплопроводность",
+        "value": "0.25 Вт/мК"
+      },
+      {
+        "label": "Теплоизоляция",
+        "value": ""
+      },
+      {
+        "label": "Срок службы бытовой, лет",
+        "value": "15"
+      }
+    ],
+    "images": [
+      "https://ivc.ru/upload/iblock/5fe/vfc08y0m3ov0rri0q3apihzq0gmfx0ti.png"
+    ],
+    "pdf": [
+      "https://ivc.ru/upload/iblock/d72/2k4p8cu4725jcmsiqrfieq5gcx3zejda.pdf"
+    ],
+    "note": "Chrometex/Хромтекс = CHOMOTEKS, Морзин 830 — совпадение. страна производства на странице товара ivc.ru не указана; текста описания на странице нет"
+  },
+  {
+    "excel": "ТЕКСВИЛЬ | Дуб Кремовый",
+    "found": true,
+    "pageUrl": "https://ivc.ru/floors/dub_kremovyj/",
+    "name": "Дуб Кремовый 740",
+    "collection": "Texville/Тексвилл",
+    "brand": "IVC Home",
+    "colourCode": "740",
+    "country": null,
+    "description": null,
+    "specs": [
+      {
+        "label": "Общая толщина",
+        "value": "3.70 мм"
+      },
+      {
+        "label": "Защитный слой",
+        "value": "0.50 мм"
+      },
+      {
+        "label": "Основа",
+        "value": "Дублированная"
+      },
+      {
+        "label": "Класс нагрузки",
+        "value": "23-33"
+      },
+      {
+        "label": "Повторяемость рисунка",
+        "value": "150х100 см"
+      },
+      {
+        "label": "Доступный формат 250 см",
+        "value": "V6001.499T740P250"
+      },
+      {
+        "label": "Доступный формат 300 см",
+        "value": "V6001.499T740P300"
+      },
+      {
+        "label": "Доступный формат 350 см",
+        "value": "V6001.499T740P350"
+      },
+      {
+        "label": "Доступный формат 400 см",
+        "value": "V6001.499T740P400"
+      },
+      {
+        "label": "Пожарная опасность",
+        "value": "КМ5"
+      },
+      {
+        "label": "Эмиссия ЛОС",
+        "value": "Очень низкая эмиссия ЛОС"
+      },
+      {
+        "label": "Сопротивление скольжению, R",
+        "value": "R10"
+      },
+      {
+        "label": "Остаточная деформация",
+        "value": "≤0.80 мм"
+      },
+      {
+        "label": "Теплопроводность",
+        "value": "0.058 Вт/мК"
+      },
+      {
+        "label": "Теплоизоляция",
+        "value": "0.016 м²K/Вт"
+      },
+      {
+        "label": "Срок службы бытовой, лет",
+        "value": "15"
+      }
+    ],
+    "images": [
+      "https://ivc.ru/upload/iblock/e50/15vepdivp4v48e4h5tdnwhda3xbbqvhn.png",
+      "https://ivc.ru/upload/iblock/3e4/b12z4q2b9csrrwjchc41ofl7pkl3mr9b.jpg"
+    ],
+    "pdf": [
+      "https://ivc.ru/upload/iblock/ffd/qgrp7fh9z4ctqmubfh8wh6h678nfal4w.pdf"
+    ],
+    "note": "Texville = ТЕКСВИЛЬ, «Дуб Кремовый 740» — совпадение по названию (номер в таблице не указан). страна производства на странице товара ivc.ru не указана; текста описания на странице нет"
+  },
+  {
+    "excel": "ТЕКСВИЛЬ | Степная Рябь",
+    "found": true,
+    "pageUrl": "https://ivc.ru/floors/dub_stepnaya_ryab/",
+    "name": "Дуб Степная Рябь 793",
+    "collection": "Texville/Тексвилл",
+    "brand": "IVC Home",
+    "colourCode": "793",
+    "country": null,
+    "description": null,
+    "specs": [
+      {
+        "label": "Общая толщина",
+        "value": "3.70 мм"
+      },
+      {
+        "label": "Защитный слой",
+        "value": "0.50 мм"
+      },
+      {
+        "label": "Основа",
+        "value": "Дублированная"
+      },
+      {
+        "label": "Класс нагрузки",
+        "value": "23-33"
+      },
+      {
+        "label": "Повторяемость рисунка",
+        "value": "150х100 см"
+      },
+      {
+        "label": "Доступный формат 250 см",
+        "value": "V6001.499T793P250"
+      },
+      {
+        "label": "Доступный формат 300 см",
+        "value": "V6001.499T793P300"
+      },
+      {
+        "label": "Доступный формат 350 см",
+        "value": "V6001.499T793P350"
+      },
+      {
+        "label": "Доступный формат 400 см",
+        "value": "V6001.499T793P400"
+      },
+      {
+        "label": "Пожарная опасность",
+        "value": "КМ5"
+      },
+      {
+        "label": "Эмиссия ЛОС",
+        "value": "Очень низкая эмиссия ЛОС"
+      },
+      {
+        "label": "Сопротивление скольжению, R",
+        "value": "R10"
+      },
+      {
+        "label": "Остаточная деформация",
+        "value": "≤0.80 мм"
+      },
+      {
+        "label": "Теплопроводность",
+        "value": "0.25 Вт/мК"
+      },
+      {
+        "label": "Теплоизоляция",
+        "value": "0.016 м²K/Вт"
+      },
+      {
+        "label": "Срок службы бытовой, лет",
+        "value": "15"
+      }
+    ],
+    "images": [
+      "https://ivc.ru/upload/iblock/080/ucgkw1jneypdb1hw51huvs19s28cg1my.png",
+      "https://ivc.ru/upload/iblock/469/mqw2mnbn8m62gdzdwrjggx5fkj406t2k.jpg"
+    ],
+    "pdf": [
+      "https://ivc.ru/upload/iblock/ffd/qgrp7fh9z4ctqmubfh8wh6h678nfal4w.pdf"
+    ],
+    "note": "Texville, «Дуб Степная Рябь 793» — совпадение по названию. страна производства на странице товара ivc.ru не указана; текста описания на странице нет"
+  },
+  {
+    "excel": "ТЕКСВИЛЬ | Дуб Какао",
+    "found": true,
+    "pageUrl": "https://ivc.ru/floors/dub_kakao/",
+    "name": "Дуб Какао 547",
+    "collection": "Texville/Тексвилл",
+    "brand": "IVC Home",
+    "colourCode": "547",
+    "country": null,
+    "description": null,
+    "specs": [
+      {
+        "label": "Общая толщина",
+        "value": "3.70 мм"
+      },
+      {
+        "label": "Защитный слой",
+        "value": "0.50 мм"
+      },
+      {
+        "label": "Основа",
+        "value": "Дублированная"
+      },
+      {
+        "label": "Класс нагрузки",
+        "value": "23-33"
+      },
+      {
+        "label": "Повторяемость рисунка",
+        "value": "120х106 см"
+      },
+      {
+        "label": "Доступный формат 300 см",
+        "value": "V6285.499T547P300"
+      },
+      {
+        "label": "Доступный формат 350 см",
+        "value": "V6285.499T547P350"
+      },
+      {
+        "label": "Доступный формат 400 см",
+        "value": "V6285.499T547P400"
+      },
+      {
+        "label": "Пожарная опасность",
+        "value": "КМ5"
+      },
+      {
+        "label": "Эмиссия ЛОС",
+        "value": "Очень низкая эмиссия ЛОС"
+      },
+      {
+        "label": "Сопротивление скольжению, R",
+        "value": "R10"
+      },
+      {
+        "label": "Остаточная деформация",
+        "value": "≤0.80 мм"
+      },
+      {
+        "label": "Теплопроводность",
+        "value": "0.25 Вт/мК"
+      },
+      {
+        "label": "Теплоизоляция",
+        "value": "0.016 м²K/Вт"
+      },
+      {
+        "label": "Срок службы бытовой, лет",
+        "value": "15"
+      }
+    ],
+    "images": [
+      "https://ivc.ru/upload/iblock/278/yrlfzbi100df90cw0ni93r3d3865ns04.jpg",
+      "https://ivc.ru/upload/iblock/689/fua2i4w69ha5cvlipvl25q0xkj2pnlgv.jpg"
+    ],
+    "pdf": [
+      "https://ivc.ru/upload/iblock/ffd/qgrp7fh9z4ctqmubfh8wh6h678nfal4w.pdf"
+    ],
+    "note": "Texville, «Дуб Какао 547» — совпадение по названию. страна производства на странице товара ivc.ru не указана; текста описания на странице нет"
+  },
+  {
+    "excel": "ТЕКСВИЛЬ | Лесная Тропа",
+    "found": true,
+    "pageUrl": "https://ivc.ru/floors/dub_lesnaya_tropa/",
+    "name": "Дуб Лесная Тропа 837",
+    "collection": "Texville/Тексвилл",
+    "brand": "IVC Home",
+    "colourCode": "837",
+    "country": null,
+    "description": null,
+    "specs": [
+      {
+        "label": "Общая толщина",
+        "value": "3.70 мм"
+      },
+      {
+        "label": "Защитный слой",
+        "value": "0.50 мм"
+      },
+      {
+        "label": "Основа",
+        "value": "Дублированная"
+      },
+      {
+        "label": "Класс нагрузки",
+        "value": "23-33"
+      },
+      {
+        "label": "Повторяемость рисунка",
+        "value": "150х200 см"
+      },
+      {
+        "label": "Доступный формат 250 см",
+        "value": "V6605.499T837P250"
+      },
+      {
+        "label": "Доступный формат 300 см",
+        "value": "V6605.499T837P300"
+      },
+      {
+        "label": "Доступный формат 350 см",
+        "value": "V6605.499T837P350"
+      },
+      {
+        "label": "Доступный формат 400 см",
+        "value": "V6605.499T837P400"
+      },
+      {
+        "label": "Пожарная опасность",
+        "value": "КМ5"
+      },
+      {
+        "label": "Эмиссия ЛОС",
+        "value": "Очень низкая эмиссия ЛОС"
+      },
+      {
+        "label": "Сопротивление скольжению, R",
+        "value": "R10"
+      },
+      {
+        "label": "Остаточная деформация",
+        "value": "≤0.80 мм"
+      },
+      {
+        "label": "Теплопроводность",
+        "value": "0.25 Вт/мК"
+      },
+      {
+        "label": "Теплоизоляция",
+        "value": "0.016 м²K/Вт"
+      },
+      {
+        "label": "Срок службы бытовой, лет",
+        "value": "15"
+      }
+    ],
+    "images": [
+      "https://ivc.ru/upload/iblock/e35/7kllprrfjbqm79atkd5dohyik8mgsbmh.png",
+      "https://ivc.ru/upload/iblock/387/jjk12ynm0zd0l9jxgtgfe8oie77klvvo.jpg"
+    ],
+    "pdf": [
+      "https://ivc.ru/upload/iblock/ffd/qgrp7fh9z4ctqmubfh8wh6h678nfal4w.pdf"
+    ],
+    "note": "Texville, «Дуб Лесная Тропа 837» — совпадение по названию. страна производства на странице товара ivc.ru не указана; текста описания на странице нет"
+  },
+  {
+    "excel": "ТЕКСВИЛЬ | Гречишный чай",
+    "found": true,
+    "pageUrl": "https://ivc.ru/floors/dub_grechishnyj_chaj/",
+    "name": "Дуб Гречишный Чай 842",
+    "collection": "Texville/Тексвилл",
+    "brand": "IVC Home",
+    "colourCode": "842",
+    "country": null,
+    "description": null,
+    "specs": [
+      {
+        "label": "Общая толщина",
+        "value": "3.70 мм"
+      },
+      {
+        "label": "Защитный слой",
+        "value": "0.50 мм"
+      },
+      {
+        "label": "Основа",
+        "value": "Дублированная"
+      },
+      {
+        "label": "Класс нагрузки",
+        "value": "23-33"
+      },
+      {
+        "label": "Повторяемость рисунка",
+        "value": "150х200 см"
+      },
+      {
+        "label": "Доступный формат 250 см",
+        "value": "V6605.499T842P250"
+      },
+      {
+        "label": "Доступный формат 300 см",
+        "value": "V6605.499T842P300"
+      },
+      {
+        "label": "Доступный формат 350 см",
+        "value": "V6605.499T842P350"
+      },
+      {
+        "label": "Доступный формат 400 см",
+        "value": "V6605.499T842P400"
+      },
+      {
+        "label": "Пожарная опасность",
+        "value": "КМ5"
+      },
+      {
+        "label": "Эмиссия ЛОС",
+        "value": "Очень низкая эмиссия ЛОС"
+      },
+      {
+        "label": "Сопротивление скольжению, R",
+        "value": "R10"
+      },
+      {
+        "label": "Остаточная деформация",
+        "value": "≤0.80 мм"
+      },
+      {
+        "label": "Теплопроводность",
+        "value": "0.25 Вт/мК"
+      },
+      {
+        "label": "Теплоизоляция",
+        "value": "0.016 м²K/Вт"
+      },
+      {
+        "label": "Срок службы бытовой, лет",
+        "value": "15"
+      }
+    ],
+    "images": [
+      "https://ivc.ru/upload/iblock/030/g3z7wqbu6so13rf84jq5vb6cxryfwtx3.png",
+      "https://ivc.ru/upload/iblock/5f7/wlp676m7qmiv5a1zbtk4xqvua3pz0emo.jpg"
+    ],
+    "pdf": [
+      "https://ivc.ru/upload/iblock/ffd/qgrp7fh9z4ctqmubfh8wh6h678nfal4w.pdf"
+    ],
+    "note": "Texville, «Дуб Гречишный Чай 842» — совпадение по названию. страна производства на странице товара ivc.ru не указана; текста описания на странице нет"
+  },
+  {
+    "excel": "ТЕКСВИЛЬ | Соломенный луг",
+    "found": true,
+    "pageUrl": "https://ivc.ru/floors/dub_solomennyj_lug/",
+    "name": "Дуб Соломенный Луг 736",
+    "collection": "Texville/Тексвилл",
+    "brand": "IVC Home",
+    "colourCode": "736",
+    "country": null,
+    "description": null,
+    "specs": [
+      {
+        "label": "Общая толщина",
+        "value": "3.70 мм"
+      },
+      {
+        "label": "Защитный слой",
+        "value": "0.50 мм"
+      },
+      {
+        "label": "Основа",
+        "value": "Дублированная"
+      },
+      {
+        "label": "Класс нагрузки",
+        "value": "23-33"
+      },
+      {
+        "label": "Повторяемость рисунка",
+        "value": "120х100 см"
+      },
+      {
+        "label": "Доступный формат 250 см",
+        "value": "V6960.499T736P250"
+      },
+      {
+        "label": "Доступный формат 300 см",
+        "value": "V6960.499T736P300"
+      },
+      {
+        "label": "Доступный формат 350 см",
+        "value": "V6960.499T736P350"
+      },
+      {
+        "label": "Доступный формат 400 см",
+        "value": "V6960.499T736P400"
+      },
+      {
+        "label": "Пожарная опасность",
+        "value": "КМ5"
+      },
+      {
+        "label": "Эмиссия ЛОС",
+        "value": "Очень низкая эмиссия ЛОС"
+      },
+      {
+        "label": "Сопротивление скольжению, R",
+        "value": "R10"
+      },
+      {
+        "label": "Остаточная деформация",
+        "value": "≤0.80 мм"
+      },
+      {
+        "label": "Теплопроводность",
+        "value": "0.25 Вт/мК"
+      },
+      {
+        "label": "Теплоизоляция",
+        "value": "0.016 м²K/Вт"
+      },
+      {
+        "label": "Срок службы бытовой, лет",
+        "value": "15"
+      }
+    ],
+    "images": [
+      "https://ivc.ru/upload/iblock/14f/s0y2okt8qquk5lrnb76kvum6a1brm843.png",
+      "https://ivc.ru/upload/iblock/168/7hywx8rczxk8egulyz3xpinjprio10dp.jpg"
+    ],
+    "pdf": [
+      "https://ivc.ru/upload/iblock/ffd/qgrp7fh9z4ctqmubfh8wh6h678nfal4w.pdf"
+    ],
+    "note": "Texville, «Дуб Соломенный Луг 736» — совпадение по названию. страна производства на странице товара ivc.ru не указана; текста описания на странице нет"
+  },
+  {
+    "excel": "ТЕКСВИЛЬ | Сливовый дуб",
+    "found": true,
+    "pageUrl": "https://ivc.ru/floors/dub_slivovyj/",
+    "name": "Дуб Сливовый 844",
+    "collection": "Texville/Тексвилл",
+    "brand": "IVC Home",
+    "colourCode": "844",
+    "country": null,
+    "description": null,
+    "specs": [
+      {
+        "label": "Общая толщина",
+        "value": "3.70 мм"
+      },
+      {
+        "label": "Защитный слой",
+        "value": "0.50 мм"
+      },
+      {
+        "label": "Основа",
+        "value": "Дублированная"
+      },
+      {
+        "label": "Класс нагрузки",
+        "value": "23-33"
+      },
+      {
+        "label": "Повторяемость рисунка",
+        "value": "120х100 см"
+      },
+      {
+        "label": "Доступный формат 250 см",
+        "value": "V6960.499T844P250"
+      },
+      {
+        "label": "Доступный формат 300 см",
+        "value": "V6960.499T844P300"
+      },
+      {
+        "label": "Доступный формат 350 см",
+        "value": "V6960.499T844P350"
+      },
+      {
+        "label": "Доступный формат 400 см",
+        "value": "V6960.499T844P400"
+      },
+      {
+        "label": "Пожарная опасность",
+        "value": "КМ5"
+      },
+      {
+        "label": "Эмиссия ЛОС",
+        "value": "Очень низкая эмиссия ЛОС"
+      },
+      {
+        "label": "Сопротивление скольжению, R",
+        "value": "R10"
+      },
+      {
+        "label": "Остаточная деформация",
+        "value": "≤0.80 мм"
+      },
+      {
+        "label": "Теплопроводность",
+        "value": "0.25 Вт/мК"
+      },
+      {
+        "label": "Теплоизоляция",
+        "value": "0.016 м²K/Вт"
+      },
+      {
+        "label": "Срок службы бытовой, лет",
+        "value": "15"
+      }
+    ],
+    "images": [
+      "https://ivc.ru/upload/iblock/80e/9bynbwpgrvge8xt0doaif0tasve0ymgx.png",
+      "https://ivc.ru/upload/iblock/8e9/ganrc6zefpm2uvoiqaqzi3hra5xl7e61.jpg"
+    ],
+    "pdf": [
+      "https://ivc.ru/upload/iblock/ffd/qgrp7fh9z4ctqmubfh8wh6h678nfal4w.pdf"
+    ],
+    "note": "Texville, «Дуб Сливовый 844» — совпадение по названию. страна производства на странице товара ivc.ru не указана; текста описания на странице нет"
+  },
+  {
+    "excel": "ТЕКСВИЛЬ | Седая ночь",
+    "found": true,
+    "pageUrl": "https://ivc.ru/floors/dub_sedaya_noch/",
+    "name": "Дуб Седая Ночь 891",
+    "collection": "Texville/Тексвилл",
+    "brand": "IVC Home",
+    "colourCode": "891",
+    "country": null,
+    "description": null,
+    "specs": [
+      {
+        "label": "Общая толщина",
+        "value": "3.70 мм"
+      },
+      {
+        "label": "Защитный слой",
+        "value": "0.50 мм"
+      },
+      {
+        "label": "Основа",
+        "value": "Дублированная"
+      },
+      {
+        "label": "Класс нагрузки",
+        "value": "23-33"
+      },
+      {
+        "label": "Повторяемость рисунка",
+        "value": "120х100 см"
+      },
+      {
+        "label": "Доступный формат 250 см",
+        "value": "V6960.499T891P250"
+      },
+      {
+        "label": "Доступный формат 300 см",
+        "value": "V6960.499T891P300"
+      },
+      {
+        "label": "Доступный формат 350 см",
+        "value": "V6960.499T891P350"
+      },
+      {
+        "label": "Доступный формат 400 см",
+        "value": "V6960.499T891P400"
+      },
+      {
+        "label": "Пожарная опасность",
+        "value": "КМ5"
+      },
+      {
+        "label": "Эмиссия ЛОС",
+        "value": "Очень низкая эмиссия ЛОС"
+      },
+      {
+        "label": "Сопротивление скольжению, R",
+        "value": "R10"
+      },
+      {
+        "label": "Остаточная деформация",
+        "value": "≤0.80 мм"
+      },
+      {
+        "label": "Теплопроводность",
+        "value": "0.25 Вт/мК"
+      },
+      {
+        "label": "Теплоизоляция",
+        "value": "0.016 м²K/Вт"
+      },
+      {
+        "label": "Срок службы бытовой, лет",
+        "value": "15"
+      }
+    ],
+    "images": [
+      "https://ivc.ru/upload/iblock/b8e/3xbv0zqfah53znwyicus90wsqss08f12.png",
+      "https://ivc.ru/upload/iblock/07c/dgvi9rtcb2nby3fjafcxvqybmddlsppk.jpg"
+    ],
+    "pdf": [
+      "https://ivc.ru/upload/iblock/ffd/qgrp7fh9z4ctqmubfh8wh6h678nfal4w.pdf"
+    ],
+    "note": "Texville, «Дуб Седая Ночь 891» — совпадение по названию. страна производства на странице товара ivc.ru не указана; текста описания на странице нет"
+  }
+]
