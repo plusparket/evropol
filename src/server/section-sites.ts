@@ -42,7 +42,10 @@ type SeedSite = { layout?: string; address?: string; heading?: string; summary?:
  * (см. upgradeCatalog). categories — группы и категории товаров (вид главной 'groups').
  */
 type SeedCatalog = {
-  section: string; version?: number; site?: SeedSite; hideBrands?: boolean; brands?: SeedBrand[]; categories?: SeedCategory[]; products: SeedProduct[];
+  section: string; version?: number; site?: SeedSite;
+  /** Исправления в текстах уже работающего сайта (заголовок, описания): «старый текст» → «новый», если их не меняли в админке */
+  siteFixes?: Record<string, string>;
+  hideBrands?: boolean; brands?: SeedBrand[]; categories?: SeedCategory[]; products: SeedProduct[];
 };
 
 /** Адрес сайта раздела по адресу главного сайта: localhost → vinyl.localhost, europroject.kg → vinyl.europroject.kg */
@@ -124,6 +127,12 @@ async function upgradeCatalog(sectionId: number, slug: string): Promise<{ added:
   return sql.begin(async (tx) => {
     // Вид главной из файла ставим, только если в админке его не выбирали (пустой — вид по умолчанию)
     if (seed.site?.layout) await tx`UPDATE sections SET site_layout = ${seed.site.layout}, updated_at = now() WHERE id = ${sectionId} AND site_layout = ''`;
+    for (const [from, to] of Object.entries(seed.siteFixes ?? {})) {
+      for (const col of ['summary', 'description', 'heading'] as const) {
+        await tx`UPDATE sections SET ${tx(col)} = replace(${tx(col)}, ${from}, ${to}), updated_at = now()
+          WHERE id = ${sectionId} AND strpos(${tx(col)}, ${from}) > 0 AND strpos(${tx(col)}, ${to}) = 0`;
+      }
+    }
     const added = await addSeedProducts(tx, sectionId, seed);
     let inStock = 0;
     for (const p of seed.products) {
