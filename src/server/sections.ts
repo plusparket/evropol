@@ -33,14 +33,14 @@ export const DEFAULT_SITE_COLOR = '#006338';
 
 /** Адрес без порта и в нижнем регистре: так он хранится в site_host */
 export const normalizeHost = (host: string) => host.trim().toLowerCase().replace(/^https?:\/\//, '').replace(/[:/].*$/, '');
-/** Домен главного сайта из SITE_URL без www (europroject.kg); пусто, пока сайт работает на компьютере (localhost) */
-function mainDomain(): string {
+/** Домен главного сайта из SITE_URL без www (evropol.kg); пусто, пока сайт работает на компьютере (localhost) */
+export function mainDomain(): string {
   const h = normalizeHost(process.env.SITE_URL || '').replace(/^www\./, '');
   return h.includes('.') && !/(^|\.)localhost$/.test(h) ? h : '';
 }
 /**
  * Адрес сайта раздела для посетителей и Google. Если на сервере у раздела остался адрес с компьютера
- * (vinyl.localhost), он становится поддоменом главного сайта: vinyl.europroject.kg. Так в canonical, sitemap.xml
+ * (vinyl.localhost), он становится поддоменом главного сайта: vinyl.evropol.kg. Так в canonical, sitemap.xml
  * и ссылках не окажется localhost. Свой домен из админки (например, vinyl.kg) не меняется.
  */
 export function publicHost(host: string): string {
@@ -75,7 +75,7 @@ export async function getSectionBySlug(slug: string): Promise<Section | undefine
 export async function getSectionByHost(host: string): Promise<Section | undefined> {
   const h = normalizeHost(host);
   if (!h || !h.includes('.')) return undefined;
-  // vinyl.europroject.kg находит и раздел, у которого в базе ещё адрес с компьютера vinyl.localhost (см. publicHost)
+  // vinyl.evropol.kg находит и раздел, у которого в базе ещё адрес с компьютера vinyl.localhost (см. publicHost)
   const d = mainDomain();
   const hosts = d && h.endsWith(`.${d}`) ? [h, h.slice(0, -d.length) + 'localhost'] : [h];
   const [s] = await sql<Section[]>`

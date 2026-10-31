@@ -6,6 +6,8 @@ import type { ProductItem } from './products.ts';
 import { pluralRu, plainText } from './util.ts';
 
 export const CITY = 'Бишкек';
+/** Названия компании: магазин «ЕвроПол» (логотип) и прежнее «Европроект» (europroject.kg) */
+const COMPANY_NAMES = ['ЕвроПол', 'Европроект'];
 /** Адрес без «г. Бишкек,» в начале — для streetAddress в разметке Google (город указан отдельно). */
 export const streetOnly = (a: string) => a.replace(/^г\.\s*Бишкек,\s*/i, '');
 
@@ -139,6 +141,8 @@ export function organizationJsonLd(s: Settings, base: string, image?: string) {
         '@type': 'Organization',
         '@id': orgId,
         name: s.site_name,
+        // Магазин ЕвроПол компании «Европроект»: Google находит сайт по обоим названиям
+        alternateName: COMPANY_NAMES.filter((n) => n !== s.site_name),
         url: `${base}/`,
         logo: `${base}/apple-touch-icon.png`,
         email: s.email || undefined,

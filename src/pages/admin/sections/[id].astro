@@ -117,7 +117,7 @@ const title = isNew ? 'Новый раздел' : form.name;
         <div class="field">
           <label for="slug">Адрес страницы раздела *</label>
           <input type="text" id="slug" name="slug" value={form.slug} required data-slug-from="name" pattern="[a-z0-9][a-z0-9_\-]*" />
-          <div class="hint">Например <code>vinyl</code> → europroject.kg/vinyl. Меняйте осторожно: старые ссылки перестанут работать.</div>
+          <div class="hint">Например <code>vinyl</code> → evropol.kg/vinyl. Меняйте осторожно: старые ссылки перестанут работать.</div>
         </div>
         <div class="field">
           <label for="heading">Заголовок на странице раздела</label>
@@ -151,7 +151,7 @@ const title = isNew ? 'Новый раздел' : form.name;
           <label for="site_host">Адрес сайта</label>
           <input type="text" id="site_host" name="site_host" value={form.siteHost} placeholder={defaultSiteHost(form.slug || 'razdel')} />
           <div class="hint">На компьютере: <code>{form.slug || 'razdel'}.localhost</code>. На сервере — свой домен или поддомен, например
-            <code>{form.slug || 'razdel'}.europroject.kg</code> (его нужно добавить и в настройки сервера, docs/deployment.md).</div>
+            <code>{form.slug || 'razdel'}.evropol.kg</code> (его нужно добавить и в настройки сервера, docs/deployment.md).</div>
         </div>
         <div class="field">
           <label for="site_color">Цвет сайта</label>
