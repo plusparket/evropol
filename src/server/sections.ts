@@ -31,15 +31,31 @@ export const linkLabel = (s: Pick<Section, 'linkLabel'>) => s.linkLabel || 'Пе
 /** Зелёный логотипа ЕвроПол — цвет сайта раздела, если в админке свой не задан */
 export const DEFAULT_SITE_COLOR = '#006338';
 
+/** Адрес без порта и в нижнем регистре: так он хранится в site_host */
+export const normalizeHost = (host: string) => host.trim().toLowerCase().replace(/^https?:\/\//, '').replace(/[:/].*$/, '');
+/** Домен главного сайта из SITE_URL без www (europroject.kg); пусто, пока сайт работает на компьютере (localhost) */
+function mainDomain(): string {
+  const h = normalizeHost(process.env.SITE_URL || '').replace(/^www\./, '');
+  return h.includes('.') && !/(^|\.)localhost$/.test(h) ? h : '';
+}
+/**
+ * Адрес сайта раздела для посетителей и Google. Если на сервере у раздела остался адрес с компьютера
+ * (vinyl.localhost), он становится поддоменом главного сайта: vinyl.europroject.kg. Так в canonical, sitemap.xml
+ * и ссылках не окажется localhost. Свой домен из админки (например, vinyl.kg) не меняется.
+ */
+export function publicHost(host: string): string {
+  const d = mainDomain();
+  return d && /\.localhost$/i.test(host) ? host.replace(/\.localhost$/i, `.${d}`) : host;
+}
 /** Адрес сайта раздела: http для *.localhost (компьютер владельца), https для настоящих доменов */
-export const siteUrl = (s: Pick<Section, 'siteHost'>) =>
-  s.siteHost ? `${/(^|\.)localhost$/i.test(s.siteHost) ? 'http' : 'https'}://${s.siteHost}` : '';
+export const siteUrl = (s: Pick<Section, 'siteHost'>) => {
+  const host = s.siteHost ? publicHost(s.siteHost) : '';
+  return host ? `${/(^|\.)localhost$/i.test(host) ? 'http' : 'https'}://${host}` : '';
+};
 /** Куда ведёт раздел: на свой сайт, иначе на ссылку из админки */
 export const sectionLink = (s: Pick<Section, 'siteHost' | 'link'>) => siteUrl(s) || s.link;
 /** Пункт меню и плитка раздела на главном сайте: сразу на сайт раздела, если он есть, иначе на страницу раздела */
 export const sectionHref = (s: Pick<Section, 'siteHost' | 'slug' | 'link'>) => siteUrl(s) || s.link || sectionUrl(s);
-/** Адрес без порта и в нижнем регистре: так он хранится в site_host */
-export const normalizeHost = (host: string) => host.trim().toLowerCase().replace(/^https?:\/\//, '').replace(/[:/].*$/, '');
 
 /** Ссылка ведёт на другой сайт — открываем в новой вкладке */
 export const isExternal = (url: string) => /^https?:\/\//i.test(url);
@@ -59,7 +75,12 @@ export async function getSectionBySlug(slug: string): Promise<Section | undefine
 export async function getSectionByHost(host: string): Promise<Section | undefined> {
   const h = normalizeHost(host);
   if (!h || !h.includes('.')) return undefined;
-  const [s] = await sql<Section[]>`SELECT * FROM sections WHERE site_host <> '' AND lower(site_host) = ${h} AND is_published`;
+  // vinyl.europroject.kg находит и раздел, у которого в базе ещё адрес с компьютера vinyl.localhost (см. publicHost)
+  const d = mainDomain();
+  const hosts = d && h.endsWith(`.${d}`) ? [h, h.slice(0, -d.length) + 'localhost'] : [h];
+  const [s] = await sql<Section[]>`
+    SELECT * FROM sections WHERE site_host <> '' AND lower(site_host) IN ${sql(hosts)} AND is_published
+    ORDER BY lower(site_host) = ${h} DESC LIMIT 1`;
   return s;
 }
 

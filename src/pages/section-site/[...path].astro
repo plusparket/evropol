@@ -16,8 +16,9 @@ import {
   applyFilters, categoryPaths, getCategoryTree, getProducts, parseFilters, relatedInCategory, relatedProducts, type CategoryNode,
 } from '../../server/products.ts';
 import { getSettings, siteSettings } from '../../server/settings.ts';
-import { breadcrumbJsonLd, withSiteName } from '../../server/seo.ts';
-import { plainText } from '../../server/util.ts';
+import {
+  breadcrumbJsonLd, categoryDescription, namesakeSuffix, productDescription, sectionSiteDescription, sectionSiteJsonLd, siteBase, withSiteName,
+} from '../../server/seo.ts';
 
 const site = Astro.locals.site;
 if (!site) return new Response('Not found', { status: 404 });
@@ -58,8 +59,15 @@ const productCrumbs = withGroups
   : catalogOnly
     ? [{ name: site.name, url: '/' }]
     : [{ name: 'Каталог', url: '/#catalog' }];
-const productTitle = product ? [product.brand, product.name].filter(Boolean).join(' ') : '';
+// «HARO Oak Contura Smoked, TRITTY 100», для одноимённых товаров с отличием: «…, узкая доска Loft»
+const productTitle = product
+  ? [[product.brand, product.name].filter(Boolean).join(' '), product.collection, namesakeSuffix(product, products)].filter(Boolean).join(', ')
+  : '';
 const cat = catPath?.at(-1);
+// Категория с тем же названием, что у другой («Разное» в двух группах): в заголовке и группа
+const catTitle = cat && catPath && catPath.length > 1 && tree.flatMap((g) => [g, ...g.children]).some((c) => c.id !== cat.id && c.name === cat.name)
+  ? `${catPath[0].name}: ${cat.name}`
+  : cat?.name;
 const stockOnly = withGroups && Astro.url.searchParams.get('stock') === '1';
 ---
 
@@ -68,8 +76,10 @@ const stockOnly = withGroups && Astro.url.searchParams.get('stock') === '1';
     <SectionSiteLayout
       site={site}
       title={site.seoTitle || withSiteName(`${heading} в Бишкеке: каталог`, settings)}
-      description={site.seoDescription || site.summary || plainText(site.description) || undefined}
+      description={sectionSiteDescription(site, products, settings)}
       canonicalPath="/"
+      image={site.image ? `/uploads/${site.image}` : undefined}
+      jsonLd={sectionSiteJsonLd(site, settings, base, siteBase('http://localhost'), site.image ? `${base}/uploads/${site.image}` : undefined)}
       noindex={Astro.url.searchParams.has('f') || stockOnly}
     >
       {withGroups ? (
@@ -83,8 +93,8 @@ const stockOnly = withGroups && Astro.url.searchParams.get('stock') === '1';
   ) : product ? (
     <SectionSiteLayout
       site={site}
-      title={product.seoTitle || withSiteName(`${productTitle}${product.collection ? `, ${product.collection}` : ''} в Бишкеке`, settings)}
-      description={product.seoDescription || plainText(product.description, 250) || undefined}
+      title={product.seoTitle || withSiteName(`${productTitle} в Бишкеке`, settings)}
+      description={productDescription(product, settings)}
       canonicalPath={`/${product.slug}`}
       image={product.images[0] ? `/uploads/${product.images[0]}` : undefined}
       jsonLd={breadcrumbJsonLd(base, [...productCrumbs, { name: product.name, url: `/${product.slug}` }])}
@@ -94,8 +104,8 @@ const stockOnly = withGroups && Astro.url.searchParams.get('stock') === '1';
   ) : catPath && cat ? (
     <SectionSiteLayout
       site={site}
-      title={withSiteName(`${cat.name}: ${heading} в Бишкеке`, settings)}
-      description={cat.description || undefined}
+      title={withSiteName(`${catTitle}: ${heading} в Бишкеке`, settings)}
+      description={categoryDescription(cat.name, cat.description, cat.productIds.length, settings)}
       canonicalPath={`/${cat.slug}`}
       noindex={stockOnly}
       jsonLd={breadcrumbJsonLd(base, [{ name: site.name, url: '/' }, ...catPath.map((c) => ({ name: c.name, url: `/${c.slug}` }))])}

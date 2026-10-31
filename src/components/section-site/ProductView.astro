@@ -23,6 +23,8 @@ const waNumber = settings.panel_whatsapp.replace(/\D/g, '');
 const waText = `Здравствуйте! Интересует ${[p.brand, p.collection, p.name].filter(Boolean).join(' ')}${p.sku ? `, артикул ${p.sku}` : ''}.`;
 const waHref = `https://wa.me/${waNumber}?text=${encodeURIComponent(waText)}`;
 const area = packArea(p);
+// Подпись фото для Google Картинок: бренд, коллекция и название, как ищут покупатели
+const alt = [p.brand, p.collection, p.name].filter(Boolean).join(' ');
 ---
 
 <div class="pin ss-product">
@@ -34,11 +36,11 @@ const area = packArea(p);
         p.images.length > 0 ? (
           <Fragment>
             <a class="ss-gallery-main" href={uploadUrl(p.images[0])} data-lightbox>
-              <img src={uploadUrl(p.images[0])} alt={p.name} width="1600" height="1200" fetchpriority="high" />
+              <img src={uploadUrl(p.images[0])} alt={alt} width="1600" height="1200" fetchpriority="high" />
             </a>
             {p.images.slice(1).map((img) => (
               <a class="ss-gallery-thumb" href={uploadUrl(img)} data-lightbox>
-                <img src={uploadUrl(productThumb(img))} alt={`${p.name}: в интерьере`} width="600" height="400" loading="lazy" />
+                <img src={uploadUrl(productThumb(img))} alt={`${alt}: в интерьере`} width="600" height="400" loading="lazy" />
               </a>
             ))}
           </Fragment>

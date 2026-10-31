@@ -16,7 +16,7 @@ const sub = [showBrand && p.brand, p.collection].filter(Boolean).join(' · ');
 <article class="cat-card">
   <a class="cat-card-img" href={`/${p.slug}`}>
     {p.images[0] ? (
-      <img src={uploadUrl(productThumb(p.images[0]))} alt={p.name} width="600" height="600" loading="lazy" />
+      <img src={uploadUrl(productThumb(p.images[0]))} alt={[p.brand, p.name].filter(Boolean).join(' ')} width="600" height="600" loading="lazy" />
     ) : (
       <span class="pcard2-noimg" />
     )}

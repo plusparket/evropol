@@ -73,3 +73,10 @@ FORBO_2026.xls (столбец «код»).
    (формат как у `laminate.json`), добавить раздел в `SITES` (`src/server/section-sites.ts`) и перезапустить приложение.
 3. На компьютере адреса `*.localhost` работают сразу. На сервере: добавить адрес в `SECTION_SITES_ADDRESS` в `.env`,
    DNS-запись на сервер и выполнить `docker compose up -d`.
+
+## Адреса на сервере и Google
+
+Когда `SITE_URL` в `.env` — настоящий домен (`https://europroject.kg`), адрес раздела `vinyl.localhost` сам
+становится `vinyl.europroject.kg`: в canonical, `sitemap.xml`, `robots.txt`, ссылках и llms-файлах
+(`publicHost` в `src/server/sections.ts`), и по этому адресу сайт раздела открывается. Свой домен из админки не
+меняется. Страница раздела на главном сайте (`/vinyl`) переадресует на сайт раздела (301). Подробнее — [seo.md](seo.md).

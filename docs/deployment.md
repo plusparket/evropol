@@ -30,6 +30,9 @@ docker compose up -d --build
 - свои `POSTGRES_PASSWORD` и `ADMIN_PASSWORD`. Пароль базы задаётся один раз: база создаётся с ним при первом запуске;
 - `INSTAGRAM_TOKEN` — по желанию, см. [news-instagram.md](news-instagram.md).
 
+Адреса разделов `*.localhost` из базы с компьютера на сервере сами становятся поддоменами `SITE_URL`
+(`vinyl.europroject.kg`). После запуска — шаги в Google по [seo.md](seo.md): Search Console, карты сайтов, Analytics.
+
 ## Обновление
 
 ```bash

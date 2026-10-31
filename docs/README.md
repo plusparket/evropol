@@ -6,6 +6,7 @@
 | [development.md](development.md) | Локальный запуск в Docker, режим разработки, полезные команды |
 | [deployment.md](deployment.md) | Установка на сервер, домен и HTTPS, обновление, резервные копии |
 | [section-sites.md](section-sites.md) | Сайты разделов с каталогом товаров: как устроены, как включить новый |
+| [seo.md](seo.md) | Поиск Google: что сделано в коде, что сделать в день запуска (домены, Search Console, Analytics) |
 | [admin-guide.md](admin-guide.md) | Руководство для редактора: разделы, бренды, главная, страницы, новости, меню, настройки |
 | [database.md](database.md) | Таблицы и поля базы данных, миграции |
 | [legacy-site.md](legacy-site.md) | Старый сайт на PHP: что перенесено, старые адреса и переадресации |

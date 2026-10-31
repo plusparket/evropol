@@ -1,6 +1,9 @@
 // Поисковая оптимизация: заголовки и описания страниц по умолчанию, разметка schema.org (JSON-LD).
 // Если в админке у раздела или страницы заполнены «SEO-заголовок» / «SEO-описание» — берутся они.
 import type { Settings } from './settings.ts';
+import type { Section } from './sections.ts';
+import type { ProductItem } from './products.ts';
+import { pluralRu, plainText } from './util.ts';
 
 export const CITY = 'Бишкек';
 /** Адрес без «г. Бишкек,» в начале — для streetAddress в разметке Google (город указан отдельно). */
@@ -12,22 +15,64 @@ export const siteBase = (fallbackOrigin: string) => (process.env.SITE_URL || fal
 /** «Винил» → «Винил | Европроект» */
 export const withSiteName = (title: string, s: Settings) => (title.includes(s.site_name) ? title : `${title} | ${s.site_name}`);
 
-/** Обрезка по границе слова для meta description. */
-function clip(text: string, max = 250): string {
+/**
+ * Обрезка по границе слова для meta description. Google показывает в выдаче около 160 знаков,
+ * поэтому главное — в начале, контакты — в конце, если помещаются.
+ */
+export function clip(text: string, max = 160): string {
   const t = text.replace(/\s+/g, ' ').trim();
   if (t.length <= max) return t;
   const cut = t.slice(0, max - 1);
   return cut.slice(0, cut.lastIndexOf(' ') > max * 0.6 ? cut.lastIndexOf(' ') : cut.length).replace(/[\s,.;:—-]+$/, '') + '…';
 }
 
-const contactsLine = (s: Settings) => `Офис: ${s.address}. Тел. ${s.phone_main}.`;
 
 export function sectionTitle(heading: string, s: Settings): string {
   return withSiteName(`${heading} в Бишкеке`, s);
 }
 
 export function sectionDescription(heading: string, s: Settings): string {
-  return clip(`${heading} в Бишкеке от компании «${s.site_name}»: коллекции европейских производителей, образцы, консультация и расчёт. ${contactsLine(s)}`);
+  return withTail(`${heading} в Бишкеке от компании «${s.site_name}»: коллекции европейских производителей, образцы, консультация и расчёт.`, `Тел. ${s.phone_main}.`);
+}
+
+// --- Сайты разделов: описания для выдачи Google ---------------------------------------------
+
+/** Описание + хвост с городом или телефоном: описание укорачивается, чтобы хвост всегда поместился в 160 знаков */
+function withTail(text: string, tail: string, max = 160): string {
+  const room = max - tail.length - 1;
+  // Сначала целые предложения: «…» посреди фразы в выдаче выглядит хуже, чем короткое описание
+  let t = '';
+  for (const sentence of text.replace(/\s+/g, ' ').trim().match(/[^.!?…]+[.!?…]*\s*/g) ?? []) {
+    if ((t + sentence).trim().length > room) break;
+    t += sentence;
+  }
+  t = t.trim().length >= room * 0.5 ? t.trim() : clip(text, room - 1);
+  if (!t) return tail;
+  return t + (/[.!?…]$/.test(t) ? ' ' : '. ') + tail;
+}
+
+/** Главная сайта раздела: краткое описание, число товаров и наличие, город и телефон */
+export function sectionSiteDescription(site: Section, products: ProductItem[], s: Settings): string {
+  if (site.seoDescription) return site.seoDescription;
+  const inStock = products.filter((p) => p.inStock).length;
+  const count = products.length
+    ? `${products.length} ${pluralRu(products.length, ['позиция', 'позиции', 'позиций'])} в каталоге` + (inStock ? `, ${inStock} в наличии` : '') + '.'
+    : '';
+  const lead = site.summary || plainText(site.description, 400);
+  return withTail([lead, count].filter(Boolean).join(lead && !/[.!?…]$/.test(lead) ? '. ' : ' '), `Бишкек, тел. ${s.phone_main}.`);
+}
+
+/** Группа или категория товаров (строительная химия): её описание, число товаров, город */
+export function categoryDescription(name: string, description: string, count: number, s: Settings): string {
+  const lead = description || `${name}: ${count} ${pluralRu(count, ['товар', 'товара', 'товаров'])} в каталоге.`;
+  return withTail(lead, `Бишкек, тел. ${s.phone_main}.`);
+}
+
+/** Страница товара: начало описания, «В наличии в Бишкеке» или телефон */
+export function productDescription(p: ProductItem, s: Settings): string {
+  if (p.seoDescription) return p.seoDescription;
+  const lead = plainText(p.description, 400) || [p.brand, p.collection, p.name].filter(Boolean).join(' ');
+  return withTail(lead, p.inStock ? 'В наличии в Бишкеке.' : `Бишкек, тел. ${s.phone_main}.`);
 }
 
 // --- Разметка schema.org ----------------------------------------------------------------
@@ -53,6 +98,9 @@ export function parseOpeningHours(text: string) {
   return specs;
 }
 
+/** Пустой список в разметку не пишем */
+const orUndef = <T,>(list: T[]) => (list.length ? list : undefined);
+
 const e164 = (phone: string) => {
   const digits = phone.replace(/\D/g, '');
   return digits ? `+${digits}` : undefined;
@@ -77,7 +125,7 @@ export function organizationJsonLd(s: Settings, base: string, image?: string) {
     email: s.email || undefined,
     address: { '@type': 'PostalAddress', streetAddress: streetOnly(address), addressLocality: CITY, addressCountry: 'KG' },
     geo: geo(coords),
-    openingHoursSpecification: parseOpeningHours(hours),
+    openingHoursSpecification: orUndef(parseOpeningHours(hours)),
     parentOrganization: { '@id': orgId },
   });
   const stores = [store('office', s.site_name, s.address, s.phone_main, s.hours_schema, s.geo)];
@@ -115,4 +163,48 @@ export function breadcrumbJsonLd(base: string, items: { name: string; url: strin
       item: `${base}${it.url}`,
     })),
   };
+}
+
+/**
+ * Главная сайта раздела: магазин раздела (адрес, телефон, часы, координаты) и сам сайт.
+ * Магазин связан с компанией на главном сайте (parentOrganization), чтобы Google видел одну компанию.
+ */
+export function sectionSiteJsonLd(site: Section, s: Settings, base: string, mainBase: string, image?: string) {
+  const heading = site.heading || site.name;
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Store',
+        '@id': `${base}/#store`,
+        name: `${s.site_name}: ${site.name}`,
+        description: site.summary || undefined,
+        url: `${base}/`,
+        image: image ?? `${mainBase}/img/og-evropol.jpg`,
+        telephone: e164(s.phone_main),
+        email: s.email || undefined,
+        address: { '@type': 'PostalAddress', streetAddress: streetOnly(s.address), addressLocality: CITY, addressCountry: 'KG' },
+        geo: geo(s.geo),
+        openingHoursSpecification: orUndef(parseOpeningHours(s.hours_schema)),
+        areaServed: { '@type': 'Country', name: 'Кыргызстан' },
+        parentOrganization: { '@type': 'Organization', '@id': `${mainBase}/#organization`, name: s.site_name, url: `${mainBase}/` },
+      },
+      { '@type': 'WebSite', '@id': `${base}/#website`, name: `${heading} · ${s.site_name}`, url: `${base}/`, inLanguage: 'ru', publisher: { '@id': `${base}/#store` } },
+    ],
+  };
+}
+
+/**
+ * Чем товар отличается от товаров с тем же брендом, названием и коллекцией (один декор в двух форматах):
+ * первая характеристика, которой у них нет, иначе артикул. Пусто — товар с таким названием один.
+ * Добавляется в заголовок страницы: у разных страниц в Google должны быть разные заголовки.
+ */
+export function namesakeSuffix(p: ProductItem, all: ProductItem[]): string {
+  const key = (x: ProductItem) => [x.brand, x.name, x.collection].join('|').toLowerCase();
+  const twins = all.filter((o) => o.id !== p.id && key(o) === key(p));
+  if (!twins.length) return '';
+  const own = [...p.attributes, ...p.specs];
+  const diff = own.find((a) => a.value && twins.every((o) => ![...o.attributes, ...o.specs].some((b) => b.label === a.label && b.value === a.value)));
+  if (diff) return diff.value.charAt(0).toLowerCase() + diff.value.slice(1);
+  return p.sku ? `арт. ${p.sku}` : '';
 }

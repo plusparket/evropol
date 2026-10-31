@@ -15,7 +15,7 @@ export const SETTINGS_SCHEMA = [
   { group: 'Контакты: офис', key: 'work_hours', label: 'Режим работы (пусто — не показывается)', default: '' },
   { group: 'Контакты: офис', key: 'email', label: 'Email', default: 'info@bino.kg' },
   { group: 'Контакты: офис', key: 'hours_schema', label: 'Часы работы для Google (Mo-Sa 09:00-17:00; дни: Mo Tu We Th Fr Sa Su)', default: '' },
-  { group: 'Контакты: офис', key: 'geo', label: 'Координаты на карте для Google (широта, долгота)', default: '' },
+  { group: 'Контакты: офис', key: 'geo', label: 'Координаты на карте для Google (широта, долгота)', default: '42.8597994, 74.6189611' },
 
   { group: 'Контакты: второй адрес', key: 'name_second', label: 'Название (например «Склад» или «Магазин»)', default: '' },
   { group: 'Контакты: второй адрес', key: 'phone_second', label: 'Телефон (если телефон и адрес пустые — второй адрес не показывается)', default: '' },
@@ -58,7 +58,9 @@ export async function getSettings(): Promise<Settings> {
  */
 export function siteSettings(settings: Settings, site: { siteAddress: string }): Settings {
   if (!site.siteAddress) return settings;
-  return { ...settings, address: site.siteAddress, geo: '', name_second: '', phone_second: '', address_second: '', work_hours_second: '', geo_second: '' };
+  // Адрес раздела совпадает с адресом офиса (линолеум и офис на Матросова 6/1): координаты офиса подходят
+  const geo = site.siteAddress.trim() === settings.address.trim() ? settings.geo : '';
+  return { ...settings, address: site.siteAddress, geo, name_second: '', phone_second: '', address_second: '', work_hours_second: '', geo_second: '' };
 }
 
 export async function saveSettings(values: Partial<Settings>): Promise<void> {

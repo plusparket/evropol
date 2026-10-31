@@ -20,7 +20,7 @@ const sub = [p.brand, p.collection].filter(Boolean).join(' · ');
         {p.isNew && <span class="ss-badge">Новинка</span>}
       </span>
     )}
-    {img ? <img src={uploadUrl(productThumb(img))} alt={p.name} width="600" height="450" loading="lazy" /> : <span class="pcard2-noimg" />}
+    {img ? <img src={uploadUrl(productThumb(img))} alt={[p.brand, p.name].filter(Boolean).join(' ')} width="600" height="450" loading="lazy" /> : <span class="pcard2-noimg" />}
   </span>
   <span class="pcard2-body">
     {sub && <span class="pcard2-sub">{sub}</span>}
