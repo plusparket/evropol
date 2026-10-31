@@ -130,9 +130,10 @@ export async function buildLlmsTxt(origin: string): Promise<string> {
   out.push('## Разделы', '');
   for (const s of d.sections) {
     const brands = brandsOf(d, s).map((b) => b.name).join(', ');
+    // У раздела со своим сайтом страница на главном сайте переадресует туда: ссылка сразу на сайт раздела
     const link = sectionLink(s);
-    const site = link ? ` · ${linkLabel(s)}: ${abs(d, link)}` : '';
-    out.push(`- [${s.heading || s.name}](${d.base}/${s.slug})${brands ? `: ${brands}` : ''}${site}`);
+    const site = link && !s.siteHost ? ` · ${linkLabel(s)}: ${abs(d, link)}` : '';
+    out.push(`- [${s.heading || s.name}](${s.siteHost ? siteUrl(s) : `${d.base}/${s.slug}`})${brands ? `: ${brands}` : ''}${site}`);
   }
   for (const b of looseBrands(d)) out.push(`- ${b.name}${b.link ? `: ${abs(d, b.link)}` : ''}`);
   out.push('');
@@ -165,8 +166,8 @@ export async function buildLlmsFullTxt(origin: string): Promise<string> {
 
   out.push('## Разделы', '');
   for (const s of d.sections) {
-    out.push(`### ${s.heading || s.name}`, '', `Адрес: ${d.base}/${s.slug}`);
-    if (sectionLink(s)) out.push(`${linkLabel(s)}: ${abs(d, sectionLink(s))}`);
+    out.push(`### ${s.heading || s.name}`, '', s.siteHost ? `Сайт раздела: ${siteUrl(s)}` : `Адрес: ${d.base}/${s.slug}`);
+    if (sectionLink(s) && !s.siteHost) out.push(`${linkLabel(s)}: ${abs(d, sectionLink(s))}`);
     if (s.description) out.push('', md(s.description));
     for (const b of brandsOf(d, s)) {
       out.push('', `**${b.name}**${b.link ? ` (коллекции: ${abs(d, b.link)})` : ''}`);

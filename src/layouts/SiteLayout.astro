@@ -3,6 +3,7 @@ import { ClientRouter } from 'astro:transitions';
 import '../styles/site.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import SearchHead from '../components/SearchHead.astro';
 import { getSettings } from '../server/settings.ts';
 import { getMenus } from '../server/content.ts';
 import { getSections } from '../server/sections.ts';
@@ -27,9 +28,8 @@ const countersOn = settings.counters_enabled === '1';
 const forest = settings.forest_design === '1'; // набор цветов «Лесной» (настройка «Лесной дизайн главного сайта»)
 const siteUrl = siteBase(Astro.url.origin);
 const canonical = siteUrl + (canonicalPath ?? Astro.url.pathname);
-const ogImage = siteUrl + (image || '/img/og-europroject.jpg');
+const ogImage = siteUrl + (image || '/img/og-evropol.jpg');
 const ldBlocks = (Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : []).map((o) => JSON.stringify(o).replace(/</g, '\\u003c'));
-const ga4 = countersOn && /^G-[A-Z0-9]+$/i.test(settings.ga4_id) ? settings.ga4_id : '';
 const copyright = settings.copyright.replaceAll('{year}', String(new Date().getFullYear()));
 const waHref = 'https://wa.me/' + settings.panel_whatsapp.replace(/\D/g, '');
 const secondName = settings.name_second || 'Второй адрес';
@@ -60,24 +60,10 @@ const maps = [
     <meta property="og:locale" content="ru_RU" />
     <meta property="og:site_name" content={settings.site_name} />
     <meta name="twitter:card" content="summary_large_image" />
-    {settings.google_site_verification && <meta name="google-site-verification" content={settings.google_site_verification} />}
-    {settings.yandex_verification && <meta name="yandex-verification" content={settings.yandex_verification} />}
     <meta name="theme-color" content={forest ? '#006338' : '#011e46'} />
     {ldBlocks.map((json) => <script type="application/ld+json" set:html={json} />)}
     <ClientRouter fallback="swap" />
-    {
-      ga4 && (
-        <Fragment>
-          <script async src={`https://www.googletagmanager.com/gtag/js?id=${ga4}`} />
-          <script is:inline define:vars={{ ga4 }}>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
-            gtag('config', ga4);
-          </script>
-        </Fragment>
-      )
-    }
+    <SearchHead settings={settings} />
     {countersOn && settings.head_code && <Fragment set:html={settings.head_code} />}
   </head>
   <body>

@@ -6,6 +6,7 @@ import '../styles/site.css';
 import '../styles/section-site.css';
 import SiteHeader from '../components/section-site/SiteHeader.astro';
 import SiteFooter from '../components/section-site/SiteFooter.astro';
+import SearchHead from '../components/SearchHead.astro';
 import { getSettings, siteSettings } from '../server/settings.ts';
 import { DEFAULT_SITE_COLOR, getSections, siteUrl, type Section } from '../server/sections.ts';
 
@@ -26,7 +27,7 @@ const [allSettings, sections] = await Promise.all([getSettings(), getSections({ 
 const settings = siteSettings(allSettings, site);
 const base = siteUrl(site);
 const canonical = base + (canonicalPath ?? (Astro.url.pathname.replace(/^\/section-site/, '') || '/'));
-const ogImage = base + (image || '/img/og-europroject.jpg');
+const ogImage = base + (image || '/img/og-evropol.jpg');
 const ldBlocks = (Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : []).map((o) => JSON.stringify(o).replace(/</g, '\\u003c'));
 const color = /^#[0-9a-f]{6}$/i.test(site.siteColor) ? site.siteColor : DEFAULT_SITE_COLOR;
 const waHref = 'https://wa.me/' + settings.panel_whatsapp.replace(/\D/g, '');
@@ -54,8 +55,10 @@ const forest = settings.forest_design === '1'; // цвета «Лесной», �
     <meta property="og:image" content={ogImage} />
     <meta property="og:locale" content="ru_RU" />
     <meta property="og:site_name" content={`${site.name} · ${settings.site_name}`} />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="theme-color" content={color} />
     {ldBlocks.map((json) => <script type="application/ld+json" set:html={json} />)}
+    <SearchHead settings={settings} />
     <ClientRouter fallback="swap" />
     {countersOn && settings.head_code && <Fragment set:html={settings.head_code} />}
   </head>

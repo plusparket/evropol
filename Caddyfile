@@ -1,10 +1,10 @@
 # Адрес сайта берётся из переменной SITE_ADDRESS (.env):
 #   http://localhost                     — локально, без HTTPS
-#   europroject.kg, www.europroject.kg     — на сервере; Caddy сам получит и продлит сертификаты Let's Encrypt
+#   evropol.kg, www.evropol.kg     — на сервере; Caddy сам получит и продлит сертификаты Let's Encrypt
 # Сайты разделов — из переменной SECTION_SITES_ADDRESS. Это то же приложение: оно узнаёт раздел по адресу запроса
 # (поле «Адрес сайта» у раздела в админке).
 #   http://*.localhost                   — локально: vinyl.localhost, carpet.localhost …
-#   vinyl.europroject.kg, carpet.europroject.kg — на сервере, каждый адрес через запятую
+#   vinyl.evropol.kg, carpet.evropol.kg — на сервере, каждый адрес через запятую
 
 {$SITE_ADDRESS}, {$SECTION_SITES_ADDRESS:http://*.localhost} {
 	encode zstd gzip
@@ -23,6 +23,14 @@
 		file_server
 	}
 
+	# CSS и JS сборки: в имени файла номер версии, после обновления сайта имя другое — кэш на год.
+	# Повторные страницы открываются быстрее, это учитывает и Google (скорость на телефоне)
+	@build path /_astro/*
+	header @build {
+		Cache-Control "public, max-age=31536000, immutable"
+		defer
+	}
+
 	# Шрифты и картинки оформления (public/) — кэш на 30 дней
 	@static path /fonts/* /img/* /favicon.ico /favicon.svg /favicon-32.png /apple-touch-icon.png
 	header @static {
@@ -38,4 +46,11 @@
 			lb_try_interval 250ms
 		}
 	}
+}
+
+# Старый домен (OLD_SITE_ADDRESS=europroject.kg, www.europroject.kg): любой адрес → тот же путь на новом сайте (301).
+# Google переносит позиции старых страниц на новый адрес; /o-kompanii.html и другие старые страницы дальше
+# переводит таблица «Переадресации» в админке. Без переменной блок слушает только служебный old-site.localhost.
+{$OLD_SITE_ADDRESS:http://old-site.localhost} {
+	redir {$SITE_URL:http://localhost}{uri} permanent
 }

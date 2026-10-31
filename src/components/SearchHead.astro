@@ -1,0 +1,29 @@
+---
+// Общая часть <head> для поисковиков на главном сайте и на сайтах разделов: коды подтверждения
+// Google Search Console и Яндекс.Вебмастера и Google Analytics 4 (админка → «Настройки» → «Поисковики и аналитика»).
+// Один и тот же код GA4 считает посетителей всех сайтов; в отчётах сайты различаются по адресу (hostname).
+import type { Settings } from '../server/settings.ts';
+
+interface Props {
+  settings: Settings;
+}
+const { settings } = Astro.props;
+const countersOn = settings.counters_enabled === '1';
+const ga4 = countersOn && /^G-[A-Z0-9]+$/i.test(settings.ga4_id) ? settings.ga4_id : '';
+---
+
+{settings.google_site_verification && <meta name="google-site-verification" content={settings.google_site_verification} />}
+{settings.yandex_verification && <meta name="yandex-verification" content={settings.yandex_verification} />}
+{
+  ga4 && (
+    <Fragment>
+      <script async src={`https://www.googletagmanager.com/gtag/js?id=${ga4}`} />
+      <script is:inline define:vars={{ ga4 }}>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', ga4);
+      </script>
+    </Fragment>
+  )
+}

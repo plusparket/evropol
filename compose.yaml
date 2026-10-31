@@ -66,6 +66,9 @@ services:
       SITE_ADDRESS: ${SITE_ADDRESS:-http://localhost}
       # Адреса сайтов разделов (vinyl.localhost …), см. Caddyfile
       SECTION_SITES_ADDRESS: ${SECTION_SITES_ADDRESS:-http://*.localhost}
+      # Старый домен: всё переадресуется на SITE_URL (docs/seo.md)
+      OLD_SITE_ADDRESS: ${OLD_SITE_ADDRESS:-http://old-site.localhost}
+      SITE_URL: ${SITE_URL:-http://localhost}
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
       - uploads:/srv/uploads:ro
