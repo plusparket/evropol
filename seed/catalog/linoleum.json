@@ -1,7 +1,7 @@
 {
  "section": "linoleum",
- "version": 2,
- "note": "Линолеум бельгийского (IVC) и российского производства: товары, характеристики и фото с ivc.ru, снимок 2026-10. inStock — позиции с остатком на складе из таблицы владельца R_LIN_IVC 2026.xls, лист «ОКТЯБРЬ» (31 найдена на ivc.ru, 14 из них добавлены в версии 1). Фото скачиваются при запуске (src/server/section-sites.ts). Бренды раздела на сайте скрыты (hideBrands): производитель указан в характеристиках. Версия 2: ещё 29 позиций таблицы, которых нет на ivc.ru (старые коллекции IVC); характеристики и фото с сайтов продавцов.",
+ "version": 3,
+ "note": "Линолеум бельгийского (IVC) и российского производства: товары, характеристики и фото с ivc.ru, снимок 2026-10. inStock — позиции с остатком на складе из таблицы владельца R_LIN_IVC 2026.xls, лист «ОКТЯБРЬ» (31 найдена на ivc.ru, 14 из них добавлены в версии 1). Фото скачиваются при запуске (src/server/section-sites.ts). Бренды раздела на сайте скрыты (hideBrands): производитель указан в характеристиках. Версия 2: ещё 29 позиций таблицы, которых нет на ivc.ru (старые коллекции IVC); характеристики и фото с сайтов продавцов. Версия 3: 18 позиций Beauflor со склада (R_LIN_BFL_2026.xls, лист «ОКТЯБРЬ»), данные и фото с beauflor.com; Elburg 779M/099M и Zaragoza 993D сняты с сайта производителя, взяты у продавцов; Trento на beauflor.com нет, характеристики и фото взяты у Feelings (те же параметры). Safira 974D не найдена.",
  "site": {
   "layout": "catalog",
   "address": "г. Бишкек, ул. Матросова 6/1",
@@ -15929,6 +15929,2450 @@
    "images": [
     "https://linoleum.msk.ru/upload/iblock/cad/cad21c4f35debd06a4118d743ef55d01.jpg",
     "https://linoleum.msk.ru/upload/iblock/89e/89eb92c3ca582f3ed587fc5492d2d705.jpg"
+   ],
+   "sourceUrl": "",
+   "inStock": true
+  },
+  {
+   "brand": "",
+   "name": "Sweet Oak 627M",
+   "slug": "polaris-sweet-oak-627m",
+   "collection": "Polaris",
+   "sku": "",
+   "isNew": false,
+   "attributes": [
+    {
+     "label": "Общая толщина",
+     "value": "3 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,35 мм"
+    },
+    {
+     "label": "Основа",
+     "value": "Вспененный ПВХ"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–32–41"
+    },
+    {
+     "label": "Ширина рулона",
+     "value": "2 / 3 / 4 м"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Тип дизайна",
+     "value": "Дерево"
+    },
+    {
+     "label": "Цвет",
+     "value": "Коричневый"
+    },
+    {
+     "label": "Основа",
+     "value": "Вспененный ПВХ"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–32–41"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "3 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,35 мм"
+    },
+    {
+     "label": "Пожарная опасность",
+     "value": "Bfl-s1"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Производитель",
+     "value": "Бельгия"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Polaris"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "Дерево"
+    },
+    {
+     "label": "Цвет",
+     "value": "Коричневый"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "3 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,35 мм"
+    },
+    {
+     "label": "Основа",
+     "value": "Вспененный ПВХ"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–32–41"
+    },
+    {
+     "label": "Ширина рулона",
+     "value": "2 / 3 / 4 м"
+    },
+    {
+     "label": "Пожарная опасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Вес 1 м²",
+     "value": "1,95 кг"
+    },
+    {
+     "label": "Размер доски",
+     "value": "18,1 × 150 см"
+    },
+    {
+     "label": "Шумоизоляция",
+     "value": "18 дБ"
+    },
+    {
+     "label": "Сопротивление скольжению",
+     "value": "R10"
+    },
+    {
+     "label": "Остаточная деформация",
+     "value": "≤0,20 мм"
+    },
+    {
+     "label": "Эмиссия ЛОС",
+     "value": "A+"
+    },
+    {
+     "label": "Укладка",
+     "value": "до 20 м² без клея"
+    },
+    {
+     "label": "Гарантия",
+     "value": "8 лет в доме, 5 лет в офисе"
+    }
+   ],
+   "description": "<p>Линолеум «Sweet Oak 627M» из коллекции Polaris: рисунок под дерево, доска 18,1 × 150 см.</p>\n<p>Общая толщина 3 мм, защитный слой 0,35 мм, основа из вспененного ПВХ, класс нагрузки 23–32–41. Ширина рулона 2 / 3 / 4 м, пожарная опасность Bfl-s1. Площадь до 20 м² можно стелить без клея. Гарантия 8 лет в доме, 5 лет в офисе. Производство: Бельгия.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak3rxbwt1gbresqo/beaulieu_2000w",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5akayg7hpstqdg8hy/beaulieu_2000w"
+   ],
+   "sourceUrl": "",
+   "inStock": true
+  },
+  {
+   "brand": "",
+   "name": "Sweet Oak 167M",
+   "slug": "polaris-sweet-oak-167m",
+   "collection": "Polaris",
+   "sku": "",
+   "isNew": false,
+   "attributes": [
+    {
+     "label": "Общая толщина",
+     "value": "3 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,35 мм"
+    },
+    {
+     "label": "Основа",
+     "value": "Вспененный ПВХ"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–32–41"
+    },
+    {
+     "label": "Ширина рулона",
+     "value": "2 / 3 / 4 м"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Тип дизайна",
+     "value": "Дерево"
+    },
+    {
+     "label": "Цвет",
+     "value": "Бежевый"
+    },
+    {
+     "label": "Основа",
+     "value": "Вспененный ПВХ"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–32–41"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "3 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,35 мм"
+    },
+    {
+     "label": "Пожарная опасность",
+     "value": "Bfl-s1"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Производитель",
+     "value": "Бельгия"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Polaris"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "Дерево"
+    },
+    {
+     "label": "Цвет",
+     "value": "Бежевый"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "3 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,35 мм"
+    },
+    {
+     "label": "Основа",
+     "value": "Вспененный ПВХ"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–32–41"
+    },
+    {
+     "label": "Ширина рулона",
+     "value": "2 / 3 / 4 м"
+    },
+    {
+     "label": "Пожарная опасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Вес 1 м²",
+     "value": "1,95 кг"
+    },
+    {
+     "label": "Размер доски",
+     "value": "18,1 × 150 см"
+    },
+    {
+     "label": "Шумоизоляция",
+     "value": "18 дБ"
+    },
+    {
+     "label": "Сопротивление скольжению",
+     "value": "R10"
+    },
+    {
+     "label": "Остаточная деформация",
+     "value": "≤0,20 мм"
+    },
+    {
+     "label": "Эмиссия ЛОС",
+     "value": "A+"
+    },
+    {
+     "label": "Укладка",
+     "value": "до 20 м² без клея"
+    },
+    {
+     "label": "Гарантия",
+     "value": "8 лет в доме, 5 лет в офисе"
+    }
+   ],
+   "description": "<p>Линолеум «Sweet Oak 167M» из коллекции Polaris: рисунок под дерево, доска 18,1 × 150 см.</p>\n<p>Общая толщина 3 мм, защитный слой 0,35 мм, основа из вспененного ПВХ, класс нагрузки 23–32–41. Ширина рулона 2 / 3 / 4 м, пожарная опасность Bfl-s1. Площадь до 20 м² можно стелить без клея. Гарантия 8 лет в доме, 5 лет в офисе. Производство: Бельгия.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak3a89tx1hjskb1y/beaulieu_2000w",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak39mabtspkzirpo/beaulieu_2000w"
+   ],
+   "sourceUrl": "",
+   "inStock": true
+  },
+  {
+   "brand": "",
+   "name": "Elburg 779M",
+   "slug": "blacktex-elburg-779m",
+   "collection": "Blacktex",
+   "sku": "",
+   "isNew": false,
+   "attributes": [
+    {
+     "label": "Общая толщина",
+     "value": "2,8 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,4 мм"
+    },
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–32–41"
+    },
+    {
+     "label": "Ширина рулона",
+     "value": "2 / 3 / 4 м"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–32–41"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "2,8 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,4 мм"
+    },
+    {
+     "label": "Пожарная опасность",
+     "value": "Bfl-s1"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Производитель",
+     "value": "Бельгия"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Blacktex"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "2,8 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,4 мм"
+    },
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–32–41"
+    },
+    {
+     "label": "Ширина рулона",
+     "value": "2 / 3 / 4 м"
+    },
+    {
+     "label": "Пожарная опасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Вес 1 м²",
+     "value": "1,95 кг"
+    },
+    {
+     "label": "Шумоизоляция",
+     "value": "15 дБ"
+    },
+    {
+     "label": "Сопротивление скольжению",
+     "value": "R10"
+    },
+    {
+     "label": "Гарантия",
+     "value": "10 лет в доме, 5 лет в офисе"
+    }
+   ],
+   "description": "<p>Линолеум «Elburg 779M» из коллекции Blacktex.</p>\n<p>Общая толщина 2,8 мм, защитный слой 0,4 мм, основа текстильная, класс нагрузки 23–32–41. Ширина рулона 2 / 3 / 4 м, пожарная опасность Bfl-s1. Гарантия 10 лет в доме, 5 лет в офисе. Производство: Бельгия.</p>",
+   "images": [
+    "https://kidderminstercarpets.co.uk/wp-content/uploads/2025/01/elburg-779m.jpg",
+    "https://agormanflooring.ie/wp-content/uploads/2023/07/Elburg-779M.jpg",
+    "https://floors.com.ua/files/resized/products/779m.1800x1800w.jpg"
+   ],
+   "sourceUrl": "",
+   "inStock": true
+  },
+  {
+   "brand": "",
+   "name": "Zinc 996D",
+   "slug": "blacktex-zinc-996d",
+   "collection": "Blacktex",
+   "sku": "",
+   "isNew": false,
+   "attributes": [
+    {
+     "label": "Общая толщина",
+     "value": "2,8 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,4 мм"
+    },
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–32–41"
+    },
+    {
+     "label": "Ширина рулона",
+     "value": "2 / 4 м"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Тип дизайна",
+     "value": "Абстракция"
+    },
+    {
+     "label": "Цвет",
+     "value": "Серый"
+    },
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–32–41"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "2,8 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,4 мм"
+    },
+    {
+     "label": "Пожарная опасность",
+     "value": "Bfl-s1"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Производитель",
+     "value": "Бельгия"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Blacktex"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "Абстракция"
+    },
+    {
+     "label": "Цвет",
+     "value": "Серый"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "2,8 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,4 мм"
+    },
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–32–41"
+    },
+    {
+     "label": "Ширина рулона",
+     "value": "2 / 4 м"
+    },
+    {
+     "label": "Пожарная опасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Вес 1 м²",
+     "value": "1,95 кг"
+    },
+    {
+     "label": "Шумоизоляция",
+     "value": "15 дБ"
+    },
+    {
+     "label": "Сопротивление скольжению",
+     "value": "R10"
+    },
+    {
+     "label": "Остаточная деформация",
+     "value": "≤0,20 мм"
+    },
+    {
+     "label": "Эмиссия ЛОС",
+     "value": "A+"
+    },
+    {
+     "label": "Укладка",
+     "value": "до 35 м² без клея"
+    },
+    {
+     "label": "Гарантия",
+     "value": "10 лет в доме, 5 лет в офисе"
+    }
+   ],
+   "description": "<p>Линолеум «Zinc 996D» из коллекции Blacktex: однотонный рисунок под металл.</p>\n<p>Общая толщина 2,8 мм, защитный слой 0,4 мм, основа текстильная, класс нагрузки 23–32–41. Ширина рулона 2 / 4 м, пожарная опасность Bfl-s1. Площадь до 35 м² можно стелить без клея. Гарантия 10 лет в доме, 5 лет в офисе. Производство: Бельгия.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak58cejw6fz4xu5a/beaulieu_2000w",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5ccf3y8gqpgu1e/beaulieu_2000w"
+   ],
+   "sourceUrl": "",
+   "inStock": true
+  },
+  {
+   "brand": "",
+   "name": "Zaragoza 993D",
+   "slug": "blacktex-zaragoza-993d",
+   "collection": "Blacktex",
+   "sku": "",
+   "isNew": false,
+   "attributes": [
+    {
+     "label": "Общая толщина",
+     "value": "2,8 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,4 мм"
+    },
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–32–41"
+    },
+    {
+     "label": "Ширина рулона",
+     "value": "2 / 3 / 4 м"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Тип дизайна",
+     "value": "Камень"
+    },
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–32–41"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "2,8 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,4 мм"
+    },
+    {
+     "label": "Пожарная опасность",
+     "value": "Bfl-s1"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Производитель",
+     "value": "Бельгия"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Blacktex"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "Камень"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "2,8 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,4 мм"
+    },
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–32–41"
+    },
+    {
+     "label": "Ширина рулона",
+     "value": "2 / 3 / 4 м"
+    },
+    {
+     "label": "Пожарная опасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Вес 1 м²",
+     "value": "1,95 кг"
+    },
+    {
+     "label": "Шумоизоляция",
+     "value": "15 дБ"
+    },
+    {
+     "label": "Сопротивление скольжению",
+     "value": "R10"
+    },
+    {
+     "label": "Гарантия",
+     "value": "10 лет в доме, 5 лет в офисе"
+    }
+   ],
+   "description": "<p>Линолеум «Zaragoza 993D» из коллекции Blacktex: рисунок под камень.</p>\n<p>Общая толщина 2,8 мм, защитный слой 0,4 мм, основа текстильная, класс нагрузки 23–32–41. Ширина рулона 2 / 3 / 4 м, пожарная опасность Bfl-s1. Гарантия 10 лет в доме, 5 лет в офисе. Производство: Бельгия.</p>",
+   "images": [
+    "https://agormanflooring.ie/wp-content/uploads/2023/07/Zaragoza-993D.jpg"
+   ],
+   "sourceUrl": "",
+   "inStock": true
+  },
+  {
+   "brand": "",
+   "name": "Zinc 099M",
+   "slug": "blacktex-zinc-099m",
+   "collection": "Blacktex",
+   "sku": "",
+   "isNew": false,
+   "attributes": [
+    {
+     "label": "Общая толщина",
+     "value": "2,8 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,4 мм"
+    },
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–32–41"
+    },
+    {
+     "label": "Ширина рулона",
+     "value": "2 / 3 / 4 м"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Тип дизайна",
+     "value": "Абстракция"
+    },
+    {
+     "label": "Цвет",
+     "value": "Серый"
+    },
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–32–41"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "2,8 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,4 мм"
+    },
+    {
+     "label": "Пожарная опасность",
+     "value": "Bfl-s1"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Производитель",
+     "value": "Бельгия"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Blacktex"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "Абстракция"
+    },
+    {
+     "label": "Цвет",
+     "value": "Серый"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "2,8 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,4 мм"
+    },
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–32–41"
+    },
+    {
+     "label": "Ширина рулона",
+     "value": "2 / 3 / 4 м"
+    },
+    {
+     "label": "Пожарная опасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Вес 1 м²",
+     "value": "1,95 кг"
+    },
+    {
+     "label": "Шумоизоляция",
+     "value": "15 дБ"
+    },
+    {
+     "label": "Сопротивление скольжению",
+     "value": "R10"
+    },
+    {
+     "label": "Остаточная деформация",
+     "value": "≤0,20 мм"
+    },
+    {
+     "label": "Эмиссия ЛОС",
+     "value": "A+"
+    },
+    {
+     "label": "Укладка",
+     "value": "до 35 м² без клея"
+    },
+    {
+     "label": "Гарантия",
+     "value": "10 лет в доме, 5 лет в офисе"
+    }
+   ],
+   "description": "<p>Линолеум «Zinc 099M» из коллекции Blacktex: однотонный рисунок под металл.</p>\n<p>Общая толщина 2,8 мм, защитный слой 0,4 мм, основа текстильная, класс нагрузки 23–32–41. Ширина рулона 2 / 3 / 4 м, пожарная опасность Bfl-s1. Площадь до 35 м² можно стелить без клея. Гарантия 10 лет в доме, 5 лет в офисе. Производство: Бельгия.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak3nfagy43x1q7sa/beaulieu_2000w",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5akao11syd44rq56o/beaulieu_2000w"
+   ],
+   "sourceUrl": "",
+   "inStock": true
+  },
+  {
+   "brand": "",
+   "name": "Elburg 099M",
+   "slug": "blacktex-elburg-099m",
+   "collection": "Blacktex",
+   "sku": "",
+   "isNew": false,
+   "attributes": [
+    {
+     "label": "Общая толщина",
+     "value": "2,8 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,4 мм"
+    },
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–32–41"
+    },
+    {
+     "label": "Ширина рулона",
+     "value": "2 / 3 / 4 м"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–32–41"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "2,8 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,4 мм"
+    },
+    {
+     "label": "Пожарная опасность",
+     "value": "Bfl-s1"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Производитель",
+     "value": "Бельгия"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Blacktex"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "2,8 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,4 мм"
+    },
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–32–41"
+    },
+    {
+     "label": "Ширина рулона",
+     "value": "2 / 3 / 4 м"
+    },
+    {
+     "label": "Пожарная опасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Вес 1 м²",
+     "value": "1,95 кг"
+    },
+    {
+     "label": "Шумоизоляция",
+     "value": "15 дБ"
+    },
+    {
+     "label": "Сопротивление скольжению",
+     "value": "R10"
+    },
+    {
+     "label": "Гарантия",
+     "value": "10 лет в доме, 5 лет в офисе"
+    }
+   ],
+   "description": "<p>Линолеум «Elburg 099M» из коллекции Blacktex.</p>\n<p>Общая толщина 2,8 мм, защитный слой 0,4 мм, основа текстильная, класс нагрузки 23–32–41. Ширина рулона 2 / 3 / 4 м, пожарная опасность Bfl-s1. Гарантия 10 лет в доме, 5 лет в офисе. Производство: Бельгия.</p>",
+   "images": [
+    "https://kidderminstercarpets.co.uk/wp-content/uploads/2025/01/elburg-099m.jpg",
+    "https://agormanflooring.ie/wp-content/uploads/2023/07/Elburg-099M.jpg"
+   ],
+   "sourceUrl": "",
+   "inStock": true
+  },
+  {
+   "brand": "",
+   "name": "Varenna 166L",
+   "slug": "blacktex-varenna-166l",
+   "collection": "Blacktex",
+   "sku": "",
+   "isNew": false,
+   "attributes": [
+    {
+     "label": "Общая толщина",
+     "value": "2,8 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,4 мм"
+    },
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–32–41"
+    },
+    {
+     "label": "Ширина рулона",
+     "value": "2 / 3 / 4 м"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Тип дизайна",
+     "value": "Камень"
+    },
+    {
+     "label": "Цвет",
+     "value": "Бежевый"
+    },
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–32–41"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "2,8 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,4 мм"
+    },
+    {
+     "label": "Пожарная опасность",
+     "value": "Bfl-s1"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Производитель",
+     "value": "Бельгия"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Blacktex"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "Камень"
+    },
+    {
+     "label": "Цвет",
+     "value": "Бежевый"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "2,8 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,4 мм"
+    },
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–32–41"
+    },
+    {
+     "label": "Ширина рулона",
+     "value": "2 / 3 / 4 м"
+    },
+    {
+     "label": "Пожарная опасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Вес 1 м²",
+     "value": "1,95 кг"
+    },
+    {
+     "label": "Шумоизоляция",
+     "value": "15 дБ"
+    },
+    {
+     "label": "Сопротивление скольжению",
+     "value": "R10"
+    },
+    {
+     "label": "Остаточная деформация",
+     "value": "≤0,20 мм"
+    },
+    {
+     "label": "Эмиссия ЛОС",
+     "value": "A+"
+    },
+    {
+     "label": "Укладка",
+     "value": "до 35 м² без клея"
+    },
+    {
+     "label": "Гарантия",
+     "value": "10 лет в доме, 5 лет в офисе"
+    }
+   ],
+   "description": "<p>Линолеум «Varenna 166L» из коллекции Blacktex: рисунок под камень.</p>\n<p>Общая толщина 2,8 мм, защитный слой 0,4 мм, основа текстильная, класс нагрузки 23–32–41. Ширина рулона 2 / 3 / 4 м, пожарная опасность Bfl-s1. Площадь до 35 м² можно стелить без клея. Гарантия 10 лет в доме, 5 лет в офисе. Производство: Бельгия.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak4a9krhibtiegwo/beaulieu_2000w",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5bwxzru776dqcy/beaulieu_2000w"
+   ],
+   "sourceUrl": "",
+   "inStock": true
+  },
+  {
+   "brand": "",
+   "name": "Varenna 919D",
+   "slug": "blacktex-varenna-919d",
+   "collection": "Blacktex",
+   "sku": "",
+   "isNew": false,
+   "attributes": [
+    {
+     "label": "Общая толщина",
+     "value": "2,8 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,4 мм"
+    },
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–32–41"
+    },
+    {
+     "label": "Ширина рулона",
+     "value": "2 / 3 / 4 м"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Тип дизайна",
+     "value": "Камень"
+    },
+    {
+     "label": "Цвет",
+     "value": "Серый"
+    },
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–32–41"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "2,8 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,4 мм"
+    },
+    {
+     "label": "Пожарная опасность",
+     "value": "Bfl-s1"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Производитель",
+     "value": "Бельгия"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Blacktex"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "Камень"
+    },
+    {
+     "label": "Цвет",
+     "value": "Серый"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "2,8 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,4 мм"
+    },
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–32–41"
+    },
+    {
+     "label": "Ширина рулона",
+     "value": "2 / 3 / 4 м"
+    },
+    {
+     "label": "Пожарная опасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Вес 1 м²",
+     "value": "1,95 кг"
+    },
+    {
+     "label": "Шумоизоляция",
+     "value": "15 дБ"
+    },
+    {
+     "label": "Сопротивление скольжению",
+     "value": "R10"
+    },
+    {
+     "label": "Остаточная деформация",
+     "value": "≤0,20 мм"
+    },
+    {
+     "label": "Эмиссия ЛОС",
+     "value": "A+"
+    },
+    {
+     "label": "Укладка",
+     "value": "до 35 м² без клея"
+    },
+    {
+     "label": "Гарантия",
+     "value": "10 лет в доме, 5 лет в офисе"
+    }
+   ],
+   "description": "<p>Линолеум «Varenna 919D» из коллекции Blacktex: рисунок под камень.</p>\n<p>Общая толщина 2,8 мм, защитный слой 0,4 мм, основа текстильная, класс нагрузки 23–32–41. Ширина рулона 2 / 3 / 4 м, пожарная опасность Bfl-s1. Площадь до 35 м² можно стелить без клея. Гарантия 10 лет в доме, 5 лет в офисе. Производство: Бельгия.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak4kncdskp5jpyco/beaulieu_2000w",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak54876bo9bbgtda/beaulieu_2000w"
+   ],
+   "sourceUrl": "",
+   "inStock": true
+  },
+  {
+   "brand": "",
+   "name": "Crouch Oak 696D",
+   "slug": "blacktex-crouch-oak-696d",
+   "collection": "Blacktex",
+   "sku": "",
+   "isNew": false,
+   "attributes": [
+    {
+     "label": "Общая толщина",
+     "value": "2,8 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,4 мм"
+    },
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–32–41"
+    },
+    {
+     "label": "Ширина рулона",
+     "value": "2 / 3 / 4 м"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Тип дизайна",
+     "value": "Дерево"
+    },
+    {
+     "label": "Цвет",
+     "value": "Коричневый"
+    },
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–32–41"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "2,8 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,4 мм"
+    },
+    {
+     "label": "Пожарная опасность",
+     "value": "Bfl-s1"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Производитель",
+     "value": "Бельгия"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Blacktex"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "Дерево"
+    },
+    {
+     "label": "Цвет",
+     "value": "Коричневый"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "2,8 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,4 мм"
+    },
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–32–41"
+    },
+    {
+     "label": "Ширина рулона",
+     "value": "2 / 3 / 4 м"
+    },
+    {
+     "label": "Пожарная опасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Вес 1 м²",
+     "value": "1,95 кг"
+    },
+    {
+     "label": "Размер доски",
+     "value": "20 × 150 см"
+    },
+    {
+     "label": "Шумоизоляция",
+     "value": "15 дБ"
+    },
+    {
+     "label": "Сопротивление скольжению",
+     "value": "R10"
+    },
+    {
+     "label": "Остаточная деформация",
+     "value": "≤0,20 мм"
+    },
+    {
+     "label": "Эмиссия ЛОС",
+     "value": "A+"
+    },
+    {
+     "label": "Укладка",
+     "value": "до 35 м² без клея"
+    },
+    {
+     "label": "Гарантия",
+     "value": "10 лет в доме, 5 лет в офисе"
+    }
+   ],
+   "description": "<p>Линолеум «Crouch Oak 696D» из коллекции Blacktex: рисунок под дерево, доска 20 × 150 см.</p>\n<p>Общая толщина 2,8 мм, защитный слой 0,4 мм, основа текстильная, класс нагрузки 23–32–41. Ширина рулона 2 / 3 / 4 м, пожарная опасность Bfl-s1. Площадь до 35 м² можно стелить без клея. Гарантия 10 лет в доме, 5 лет в офисе. Производство: Бельгия.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak4k8tkhc637afpa/beaulieu_2000w",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5akabqd7ojecr93wy/beaulieu_2000w"
+   ],
+   "sourceUrl": "",
+   "inStock": true
+  },
+  {
+   "brand": "",
+   "name": "Columbian Oak 636L",
+   "slug": "blacktex-columbian-oak-636l",
+   "collection": "Blacktex",
+   "sku": "",
+   "isNew": false,
+   "attributes": [
+    {
+     "label": "Общая толщина",
+     "value": "2,8 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,4 мм"
+    },
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–32–41"
+    },
+    {
+     "label": "Ширина рулона",
+     "value": "2 / 3 / 4 м"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Тип дизайна",
+     "value": "Дерево"
+    },
+    {
+     "label": "Цвет",
+     "value": "Рыжий"
+    },
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–32–41"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "2,8 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,4 мм"
+    },
+    {
+     "label": "Пожарная опасность",
+     "value": "Bfl-s1"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Производитель",
+     "value": "Бельгия"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Blacktex"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "Дерево"
+    },
+    {
+     "label": "Цвет",
+     "value": "Рыжий"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "2,8 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,4 мм"
+    },
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–32–41"
+    },
+    {
+     "label": "Ширина рулона",
+     "value": "2 / 3 / 4 м"
+    },
+    {
+     "label": "Пожарная опасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Вес 1 м²",
+     "value": "1,95 кг"
+    },
+    {
+     "label": "Размер доски",
+     "value": "20 × 150 см"
+    },
+    {
+     "label": "Шумоизоляция",
+     "value": "15 дБ"
+    },
+    {
+     "label": "Сопротивление скольжению",
+     "value": "R10"
+    },
+    {
+     "label": "Остаточная деформация",
+     "value": "≤0,20 мм"
+    },
+    {
+     "label": "Эмиссия ЛОС",
+     "value": "A+"
+    },
+    {
+     "label": "Укладка",
+     "value": "до 35 м² без клея"
+    },
+    {
+     "label": "Гарантия",
+     "value": "10 лет в доме, 5 лет в офисе"
+    }
+   ],
+   "description": "<p>Линолеум «Columbian Oak 636L» из коллекции Blacktex: рисунок под дерево, доска 20 × 150 см.</p>\n<p>Общая толщина 2,8 мм, защитный слой 0,4 мм, основа текстильная, класс нагрузки 23–32–41. Ширина рулона 2 / 3 / 4 м, пожарная опасность Bfl-s1. Площадь до 35 м² можно стелить без клея. Гарантия 10 лет в доме, 5 лет в офисе. Производство: Бельгия.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak3nogt67awy6hee/beaulieu_2000w",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak56e8sfewxyoi8y/beaulieu_2000w",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5akad9mfmd96xiggo/beaulieu_2000w",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5akah3ebkm18pno1o/beaulieu_2000w"
+   ],
+   "sourceUrl": "",
+   "inStock": true
+  },
+  {
+   "brand": "",
+   "name": "Columbian Oak 692M",
+   "slug": "blacktex-columbian-oak-692m",
+   "collection": "Blacktex",
+   "sku": "",
+   "isNew": false,
+   "attributes": [
+    {
+     "label": "Общая толщина",
+     "value": "2,8 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,4 мм"
+    },
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–32–41"
+    },
+    {
+     "label": "Ширина рулона",
+     "value": "2 / 3 / 4 м"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Тип дизайна",
+     "value": "Дерево"
+    },
+    {
+     "label": "Цвет",
+     "value": "Коричневый"
+    },
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–32–41"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "2,8 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,4 мм"
+    },
+    {
+     "label": "Пожарная опасность",
+     "value": "Bfl-s1"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Производитель",
+     "value": "Бельгия"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Blacktex"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "Дерево"
+    },
+    {
+     "label": "Цвет",
+     "value": "Коричневый"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "2,8 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,4 мм"
+    },
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–32–41"
+    },
+    {
+     "label": "Ширина рулона",
+     "value": "2 / 3 / 4 м"
+    },
+    {
+     "label": "Пожарная опасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Вес 1 м²",
+     "value": "1,95 кг"
+    },
+    {
+     "label": "Размер доски",
+     "value": "20 × 150 см"
+    },
+    {
+     "label": "Шумоизоляция",
+     "value": "15 дБ"
+    },
+    {
+     "label": "Сопротивление скольжению",
+     "value": "R10"
+    },
+    {
+     "label": "Остаточная деформация",
+     "value": "≤0,20 мм"
+    },
+    {
+     "label": "Эмиссия ЛОС",
+     "value": "A+"
+    },
+    {
+     "label": "Укладка",
+     "value": "до 35 м² без клея"
+    },
+    {
+     "label": "Гарантия",
+     "value": "10 лет в доме, 5 лет в офисе"
+    }
+   ],
+   "description": "<p>Линолеум «Columbian Oak 692M» из коллекции Blacktex: рисунок под дерево, доска 20 × 150 см.</p>\n<p>Общая толщина 2,8 мм, защитный слой 0,4 мм, основа текстильная, класс нагрузки 23–32–41. Ширина рулона 2 / 3 / 4 м, пожарная опасность Bfl-s1. Площадь до 35 м² можно стелить без клея. Гарантия 10 лет в доме, 5 лет в офисе. Производство: Бельгия.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak3bcfc95rrtsdke/beaulieu_2000w",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak4sgesf7jdn7ese/beaulieu_2000w",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5akahfru4mr8gb1no/beaulieu_2000w",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak3xq36qhqaf4jce/beaulieu_2000w",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5akabgnqmus9uyssa/beaulieu_2000w"
+   ],
+   "sourceUrl": "",
+   "inStock": true
+  },
+  {
+   "brand": "",
+   "name": "Timber Oak 113M",
+   "slug": "tex-style-timber-oak-113m",
+   "collection": "Tex-Style",
+   "sku": "",
+   "isNew": false,
+   "attributes": [
+    {
+     "label": "Общая толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,25 мм"
+    },
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–31"
+    },
+    {
+     "label": "Ширина рулона",
+     "value": "2 / 3 / 4 м"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Тип дизайна",
+     "value": "Дерево"
+    },
+    {
+     "label": "Цвет",
+     "value": "Натуральный"
+    },
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–31"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,25 мм"
+    },
+    {
+     "label": "Пожарная опасность",
+     "value": "Bfl-s1"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Производитель",
+     "value": "Бельгия"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Tex-Style"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "Дерево"
+    },
+    {
+     "label": "Цвет",
+     "value": "Натуральный"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,25 мм"
+    },
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–31"
+    },
+    {
+     "label": "Ширина рулона",
+     "value": "2 / 3 / 4 м"
+    },
+    {
+     "label": "Пожарная опасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Вес 1 м²",
+     "value": "1,55 кг"
+    },
+    {
+     "label": "Размер доски",
+     "value": "14 × 150 см"
+    },
+    {
+     "label": "Шумоизоляция",
+     "value": "16 дБ"
+    },
+    {
+     "label": "Сопротивление скольжению",
+     "value": "R10"
+    },
+    {
+     "label": "Остаточная деформация",
+     "value": "≤0,35 мм"
+    },
+    {
+     "label": "Эмиссия ЛОС",
+     "value": "A+"
+    },
+    {
+     "label": "Укладка",
+     "value": "до 35 м² без клея"
+    },
+    {
+     "label": "Гарантия",
+     "value": "7 лет в доме"
+    }
+   ],
+   "description": "<p>Линолеум «Timber Oak 113M» из коллекции Tex-Style: рисунок под дерево, доска 14 × 150 см.</p>\n<p>Общая толщина 2,5 мм, защитный слой 0,25 мм, основа текстильная, класс нагрузки 23–31. Ширина рулона 2 / 3 / 4 м, пожарная опасность Bfl-s1. Площадь до 35 м² можно стелить без клея. Гарантия 7 лет в доме. Производство: Бельгия.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5akabqd5bke9pe7oy/beaulieu_2000w",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5akago67d81dgm5py/beaulieu_2000w"
+   ],
+   "sourceUrl": "",
+   "inStock": true
+  },
+  {
+   "brand": "",
+   "name": "Gambel Oak 669D",
+   "slug": "tex-style-gambel-oak-669d",
+   "collection": "Tex-Style",
+   "sku": "",
+   "isNew": false,
+   "attributes": [
+    {
+     "label": "Общая толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,25 мм"
+    },
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–31"
+    },
+    {
+     "label": "Ширина рулона",
+     "value": "2 / 3 / 4 м"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Тип дизайна",
+     "value": "Дерево"
+    },
+    {
+     "label": "Цвет",
+     "value": "Коричневый"
+    },
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–31"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,25 мм"
+    },
+    {
+     "label": "Пожарная опасность",
+     "value": "Bfl-s1"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Производитель",
+     "value": "Бельгия"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Tex-Style"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "Дерево"
+    },
+    {
+     "label": "Цвет",
+     "value": "Коричневый"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,25 мм"
+    },
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–31"
+    },
+    {
+     "label": "Ширина рулона",
+     "value": "2 / 3 / 4 м"
+    },
+    {
+     "label": "Пожарная опасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Вес 1 м²",
+     "value": "1,55 кг"
+    },
+    {
+     "label": "Размер доски",
+     "value": "16,6 × 120 см"
+    },
+    {
+     "label": "Шумоизоляция",
+     "value": "16 дБ"
+    },
+    {
+     "label": "Сопротивление скольжению",
+     "value": "R10"
+    },
+    {
+     "label": "Остаточная деформация",
+     "value": "≤0,35 мм"
+    },
+    {
+     "label": "Эмиссия ЛОС",
+     "value": "A+"
+    },
+    {
+     "label": "Укладка",
+     "value": "до 35 м² без клея"
+    },
+    {
+     "label": "Гарантия",
+     "value": "7 лет в доме"
+    }
+   ],
+   "description": "<p>Линолеум «Gambel Oak 669D» из коллекции Tex-Style: рисунок под дерево, доска 16,6 × 120 см.</p>\n<p>Общая толщина 2,5 мм, защитный слой 0,25 мм, основа текстильная, класс нагрузки 23–31. Ширина рулона 2 / 3 / 4 м, пожарная опасность Bfl-s1. Площадь до 35 м² можно стелить без клея. Гарантия 7 лет в доме. Производство: Бельгия.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5akadusffkwek4y9a/beaulieu_2000w",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak45g7cd3h3biyao/beaulieu_2000w"
+   ],
+   "sourceUrl": "",
+   "inStock": true
+  },
+  {
+   "brand": "",
+   "name": "Laurel Oak 162M",
+   "slug": "tex-style-laurel-oak-162m",
+   "collection": "Tex-Style",
+   "sku": "",
+   "isNew": false,
+   "attributes": [
+    {
+     "label": "Общая толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,25 мм"
+    },
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–31"
+    },
+    {
+     "label": "Ширина рулона",
+     "value": "2 / 3 / 4 м"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Тип дизайна",
+     "value": "Дерево"
+    },
+    {
+     "label": "Цвет",
+     "value": "Рыжий"
+    },
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–31"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,25 мм"
+    },
+    {
+     "label": "Пожарная опасность",
+     "value": "Bfl-s1"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Производитель",
+     "value": "Бельгия"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Tex-Style"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "Дерево"
+    },
+    {
+     "label": "Цвет",
+     "value": "Рыжий"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,25 мм"
+    },
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–31"
+    },
+    {
+     "label": "Ширина рулона",
+     "value": "2 / 3 / 4 м"
+    },
+    {
+     "label": "Пожарная опасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Вес 1 м²",
+     "value": "1,55 кг"
+    },
+    {
+     "label": "Размер доски",
+     "value": "10 × 47 см"
+    },
+    {
+     "label": "Шумоизоляция",
+     "value": "16 дБ"
+    },
+    {
+     "label": "Сопротивление скольжению",
+     "value": "R10"
+    },
+    {
+     "label": "Остаточная деформация",
+     "value": "≤0,35 мм"
+    },
+    {
+     "label": "Эмиссия ЛОС",
+     "value": "A+"
+    },
+    {
+     "label": "Укладка",
+     "value": "до 35 м² без клея"
+    },
+    {
+     "label": "Гарантия",
+     "value": "7 лет в доме"
+    }
+   ],
+   "description": "<p>Линолеум «Laurel Oak 162M» из коллекции Tex-Style: рисунок под дерево, доска 10 × 47 см.</p>\n<p>Общая толщина 2,5 мм, защитный слой 0,25 мм, основа текстильная, класс нагрузки 23–31. Ширина рулона 2 / 3 / 4 м, пожарная опасность Bfl-s1. Площадь до 35 м² можно стелить без клея. Гарантия 7 лет в доме. Производство: Бельгия.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5akamys117tjb5ncy/beaulieu_2000w",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5aka465uckxc4ujsy/beaulieu_2000w"
+   ],
+   "sourceUrl": "",
+   "inStock": true
+  },
+  {
+   "brand": "",
+   "name": "Laurel Oak 699D",
+   "slug": "tex-style-laurel-oak-699d",
+   "collection": "Tex-Style",
+   "sku": "",
+   "isNew": false,
+   "attributes": [
+    {
+     "label": "Общая толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,25 мм"
+    },
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–31"
+    },
+    {
+     "label": "Ширина рулона",
+     "value": "2 / 3 / 4 м"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Тип дизайна",
+     "value": "Дерево"
+    },
+    {
+     "label": "Цвет",
+     "value": "Коричневый"
+    },
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–31"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,25 мм"
+    },
+    {
+     "label": "Пожарная опасность",
+     "value": "Bfl-s1"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Производитель",
+     "value": "Бельгия"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Tex-Style"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "Дерево"
+    },
+    {
+     "label": "Цвет",
+     "value": "Коричневый"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,25 мм"
+    },
+    {
+     "label": "Основа",
+     "value": "Текстильная"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–31"
+    },
+    {
+     "label": "Ширина рулона",
+     "value": "2 / 3 / 4 м"
+    },
+    {
+     "label": "Пожарная опасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Вес 1 м²",
+     "value": "1,55 кг"
+    },
+    {
+     "label": "Размер доски",
+     "value": "10 × 47 см"
+    },
+    {
+     "label": "Шумоизоляция",
+     "value": "16 дБ"
+    },
+    {
+     "label": "Сопротивление скольжению",
+     "value": "R10"
+    },
+    {
+     "label": "Остаточная деформация",
+     "value": "≤0,35 мм"
+    },
+    {
+     "label": "Эмиссия ЛОС",
+     "value": "A+"
+    },
+    {
+     "label": "Укладка",
+     "value": "до 35 м² без клея"
+    },
+    {
+     "label": "Гарантия",
+     "value": "7 лет в доме"
+    }
+   ],
+   "description": "<p>Линолеум «Laurel Oak 699D» из коллекции Tex-Style: рисунок под дерево, доска 10 × 47 см.</p>\n<p>Общая толщина 2,5 мм, защитный слой 0,25 мм, основа текстильная, класс нагрузки 23–31. Ширина рулона 2 / 3 / 4 м, пожарная опасность Bfl-s1. Площадь до 35 м² можно стелить без клея. Гарантия 7 лет в доме. Производство: Бельгия.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5fdwi6txgemd3a/beaulieu_2000w",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5akauw6ytargbsfpe/beaulieu_2000w"
+   ],
+   "sourceUrl": "",
+   "inStock": true
+  },
+  {
+   "brand": "",
+   "name": "Lime Oak 160L",
+   "slug": "trento-lime-oak-160l",
+   "collection": "Trento",
+   "sku": "",
+   "isNew": false,
+   "attributes": [
+    {
+     "label": "Общая толщина",
+     "value": "2,8 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,25 мм"
+    },
+    {
+     "label": "Основа",
+     "value": "Вспененный ПВХ"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–31"
+    },
+    {
+     "label": "Ширина рулона",
+     "value": "2 / 3 / 4 м"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Тип дизайна",
+     "value": "Дерево"
+    },
+    {
+     "label": "Цвет",
+     "value": "Бежевый"
+    },
+    {
+     "label": "Основа",
+     "value": "Вспененный ПВХ"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–31"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "2,8 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,25 мм"
+    },
+    {
+     "label": "Пожарная опасность",
+     "value": "Bfl-s1"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Производитель",
+     "value": "Бельгия"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Trento"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "Дерево"
+    },
+    {
+     "label": "Цвет",
+     "value": "Бежевый"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "2,8 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,25 мм"
+    },
+    {
+     "label": "Основа",
+     "value": "Вспененный ПВХ"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–31"
+    },
+    {
+     "label": "Ширина рулона",
+     "value": "2 / 3 / 4 м"
+    },
+    {
+     "label": "Пожарная опасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Вес 1 м²",
+     "value": "1,65 кг"
+    },
+    {
+     "label": "Размер доски",
+     "value": "20 × 150 см"
+    },
+    {
+     "label": "Шумоизоляция",
+     "value": "16 дБ"
+    },
+    {
+     "label": "Сопротивление скольжению",
+     "value": "R10"
+    },
+    {
+     "label": "Остаточная деформация",
+     "value": "≤0,35 мм"
+    },
+    {
+     "label": "Эмиссия ЛОС",
+     "value": "A+"
+    },
+    {
+     "label": "Укладка",
+     "value": "до 20 м² без клея"
+    },
+    {
+     "label": "Гарантия",
+     "value": "7 лет в доме"
+    }
+   ],
+   "description": "<p>Линолеум «Lime Oak 160L» из коллекции Trento: рисунок под дерево, доска 20 × 150 см.</p>\n<p>Общая толщина 2,8 мм, защитный слой 0,25 мм, основа из вспененного ПВХ, класс нагрузки 23–31. Ширина рулона 2 / 3 / 4 м, пожарная опасность Bfl-s1. Площадь до 20 м² можно стелить без клея. Гарантия 7 лет в доме. Производство: Бельгия.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5r5qw6nxhawika/beaulieu_2000w",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak3j6o11ypmue8ye/beaulieu_2000w",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5h8yi79ahztjna/beaulieu_2000w",
+    "https://www.decorasol.fr/5365-large_default/revetement-sol-pvc-trento-lime-oak-160l.jpg"
+   ],
+   "sourceUrl": "",
+   "inStock": true
+  },
+  {
+   "brand": "",
+   "name": "Lime Oak 909L",
+   "slug": "trento-lime-oak-909l",
+   "collection": "Trento",
+   "sku": "",
+   "isNew": false,
+   "attributes": [
+    {
+     "label": "Общая толщина",
+     "value": "2,8 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,25 мм"
+    },
+    {
+     "label": "Основа",
+     "value": "Вспененный ПВХ"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–31"
+    },
+    {
+     "label": "Ширина рулона",
+     "value": "2 / 3 / 4 м"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Тип дизайна",
+     "value": "Дерево"
+    },
+    {
+     "label": "Цвет",
+     "value": "Коричневый"
+    },
+    {
+     "label": "Основа",
+     "value": "Вспененный ПВХ"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–31"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "2,8 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,25 мм"
+    },
+    {
+     "label": "Пожарная опасность",
+     "value": "Bfl-s1"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Производитель",
+     "value": "Бельгия"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Trento"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "Дерево"
+    },
+    {
+     "label": "Цвет",
+     "value": "Коричневый"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "2,8 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,25 мм"
+    },
+    {
+     "label": "Основа",
+     "value": "Вспененный ПВХ"
+    },
+    {
+     "label": "Класс нагрузки",
+     "value": "23–31"
+    },
+    {
+     "label": "Ширина рулона",
+     "value": "2 / 3 / 4 м"
+    },
+    {
+     "label": "Пожарная опасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Вес 1 м²",
+     "value": "1,65 кг"
+    },
+    {
+     "label": "Размер доски",
+     "value": "20 × 150 см"
+    },
+    {
+     "label": "Шумоизоляция",
+     "value": "16 дБ"
+    },
+    {
+     "label": "Сопротивление скольжению",
+     "value": "R10"
+    },
+    {
+     "label": "Остаточная деформация",
+     "value": "≤0,35 мм"
+    },
+    {
+     "label": "Эмиссия ЛОС",
+     "value": "A+"
+    },
+    {
+     "label": "Укладка",
+     "value": "до 20 м² без клея"
+    },
+    {
+     "label": "Гарантия",
+     "value": "7 лет в доме"
+    }
+   ],
+   "description": "<p>Линолеум «Lime Oak 909L» из коллекции Trento: рисунок под дерево, доска 20 × 150 см.</p>\n<p>Общая толщина 2,8 мм, защитный слой 0,25 мм, основа из вспененного ПВХ, класс нагрузки 23–31. Ширина рулона 2 / 3 / 4 м, пожарная опасность Bfl-s1. Площадь до 20 м² можно стелить без клея. Гарантия 7 лет в доме. Производство: Бельгия.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak3f3iuaw1tsogna/beaulieu_2000w",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5x9muncp9n8hgo/beaulieu_2000w",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak4eenhhnsmmigma/beaulieu_2000w",
+    "https://www.teppichbodenideal.de/wp-content/uploads/2021/06/Lime-Oak-909L-scaled.jpg",
+    "https://www.teppichbodenideal.de/wp-content/uploads/2021/06/Lime-Oak-909L-RSH-scaled.jpg"
    ],
    "sourceUrl": "",
    "inStock": true
