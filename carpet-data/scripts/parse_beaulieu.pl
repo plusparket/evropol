@@ -21,7 +21,7 @@ sub unj { my ($s)=@_; return undef unless defined $s; my $d=eval { JSON::PP->new
 my (@out,@skipped);
 for my $f (sort glob("$R/raw/beaulieu/nf_*.html")) {
     (my $slug=$f) =~ s{.*/|\.html$}{}g;
-    if ($slug =~ /^nf_tufted-grass/) { push @skipped,"$slug: tufted grass"; next }
+    unless ($slug =~ /^nf_needlefelt_/) { push @skipped,"$slug: not needle felt"; next }
     my $h=slurp($f);
     my $d=rsc($h);
     my ($name)= $d =~ /"designName":"([^"]+)"/;
@@ -74,4 +74,4 @@ my $n=0; $n+=@{$_->{colours}} for @out;
 printf "beaulieu: %d collections, %d colours\n",scalar(@out),$n;
 printf "no colours: %s\n",join(', ',map {$_->{collection}} grep {!@{$_->{colours}}} @out);
 printf "no specs: %s\n",join(', ',map {$_->{collection}} grep {!@{$_->{specs}}} @out);
-print scalar(@skipped)," skipped (tufted grass)\n";
+print scalar(@skipped)," skipped (not needle felt)\n";

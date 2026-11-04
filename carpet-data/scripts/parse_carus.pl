@@ -5,6 +5,25 @@ use FindBin; use lib $FindBin::Bin; use Common;
 
 my $R = root(); my $B='https://www.carusflooring.com';
 my %path=('golden-gate'=>'1/golden-gate','grande'=>'2/grande','original-natural'=>'4/original-natural-','chevron-natural'=>'6/chevron-natural-','nova'=>'9/nova','brut'=>'10/brut');
+# Specs are only in the datasheet PDF. raw/carus/datasheet-<slug>.txt = pdftotext -enc UTF-8 -layout.
+# Values come from the English labels of the first design; multi-design sheets may vary, see the PDF.
+sub specs_from_pdf {
+    my ($slug)=@_; my $p="$R/raw/carus/datasheet-$slug.txt"; return [] unless -s $p;
+    my $t=slurp($p); my @s;
+    my $add=sub { my ($l,$v)=@_; return unless defined $v; $v=~s/\s+/ /g; $v=~s/^ | $//g; push @s,{label=>$l,value=>$v} if length $v };
+    my ($c)= $t =~ /^Construction\s+(.+?)\s{2,}Backing/m; $add->('Construction',$c);
+    my ($b)= $t =~ /Backing\s+(.+?)\s{2,}Width in Roll/m; $add->('Backing',$b);
+    my ($w)= $t =~ /Width in Roll\s+(\S+)/; $add->('Roll width',$w);
+    my ($m)= $t =~ /^Pile material\s+(.+?)\s{2,}Fire resistance/m; $add->('Pile material',$m);
+    my ($fr)=$t =~ /Fire resistance\s+(.+?)\s{2,}Width in Cut/; $add->('Fire resistance',$fr);
+    my ($pw)=$t =~ /Poids de velours[^\n]*?8543\s+(\d[\d.,]*)\s*g\/m/; $add->('Pile weight',defined $pw?"$pw g/m\x{B2}":undef);
+    my ($tw)=$t =~ /Poids total[^\n]*?8543\s+(\d[\d.,]*)\s*g\/m/; $add->('Total weight',defined $tw?"$tw g/m\x{B2}":undef);
+    my ($th)=$t =~ /Epaisseur totale[^\n]*?(\d[\d.,]*\s*mm)/; ($th)=$t =~ /^Total weight\s+(\d[\d.,]*\s*mm)/m unless $th; $add->('Total thickness',$th);
+    my ($ph)=$t =~ /Hauteur du velours[^\n]*?(\d[\d.,]*\s*mm)/; $add->('Pile height',$ph);
+    my ($cl)=$t =~ /Classement\s+(Classe [^\s].*?)\s{2,}/; $add->('Use class',$cl);
+    my ($db)=$t =~ /([\x{394}]?Lw\s*\d+\s*(?:dB)?)/; $add->('Impact sound',$db);
+    return \@s;
+}
 my @out;
 for my $slug (sort keys %path) {
     my $h = slurp("$R/raw/carus/$slug.html");
@@ -30,7 +49,7 @@ for my $slug (sort keys %path) {
         }
     }
     push @out, {brand=>'Carus', collection=>clean($name), url=>"$B/collections/$path{$slug}.html", description=>strip($desc),
-        specs=>[], datasheetPdf=>abs_url($B,$pdf), brochurePdf=>abs_url($B,$bro), images=>\@images, colours=>\@colours};
+        specs=>specs_from_pdf($slug), specsSource=>'datasheet PDF', datasheetPdf=>abs_url($B,$pdf), brochurePdf=>abs_url($B,$bro), images=>\@images, colours=>\@colours};
 }
 write_json("$R/carus.json", \@out);
 printf "%-22s %d colours, pdf=%s\n", $_->{collection}, scalar(@{$_->{colours}}), ($_->{datasheetPdf}//'-') for @out;

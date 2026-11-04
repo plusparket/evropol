@@ -59,7 +59,53 @@
    "https://www.carusflooring.com/images/common/collections/10/image_10.jpg",
    "https://www.carusflooring.com/images/common/produits/17/image_src_17.jpg"
   ],
-  "specs" : [],
+  "specs" : [
+   {
+    "label" : "Construction",
+    "value" : "Moquette tuftée à velours coupé imprimé"
+   },
+   {
+    "label" : "Backing",
+    "value" : "Superback (SB)"
+   },
+   {
+    "label" : "Roll width",
+    "value" : "4m"
+   },
+   {
+    "label" : "Pile material",
+    "value" : "100% Nylon"
+   },
+   {
+    "label" : "Fire resistance",
+    "value" : "Cfl-s1 - glued on cement"
+   },
+   {
+    "label" : "Pile weight",
+    "value" : "510 g/m²"
+   },
+   {
+    "label" : "Total weight",
+    "value" : "1900 g/m²"
+   },
+   {
+    "label" : "Total thickness",
+    "value" : "9.3 mm"
+   },
+   {
+    "label" : "Pile height",
+    "value" : "4.5 mm"
+   },
+   {
+    "label" : "Use class",
+    "value" : "Classe 23/32 LC1"
+   },
+   {
+    "label" : "Impact sound",
+    "value" : "ΔLw 28"
+   }
+  ],
+  "specsSource" : "datasheet PDF",
   "url" : "https://www.carusflooring.com/collections/10/brut.html"
  },
  {
@@ -72,7 +118,45 @@
   "images" : [
    "https://www.carusflooring.com/images/common/collections/6/image_6.jpg"
   ],
-  "specs" : [],
+  "specs" : [
+   {
+    "label" : "Construction",
+    "value" : "Woven carpet, loop pile"
+   },
+   {
+    "label" : "Backing",
+    "value" : "Latex foam backing (MO)"
+   },
+   {
+    "label" : "Roll width",
+    "value" : "4m"
+   },
+   {
+    "label" : "Pile material",
+    "value" : "100% Jonc de Mer"
+   },
+   {
+    "label" : "Fire resistance",
+    "value" : "Cfl-s1 - glued on cement"
+   },
+   {
+    "label" : "Pile weight",
+    "value" : "2000 g/m²"
+   },
+   {
+    "label" : "Total weight",
+    "value" : "2700 g/m²"
+   },
+   {
+    "label" : "Total thickness",
+    "value" : "8 mm"
+   },
+   {
+    "label" : "Pile height",
+    "value" : "0 mm"
+   }
+  ],
+  "specsSource" : "datasheet PDF",
   "url" : "https://www.carusflooring.com/collections/6/chevron-natural-.html"
  },
  {
@@ -290,7 +374,53 @@
    "https://www.carusflooring.com/images/common/produits/3/image_src_3.jpg",
    "https://www.carusflooring.com/images/common/produits/4/image_src_4.jpg"
   ],
-  "specs" : [],
+  "specs" : [
+   {
+    "label" : "Construction",
+    "value" : "Tufted carpet, printed Saxony"
+   },
+   {
+    "label" : "Backing",
+    "value" : "Fusion Back (FB)"
+   },
+   {
+    "label" : "Roll width",
+    "value" : "4m"
+   },
+   {
+    "label" : "Pile material",
+    "value" : "100% Nylon"
+   },
+   {
+    "label" : "Fire resistance",
+    "value" : "Bfl-s1 - glued on cement"
+   },
+   {
+    "label" : "Pile weight",
+    "value" : "1300 g/m²"
+   },
+   {
+    "label" : "Total weight",
+    "value" : "2350 g/m²"
+   },
+   {
+    "label" : "Total thickness",
+    "value" : "10 mm"
+   },
+   {
+    "label" : "Pile height",
+    "value" : "6.5 mm"
+   },
+   {
+    "label" : "Use class",
+    "value" : "Classe 23/32 LC4"
+   },
+   {
+    "label" : "Impact sound",
+    "value" : "ΔLw 25"
+   }
+  ],
+  "specsSource" : "datasheet PDF",
   "url" : "https://www.carusflooring.com/collections/1/golden-gate.html"
  },
  {
@@ -549,7 +679,53 @@
    "https://www.carusflooring.com/images/common/produits/11/image_src_11.jpg",
    "https://www.carusflooring.com/images/common/produits/12/image_src_12.jpg"
   ],
-  "specs" : [],
+  "specs" : [
+   {
+    "label" : "Construction",
+    "value" : "Tufted carpet, printed Saxony"
+   },
+   {
+    "label" : "Backing",
+    "value" : "Action Back (AB)"
+   },
+   {
+    "label" : "Roll width",
+    "value" : "4m"
+   },
+   {
+    "label" : "Pile material",
+    "value" : "100% Nylon"
+   },
+   {
+    "label" : "Fire resistance",
+    "value" : "Bfl-s1 - glued on cement"
+   },
+   {
+    "label" : "Pile weight",
+    "value" : "1000 g/m²"
+   },
+   {
+    "label" : "Total weight",
+    "value" : "2065 g/m²"
+   },
+   {
+    "label" : "Total thickness",
+    "value" : "9 mm"
+   },
+   {
+    "label" : "Pile height",
+    "value" : "7 mm"
+   },
+   {
+    "label" : "Use class",
+    "value" : "Classe 23/32 LC3"
+   },
+   {
+    "label" : "Impact sound",
+    "value" : "ΔLw 28"
+   }
+  ],
+  "specsSource" : "datasheet PDF",
   "url" : "https://www.carusflooring.com/collections/2/grande.html"
  },
  {
@@ -668,7 +844,49 @@
    "https://www.carusflooring.com/images/common/collections/9/image_9.jpg",
    "https://www.carusflooring.com/images/common/produits/16/image_src_16.jpg"
   ],
-  "specs" : [],
+  "specs" : [
+   {
+    "label" : "Construction",
+    "value" : "Moquette à velours coupé sur dossier synthétique"
+   },
+   {
+    "label" : "Backing",
+    "value" : "Action Back (AB)"
+   },
+   {
+    "label" : "Roll width",
+    "value" : "4m"
+   },
+   {
+    "label" : "Pile material",
+    "value" : "100% Nylon"
+   },
+   {
+    "label" : "Pile weight",
+    "value" : "900 g/m²"
+   },
+   {
+    "label" : "Total weight",
+    "value" : "1920 g/m²"
+   },
+   {
+    "label" : "Total thickness",
+    "value" : "8.2 mm"
+   },
+   {
+    "label" : "Pile height",
+    "value" : "5.6 mm"
+   },
+   {
+    "label" : "Use class",
+    "value" : "Classe 23/32 LC3"
+   },
+   {
+    "label" : "Impact sound",
+    "value" : "ΔLw 25"
+   }
+  ],
+  "specsSource" : "datasheet PDF",
   "url" : "https://www.carusflooring.com/collections/9/nova.html"
  },
  {
@@ -681,7 +899,45 @@
   "images" : [
    "https://www.carusflooring.com/images/common/collections/4/image_4.jpg"
   ],
-  "specs" : [],
+  "specs" : [
+   {
+    "label" : "Construction",
+    "value" : "Woven carpet, loop pile"
+   },
+   {
+    "label" : "Backing",
+    "value" : "Latex foam backing (MO)"
+   },
+   {
+    "label" : "Roll width",
+    "value" : "4m"
+   },
+   {
+    "label" : "Pile material",
+    "value" : "100% Jonc de Mer"
+   },
+   {
+    "label" : "Fire resistance",
+    "value" : "Cfl-s1 - glued on cement"
+   },
+   {
+    "label" : "Pile weight",
+    "value" : "1750 g/m²"
+   },
+   {
+    "label" : "Total weight",
+    "value" : "1950 g/m²"
+   },
+   {
+    "label" : "Total thickness",
+    "value" : "6 mm"
+   },
+   {
+    "label" : "Pile height",
+    "value" : "0 mm"
+   }
+  ],
+  "specsSource" : "datasheet PDF",
   "url" : "https://www.carusflooring.com/collections/4/original-natural-.html"
  }
 ]

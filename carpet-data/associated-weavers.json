@@ -69,6 +69,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_AAPAOA/AAPAOA_90_LIVING.jpg?h=350&w=700&hash=349ECBBD534356765B7ACD06EDBA3A9C",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_AAPAOA/AAPAOA_99_LIVING.jpg?h=350&w=700&hash=ECF655071973EA8B68A57139239C8467"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -306,6 +307,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_APEXTA/APEXTA_98_ROOMSHOT.jpg?h=350&w=700&hash=836A7017426402FC60E355A4F5611BC5",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_APEXTA/APEXTA_99_ROOMSHOT.jpg?h=350&w=700&hash=544F7A00A43A06E59C2E392217CE293B"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -478,7 +480,7 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_AQRUTA/AQRUTA_03_ROOMSHOT.jpg?h=350&w=700&hash=A171AB2D88BB5B08CF46CF356628526B",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_AQRUTA/AQRUTA_09_ROOMSHOT.jpg?h=350&w=700&hash=6C071F4442A5C95466909410DB864E00",
@@ -491,7 +493,29 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_AQRUTA/AQRUTA_96_ROOMSHOT.jpg?h=350&w=700&hash=010205C44C9332C9EC4CFA67F55A78B7",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_AQRUTA/AQRUTA_99_ROOMSHOT.jpg?h=350&w=700&hash=DC7C3F9C5156D46F316A7DB95CD6E115"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Saxony"
+   },
+   {
+    "label" : "Backing",
+    "value" : "FusionBac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "13.5"
+   },
+   {
+    "label" : "Total height",
+    "value" : "16,0 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "4/5"
+   }
+  ],
   "themeCode" : "F_AQRUTA",
   "url" : "https://associated-weavers.com/en/carpet-aquarius-03"
  },
@@ -517,6 +541,7 @@
   "images" : [
    "https://associated-weavers.com/-/media/foundation/products/product-shots/f_arcuva/arcuva_36_roomshot.jpg"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -584,6 +609,7 @@
   "images" : [
    "https://associated-weavers.com/-/media/foundation/products/product-shots/f_areava/areava_36_roomshot.jpg"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -776,7 +802,7 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_CORVTA/CORVTA_03_ROOMSHOT.jpg?h=350&w=700&hash=70452854C87699988CC759C493322CD3",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_CORVTA/CORVTA_09_ROOMSHOT.jpg?h=350&w=700&hash=4180F1EA66B6EACAE4759F6B085FB5CC",
@@ -791,7 +817,29 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_CORVTA/CORVTA_96_ROOMSHOT.jpg?h=350&w=700&hash=42292F8B3ED8B096D3658D66673D1DCD",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_CORVTA/CORVTA_99_ROOMSHOT.jpg?h=350&w=700&hash=9D8910990635AD1BE54F056BAB47373C"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Frieze"
+   },
+   {
+    "label" : "Backing",
+    "value" : "FusionBac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "10"
+   },
+   {
+    "label" : "Total height",
+    "value" : "12,5 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "4/5"
+   }
+  ],
   "themeCode" : "F_CORVTA",
   "url" : "https://associated-weavers.com/en/carpet-aries-03"
  },
@@ -898,7 +946,7 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_AAANTA/AAANTA_03_ROOMSHOT.jpg?h=350&w=700&hash=8F87A7C2185387C9ACB0430A02F4ED74",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_AAANTA/AAANTA_31_ROOMSHOT.jpg?h=350&w=700&hash=9DC2B56278168961282D1AD40172BAF0",
@@ -909,7 +957,29 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_AAANTA/AAANTA_92_ROOMSHOT.jpg?h=350&w=700&hash=94AF1D03D41E51E6AD85F7233E510F28",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_AAANTA/AAANTA_94_ROOMSHOT.jpg?h=350&w=700&hash=DFFB0B755268979E764B9D773FF1010F"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Loop pile"
+   },
+   {
+    "label" : "Backing",
+    "value" : "Flextex Plus Actionbac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "5"
+   },
+   {
+    "label" : "Total height",
+    "value" : "8,0 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "4/5"
+   }
+  ],
   "themeCode" : "F_AAANTA",
   "url" : "https://associated-weavers.com/en/carpet-arran-03"
  },
@@ -1016,7 +1086,7 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_AAANVA/AAANVA_03_ROOMSHOT.jpg?h=350&w=700&hash=CACA3A1440E45EDFA65B5CAF7748E638",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_AAANVA/AAANVA_31_ROOMSHOT.jpg?h=350&w=700&hash=C21A7CA3FC57037B15BB8908F5BE2883",
@@ -1027,7 +1097,29 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_AAANVA/AAANVA_92_ROOMSHOT.jpg?h=350&w=700&hash=73EF92CDBB6807BF7DCA368A97B5CC8C",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_AAANVA/AAANVA_94_ROOMSHOT.jpg?h=350&w=700&hash=DDBF6169BDFF9563E035EB5D62ACBF9A"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Loop pile"
+   },
+   {
+    "label" : "Backing",
+    "value" : "Recytex Plus feltbac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "5"
+   },
+   {
+    "label" : "Total height",
+    "value" : "8,5 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "4/5"
+   }
+  ],
   "themeCode" : "F_AAANVA",
   "url" : "https://associated-weavers.com/en/carpet-arran-03"
  },
@@ -1155,6 +1247,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_ACUSTA/ACUSTA_94_LIVING.jpg?h=350&w=700&hash=D44D983EC7C32AC860A1BA1B186AFD94",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_ACUSTA/ACUSTA_97_LIVING.jpg?h=350&w=700&hash=2A4A6AC5E43EAD6F60891E403AC65AB7"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -1363,7 +1456,7 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_AIUSTA/AIUSTA_02_LIVING.jpg?h=350&w=700&hash=32DE12049DD9501F2116F00A22854985",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_AIUSTA/AIUSTA_03_LIVING.jpg?h=350&w=700&hash=AF97546958F3E56A51B44D01342DAB4F",
@@ -1378,7 +1471,29 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_AIUSTA/AIUSTA_96_LIVING.jpg?h=350&w=700&hash=924BC62F63CD0AD6D3EDE4A294FA613B",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_AIUSTA/AIUSTA_97_LIVING.jpg?h=350&w=700&hash=324CB314F409246955D91E2CD8D2E407"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Frieze"
+   },
+   {
+    "label" : "Backing",
+    "value" : "FusionBac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "18"
+   },
+   {
+    "label" : "Total height",
+    "value" : "20,5 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "3/4/5"
+   }
+  ],
   "themeCode" : "F_AIUSTA",
   "url" : "https://associated-weavers.com/en/carpet-aurelius-02"
  },
@@ -1476,6 +1591,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_AZTEVA/AZTEVA_95_ROOMSHOT.jpg?h=350&w=700&hash=1E3E42C0045535ECE1022CDB01A227C1",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_AZTEVA/AZTEVA_97_ROOMSHOT.jpg?h=350&w=700&hash=25C692594615C2A762B9E904FD3840C8"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -1561,6 +1677,7 @@
    "https://associated-weavers.com/-/media/foundation/products/product-shots/w_bidjga/bidjga_10_hallway.jpg",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/W_BIDJGA/BIDJGA_33_HALLWAY.jpg?h=350&w=700&hash=DEECDC709C89506B304A3DB175CE1BBE"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -1632,6 +1749,7 @@
   "images" : [
    "https://associated-weavers.com/-/media/foundation/products/product-shots/f_bigcva/bigcva_97_bed.jpg"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -1765,7 +1883,7 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_BIAOTA/BIAOTA_04_LIVING.jpg?h=350&w=700&hash=845192ACB4457646048BB4D5E974206C",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_BIAOTA/BIAOTA_37_LIVING.jpg?h=350&w=700&hash=5CD98483EF0E79F7A4264535AA601016",
@@ -1775,7 +1893,29 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_BIAOTA/BIAOTA_97_LIVING.jpg?h=350&w=700&hash=98BBFD82E367213A6A721F1E1B076865",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_BIAOTA/BIAOTA_98_LIVING.jpg?h=350&w=700&hash=DEA4EC8341374EB2EF13EAF8E7F2EEB8"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Shag pile"
+   },
+   {
+    "label" : "Backing",
+    "value" : "FusionBac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "26"
+   },
+   {
+    "label" : "Total height",
+    "value" : "30,0 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "4"
+   }
+  ],
   "themeCode" : "F_BIAOTA",
   "url" : "https://associated-weavers.com/en/carpet-bilbao-04"
  },
@@ -1831,6 +1971,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/W_BODAGA/BODAGA_44_HALLWAY.jpg?h=350&w=700&hash=FFB0D13AA92ADBB68B04E405EF4C509D",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/W_BODAGA/BODAGA_97_HALLWAY.jpg?h=350&w=700&hash=452772B87CBDAF5C26513B2BC0A48C25"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -1959,7 +2100,7 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_ARNOTA/ARNOTA_30_ROOMSHOT.jpg?h=350&w=700&hash=10E4192E2E6AB60D7DA4CA888B842FE6",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_ARNOTA/ARNOTA_32_ROOMSHOT.jpg?h=350&w=700&hash=DD606442F9C6C9C074D5E7F033383AF8",
@@ -1968,7 +2109,29 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_ARNOTA/ARNOTA_39_ROOMSHOT.jpg?h=350&w=700&hash=3EF8D0EE7E074081F911B5A45707F254",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_ARNOTA/ARNOTA_90_ROOMSHOT.jpg?h=350&w=700&hash=48209586DE6216B7C24DFDE7B68DBF26"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Structured loop pile"
+   },
+   {
+    "label" : "Backing",
+    "value" : "FusionBac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "9"
+   },
+   {
+    "label" : "Total height",
+    "value" : "12,5 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "4/5"
+   }
+  ],
   "themeCode" : "F_ARNOTA",
   "url" : "https://associated-weavers.com/en/carpet-brenta-30"
  },
@@ -2123,7 +2286,7 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_BLYNTA/BLYNTA_03_LIVING.jpg?h=350&w=700&hash=21F17701BE5DE5B8F93FD3C09AF75AF1",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_BLYNTA/BLYNTA_09_LIVING.jpg?h=350&w=700&hash=8C1B301F9F665A0612301DE53180630F",
@@ -2136,7 +2299,29 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_BLYNTA/BLYNTA_96_LIVING.jpg?h=350&w=700&hash=D70836ACC2272FFEBF9ECB881450832C",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_BLYNTA/BLYNTA_97_LIVING.jpg?h=350&w=700&hash=79070A146B3586EDEC3A689BAD338DC3"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Frieze"
+   },
+   {
+    "label" : "Backing",
+    "value" : "FusionBac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "7.5"
+   },
+   {
+    "label" : "Total height",
+    "value" : "10,0 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "4/5"
+   }
+  ],
   "themeCode" : "F_BLYNTA",
   "url" : "https://associated-weavers.com/en/carpet-brooklyn-03"
  },
@@ -2291,7 +2476,7 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_CDNATA/CDNATA_03_HALLWAY.jpg?h=350&w=700&hash=F697814DA76A9698CE5252ACBAC24A89",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_CDNATA/CDNATA_10_HALLWAY.jpg?h=350&w=700&hash=624FFFB6581F0BA103FB04A777AC04D0",
@@ -2306,7 +2491,29 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_CDNATA/CDNATA_90_HALLWAY.jpg?h=350&w=700&hash=1B213B155CB5EC5741593426152DC9FB",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_CDNATA/CDNATA_94_HALLWAY.jpg?h=350&w=700&hash=FD43AEF20012C2E6C7368866616A1F7B"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Cut & loop"
+   },
+   {
+    "label" : "Backing",
+    "value" : "Flextex Plus Actionbac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "12"
+   },
+   {
+    "label" : "Total height",
+    "value" : "14,0 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "4/5"
+   }
+  ],
   "themeCode" : "F_CDNATA",
   "url" : "https://associated-weavers.com/en/carpet-californiadreamsnew-03"
  },
@@ -2461,11 +2668,33 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_CNPSTA/CNPSTA_40_ROOMSHOT.jpg?h=350&w=700&hash=D3252C7291910A634FA358461E05FB77"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Frieze"
+   },
+   {
+    "label" : "Backing",
+    "value" : "FusionBac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "14"
+   },
+   {
+    "label" : "Total height",
+    "value" : "16,5 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "4/5"
+   }
+  ],
   "themeCode" : "F_CNPSTA",
   "url" : "https://associated-weavers.com/en/carpet-canopus-03"
  },
@@ -2661,6 +2890,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_CACSTA/CACSTA_95_LIVING.jpg?h=350&w=700&hash=94F9C3FCA830435991DC9DEF0C5B4B69",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_CACSTA/CACSTA_97_LIVING.jpg?h=350&w=700&hash=B1D353EB5CFDCE3A4620B7F225D45DB2"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -2752,6 +2982,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/W_CBYAGA/CBYAGA_84_HALLWAY.jpg?h=350&w=700&hash=FC4307356FF825E1E7FA2575C56BBB4A",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/W_CBYAGA/CBYAGA_97_HALLWAY.jpg?h=350&w=700&hash=4601B0A38503B832B2AF3751A43FD591"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -3038,7 +3269,7 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_CIUSTA/CIUSTA_03_LIVING.JPG?h=350&w=700&hash=1457D0F94F43FCA4A9E0514109ACE6C8",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_CIUSTA/CIUSTA_04_ROOMSHOT.jpg?h=350&w=700&hash=38F87C12B315B87E4ED830577894A69B",
@@ -3059,7 +3290,29 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_CIUSTA/CIUSTA_97_LIVING.JPG?h=350&w=700&hash=4E594E7CFC97E219ADB0BA5AAAD9B502",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_CIUSTA/CIUSTA_99_LIVING.JPG?h=350&w=700&hash=711D4DEE27208A1AC2E8D0FCF413E2A6"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Frieze"
+   },
+   {
+    "label" : "Backing",
+    "value" : "FusionBac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "15.5"
+   },
+   {
+    "label" : "Total height",
+    "value" : "18,0 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "3/4/5"
+   }
+  ],
   "themeCode" : "F_CIUSTA",
   "url" : "https://associated-weavers.com/en/carpet-cassius-03"
  },
@@ -3214,7 +3467,7 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_CTORTA/CTORTA_03_ROOMSHOT.jpg?h=350&w=700&hash=E1A39367766573E91774D381141B3374",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_CTORTA/CTORTA_09_ROOMSHOT.jpg?h=350&w=700&hash=CF3B4DB8187F3A644157D904FAD8BFB2",
@@ -3226,7 +3479,29 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_CTORTA/CTORTA_97_ROOMSHOT.jpg?h=350&w=700&hash=B36E7B124064032DA2DA145A01715903",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_CTORTA/CTORTA_98_ROOMSHOT.jpg?h=350&w=700&hash=3F55424F46CE819C83700B46E2E2F855"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Frieze"
+   },
+   {
+    "label" : "Backing",
+    "value" : "FusionBac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "10"
+   },
+   {
+    "label" : "Total height",
+    "value" : "12,5 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "4/5"
+   }
+  ],
   "themeCode" : "F_CTORTA",
   "url" : "https://associated-weavers.com/en/carpet-castor-03"
  },
@@ -3354,6 +3629,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_CELSTA/CELSTA_94_LIVING.jpg?h=350&w=700&hash=9A8BAA831D4B51E4BBF2A62E6C8B5964",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_CELSTA/CELSTA_97_LIVING.jpg?h=350&w=700&hash=952F0F0100C1237A67A2ED04697F8F72"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -3562,7 +3838,7 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_CETATA/CETATA_03_LIVING.JPG?h=350&w=700&hash=D6EC85F704F43526F5A8E6CAB02E5D84",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_CETATA/CETATA_09_LIVING.jpg?h=350&w=700&hash=2868C2E29B2FF6A96FFBCA92A7000AD3",
@@ -3577,7 +3853,29 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_CETATA/CETATA_97_LIVING.JPG?h=350&w=700&hash=14D50BA796D5492D8CAAC16F3F9F3AFE",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_CETATA/CETATA_99_LIVING.jpg?h=350&w=700&hash=DCB55F329933A410020CA36C7FBFF02D"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Frieze"
+   },
+   {
+    "label" : "Backing",
+    "value" : "FusionBac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "15"
+   },
+   {
+    "label" : "Total height",
+    "value" : "17,5 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "3/4/5"
+   }
+  ],
   "themeCode" : "F_CETATA",
   "url" : "https://associated-weavers.com/en/carpet-centaurus-03"
  },
@@ -3744,7 +4042,7 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_CIONTA/CIONTA_41_HALLWAY.jpg?h=350&w=700&hash=D179BA0F105E2520D3D749FC336095D3",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_CIONTA/CIONTA_09_HALLWAY.jpg?h=350&w=700&hash=2475E51B0CBD9FC28C85AAE736B68E27",
@@ -3758,7 +4056,29 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_CIONTA/CIONTA_97_HALLWAY.jpg?h=350&w=700&hash=59F20102B6FAA2DA5B1A59B2067C267E",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_CIONTA/CIONTA_98_HALLWAY.jpg?h=350&w=700&hash=8057400213DDF1FC0FA2ABB3D8A279B1"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Frieze"
+   },
+   {
+    "label" : "Backing",
+    "value" : "FusionBac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "11"
+   },
+   {
+    "label" : "Total height",
+    "value" : "13,5 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "3/4/5"
+   }
+  ],
   "themeCode" : "F_CIONTA",
   "url" : "https://associated-weavers.com/en/carpet-centurion-03"
  },
@@ -3847,6 +4167,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/W_CPBAGA/CPBAGA_77_HALLWAY.jpg?h=350&w=700&hash=C4385AB5BA565F16B39842F2D01E299C",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/W_CPBAGA/CPBAGA_84_HALLWAY.jpg?h=350&w=700&hash=07E0E343FF22046465F7B885557EE52C"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -4088,6 +4409,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_CCTOTA/CCTOTA_97_LIVING.jpg?h=350&w=700&hash=FF0BF3C44D903E3C156873311CDDBDFA",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_CCTOTA/CCTOTA_98_LIVING.jpg?h=350&w=700&hash=AD84FE9A4B634C78618517E435108CD8"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -4288,7 +4610,7 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_CNSTTA/CNSTTA_03_ROOMSHOT.jpg?h=350&w=700&hash=F315CDCA3C7FABC5534886B1C5079AB5",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_CNSTTA/CNSTTA_04_ROOMSHOT.jpg?h=350&w=700&hash=7C675698FAF511E0D691CB25A2D13D69",
@@ -4303,7 +4625,29 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_CNSTTA/CNSTTA_91_ROOMSHOT.jpg?h=350&w=700&hash=A7813DCAFF5B6D710FE203B6722DB575",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_CNSTTA/CNSTTA_98_ROOMSHOT.jpg?h=350&w=700&hash=9A793D327A480C18673CCBDDCCD3F418"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Frieze"
+   },
+   {
+    "label" : "Backing",
+    "value" : "FusionBac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "8"
+   },
+   {
+    "label" : "Total height",
+    "value" : "10,5 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "4/5"
+   }
+  ],
   "themeCode" : "F_CNSTTA",
   "url" : "https://associated-weavers.com/en/carpet-coniston-03"
  },
@@ -4380,7 +4724,7 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_CNSTVA/CNSTVA_04_ROOMSHOT.jpg?h=350&w=700&hash=58CEC4B9657C240751ADC93487F0E9FA",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_CNSTVA/CNSTVA_08_ROOMSHOT.jpg?h=350&w=700&hash=7973CD719D247A02B7C349CA66BA3EFF",
@@ -4389,7 +4733,29 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_CNSTVA/CNSTVA_91_ROOMSHOT.jpg?h=350&w=700&hash=E53261ACC20C6AE23CF9850135EBFEAC",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_CNSTVA/CNSTVA_98_ROOMSHOT.jpg?h=350&w=700&hash=F5845905D6F896280E37F7478274AFCB"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Frieze"
+   },
+   {
+    "label" : "Backing",
+    "value" : "Recytex Plus feltbac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "8"
+   },
+   {
+    "label" : "Total height",
+    "value" : "11,0 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "4"
+   }
+  ],
   "themeCode" : "F_CNSTVA",
   "url" : "https://associated-weavers.com/en/carpet-coniston-04"
  },
@@ -4493,6 +4859,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_COROVA/COROVA_49_BED.jpg?h=350&w=700&hash=51D486A9FB488A4E4C9E005C480753D6",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_COROVA/COROVA_97_BED.jpg?h=350&w=700&hash=A43BFA97F3A284C4FE26CC7C2A1C78A1"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -4730,6 +5097,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_CRDOTA/CRDOTA_97_LIVING.jpg?h=350&w=700&hash=471ECB5E5B6CBF49BF51AB4187CCBE9D",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_CRDOTA/CRDOTA_98_LIVING.jpg?h=350&w=700&hash=16135C348180786A8AFA6B185E2BB4D2"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -5016,7 +5384,7 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_DIUSTA/DIUSTA_03_BED.JPG?h=350&w=700&hash=F78B13AAC10E1CABF6B5B6BFF9EBEA99",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_DIUSTA/DIUSTA_04_ROOMSHOT.jpg?h=350&w=700&hash=0443AC648CBF8EB9B9892965BBEB2516",
@@ -5037,7 +5405,29 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_DIUSTA/DIUSTA_97_BED.JPG?h=350&w=700&hash=98CA43CAC5B9FCA388FE651100ABD6F1",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_DIUSTA/DIUSTA_99_BED.JPG?h=350&w=700&hash=B5E14C4FDD8EF1657D3F8C334229D4B4"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Frieze"
+   },
+   {
+    "label" : "Backing",
+    "value" : "FusionBac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "11"
+   },
+   {
+    "label" : "Total height",
+    "value" : "13,5 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "3/4/5"
+   }
+  ],
   "themeCode" : "F_DIUSTA",
   "url" : "https://associated-weavers.com/en/carpet-darius-03"
  },
@@ -5063,6 +5453,7 @@
   "images" : [
    "https://associated-weavers.com/-/media/foundation/products/product-shots/f_dinova/dinova_29_bed.jpg"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -5304,6 +5695,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_DRADTA/DRADTA_98_LIVING.jpg?h=350&w=700&hash=60AC39CFEDF6F719B2BE07D27F3F0E43",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_DRADTA/DRADTA_99_LIVING.jpg?h=350&w=700&hash=764E44D1E3281482BD522C3F926AF5E1"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -5489,6 +5881,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_DURATA/DURATA_95_ROOMSHOT.jpg?h=350&w=700&hash=F5471096A4AD9C72BF0E5E59C15CF2FF",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_DURATA/DURATA_97_ROOMSHOT.jpg?h=350&w=700&hash=DDEE1D024F06C23E9CFA31089A63BDF8"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -5730,6 +6123,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_DYNOTA/DYNOTA_97_living.jpg?h=350&w=700&hash=BCF04B62E1068803DF9731E41D2332BD",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_DYNOTA/DYNOTA_98_living.jpg?h=350&w=700&hash=BEA5D2C74352E19507D289D3F14752F8"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -5967,6 +6361,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_EASCTA/EASCTA_98_LIVING.jpg?h=350&w=700&hash=B48A2C82BE92BE0FFD740AE9B3528189",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_EASCTA/EASCTA_99_LIVING.jpg?h=350&w=700&hash=00F0837C4E86F92C7DDEB166BB542276"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -6050,6 +6445,7 @@
    "https://associated-weavers.com/-/media/foundation/products/product-shots/w_eigagb/eigagb_39_hallway.jpg",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/W_EIGAGB/EIGAGB_40_HALLWAY.jpg?h=350&w=700&hash=517D2D3B28D6D66EB0A3B2F764A1F247"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -6291,6 +6687,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_ELGCTA/ELGCTA_97_ROOMSHOT.jpg?h=350&w=700&hash=096098EFAB922E7B54586A89887BA447",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_ELGCTA/ELGCTA_99_ROOMSHOT.jpg?h=350&w=700&hash=73511AC3610C0891C83A30B3AF2051CB"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -6532,6 +6929,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_EPRITA/EPRITA_98_OFFICE.jpg?h=350&w=700&hash=E95F467235FAD74CD26C583A9F9E313E",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_EPRITA/EPRITA_99_OFFICE.jpg?h=350&w=700&hash=192B42C87B475E119F87786F314CF74E"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -6756,6 +7154,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_FIOITA/FIOITA_97_COMM_RETAIL.jpg?h=350&w=700&hash=7805035623F7AF0042AC5A22CD30B1BC",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_FIOITA/FIOITA_98_COMM_RETAIL.jpg?h=350&w=700&hash=95DF054B01F24D4FAC4940040C26F4CF"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -6851,6 +7250,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_FLSSVA/FLSSVA_95_ROOMSHOT.jpg?h=350&w=700&hash=C2E5B452CB0067E54375414766CB3FBB",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_FLSSVA/FLSSVA_97_ROOMSHOT.jpg?h=350&w=700&hash=CA509DC3C99A28918DA032CE10686F71"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -7049,6 +7449,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_FLRIVA/FLRIVA_95_LIVING.jpg?h=350&w=700&hash=0336DDA8CA0A52BD32DA139D4726F1BF",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_FLRIVA/FLRIVA_98_LIVING.jpg?h=350&w=700&hash=F279616F13F8578CEF8062D6B9DBC88C"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -7116,6 +7517,7 @@
   "images" : [
    "https://associated-weavers.com/-/media/foundation/products/product-shots/f_frmova/frmova_36_roomshot.jpg"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -7280,10 +7682,11 @@
    "https://associated-weavers.com/-/media/foundation/products/product-shots/f_fuegva/fuegva_97_living.jpg",
    "https://associated-weavers.com/-/media/foundation/products/product-shots/f_fuegva/fuegva_99_living.jpg"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
-    "value" : "4,0/5,0"
+    "value" : "3,0/4,0/5,0"
    },
    {
     "label" : "Backing",
@@ -7515,6 +7918,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_GALTTA/GALTTA_97_ROOMSHOT.JPG?h=350&w=700&hash=7EEE636A560418012AB618CA9411DC5C",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_GALTTA/GALTTA_98_ROOMSHOT.JPG?h=350&w=700&hash=CAD73581A5CC7DB724E4BDC5D5591F4F"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -7730,6 +8134,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_GGESTA/GGESTA_98_LIVING.jpg?h=350&w=700&hash=8B674133C823FD9174C7A9A41B9BFD94",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_GGESTA/GGESTA_99_LIVING.jpg?h=350&w=700&hash=ACD54A0C5B5051E6C9FE79083A1D5E3E"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -7889,6 +8294,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_TOLDTA/TOLDTA_95_ROOMSHOT.jpg?h=350&w=700&hash=1B9541E31AAC5234483BF0068074729B",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_TOLDTA/TOLDTA_96_ROOMSHOT.jpg?h=350&w=700&hash=0B03E2A57F8D95C63EA60AEB0919B415"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -8139,6 +8545,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_GACETA/GACETA_97_LIVING.jpg?h=350&w=700&hash=137543B4EA00F49C91F668985AA929E7",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_GACETA/GACETA_98_LIVING.jpg?h=350&w=700&hash=68042884E9EC13E9F8B30631F9E01C32"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -8376,6 +8783,7 @@
    "https://associated-weavers.com/-/media/foundation/products/product-shots/f_grinta/grinta_97_living.jpg",
    "https://associated-weavers.com/-/media/foundation/products/product-shots/f_grinta/grinta_98_living.jpg"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -8494,11 +8902,33 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Frieze"
+   },
+   {
+    "label" : "Backing",
+    "value" : "Recytex Plus feltbac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "12.5"
+   },
+   {
+    "label" : "Total height",
+    "value" : "15,5 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "4"
+   }
+  ],
   "themeCode" : "F_HRGAVA",
   "url" : "https://associated-weavers.com/en/carpet-harrogate-04"
  },
@@ -8653,7 +9083,7 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_HRGATA/HRGATA_03_ROOMSHOT.jpg?h=350&w=700&hash=82B963F1CAEBEFAC2D5258528DE74599",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_HRGATA/HRGATA_04_ROOMSHOT.jpg?h=350&w=700&hash=81CF66A76ECAA571A39CFBA23258E45A",
@@ -8668,7 +9098,29 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_HRGATA/HRGATA_91_ROOMSHOT.jpg?h=350&w=700&hash=1FE70F0C1961AC2561869ED6A2A3663B",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_HRGATA/HRGATA_98_ROOMSHOT.jpg?h=350&w=700&hash=9D9CF35C30962D98B4F7A8C72014D269"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Frieze"
+   },
+   {
+    "label" : "Backing",
+    "value" : "FusionBac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "12.5"
+   },
+   {
+    "label" : "Total height",
+    "value" : "15,0 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "4/5"
+   }
+  ],
   "themeCode" : "F_HRGATA",
   "url" : "https://associated-weavers.com/en/carpet-harrogate-03"
  },
@@ -8721,6 +9173,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_HESIFA/HESIFA_96_HALLWAY.jpg?h=350&w=700&hash=EA1E1C03572F36CFCD38552EDAEEB199",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_HESIFA/HESIFA_99_LIVING.jpg?h=350&w=700&hash=EDE32D0C758BCCA6C4E333E6368B3821"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -8841,6 +9294,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_HERTTA/HERTTA_90_ROOMSHOT.jpg?h=350&w=700&hash=92DF33F355427396EB305FE390A94560",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_HERTTA/HERTTA_99_ROOMSHOT.jpg?h=350&w=700&hash=83244485D01F9CEDF6D74D3182AC8201"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -8989,7 +9443,7 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_HERITA/HERITA_03_ROOMSHOT.jpg?h=350&w=700&hash=F402073330A55F1CE80169EBE3790E0A",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_HERITA/HERITA_31_ROOMSHOT.jpg?h=350&w=700&hash=A19B69FFE8BF72978446F29FCC71956E",
@@ -9000,7 +9454,25 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_HERITA/HERITA_92_ROOMSHOT.jpg?h=350&w=700&hash=9BACB22A3121608540225E79E0CAF0CA",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_HERITA/HERITA_94_ROOMSHOT.jpg?h=350&w=700&hash=BC3B38277C092C858443FBE57CA92CE1"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Backing",
+    "value" : "FusionBac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "5.5"
+   },
+   {
+    "label" : "Total height",
+    "value" : "8,0 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "4/5"
+   }
+  ],
   "themeCode" : "F_HERITA",
   "url" : "https://associated-weavers.com/en/carpet-herringbone-03"
  },
@@ -9155,7 +9627,7 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_HLMFTA/HLMFTA_03_ROOMSHOT.jpg?h=350&w=700&hash=5290B346E74481EDC23C9CF5FE13F3DD",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_HLMFTA/HLMFTA_04_ROOMSHOT.jpg?h=350&w=700&hash=03F0479C5461B10B2733594278D251D9",
@@ -9170,7 +9642,29 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_HLMFTA/HLMFTA_91_ROOMSHOT.jpg?h=350&w=700&hash=BC178C030BFCA00BD5B9ECB5F2D4DF69",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_HLMFTA/HLMFTA_98_ROOMSHOT.jpg?h=350&w=700&hash=EB2CE2B12A9BD3AA07927A53B9A413C4"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Frieze"
+   },
+   {
+    "label" : "Backing",
+    "value" : "FusionBac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "14"
+   },
+   {
+    "label" : "Total height",
+    "value" : "16,5 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "4/5"
+   }
+  ],
   "themeCode" : "F_HLMFTA",
   "url" : "https://associated-weavers.com/en/carpet-holmfirth-03"
  },
@@ -9325,7 +9819,7 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_HSONTA/HSONTA_92_LIVING.jpg?h=350&w=700&hash=3AF60395276CB360144B07CBE9CCE6DB",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_HSONTA/HSONTA_09_LIVING.jpg?h=350&w=700&hash=E1846FA47218D89EFF51D0127DBCC68E",
@@ -9335,7 +9829,29 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_HSONTA/HSONTA_96_LIVING.jpg?h=350&w=700&hash=A0744AC8448372AC6E36431CE83D3B60",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_HSONTA/HSONTA_97_LIVING.jpg?h=350&w=700&hash=57B367AFC2038498B83B221DF2EE3F59"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Frieze"
+   },
+   {
+    "label" : "Backing",
+    "value" : "FusionBac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "11"
+   },
+   {
+    "label" : "Total height",
+    "value" : "13,5 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "4/5"
+   }
+  ],
   "themeCode" : "F_HSONTA",
   "url" : "https://associated-weavers.com/en/carpet-hudson-03"
  },
@@ -9505,6 +10021,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_HDRATA/HDRATA_95_ROOMSHOT.jpg?h=350&w=700&hash=22F69EC8A68963912E6720BD6708933E",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_HDRATA/HDRATA_98_ROOMSHOT.jpg?h=350&w=700&hash=52A0309B2A9980CDF449B5E184F2E94D"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -9624,6 +10141,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/W_ICBAGA/ICBAGA_44_HALLWAY.jpg?h=350&w=700&hash=72EBB303A4311964A8148C4747803D3A",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/W_ICBAGA/ICBAGA_97_HALLWAY.jpg?h=350&w=700&hash=25BD238CF7107A3D0D2E6457C724F91F"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -9827,6 +10345,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_ILUSTB/ILUSTB_98_OFFICE.jpg?h=350&w=700&hash=B739841C85CEBEE16A4447E77FF07113",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_ILUSTB/ILUSTB_99_OFFICE.jpg?h=350&w=700&hash=26C75A25345F9D78F9FE666D6D2D4F71"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -10051,6 +10570,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_IPSETA/IPSETA_98_COMM_OFFICE.jpg?h=350&w=700&hash=B9C6C8C83F067680960C2497C2DD0946",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_IPSETA/IPSETA_99_COMM_OFFICE.jpg?h=350&w=700&hash=8E93B24F5BE2A0FFA0D31E0675384995"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -10236,6 +10756,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_IMPOTA/IMPOTA_95_ROOMSHOT.jpg?h=350&w=700&hash=0A8DAAE0760EED505AD4D71D4F4834DD",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_IMPOTA/IMPOTA_97_ROOMSHOT.jpg?h=350&w=700&hash=372D7AC29F234DC3217D7F85133664D2"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -10323,6 +10844,7 @@
    "https://associated-weavers.com/-/media/foundation/products/product-shots/w_incage/incage_11_hallway.jpg",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/W_INCAGE/INCAGE_30_HALLWAY.jpg?h=350&w=700&hash=2BCFBD1919523E24F2FF5BD5677ADAD1"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -10564,6 +11086,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_INUSTA/INUSTA_98_LIVING.jpg?h=350&w=700&hash=A15BCA24B959E0296AA179980E2F79D0",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_INUSTA/INUSTA_99_LIVING.jpg?h=350&w=700&hash=33FE714DA79B7A7597AA067A7E7B9672"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -10655,6 +11178,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_IQTOOA/IQTOOA_40_ROOMSHOT.jpg?h=350&w=700&hash=25A4E3D2EBE9F6D7AE6EEFA64B912895",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_IQTOOA/IQTOOA_90_ROOMSHOT.jpg?h=350&w=700&hash=39BA9D9F09C6A4B1590BC14E5649881D"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -10814,6 +11338,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_JADATA/JADATA_98_ROOMSHOT.jpg?h=350&w=700&hash=BE82489568E64504E97DB42EE47A159E",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_JADATA/JADATA_99_ROOMSHOT.jpg?h=350&w=700&hash=7350019778A221B304CBF1FFCB1E0E41"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -10912,6 +11437,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_JVAAFA/JVAAFA_93_LIVING.jpg?h=350&w=700&hash=518E3D99CBFFF7993AC77D72EB28503F",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_JVAAFA/JVAAFA_98_LIVING.jpg?h=350&w=700&hash=03DC7203EB6106C0BF116C86D6373FDC"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -11025,6 +11551,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/W_JENAGA/JENAGA_44_HALLWAY.jpg?h=350&w=700&hash=7703AB10D3387725F34FA5DA3F0B7AAF",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/W_JENAGA/JENAGA_84_HALLWAY.jpg?h=350&w=700&hash=7C0E0AD8B4AE528A2C3336C5B2CB7799"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -11292,6 +11819,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_KAIITA/KAIITA_97_LIVING.jpg?h=350&w=700&hash=805F4AFF21A0A3A57F6CC084F9BC1699",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_KAIITA/KAIITA_99_LIVING.jpg?h=350&w=700&hash=5A46D13D90FB8F977F886D8D9E4337A3"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -11511,6 +12039,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_KIAMVA/KIAMVA_97_LIVING.jpg?h=350&w=700&hash=0AF74E80F61E554C26B89AE0B5B42A0A",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_KIAMVA/KIAMVA_98_LIVING.jpg?h=350&w=700&hash=F2A7D318967A6C5D6F27D6A182B5A404"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -11626,6 +12155,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_LMMAOA/LMMAOA_90_LIVING.jpg?h=350&w=700&hash=6106BA78E8F96B058302DA1763AB8241",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_LMMAOA/LMMAOA_99_LIVING.jpg?h=350&w=700&hash=D5D5AD810371DB057539D8E999A70F5E"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -11863,6 +12393,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_LIRITA/LIRITA_97_ROOMSHOT.jpg?h=350&w=700&hash=0D99C517A8F8CF85B5A6F57AE45F1B51",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_LIRITA/LIRITA_99_ROOMSHOT.jpg?h=350&w=700&hash=51F57AFD54A8B3167F110C3748E2B4DF"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -11931,6 +12462,7 @@
   "images" : [
    "https://associated-weavers.com/-/media/foundation/products/product-shots/f_littva/littva_90_living.jpg"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -12172,6 +12704,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_LVIATA/LVIATA_95_ROOMSHOT.jpg?h=350&w=700&hash=1860C2D993731AB1B17695F732F65EFB",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_LVIATA/LVIATA_97_ROOMSHOT.jpg?h=350&w=700&hash=2A3AFEC3FB89A6EA32698DC0022811F6"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -12413,6 +12946,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_LUMITA/LUMITA_98_ROOMSHOT.jpg?h=350&w=700&hash=02BF56C3991A378FF524A92078FB7524",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_LUMITA/LUMITA_99_ROOMSHOT.jpg?h=350&w=700&hash=0FD03801A0D9A6FD358683B2427BACC3"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -12654,6 +13188,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_LUSTTA/LUSTTA_97_ROOMSHOT.jpg?h=350&w=700&hash=1E62B88281C2CCECE9AE677D0F352E52",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_LUSTTA/LUSTTA_99_ROOMSHOT.jpg?h=350&w=700&hash=448266C1EDBD73A9EDC7FC724615D9F1"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -12877,6 +13412,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_MGFITA/MGFITA_97_LIVING.JPG?h=350&w=700&hash=E456F8F9B290574777E1E671431B54B6",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_MGFITA/MGFITA_98_LIVING.JPG?h=350&w=700&hash=012930BDFAB268B0587E25AEB817A517"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -12968,6 +13504,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_MANAOA/MANAOA_35_LIVING.jpg?h=350&w=700&hash=850CBCFCDDCB350244404096AAC50556",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_MANAOA/MANAOA_90_LIVING.jpg?h=350&w=700&hash=2532D8B42A11D700331363F9BE4E2A2B"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -13139,6 +13676,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_MXMATA/MXMATA_98_LIVING.jpg?h=350&w=700&hash=361BE4082E7176BF768564996AD5B87C",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_MXMATA/MXMATA_99_LIVING.jpg?h=350&w=700&hash=D2EA830CD5C76725160DCFCCA8B342E1"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -13363,6 +13901,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_MDSATA/MDSATA_98_OFFICE.jpg?h=350&w=700&hash=7BBB1C7B4B12EABB74C6EDA3AF413A3A",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_MDSATA/MDSATA_99_OFFICE.jpg?h=350&w=700&hash=49A2F0F76C33EFB75D4E416615276F5C"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -13548,6 +14087,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_MEKOTA/MEKOTA_97_OFFICE.jpg?h=350&w=700&hash=A3194624E4C1C1EFDBFA7CD3D495C0FA",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_MEKOTA/MEKOTA_98_OFFICE.jpg?h=350&w=700&hash=10726508CF135A2556C70A5D8440B06C"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -13723,6 +14263,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_MDASTA/MDASTA_97_LOBBY.jpg?h=350&w=700&hash=21840EA0A874FFA0DB5358EDBCA31945",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_MDASTA/MDASTA_99_LOBBY.jpg?h=350&w=700&hash=FBAC73FD369DD83006DEB015E4DF044A"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -13895,11 +14436,33 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_MNYAVA/MNYAVA_09_LIVING.jpg?h=350&w=700&hash=E25D253C164C6A2805AAA3FF5EAE32B5"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Frieze"
+   },
+   {
+    "label" : "Backing",
+    "value" : "Recytex Plus feltbac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "9.5"
+   },
+   {
+    "label" : "Total height",
+    "value" : "13,0 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "4/5"
+   }
+  ],
   "themeCode" : "F_MNYAVA",
   "url" : "https://associated-weavers.com/en/carpet-monterey-07"
  },
@@ -14108,6 +14671,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_MMDOTA/MMDOTA_97_LIVING.jpg?h=350&w=700&hash=C62AD381A159F39461508FCD3A27FA86",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_MMDOTA/MMDOTA_98_LIVING.jpg?h=350&w=700&hash=3E89A2EEC23D80362929A0DC486BBD70"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -14205,6 +14769,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/W_MUCIVA/MUCIVA_35_HALLWAY.jpg?h=350&w=700&hash=070F46ADABF91CF947839D75230CF571",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/W_MUCIVA/MUCIVA_94_HALLWAY.jpg?h=350&w=700&hash=8A2BF94EFC475DCE5895D24974C87A25"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -14348,6 +14913,7 @@
    "https://associated-weavers.com/-/media/foundation/products/product-shots/f_nerova/nerova_94_living.jpg",
    "https://associated-weavers.com/-/media/foundation/products/product-shots/f_nerova/nerova_97_living.jpg"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -14427,6 +14993,7 @@
    "https://associated-weavers.com/-/media/foundation/products/product-shots/f_nlifva/nlifva_36_hallway.jpg",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_NLIFVA/NLIFVA_97_HALLWAY.jpg?h=350&w=700&hash=4AB63E13FD2E9B2C0F55940A5DC2B3ED"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -14586,6 +15153,7 @@
    "https://associated-weavers.com/-/media/foundation/products/product-shots/f_nbisva/nbisva_97_bed.jpg",
    "https://associated-weavers.com/-/media/foundation/products/product-shots/f_nbisva/nbisva_98_bed.jpg"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -14823,6 +15391,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_NUMCTA/NUMCTA_98_ROOMSHOT.jpg?h=350&w=700&hash=5AEE86BAE0110BE14F26503047238D73",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_NUMCTA/NUMCTA_99_ROOMSHOT.jpg?h=350&w=700&hash=14B211046E1B3107A2665E41700E6DB0"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -15060,6 +15629,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_OBSETA/OBSETA_97_LIVING.jpg?h=350&w=700&hash=921019E630FD9EE94C7A2E44CEF6D022",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_OBSETA/OBSETA_99_LIVING.jpg?h=350&w=700&hash=6E5E5933F49EE524C200D5C00A78D1F0"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -15431,6 +16001,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_OINOTA/OINOTA_97_BED.jpg?h=350&w=700&hash=D0E1216FE0F2D9A6ACE224064311FD2B",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_OINOTA/OINOTA_99_BED.jpg?h=350&w=700&hash=66CF5EE74BF3E71AEE97EAB3FF4AF419"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -15618,6 +16189,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_OMIAVA/OMIAVA_94_LIVING.jpg?h=350&w=700&hash=1A5C70F0B6282D27A2B17CA7A98D00CB",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_OMIAVA/OMIAVA_97_LIVING.jpg?h=350&w=700&hash=16658E7ED2D1CF706392BDE157203FC1"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -15855,6 +16427,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_OICOTA/OICOTA_97_LIVING.jpg?h=350&w=700&hash=DAC8F6481D52FE814A2D5037438FC1C0",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_OICOTA/OICOTA_99_LIVING.jpg?h=350&w=700&hash=20BDC0BDF71828D5FA1391FBCCD75AA7"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -16078,6 +16651,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_ORINTA/ORINTA_96_BED.jpg?h=350&w=700&hash=F4185F6EFAA97C3F7E12DBDD319DF526",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_ORINTA/ORINTA_97_BED.jpg?h=350&w=700&hash=DC5641DB05E236AAB8903BDE51FB9EA6"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -16289,6 +16863,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_THMATA/THMATA_95_LIVING.jpg?h=350&w=700&hash=415FDE323C5B2B74971724960B5A9C92",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_THMATA/THMATA_98_LIVING.jpg?h=350&w=700&hash=5377CFC4E778C25583EB7A287FDA4BBE"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -16534,6 +17109,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_PNAATA/PNAATA_97_BED.jpg?h=350&w=700&hash=E5F0FA6CF4CB52F8C07861E2CC5813E0",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_PNAATA/PNAATA_99_BED.jpg?h=350&w=700&hash=ABBDD47F88AE711E1A01B6539C12F8F9"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -16771,6 +17347,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_PRLLTA/PRLLTA_98_LIVING.jpg?h=350&w=700&hash=2C2BE30E25233EB88F9FFFC6FA0C9F83",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_PRLLTA/PRLLTA_99_LIVING.jpg?h=350&w=700&hash=91B90B97CB9AFEE846B72C7A3E058FB9"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -16842,6 +17419,7 @@
   "images" : [
    "https://associated-weavers.com/-/media/foundation/products/product-shots/f_pdrava/pdrava_36_roomshot.jpg"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -17101,6 +17679,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_PISCTA/PISCTA_97_ROOMSHOT.jpg?h=350&w=700&hash=1FE8F4F8D9FB67FEC056A616A4D9391C",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_PISCTA/PISCTA_99_ROOMSHOT.jpg?h=350&w=700&hash=70F2C246BE24E964266980A80F07BDA5"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -17172,6 +17751,7 @@
   "images" : [
    "https://associated-weavers.com/-/media/foundation/products/product-shots/f_pcitva/pcitva_97_living.jpg"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -17439,6 +18019,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_PNTSTA/PNTSTA_95_ROOMSHOT.JPG?h=350&w=700&hash=8A81F533D04BA6C20906D8C06E443EA4",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_PNTSTA/PNTSTA_98_ROOMSHOT.jpg?h=350&w=700&hash=8A3577F793740659E10A6C7D1B2298A2"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -17558,6 +18139,7 @@
    "https://associated-weavers.com/-/media/foundation/products/product-shots/f_prusva/prusva_84_living.jpg",
    "https://associated-weavers.com/-/media/foundation/products/product-shots/f_prusva/prusva_94_living.jpg"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -17778,7 +18360,7 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_PSTITB/PSTITB_05_BED.jpg?h=350&w=700&hash=88239FE7DC5EE0C5E046F2E0F705CAB6",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_PSTITB/PSTITB_07_HALLWAY.jpg?h=350&w=700&hash=F2779994CD7005959342FBA75BE3D7ED",
@@ -17795,7 +18377,29 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_PSTITB/PSTITB_95_BED.jpg?h=350&w=700&hash=763B2C785D1192DF7343698D1248F419",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_PSTITB/PSTITB_99_HALLWAY.jpg?h=350&w=700&hash=AFF35296CB5DAC57F49BD6B7EA627DE7"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Saxony"
+   },
+   {
+    "label" : "Backing",
+    "value" : "FusionBac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "11"
+   },
+   {
+    "label" : "Total height",
+    "value" : "13,5 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "4/5"
+   }
+  ],
   "themeCode" : "F_PSTITB",
   "url" : "https://associated-weavers.com/en/carpet-promenade-05"
  },
@@ -17926,6 +18530,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_PULSVA/PULSVA_94_ROOMSHOT.jpg?h=350&w=700&hash=D5E5378633ACE31E914CC8C41F74AC38",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_PULSVA/PULSVA_97_ROOMSHOT.jpg?h=350&w=700&hash=F0EAD360C08CF09C801E9633E805E925"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -18146,6 +18751,7 @@
   "images" : [
    "https://associated-weavers.com/"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -18209,6 +18815,7 @@
   "images" : [
    "https://associated-weavers.com/-/media/foundation/products/product-shots/f_raceva/raceva_97_bed.jpg"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -18398,6 +19005,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_RDDATA/RDDATA_95_LIVING.jpg?h=350&w=700&hash=D350B03BEBA2267FABD69FF5EA6E9FA2",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_RDDATA/RDDATA_97_LIVING.jpg?h=350&w=700&hash=DEE166EF8392E00EF7F15B013D018681"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -18527,6 +19135,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/W_RRAMGA/RRAMGA_49_HALLWAY.jpg?h=350&w=700&hash=2F21294E928C59A2028D1AEDFDF0B232",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/W_RRAMGA/RRAMGA_90_HALLWAY.jpg?h=350&w=700&hash=A16FD8288F58EAF21C958C6C9D6F6111"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -18790,6 +19399,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_REVITA/REVITA_95_ROOMSHOT.JPG?h=350&w=700&hash=CCE08DF5670BC14FC4682912B591048C",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_REVITA/REVITA_98_ROOMSHOT.jpg?h=350&w=700&hash=C05AB26076D36AEBBEDC7A58B691F886"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -19031,6 +19641,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_RGDETA/RGDETA_97_LIVING.jpg?h=350&w=700&hash=EEC348BB39FC023FAEA7366ABC09C396",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_RGDETA/RGDETA_99_LIVING.jpg?h=350&w=700&hash=D98CE7A4163445CB78EEA6E7A500DDE5"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -19146,6 +19757,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_RUAHVA/RUAHVA_84_LIVING.jpg?h=350&w=700&hash=9385A265C726B67BB9C780EDFF82E230",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_RUAHVA/RUAHVA_94_LIVING.jpg?h=350&w=700&hash=877AB300EEE03B8D4B7FF8EE5C906A99"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -19383,6 +19995,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_RUBITA/RUBITA_97_ROOMSHOT.jpg?h=350&w=700&hash=01967383F8274A88E96FE18772EB6B3A",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_RUBITA/RUBITA_99_ROOMSHOT.jpg?h=350&w=700&hash=A043057184146FDC75D69242DB5F5481"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -19579,7 +20192,7 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SNMITA/SNMITA_03_LIVING.jpg?h=350&w=700&hash=F618E1561D776F2F929E3126C1DA1A8A",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SNMITA/SNMITA_05_LIVING.jpg?h=350&w=700&hash=8DF0960A55F14B4EC14A9E6F90DC91DD",
@@ -19594,7 +20207,29 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SNMITA/SNMITA_96_LIVING.jpg?h=350&w=700&hash=F07C9991EB53112C4152417EAED53578",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SNMITA/SNMITA_97_LIVING.jpg?h=350&w=700&hash=4E077EE5C67A33CA740622F5E1C45482"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Frieze"
+   },
+   {
+    "label" : "Backing",
+    "value" : "FusionBac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "15.5"
+   },
+   {
+    "label" : "Total height",
+    "value" : "18,0 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "4/5"
+   }
+  ],
   "themeCode" : "F_SNMITA",
   "url" : "https://associated-weavers.com/en/carpet-sanmiguel-03"
  },
@@ -19749,6 +20384,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SNFEVA/SNFEVA_94_BED.jpg?h=350&w=700&hash=D3A7D437962C4306D96482B6480720D8",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SNFEVA/SNFEVA_97_BED.jpg?h=350&w=700&hash=4C2B10E2A5B02A83A65FA200B26E8BF9"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -19897,7 +20533,7 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SNOOTA/SNOOTA_30_OFFICE.jpg?h=350&w=700&hash=7E50EBF5BD1D9F44B7328E7E1B1E6EE4",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SNOOTA/SNOOTA_32_OFFICE.jpg?h=350&w=700&hash=07A1EC204A2EFD6C41F31ADB919E6D4E",
@@ -19908,7 +20544,29 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SNOOTA/SNOOTA_90_OFFICE.jpg?h=350&w=700&hash=92B2F7F455581C2728A610D69B951573",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SNOOTA/SNOOTA_92_OFFICE.jpg?h=350&w=700&hash=5D4F1BAF715B6F7741DEFB6D6EB71E2D"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Loop pile"
+   },
+   {
+    "label" : "Backing",
+    "value" : "FusionBac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "8"
+   },
+   {
+    "label" : "Total height",
+    "value" : "12,0 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "4/5"
+   }
+  ],
   "themeCode" : "F_SNOOTA",
   "url" : "https://associated-weavers.com/en/carpet-sarno-30"
  },
@@ -20027,6 +20685,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SVANVA/SVANVA_84_LIVING.jpg?h=350&w=700&hash=D6D9A18B03DEBBE2EA439880876CF37C",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SVANVA/SVANVA_97_LIVING.jpg?h=350&w=700&hash=34628DD6356F599972C2F5E8A69BBAEC"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -20098,6 +20757,7 @@
   "images" : [
    "https://associated-weavers.com/-/media/foundation/products/product-shots/f_scanva/scanva_39_bed.jpg"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -20365,6 +21025,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SNEWTA/SNEWTA_97_LIVING.jpg?h=350&w=700&hash=34C7B8E695DF58F53EB80F40CED87601",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SNEWTA/SNEWTA_99_LIVING.jpg?h=350&w=700&hash=7C165F0EDD3E97962B65B0845BE5159A"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -20619,6 +21280,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SESUTA/SESUTA_98_BED.jpg?h=350&w=700&hash=948032EBCEAC45C48C2C3946DDF32076",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SESUTA/SESUTA_99_BED.jpg?h=350&w=700&hash=7D663B5EB6EF920375EAF3CCD7FEEFAE"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -20769,6 +21431,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SSNWTA/SSNWTA_97_LIVING.jpg?h=350&w=700&hash=51CB81D8DEDBF7B17A4025B69444B455",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SSNWTA/SSNWTA_99_LIVING.jpg?h=350&w=700&hash=A92A909EAF3A4C6138D612055AD4145F"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -21010,6 +21673,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SENTTA/SENTTA_95_BED.jpg?h=350&w=700&hash=D1A62011AEBE69DD571EE78D35A4FDAB",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SENTTA/SENTTA_98_BED.jpg?h=350&w=700&hash=FC13E838D368B9884B40CD4877B56E0F"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -21261,7 +21925,7 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SEPTTA/SEPTTA_03_LIVING.JPG?h=350&w=700&hash=8CD9CCC8970E5B96A71927941BC6EDB3",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SEPTTA/SEPTTA_31_LIVING.JPG?h=350&w=700&hash=1367FD861B7ACC500E7FC990E7FAD5D6",
@@ -21279,7 +21943,29 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SEPTTA/SEPTTA_96_LIVING.JPG?h=350&w=700&hash=D60776764098965AA7A25A7792E16690",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SEPTTA/SEPTTA_97_LIVING.JPG?h=350&w=700&hash=83EEA5043620A35CD8373D38F9A4053C"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Frieze"
+   },
+   {
+    "label" : "Backing",
+    "value" : "FusionBac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "10"
+   },
+   {
+    "label" : "Total height",
+    "value" : "12,5 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "3/4/5"
+   }
+  ],
   "themeCode" : "F_SEPTTA",
   "url" : "https://associated-weavers.com/en/carpet-septimus-03"
  },
@@ -21501,6 +22187,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SRPHTA/SRPHTA_97_ROOMSHOT.jpg?h=350&w=700&hash=6E71E17A2DB134EC58FDDFECF7FF126F",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SRPHTA/SRPHTA_99_ROOMSHOT.jpg?h=350&w=700&hash=8ECA92BE0515AD50332AF80BC6701DDB"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -21725,7 +22412,7 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SITYTA/SITYTA_28_BED.jpg?h=350&w=700&hash=1F78BB7757D6EB7D739415350CD4EC6E",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SITYTA/SITYTA_37_BED.jpg?h=350&w=700&hash=7D0D9E4FF2E4FF883819A1AD2BB1B4E0",
@@ -21742,7 +22429,29 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SITYTA/SITYTA_97_LIVING.jpg?h=350&w=700&hash=DF22E0D4957F32E93F35373E1996C44F",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SITYTA/SITYTA_99_LIVING.jpg?h=350&w=700&hash=109359F0900CB8DDFA2EC241169EF7C8"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Frieze"
+   },
+   {
+    "label" : "Backing",
+    "value" : "FusionBac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "15.5"
+   },
+   {
+    "label" : "Total height",
+    "value" : "18,0 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "4/5"
+   }
+  ],
   "themeCode" : "F_SITYTA",
   "url" : "https://associated-weavers.com/en/carpet-serenity-28"
  },
@@ -21925,6 +22634,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SERPTA/SERPTA_98_ROOMSHOT.jpg?h=350&w=700&hash=E68EDE62C99D8C866E8D1345784B435F",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SERPTA/SERPTA_99_ROOMSHOT.jpg?h=350&w=700&hash=22D3A317710B958217577C5E60920EED"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -22172,7 +22882,7 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SVUSTA/SVUSTA_03_LIVING.JPG?h=350&w=700&hash=C5579BF8E5CECEAE5E3A5438720A794A",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SVUSTA/SVUSTA_31_LIVING.JPG?h=350&w=700&hash=27DED683DDA12D75D913B95C1C545896",
@@ -22190,7 +22900,29 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SVUSTA/SVUSTA_96_LIVING.JPG?h=350&w=700&hash=7FCC6F5990AF130925134D85979B4A78",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SVUSTA/SVUSTA_97_LIVING.JPG?h=350&w=700&hash=1B2811511E826C8BAE23ED746CFC4C9A"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Frieze"
+   },
+   {
+    "label" : "Backing",
+    "value" : "FusionBac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "16"
+   },
+   {
+    "label" : "Total height",
+    "value" : "18,5 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "3/4/5"
+   }
+  ],
   "themeCode" : "F_SVUSTA",
   "url" : "https://associated-weavers.com/en/carpet-severus-03"
  },
@@ -22279,6 +23011,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SIRRVA/SIRRVA_97_LIVING.jpg?h=350&w=700&hash=9883EE1D09F572C03D053B38F8B4FCF5",
    "https://associated-weavers.com/-/media/foundation/products/product-shots/f_sirrva/sirrva_98_living.jpg"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -22520,6 +23253,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SSILTA/SSILTA_97_BED.jpg?h=350&w=700&hash=6B3287988A646D362D09050B9DA56F4A",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SSILTA/SSILTA_99_BED.jpg?h=350&w=700&hash=1BD4FD17BE827D785D5927727C6E5F10"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -22732,7 +23466,7 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SINWTA/SINWTA_03_ROOMSHOT.jpg?h=350&w=700&hash=CDC3BFF62EAD9D9E99953582FD795E66",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SINWTA/SINWTA_05_ROOMSHOT.jpg?h=350&w=700&hash=E02B611A29BD7A28D50134C1D0C9553E",
@@ -22747,7 +23481,29 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SINWTA/SINWTA_96_BED.jpg?h=350&w=700&hash=DDBF01F54F32C595B4C253F82A36EA53",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SINWTA/SINWTA_97_BED.jpg?h=350&w=700&hash=E54CE3766FD91850BE4CB56CE37ACA05"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Frieze"
+   },
+   {
+    "label" : "Backing",
+    "value" : "FusionBac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "18"
+   },
+   {
+    "label" : "Total height",
+    "value" : "20,5 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "3/4/5"
+   }
+  ],
   "themeCode" : "F_SINWTA",
   "url" : "https://associated-weavers.com/en/carpet-sirius-03"
  },
@@ -22854,7 +23610,7 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SKEYTA/SKEYTA_03_OFFICE.jpg?h=350&w=700&hash=8935E1E8BBA15439D2A43714DCB7A2E8",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SKEYTA/SKEYTA_31_OFFICE.jpg?h=350&w=700&hash=363C4D52F1F9B868B05B3CAD89A4F171",
@@ -22865,7 +23621,29 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SKEYTA/SKEYTA_92_OFFICE.jpg?h=350&w=700&hash=41710E5B1289DD67F6E8022A4B425308",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SKEYTA/SKEYTA_94_OFFICE.jpg?h=350&w=700&hash=58FAE6D192F4FEB17EA994B16A8E8D61"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Structured loop pile"
+   },
+   {
+    "label" : "Backing",
+    "value" : "Flextex Plus Actionbac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "6"
+   },
+   {
+    "label" : "Total height",
+    "value" : "8,0 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "4/5"
+   }
+  ],
   "themeCode" : "F_SKEYTA",
   "url" : "https://associated-weavers.com/en/carpet-skye-03"
  },
@@ -22972,7 +23750,7 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SKEYVA/SKEYVA_03_OFFICE.jpg?h=350&w=700&hash=019CE3E98E69D5663105D04C81AA3A21",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SKEYVA/SKEYVA_31_OFFICE.jpg?h=350&w=700&hash=30DCF11DA039BF5430B1DD0B5D682EB7",
@@ -22983,7 +23761,29 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SKEYVA/SKEYVA_92_OFFICE.jpg?h=350&w=700&hash=E05A1C5A756140943AD6D8F891CA420A",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SKEYVA/SKEYVA_94_OFFICE.jpg?h=350&w=700&hash=6D1A8B44FB82E913997014585ADF042D"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Structured loop pile"
+   },
+   {
+    "label" : "Backing",
+    "value" : "Recytex Plus feltbac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "6"
+   },
+   {
+    "label" : "Total height",
+    "value" : "9,7 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "4/5"
+   }
+  ],
   "themeCode" : "F_SKEYVA",
   "url" : "https://associated-weavers.com/en/carpet-skye-03"
  },
@@ -23009,6 +23809,7 @@
   "images" : [
    "https://associated-weavers.com/-/media/foundation/products/product-shots/f_smciva/smciva_97_bed.jpg"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -23209,7 +24010,7 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SHOOTA/SHOOTA_05_ROOMSHOT.jpg?h=350&w=700&hash=BEE82D84942892873D7A8FD13F993E0B",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SHOOTA/SHOOTA_31_ROOMSHOT.jpg?h=350&w=700&hash=14DC5F39E0E0A96EDEFDF4D14B335611",
@@ -23224,7 +24025,29 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SHOOTA/SHOOTA_97_LIVING.jpg?h=350&w=700&hash=CBEE01D9A62BCAE06E2C9B872AF040DA",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SHOOTA/SHOOTA_98_LIVING.jpg?h=350&w=700&hash=83375BC08B711D63CFDC6A6002197E88"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Frieze"
+   },
+   {
+    "label" : "Backing",
+    "value" : "FusionBac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "9"
+   },
+   {
+    "label" : "Total height",
+    "value" : "11,5 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "4/5"
+   }
+  ],
   "themeCode" : "F_SHOOTA",
   "url" : "https://associated-weavers.com/en/carpet-soho-05"
  },
@@ -23420,6 +24243,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SOLATA/SOLATA_95_ROOMSHOT.jpg?h=350&w=700&hash=8E6D67252ADC28A7A9970DB3A316506D",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SOLATA/SOLATA_97_ROOMSHOT.jpg?h=350&w=700&hash=FED3882A0BC56C1BEC999E86B083BF9A"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -23665,6 +24489,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SNRITA/SNRITA_95_ROOMSHOT.jpg?h=350&w=700&hash=09A26080AD2C0EBB06DE86EC0E844FCC",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SNRITA/SNRITA_97_ROOMSHOT.jpg?h=350&w=700&hash=3A9DC2A90ED076CC0067C6C073578407"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -23889,7 +24714,7 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SPHITB/SPHITB_05_BED.jpg?h=350&w=700&hash=424A746C3127D92AE4197F222FAB9143",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SPHITB/SPHITB_07_HALLWAY.jpg?h=350&w=700&hash=F7C16638D2B1C2AD2925718709930BBC",
@@ -23906,7 +24731,29 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SPHITB/SPHITB_95_HALLWAY.jpg?h=350&w=700&hash=AC7C8AAC715B4B5145A661F2F23C6DD0",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SPHITB/SPHITB_99_BED.jpg?h=350&w=700&hash=F2D9908EE4C477311415CE6CD39EB745"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Saxony"
+   },
+   {
+    "label" : "Backing",
+    "value" : "FusionBac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "16"
+   },
+   {
+    "label" : "Total height",
+    "value" : "18,5 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "4/5"
+   }
+  ],
   "themeCode" : "F_SPHITB",
   "url" : "https://associated-weavers.com/en/carpet-sophistication-05"
  },
@@ -24016,6 +24863,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SPKLTA/SPKLTA_97_LIVING.jpg?h=350&w=700&hash=79D70D7609F20612B1E35F1EF1CC7BA2",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SPKLTA/SPKLTA_98_LIVING.jpg?h=350&w=700&hash=CA841B7D230190B2AB25A08632E3C12A"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -24113,6 +24961,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/W_STPZVA/STPZVA_44_HALLWAY.jpg?h=350&w=700&hash=3FBEAF907CF580568342865A7218FB0E",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/W_STPZVA/STPZVA_94_HALLWAY.jpg?h=350&w=700&hash=5D112C9365DFBB9105ECB5977B8862AB"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -24313,7 +25162,7 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SWEETB/SWEETB_24_LIVING.jpg?h=350&w=700&hash=C1A54B6498E55B62405ECFF8092CD127",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SWEETB/SWEETB_32_LIVING.jpg?h=350&w=700&hash=9B75B9C95E08E64594B3351FAADEEDC7",
@@ -24324,7 +25173,29 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SWEETB/SWEETB_96_LIVING.jpg?h=350&w=700&hash=A46C1644C129454C77598C4EF04B42AE",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SWEETB/SWEETB_97_LIVING.jpg?h=350&w=700&hash=CB496F90D67DCF0EECA6C106331B0260"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Frieze"
+   },
+   {
+    "label" : "Backing",
+    "value" : "FusionBac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "8"
+   },
+   {
+    "label" : "Total height",
+    "value" : "11,0 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "4/5"
+   }
+  ],
   "themeCode" : "F_SWEETB",
   "url" : "https://associated-weavers.com/en/carpet-stainawaytweed-19"
  },
@@ -24494,6 +25365,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_STLRTA/STLRTA_96_ROOMSHOT.jpg?h=350&w=700&hash=44C812E7B8E49D97AF48062045385EA7",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_STLRTA/STLRTA_97_ROOMSHOT.jpg?h=350&w=700&hash=52FB259C1E7465F2D7100E5A48E3FBB9"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -24731,6 +25603,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SRADTA/SRADTA_97_LIVING.jpg?h=350&w=700&hash=3F1B3E7347609DAD2B6DB4064AC49839",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SRADTA/SRADTA_99_LIVING.jpg?h=350&w=700&hash=7698A86A5CF15945A1D01AD8EA126C98"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -24846,6 +25719,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/W_STAAGA/STAAGA_88_ROOMSHOT.jpg?h=350&w=700&hash=DEA584D4FCFA2437C38CA87C5DF63FA8",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/W_STAAGA/STAAGA_97_ROOMSHOT.jpg?h=350&w=700&hash=C820E3B5AC88B1C9065398E4974E3725"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -25045,6 +25919,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SUBLTA/SUBLTA_96_ROOMSHOT.jpg?h=350&w=700&hash=1EF9F9C8859DA6BC182C1807E0CF5C75",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SUBLTA/SUBLTA_97_ROOMSHOT.jpg?h=350&w=700&hash=91022B1A9C680BDA44F6BE0CB6F0AEFB"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -25261,7 +26136,7 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SUTYTA/SUTYTA_09_LIVING.jpg?h=350&w=700&hash=BED772B5C79E7BAABD14AF44F7D0F65B",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SUTYTA/SUTYTA_16_LIVING.jpg?h=350&w=700&hash=F77FE17CC6DF961E395689664B36499B",
@@ -25278,7 +26153,29 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SUTYTA/SUTYTA_97_BED.jpg?h=350&w=700&hash=9803F90CED34D4ECA3C8D860B3CDD0D2",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SUTYTA/SUTYTA_98_LIVING.jpg?h=350&w=700&hash=36A3E25DCDF57751C8A8B3B3137ADD83"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Frieze"
+   },
+   {
+    "label" : "Backing",
+    "value" : "FusionBac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "11"
+   },
+   {
+    "label" : "Total height",
+    "value" : "13,5 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "4/5"
+   }
+  ],
   "themeCode" : "F_SUTYTA",
   "url" : "https://associated-weavers.com/en/carpet-subtlety-09"
  },
@@ -25331,6 +26228,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SUUAFA/SUUAFA_93_HALLWAY.jpg?h=350&w=700&hash=094E9F1521698B384D888BB53CFC3CFE",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SUUAFA/SUUAFA_98_HALLWAY.jpg?h=350&w=700&hash=934AE997C6043645D719DAAA763C713B"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -25568,6 +26466,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SUMMTA/SUMMTA_98_ROOMSHOT.jpg?h=350&w=700&hash=34B626B501C99DCADE2F08029C5AC61A",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SUMMTA/SUMMTA_99_ROOMSHOT.jpg?h=350&w=700&hash=2EA56DAB8F85A14FD0A17650B29635AA"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -25779,6 +26678,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SPBETA/SPBETA_95_ROOMSHOT.jpg?h=350&w=700&hash=5E283A992972C102F62FE8D98D1D6254",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SPBETA/SPBETA_97_ROOMSHOT.jpg?h=350&w=700&hash=1C4769DB1A22262972B28FB529CF0091"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -25955,7 +26855,7 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SRSETA/SRSETA_20_OFFICE.jpg?h=350&w=700&hash=0E185339D5EE6986DDE6ED131DD997AC",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SRSETA/SRSETA_27_OFFICE.jpg?h=350&w=700&hash=89BE0F82A89ECAEAFA232FB3AC5A75A1",
@@ -25968,7 +26868,29 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SRSETA/SRSETA_98_OFFICE.JPG?h=350&w=700&hash=3B08F7B1DAAC0741DFD4F24C4A5F8DB0",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SRSETA/SRSETA_99_OFFICE.jpg?h=350&w=700&hash=6910601B75DB6DB5C8CA28D79C799E3E"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Saxony"
+   },
+   {
+    "label" : "Backing",
+    "value" : "FusionBac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "12"
+   },
+   {
+    "label" : "Total height",
+    "value" : "14,5 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "4/5"
+   }
+  ],
   "themeCode" : "F_SRSETA",
   "url" : "https://associated-weavers.com/en/carpet-surprise-20"
  },
@@ -26164,6 +27086,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SUCETA/SUCETA_97_BED.jpg?h=350&w=700&hash=6B66D0EB6BD237D4F2B00A6E2738D81C",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_SUCETA/SUCETA_98_BED.jpg?h=350&w=700&hash=6EDB783E8AB384134B2E51EB0EE3816F"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -26235,6 +27158,7 @@
   "images" : [
    "https://associated-weavers.com/-/media/foundation/products/product-shots/f_swtova/swtova_26_bed.jpg"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -26450,6 +27374,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_TARSTA/TARSTA_96_ROOMSHOT.jpg?h=350&w=700&hash=3C2FC8312BA51457608E454BE6430EDF",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_TARSTA/TARSTA_99_ROOMSHOT.jpg?h=350&w=700&hash=9ACF7E7EAC37B0584B9E3B58831A5891"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -26670,7 +27595,7 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_TMTATA/TMTATA_03_BED.jpg?h=350&w=700&hash=D08D326C26304B33B590272C495B2387",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_TMTATA/TMTATA_07_LIVING.jpg?h=350&w=700&hash=1D572C915E327FB5B649CBD20CA6EC56",
@@ -26683,7 +27608,29 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_TMTATA/TMTATA_90_HALLWAY.jpg?h=350&w=700&hash=B089FC57171B8F8C7198293C725D35FA",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_TMTATA/TMTATA_96_LIVING.jpg?h=350&w=700&hash=0B8EF1634668692931F4406E36DDE62B"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Frieze"
+   },
+   {
+    "label" : "Backing",
+    "value" : "Flextex Plus Actionbac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "15"
+   },
+   {
+    "label" : "Total height",
+    "value" : "17,5 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "4/5"
+   }
+  ],
   "themeCode" : "F_TMTATA",
   "url" : "https://associated-weavers.com/en/carpet-temptation-03"
  },
@@ -26879,6 +27826,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_TSSATA/TSSATA_95_ROOMSHOT.jpg?h=350&w=700&hash=7280476760167477E8F9653F698554E1",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_TSSATA/TSSATA_97_ROOMSHOT.jpg?h=350&w=700&hash=08D5AD838302546E2B18D74D5DCC3121"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -26994,6 +27942,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/W_TSRAGA/TSRAGA_95_ROOMSHOT.jpg?h=350&w=700&hash=2A668E6CF83D9AB6F80DFF6E8E05205C",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/W_TSRAGA/TSRAGA_97_ROOMSHOT.jpg?h=350&w=700&hash=F9CFF5B05836F75EC620A2E69DE9627D"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -27118,7 +28067,7 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_TIBRTA/TIBRTA_30_ROOMSHOT.jpg?h=350&w=700&hash=DC14953A7BC0F04B1D29110C77F3B265",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_TIBRTA/TIBRTA_32_ROOMSHOT.jpg?h=350&w=700&hash=A2D91899C30BB4F707212415E563A4EB",
@@ -27127,7 +28076,29 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_TIBRTA/TIBRTA_39_ROOMSHOT.jpg?h=350&w=700&hash=B93ED0A3C590E7844555FDF767C200D0",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_TIBRTA/TIBRTA_90_ROOMSHOT.jpg?h=350&w=700&hash=F36CA6C2D451E9A27DE24D18BA8866BC"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Structured loop pile"
+   },
+   {
+    "label" : "Backing",
+    "value" : "FusionBac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "8"
+   },
+   {
+    "label" : "Total height",
+    "value" : "11,5 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "4/5"
+   }
+  ],
   "themeCode" : "F_TIBRTA",
   "url" : "https://associated-weavers.com/en/carpet-tiber-30"
  },
@@ -27294,7 +28265,7 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_TIUSTA/TIUSTA_02_BED.jpg?h=350&w=700&hash=4DD3D6E427B28D90D6DF241CC7B2A108",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_TIUSTA/TIUSTA_03_BED.jpg?h=350&w=700&hash=86084E5575EA7665DC2D1253AFD0F921",
@@ -27309,7 +28280,29 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_TIUSTA/TIUSTA_96_BED.jpg?h=350&w=700&hash=693B6083DC9B98639DA276FC41B1E6D1",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_TIUSTA/TIUSTA_97_BED.jpg?h=350&w=700&hash=A35C373C0BA168788C2A6CC804942530"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Frieze"
+   },
+   {
+    "label" : "Backing",
+    "value" : "FusionBac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "14.5"
+   },
+   {
+    "label" : "Total height",
+    "value" : "17,0 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "3/4/5"
+   }
+  ],
   "themeCode" : "F_TIUSTA",
   "url" : "https://associated-weavers.com/en/carpet-tiberius-02"
  },
@@ -27359,6 +28352,7 @@
    "https://associated-weavers.com/-/media/foundation/products/product-shots/f_tibeva/tibeva_49_living.jpg",
    "https://associated-weavers.com/-/media/foundation/products/product-shots/f_tibeva/tibeva_90_living.jpg"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -27583,7 +28577,7 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_TGRITA/TGRITA_20_BED.jpg?h=350&w=700&hash=980BF75F234D6742B033A72291130734",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_TGRITA/TGRITA_30_BED.jpg?h=350&w=700&hash=C7039337C31FBB9A36EE9E78BA589B76",
@@ -27600,7 +28594,29 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_TGRITA/TGRITA_98_BED.jpg?h=350&w=700&hash=5703B19432F25D6E1D6DB2136F8FE91C",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_TGRITA/TGRITA_99_BED.jpg?h=350&w=700&hash=C592E1063618746FA7C62635BDD3C3FC"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Frieze"
+   },
+   {
+    "label" : "Backing",
+    "value" : "FusionBac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "12"
+   },
+   {
+    "label" : "Total height",
+    "value" : "14,5 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "4/5"
+   }
+  ],
   "themeCode" : "F_TGRITA",
   "url" : "https://associated-weavers.com/en/carpet-tigris-20"
  },
@@ -27679,6 +28695,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_TRQLTA/TRQLTA_94_ROOMSHOT.jpg?h=350&w=700&hash=F1978F6C1F4B45E99BE5C705A0FABE24",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_TRQLTA/TRQLTA_97_ROOMSHOT.jpg?h=350&w=700&hash=A98EA6AC974A20CAD0473D956373AF5F"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -27794,6 +28811,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/W_TRAOGA/TRAOGA_84_ROOMSHOT.jpg?h=350&w=700&hash=99A7ECD93DC2C2A81AC69F063EE977C2",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/W_TRAOGA/TRAOGA_97_ROOMSHOT.jpg?h=350&w=700&hash=5BC1AF87006FC06719A3698118C6068C"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -27877,6 +28895,7 @@
    "https://associated-weavers.com/-/media/foundation/products/product-shots/w_ticega/ticega_37_hallway.jpg",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/W_TICEGA/TICEGA_98_HALLWAY.jpg?h=350&w=700&hash=F02B5D94293044D12B66B64E9E9B6D7A"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -28077,7 +29096,7 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_TBECTA/TBECTA_05_LIVING.jpg?h=350&w=700&hash=7209869B4DAB1C4E225DA6BB18D91A42",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_TBECTA/TBECTA_31_LIVING.jpg?h=350&w=700&hash=D1AFE84B3FCC667B59AF26E91C471AD9",
@@ -28092,7 +29111,29 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_TBECTA/TBECTA_97_LIVING.jpg?h=350&w=700&hash=4B2A085FDBA7EA4987EC50379BAC4469",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_TBECTA/TBECTA_98_LIVING.jpg?h=350&w=700&hash=59E70E9C6A9DBFC7599BF3B67BF5D1BE"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Frieze"
+   },
+   {
+    "label" : "Backing",
+    "value" : "FusionBac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "12"
+   },
+   {
+    "label" : "Total height",
+    "value" : "14,5 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "4/5"
+   }
+  ],
   "themeCode" : "F_TBECTA",
   "url" : "https://associated-weavers.com/en/carpet-tribeca-05"
  },
@@ -28271,7 +29312,7 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_TUTXVA/TUTXVA_03_BED.jpg?h=350&w=700&hash=3E9F1F272D718DD0E9F6D49FEC8B002E",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_TUTXVA/TUTXVA_07_LIVING.jpg?h=350&w=700&hash=397FA4F902F6DD717DB2208E13D37762",
@@ -28288,7 +29329,29 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_TUTXVA/TUTXVA_95_HALLWAY.jpg?h=350&w=700&hash=2DE17DBCF69BB7FAD864695A7A95F459",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_TUTXVA/TUTXVA_96_LIVING.jpg?h=350&w=700&hash=5AF5A0AB80ECDFC0079E75B53E90A9E6"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Frieze"
+   },
+   {
+    "label" : "Backing",
+    "value" : "Recytex Plus feltbac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "6"
+   },
+   {
+    "label" : "Total height",
+    "value" : "9,5 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "4/5"
+   }
+  ],
   "themeCode" : "F_TUTXVA",
   "url" : "https://associated-weavers.com/en/carpet-tuftextwist-03"
  },
@@ -28467,7 +29530,7 @@
    }
   ],
   "datasheetPdf" : null,
-  "description" : "",
+  "description" : null,
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_TUTXTA/TUTXTA_03_BED.jpg?h=350&w=700&hash=4979E6B3F906EC8FAAA90C4F949040E2",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_TUTXTA/TUTXTA_07_LIVING.jpg?h=350&w=700&hash=ADCD32302AC08402FD536C011AC38EF8",
@@ -28484,7 +29547,29 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_TUTXTA/TUTXTA_95_HALLWAY.jpg?h=350&w=700&hash=B7DD0917CABB2BAC4851204BDF902B40",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_TUTXTA/TUTXTA_96_LIVING.jpg?h=350&w=700&hash=9585E8E03BD3C01BD6D966278D87C124"
   ],
-  "specs" : [],
+  "pagePublished" : false,
+  "specs" : [
+   {
+    "label" : "Texture",
+    "value" : "Frieze"
+   },
+   {
+    "label" : "Backing",
+    "value" : "Flextex Plus Actionbac"
+   },
+   {
+    "label" : "Pile height (mm)",
+    "value" : "6"
+   },
+   {
+    "label" : "Total height",
+    "value" : "8,5 millimetres"
+   },
+   {
+    "label" : "Widths (m)",
+    "value" : "4/5"
+   }
+  ],
   "themeCode" : "F_TUTXTA",
   "url" : "https://associated-weavers.com/en/carpet-tuftextwist-03"
  },
@@ -28680,6 +29765,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_URBTTA/URBTTA_97_ROOMSHOT.jpg?h=350&w=700&hash=4413F245B0FFD13FE65503EF1F946256",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_URBTTA/URBTTA_99_ROOMSHOT.jpg?h=350&w=700&hash=1DB328DB5FFD718E8FE751CA5000CC2A"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -28917,6 +30003,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_VRUNTA/VRUNTA_97_LIVING.JPG?h=350&w=700&hash=378E8CFA1725C261916B74A0413F2B5B",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_VRUNTA/VRUNTA_99_LIVING.JPG?h=350&w=700&hash=EF8921001F298DB894CB1A35AEF54CFC"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -29097,6 +30184,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_VCORVA/VCORVA_94_LIVING.jpg?h=350&w=700&hash=38C261046FE4E436FD790850EE0F878B",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_VCORVA/VCORVA_97_LIVING.jpg?h=350&w=700&hash=2863E7A80574FD3CD3E4842EC0280ACE"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -29342,6 +30430,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_VERDTA/VERDTA_97_ROOMSHOT.jpg?h=350&w=700&hash=BA02547523688C11FA2DC276CC689EA8",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_VERDTA/VERDTA_99_ROOMSHOT.jpg?h=350&w=700&hash=6F6BB082E79C02F31408688AC1EEED76"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -29445,6 +30534,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_VIVAVA/VIVAVA_91_ROOMSHOT.jpg?h=350&w=700&hash=E20A671B1C48A5D30ABD98C96B026D79",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_VIVAVA/VIVAVA_95_ROOMSHOT.jpg?h=350&w=700&hash=CA011FC720C5B48FE8F5AD58514F0190"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -29566,6 +30656,7 @@
   "images" : [
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/W_WLTNVA/WLTNVA_95_HALLWAY.jpg?h=350&w=700&hash=AF1CD5265BFE47F96D106D0548F5FEB1"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -29805,6 +30896,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_YARATA/YARATA_97_BED.JPG?h=350&w=700&hash=D353389CA456EA280F304E4F1E053C75",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_YARATA/YARATA_98_BED.JPG?h=350&w=700&hash=E9387DBE1F2B1B52250CA049A55685A8"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",
@@ -30046,6 +31138,7 @@
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_YKONTA/YKONTA_98_LIVING.jpg?h=350&w=700&hash=3566E52AA2E1C7B10A24255DE7691BE1",
    "https://associated-weavers.com/-/media/Foundation/Products/Product-Shots/F_YKONTA/YKONTA_99_LIVING.jpg?h=350&w=700&hash=81B111C69C99269F48B6CFB3A7FD7C86"
   ],
+  "pagePublished" : true,
   "specs" : [
    {
     "label" : "Widths (m)",

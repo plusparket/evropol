@@ -10,6 +10,8 @@ my $R=root();
 my %file=(Betap=>['betap.json'], BIG=>['carus.json','beaulieu.json'], AW=>['associated-weavers.json'], ITC=>['itc.json']);
 my %data; for my $fs (values %file) { for my $f (@$fs) { $data{$f}//= -s "$R/$f" ? read_json("$R/$f") : [] } }
 sub norm { my $s=lc($_[0]//''); $s=~s/[^a-z0-9]+//g; return $s }
+my %ALIAS=(naturedesign=>"design");
+sub akey { my $k=norm($_[0]); return $ALIAS{$k}//$k }
 sub ncode { my $s=$_[0]//''; $s=~s/^0+(?=\d)//; return $s }
 
 sub code_match {
@@ -37,7 +39,7 @@ while (my $line=<$L>) {
         my ($hit,@colls);
         for my $f (@{$file{$brand}}) {
             for my $c (@{$data{$f}}) {
-                next unless norm($c->{collection}) eq norm($coll) || ($brand eq 'BIG' && norm($c->{collection}) eq norm($coll));
+                next unless norm($c->{collection}) eq akey($coll);
                 push @colls,[$c,$f];
             }
         }
@@ -66,7 +68,7 @@ while (my $line=<$L>) {
         if (@colls) {
             my ($c,$f)=@{$colls[0]};
             @e{qw(collection siteJson collectionUrl)}=($c->{collection},$f,$c->{url});
-            $e{note}='collection is on the site, this colour is not. Site colours: '.join(', ',map {$_->{code}} @{$c->{colours}});
+            $e{note}='collection is on the site, this colour is not. Site colours: '.join(', ',map {$_->{code}//"?"} @{$c->{colours}});
         } else { $e{note}='collection not found on the sites checked' }
         # Same-named collection under another brand, with this code.
         my @other;

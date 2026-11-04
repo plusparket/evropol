@@ -2,7 +2,7 @@
 # raw/associated-weavers/_api-*.json + first-colour pages -> associated-weavers.json
 # Colour lists come from the site's search API; specs, description and full-size photos from the product pages.
 use strict; use warnings; use utf8;
-use FindBin; use lib $FindBin::Bin; use Common;
+use JSON::PP; use FindBin; use lib $FindBin::Bin; use Common;
 
 my $R=root(); my $B='https://associated-weavers.com';
 my %seen; my @products;
@@ -20,7 +20,7 @@ for my $p (@products) {
         my $f="$R/raw/associated-weavers/$slug.html";
         my %col=(code=>$c->{colorCode}, name=>$c->{colorName}, productCode=>$c->{productCode}, url=>$B.$path,
             image=>abs_url($B,$c->{packshotSource}), roomImage=>abs_url($B,$c->{roomshotSource}), widths=>$c->{widths});
-        if (-s $f) {
+        if (-s $f && slurp($f) !~ /<title>404/) {
             my $h=slurp($f);
             $info{$slug}=$h;
             # 280 px macro shot and full-size room shot of this very colour, when the page was downloaded.
@@ -43,9 +43,17 @@ for my $p (@products) {
         ($pdf) = $h =~ m{(?:href|data-[a-z-]*(?:url|href|file|link)[a-z-]*)="([^"#]+\.pdf[^"]*)"}i;
     }
     for my $c (@cols) { my $u=$c->{roomImage}; push @images,$u if $u && !$si{$u}++ }
-    for (qw(textureText backing heightText)) { }
+    # UK-catalogue ranges have no page on the corporate site (404): fall back to the API fields.
+    unless (@specs) {
+        push @specs,{label=>'Texture',value=>$p->{textureText}} if $p->{textureText};
+        push @specs,{label=>'Backing',value=>$p->{backing}} if $p->{backing};
+        push @specs,{label=>'Pile height (mm)',value=>"$p->{pileHeight}"} if $p->{pileHeight};
+        push @specs,{label=>'Total height',value=>$p->{heightText}} if $p->{heightText};
+        my %w; $w{$_}=1 for map { @{$_->{widths}||[]} } @cols;
+        push @specs,{label=>'Widths (m)',value=>join('/',sort { $a <=> $b } keys %w)} if %w;
+    }
     push @out,{brand=>'Associated Weavers', collection=>$p->{name}, themeCode=>$p->{themeCode}, catalogType=>$p->{catalogType},
-        url=>$cols[0]{url}, description=>$desc, specs=>\@specs, datasheetPdf=>($pdf?abs_url($B,$pdf):undef), images=>\@images, colours=>\@cols};
+        url=>$cols[0]{url}, pagePublished=>($h?JSON::PP::true:JSON::PP::false), description=>$desc, specs=>\@specs, datasheetPdf=>($pdf?abs_url($B,$pdf):undef), images=>\@images, colours=>\@cols};
 }
 @out = sort { $a->{collection} cmp $b->{collection} } @out;
 write_json("$R/associated-weavers.json",\@out);
