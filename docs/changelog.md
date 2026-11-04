@@ -1,5 +1,20 @@
 # Журнал изменений
 
+## 2026-11-04 — сайт «Ковролина»
+
+- `carpet.localhost`, вид «только каталог»: 47 позиций из таблиц остатков владельца R_KOVR_BETAP_2026.xls,
+  R_KOVR_BIG_AWE_2026.xls и R_KOVR_ITC_2026.xls (лист «ОКТЯБРЬ»), все «В наличии». Каталог `seed/catalog/carpet.json`,
+  раздел добавлен в `SITES`. Фильтры: цвет, тип ворса, материал ворса, ширина рулона.
+- Данные и фото с betap.com, carusflooring.com, associated-weavers.com и my.itc-carpets.com. Сайты закрыты для облака,
+  страницы скачаны компьютером владельца (временная ветка `claude/carpet-data`, там же скрипты разбора).
+- Не найдены у производителей и не добавлены (72 позиции): Betap Montego, Brixton, Sequoia, Retro, Boston 91,
+  Baroque 45; BIG Golden Gate 400, Odin, Tweed, Laos, Soha, Normandie, Lush, Hero, Corato, Cantate, Optimize, Jumpy,
+  Kronos, Taurus, Zorba, Burlington, Waves, Excellence; AW York Supreme, Ultra, Terra Plain, Paros, Miriade, Mira,
+  Pavia; ITC Alaska, Allstar, Belluno, Lycka, Foggy, Folkie, Nature 0088, Castor, Rio Design, Rapid 0609, Inverness,
+  Stainsafe Comfort, Noble Heathers, Nature Design 013, Kubb, Soft Splendid, Wellington 0010, Savage Abundance 79,
+  Vivaldi, Vital.
+- `/llms.txt` и `/llms-full.txt` сайта раздела собираются тем же генератором, отдельной правки не понадобилось.
+
 ## 2026-11-04 — линолеум Beauflor «В наличии»
 
 - `seed/catalog/linoleum.json`, версия 3: 18 позиций Beauflor со склада из таблицы владельца R_LIN_BFL_2026.xls
