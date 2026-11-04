@@ -1,0 +1,81 @@
+---
+// Товары сайтов разделов: список с поиском и выбором раздела.
+import AdminLayout from '../../../layouts/AdminLayout.astro';
+import { sql } from '../../../server/db.ts';
+import { getSections, siteUrl } from '../../../server/sections.ts';
+import { productThumb } from '../../../server/products.ts';
+import { uploadUrl } from '../../../server/uploads.ts';
+import { toInt } from '../../../server/util.ts';
+
+const params = Astro.url.searchParams;
+const q = (params.get('q') ?? '').trim();
+const sectionId = toInt(params.get('section'));
+const stockOnly = params.get('stock') === '1';
+const sections = await getSections();
+const like = `%${q.replace(/[\\%_]/g, (m) => '\\' + m)}%`;
+
+const rows = await sql<{
+  id: number; name: string; sku: string; slug: string; collection: string; sectionId: number; isPublished: boolean; inStock: boolean; images: string[];
+  brand: string;
+}[]>`
+  SELECT p.id, p.name, p.sku, p.slug, p.collection, p.section_id, p.is_published, p.in_stock, p.images, coalesce(b.name, '') AS brand
+  FROM products p LEFT JOIN brands b ON b.id = p.brand_id JOIN sections s ON s.id = p.section_id
+  WHERE true
+  ${q ? sql`AND (p.name ILIKE ${like} OR p.sku ILIKE ${like} OR p.collection ILIKE ${like})` : sql``}
+  ${sectionId ? sql`AND p.section_id = ${sectionId}` : sql``}
+  ${stockOnly ? sql`AND p.in_stock` : sql``}
+  ORDER BY s.sort_order, p.in_stock DESC, p.sort_order, p.id`;
+const sectionOf = (id: number) => sections.find((s) => s.id === id);
+---
+
+<AdminLayout title="Товары" section="products">
+  <div class="toolbar">
+    <h1>Товары <span class="muted small">({rows.length})</span></h1>
+    <div class="actions"><a class="btn" href={`/admin/products/new${sectionId ? `?section=${sectionId}` : ''}`}>+ Добавить товар</a></div>
+  </div>
+  <p class="muted">
+    Товары показываются на сайте своего раздела (включается в «Разделах» → раздел → «Сайт раздела»). На главном сайте
+    товаров нет. По «Значениям для фильтров» строятся фильтры каталога. Товары с меткой «В наличии» идут в каталоге первыми.
+  </p>
+
+  <form class="card inline" method="get" style="padding:14px">
+    <input type="search" name="q" value={q} placeholder="Название, артикул, коллекция" style="max-width:280px" />
+    <select name="section" style="max-width:260px">
+      <option value="">Все разделы</option>
+      {sections.map((s) => <option value={s.id} selected={s.id === sectionId}>{s.name}</option>)}
+    </select>
+    <label class="check"><input type="checkbox" name="stock" value="1" checked={stockOnly} /> только «В наличии»</label>
+    <button class="btn secondary" type="submit">Найти</button>
+    {(q || sectionId || stockOnly) && <a href="/admin/products">Сбросить</a>}
+  </form>
+
+  <div class="table-wrap">
+    <table class="list">
+      <thead><tr><th></th><th>Название</th><th>Артикул</th><th>Раздел</th><th></th></tr></thead>
+      <tbody>
+        {
+          rows.map((p) => {
+            const s = sectionOf(p.sectionId);
+            return (
+              <tr>
+                <td style="width:70px">{p.images[0] ? <img class="thumb" src={uploadUrl(productThumb(p.images[0]))} alt="" loading="lazy" /> : <div class="thumb" />}</td>
+                <td>
+                  <a href={`/admin/products/${p.id}`}>{p.name}</a>
+                  <div class="muted small">{[p.brand, p.collection].filter(Boolean).join(' · ')}</div>
+                </td>
+                <td class="muted">{p.sku}</td>
+                <td>{s?.name}</td>
+                <td class="nowrap">
+                  {p.inStock && <span class="tag">в наличии</span>}{' '}
+                  {!p.isPublished && <span class="tag off">скрыт</span>}{' '}
+                  {s?.siteHost ? <a class="muted small" href={`${siteUrl(s)}/${p.slug}`} target="_blank" rel="noopener">на сайте ↗</a> : <span class="tag off">сайт раздела выключен</span>}
+                </td>
+              </tr>
+            );
+          })
+        }
+        {rows.length === 0 && <tr><td colspan="5" class="muted">Ничего не найдено</td></tr>}
+      </tbody>
+    </table>
+  </div>
+</AdminLayout>

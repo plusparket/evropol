@@ -1,0 +1,48 @@
+---
+// Главная сайта раздела в виде «группы и категории» (структура Forbo Eurocol): сразу все товары с группами
+// и категориями слева (CategoryView), ниже текст о продукции и связь.
+import CategoryView from './CategoryView.astro';
+import type { CategoryNode, ProductItem } from '../../server/products.ts';
+import type { Section } from '../../server/sections.ts';
+import type { Settings } from '../../server/settings.ts';
+
+interface Props {
+  site: Section;
+  products: ProductItem[];
+  tree: CategoryNode[];
+  settings: Settings;
+  stockOnly?: boolean;
+}
+const { site, products, tree, settings, stockOnly } = Astro.props;
+const phoneHref = 'tel:' + settings.phone_main.replace(/[^\d+]/g, '');
+const waHref = 'https://wa.me/' + settings.panel_whatsapp.replace(/\D/g, '');
+---
+
+<CategoryView site={site} tree={tree} products={products} stockOnly={stockOnly} />
+
+{
+  site.description && (
+    <section class="psec psalon ss-about" id="about">
+      <div class="pin">
+        <h2 class="ptitle">О продукции</h2>
+        <div class="psalon-text" set:html={site.description} />
+      </div>
+    </section>
+  )
+}
+
+<section class="psec pcontact" id="contacts">
+  <div class="pin pcontact-grid">
+    <div>
+      <h2 class="ptitle">Подберём материалы</h2>
+      <p class="psub">Позвоните или напишите: подскажем клей, грунтовку или ровнитель под ваше покрытие и основание, рассчитаем расход. Цену и наличие сообщим там же.</p>
+    </div>
+    <div class="pcontact-list">
+      <a class="pcontact-phone" href={phoneHref}>{settings.phone_main}</a>
+      {settings.panel_whatsapp && <a href={waHref} target="_blank" rel="noopener">WhatsApp {settings.panel_whatsapp}</a>}
+      <span>{settings.address}</span>
+      {settings.work_hours && <span>{settings.work_hours}</span>}
+      {settings.email && <a href={`mailto:${settings.email}`}>{settings.email}</a>}
+    </div>
+  </div>
+</section>

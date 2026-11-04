@@ -1,7 +1,7 @@
 ---
 // Страница раздела: фото и текст, кнопка на сайт раздела (товары и заказ), бренды раздела, связь.
 import Crumbs from './Crumbs.astro';
-import { isExternal, linkLabel, type Brand, type Section } from '../server/sections.ts';
+import { isExternal, linkLabel, sectionLink, type Brand, type Section } from '../server/sections.ts';
 import type { Settings } from '../server/settings.ts';
 import { homeSrcset, uploadUrl } from '../server/uploads.ts';
 
@@ -12,7 +12,9 @@ interface Props {
 }
 const { section: s, brands, settings } = Astro.props;
 const heading = s.heading || s.name;
-const external = isExternal(s.link);
+const link = sectionLink(s);
+// Свой сайт раздела открываем в той же вкладке, чужой сайт — в новой
+const external = !s.siteHost && isExternal(s.link);
 const phoneHref = 'tel:' + settings.phone_main.replace(/[^\d+]/g, '');
 const waHref = 'https://wa.me/' + settings.panel_whatsapp.replace(/\D/g, '');
 ---
@@ -25,8 +27,8 @@ const waHref = 'https://wa.me/' + settings.panel_whatsapp.replace(/\D/g, '');
     {s.description && <div class="pcat-text" set:html={s.description} />}
     <div class="psection-links">
       {
-        s.link ? (
-          <a class="pbtn" href={s.link} target={external ? '_blank' : undefined} rel={external ? 'noopener' : undefined}>{linkLabel(s)}</a>
+        link ? (
+          <a class="pbtn" href={link} target={external ? '_blank' : undefined} rel={external ? 'noopener' : undefined}>{linkLabel(s)}</a>
         ) : (
           <Fragment>
             <a class="pbtn" href={waHref} target="_blank" rel="noopener">Написать в WhatsApp</a>

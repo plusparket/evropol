@@ -64,6 +64,8 @@ services:
       - "443:443/udp"
     environment:
       SITE_ADDRESS: ${SITE_ADDRESS:-http://localhost}
+      # Адреса сайтов разделов (vinyl.localhost …), см. Caddyfile
+      SECTION_SITES_ADDRESS: ${SECTION_SITES_ADDRESS:-http://*.localhost}
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
       - uploads:/srv/uploads:ro

@@ -6,7 +6,7 @@
 import Lines from './Lines.astro';
 import type { HomeContent } from '../server/home.ts';
 import type { News } from '../server/content.ts';
-import { isExternal, linkLabel, sectionUrl, type Brand, type Section } from '../server/sections.ts';
+import { isExternal, linkLabel, sectionHref, sectionLink, sectionUrl, type Brand, type Section } from '../server/sections.ts';
 import type { Settings } from '../server/settings.ts';
 import { homeSrcset, uploadUrl } from '../server/uploads.ts';
 import { formatDate, plainText } from '../server/util.ts';
@@ -24,10 +24,10 @@ const { home, aboutHtml, sections, brands, news, settings } = Astro.props;
 const heroImages = home.hero.images.filter(Boolean);
 const phoneHref = 'tel:' + settings.phone_main.replace(/[^\d+]/g, '');
 const waHref = 'https://wa.me/' + settings.panel_whatsapp.replace(/\D/g, '');
-// Логотип ведёт на страницу раздела бренда (там описание и ссылка на коллекции), без раздела — по ссылке бренда
+// Логотип ведёт на сайт или страницу раздела бренда (там описание и ссылка на коллекции), без раздела — по ссылке бренда
 const brandHref = (b: Brand) => {
   const s = sections.find((x) => x.id === b.sectionId);
-  return s ? sectionUrl(s) : b.link;
+  return s ? sectionHref(s) : b.link;
 };
 const cover = (n: News) => (n.image ? uploadUrl(n.image) : (n.content.match(/<img[^>]+src="([^"]+)"/)?.[1] ?? ''));
 ---
@@ -78,7 +78,7 @@ const cover = (n: News) => (n.image ? uploadUrl(n.image) : (n.content.match(/<im
 {
   sections.length > 0 && (
     <nav class="ptiles" id="razdely" aria-label="Разделы">
-      {sections.map((s) => <a href={sectionUrl(s)}>{s.name}</a>)}
+      {sections.map((s) => <a href={sectionHref(s)}>{s.name}</a>)}
     </nav>
   )
 }
@@ -136,7 +136,7 @@ const cover = (n: News) => (n.image ? uploadUrl(n.image) : (n.content.match(/<im
         <div class="psections-grid">
           {sections.map((s) => (
             <article class="psection">
-              <a class="psection-img" href={sectionUrl(s)} tabindex="-1" aria-hidden="true">
+              <a class="psection-img" href={sectionHref(s)} tabindex="-1" aria-hidden="true">
                 {s.image ? (
                   <img src={uploadUrl(s.image)} srcset={homeSrcset(s.image)} sizes="(max-width: 768px) 96vw, 380px" alt="" width="760" height="500" loading="lazy" />
                 ) : (
@@ -144,11 +144,11 @@ const cover = (n: News) => (n.image ? uploadUrl(n.image) : (n.content.match(/<im
                 )}
               </a>
               <div class="psection-body">
-                <h3 class="psection-title"><a href={sectionUrl(s)}>{s.name}</a></h3>
+                <h3 class="psection-title"><a href={sectionHref(s)}>{s.name}</a></h3>
                 {s.summary && <p class="psection-text">{s.summary}</p>}
                 <div class="psection-links">
-                  {s.link && (
-                    <a class="pbtn" href={s.link} target={isExternal(s.link) ? '_blank' : undefined} rel={isExternal(s.link) ? 'noopener' : undefined}>
+                  {sectionLink(s) && (
+                    <a class="pbtn" href={sectionLink(s)} target={isExternal(s.link) && !s.siteHost ? '_blank' : undefined} rel={isExternal(s.link) && !s.siteHost ? 'noopener' : undefined}>
                       {linkLabel(s)}
                     </a>
                   )}

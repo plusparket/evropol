@@ -13,6 +13,11 @@ type Variant = { suffix: string; width: number; height?: number; fit?: 'inside' 
 const PRESETS = {
   brand: [{ suffix: '', width: 480, height: 240, fit: 'inside' }],
   content: [{ suffix: '', width: 1600, height: 1600, fit: 'inside' }],
+  // Фото товаров сайтов разделов: крупно на странице товара и копия 600 px для каталога (productThumb)
+  product: [
+    { suffix: '', width: 1600, height: 1600, fit: 'inside' },
+    { suffix: '-600', width: 600 },
+  ],
   // Большие фото (главный экран, разделы) и уменьшенные копии для телефонов и планшетов (srcset).
   // У копий ограничена только ширина — так ширина в srcset совпадает с настоящей.
   home: [
