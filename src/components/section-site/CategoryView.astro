@@ -4,9 +4,9 @@
 // справа плитка товаров по четыре в ряд, сначала «В наличии». Без группы — все товары (главная сайта).
 import Crumbs from '../Crumbs.astro';
 import CatalogCard from './CatalogCard.astro';
-import { productsOf, type CategoryNode, type ProductItem } from '../../server/products.ts';
+import Pager from './Pager.astro';
+import { paginate, productsOf, type CategoryNode, type ProductItem } from '../../server/products.ts';
 import type { Section } from '../../server/sections.ts';
-import { pluralRu } from '../../server/util.ts';
 
 interface Props {
   site: Section;
@@ -28,7 +28,9 @@ const here = current ? `/${current.slug}` : '/';
 const crumbs = current
   ? [{ name: site.name, url: '/' }, ...(category && group ? [{ name: group.name, url: `/${group.slug}` }] : []), { name: current.name }]
   : [{ name: site.name }];
-const word = (n: number) => pluralRu(n, ['товар', 'товара', 'товаров']);
+// После «из»: из 21 товара, из 143 товаров
+const word = (n: number) => (n % 10 === 1 && n % 100 !== 11 ? 'товара' : 'товаров');
+const { page, pages, slice, from, to } = paginate(items, Astro.url.searchParams.get('page'));
 ---
 
 <div class="pin cat">
@@ -80,12 +82,15 @@ const word = (n: number) => pluralRu(n, ['товар', 'товара', 'това
       }
       {
         items.length > 0 ? (
-          <div class="cat-items">{items.map((p) => <CatalogCard product={p} />)}</div>
+          <div class="cat-items">{slice.map((p) => <CatalogCard product={p} />)}</div>
         ) : (
           <p class="psub">Каталог пополняется. Позвоните или напишите в WhatsApp: подберём материалы и сообщим наличие.</p>
         )
       }
-      <p class="cat-count">Показано {items.length} из {all.length} {word(all.length)}</p>
+      <Pager page={page} pages={pages} path={here} />
+      <p class="cat-count">
+        {pages > 1 ? `Показано ${from}–${to} из ${items.length} ${word(items.length)}` : `Показано ${items.length} из ${all.length} ${word(all.length)}`}
+      </p>
     </div>
   </div>
 </div>

@@ -5,11 +5,11 @@
 // Фильтры — обычная форма GET (?f=Цвет:Серый), как в SiteHome.astro.
 import Crumbs from '../Crumbs.astro';
 import CatalogCard from './CatalogCard.astro';
+import Pager from './Pager.astro';
 import { facetIcon } from './facet-icons.ts';
-import type { FilterGroup, ProductItem } from '../../server/products.ts';
+import { paginate, type FilterGroup, type ProductItem } from '../../server/products.ts';
 import type { Section } from '../../server/sections.ts';
 import type { Settings } from '../../server/settings.ts';
-import { pluralRu } from '../../server/util.ts';
 
 interface Props {
   site: Section;
@@ -24,7 +24,10 @@ const phoneHref = 'tel:' + settings.phone_main.replace(/[^\d+]/g, '');
 const waHref = 'https://wa.me/' + settings.panel_whatsapp.replace(/\D/g, '');
 const filtered = groups.some((g) => g.values.some((v) => v.checked));
 const showBrand = new Set(products.map((p) => p.brand).filter(Boolean)).size > 1;
-const word = (n: number) => pluralRu(n, ['товар', 'товара', 'товаров']);
+// После «из»: из 21 товара, из 143 товаров
+const word = (n: number) => (n % 10 === 1 && n % 100 !== 11 ? 'товара' : 'товаров');
+// По 24 товара на странице (?page=N), «В наличии» первыми, как в getProducts
+const { page, pages, slice, from, to } = paginate(items, Astro.url.searchParams.get('page'));
 ---
 
 <div class="pin cat">
@@ -72,12 +75,15 @@ const word = (n: number) => pluralRu(n, ['товар', 'товара', 'това
         <div>
           {items.length > 0 ? (
             <div class="cat-items">
-              {items.map((p) => <CatalogCard product={p} showBrand={showBrand} />)}
+              {slice.map((p) => <CatalogCard product={p} showBrand={showBrand} />)}
             </div>
           ) : (
             <p class="psub">Нет товаров с такими параметрами. <a href="/">Очистить фильтр</a></p>
           )}
-          <p class="cat-count">Показано {items.length} из {products.length} {word(products.length)}</p>
+          <Pager page={page} pages={pages} path="/" />
+          <p class="cat-count">
+            {pages > 1 ? `Показано ${from}–${to} из ${items.length} ${word(items.length)}` : `Показано ${items.length} из ${products.length} ${word(products.length)}`}
+          </p>
         </div>
       </div>
     )

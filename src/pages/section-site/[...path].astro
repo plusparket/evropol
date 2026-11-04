@@ -61,6 +61,8 @@ const productCrumbs = withGroups
 const productTitle = product ? [product.brand, product.name].filter(Boolean).join(' ') : '';
 const cat = catPath?.at(-1);
 const stockOnly = withGroups && Astro.url.searchParams.get('stock') === '1';
+// Вторая и дальше страницы каталога (?page=N) не индексируем: товары и так есть в sitemap.xml
+const paged = Astro.url.searchParams.has('page');
 ---
 
 {
@@ -70,7 +72,7 @@ const stockOnly = withGroups && Astro.url.searchParams.get('stock') === '1';
       title={site.seoTitle || withSiteName(`${heading} в Бишкеке: каталог`, settings)}
       description={site.seoDescription || site.summary || plainText(site.description) || undefined}
       canonicalPath="/"
-      noindex={Astro.url.searchParams.has('f') || stockOnly}
+      noindex={Astro.url.searchParams.has('f') || stockOnly || paged}
     >
       {withGroups ? (
         <GroupsHome site={site} products={products} tree={tree} settings={settings} stockOnly={stockOnly} />
@@ -97,7 +99,7 @@ const stockOnly = withGroups && Astro.url.searchParams.get('stock') === '1';
       title={withSiteName(`${cat.name}: ${heading} в Бишкеке`, settings)}
       description={cat.description || undefined}
       canonicalPath={`/${cat.slug}`}
-      noindex={stockOnly}
+      noindex={stockOnly || paged}
       jsonLd={breadcrumbJsonLd(base, [{ name: site.name, url: '/' }, ...catPath.map((c) => ({ name: c.name, url: `/${c.slug}` }))])}
     >
       <CategoryView site={site} tree={tree} group={catPath[0]} category={catPath[1]} products={products} stockOnly={stockOnly} />

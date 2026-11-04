@@ -147,6 +147,15 @@
 .cat-card-name a { color: var(--ink); }
 .cat-card-name a:hover { color: var(--site); }
 .cat-card-btn { width: 100%; padding-left: 10px; padding-right: 10px; text-align: center; }
+#catalog { scroll-margin-top: 90px; }
+.cat-pager { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px; margin: 40px 0 0; }
+.cat-pager-num, .cat-pager-arrow { display: inline-flex; align-items: center; justify-content: center; min-width: 40px; height: 40px; padding: 0 8px; border: 1px solid var(--line); color: var(--ink); font-size: 15px; text-decoration: none; }
+a.cat-pager-num:hover, a.cat-pager-arrow:hover { border-color: var(--site); color: var(--site); }
+.cat-pager-num[aria-current] { border-color: var(--site); background: var(--site); color: #fff; font-weight: 600; }
+span.cat-pager-arrow { opacity: .35; }
+.cat-pager-arrow { font-size: 22px; line-height: 1; }
+.cat-pager-gap { padding: 0 4px; color: var(--muted); }
+.cat-pager + .cat-count { margin-top: 18px; }
 .cat-count { margin: 34px 0 0; color: var(--site); font-size: 13px; font-weight: 600; letter-spacing: .05em; text-align: center; text-transform: uppercase; }
 
 @media (max-width: 1100px) {

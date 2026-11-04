@@ -22,6 +22,18 @@ export const BRAND_FILTER = 'Производитель';
 /** Характеристики, по которым фильтр не строим (владелец, 04.11.2026): в карточке товара они остаются */
 const NO_FILTER = new Set(['Класс нагрузки', 'Пожарная опасность']);
 
+/** Товаров на странице каталога: 6 рядов по 4 (на планшете 8 по 3, на телефоне 12 по 2) */
+export const PER_PAGE = 24;
+
+/** Страница списка по параметру ?page=N: номер вне диапазона приводим к ближайшей странице */
+export function paginate<T>(items: T[], raw: string | null) {
+  const pages = Math.max(1, Math.ceil(items.length / PER_PAGE));
+  const page = Math.min(pages, Math.max(1, Number.parseInt(raw ?? '', 10) || 1));
+  const start = (page - 1) * PER_PAGE;
+  const slice = items.slice(start, start + PER_PAGE);
+  return { page, pages, slice, from: slice.length ? start + 1 : 0, to: start + slice.length };
+}
+
 /** Миниатюра фото товара для каталога (копия 600 px, см. PRESETS.product в uploads.ts) */
 export const productThumb = (rel: string) => rel.replace(/\.webp$/, '-600.webp');
 
