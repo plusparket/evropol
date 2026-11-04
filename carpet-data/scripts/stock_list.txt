@@ -1,0 +1,70 @@
+# brand | collection (as written in stock list) | colour words / codes separated by spaces
+Betap|Montego|rood
+Betap|Rubens|69 71
+Betap|Boston|91 93
+Betap|Alto|zilver:71
+Betap|Baroque|ibeige:60 dgrijs:74 groen:45
+Betap|Brixton|zilver:70
+Betap|Sequoia|white:60
+Betap|Retro|ibeige:60
+Betap|Traffic|74
+Betap|Tivano|lbeige:62 72 bruin:92
+BIG|Golden Gate|01/27477 400
+BIG|Odin|404
+BIG|Tweed|150 152 312 337
+BIG|Laos|Cypress:238
+BIG|Soha|Camel:336 Coffee:963
+BIG|Normandie|Mink:314 158
+BIG|Lush|
+BIG|Hero|Pigeon:155 Oyster:303
+BIG|Corato|Mouse:151
+BIG|Cantate|97 40
+BIG|Optimize|153 315
+BIG|Jumpy|212
+BIG|Kronos|990
+BIG|Taurus|157
+BIG|Zorba|219 446 897
+BIG|Burlington|154 469 755 897
+BIG|Waves|847 877
+BIG|Excellence|Pine:240
+AW|Nobilis|09 97 35 93 33
+AW|Fuego|39 95 97 32
+AW|York Supreme|30 40
+AW|Nero|47 94 97
+AW|Ultra|956
+AW|Sierra|98
+AW|Prius|49
+AW|Tibet|49 90
+AW|Terra Plain|11
+AW|Paros|45
+AW|Miriade|84
+AW|Grinta|97
+AW|Mira|98 96 39
+AW|Pavia|06 04 98
+ITC|Alaska|106 820
+ITC|Allstar|097
+ITC|Belluno|0745
+ITC|Bossanova|042 049 095
+ITC|Lycka|051 095
+ITC|Foggy|034
+ITC|Feliz|079 094
+ITC|Folkie|025
+ITC|Marlene|029 052 095
+ITC|Nature|0088
+ITC|Ruta|036 039 098
+ITC|Castor|96
+ITC|Rio Design|0925
+ITC|Rapid|0609
+ITC|Inverness|832
+ITC|Stainsafe Comfort|0920
+ITC|Noble Heathers|875
+ITC|Nature Design|013
+ITC|Kubb|070
+ITC|Soft Splendid|070
+ITC|Spry|033 094
+ITC|Silky Lush|033 039 041
+ITC|Wellington|0010
+ITC|Vivid Opulence|43 92 93
+ITC|Savage Abundance|79
+ITC|Vivaldi|041
+ITC|Vital|074

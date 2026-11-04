@@ -1,0 +1,687 @@
+[
+ {
+  "brand" : "Carus",
+  "brochurePdf" : null,
+  "collection" : "Brut",
+  "colours" : [
+   {
+    "code" : "220",
+    "design" : "Brut",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/17/image_echantillon1_17.jpg",
+    "name" : "Brut",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/17/image_src_17.jpg",
+    "url" : "https://www.carusflooring.com/collections/10/brut.html"
+   },
+   {
+    "code" : "610",
+    "design" : "Brut",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/17/image_echantillon2_17.jpg",
+    "name" : "Brut",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/17/image_src_17.jpg",
+    "url" : "https://www.carusflooring.com/collections/10/brut.html"
+   },
+   {
+    "code" : "630",
+    "design" : "Brut",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/17/image_echantillon3_17.jpg",
+    "name" : "Brut",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/17/image_src_17.jpg",
+    "url" : "https://www.carusflooring.com/collections/10/brut.html"
+   },
+   {
+    "code" : "920",
+    "design" : "Brut",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/17/image_echantillon4_17.jpg",
+    "name" : "Brut",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/17/image_src_17.jpg",
+    "url" : "https://www.carusflooring.com/collections/10/brut.html"
+   },
+   {
+    "code" : "940",
+    "design" : "Brut",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/17/image_echantillon5_17.jpg",
+    "name" : "Brut",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/17/image_src_17.jpg",
+    "url" : "https://www.carusflooring.com/collections/10/brut.html"
+   },
+   {
+    "code" : "970",
+    "design" : "Brut",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/17/image_echantillon6_17.jpg",
+    "name" : "Brut",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/17/image_src_17.jpg",
+    "url" : "https://www.carusflooring.com/collections/10/brut.html"
+   }
+  ],
+  "datasheetPdf" : "https://www.carusflooring.com/images/common/collections/10/downloads/pdfDatasheet.pdf",
+  "description" : "BRUT: Refined Design and Warm Ambiance\n\nThe BRUT collection combines a graphic design inspired by cracked concrete with a super-soft, refined surface, creating a modern yet warm atmosphere, perfect for the hospitality sector. Made from 100% polyamide, piece-dyed, with a pile weight of 510 g (52 pts), this saxony carpet provides comfort and durability for medium-traffic areas. Available in 6 colors, BRUT blends style and functionality, with a Class 31 rating and Cfl-s1 fire classification, ensuring welcoming and safe spaces.",
+  "images" : [
+   "https://www.carusflooring.com/images/common/collections/10/image_10.jpg",
+   "https://www.carusflooring.com/images/common/produits/17/image_src_17.jpg"
+  ],
+  "specs" : [],
+  "url" : "https://www.carusflooring.com/collections/10/brut.html"
+ },
+ {
+  "brand" : "Carus",
+  "brochurePdf" : null,
+  "collection" : "Chevron (natural)",
+  "colours" : [],
+  "datasheetPdf" : "https://www.carusflooring.com/images/common/collections/6/downloads/pdfDatasheet.pdf",
+  "description" : "Chevron: Artisan Sea Grass Flooring with Natural Elegance\n\nExperience the beauty of nature with Chevron, a handcrafted flooring solution made from 100% sea grass. This unique flooring features smooth, soft fibers derived from an aquatic plant, offering both durability and a beautifully natural appearance. Weighing 2700 g/m², Chevron is a robust choice that will elevate any space with its timeless, earthy color—perfect for creating a warm, inviting atmosphere in your home.\nThe latex foam backing enhances comfort and ease of installation, making Chevron a practical addition to all types of living spaces. With its exceptional resistance and non-absorptive properties, it stands as a true force of nature, combining strength with aesthetic appeal. Ideal for those looking for a sustainable yet stylish flooring option, Chevron is the perfect choice for any room where natural beauty and lasting performance are a priority.",
+  "images" : [
+   "https://www.carusflooring.com/images/common/collections/6/image_6.jpg"
+  ],
+  "specs" : [],
+  "url" : "https://www.carusflooring.com/collections/6/chevron-natural-.html"
+ },
+ {
+  "brand" : "Carus",
+  "brochurePdf" : "https://www.carusflooring.com/images/common/collections/1/downloads/pdfBrochure.pdf",
+  "collection" : "Golden gate",
+  "colours" : [
+   {
+    "code" : "GG001-27010",
+    "design" : "Golden gate 001",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/1/image_echantillon1_1.jpg",
+    "name" : "Golden gate 001",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/1/image_src_1.jpg",
+    "url" : "https://www.carusflooring.com/collections/1/golden-gate.html"
+   },
+   {
+    "code" : "GG001-27152",
+    "design" : "Golden gate 001",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/1/image_echantillon2_1.jpg",
+    "name" : "Golden gate 001",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/1/image_src_1.jpg",
+    "url" : "https://www.carusflooring.com/collections/1/golden-gate.html"
+   },
+   {
+    "code" : "GG001-27890",
+    "design" : "Golden gate 001",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/1/image_echantillon3_1.jpg",
+    "name" : "Golden gate 001",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/1/image_src_1.jpg",
+    "url" : "https://www.carusflooring.com/collections/1/golden-gate.html"
+   },
+   {
+    "code" : "GG001-27477",
+    "design" : "Golden gate 001",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/1/image_echantillon4_1.jpg",
+    "name" : "Golden gate 001",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/1/image_src_1.jpg",
+    "url" : "https://www.carusflooring.com/collections/1/golden-gate.html"
+   },
+   {
+    "code" : "GG001-27996",
+    "design" : "Golden gate 001",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/1/image_echantillon5_1.jpg",
+    "name" : "Golden gate 001",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/1/image_src_1.jpg",
+    "url" : "https://www.carusflooring.com/collections/1/golden-gate.html"
+   },
+   {
+    "code" : "GG002-27010",
+    "design" : "Golden gate 002",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/2/image_echantillon1_2.jpg",
+    "name" : "Golden gate 002",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/2/image_src_2.jpg",
+    "url" : "https://www.carusflooring.com/collections/1/golden-gate.html"
+   },
+   {
+    "code" : "GG002-27152",
+    "design" : "Golden gate 002",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/2/image_echantillon2_2.jpg",
+    "name" : "Golden gate 002",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/2/image_src_2.jpg",
+    "url" : "https://www.carusflooring.com/collections/1/golden-gate.html"
+   },
+   {
+    "code" : "GG002-27477",
+    "design" : "Golden gate 002",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/2/image_echantillon3_2.jpg",
+    "name" : "Golden gate 002",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/2/image_src_2.jpg",
+    "url" : "https://www.carusflooring.com/collections/1/golden-gate.html"
+   },
+   {
+    "code" : "GG002-27890",
+    "design" : "Golden gate 002",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/2/image_echantillon4_2.jpg",
+    "name" : "Golden gate 002",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/2/image_src_2.jpg",
+    "url" : "https://www.carusflooring.com/collections/1/golden-gate.html"
+   },
+   {
+    "code" : "GG002-27996",
+    "design" : "Golden gate 002",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/2/image_echantillon5_2.jpg",
+    "name" : "Golden gate 002",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/2/image_src_2.jpg",
+    "url" : "https://www.carusflooring.com/collections/1/golden-gate.html"
+   },
+   {
+    "code" : "",
+    "design" : "Golden gate 002",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/2/image_echantillon6_2.jpg",
+    "name" : "Golden gate 002",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/2/image_src_2.jpg",
+    "url" : "https://www.carusflooring.com/collections/1/golden-gate.html"
+   },
+   {
+    "code" : "GG004-27477",
+    "design" : "Golden gate 004",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/3/image_echantillon1_3.jpg",
+    "name" : "Golden gate 004",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/3/image_src_3.jpg",
+    "url" : "https://www.carusflooring.com/collections/1/golden-gate.html"
+   },
+   {
+    "code" : "GG004-27152",
+    "design" : "Golden gate 004",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/3/image_echantillon2_3.jpg",
+    "name" : "Golden gate 004",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/3/image_src_3.jpg",
+    "url" : "https://www.carusflooring.com/collections/1/golden-gate.html"
+   },
+   {
+    "code" : "GG004-27890",
+    "design" : "Golden gate 004",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/3/image_echantillon3_3.jpg",
+    "name" : "Golden gate 004",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/3/image_src_3.jpg",
+    "url" : "https://www.carusflooring.com/collections/1/golden-gate.html"
+   },
+   {
+    "code" : "GG004-31139",
+    "design" : "Golden gate 004",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/3/image_echantillon4_3.jpg",
+    "name" : "Golden gate 004",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/3/image_src_3.jpg",
+    "url" : "https://www.carusflooring.com/collections/1/golden-gate.html"
+   },
+   {
+    "code" : "GG004-31242",
+    "design" : "Golden gate 004",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/3/image_echantillon5_3.jpg",
+    "name" : "Golden gate 004",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/3/image_src_3.jpg",
+    "url" : "https://www.carusflooring.com/collections/1/golden-gate.html"
+   },
+   {
+    "code" : "GG004-31491",
+    "design" : "Golden gate 004",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/3/image_echantillon6_3.jpg",
+    "name" : "Golden gate 004",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/3/image_src_3.jpg",
+    "url" : "https://www.carusflooring.com/collections/1/golden-gate.html"
+   },
+   {
+    "code" : "GG004-31964",
+    "design" : "Golden gate 004",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/3/image_echantillon7_3.jpg",
+    "name" : "Golden gate 004",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/3/image_src_3.jpg",
+    "url" : "https://www.carusflooring.com/collections/1/golden-gate.html"
+   },
+   {
+    "code" : "GG004-31997",
+    "design" : "Golden gate 004",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/3/image_echantillon8_3.jpg",
+    "name" : "Golden gate 004",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/3/image_src_3.jpg",
+    "url" : "https://www.carusflooring.com/collections/1/golden-gate.html"
+   },
+   {
+    "code" : "",
+    "design" : "Golden gate 004",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/3/image_echantillon9_3.jpg",
+    "name" : "Golden gate 004",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/3/image_src_3.jpg",
+    "url" : "https://www.carusflooring.com/collections/1/golden-gate.html"
+   },
+   {
+    "code" : "GG005-27152",
+    "design" : "Golden gate 005",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/4/image_echantillon1_4.jpg",
+    "name" : "Golden gate 005",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/4/image_src_4.jpg",
+    "url" : "https://www.carusflooring.com/collections/1/golden-gate.html"
+   },
+   {
+    "code" : "GG005-31129",
+    "design" : "Golden gate 005",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/4/image_echantillon2_4.jpg",
+    "name" : "Golden gate 005",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/4/image_src_4.jpg",
+    "url" : "https://www.carusflooring.com/collections/1/golden-gate.html"
+   },
+   {
+    "code" : "GG005-31242",
+    "design" : "Golden gate 005",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/4/image_echantillon3_4.jpg",
+    "name" : "Golden gate 005",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/4/image_src_4.jpg",
+    "url" : "https://www.carusflooring.com/collections/1/golden-gate.html"
+   },
+   {
+    "code" : "GG005-31491",
+    "design" : "Golden gate 005",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/4/image_echantillon4_4.jpg",
+    "name" : "Golden gate 005",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/4/image_src_4.jpg",
+    "url" : "https://www.carusflooring.com/collections/1/golden-gate.html"
+   },
+   {
+    "code" : "",
+    "design" : "Golden gate 005",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/4/image_echantillon5_4.jpg",
+    "name" : "Golden gate 005",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/4/image_src_4.jpg",
+    "url" : "https://www.carusflooring.com/collections/1/golden-gate.html"
+   }
+  ],
+  "datasheetPdf" : "https://www.carusflooring.com/images/common/collections/1/downloads/pdfDatasheet.pdf",
+  "description" : "Golden Gate: Premium Polyamide Roll with Acoustic Backing – 4m Wide\n\nLooking for a high-quality and versatile solution for your design needs? The Golden Gate polyamide roll offers the perfect blend of comfort, durability, and style. With a generous width of 4 meters, it’s ideal for a variety of spaces and applications. Available in 4 stunning designs and 22 vibrant colors, this printed solution brings your vision to life with remarkable precision. Weighing in at 1300 grams, it provides an added layer of comfort, while the acoustic Fusion Backing enhances sound insulation for a quieter, more peaceful environment.\nIn stock and ready for immediate delivery, the Golden Gate roll is the ideal choice for both residential and commercial projects looking to combine aesthetics with functionality.",
+  "images" : [
+   "https://www.carusflooring.com/images/common/collections/1/image_1.jpg",
+   "https://www.carusflooring.com/images/common/produits/1/image_src_1.jpg",
+   "https://www.carusflooring.com/images/common/produits/2/image_src_2.jpg",
+   "https://www.carusflooring.com/images/common/produits/3/image_src_3.jpg",
+   "https://www.carusflooring.com/images/common/produits/4/image_src_4.jpg"
+  ],
+  "specs" : [],
+  "url" : "https://www.carusflooring.com/collections/1/golden-gate.html"
+ },
+ {
+  "brand" : "Carus",
+  "brochurePdf" : "https://www.carusflooring.com/images/common/collections/2/downloads/pdfBrochure.pdf",
+  "collection" : "Grande",
+  "colours" : [
+   {
+    "code" : "Fleur 421",
+    "design" : "Grande Fleur",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/7/image_echantillon1_7.jpg",
+    "name" : "Grande Fleur",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/7/image_src_7.jpg",
+    "url" : "https://www.carusflooring.com/collections/2/grande.html"
+   },
+   {
+    "code" : "Fleur 222",
+    "design" : "Grande Fleur",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/7/image_echantillon2_7.jpg",
+    "name" : "Grande Fleur",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/7/image_src_7.jpg",
+    "url" : "https://www.carusflooring.com/collections/2/grande.html"
+   },
+   {
+    "code" : "Fleur 828",
+    "design" : "Grande Fleur",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/7/image_echantillon3_7.jpg",
+    "name" : "Grande Fleur",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/7/image_src_7.jpg",
+    "url" : "https://www.carusflooring.com/collections/2/grande.html"
+   },
+   {
+    "code" : "Fleur 964",
+    "design" : "Grande Fleur",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/7/image_echantillon4_7.jpg",
+    "name" : "Grande Fleur",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/7/image_src_7.jpg",
+    "url" : "https://www.carusflooring.com/collections/2/grande.html"
+   },
+   {
+    "code" : "Glory 169",
+    "design" : "Grande glory",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/9/image_echantillon1_9.jpg",
+    "name" : "Grande glory",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/9/image_src_9.jpg",
+    "url" : "https://www.carusflooring.com/collections/2/grande.html"
+   },
+   {
+    "code" : "Glory 199",
+    "design" : "Grande glory",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/9/image_echantillon2_9.jpg",
+    "name" : "Grande glory",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/9/image_src_9.jpg",
+    "url" : "https://www.carusflooring.com/collections/2/grande.html"
+   },
+   {
+    "code" : "Glory 209",
+    "design" : "Grande glory",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/9/image_echantillon3_9.jpg",
+    "name" : "Grande glory",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/9/image_src_9.jpg",
+    "url" : "https://www.carusflooring.com/collections/2/grande.html"
+   },
+   {
+    "code" : "Glory 282",
+    "design" : "Grande glory",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/9/image_echantillon4_9.jpg",
+    "name" : "Grande glory",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/9/image_src_9.jpg",
+    "url" : "https://www.carusflooring.com/collections/2/grande.html"
+   },
+   {
+    "code" : "Glory 374",
+    "design" : "Grande glory",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/9/image_echantillon5_9.jpg",
+    "name" : "Grande glory",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/9/image_src_9.jpg",
+    "url" : "https://www.carusflooring.com/collections/2/grande.html"
+   },
+   {
+    "code" : "Glory 826",
+    "design" : "Grande glory",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/9/image_echantillon6_9.jpg",
+    "name" : "Grande glory",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/9/image_src_9.jpg",
+    "url" : "https://www.carusflooring.com/collections/2/grande.html"
+   },
+   {
+    "code" : "Glory 937",
+    "design" : "Grande glory",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/9/image_echantillon7_9.jpg",
+    "name" : "Grande glory",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/9/image_src_9.jpg",
+    "url" : "https://www.carusflooring.com/collections/2/grande.html"
+   },
+   {
+    "code" : "Glory 987",
+    "design" : "Grande glory",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/9/image_echantillon8_9.jpg",
+    "name" : "Grande glory",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/9/image_src_9.jpg",
+    "url" : "https://www.carusflooring.com/collections/2/grande.html"
+   },
+   {
+    "code" : "Charm 119",
+    "design" : "Grande charm",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/10/image_echantillon1_10.jpg",
+    "name" : "Grande charm",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/10/image_src_10.jpg",
+    "url" : "https://www.carusflooring.com/collections/2/grande.html"
+   },
+   {
+    "code" : "Charm 129",
+    "design" : "Grande charm",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/10/image_echantillon2_10.jpg",
+    "name" : "Grande charm",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/10/image_src_10.jpg",
+    "url" : "https://www.carusflooring.com/collections/2/grande.html"
+   },
+   {
+    "code" : "Charm 149",
+    "design" : "Grande charm",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/10/image_echantillon3_10.jpg",
+    "name" : "Grande charm",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/10/image_src_10.jpg",
+    "url" : "https://www.carusflooring.com/collections/2/grande.html"
+   },
+   {
+    "code" : "Charm 354",
+    "design" : "Grande charm",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/10/image_echantillon4_10.jpg",
+    "name" : "Grande charm",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/10/image_src_10.jpg",
+    "url" : "https://www.carusflooring.com/collections/2/grande.html"
+   },
+   {
+    "code" : "Charm 937",
+    "design" : "Grande charm",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/10/image_echantillon5_10.jpg",
+    "name" : "Grande charm",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/10/image_src_10.jpg",
+    "url" : "https://www.carusflooring.com/collections/2/grande.html"
+   },
+   {
+    "code" : "Queen 159",
+    "design" : "Grande Queen",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/11/image_echantillon1_11.jpg",
+    "name" : "Grande Queen",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/11/image_src_11.jpg",
+    "url" : "https://www.carusflooring.com/collections/2/grande.html"
+   },
+   {
+    "code" : "Queen 179",
+    "design" : "Grande Queen",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/11/image_echantillon2_11.jpg",
+    "name" : "Grande Queen",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/11/image_src_11.jpg",
+    "url" : "https://www.carusflooring.com/collections/2/grande.html"
+   },
+   {
+    "code" : "Queen 282",
+    "design" : "Grande Queen",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/11/image_echantillon3_11.jpg",
+    "name" : "Grande Queen",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/11/image_src_11.jpg",
+    "url" : "https://www.carusflooring.com/collections/2/grande.html"
+   },
+   {
+    "code" : "Queen 826",
+    "design" : "Grande Queen",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/11/image_echantillon4_11.jpg",
+    "name" : "Grande Queen",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/11/image_src_11.jpg",
+    "url" : "https://www.carusflooring.com/collections/2/grande.html"
+   },
+   {
+    "code" : "Queen 937",
+    "design" : "Grande Queen",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/11/image_echantillon5_11.jpg",
+    "name" : "Grande Queen",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/11/image_src_11.jpg",
+    "url" : "https://www.carusflooring.com/collections/2/grande.html"
+   },
+   {
+    "code" : "Magic 937",
+    "design" : "Grande magic",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/12/image_echantillon1_12.jpg",
+    "name" : "Grande magic",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/12/image_src_12.jpg",
+    "url" : "https://www.carusflooring.com/collections/2/grande.html"
+   },
+   {
+    "code" : "Magic 179",
+    "design" : "Grande magic",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/12/image_echantillon2_12.jpg",
+    "name" : "Grande magic",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/12/image_src_12.jpg",
+    "url" : "https://www.carusflooring.com/collections/2/grande.html"
+   },
+   {
+    "code" : "Magic 282",
+    "design" : "Grande magic",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/12/image_echantillon3_12.jpg",
+    "name" : "Grande magic",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/12/image_src_12.jpg",
+    "url" : "https://www.carusflooring.com/collections/2/grande.html"
+   },
+   {
+    "code" : "Magic 725",
+    "design" : "Grande magic",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/12/image_echantillon4_12.jpg",
+    "name" : "Grande magic",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/12/image_src_12.jpg",
+    "url" : "https://www.carusflooring.com/collections/2/grande.html"
+   },
+   {
+    "code" : "Magic 778",
+    "design" : "Grande magic",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/12/image_echantillon5_12.jpg",
+    "name" : "Grande magic",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/12/image_src_12.jpg",
+    "url" : "https://www.carusflooring.com/collections/2/grande.html"
+   },
+   {
+    "code" : "Magic 795",
+    "design" : "Grande magic",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/12/image_echantillon6_12.jpg",
+    "name" : "Grande magic",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/12/image_src_12.jpg",
+    "url" : "https://www.carusflooring.com/collections/2/grande.html"
+   },
+   {
+    "code" : "Magic 149",
+    "design" : "Grande magic",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/12/image_echantillon7_12.jpg",
+    "name" : "Grande magic",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/12/image_src_12.jpg",
+    "url" : "https://www.carusflooring.com/collections/2/grande.html"
+   },
+   {
+    "code" : "Magic 997",
+    "design" : "Grande magic",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/12/image_echantillon8_12.jpg",
+    "name" : "Grande magic",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/12/image_src_12.jpg",
+    "url" : "https://www.carusflooring.com/collections/2/grande.html"
+   }
+  ],
+  "datasheetPdf" : "https://www.carusflooring.com/images/common/collections/2/downloads/pdfDatasheet.pdf",
+  "description" : "Grande Collection: Luxurious Polyamide Velvet Saxony Carpet Roll – 4m Wide\n\nDiscover the elegance and luxury of the Grande Collection, a premium polyamide carpet roll that offers unmatched quality and style. With a wide 4-meter format, this printed solution features 5 sophisticated designs and an impressive range of 30 colors, ensuring the perfect match for any space. The velvet saxony carpet texture adds a touch of softness and sophistication, while the 1000-gram weight provides just the right balance of comfort and durability.\nIdeal for the hospitality industry, the Grande Collection is designed to withstand the demands of high-traffic areas without compromising on elegance. In stock and available for immediate delivery, it is the perfect choice for creating a refined, welcoming atmosphere in hotels, lounges, and more.",
+  "images" : [
+   "https://www.carusflooring.com/images/common/collections/2/image_2.jpg",
+   "https://www.carusflooring.com/images/common/produits/7/image_src_7.jpg",
+   "https://www.carusflooring.com/images/common/produits/9/image_src_9.jpg",
+   "https://www.carusflooring.com/images/common/produits/10/image_src_10.jpg",
+   "https://www.carusflooring.com/images/common/produits/11/image_src_11.jpg",
+   "https://www.carusflooring.com/images/common/produits/12/image_src_12.jpg"
+  ],
+  "specs" : [],
+  "url" : "https://www.carusflooring.com/collections/2/grande.html"
+ },
+ {
+  "brand" : "Carus",
+  "brochurePdf" : null,
+  "collection" : "Nova",
+  "colours" : [
+   {
+    "code" : "870",
+    "design" : "NOVA",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/16/image_echantillon1_16.jpg",
+    "name" : "NOVA",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/16/image_src_16.jpg",
+    "url" : "https://www.carusflooring.com/collections/9/nova.html"
+   },
+   {
+    "code" : "540",
+    "design" : "NOVA",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/16/image_echantillon2_16.jpg",
+    "name" : "NOVA",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/16/image_src_16.jpg",
+    "url" : "https://www.carusflooring.com/collections/9/nova.html"
+   },
+   {
+    "code" : "550",
+    "design" : "NOVA",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/16/image_echantillon3_16.jpg",
+    "name" : "NOVA",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/16/image_src_16.jpg",
+    "url" : "https://www.carusflooring.com/collections/9/nova.html"
+   },
+   {
+    "code" : "910",
+    "design" : "NOVA",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/16/image_echantillon4_16.jpg",
+    "name" : "NOVA",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/16/image_src_16.jpg",
+    "url" : "https://www.carusflooring.com/collections/9/nova.html"
+   },
+   {
+    "code" : "930",
+    "design" : "NOVA",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/16/image_echantillon5_16.jpg",
+    "name" : "NOVA",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/16/image_src_16.jpg",
+    "url" : "https://www.carusflooring.com/collections/9/nova.html"
+   },
+   {
+    "code" : "950",
+    "design" : "NOVA",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/16/image_echantillon6_16.jpg",
+    "name" : "NOVA",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/16/image_src_16.jpg",
+    "url" : "https://www.carusflooring.com/collections/9/nova.html"
+   },
+   {
+    "code" : "180",
+    "design" : "NOVA",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/16/image_echantillon7_16.jpg",
+    "name" : "NOVA",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/16/image_src_16.jpg",
+    "url" : "https://www.carusflooring.com/collections/9/nova.html"
+   },
+   {
+    "code" : "610",
+    "design" : "NOVA",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/16/image_echantillon8_16.jpg",
+    "name" : "NOVA",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/16/image_src_16.jpg",
+    "url" : "https://www.carusflooring.com/collections/9/nova.html"
+   },
+   {
+    "code" : "990",
+    "design" : "NOVA",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/16/image_echantillon9_16.jpg",
+    "name" : "NOVA",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/16/image_src_16.jpg",
+    "url" : "https://www.carusflooring.com/collections/9/nova.html"
+   },
+   {
+    "code" : "660",
+    "design" : "NOVA",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/16/image_echantillon11_16.jpg",
+    "name" : "NOVA",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/16/image_src_16.jpg",
+    "url" : "https://www.carusflooring.com/collections/9/nova.html"
+   },
+   {
+    "code" : "240",
+    "design" : "NOVA",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/16/image_echantillon12_16.jpg",
+    "name" : "NOVA",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/16/image_src_16.jpg",
+    "url" : "https://www.carusflooring.com/collections/9/nova.html"
+   },
+   {
+    "code" : "340",
+    "design" : "NOVA",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/16/image_echantillon13_16.jpg",
+    "name" : "NOVA",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/16/image_src_16.jpg",
+    "url" : "https://www.carusflooring.com/collections/9/nova.html"
+   },
+   {
+    "code" : "780",
+    "design" : "NOVA",
+    "image" : "https://www.carusflooring.com/images/common/produits/echantillon/16/image_echantillon14_16.jpg",
+    "name" : "NOVA",
+    "roomImage" : "https://www.carusflooring.com/images/common/produits/16/image_src_16.jpg",
+    "url" : "https://www.carusflooring.com/collections/9/nova.html"
+   }
+  ],
+  "datasheetPdf" : "https://www.carusflooring.com/images/common/collections/9/downloads/pdfDatasheet.pdf",
+  "description" : "Nova : Comfort and Performance for the Hospitality Industry\n\nThe Nova collection is a high-end saxony carpet, specially designed to meet the demands of the hospitality sector. Made from 100% polyamide, it ensures durability and easy maintenance, even in high-traffic areas. Available in 14 solid colors, Nova allows you to create elegant and welcoming atmospheres, ideal for guest rooms and common areas. With a pile weight of 900 g/m², a usage rating of Class 32, and a fire rating of Bfl‑s1, the Nova collection combines comfort, safety, and long-lasting performance for hotel environments.",
+  "images" : [
+   "https://www.carusflooring.com/images/common/collections/9/image_9.jpg",
+   "https://www.carusflooring.com/images/common/produits/16/image_src_16.jpg"
+  ],
+  "specs" : [],
+  "url" : "https://www.carusflooring.com/collections/9/nova.html"
+ },
+ {
+  "brand" : "Carus",
+  "brochurePdf" : null,
+  "collection" : "Original (natural)",
+  "colours" : [],
+  "datasheetPdf" : "https://www.carusflooring.com/images/common/collections/4/downloads/pdfDatasheet.pdf",
+  "description" : "Original: Natural Sea Grass Flooring for a Timeless, Primitive Touch\n\nIntroducing Original, a flooring solution that brings a beautifully primitive feel to any space with a simple, yet striking color. Made from 100% sea grass, this natural flooring option is denser than its counterpart, Chevron, offering a robust, lasting design. With a total weight of 2250 grams, Original provides a durable, eco-friendly surface perfect for homes that value both style and sustainability.\nAvailable in a convenient 4-meter width, Original is designed to fit a variety of spaces throughout the home. Certified for medium residential use, it’s ideal for living rooms, bedrooms, and hallways, where it will add a warm, earthy vibe. The latex foam backing enhances comfort and ease of installation, making it a versatile choice for many interior styles. Bring nature into your home with Original—the perfect blend of beauty, strength, and natural elegance.",
+  "images" : [
+   "https://www.carusflooring.com/images/common/collections/4/image_4.jpg"
+  ],
+  "specs" : [],
+  "url" : "https://www.carusflooring.com/collections/4/original-natural-.html"
+ }
+]
