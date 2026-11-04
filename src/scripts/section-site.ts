@@ -14,6 +14,20 @@ document.addEventListener('astro:page-load', () => {
   if (box && window.matchMedia('(max-width: 860px)').matches && !box.querySelector('input:checked')) box.open = false;
 });
 
+// На компьютере колёсико над фильтрами прокручивает только фильтры, даже когда они уже в конце или помещаются целиком:
+// страница с товарами стоит на месте. Над товарами колёсико прокручивает страницу, фильтры при этом закреплены.
+document.addEventListener(
+  'wheel',
+  (e) => {
+    const box = (e.target as Element).closest?.<HTMLElement>('[data-filters-box]');
+    if (!box || e.ctrlKey || !window.matchMedia('(min-width: 861px)').matches) return;
+    e.preventDefault();
+    const step = e.deltaMode === 1 ? 40 : e.deltaMode === 2 ? box.clientHeight : 1;
+    box.scrollTop += e.deltaY * step;
+  },
+  { passive: false },
+);
+
 // Упаковки по площади: площадь × 1,05 (запас на подрезку) / м² в упаковке, вверх до целой.
 // Результат попадает в текст сообщения WhatsApp.
 const RESERVE = 1.05;
