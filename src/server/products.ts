@@ -19,6 +19,9 @@ export type FilterGroup = { label: string; values: { value: string; count: numbe
 /** Фильтр «Производитель» строится из бренда товара, остальные — из facets */
 export const BRAND_FILTER = 'Производитель';
 
+/** Характеристики, по которым фильтр не строим (владелец, 04.11.2026): в карточке товара они остаются */
+const NO_FILTER = new Set(['Класс нагрузки', 'Пожарная опасность']);
+
 /** Миниатюра фото товара для каталога (копия 600 px, см. PRESETS.product в uploads.ts) */
 export const productThumb = (rel: string) => rel.replace(/\.webp$/, '-600.webp');
 
@@ -76,7 +79,8 @@ export async function getProductBySlug(sectionId: number, slug: string): Promise
 
 /** Значения товара для фильтров: бренд и facets */
 function facetPairs(p: ProductItem): Attr[] {
-  return p.brand ? [{ label: BRAND_FILTER, value: p.brand }, ...p.facets] : p.facets;
+  const facets = p.facets.filter((f) => !NO_FILTER.has(f.label));
+  return p.brand ? [{ label: BRAND_FILTER, value: p.brand }, ...facets] : facets;
 }
 
 /** Выбранные фильтры из адреса: ?f=Формат:Ёлочка&f=Цвет пола:светло-серый */
