@@ -46,6 +46,11 @@ type SeedCatalog = {
   /** Исправления в текстах уже работающего сайта (заголовок, описания): «старый текст» → «новый», если их не меняли в админке */
   siteFixes?: Record<string, string>;
   hideBrands?: boolean; brands?: SeedBrand[]; categories?: SeedCategory[]; products: SeedProduct[];
+  /**
+   * Новая версия переписывает у загруженных товаров из файла название, коллекцию, характеристики, значения
+   * для фильтров и описание (правки этих полей в админке теряются). Фото и метки не трогает.
+   */
+  refreshProducts?: boolean;
 };
 
 /** Адрес сайта раздела по адресу главного сайта: localhost → vinyl.localhost, evropol.kg → vinyl.evropol.kg */
@@ -133,12 +138,19 @@ async function upgradeCatalog(sectionId: number, slug: string): Promise<{ added:
           WHERE id = ${sectionId} AND strpos(${tx(col)}, ${from}) > 0 AND strpos(${tx(col)}, ${to}) = 0`;
       }
     }
+    if (seed.hideBrands) await tx`UPDATE brands SET is_active = false WHERE section_id = ${sectionId} AND is_active`;
     const added = await addSeedProducts(tx, sectionId, seed);
     let inStock = 0;
     for (const p of seed.products) {
       const r = await tx`UPDATE products SET in_stock = ${p.inStock ?? false}, updated_at = now()
         WHERE section_id = ${sectionId} AND slug = ${p.slug} AND in_stock <> ${p.inStock ?? false}`;
       inStock += r.count;
+      if (seed.refreshProducts) {
+        await tx`UPDATE products SET ${tx({
+          name: p.name, collection: p.collection, sku: p.sku, attributes: tx.json(p.attributes), facets: tx.json(p.facets),
+          specs: tx.json(p.specs), description: p.description,
+        })}, updated_at = now() WHERE section_id = ${sectionId} AND slug = ${p.slug}`;
+      }
       for (const [from, to] of Object.entries(p.descriptionFixes ?? {})) {
         await tx`UPDATE products SET description = replace(description, ${from}, ${to}), updated_at = now()
           WHERE section_id = ${sectionId} AND slug = ${p.slug} AND strpos(description, ${from}) > 0 AND strpos(description, ${to}) = 0`;
