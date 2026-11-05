@@ -1,0 +1,17 @@
+---
+// «Соц. сети» в подвале: заголовок, «Связаться с нами:» и значки (Footer.astro)
+import type { Settings } from '../server/settings.ts';
+import SocialIcon from './SocialIcon.astro';
+
+interface Props {
+  settings: Settings;
+}
+const { settings } = Astro.props;
+---
+
+<div class="pf-title">Соц. сети</div>
+<p class="pf-note">Связаться с нами:</p>
+<div class="pf-social">
+  {settings.instagram_url && <a href={settings.instagram_url} target="_blank" rel="noopener" aria-label="Instagram"><SocialIcon name="instagram" size={22} /></a>}
+  {settings.facebook_url && <a href={settings.facebook_url} target="_blank" rel="noopener" aria-label="Facebook"><SocialIcon name="facebook" size={22} /></a>}
+</div>

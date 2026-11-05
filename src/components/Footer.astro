@@ -1,10 +1,10 @@
 ---
 // Подвал как на europroject.kg: чёрный, четыре колонки с заголовками и ссылками с точками, внизу копирайт.
-// На главной справа от контактов — небольшая Google-карта с точкой ЕвроПол (на «Контактах» карта справа от текста).
+// На главной справа от контактов — Google-карта с точкой ЕвроПол (на «Контактах» карта справа от текста).
 import type { MenuName, MenuItem } from '../server/content.ts';
 import { sectionHref, type Section } from '../server/sections.ts';
 import type { OfficeMap, Settings } from '../server/settings.ts';
-import SocialIcon from './SocialIcon.astro';
+import FooterSocial from './FooterSocial.astro';
 
 interface Props {
   settings: Settings;
@@ -16,6 +16,7 @@ interface Props {
 }
 const { settings, menus, sections, copyright, map } = Astro.props;
 const phoneHref = (p: string) => 'tel:' + p.replace(/[^\d+]/g, '');
+// «Соц. сети»: своя колонка, а на главной (рядом карта) — под «Контактами», чтобы карте хватило места
 ---
 
 <footer class="pf">
@@ -42,6 +43,7 @@ const phoneHref = (p: string) => 'tel:' + p.replace(/[^\d+]/g, '');
         {settings.phone_second && <li><a href={phoneHref(settings.phone_second)}>{settings.phone_second}</a></li>}
         {settings.email && <li><a href={`mailto:${settings.email}`}>{settings.email}</a></li>}
       </ul>
+      {map && <div class="pf-under"><FooterSocial settings={settings} /></div>}
     </div>
     {
       map && (
@@ -51,14 +53,13 @@ const phoneHref = (p: string) => 'tel:' + p.replace(/[^\d+]/g, '');
         </figure>
       )
     }
-    <div class="pf-col">
-      <div class="pf-title">Соц. сети</div>
-      <p class="pf-note">Связаться с нами:</p>
-      <div class="pf-social">
-        {settings.instagram_url && <a href={settings.instagram_url} target="_blank" rel="noopener" aria-label="Instagram"><SocialIcon name="instagram" size={22} /></a>}
-        {settings.facebook_url && <a href={settings.facebook_url} target="_blank" rel="noopener" aria-label="Facebook"><SocialIcon name="facebook" size={22} /></a>}
-      </div>
-    </div>
+    {
+      !map && (
+        <div class="pf-col">
+          <FooterSocial settings={settings} />
+        </div>
+      )
+    }
   </div>
 
   <div class="pf-bottom">{copyright}</div>
