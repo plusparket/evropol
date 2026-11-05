@@ -37,7 +37,7 @@ export function paginate<T>(items: T[], raw: string | null) {
 /** Миниатюра фото товара для каталога (копия 600 px, см. PRESETS.product в uploads.ts) */
 export const productThumb = (rel: string) => rel.replace(/\.webp$/, '-600.webp');
 
-/** Все опубликованные товары раздела с названием бренда: сначала «В наличии», дальше по порядку */
+/** Все опубликованные товары раздела с названием бренда: сначала товары со склада (in_stock), дальше по порядку */
 export async function getProducts(sectionId: number): Promise<ProductItem[]> {
   return sql<ProductItem[]>`
     SELECT p.*, coalesce(b.name, '') AS brand FROM products p LEFT JOIN brands b ON b.id = p.brand_id AND b.is_active
@@ -76,7 +76,7 @@ export async function getCategoryTree(sectionId: number): Promise<CategoryNode[]
   return roots.filter((g) => g.productIds.length);
 }
 
-/** Товары категории по порядку каталога (сначала «В наличии») */
+/** Товары категории по порядку каталога (сначала товары со склада) */
 export function productsOf(all: ProductItem[], c: Pick<CategoryNode, 'productIds'>): ProductItem[] {
   const ids = new Set(c.productIds);
   return all.filter((p) => ids.has(p.id));
@@ -166,7 +166,7 @@ export function categoryPaths(tree: CategoryNode[], productId: number): Category
   return paths;
 }
 
-/** «Похожие» на сайте с категориями: товары той же категории, сначала «В наличии» */
+/** «Похожие» на сайте с категориями: товары той же категории, сначала товары со склада */
 export function relatedInCategory(all: ProductItem[], p: ProductItem, category: CategoryNode | undefined, max = 4): ProductItem[] {
   return category ? productsOf(all, category).filter((x) => x.id !== p.id).slice(0, max) : [];
 }

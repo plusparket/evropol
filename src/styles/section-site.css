@@ -48,11 +48,10 @@
 .ss-about { background: var(--band); padding-top: var(--pad) !important; }
 .ss-about + .psec { padding-top: var(--pad); }
 
-/* Метки «В наличии» и «Новинка» на фото товара */
+/* Метка «Новинка» на фото товара */
 .ss-card .pcard2-img { position: relative; }
 .ss-badges { position: absolute; top: 12px; left: 12px; z-index: 1; display: flex; flex-wrap: wrap; gap: 6px; }
 .ss-badge { padding: 4px 10px; background: var(--site); color: #fff; font: 600 12px/1.4 var(--font); letter-spacing: .04em; text-transform: uppercase; }
-.ss-badge--stock { background: #fff; color: var(--site); box-shadow: inset 0 0 0 2px var(--site); }
 .ss-badge--inline { display: inline-block; margin: 0 6px 12px 0; }
 
 /* Страница товара */
@@ -181,9 +180,6 @@ span.cat-pager-arrow { opacity: .35; }
 .ss-cat-nav a[aria-current] { font-weight: 600; }
 .ss-cat-nav ul ul a { padding: 5px 18px 5px 32px; font-size: 14px; }
 .ss-cat-nav li.is-open > a { color: var(--ink); font-weight: 600; }
-.ss-cat-nav .ss-cat-stock { display: flex; align-items: center; gap: 10px; margin: 10px 18px 0; padding: 12px 0 0; border-top: 1px solid var(--line); font-size: 14px; }
-.ss-cat-box { display: inline-flex; align-items: center; justify-content: center; flex: none; width: 17px; height: 17px; border: 1px solid var(--muted); background: #fff; color: #fff; font-size: 12px; line-height: 1; }
-.ss-cat-stock[aria-pressed="true"] .ss-cat-box { border-color: var(--site); background: var(--site); }
 .ss-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 24px; }
 .ss-chip { padding: 7px 14px; border: 1px solid var(--line); color: var(--text); font-size: 14px; }
 .ss-chip:hover { border-color: var(--site); color: var(--site); }

@@ -20,7 +20,6 @@ const others = catalogOnly ? [] : sections.filter((s) => s.id !== site.id).map((
 const links = site.siteLayout === 'groups'
   ? [
       { label: 'Продукция', url: '/' },
-      { label: 'В наличии', url: '/?stock=1' },
       ...(site.description ? [{ label: 'О продукции', url: '/#about' }] : []),
       { label: 'Контакты', url: '/#contacts' },
     ]

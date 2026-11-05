@@ -3,7 +3,7 @@
 // setupSectionSites() — при запуске, один раз для каждого раздела из SITES: включает сайт раздела по адресу
 // <раздел>.<адрес главного сайта> (на компьютере — vinyl.localhost, laminate.localhost), добавляет разделу бренды
 // и товары из seed/catalog/<раздел>.json, если товаров в разделе ещё нет. Отметка в настройках: section_site:<раздел>.
-// При каждом запуске: если в файле выросло поле version, добавляет новые товары, обновляет метку «В наличии»
+// При каждом запуске: если в файле выросло поле version, добавляет новые товары, обновляет отметку «со склада»
 // и ссылки на фото у товаров, у которых фото ещё нет (upgradeCatalog, отметка catalog_version:<раздел>).
 // Адрес и цвет потом меняются в админке: «Разделы» → раздел → «Сайт раздела».
 //
@@ -28,7 +28,7 @@ type SeedProduct = {
   specs: Attr[]; description: string; images: string[]; sourceUrl: string; isNew?: boolean;
   /** Исправления в описании уже загруженного товара: «старый текст» → «новый» (например, битая ссылка на PDF) */
   descriptionFixes?: Record<string, string>;
-  /** Метка «В наличии» */
+  /** Товар со склада владельца (из таблицы остатков): в каталоге идёт первым, надписи на сайте нет */
   inStock?: boolean;
   /** Адреса категорий товара (из categories файла) */
   categories?: string[];
@@ -38,7 +38,7 @@ type SeedBrand = { name: string; link?: string; description?: string };
 type SeedSite = { layout?: string; address?: string; heading?: string; summary?: string; description?: string; seoTitle?: string; seoDescription?: string };
 /**
  * hideBrands — убрать бренды раздела с сайта (товары без бренда, производитель указан в характеристиках).
- * version — номер версии каталога: когда он растёт, при запуске добавляются новые товары и обновляется «В наличии»
+ * version — номер версии каталога: когда он растёт, при запуске добавляются новые товары и обновляется отметка «со склада»
  * (см. upgradeCatalog). categories — группы и категории товаров (вид главной 'groups').
  */
 type SeedCatalog = {
@@ -66,7 +66,7 @@ export async function setupSectionSites(): Promise<string[]> {
       const [section] = await sql<{ id: number; name: string }[]>`SELECT id, name FROM sections WHERE slug = ${slug}`;
       const up = section ? await upgradeCatalog(section.id, slug) : null;
       if (up?.added) log.push(`«${section!.name}»: новых товаров ${up.added}`);
-      if (up?.inStock) log.push(`«${section!.name}»: метка «В наличии» обновлена у ${up.inStock}`);
+      if (up?.inStock) log.push(`«${section!.name}»: отметка «со склада» обновлена у ${up.inStock}`);
       continue;
     }
     const [section] = await sql<{ id: number; name: string }[]>`SELECT id, name FROM sections WHERE slug = ${slug}`;
@@ -115,7 +115,7 @@ async function loadCatalog(sectionId: number, slug: string): Promise<number> {
 
 /**
  * Новая версия каталога в seed/catalog/<раздел>.json (поле version больше записанного в настройках
- * catalog_version:<раздел>): добавляет товары, которых в разделе ещё нет (по адресу), и ставит метку «В наличии»
+ * catalog_version:<раздел>): добавляет товары, которых в разделе ещё нет (по адресу), и ставит отметку «со склада»
  * товарам из файла так, как в файле. Остальные товары и правки в админке не трогает. Возвращает число новых товаров.
  */
 async function upgradeCatalog(sectionId: number, slug: string): Promise<{ added: number; inStock: number } | null> {
