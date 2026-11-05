@@ -10,7 +10,7 @@ import { getHome } from './home.ts';
 import { getActiveBrands, getSections, linkLabel, sectionLink, siteUrl, type Brand, type Section } from './sections.ts';
 import { categoryPaths, getCategoryTree, getProducts, type CategoryNode, type ProductItem } from './products.ts';
 import { pluralRu } from './util.ts';
-import { fillPlaceholders, getSettings, siteSettings, type Settings } from './settings.ts';
+import { fillPlaceholders, getSettings, officeMaps, siteSettings, type Settings } from './settings.ts';
 
 const ENTITIES: Record<string, string> = {
   nbsp: ' ', amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", laquo: '«', raquo: '»',
@@ -99,9 +99,11 @@ function summary(d: Data): string {
 function contacts(d: Data, mainContact = true): string[] {
   const s = d.settings;
   const wa = s.panel_whatsapp ? `, WhatsApp ${s.panel_whatsapp} (https://wa.me/${s.panel_whatsapp.replace(/\D/g, '')})` : '';
+  const map = officeMaps(s)[0]; // точка офиса на Google Картах (та же, что на карте сайта)
   const lines = [
     `- Офис «${s.site_name}»: ${s.address}, Кыргызстан. Телефон ${s.phone_main}.` +
-      (s.work_hours ? ` Режим работы: ${s.work_hours}.` : '') + (s.geo ? ` Координаты: ${s.geo}.` : ''),
+      (s.work_hours ? ` Режим работы: ${s.work_hours}.` : '') + (s.geo ? ` Координаты: ${s.geo}.` : '') +
+      (map ? ` Google Карты: ${map.link}` : ''),
   ];
   if (s.address_second || s.phone_second) {
     lines.push(

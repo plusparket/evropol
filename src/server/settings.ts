@@ -12,7 +12,7 @@ export const SETTINGS_SCHEMA = [
   // Контакты: адрес, телефон и почта по просьбе владельца от 27.10.2026
   { group: 'Контакты: офис', key: 'phone_main', label: 'Телефон', default: '+996 (779) 37 72 73' },
   { group: 'Контакты: офис', key: 'address', label: 'Адрес', default: 'г. Бишкек, ул. Матросова 6/1' },
-  { group: 'Контакты: офис', key: 'work_hours', label: 'Режим работы (пусто — не показывается)', default: 'Пн–Сб 9:00–17:00' },
+  { group: 'Контакты: офис', key: 'work_hours', label: 'Режим работы (пусто — не показывается)', default: 'с 9.00 до 17.00' },
   { group: 'Контакты: офис', key: 'email', label: 'Email', default: 'info@bino.kg' },
   { group: 'Контакты: офис', key: 'hours_schema', label: 'Часы работы для Google (Mo-Sa 09:00-17:00; дни: Mo Tu We Th Fr Sa Su)', default: 'Mo-Sa 09:00-17:00' },
   { group: 'Контакты: офис', key: 'geo', label: 'Координаты на карте для Google (широта, долгота)', default: '42.8597994, 74.6189611' },
@@ -28,8 +28,8 @@ export const SETTINGS_SCHEMA = [
 
   { group: 'Соцсети и карта', key: 'instagram_url', label: 'Instagram', default: 'https://www.instagram.com/evropolkg/' },
   { group: 'Соцсети и карта', key: 'facebook_url', label: 'Facebook', default: '' },
-  { group: 'Соцсети и карта', key: 'map_embed_url', label: 'Карта офиса: ссылка для встраивания Google-карты (src из iframe)', type: 'textarea',
-    default: 'https://maps.google.com/maps?q=%D0%91%D0%B8%D1%88%D0%BA%D0%B5%D0%BA%2C%20%D1%83%D0%BB.%20%D0%9C%D0%B0%D1%82%D1%80%D0%BE%D1%81%D0%BE%D0%B2%D0%B0%206%2F1&z=16&output=embed' },
+  { group: 'Соцсети и карта', key: 'map_embed_url', label: 'Карта офиса: ссылка для встраивания Google-карты (src из iframe). Пусто — точка по координатам офиса', type: 'textarea',
+    default: '' },
   { group: 'Соцсети и карта', key: 'map_embed_url_second', label: 'Карта второго адреса: ссылка для встраивания (пусто — одна карта)', type: 'textarea', default: '' },
 
   { group: 'Поисковики и аналитика', key: 'google_site_verification', label: 'Google Search Console: код подтверждения (значение content из метатега google-site-verification)', default: '' },
@@ -61,6 +61,46 @@ export function siteSettings(settings: Settings, site: { siteAddress: string }):
   // Адрес раздела совпадает с адресом офиса (линолеум и офис на Матросова 6/1): координаты офиса подходят
   const geo = site.siteAddress.trim() === settings.address.trim() ? settings.geo : '';
   return { ...settings, address: site.siteAddress, geo, name_second: '', phone_second: '', address_second: '', work_hours_second: '', geo_second: '' };
+}
+
+// Прежняя карта по умолчанию: поиск по адресу. Google мог поставить точку не на том доме, поэтому такую ссылку
+// заменяем картой по координатам офиса (поле geo)
+const ADDRESS_MAP = 'https://maps.google.com/maps?q=%D0%91%D0%B8%D1%88%D0%BA%D0%B5%D0%BA%2C%20%D1%83%D0%BB.%20%D0%9C%D0%B0%D1%82%D1%80%D0%BE%D1%81%D0%BE%D0%B2%D0%B0%206%2F1&z=16&output=embed';
+
+/** «42.8597994, 74.6189611» → «42.8597994,74.6189611»; неверный ввод → '' */
+function latLng(geo: string): string {
+  const m = geo.match(/^\s*(-?\d{1,2}(?:\.\d+)?)\s*[,;\s]\s*(-?\d{1,3}(?:\.\d+)?)\s*$/);
+  return m ? `${m[1]},${m[2]}` : '';
+}
+
+export interface OfficeMap {
+  /** Адрес для iframe (загружается, когда карта подходит к экрану) */
+  src: string;
+  name: string;
+  address: string;
+  /** Ссылка «Открыть в Google Картах» */
+  link: string;
+}
+
+/**
+ * Google-карты офиса и второго адреса с точкой. Своя ссылка из админки («Соцсети и карта») главнее;
+ * без неё точка ставится по координатам (geo), без координат — поиском по адресу.
+ */
+export function officeMaps(settings: Settings): OfficeMap[] {
+  const one = (custom: string, geo: string, name: string, address: string): OfficeMap | undefined => {
+    const point = latLng(geo);
+    const query = encodeURIComponent(point || address);
+    const link = `https://www.google.com/maps/search/?api=1&query=${query}`;
+    if (custom.startsWith('https://') && custom !== ADDRESS_MAP) return { src: custom, name, address, link };
+    if (!point && !address) return undefined;
+    return { src: `https://maps.google.com/maps?q=${query}&hl=ru&z=17&output=embed`, name, address, link };
+  };
+  const office = one(settings.map_embed_url, settings.geo, settings.site_name, settings.address);
+  // Второй адрес — только если для него задана своя карта (как раньше)
+  const second = settings.map_embed_url_second.startsWith('https://')
+    ? one(settings.map_embed_url_second, settings.geo_second, settings.name_second || 'Второй адрес', settings.address_second)
+    : undefined;
+  return [office, second].filter((m): m is OfficeMap => !!m);
 }
 
 export async function saveSettings(values: Partial<Settings>): Promise<void> {
