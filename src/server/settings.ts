@@ -26,7 +26,7 @@ export const SETTINGS_SCHEMA = [
 
   { group: 'WhatsApp', key: 'panel_whatsapp', label: 'Номер WhatsApp для зелёной кнопки на сайте и кнопок «Написать в WhatsApp» (пусто — кнопки нет)', default: '+996 (779) 37 72 73' },
 
-  { group: 'Соцсети и карта', key: 'instagram_url', label: 'Instagram', default: 'https://www.instagram.com/europroject.kg/' },
+  { group: 'Соцсети и карта', key: 'instagram_url', label: 'Instagram', default: 'https://www.instagram.com/evropolkg/' },
   { group: 'Соцсети и карта', key: 'facebook_url', label: 'Facebook', default: '' },
   { group: 'Соцсети и карта', key: 'map_embed_url', label: 'Карта офиса: ссылка для встраивания Google-карты (src из iframe)', type: 'textarea',
     default: 'https://maps.google.com/maps?q=%D0%91%D0%B8%D1%88%D0%BA%D0%B5%D0%BA%2C%20%D1%83%D0%BB.%20%D0%9C%D0%B0%D1%82%D1%80%D0%BE%D1%81%D0%BE%D0%B2%D0%B0%206%2F1&z=16&output=embed' },

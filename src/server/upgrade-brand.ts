@@ -1,16 +1,20 @@
 // Название «ЕвроПол» вместо прежнего «Европроект» во всех текстах базы (решение владельца 05.11.2026):
 // настройки, главная, разделы, бренды, страницы, новости, товары и сайты разделов, включая тексты, изменённые в админке.
 // Запускается при каждом старте и меняет только записи, где старое название ещё есть.
-// Адреса со старым доменом (europroject.kg, info@europroject.kg, instagram.com/europroject.kg) не трогаются.
+// Instagram: ссылки на старый аккаунт europroject.kg ведут на evropolkg. Остальные адреса со старым доменом
+// (europroject.kg, info@europroject.kg) не трогаются.
 import { sql } from './db.ts';
 
 const NEW = 'ЕвроПол';
 /** «Европроект», «Европроекта», «ЕВРОПРОЕКТ», «Europroject», «EUROPROJECT» как слово, не часть адреса */
 const OLD_RE = /(?<![\w./@-])(?:[ЕеEe]вро[- ]?[Пп]роект|ЕВРО[- ]?ПРОЕКТ|Euro[- ]?[Pp]roject|EURO[- ]?PROJECT)(а|у|ом|е|ы|ов)?(?![\w.-]*\.(?:kg|com|ru)\b)(?![A-Za-z0-9_А-Яа-яЁё])/g;
-const PG_FIND = '([ЕеEe]вро[- ]?[Пп]роект|ЕВРО[- ]?ПРОЕКТ|[Ee]uro[- ]?[Pp]roject|EURO[- ]?PROJECT)';
+const PG_FIND = '([ЕеEe]вро[- ]?[Пп]роект|ЕВРО[- ]?ПРОЕКТ|[Ee]uro[- ]?[Pp]roject|EURO[- ]?PROJECT|instagram\\.com/europroject|@europroject\\.kg)';
 
 export function renameBrand(text: string): string {
-  return text.replace(OLD_RE, (_m, ending: string | undefined) => NEW + (ending ?? ''));
+  return text
+    .replace(OLD_RE, (_m, ending: string | undefined) => NEW + (ending ?? ''))
+    .replace(/instagram\.com\/europroject\.kg\/?/gi, 'instagram.com/evropolkg/')
+    .replace(/(?<![\w.])@europroject\.kg\b/gi, '@evropolkg');
 }
 
 /** Возвращает число изменённых записей. */
