@@ -1,9 +1,9 @@
 {
-  "name": "europroject",
+  "name": "evropol",
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Сайт «Европроект» (europroject.kg): Astro + Postgres + собственная панель управления",
+  "description": "Сайт «ЕвроПол» (evropol.kg): Astro + Postgres + собственная панель управления",
   "engines": {
     "node": ">=24"
   },

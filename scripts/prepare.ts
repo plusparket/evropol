@@ -13,6 +13,7 @@ import { upgradeSections } from '../src/server/upgrade-sections.ts';
 import { upgradeContacts, upgradeEmail, upgradeWhatsapp } from '../src/server/upgrade-contacts.ts';
 import { setupSectionSites } from '../src/server/section-sites.ts';
 import { upgradeSeo } from '../src/server/upgrade-seo.ts';
+import { upgradeBrand } from '../src/server/upgrade-brand.ts';
 
 const log = (msg: string) => console.log(`[prepare] ${msg}`);
 
@@ -34,6 +35,8 @@ export async function prepare(): Promise<void> {
   const emails = await upgradeEmail();
   if (emails) log(`почта info@bino.kg: изменено записей ${emails}`);
   for (const msg of await upgradeSeo()) log(`поиск Google: ${msg}`);
+  const renamed = await upgradeBrand();
+  if (renamed) log(`название ЕвроПол вместо Европроект: изменено записей ${renamed}`);
   for (const msg of await setupSectionSites()) log(`сайты разделов: ${msg}`);
   await importLegacyPhotos(log).catch((err) => log(`фото со старого сайта: ошибка ${err?.message ?? err}`));
   const made = await ensureHomeVariants();

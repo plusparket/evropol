@@ -7,7 +7,7 @@ export const SETTINGS_SCHEMA = [
   { group: 'Общее', key: 'seo_description', label: 'Описание главной для поисковиков (meta description)', type: 'textarea',
     default: 'ЕвроПол поставляет в Кыргызстан напольные покрытия IVC Commercial, Moduleo, BerryAlloc, Modulyss, Betap и BLOQ и клеи Forbo Eurocol: линолеум, ковролин, ковровую плитку, кварцвинил SPC и LVT, ламинат, паркет, строительную химию. Бишкек, ул. Матросова 6/1.' },
   { group: 'Общее', key: 'forest_design', label: 'Лесной дизайн главного сайта: зелёная полоса сверху, зелёные кнопки и заголовки, тёмно-зелёный подвал (снимите галочку — вернутся прежние цвета)', type: 'checkbox', default: '1' },
-  { group: 'Общее', key: 'copyright', label: 'Текст в подвале ({year} — текущий год)', default: 'Copyright © {year} Европроект. Все права защищены' },
+  { group: 'Общее', key: 'copyright', label: 'Текст в подвале ({year} — текущий год)', default: 'Copyright © {year} ЕвроПол. Все права защищены' },
 
   // Контакты: адрес, телефон и почта по просьбе владельца от 27.10.2026
   { group: 'Контакты: офис', key: 'phone_main', label: 'Телефон', default: '+996 (779) 37 72 73' },

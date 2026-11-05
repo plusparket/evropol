@@ -1,6 +1,6 @@
 # Инструкции для ИИ-агентов
 
-Проект — сайт компании «Европроект» (europroject.kg, Бишкек): Astro + Postgres + Caddy, всё в Docker.
+Проект — сайт компании «ЕвроПол» (evropol.kg, Бишкек): Astro + Postgres + Caddy, всё в Docker.
 Главный сайт — визитка без товаров. Раздел ведёт на свой сайт раздела с каталогом (то же приложение, адрес
 `sections.site_host`, см. [docs/section-sites.md](docs/section-sites.md)) или на внешнюю страницу (`sections.link`).
 Документация — в [docs/](docs/README.md), журнал изменений — [docs/changelog.md](docs/changelog.md).

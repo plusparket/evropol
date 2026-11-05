@@ -1,4 +1,4 @@
-# Сайт «Европроект»: Postgres + приложение Astro + Caddy (reverse proxy, HTTPS).
+# Сайт «ЕвроПол»: Postgres + приложение Astro + Caddy (reverse proxy, HTTPS).
 # Запуск:  docker compose up -d --build
 # Подробности: docs/development.md и docs/deployment.md
 

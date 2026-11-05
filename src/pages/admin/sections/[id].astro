@@ -70,7 +70,7 @@ if (Astro.request.method === 'POST') {
   else if (RESERVED_SLUGS.has(form.slug)) error = `Адрес «${form.slug}» зарезервирован системой`;
   else if ((await sql`SELECT 1 FROM pages WHERE slug = ${form.slug}`).length) error = `Адрес «${form.slug}» уже занят страницей`;
   else if (form.link && !/^(https?:\/\/|\/)/i.test(form.link)) error = 'Ссылка на сайт раздела начинается с https:// (или с / для страницы этого сайта)';
-  else if (form.siteHost && !/^[a-z0-9-]+(\.[a-z0-9-]+)+$/.test(form.siteHost)) error = 'Адрес сайта раздела: латинские буквы, цифры и точки, например vinyl.localhost или vinyl.europroject.kg';
+  else if (form.siteHost && !/^[a-z0-9-]+(\.[a-z0-9-]+)+$/.test(form.siteHost)) error = 'Адрес сайта раздела: латинские буквы, цифры и точки, например vinyl.localhost или vinyl.evropol.kg';
   else if (form.siteHost && (await sql`SELECT 1 FROM sections WHERE lower(site_host) = ${form.siteHost} AND id <> ${id ?? 0}`).length) error = `Адрес «${form.siteHost}» уже занят другим разделом`;
   else if (form.siteColor && !/^#[0-9a-f]{6}$/.test(form.siteColor)) error = 'Цвет сайта: шесть знаков после #, например #006338';
 
@@ -212,7 +212,7 @@ const title = isNew ? 'Новый раздел' : form.name;
       <div class="form-grid">
         <div class="field">
           <label for="seo_title">Заголовок (title)</label>
-          <input type="text" id="seo_title" name="seo_title" value={form.seoTitle} placeholder="пусто — «Название в Бишкеке | Европроект»" />
+          <input type="text" id="seo_title" name="seo_title" value={form.seoTitle} placeholder="пусто — «Название в Бишкеке | ЕвроПол»" />
         </div>
         <div class="field">
           <label for="seo_description">Описание (meta description)</label>
