@@ -1,6 +1,6 @@
-# Европроект (europroject.kg)
+# ЕвроПол (evropol.kg)
 
-Сайт компании «Европроект», Бишкек: напольные покрытия Moduleo, BerryAlloc, Modulyss, Betap, IVC Commercial, BLOQ,
+Сайт компании «ЕвроПол», Бишкек: напольные покрытия Moduleo, BerryAlloc, Modulyss, Betap, IVC Commercial, BLOQ,
 CM Decking и клеи Forbo Eurocol. Сайт заменяет старый сайт на PHP.
 
 Сайт работает как визитка и указатель: товаров и заказа здесь нет. У каждого раздела (Винил, Ковровая плитка,

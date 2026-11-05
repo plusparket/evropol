@@ -48,7 +48,7 @@ type SeedCatalog = {
   hideBrands?: boolean; brands?: SeedBrand[]; categories?: SeedCategory[]; products: SeedProduct[];
 };
 
-/** Адрес сайта раздела по адресу главного сайта: localhost → vinyl.localhost, europroject.kg → vinyl.europroject.kg */
+/** Адрес сайта раздела по адресу главного сайта: localhost → vinyl.localhost, evropol.kg → vinyl.evropol.kg */
 export function defaultSiteHost(slug: string): string {
   const main = normalizeHost(process.env.SITE_URL || 'localhost').replace(/^www\./, '');
   return `${slug}.${main}`;

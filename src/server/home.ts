@@ -111,7 +111,7 @@ export async function upgradeHome(): Promise<boolean> {
     home.contact.text = swap(home.contact.text, OLD_DEFAULTS.contactText, DEFAULT_HOME.contact.text);
     if (changed) await saveHome(home);
   }
-  const copyright = await sql`UPDATE settings SET value = 'Copyright © {year} Европроект. Все права защищены'
+  const copyright = await sql`UPDATE settings SET value = 'Copyright © {year} ЕвроПол. Все права защищены'
                               WHERE key = 'copyright' AND value = '© {year} Европроект'`;
   await sql`INSERT INTO settings (key, value) VALUES (${LAYOUT_KEY}, '2') ON CONFLICT (key) DO UPDATE SET value = '2'`;
   return changed || copyright.count > 0;
