@@ -15,14 +15,15 @@ export function renameBrand(text: string): string {
 
 /** Возвращает число изменённых записей. */
 export async function upgradeBrand(): Promise<number> {
-  const cols = await sql<{ table_name: string; column_name: string; data_type: string }[]>`
-    SELECT c.table_name, c.column_name, c.data_type
+  const cols = await sql<{ tbl: string; col: string; kind: string }[]>`
+    SELECT c.table_name AS tbl, c.column_name AS col, c.data_type AS kind
       FROM information_schema.columns c
       JOIN information_schema.tables t ON t.table_schema = c.table_schema AND t.table_name = c.table_name
      WHERE c.table_schema = 'public' AND t.table_type = 'BASE TABLE'
        AND c.data_type IN ('text', 'character varying', 'jsonb', 'json')`;
   let changed = 0;
-  for (const { table_name: table, column_name: column, data_type: type } of cols) {
+  // Псевдонимы без подчёркиваний: db.ts переводит имена колонок в camelCase
+  for (const { tbl: table, col: column, kind: type } of cols) {
     const t = `"${table.replace(/"/g, '""')}"`;
     const c = `"${column.replace(/"/g, '""')}"`;
     const rows = await sql.unsafe<{ id: string; value: string }[]>(
