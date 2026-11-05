@@ -1,7 +1,7 @@
 import { defineMiddleware } from 'astro:middleware';
 import { getSessionUser } from './server/auth.ts';
 import { trackVisit } from './server/content.ts';
-import { getSectionByHost } from './server/sections.ts';
+import { getSectionByHost, getSectionBySlug, mainDomain, normalizeHost, siteUrl } from './server/sections.ts';
 
 const VISIT_COOKIE = 'ep_visit';
 const BOT_RE = /bot|crawl|spider|slurp|facebookexternalhit|preview|monitor|curl|wget|python|headless/i;
@@ -15,7 +15,7 @@ export const onRequest = defineMiddleware(async (ctx, next) => {
   ctx.locals.user = null;
   ctx.locals.site = null;
 
-  // --- Один адрес сайта: www.europroject.kg → europroject.kg (иначе в Google два адреса — дубли) -----
+  // --- Один адрес сайта: www.evropol.kg → evropol.kg (иначе в Google два адреса — дубли) -----
   const host = ctx.request.headers.get('host') ?? '';
   if (host.startsWith('www.') && !process.env.SITE_URL?.includes('://www.')) {
     const base = process.env.SITE_URL || `${ctx.url.protocol}//${host.slice(4)}`;
@@ -33,6 +33,14 @@ export const onRequest = defineMiddleware(async (ctx, next) => {
     }
     trackPageView(ctx, pathname);
     return next(new URL(SECTION_SITE + (pathname === '/' ? '' : pathname) + ctx.url.search, ctx.url));
+  }
+  // Раздел переехал с поддомена на свой домен (laminate.evropol.kg → laminate.kg): старый адрес ведёт на новый (301),
+  // чтобы Google перенёс страницы, а не показывал на поддомене главный сайт
+  const domain = mainDomain();
+  const h = normalizeHost(host);
+  if (domain && h.endsWith(`.${domain}`) && !h.startsWith('www.')) {
+    const moved = await getSectionBySlug(h.slice(0, -domain.length - 1));
+    if (moved?.siteHost) return Response.redirect(siteUrl(moved) + pathname + ctx.url.search, 301);
   }
   if (pathname === SECTION_SITE || pathname.startsWith(SECTION_SITE + '/')) return new Response('Not found', { status: 404 });
 

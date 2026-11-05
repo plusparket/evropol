@@ -2,20 +2,20 @@ import { sql } from './db.ts';
 
 /** Все настройки сайта с подписями для админки и значениями по умолчанию. */
 export const SETTINGS_SCHEMA = [
-  { group: 'Общее', key: 'site_name', label: 'Название компании (в заголовках страниц и разметке для Google)', default: 'Европроект' },
-  { group: 'Общее', key: 'seo_title', label: 'Заголовок главной страницы (title)', default: 'Европроект: линолеум, ковролин, ковровая плитка, кварцвинил, ламинат, паркет и строительная химия в Бишкеке' },
+  { group: 'Общее', key: 'site_name', label: 'Название компании (в заголовках страниц и разметке для Google)', default: 'ЕвроПол' },
+  { group: 'Общее', key: 'seo_title', label: 'Заголовок главной страницы (title)', default: 'ЕвроПол: линолеум, ковролин, ковровая плитка, кварцвинил, ламинат, паркет и строительная химия в Бишкеке' },
   { group: 'Общее', key: 'seo_description', label: 'Описание главной для поисковиков (meta description)', type: 'textarea',
-    default: 'Европроект поставляет в Кыргызстан напольные покрытия IVC Commercial, Moduleo, BerryAlloc, Modulyss, Betap и BLOQ и клеи Forbo Eurocol: линолеум, ковролин, ковровую плитку, кварцвинил SPC и LVT, ламинат, паркет, строительную химию. Бишкек, ул. Матросова 6/1.' },
+    default: 'ЕвроПол поставляет в Кыргызстан напольные покрытия IVC Commercial, Moduleo, BerryAlloc, Modulyss, Betap и BLOQ и клеи Forbo Eurocol: линолеум, ковролин, ковровую плитку, кварцвинил SPC и LVT, ламинат, паркет, строительную химию. Бишкек, ул. Матросова 6/1.' },
   { group: 'Общее', key: 'forest_design', label: 'Лесной дизайн главного сайта: зелёная полоса сверху, зелёные кнопки и заголовки, тёмно-зелёный подвал (снимите галочку — вернутся прежние цвета)', type: 'checkbox', default: '1' },
   { group: 'Общее', key: 'copyright', label: 'Текст в подвале ({year} — текущий год)', default: 'Copyright © {year} Европроект. Все права защищены' },
 
   // Контакты: адрес, телефон и почта по просьбе владельца от 27.10.2026
   { group: 'Контакты: офис', key: 'phone_main', label: 'Телефон', default: '+996 (779) 37 72 73' },
   { group: 'Контакты: офис', key: 'address', label: 'Адрес', default: 'г. Бишкек, ул. Матросова 6/1' },
-  { group: 'Контакты: офис', key: 'work_hours', label: 'Режим работы (пусто — не показывается)', default: '' },
+  { group: 'Контакты: офис', key: 'work_hours', label: 'Режим работы (пусто — не показывается)', default: 'Пн–Сб 9:00–17:00' },
   { group: 'Контакты: офис', key: 'email', label: 'Email', default: 'info@bino.kg' },
-  { group: 'Контакты: офис', key: 'hours_schema', label: 'Часы работы для Google (Mo-Sa 09:00-17:00; дни: Mo Tu We Th Fr Sa Su)', default: '' },
-  { group: 'Контакты: офис', key: 'geo', label: 'Координаты на карте для Google (широта, долгота)', default: '' },
+  { group: 'Контакты: офис', key: 'hours_schema', label: 'Часы работы для Google (Mo-Sa 09:00-17:00; дни: Mo Tu We Th Fr Sa Su)', default: 'Mo-Sa 09:00-17:00' },
+  { group: 'Контакты: офис', key: 'geo', label: 'Координаты на карте для Google (широта, долгота)', default: '42.8597994, 74.6189611' },
 
   { group: 'Контакты: второй адрес', key: 'name_second', label: 'Название (например «Склад» или «Магазин»)', default: '' },
   { group: 'Контакты: второй адрес', key: 'phone_second', label: 'Телефон (если телефон и адрес пустые — второй адрес не показывается)', default: '' },
@@ -58,7 +58,9 @@ export async function getSettings(): Promise<Settings> {
  */
 export function siteSettings(settings: Settings, site: { siteAddress: string }): Settings {
   if (!site.siteAddress) return settings;
-  return { ...settings, address: site.siteAddress, geo: '', name_second: '', phone_second: '', address_second: '', work_hours_second: '', geo_second: '' };
+  // Адрес раздела совпадает с адресом офиса (линолеум и офис на Матросова 6/1): координаты офиса подходят
+  const geo = site.siteAddress.trim() === settings.address.trim() ? settings.geo : '';
+  return { ...settings, address: site.siteAddress, geo, name_second: '', phone_second: '', address_second: '', work_hours_second: '', geo_second: '' };
 }
 
 export async function saveSettings(values: Partial<Settings>): Promise<void> {
