@@ -14,7 +14,8 @@ export const GET: APIRoute = async ({ url }) => {
     `${image ? `<image:image><image:loc>${base}/uploads/${image}</image:loc></image:image>` : ''}</url>`;
   const urls = [
     entry('/'),
-    ...sections.filter((s) => s.siteHost || !s.link).map((s) => entry(`/${s.slug}`, s.updatedAt, s.image)),
+    // Разделы со своим сайтом (у него своя карта сайта) и со ссылкой на другой сайт сюда не входят: их адреса здесь переадресуют
+    ...sections.filter((s) => !s.siteHost && !s.link).map((s) => entry(`/${s.slug}`, s.updatedAt, s.image)),
     ...pages.map((p) => entry(`/${p.slug}`, p.updatedAt)),
     entry('/news'),
     ...news.map((n) => entry(`/news/${n.slug}`, n.updatedAt)),
