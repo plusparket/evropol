@@ -1,10 +1,40 @@
 {
  "section": "vinyl",
- "version": 1,
- "note": "Кварцвинил BerryAlloc Click Comfort 55: данные и фото производителя (berryalloc.com), снимок 2026-10. Фото скачиваются при запуске (src/server/section-sites.ts).",
+ "version": 2,
+ "note": "Кварцвинил SPC и LVT. Версия 1: BerryAlloc Click Comfort 55 (Zenn), данные и фото berryalloc.com, снимок 2026-10. Версия 2 (2026-11-05): позиции со склада из таблицы владельца SPC_LVT_2026.xls, лист «ОКТЯБРЬ». Отмечены «В наличии»: BerryAlloc Zenn Orlando (доска и ёлочка), Monsanto и Porto (ёлочка); Noventis Grand Canyon 2001–2008 (вся коллекция с bigfloor.pro, 2009 и 2010 без метки; «Дуб Колорадо 2000» на сайте BIG нет); Fine Floor Made In Belgium MIB-0041, 0042, 0049, 0056 (вся коллекция с finefloor.ru; 0042 и 0056 сняты с сайта Fine Floor, данные и фото у дилера finefloor.spb.ru); Enviro Nature 006 (доска), Rustic 013 (доска и ёлочка), вся линия SPC с enviroflooring.com; Kährs Dom (Dry Back Stone, kahrs.com). Не добавлены: Moduleo Select/Transform (по решению владельца), VIT VIVO Stockton Oak (производитель не найден). Страницы скачаны компьютером владельца (ветка claude/spc-data). Цвет пола для Noventis и Fine Floor определён по фото. Фото скачиваются при запуске (src/server/section-sites.ts).",
  "site": {
-  "layout": "catalog"
+  "layout": "catalog",
+  "heading": "Кварцвиниловые полы SPC и LVT",
+  "summary": "Кварцвиниловая доска, ёлочка и плитка SPC и LVT от BerryAlloc, Noventis, Fine Floor, Enviro и Kährs для квартир, офисов и магазинов.",
+  "description": "<p>Кварцвиниловый пол не боится воды, поэтому его кладут на кухне, в ванной, в прихожей и в торговом зале. LVT приклеивают к основанию. У SPC жёсткая основа из каменной муки и пластика и замок, его собирают без клея.</p><p>В каталоге доска, ёлочка и плитка BerryAlloc, Noventis, Fine Floor, Enviro и Kährs с рисунком дерева и камня. Позиции с меткой «В наличии» лежат на складе в Бишкеке. Позвоните или напишите в WhatsApp: подскажем покрытие для вашей комнаты и рассчитаем метраж.</p>"
  },
+ "siteFixes": {
+  "SPC и LVT от Moduleo и BerryAlloc для квартир": "SPC и LVT от BerryAlloc, Noventis, Fine Floor, Enviro и Kährs для квартир",
+  "Кварцвиниловая плитка и доска Moduleo и BerryAlloc для квартир": "Кварцвиниловая доска, ёлочка и плитка BerryAlloc, Noventis, Fine Floor, Enviro и Kährs для квартир",
+  "Moduleo и BerryAlloc выпускают плитку и доску с рисунком дерева и камня.": "В каталоге доска, ёлочка и плитка BerryAlloc, Noventis, Fine Floor, Enviro и Kährs с рисунком дерева и камня. Позиции с меткой «В наличии» лежат на складе в Бишкеке."
+ },
+ "brands": [
+  {
+   "name": "Noventis",
+   "link": "https://bigfloor.pro/brands/noventis/",
+   "description": "<p>Бренд кварцвинила Beaulieu International Group (BIG). Доску Noventis производят в России.</p>"
+  },
+  {
+   "name": "Fine Floor",
+   "link": "https://finefloor.ru/catalog/by_finefloor/made-in-belgium/",
+   "description": "<p>Fine Floor продаёт кварцвиниловую плитку под своей маркой. Коллекцию Made In Belgium производят в Бельгии.</p>"
+  },
+  {
+   "name": "Enviro",
+   "link": "https://www.enviroflooring.com/",
+   "description": "<p>Нидерландский бренд виниловых полов Enviro Flooring. Коллекции Nature, Rustic и Stone: доска, ёлочка и плитка SPC, гарантия 15 лет.</p>"
+  },
+  {
+   "name": "Kährs",
+   "link": "https://www.kahrs.com/uk/b2b/floors/stone-design-lvt",
+   "description": "<p>Шведский производитель полов, работает с 1857 года. Кроме паркета выпускает виниловую плитку LVT под дерево и камень.</p>"
+  }
+ ],
  "products": [
   {
    "brand": "BerryAlloc",
@@ -386,7 +416,8 @@
     "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak4z91eo1f868f7a/beaulieu_2000w,default/orlando_lvt_1219x177_berryalloc_rsh_02",
     "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak31moeu4cefnaze/beaulieu_2000w,default/orlando_lvt_1219x177_berryalloc_rsh_01"
    ],
-   "sourceUrl": "https://www.berryalloc.com/en/products/zenn/60002232"
+   "sourceUrl": "https://www.berryalloc.com/en/products/zenn/60002232",
+   "inStock": true
   },
   {
    "brand": "BerryAlloc",
@@ -1054,7 +1085,8 @@
     "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5wmk3bt4aeccio/beaulieu_2000w,default/monsanto_lvt_610x114_berryalloc_dsh_01",
     "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak33w7983zd7gpqe/beaulieu_2000w,default/monsanto_lvt_609x107_berryalloc_rsh_01"
    ],
-   "sourceUrl": "https://www.berryalloc.com/en/products/zenn/60002243"
+   "sourceUrl": "https://www.berryalloc.com/en/products/zenn/60002243",
+   "inStock": true
   },
   {
    "brand": "BerryAlloc",
@@ -1150,7 +1182,8 @@
     "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5osbsabgbeqi4a/beaulieu_2000w,default/orlando_lvt_609x107_berryalloc_rsh_01",
     "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5akaxus7fojpd8nuo/beaulieu_2000w,default/orlando_lvt_609x107_berryalloc_rsh_02"
    ],
-   "sourceUrl": "https://www.berryalloc.com/en/products/zenn/60002244"
+   "sourceUrl": "https://www.berryalloc.com/en/products/zenn/60002244",
+   "inStock": true
   },
   {
    "brand": "BerryAlloc",
@@ -1436,7 +1469,8 @@
     "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak31nqddcshr666e/beaulieu_2000w,default/porto_lvt_609x107_berryalloc_rsh_01",
     "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak3ek6dqtgttbdco/beaulieu_2000w,default/porto_lvt_1219x177_berryalloc_rsh_02"
    ],
-   "sourceUrl": "https://www.berryalloc.com/en/products/zenn/60002247"
+   "sourceUrl": "https://www.berryalloc.com/en/products/zenn/60002247",
+   "inStock": true
   },
   {
    "brand": "BerryAlloc",
@@ -1899,6 +1933,5357 @@
     "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5akai7unx4o5cpijy/beaulieu_2000w,default/rimini_lvt_914x457_berryalloc_rsh_01"
    ],
    "sourceUrl": "https://www.berryalloc.com/en/products/zenn/60002240"
+  },
+  {
+   "brand": "Noventis",
+   "name": "Дуб Аризона 2001",
+   "slug": "noventis-grand-canyon-dub-arizona-2001",
+   "collection": "Grand Canyon",
+   "sku": "2001",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "4 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,5 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "серо-коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код",
+     "value": "2001"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Grand Canyon"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1200 × 180 мм"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "4 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,5 мм"
+    },
+    {
+     "label": "Дополнительный защитный лак",
+     "value": "да"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя (4V)"
+    },
+    {
+     "label": "Вес",
+     "value": "7,56 кг/м²"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,16 м²"
+    },
+    {
+     "label": "Снижение ударного шума",
+     "value": "3 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "КМ2 (В2, Д2, Т2, РП1)"
+    },
+    {
+     "label": "Срок службы",
+     "value": "20 лет"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Россия"
+    }
+   ],
+   "description": "<p>Дуб в серо-коричневом тоне с сучками и заметной текстурой волокон. Доски различаются по оттенку: рядом лежат светлые и тёмные.</p>\n<p>Noventis Grand Canyon: доска SPC 1200 × 180 мм толщиной 4 мм с фаской по четырём сторонам. Доски соединяются замком, клей не нужен. Покрытие не боится воды, его можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
+   "images": [
+    "https://bigfloor.pro/upload/iblock/dbb/nx852r0lnjwch937yw87xravuf3u1fow/tmp27a8b15a9e9ae571c31117c10005b726.jpg"
+   ],
+   "sourceUrl": "https://bigfloor.pro/catalog/lvt/grand-canyon/item-54354/",
+   "inStock": true
+  },
+  {
+   "brand": "Noventis",
+   "name": "Дуб Навахо 2002",
+   "slug": "noventis-grand-canyon-dub-navaho-2002",
+   "collection": "Grand Canyon",
+   "sku": "2002",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "4 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,5 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-серый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код",
+     "value": "2002"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Grand Canyon"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1200 × 180 мм"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "4 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,5 мм"
+    },
+    {
+     "label": "Дополнительный защитный лак",
+     "value": "да"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя (4V)"
+    },
+    {
+     "label": "Вес",
+     "value": "7,56 кг/м²"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,16 м²"
+    },
+    {
+     "label": "Снижение ударного шума",
+     "value": "3 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "КМ2 (В2, Д2, Т2, РП1)"
+    },
+    {
+     "label": "Срок службы",
+     "value": "20 лет"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Россия"
+    }
+   ],
+   "description": "<p>Светлый дуб почти белого цвета с лёгкой серой дымкой и мягким рисунком волокон.</p>\n<p>Noventis Grand Canyon: доска SPC 1200 × 180 мм толщиной 4 мм с фаской по четырём сторонам. Доски соединяются замком, клей не нужен. Покрытие не боится воды, его можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
+   "images": [
+    "https://bigfloor.pro/upload/iblock/3ce/wcy24s13appnt7dhw2eoo6lve93jml1t/tmp75187ccaa7708b5db32fb806a6170b9d.jpg"
+   ],
+   "sourceUrl": "https://bigfloor.pro/catalog/lvt/grand-canyon/item-54355/",
+   "inStock": true
+  },
+  {
+   "brand": "Noventis",
+   "name": "Дуб Огайо 2003",
+   "slug": "noventis-grand-canyon-dub-ogayo-2003",
+   "collection": "Grand Canyon",
+   "sku": "2003",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "4 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,5 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-серый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код",
+     "value": "2003"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Grand Canyon"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1200 × 180 мм"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "4 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,5 мм"
+    },
+    {
+     "label": "Дополнительный защитный лак",
+     "value": "да"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя (4V)"
+    },
+    {
+     "label": "Вес",
+     "value": "7,56 кг/м²"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,16 м²"
+    },
+    {
+     "label": "Снижение ударного шума",
+     "value": "3 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "КМ2 (В2, Д2, Т2, РП1)"
+    },
+    {
+     "label": "Срок службы",
+     "value": "20 лет"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Россия"
+    }
+   ],
+   "description": "<p>Светло-серый дуб с сучками и выразительными волокнами. Пол выглядит как старая выбеленная доска.</p>\n<p>Noventis Grand Canyon: доска SPC 1200 × 180 мм толщиной 4 мм с фаской по четырём сторонам. Доски соединяются замком, клей не нужен. Покрытие не боится воды, его можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
+   "images": [
+    "https://bigfloor.pro/upload/iblock/1df/m44mess0ikhajchkgzd52m0i2oiix7eq/tmpe27e48252b61dc49da7d642fea21dc01.jpg"
+   ],
+   "sourceUrl": "https://bigfloor.pro/catalog/lvt/grand-canyon/item-54356/",
+   "inStock": true
+  },
+  {
+   "brand": "Noventis",
+   "name": "Дуб Ред-Рок 2004",
+   "slug": "noventis-grand-canyon-dub-red-rok-2004",
+   "collection": "Grand Canyon",
+   "sku": "2004",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "4 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,5 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код",
+     "value": "2004"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Grand Canyon"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1200 × 180 мм"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "4 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,5 мм"
+    },
+    {
+     "label": "Дополнительный защитный лак",
+     "value": "да"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя (4V)"
+    },
+    {
+     "label": "Вес",
+     "value": "7,56 кг/м²"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,16 м²"
+    },
+    {
+     "label": "Снижение ударного шума",
+     "value": "3 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "КМ2 (В2, Д2, Т2, РП1)"
+    },
+    {
+     "label": "Срок службы",
+     "value": "20 лет"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Россия"
+    }
+   ],
+   "description": "<p>Тёмный дуб с красноватым оттенком, сучками и разницей тона от доски к доске.</p>\n<p>Noventis Grand Canyon: доска SPC 1200 × 180 мм толщиной 4 мм с фаской по четырём сторонам. Доски соединяются замком, клей не нужен. Покрытие не боится воды, его можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
+   "images": [
+    "https://bigfloor.pro/upload/iblock/c5a/489c2nke7xtqgsbu0e9f8vbs1mf8zb0g/tmp0c164bbbfcb21ab4115e82ab93dc036f.png"
+   ],
+   "sourceUrl": "https://bigfloor.pro/catalog/lvt/grand-canyon/item-54362/",
+   "inStock": true
+  },
+  {
+   "brand": "Noventis",
+   "name": "Дуб Вайоминг 2005",
+   "slug": "noventis-grand-canyon-dub-vayoming-2005",
+   "collection": "Grand Canyon",
+   "sku": "2005",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "4 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,5 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "серо-коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код",
+     "value": "2005"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Grand Canyon"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1200 × 180 мм"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "4 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,5 мм"
+    },
+    {
+     "label": "Дополнительный защитный лак",
+     "value": "да"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя (4V)"
+    },
+    {
+     "label": "Вес",
+     "value": "7,56 кг/м²"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,16 м²"
+    },
+    {
+     "label": "Снижение ударного шума",
+     "value": "3 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "КМ2 (В2, Д2, Т2, РП1)"
+    },
+    {
+     "label": "Срок службы",
+     "value": "20 лет"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Россия"
+    }
+   ],
+   "description": "<p>Дуб в оттенках серого и коричневого: доски заметно отличаются друг от друга, поэтому пол выглядит живым.</p>\n<p>Noventis Grand Canyon: доска SPC 1200 × 180 мм толщиной 4 мм с фаской по четырём сторонам. Доски соединяются замком, клей не нужен. Покрытие не боится воды, его можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
+   "images": [
+    "https://bigfloor.pro/upload/iblock/e47/g2zxghwev94spwfo7i6p3ib9kuyi62lr/tmp876960d0ddf7fb2fb734886f3db99c88.jpg"
+   ],
+   "sourceUrl": "https://bigfloor.pro/catalog/lvt/grand-canyon/item-54358/",
+   "inStock": true
+  },
+  {
+   "brand": "Noventis",
+   "name": "Дуб Йеллоустон 2006",
+   "slug": "noventis-grand-canyon-dub-yellouston-2006",
+   "collection": "Grand Canyon",
+   "sku": "2006",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "4 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,5 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код",
+     "value": "2006"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Grand Canyon"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1200 × 180 мм"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "4 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,5 мм"
+    },
+    {
+     "label": "Дополнительный защитный лак",
+     "value": "да"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя (4V)"
+    },
+    {
+     "label": "Вес",
+     "value": "7,56 кг/м²"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,16 м²"
+    },
+    {
+     "label": "Снижение ударного шума",
+     "value": "3 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "КМ2 (В2, Д2, Т2, РП1)"
+    },
+    {
+     "label": "Срок службы",
+     "value": "20 лет"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Россия"
+    }
+   ],
+   "description": "<p>Тёплый светло-коричневый дуб с розоватым оттенком и спокойным рисунком волокон.</p>\n<p>Noventis Grand Canyon: доска SPC 1200 × 180 мм толщиной 4 мм с фаской по четырём сторонам. Доски соединяются замком, клей не нужен. Покрытие не боится воды, его можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
+   "images": [
+    "https://bigfloor.pro/upload/iblock/029/j4yxn06chgrsx45ljxq77c5xlnw4d8uz/tmpd187f4f9e59a719db233aeb0baa84c7c.jpg"
+   ],
+   "sourceUrl": "https://bigfloor.pro/catalog/lvt/grand-canyon/item-54359/",
+   "inStock": true
+  },
+  {
+   "brand": "Noventis",
+   "name": "Дуб Тонгасс 2007",
+   "slug": "noventis-grand-canyon-dub-tongass-2007",
+   "collection": "Grand Canyon",
+   "sku": "2007",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "4 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,5 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-серый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код",
+     "value": "2007"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Grand Canyon"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1200 × 180 мм"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "4 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,5 мм"
+    },
+    {
+     "label": "Дополнительный защитный лак",
+     "value": "да"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя (4V)"
+    },
+    {
+     "label": "Вес",
+     "value": "7,56 кг/м²"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,16 м²"
+    },
+    {
+     "label": "Снижение ударного шума",
+     "value": "3 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "КМ2 (В2, Д2, Т2, РП1)"
+    },
+    {
+     "label": "Срок службы",
+     "value": "20 лет"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Россия"
+    }
+   ],
+   "description": "<p>Тёмный серо-коричневый дуб с сучками и контрастными волокнами.</p>\n<p>Noventis Grand Canyon: доска SPC 1200 × 180 мм толщиной 4 мм с фаской по четырём сторонам. Доски соединяются замком, клей не нужен. Покрытие не боится воды, его можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
+   "images": [
+    "https://bigfloor.pro/upload/iblock/c89/3pztyablpf3ycavd0nmafz6dmx3t8tqp/tmp393bc78c298c6606d9247ff771351392.png"
+   ],
+   "sourceUrl": "https://bigfloor.pro/catalog/lvt/grand-canyon/item-54360/",
+   "inStock": true
+  },
+  {
+   "brand": "Noventis",
+   "name": "Дуб Чаннел 2008",
+   "slug": "noventis-grand-canyon-dub-channel-2008",
+   "collection": "Grand Canyon",
+   "sku": "2008",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "4 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,5 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код",
+     "value": "2008"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Grand Canyon"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1200 × 180 мм"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "4 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,5 мм"
+    },
+    {
+     "label": "Дополнительный защитный лак",
+     "value": "да"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя (4V)"
+    },
+    {
+     "label": "Вес",
+     "value": "7,56 кг/м²"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,16 м²"
+    },
+    {
+     "label": "Снижение ударного шума",
+     "value": "3 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "КМ2 (В2, Д2, Т2, РП1)"
+    },
+    {
+     "label": "Срок службы",
+     "value": "20 лет"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Россия"
+    }
+   ],
+   "description": "<p>Дуб приглушённого коричневого цвета с ровным рисунком, без ярких сучков.</p>\n<p>Noventis Grand Canyon: доска SPC 1200 × 180 мм толщиной 4 мм с фаской по четырём сторонам. Доски соединяются замком, клей не нужен. Покрытие не боится воды, его можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
+   "images": [
+    "https://bigfloor.pro/upload/iblock/b18/t16ab721d5qn2ehnl23e7gmqdvev5o83/tmpd46b9fa0b415020e7bde3459e5224433.jpg"
+   ],
+   "sourceUrl": "https://bigfloor.pro/catalog/lvt/grand-canyon/item-54361/",
+   "inStock": true
+  },
+  {
+   "brand": "Noventis",
+   "name": "Дуб Мохаве 2009",
+   "slug": "noventis-grand-canyon-dub-mohave-2009",
+   "collection": "Grand Canyon",
+   "sku": "2009",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "4 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,5 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "серый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код",
+     "value": "2009"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Grand Canyon"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1200 × 180 мм"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "4 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,5 мм"
+    },
+    {
+     "label": "Дополнительный защитный лак",
+     "value": "да"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя (4V)"
+    },
+    {
+     "label": "Вес",
+     "value": "7,56 кг/м²"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,16 м²"
+    },
+    {
+     "label": "Снижение ударного шума",
+     "value": "3 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "КМ2 (В2, Д2, Т2, РП1)"
+    },
+    {
+     "label": "Срок службы",
+     "value": "20 лет"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Россия"
+    }
+   ],
+   "description": "<p>Серый дуб средней тональности с крупными сучками и трещинками.</p>\n<p>Noventis Grand Canyon: доска SPC 1200 × 180 мм толщиной 4 мм с фаской по четырём сторонам. Доски соединяются замком, клей не нужен. Покрытие не боится воды, его можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
+   "images": [
+    "https://bigfloor.pro/upload/iblock/745/kfls0df1vwmqrs5r1sgl36d7m9x13zcv/tmp59fc8faf23a9e8bd7ebb6ac65a5ca92b.jpg"
+   ],
+   "sourceUrl": "https://bigfloor.pro/catalog/lvt/grand-canyon/item-54357/"
+  },
+  {
+   "brand": "Noventis",
+   "name": "Дуб Сонора 2010",
+   "slug": "noventis-grand-canyon-dub-sonora-2010",
+   "collection": "Grand Canyon",
+   "sku": "2010",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "4 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,5 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код",
+     "value": "2010"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Grand Canyon"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1200 × 180 мм"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "4 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,5 мм"
+    },
+    {
+     "label": "Дополнительный защитный лак",
+     "value": "да"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя (4V)"
+    },
+    {
+     "label": "Вес",
+     "value": "7,56 кг/м²"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,16 м²"
+    },
+    {
+     "label": "Снижение ударного шума",
+     "value": "3 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "КМ2 (В2, Д2, Т2, РП1)"
+    },
+    {
+     "label": "Срок службы",
+     "value": "20 лет"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Россия"
+    }
+   ],
+   "description": "<p>Светлый тёплый дуб персикового оттенка с прямыми волокнами.</p>\n<p>Noventis Grand Canyon: доска SPC 1200 × 180 мм толщиной 4 мм с фаской по четырём сторонам. Доски соединяются замком, клей не нужен. Покрытие не боится воды, его можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
+   "images": [
+    "https://bigfloor.pro/upload/iblock/144/mx1ppj5gv56ituqejqpnfeo5alhn8og7/tmp1da7c202a72b5b557267f1dd0b2b091b.jpg"
+   ],
+   "sourceUrl": "https://bigfloor.pro/catalog/lvt/grand-canyon/item-54451/"
+  },
+  {
+   "brand": "Fine Floor",
+   "name": "MIB-0041 Дуб Олн",
+   "slug": "fine-floor-mib-0041-dub-oln",
+   "collection": "Made In Belgium",
+   "sku": "MIB-0041",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "3,6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светлый натуральный"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "MIB-0041"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Made In Belgium"
+    },
+    {
+     "label": "Тип",
+     "value": "кварцвинил, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1314 × 190 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "3,6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,25 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "9"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Бельгия"
+    }
+   ],
+   "description": "<p>Дуб натурального медового цвета с мягким рисунком и редкими сучками.</p>\n<p>Fine Floor Made In Belgium: доска 1314 × 190 мм толщиной 3,6 мм с защитным слоем 0,3 мм. Доски соединяются замком, клей не нужен. Коллекцию производят в Бельгии. Подходит для квартир и для офисов, магазинов с небольшой проходимостью.</p>",
+   "images": [
+    "https://finefloor.ru/upload/resize_cache/iblock/23b/1500_1500_1/23b9e6af208a596dc13f6a55a32b0601.jpg",
+    "https://finefloor.ru/upload/resize_cache/iblock/633/1500_1500_1/633e9366161994dbc8dbad70bf50fd6b.jpg"
+   ],
+   "sourceUrl": "https://finefloor.ru/product/dub-oln/",
+   "inStock": true
+  },
+  {
+   "brand": "Fine Floor",
+   "name": "MIB-0042 Дуб Леффе",
+   "slug": "fine-floor-mib-0042-dub-leffe",
+   "collection": "Made In Belgium",
+   "sku": "MIB-0042",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "3,6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "бежевый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "MIB-0042"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Made In Belgium"
+    },
+    {
+     "label": "Тип",
+     "value": "кварцвинил, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1314 × 190 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "3,6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,25 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "9"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Бельгия"
+    }
+   ],
+   "description": "<p>Светлый бежевый дуб с мягким рисунком волокон.</p>\n<p>Fine Floor Made In Belgium: доска 1314 × 190 мм толщиной 3,6 мм с защитным слоем 0,3 мм. Доски соединяются замком, клей не нужен. Коллекцию производят в Бельгии. Подходит для квартир и для офисов, магазинов с небольшой проходимостью.</p>",
+   "images": [
+    "https://finefloor.spb.ru/image/cache/data-made-in-belgium-mib-0042-1-500x500.jpg",
+    "https://finefloor.spb.ru/image/cache/data-made-in-belgium-mib-0042-2-500x500.jpg",
+    "https://finefloor.spb.ru/image/cache/data-made-in-belgium-mib-0042-big-500x500.jpg"
+   ],
+   "sourceUrl": "https://finefloor.spb.ru/pvh-plitka-made-in-belgium-dub-leffe-mib-0042",
+   "inStock": true
+  },
+  {
+   "brand": "Fine Floor",
+   "name": "MIB-0043 Дуб Эсперанс",
+   "slug": "fine-floor-mib-0043-dub-esperans",
+   "collection": "Made In Belgium",
+   "sku": "MIB-0043",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "3,6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "MIB-0043"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Made In Belgium"
+    },
+    {
+     "label": "Тип",
+     "value": "кварцвинил, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1314 × 190 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "3,6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,25 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "9"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Бельгия"
+    }
+   ],
+   "description": "<p>Коричневый дуб с оливковым оттенком и контрастными прожилками.</p>\n<p>Fine Floor Made In Belgium: доска 1314 × 190 мм толщиной 3,6 мм с защитным слоем 0,3 мм. Доски соединяются замком, клей не нужен. Коллекцию производят в Бельгии. Подходит для квартир и для офисов, магазинов с небольшой проходимостью.</p>",
+   "images": [
+    "https://finefloor.ru/upload/resize_cache/iblock/89d/1500_1500_1/89df0e62790e9cd70c8e0c2913f1c4b1.jpg",
+    "https://finefloor.ru/upload/resize_cache/iblock/d1f/1500_1500_1/d1f42df69ee14fa9c4df8502ca69e514.jpg"
+   ],
+   "sourceUrl": "https://finefloor.ru/product/dub-esperans/"
+  },
+  {
+   "brand": "Fine Floor",
+   "name": "MIB-0044 Дуб Орваль",
+   "slug": "fine-floor-mib-0044-dub-orval",
+   "collection": "Made In Belgium",
+   "sku": "MIB-0044",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "3,6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-серый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "MIB-0044"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Made In Belgium"
+    },
+    {
+     "label": "Тип",
+     "value": "кварцвинил, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1314 × 190 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "3,6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,25 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "9"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Бельгия"
+    }
+   ],
+   "description": "<p>Светлый дуб серо-бежевого тона с лёгким зеленоватым оттенком.</p>\n<p>Fine Floor Made In Belgium: доска 1314 × 190 мм толщиной 3,6 мм с защитным слоем 0,3 мм. Доски соединяются замком, клей не нужен. Коллекцию производят в Бельгии. Подходит для квартир и для офисов, магазинов с небольшой проходимостью.</p>",
+   "images": [
+    "https://finefloor.ru/upload/resize_cache/iblock/e53/1500_1500_1/e53c0195160b7b47cdd170048ca66365.jpg",
+    "https://finefloor.ru/upload/resize_cache/iblock/6d1/1500_1500_1/6d1016e6715156a5c88179d76eda0c24.jpg"
+   ],
+   "sourceUrl": "https://finefloor.ru/product/dub-orval/"
+  },
+  {
+   "brand": "Fine Floor",
+   "name": "MIB-0045 Дуб Сен Мартен",
+   "slug": "fine-floor-mib-0045-dub-sen-marten",
+   "collection": "Made In Belgium",
+   "sku": "MIB-0045",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "3,6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "серо-коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "MIB-0045"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Made In Belgium"
+    },
+    {
+     "label": "Тип",
+     "value": "кварцвинил, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1314 × 190 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "3,6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,25 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "9"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Бельгия"
+    }
+   ],
+   "description": "<p>Дуб серо-коричневого тона с заметными волокнами.</p>\n<p>Fine Floor Made In Belgium: доска 1314 × 190 мм толщиной 3,6 мм с защитным слоем 0,3 мм. Доски соединяются замком, клей не нужен. Коллекцию производят в Бельгии. Подходит для квартир и для офисов, магазинов с небольшой проходимостью.</p>",
+   "images": [
+    "https://finefloor.ru/upload/resize_cache/iblock/890/1500_1500_1/890303041dfc9a1c0990a92d65f53176.jpg",
+    "https://finefloor.ru/upload/resize_cache/iblock/202/1500_1500_1/2025651053a50726ba9be247a6b06382.jpg"
+   ],
+   "sourceUrl": "https://finefloor.ru/product/dub-sen-marten/"
+  },
+  {
+   "brand": "Fine Floor",
+   "name": "MIB-0046 Дуб Раме",
+   "slug": "fine-floor-mib-0046-dub-rame",
+   "collection": "Made In Belgium",
+   "sku": "MIB-0046",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "3,6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "MIB-0046"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Made In Belgium"
+    },
+    {
+     "label": "Тип",
+     "value": "кварцвинил, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1314 × 190 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "3,6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,25 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "9"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Бельгия"
+    }
+   ],
+   "description": "<p>Рустикальный дуб: светлые и тёмно-коричневые участки, крупные сучки и трещины.</p>\n<p>Fine Floor Made In Belgium: доска 1314 × 190 мм толщиной 3,6 мм с защитным слоем 0,3 мм. Доски соединяются замком, клей не нужен. Коллекцию производят в Бельгии. Подходит для квартир и для офисов, магазинов с небольшой проходимостью.</p>",
+   "images": [
+    "https://finefloor.ru/upload/resize_cache/iblock/9a9/1500_1500_1/9a98226d487c1319cb178132e0b0ccba.jpg",
+    "https://finefloor.ru/upload/resize_cache/iblock/edb/1500_1500_1/edb3fb9047d22a5ebbe4ae307cc49d11.jpg"
+   ],
+   "sourceUrl": "https://finefloor.ru/product/dub-rame/"
+  },
+  {
+   "brand": "Fine Floor",
+   "name": "MIB-0049 Дуб Тонгерло",
+   "slug": "fine-floor-mib-0049-dub-tongerlo",
+   "collection": "Made In Belgium",
+   "sku": "MIB-0049",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "3,6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-серый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "MIB-0049"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Made In Belgium"
+    },
+    {
+     "label": "Тип",
+     "value": "кварцвинил, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1314 × 190 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "3,6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,25 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "9"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Бельгия"
+    }
+   ],
+   "description": "<p>Светлый дуб почти белого цвета с серыми волокнами.</p>\n<p>Fine Floor Made In Belgium: доска 1314 × 190 мм толщиной 3,6 мм с защитным слоем 0,3 мм. Доски соединяются замком, клей не нужен. Коллекцию производят в Бельгии. Подходит для квартир и для офисов, магазинов с небольшой проходимостью.</p>",
+   "images": [
+    "https://finefloor.ru/upload/resize_cache/iblock/a62/1500_1500_1/a6213142c09a24079b39c61fbcd7de7c.jpg",
+    "https://finefloor.ru/upload/resize_cache/iblock/d08/1500_1500_1/d08d7af9323e7db37e637fed5d030ddc.jpg"
+   ],
+   "sourceUrl": "https://finefloor.ru/product/dub-tongerlo/",
+   "inStock": true
+  },
+  {
+   "brand": "Fine Floor",
+   "name": "MIB-0050 Дуб Маредсу",
+   "slug": "fine-floor-mib-0050-dub-maredsu",
+   "collection": "Made In Belgium",
+   "sku": "MIB-0050",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "3,6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-серый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "MIB-0050"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Made In Belgium"
+    },
+    {
+     "label": "Тип",
+     "value": "кварцвинил, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1314 × 190 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "3,6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,25 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "9"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Бельгия"
+    }
+   ],
+   "description": "<p>Выбеленный дуб: светлые серо-белые доски с проступающими волокнами.</p>\n<p>Fine Floor Made In Belgium: доска 1314 × 190 мм толщиной 3,6 мм с защитным слоем 0,3 мм. Доски соединяются замком, клей не нужен. Коллекцию производят в Бельгии. Подходит для квартир и для офисов, магазинов с небольшой проходимостью.</p>",
+   "images": [
+    "https://finefloor.ru/upload/resize_cache/iblock/b14/1500_1500_1/b14367036bf21d0635529e7ee86deda6.jpg",
+    "https://finefloor.ru/upload/resize_cache/iblock/6bf/1500_1500_1/6bfd75e4260cb5384958776fa292a9be.jpg"
+   ],
+   "sourceUrl": "https://finefloor.ru/product/dub-maredsu/"
+  },
+  {
+   "brand": "Fine Floor",
+   "name": "MIB-0051 Дуб Аффлигем",
+   "slug": "fine-floor-mib-0051-dub-affligem",
+   "collection": "Made In Belgium",
+   "sku": "MIB-0051",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "3,6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светлый натуральный"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "MIB-0051"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Made In Belgium"
+    },
+    {
+     "label": "Тип",
+     "value": "кварцвинил, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1314 × 190 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "3,6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,25 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "9"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Бельгия"
+    }
+   ],
+   "description": "<p>Светлый дуб кремового оттенка с тонкими волокнами.</p>\n<p>Fine Floor Made In Belgium: доска 1314 × 190 мм толщиной 3,6 мм с защитным слоем 0,3 мм. Доски соединяются замком, клей не нужен. Коллекцию производят в Бельгии. Подходит для квартир и для офисов, магазинов с небольшой проходимостью.</p>",
+   "images": [
+    "https://finefloor.ru/upload/resize_cache/iblock/ad5/1500_1500_1/ad5a4561c5b48687934e6a676f69ebd5.jpg",
+    "https://finefloor.ru/upload/resize_cache/iblock/397/1500_1500_1/397d0dd0836801be43f18c372064f507.jpg"
+   ],
+   "sourceUrl": "https://finefloor.ru/product/dub-affligem/"
+  },
+  {
+   "brand": "Fine Floor",
+   "name": "MIB-0052 Дуб Гримберген",
+   "slug": "fine-floor-mib-0052-dub-grimbergen",
+   "collection": "Made In Belgium",
+   "sku": "MIB-0052",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "3,6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светлый натуральный"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "MIB-0052"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Made In Belgium"
+    },
+    {
+     "label": "Тип",
+     "value": "кварцвинил, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1314 × 190 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "3,6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,25 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "9"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Бельгия"
+    }
+   ],
+   "description": "<p>Натуральный дуб медово-золотистого цвета с мелкими сучками.</p>\n<p>Fine Floor Made In Belgium: доска 1314 × 190 мм толщиной 3,6 мм с защитным слоем 0,3 мм. Доски соединяются замком, клей не нужен. Коллекцию производят в Бельгии. Подходит для квартир и для офисов, магазинов с небольшой проходимостью.</p>",
+   "images": [
+    "https://finefloor.ru/upload/resize_cache/iblock/850/1500_1500_1/850d46a1609ffb060c50c87175b3ffcb.jpg",
+    "https://finefloor.ru/upload/resize_cache/iblock/541/1500_1500_1/5411df8fbd7f15cf3cc5e8ad4c2d8aa8.jpg"
+   ],
+   "sourceUrl": "https://finefloor.ru/product/dub-grimbergen/"
+  },
+  {
+   "brand": "Fine Floor",
+   "name": "MIB-0054 Дуб Вестмалле",
+   "slug": "fine-floor-mib-0054-dub-vestmalle",
+   "collection": "Made In Belgium",
+   "sku": "MIB-0054",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "3,6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "MIB-0054"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Made In Belgium"
+    },
+    {
+     "label": "Тип",
+     "value": "кварцвинил, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1314 × 190 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "3,6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,25 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "9"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Бельгия"
+    }
+   ],
+   "description": "<p>Тёплый дуб медово-золотистого цвета с выразительными волокнами.</p>\n<p>Fine Floor Made In Belgium: доска 1314 × 190 мм толщиной 3,6 мм с защитным слоем 0,3 мм. Доски соединяются замком, клей не нужен. Коллекцию производят в Бельгии. Подходит для квартир и для офисов, магазинов с небольшой проходимостью.</p>",
+   "images": [
+    "https://finefloor.ru/upload/iblock/12a/12a53a6ab216d85e99c86b90653afe61.png",
+    "https://finefloor.ru/upload/iblock/725/725094a76ea684f88c2c6157bda2e529.png"
+   ],
+   "sourceUrl": "https://finefloor.ru/product/dub-vestmalle/"
+  },
+  {
+   "brand": "Fine Floor",
+   "name": "MIB-0056 Дуб Камбр",
+   "slug": "fine-floor-mib-0056-dub-kambr",
+   "collection": "Made In Belgium",
+   "sku": "MIB-0056",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "3,6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "серый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "MIB-0056"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Made In Belgium"
+    },
+    {
+     "label": "Тип",
+     "value": "кварцвинил, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1314 × 190 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "3,6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,25 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "9"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Бельгия"
+    }
+   ],
+   "description": "<p>Состаренный дуб в серых тонах с коричневыми прожилками.</p>\n<p>Fine Floor Made In Belgium: доска 1314 × 190 мм толщиной 3,6 мм с защитным слоем 0,3 мм. Доски соединяются замком, клей не нужен. Коллекцию производят в Бельгии. Подходит для квартир и для офисов, магазинов с небольшой проходимостью.</p>",
+   "images": [
+    "https://finefloor.spb.ru/image/cache/data-made-in-belgium-mib-0056-1-500x500.jpg",
+    "https://finefloor.spb.ru/image/cache/data-made-in-belgium-mib-0056-2-500x500.jpg",
+    "https://finefloor.spb.ru/image/cache/data-made-in-belgium-mib-0056-big-500x500.jpg"
+   ],
+   "sourceUrl": "https://finefloor.spb.ru/pvh-plitka-made-in-belgium-dub-kambr-mib-0056",
+   "inStock": true
+  },
+  {
+   "brand": "Enviro",
+   "name": "Nature 001 (доска)",
+   "slug": "enviro-nature-001-doska",
+   "collection": "Nature",
+   "sku": "001",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светлый натуральный"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "001"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Nature"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "1524 × 228,6 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,0903 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "6"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "21,17 кг"
+    },
+    {
+     "label": "Снижение шума шагов",
+     "value": "10 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Дуб мягкого натурального цвета со спокойным рисунком.</p>\n<p>Enviro Nature: доска SPC, 1524 × 228,6 мм, толщина 6 мм, защитный слой 0,55 мм. Каменно-полимерная основа держит размер, панели собираются на замок без клея. Пол выдерживает воду, его можно класть на тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9c5c8d7c15d2debeee_6aa97de5b44ff98eab7fbbed_enviroflooring-nature-001-plank-01.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aabdbc0f93a3fd0da38a37c_Enviro-Inspiratie-Nature-001-Recht-Kantoor-Industrieel.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aabdc4557a787411cca1dcc_Enviro-Inspiratie-Nature-001-Visgraat-Eetkamer-Industrieel.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9c5c8d7c15d2debee0_6aa97e7726bd6aaed6ef304b_enviroflooring-nature-001-plank-02.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/nature-001-spc-rechte-plank"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Nature 001 (ёлочка)",
+   "slug": "enviro-nature-001-elochka",
+   "collection": "Nature",
+   "sku": "001",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светлый натуральный"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "001"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Nature"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "730 × 146 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,7053 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "16"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "17,29 кг"
+    },
+    {
+     "label": "Снижение шума шагов",
+     "value": "10 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Дуб мягкого натурального цвета со спокойным рисунком.</p>\n<p>Enviro Nature: планка SPC для укладки ёлочкой, 730 × 146 мм, толщина 6 мм, защитный слой 0,55 мм. Каменно-полимерная основа держит размер, панели собираются на замок без клея. Пол выдерживает воду, его можно класть на тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9a49b2e642a87b0e70_6aa97e77ae5c353987a9e7b3_enviroflooring-nature-001-visgraat-01.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aabdbc0f93a3fd0da38a37c_Enviro-Inspiratie-Nature-001-Recht-Kantoor-Industrieel.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aabdc4557a787411cca1dcc_Enviro-Inspiratie-Nature-001-Visgraat-Eetkamer-Industrieel.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9a49b2e642a87b0e7a_6aa97e7729b32e5c2dc38727_enviroflooring-nature-001-visgraat-02.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/nature-001-spc-visgraat"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Nature 002 (доска)",
+   "slug": "enviro-nature-002-doska",
+   "collection": "Nature",
+   "sku": "002",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "бежевый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "002"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Nature"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "1524 × 228,6 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,0903 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "6"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "21,17 кг"
+    },
+    {
+     "label": "Снижение шума шагов",
+     "value": "10 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Светлый, почти бежевый дуб с ровным рисунком. С таким полом комната выглядит просторнее.</p>\n<p>Enviro Nature: доска SPC, 1524 × 228,6 мм, толщина 6 мм, защитный слой 0,55 мм. Каменно-полимерная основа держит размер, панели собираются на замок без клея. Пол выдерживает воду, его можно класть на тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9c5c8d7c15d2debed4_6aa97e78f23c34572e194c64_enviroflooring-nature-002-plank-01.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9c5c8d7c15d2debeda_6aa97e78c431a8c4708873f0_enviroflooring-nature-002-plank-02.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9c5c8d7c15d2debedd_6aa97e78402007762294b362_enviroflooring-nature-002-plank-03.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aabcdda5bfbf8d73c5a021b_6aabc8ca039bb90965aa59fa_enviroflooring-nature-002-plank-04.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/nature-002-spc-rechte-plank"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Nature 002 (ёлочка)",
+   "slug": "enviro-nature-002-elochka",
+   "collection": "Nature",
+   "sku": "002",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "бежевый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "002"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Nature"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "730 × 146 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,7053 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "16"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "17,29 кг"
+    },
+    {
+     "label": "Снижение шума шагов",
+     "value": "10 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Светлый, почти бежевый дуб с ровным рисунком. С таким полом комната выглядит просторнее.</p>\n<p>Enviro Nature: планка SPC для укладки ёлочкой, 730 × 146 мм, толщина 6 мм, защитный слой 0,55 мм. Каменно-полимерная основа держит размер, панели собираются на замок без клея. Пол выдерживает воду, его можно класть на тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97ff924de38afcb91dfe7_6aa97e7829b32e5c2dc387cc_enviroflooring-nature-002-visgraat-01.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97ff924de38afcb91dfe0_6aa97e79e2b1ae8c19f9039e_enviroflooring-nature-002-visgraat-02.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97ff924de38afcb91dfea_6aa97e79f8cbc1f2f573ce0f_enviroflooring-nature-002-visgraat-03.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aabcdda5bfbf8d73c5a0268_6aabc8cab23bd1227ff9eb8f_enviroflooring-nature-002-visgraat-04.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/nature-002-spc-visgraat"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Nature 003 (доска)",
+   "slug": "enviro-nature-003-doska",
+   "collection": "Nature",
+   "sku": "003",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "003"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Nature"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "1524 × 228,6 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,0903 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "6"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "21,17 кг"
+    },
+    {
+     "label": "Снижение шума шагов",
+     "value": "10 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Дуб тёплого золотистого оттенка с тонким рисунком волокон.</p>\n<p>Enviro Nature: доска SPC, 1524 × 228,6 мм, толщина 6 мм, защитный слой 0,55 мм. Каменно-полимерная основа держит размер, панели собираются на замок без клея. Пол выдерживает воду, его можно класть на тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9a49b2e642a87b0eaf_6aa97e7991afbb725e6cb1aa_enviroflooring-nature-003-plank-01.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aabdca112b4825e4975710c_Enviro-Inspiratie-Nature-003-Plank-Woonkamer-Modern.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9a49b2e642a87b0eb3_6aa97e7b223eaf500ada1c55_enviroflooring-nature-003-plank-02.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9a49b2e642a87b0eb9_6aa97e7bae5c353987a9e934_enviroflooring-nature-003-plank-03.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/nature-003-spc-rechte-plank"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Nature 003 (ёлочка)",
+   "slug": "enviro-nature-003-elochka",
+   "collection": "Nature",
+   "sku": "003",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "003"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Nature"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "730 × 146 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,7053 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "16"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "17,29 кг"
+    },
+    {
+     "label": "Снижение шума шагов",
+     "value": "10 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Дуб тёплого золотистого оттенка с тонким рисунком волокон.</p>\n<p>Enviro Nature: планка SPC для укладки ёлочкой, 730 × 146 мм, толщина 6 мм, защитный слой 0,55 мм. Каменно-полимерная основа держит размер, панели собираются на замок без клея. Пол выдерживает воду, его можно класть на тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97ff924de38afcb91dfd2_6aa97e7b7e3297ba39005dbd_enviroflooring-nature-003-visgraat-01.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aabdca112b4825e4975710c_Enviro-Inspiratie-Nature-003-Plank-Woonkamer-Modern.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97ff924de38afcb91dfd8_6aa97e7b7e3297ba39005dd5_enviroflooring-nature-003-visgraat-02.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97ff924de38afcb91dfd5_6aa97e7c91afbb725e6cb341_enviroflooring-nature-003-visgraat-03.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/nature-003-spc-visgraat"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Nature 004 (доска)",
+   "slug": "enviro-nature-004-doska",
+   "collection": "Nature",
+   "sku": "004",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "004"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Nature"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "1524 × 228,6 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,0903 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "6"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "21,17 кг"
+    },
+    {
+     "label": "Снижение шума шагов",
+     "value": "10 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Дуб в разных оттенках коричневого: тон меняется от доски к доске.</p>\n<p>Enviro Nature: доска SPC, 1524 × 228,6 мм, толщина 6 мм, защитный слой 0,55 мм. Каменно-полимерная основа держит размер, панели собираются на замок без клея. Пол выдерживает воду, его можно класть на тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9a49b2e642a87b0ea4_6aa97e7cec7f65b3b93851dc_enviroflooring-nature-004-plank-01.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9a49b2e642a87b0eaa_6aa97e7cec7f65b3b93851f4_enviroflooring-nature-004-plank-02.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9a49b2e642a87b0ea1_6aa97e7cad007c3e8bdb7a71_enviroflooring-nature-004-plank-03.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aabcd8ca91a7934d347a83a_6aabc8ce2f33caebd396c0e4_enviroflooring-nature-004-plank-04.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/nature-004-spc-rechte-plank"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Nature 004 (ёлочка)",
+   "slug": "enviro-nature-004-elochka",
+   "collection": "Nature",
+   "sku": "004",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "004"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Nature"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "730 × 146 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,7053 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "16"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "17,29 кг"
+    },
+    {
+     "label": "Снижение шума шагов",
+     "value": "10 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Дуб в разных оттенках коричневого: тон меняется от доски к доске.</p>\n<p>Enviro Nature: планка SPC для укладки ёлочкой, 730 × 146 мм, толщина 6 мм, защитный слой 0,55 мм. Каменно-полимерная основа держит размер, панели собираются на замок без клея. Пол выдерживает воду, его можно класть на тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97ff924de38afcb91dfc2_6aa97e7cf8cbc1f2f573d0ba_enviroflooring-nature-004-visgraat-01.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97ff924de38afcb91dfdb_6aa97e7df8cbc1f2f573d10b_enviroflooring-nature-004-visgraat-02.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97ff924de38afcb91dfcb_6aa97e7d2a364d59af51ad72_enviroflooring-nature-004-visgraat-03.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aabcdda5bfbf8d73c5a0265_6aabc8cf4110809c0bf8fd50_enviroflooring-nature-004-visgraat-04.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/nature-004-spc-visgraat"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Nature 005 (доска)",
+   "slug": "enviro-nature-005-doska",
+   "collection": "Nature",
+   "sku": "005",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "005"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Nature"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "1524 × 228,6 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,0903 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "6"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "21,17 кг"
+    },
+    {
+     "label": "Снижение шума шагов",
+     "value": "10 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Самый тёмный цвет серии Nature: коричневый дуб с хорошо заметным рисунком древесины.</p>\n<p>Enviro Nature: доска SPC, 1524 × 228,6 мм, толщина 6 мм, защитный слой 0,55 мм. Каменно-полимерная основа держит размер, панели собираются на замок без клея. Пол выдерживает воду, его можно класть на тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9a49b2e642a87b0e98_6aa97e7d5c8d7c15d2de7be6_enviroflooring-nature-005-plank-01.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9a49b2e642a87b0e9d_6aa97e7d833e29173f10e155_enviroflooring-nature-005-plank-02.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9a49b2e642a87b0e91_6aa97e7ef23c34572e194cce_enviroflooring-nature-005-plank-03.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aabcd8ca91a7934d347a824_6aabc8cf039bb90965aa5d10_enviroflooring-nature-005-plank-04.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/nature-005-spc-rechte-plank"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Nature 005 (ёлочка)",
+   "slug": "enviro-nature-005-elochka",
+   "collection": "Nature",
+   "sku": "005",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "005"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Nature"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "730 × 146 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,7053 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "16"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "17,29 кг"
+    },
+    {
+     "label": "Снижение шума шагов",
+     "value": "10 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Самый тёмный цвет серии Nature: коричневый дуб с хорошо заметным рисунком древесины.</p>\n<p>Enviro Nature: планка SPC для укладки ёлочкой, 730 × 146 мм, толщина 6 мм, защитный слой 0,55 мм. Каменно-полимерная основа держит размер, панели собираются на замок без клея. Пол выдерживает воду, его можно класть на тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97ff924de38afcb91dfb8_6aa97e7e7e3297ba39005f74_enviroflooring-nature-005-visgraat-01.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97ff924de38afcb91dfc5_6aa97e7e833e29173f10e1c0_enviroflooring-nature-005-visgraat-02.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97ff924de38afcb91dfc8_6aa97e7f93e400eb67f9910d_enviroflooring-nature-005-visgraat-03.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aabcdda5bfbf8d73c5a0242_6aabc8d01cf43d17fe0e871e_enviroflooring-nature-005-visgraat-04.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/nature-005-spc-visgraat"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Nature 006 (доска)",
+   "slug": "enviro-nature-006-doska",
+   "collection": "Nature",
+   "sku": "006",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светлый натуральный"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "006"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Nature"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "1524 × 228,6 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,0903 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "6"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "21,17 кг"
+    },
+    {
+     "label": "Снижение шума шагов",
+     "value": "10 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Светлый дуб спокойного ровного тона с тонкими волокнами.</p>\n<p>Enviro Nature: доска SPC, 1524 × 228,6 мм, толщина 6 мм, защитный слой 0,55 мм. Каменно-полимерная основа держит размер, панели собираются на замок без клея. Пол выдерживает воду, его можно класть на тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9a49b2e642a87b0e82_6aa97e8093e400eb67f99143_enviroflooring-nature-006-plank-01.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aabdccf28a52e924b87d599_Enviro-Inspiratie-Nature-006-Visgraat-Winkel-Japandi.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9a49b2e642a87b0e89_6aa97e807e3297ba3900606f_enviroflooring-nature-006-plank-02.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9a49b2e642a87b0e85_6aa97e807e3297ba39006087_enviroflooring-nature-006-plank-03.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/nature-006-spc-rechte-plank",
+   "inStock": true
+  },
+  {
+   "brand": "Enviro",
+   "name": "Nature 006 (ёлочка)",
+   "slug": "enviro-nature-006-elochka",
+   "collection": "Nature",
+   "sku": "006",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светлый натуральный"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "006"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Nature"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "730 × 146 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,7053 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "16"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "17,29 кг"
+    },
+    {
+     "label": "Снижение шума шагов",
+     "value": "10 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Светлый дуб спокойного ровного тона с тонкими волокнами.</p>\n<p>Enviro Nature: планка SPC для укладки ёлочкой, 730 × 146 мм, толщина 6 мм, защитный слой 0,55 мм. Каменно-полимерная основа держит размер, панели собираются на замок без клея. Пол выдерживает воду, его можно класть на тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97ff824de38afcb91dfb2_6aa97e80ea0b6b66c06ef0a0_enviroflooring-nature-006-visgraat-01.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aabdccf28a52e924b87d599_Enviro-Inspiratie-Nature-006-Visgraat-Winkel-Japandi.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97ff924de38afcb91dfbb_6aa97e807e3297ba390060b2_enviroflooring-nature-006-visgraat-02.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97ff924de38afcb91dfb5_6aa97e815c8d7c15d2de7e01_enviroflooring-nature-006-visgraat-03.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/nature-006-spc-visgraat"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Rustic 010 (доска)",
+   "slug": "enviro-rustic-010-doska",
+   "collection": "Rustic",
+   "sku": "010",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светлый натуральный"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "010"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Rustic"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "1524 × 228,6 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,0903 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "6"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "21,17 кг"
+    },
+    {
+     "label": "Снижение шума шагов",
+     "value": "10 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Светлый дуб с заметными сучками и тонкими волокнами.</p>\n<p>Enviro Rustic: доска SPC, 1524 × 228,6 мм, толщина 6 мм, защитный слой 0,55 мм. Каменно-полимерная основа держит размер, панели собираются на замок без клея. Пол выдерживает воду, его можно класть на тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9b5c8d7c15d2debe91_6aa97e8149b2e642a87ac6a9_enviroflooring-rustic-010-plank-01.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9b5c8d7c15d2debe97_6aa97e8191afbb725e6cb57a_enviroflooring-rustic-010-plank-02.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9b5c8d7c15d2debe94_6aa97e8153aee60ecab6f708_enviroflooring-rustic-010-plank-03.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aabcdb3002dbd53f09659fe_6aabc8d253e0384cad09aaa6_enviroflooring-rustic-010-plank-04.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/rustic-010-spc-rechte-plank"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Rustic 010 (ёлочка)",
+   "slug": "enviro-rustic-010-elochka",
+   "collection": "Rustic",
+   "sku": "010",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светлый натуральный"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "010"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Rustic"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "730 × 146 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,7053 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "16"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "17,29 кг"
+    },
+    {
+     "label": "Снижение шума шагов",
+     "value": "10 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Светлый дуб с заметными сучками и тонкими волокнами.</p>\n<p>Enviro Rustic: планка SPC для укладки ёлочкой, 730 × 146 мм, толщина 6 мм, защитный слой 0,55 мм. Каменно-полимерная основа держит размер, панели собираются на замок без клея. Пол выдерживает воду, его можно класть на тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9949b2e642a87b0e55_6aa97e817e3297ba39006137_enviroflooring-rustic-010-visgraat-01.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9949b2e642a87b0e52_6aa97e81056e9b643a63a11b_enviroflooring-rustic-010-visgraat-02.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9949b2e642a87b0e59_6aa97e812697da83db82fb98_enviroflooring-rustic-010-visgraat-03.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aabcd5ecc86ffa889191fd4_6aabc8d27fef0afbf41138db_enviroflooring-rustic-010-visgraat-04.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/rustic-010-spc-visgraat"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Rustic 011 (доска)",
+   "slug": "enviro-rustic-011-doska",
+   "collection": "Rustic",
+   "sku": "011",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "011"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Rustic"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "1524 × 228,6 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,0903 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "6"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "21,17 кг"
+    },
+    {
+     "label": "Снижение шума шагов",
+     "value": "10 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Дуб тёплого коричневого цвета средней тональности с выраженными волокнами.</p>\n<p>Enviro Rustic: доска SPC, 1524 × 228,6 мм, толщина 6 мм, защитный слой 0,55 мм. Каменно-полимерная основа держит размер, панели собираются на замок без клея. Пол выдерживает воду, его можно класть на тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9b5c8d7c15d2debe85_6aa97e821027c0065d91732f_enviroflooring-rustic-011-plank-01.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9b5c8d7c15d2debe82_6aa97e82f3cc0fef7393738f_enviroflooring-rustic-011-plank-02.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9b5c8d7c15d2debe88_6aa97e8201224790b972e4db_enviroflooring-rustic-011-plank-03.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aabcdb3002dbd53f09659f9_6aabc8d2a46ee5a9e3fb1bd4_enviroflooring-rustic-011-plank-04.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/rustic-011-spc-rechte-plank"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Rustic 011 (ёлочка)",
+   "slug": "enviro-rustic-011-elochka",
+   "collection": "Rustic",
+   "sku": "011",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "011"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Rustic"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "730 × 146 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,7053 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "16"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "17,29 кг"
+    },
+    {
+     "label": "Снижение шума шагов",
+     "value": "10 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Дуб тёплого коричневого цвета средней тональности с выраженными волокнами.</p>\n<p>Enviro Rustic: планка SPC для укладки ёлочкой, 730 × 146 мм, толщина 6 мм, защитный слой 0,55 мм. Каменно-полимерная основа держит размер, панели собираются на замок без клея. Пол выдерживает воду, его можно класть на тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9949b2e642a87b0e46_6aa97e8201224790b972e53f_enviroflooring-rustic-011-visgraat-01.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9949b2e642a87b0e43_6aa97e8201224790b972e55e_enviroflooring-rustic-011-visgraat-02.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9949b2e642a87b0e4e_6aa97e83c431a8c47088784d_enviroflooring-rustic-011-visgraat-03.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aabcd5ecc86ffa889191fcf_6aabc8d295ae0a6695a317d3_enviroflooring-rustic-011-visgraat-04.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/rustic-011-spc-visgraat"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Rustic 012 (доска)",
+   "slug": "enviro-rustic-012-doska",
+   "collection": "Rustic",
+   "sku": "012",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "012"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Rustic"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "1524 × 228,6 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,0903 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "6"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "21,17 кг"
+    },
+    {
+     "label": "Снижение шума шагов",
+     "value": "10 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Дуб медово-коричневого тона с глубоким рисунком волокон.</p>\n<p>Enviro Rustic: доска SPC, 1524 × 228,6 мм, толщина 6 мм, защитный слой 0,55 мм. Каменно-полимерная основа держит размер, панели собираются на замок без клея. Пол выдерживает воду, его можно класть на тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9b5c8d7c15d2debe78_6aa97e83c431a8c470887865_enviroflooring-rustic-012-plank-01.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9b5c8d7c15d2debe8c_6aa97e836be5513aa61972c8_enviroflooring-rustic-012-plank-02.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9b5c8d7c15d2debe7e_6aa97e8349b2e642a87ac7aa_enviroflooring-rustic-012-plank-03.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aabcdb3002dbd53f09659e7_6aabc8d4f9d4cac65a17a8d7_enviroflooring-rustic-012-plank-04.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/rustic-012-spc-rechte-plank"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Rustic 012 (ёлочка)",
+   "slug": "enviro-rustic-012-elochka",
+   "collection": "Rustic",
+   "sku": "012",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "012"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Rustic"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "730 × 146 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,7053 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "16"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "17,29 кг"
+    },
+    {
+     "label": "Снижение шума шагов",
+     "value": "10 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Дуб медово-коричневого тона с глубоким рисунком волокон.</p>\n<p>Enviro Rustic: планка SPC для укладки ёлочкой, 730 × 146 мм, толщина 6 мм, защитный слой 0,55 мм. Каменно-полимерная основа держит размер, панели собираются на замок без клея. Пол выдерживает воду, его можно класть на тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9949b2e642a87b0e3a_6aa97e83588470b4999c4665_enviroflooring-rustic-012-visgraat-01.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9949b2e642a87b0e49_6aa97e83c431a8c4708878cf_enviroflooring-rustic-012-visgraat-02.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9949b2e642a87b0e40_6aa97e8401224790b972e641_enviroflooring-rustic-012-visgraat-03.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aabcd5ecc86ffa889191fc4_6aabcba6919f17b909a04dd7_enviroflooring-rustic-012-visgraat-04.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/rustic-012-spc-visgraat"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Rustic 013 (доска)",
+   "slug": "enviro-rustic-013-doska",
+   "collection": "Rustic",
+   "sku": "013",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "013"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Rustic"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "1524 × 228,6 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,0903 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "6"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "21,17 кг"
+    },
+    {
+     "label": "Снижение шума шагов",
+     "value": "10 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Дуб тёплого песочного цвета. Тон натуральный, но теплее классического дуба.</p>\n<p>Enviro Rustic: доска SPC, 1524 × 228,6 мм, толщина 6 мм, защитный слой 0,55 мм. Каменно-полимерная основа держит размер, панели собираются на замок без клея. Пол выдерживает воду, его можно класть на тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9a49b2e642a87b0eeb_6aa97e8401224790b972e673_enviroflooring-rustic-013-plank-01.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9a49b2e642a87b0ef5_6aa97e84833e29173f10e470_enviroflooring-rustic-013-plank-02.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9a49b2e642a87b0eee_6aa97e841027c0065d9173d6_enviroflooring-rustic-013-plank-03.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aabcdb3002dbd53f09659ed_6aabcba894d49e426fc30480_enviroflooring-rustic-013-plank-04.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/rustic-013-spc-rechte-plank",
+   "inStock": true
+  },
+  {
+   "brand": "Enviro",
+   "name": "Rustic 013 (ёлочка)",
+   "slug": "enviro-rustic-013-elochka",
+   "collection": "Rustic",
+   "sku": "013",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "013"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Rustic"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "730 × 146 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,7053 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "16"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "17,29 кг"
+    },
+    {
+     "label": "Снижение шума шагов",
+     "value": "10 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Дуб тёплого песочного цвета. Тон натуральный, но теплее классического дуба.</p>\n<p>Enviro Rustic: планка SPC для укладки ёлочкой, 730 × 146 мм, толщина 6 мм, защитный слой 0,55 мм. Каменно-полимерная основа держит размер, панели собираются на замок без клея. Пол выдерживает воду, его можно класть на тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9949b2e642a87b0e33_6aa97e841027c0065d9173ee_enviroflooring-rustic-013-visgraat-01.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9949b2e642a87b0e2e_6aa97e8501224790b972e730_enviroflooring-rustic-013-visgraat-02.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9949b2e642a87b0e37_6aa97e85833e29173f10e4e6_enviroflooring-rustic-013-visgraat-03.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aabcd5ecc86ffa889191fac_6aabcba8af57905602ee473d_enviroflooring-rustic-013-visgraat-04.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/rustic-013-spc-visgraat",
+   "inStock": true
+  },
+  {
+   "brand": "Enviro",
+   "name": "Rustic 014 (доска)",
+   "slug": "enviro-rustic-014-doska",
+   "collection": "Rustic",
+   "sku": "014",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-серый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "014"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Rustic"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "1524 × 228,6 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,0903 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "6"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "21,17 кг"
+    },
+    {
+     "label": "Снижение шума шагов",
+     "value": "10 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Дуб холодного серого цвета с матовой поверхностью без бликов.</p>\n<p>Enviro Rustic: доска SPC, 1524 × 228,6 мм, толщина 6 мм, защитный слой 0,55 мм. Каменно-полимерная основа держит размер, панели собираются на замок без клея. Пол выдерживает воду, его можно класть на тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9a49b2e642a87b0edb_6aa97e85588470b4999c46ef_enviroflooring-rustic-014-plank-01.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9a49b2e642a87b0ee8_6aa97e85b423f115f6b8de20_enviroflooring-rustic-014-plank-02.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9a49b2e642a87b0edf_6aa97e85daffce9fd1e73dea_enviroflooring-rustic-014-plank-03.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aabcdb3002dbd53f09659db_6aabcba8a91a7934d346ad71_enviroflooring-rustic-014-plank-04.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/rustic-014-spc-rechte-plank"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Rustic 014 (ёлочка)",
+   "slug": "enviro-rustic-014-elochka",
+   "collection": "Rustic",
+   "sku": "014",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-серый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "014"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Rustic"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "730 × 146 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,7053 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "16"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "17,29 кг"
+    },
+    {
+     "label": "Снижение шума шагов",
+     "value": "10 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Дуб холодного серого цвета с матовой поверхностью без бликов.</p>\n<p>Enviro Rustic: планка SPC для укладки ёлочкой, 730 × 146 мм, толщина 6 мм, защитный слой 0,55 мм. Каменно-полимерная основа держит размер, панели собираются на замок без клея. Пол выдерживает воду, его можно класть на тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97ff924de38afcb91e01b_6aa97e8597162f421ad87bde_enviroflooring-rustic-014-visgraat-01.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97ff924de38afcb91e022_6aa97e86d2405721c0678846_enviroflooring-rustic-014-visgraat-02.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97ff924de38afcb91e01f_6aa97e87833e29173f10e5c1_enviroflooring-rustic-014-visgraat-03.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aabce011a896a6ef812a010_6aabcba8c8d3bbd27f4f1064_enviroflooring-rustic-014-visgraat-04.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/rustic-014-spc-visgraat"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Rustic 015 (доска)",
+   "slug": "enviro-rustic-015-doska",
+   "collection": "Rustic",
+   "sku": "015",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-серый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "015"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Rustic"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "1524 × 228,6 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,0903 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "6"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "21,17 кг"
+    },
+    {
+     "label": "Снижение шума шагов",
+     "value": "10 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Почти угольно-чёрный дуб, сквозь тёмный тон видны волокна древесины.</p>\n<p>Enviro Rustic: доска SPC, 1524 × 228,6 мм, толщина 6 мм, защитный слой 0,55 мм. Каменно-полимерная основа держит размер, панели собираются на замок без клея. Пол выдерживает воду, его можно класть на тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9a49b2e642a87b0ed2_6aa97e87ea0b6b66c06ef271_enviroflooring-rustic-015-plank-01.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9a49b2e642a87b0ed8_6aa97e87ea0b6b66c06ef289_enviroflooring-rustic-015-plank-02.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9a49b2e642a87b0ed5_6aa97e87f5a0b58ac1bd60a8_enviroflooring-rustic-015-plank-03.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aabcdb3002dbd53f09659e2_6aabcba95bfbf8d73c58c637_enviroflooring-rustic-015-plank-04.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/rustic-015-spc-rechte-plank"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Rustic 015 (ёлочка)",
+   "slug": "enviro-rustic-015-elochka",
+   "collection": "Rustic",
+   "sku": "015",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-серый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "015"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Rustic"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "730 × 146 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,7053 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "16"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "17,29 кг"
+    },
+    {
+     "label": "Снижение шума шагов",
+     "value": "10 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Почти угольно-чёрный дуб, сквозь тёмный тон видны волокна древесины.</p>\n<p>Enviro Rustic: планка SPC для укладки ёлочкой, 730 × 146 мм, толщина 6 мм, защитный слой 0,55 мм. Каменно-полимерная основа держит размер, панели собираются на замок без клея. Пол выдерживает воду, его можно класть на тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97ff924de38afcb91e005_6aa97e8701224790b972e989_enviroflooring-rustic-015-visgraat-01.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97ff924de38afcb91e014_6aa97e8753aee60ecab6fa47_enviroflooring-rustic-015-visgraat-02.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97ff924de38afcb91e017_6aa97e8729b32e5c2dc38cb2_enviroflooring-rustic-015-visgraat-03.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aabce011a896a6ef812a005_6aabcba9825b29c1243730ca_enviroflooring-rustic-015-visgraat-04.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/rustic-015-spc-visgraat"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Rustic 016 (доска)",
+   "slug": "enviro-rustic-016-doska",
+   "collection": "Rustic",
+   "sku": "016",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "016"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Rustic"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "1524 × 228,6 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,0903 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "6"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "21,17 кг"
+    },
+    {
+     "label": "Снижение шума шагов",
+     "value": "10 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Дуб тёплого каштанового цвета с подробным рисунком волокон.</p>\n<p>Enviro Rustic: доска SPC, 1524 × 228,6 мм, толщина 6 мм, защитный слой 0,55 мм. Каменно-полимерная основа держит размер, панели собираются на замок без клея. Пол выдерживает воду, его можно класть на тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9a49b2e642a87b0ebf_6aa97e882a364d59af51b134_enviroflooring-rustic-016-plank-01.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9a49b2e642a87b0ec5_6aa97e88588470b4999c48e3_enviroflooring-rustic-016-plank-02.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9a49b2e642a87b0ec8_6aa97e891027c0065d91753d_enviroflooring-rustic-016-plank-03.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aabcdb3002dbd53f09659cc_6aabcba994d49e426fc30521_enviroflooring-rustic-016-plank-04.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/rustic-016-spc-rechte-plank"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Rustic 016 (ёлочка)",
+   "slug": "enviro-rustic-016-elochka",
+   "collection": "Rustic",
+   "sku": "016",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "016"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Rustic"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "730 × 146 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,7053 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "16"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "17,29 кг"
+    },
+    {
+     "label": "Снижение шума шагов",
+     "value": "10 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Дуб тёплого каштанового цвета с подробным рисунком волокон.</p>\n<p>Enviro Rustic: планка SPC для укладки ёлочкой, 730 × 146 мм, толщина 6 мм, защитный слой 0,55 мм. Каменно-полимерная основа держит размер, панели собираются на замок без клея. Пол выдерживает воду, его можно класть на тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97ff924de38afcb91e001_6aa97e8a223eaf500ada215f_enviroflooring-rustic-016-visgraat-01.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97ff924de38afcb91e02f_6aa97e8b91afbb725e6cb861_enviroflooring-rustic-016-visgraat-02.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97ff924de38afcb91e00b_6aa97e8b91afbb725e6cb879_enviroflooring-rustic-016-visgraat-03.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aabcddb5bfbf8d73c5a02cc_6aabcba92f33caebd397e2f3_enviroflooring-rustic-016-visgraat-04.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/rustic-016-spc-visgraat"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Rustic 017 (доска)",
+   "slug": "enviro-rustic-017-doska",
+   "collection": "Rustic",
+   "sku": "017",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "017"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Rustic"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "1524 × 228,6 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,0903 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "6"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "21,17 кг"
+    },
+    {
+     "label": "Снижение шума шагов",
+     "value": "10 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Дуб глубокого шоколадного цвета с хорошо заметными волокнами.</p>\n<p>Enviro Rustic: доска SPC, 1524 × 228,6 мм, толщина 6 мм, защитный слой 0,55 мм. Каменно-полимерная основа держит размер, панели собираются на замок без клея. Пол выдерживает воду, его можно класть на тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9949b2e642a87b0e61_6aa97e8b91afbb725e6cb891_enviroflooring-rustic-017-plank-01.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9a49b2e642a87b0e7e_6aa97e8bb423f115f6b8dff8_enviroflooring-rustic-017-plank-02.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9949b2e642a87b0e64_6aa97e8b233957ab7033934c_enviroflooring-rustic-017-plank-03.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/rustic-017-spc-rechte-plank"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Rustic 017 (ёлочка)",
+   "slug": "enviro-rustic-017-elochka",
+   "collection": "Rustic",
+   "sku": "017",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "017"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Rustic"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "730 × 146 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,7053 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "16"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "17,29 кг"
+    },
+    {
+     "label": "Снижение шума шагов",
+     "value": "10 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Дуб глубокого шоколадного цвета с хорошо заметными волокнами.</p>\n<p>Enviro Rustic: планка SPC для укладки ёлочкой, 730 × 146 мм, толщина 6 мм, защитный слой 0,55 мм. Каменно-полимерная основа держит размер, панели собираются на замок без клея. Пол выдерживает воду, его можно класть на тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9b5c8d7c15d2debe9c_6aa97e8bb423f115f6b8e02a_enviroflooring-rustic-017-visgraat-01.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9c5c8d7c15d2debeb2_6aa97e8b5c8d7c15d2de84b7_enviroflooring-rustic-017-visgraat-02.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9b5c8d7c15d2debea0_6aa97e8c1027c0065d9175d1_enviroflooring-rustic-017-visgraat-03.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/rustic-017-spc-visgraat"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Stone 01 (плитка)",
+   "slug": "enviro-stone-01-plitka",
+   "collection": "Stone",
+   "sku": "01",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "бежевый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под камень"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "01"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Stone"
+    },
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "914,4 × 457,2 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,51 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "6"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "24,31 кг"
+    },
+    {
+     "label": "Снижение шума шагов",
+     "value": "10 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Самый светлый бетон коллекции Stone, почти цвета слоновой кости.</p>\n<p>Enviro Stone: плитка SPC, 914,4 × 457,2 мм, толщина 6 мм, защитный слой 0,55 мм. Каменно-полимерная основа держит размер, панели собираются на замок без клея. Пол выдерживает воду, его можно класть на тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6a9ebc56a8294028301ee931_6a9ebaa9691deb0212effef9_enviro-stone-01-tegel-half-product.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6a9ebc56a8294028301ee92b_6a9ebaa9be37151cce0238b7_enviro-stone-01-tegel-half-hero.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6a9ebc56a8294028301ee942_6a9ebaa9be37151cce0238fb_enviro-stone-01-tegel-half-sfeer.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aabcd5ecc86ffa889191f90_6aabcba9d076c560b4492eeb_enviroflooring-stone-01-halvetegel-04.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/stone-01-spc-halve-tegel"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Stone 02 (плитка)",
+   "slug": "enviro-stone-02-plitka",
+   "collection": "Stone",
+   "sku": "02",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "серый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под камень"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "02"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Stone"
+    },
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "914,4 × 457,2 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,51 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "6"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "24,31 кг"
+    },
+    {
+     "label": "Снижение шума шагов",
+     "value": "10 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Бетон среднего серого цвета с естественными пятнами и мягкими переходами тона.</p>\n<p>Enviro Stone: плитка SPC, 914,4 × 457,2 мм, толщина 6 мм, защитный слой 0,55 мм. Каменно-полимерная основа держит размер, панели собираются на замок без клея. Пол выдерживает воду, его можно класть на тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6a9ebc56a8294028301ee960_6a9ebaaa6e5b1a4ba90eab6a_enviro-stone-02-tegel-half-product.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6a9ebc56a8294028301ee93a_6a9ebaa9d1a66cd1462b531e_enviro-stone-02-tegel-half-hero.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6a9ebc56a8294028301ee950_6a9ebaaad1a66cd1462b537e_enviro-stone-02-tegel-half-sfeer.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aabcd5ecc86ffa889191f95_6aabcbac08a7f818f59d3c22_enviroflooring-stone-02-halvetegel-04.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/stone-02-spc-halve-tegel"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Stone 03 (плитка)",
+   "slug": "enviro-stone-03-plitka",
+   "collection": "Stone",
+   "sku": "03",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-серый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под камень"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "03"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Stone"
+    },
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "914,4 × 457,2 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,51 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "6"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "24,31 кг"
+    },
+    {
+     "label": "Снижение шума шагов",
+     "value": "10 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Тёмно-серый бетон с заметной шероховатой фактурой.</p>\n<p>Enviro Stone: плитка SPC, 914,4 × 457,2 мм, толщина 6 мм, защитный слой 0,55 мм. Каменно-полимерная основа держит размер, панели собираются на замок без клея. Пол выдерживает воду, его можно класть на тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6a9ebc819a08d655a443b776_6a9ebaaa07f88fc888163538_enviro-stone-03-tegel-half-product.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6a9ebc819a08d655a443b769_6a9ebaaa6db25a756a35be10_enviro-stone-03-tegel-half-hero.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6a9ebc819a08d655a443b76c_6a9ebaaadfe7c94121fb91f0_enviro-stone-03-tegel-half-sfeer.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aabcd5ecc86ffa889191f86_6aabcbad3c0a5103ad662144_enviroflooring-stone-03-halvetegel-04.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/stone-03-spc-halve-tegel"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Stone 04 (плитка)",
+   "slug": "enviro-stone-04-plitka",
+   "collection": "Stone",
+   "sku": "04",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "серый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под камень"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "04"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Stone"
+    },
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "914,4 × 457,2 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,51 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "6"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "24,31 кг"
+    },
+    {
+     "label": "Снижение шума шагов",
+     "value": "10 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Бетон с холодным серо-голубым оттенком.</p>\n<p>Enviro Stone: плитка SPC, 914,4 × 457,2 мм, толщина 6 мм, защитный слой 0,55 мм. Каменно-полимерная основа держит размер, панели собираются на замок без клея. Пол выдерживает воду, его можно класть на тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6a9ebc819a08d655a443b7f9_6a9ebaca40010cb23fa97780_enviro-stone-04-tegel-half-product.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6a9ebc829a08d655a443b802_6a9ebaca29dab6c6fb6e67f5_enviro-stone-04-tegel-half-hero.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6a9ebc819a08d655a443b7f3_6a9ebacac256c90d730719fd_enviro-stone-04-tegel-half-sfeer.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aabcd5dcc86ffa889191f6c_6aabcbb1a91a7934d346b26e_enviroflooring-stone-04-halvetegel-04.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/stone-04-spc-halve-tegel"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Stone 05 (плитка)",
+   "slug": "enviro-stone-05-plitka",
+   "collection": "Stone",
+   "sku": "05",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-серый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под камень"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "05"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Stone"
+    },
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "914,4 × 457,2 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,51 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "6"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "24,31 кг"
+    },
+    {
+     "label": "Снижение шума шагов",
+     "value": "10 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Бетон глубокого антрацитового цвета, самый тёмный в коллекции.</p>\n<p>Enviro Stone: плитка SPC, 914,4 × 457,2 мм, толщина 6 мм, защитный слой 0,55 мм. Каменно-полимерная основа держит размер, панели собираются на замок без клея. Пол выдерживает воду, его можно класть на тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6a9ebc829a08d655a443b855_6a9ebacb60db1affa2989261_enviro-stone-05-tegel-half-product.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6a9ebc829a08d655a443b86d_6a9ebacb40010cb23fa978ee_enviro-stone-05-tegel-half-hero.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6a9ebc829a08d655a443b848_6a9ebacb60db1affa298928a_enviro-stone-05-tegel-half-sfeer.avif",
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aabcd5dcc86ffa889191f5b_6aabcbb25bfbf8d73c58cccd_enviroflooring-stone-05-halvetegel-04.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/stone-05-spc-halve-tegel"
+  },
+  {
+   "brand": "Kährs",
+   "name": "Dom",
+   "slug": "kahrs-dom-dry-back",
+   "collection": "Dry Back Stone",
+   "sku": "LTDBS3014-457-5",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-серый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под камень"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "LTDBS3014-457-5"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Dry Back Stone"
+    },
+    {
+     "label": "Тип",
+     "value": "LVT, клеевая укладка (Dry Back)"
+    },
+    {
+     "label": "Размер плитки",
+     "value": "457 × 457 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Страна",
+     "value": "Швеция (бренд)"
+    }
+   ],
+   "description": "<p>Плитка под тёмно-серый бетон с мягкими пятнами и неровным тоном, как у шлифованного цементного пола.</p>\n<p>Kährs Dom из коллекции Dry Back Stone: плитка LVT 457 × 457 мм толщиной 2,5 мм с защитным слоем 0,55 мм и микрофаской по четырём сторонам. Плитку приклеивают к ровному основанию.</p>",
+   "images": [
+    "https://kahrs.cdn-norce.tech/b69dac6a-c3f8-4dbe-b77a-fa78300c68c0"
+   ],
+   "sourceUrl": "https://www.kahrs.com/uk/product/dom-dry-back-v9880",
+   "inStock": true
   }
  ]
 }
