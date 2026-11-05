@@ -1,0 +1,1250 @@
+{
+ "collected": "2026-11-05",
+ "makers": {
+  "Modulyss": {
+   "sourceUrl": "https://www.modulyss.com/en-INT/carpet/collections/filter",
+   "method": "HTML of the filter page (Drupal exposed form). Linked from the catalog page /en-INT/carpet/collections via \"Filter collections\".",
+   "ruRU": "https://www.modulyss.com/ru-RU/kovrovaya-plitka/kollektsii redirected to https://www.modulyss.com/en-INT; ru-RU is not among the hreflang alternates of the filter page, so no Russian wording was obtained.",
+   "groups": [
+    {
+     "group": "Colour",
+     "param": "colour",
+     "values": [
+      "Beige",
+      "Black",
+      "Blue",
+      "Brown",
+      "Green",
+      "Grey",
+      "Orange",
+      "Pink",
+      "Purple",
+      "Red",
+      "White",
+      "Yellow"
+     ]
+    },
+    {
+     "group": "Pattern",
+     "param": "pattern",
+     "values": [
+      "Geometric",
+      "Linear",
+      "Organic",
+      "Plain",
+      "Varied"
+     ]
+    },
+    {
+     "group": "Structure",
+     "param": "structure",
+     "values": [
+      "Cut pile",
+      "Loop pile",
+      "Loop tip sheared",
+      "minituft®"
+     ]
+    },
+    {
+     "group": "Sustainability options",
+     "param": "sustainability_options",
+     "values": [
+      "Cradle to Cradle Certified Gold",
+      "Cradle to Cradle Certified Silver",
+      "ECONYL® yarn",
+      "Thrive® matter yarn",
+      "comfortBACK ECO",
+      "ecoBACK",
+      "ecoBACK PLUS"
+     ]
+    },
+    {
+     "group": "Carpet type",
+     "param": "field_product_type",
+     "values": [
+      "Broadloom",
+      "Carpet tiles"
+     ]
+    },
+    {
+     "group": "Collection",
+     "param": "collection",
+     "values": [
+      "Artus",
+      "Cambridge&",
+      "Core",
+      "DSGN Absolute",
+      "DSGN Cloud",
+      "DSGN Force",
+      "DSGN Tweed",
+      "Dune",
+      "Etch",
+      "Fade",
+      "Fashion&",
+      "First Decode",
+      "First Define",
+      "First Forward",
+      "First Straightline",
+      "First Streamline",
+      "First Sway",
+      "Fluid&",
+      "Forma",
+      "Gleam",
+      "Grind",
+      "Haze",
+      "In-groove",
+      "Ivy",
+      "Leaf",
+      "Litho",
+      "Lume",
+      "Meadow",
+      "Mezzo",
+      "Millennium Nxtgen",
+      "Monos",
+      "Moss",
+      "Motion",
+      "Patchwork",
+      "Pattern",
+      "Pixel",
+      "Polder",
+      "Ray",
+      "Rocket",
+      "Rust",
+      "Textura",
+      "Trace",
+      "Velvet&",
+      "Vision",
+      "Willow"
+     ]
+    },
+    {
+     "group": "Design concepts",
+     "param": "collection_group",
+     "values": [
+      "&",
+      "Artcore",
+      "Delight",
+      "DSGN",
+      "First",
+      "Haelo",
+      "Handcraft",
+      "Heritage",
+      "Modus",
+      "Plus",
+      "Vintage"
+     ]
+    },
+    {
+     "group": "Installation method",
+     "param": "installation_method",
+     "values": [
+      "Ashlar",
+      "Brick",
+      "Monolithic",
+      "Quarter turn",
+      "Random"
+     ]
+    },
+    {
+     "group": "Size",
+     "param": "size",
+     "values": [
+      "50 x 50 cm",
+      "25 x 100 cm",
+      "50 x 100 cm",
+      "100 x 100 cm",
+      "400 x ... cm"
+     ]
+    },
+    {
+     "group": "Light reflectance value",
+     "param": "light_reflectance_value",
+     "values": [
+      "≥0",
+      "≥10",
+      "≥20",
+      "≥30"
+     ]
+    },
+    {
+     "group": "Is Quick ship product",
+     "param": "quickship",
+     "values": [
+      "(checkbox)"
+     ]
+    }
+   ]
+  },
+  "Mohawk Group": {
+   "sourceUrl": "https://www.mohawkgroup.eu/en/carpet-tiles",
+   "method": "JSON in data-component-parm of the FloorLister component in the page HTML",
+   "totalCount": 269,
+   "groups": [
+    {
+     "group": "Design name",
+     "param": "designName",
+     "isRange": false,
+     "values": [
+      {
+       "value": "Balanced",
+       "count": 16
+      },
+      {
+       "value": "Basalt",
+       "count": 18
+      },
+      {
+       "value": "Bruut",
+       "count": 12
+      },
+      {
+       "value": "Chrome",
+       "count": 12
+      },
+      {
+       "value": "Clay",
+       "count": 6
+      },
+      {
+       "value": "Creative Spark",
+       "count": 32
+      },
+      {
+       "value": "Expansion Point",
+       "count": 12
+      },
+      {
+       "value": "Flare",
+       "count": 12
+      },
+      {
+       "value": "Glow",
+       "count": 12
+      },
+      {
+       "value": "Grit",
+       "count": 11
+      },
+      {
+       "value": "Jute",
+       "count": 18
+      },
+      {
+       "value": "Metallic Clay",
+       "count": 6
+      },
+      {
+       "value": "Orb",
+       "count": 12
+      },
+      {
+       "value": "Quartz",
+       "count": 10
+      },
+      {
+       "value": "Reflect",
+       "count": 12
+      },
+      {
+       "value": "Rupture",
+       "count": 12
+      },
+      {
+       "value": "Tailored",
+       "count": 16
+      },
+      {
+       "value": "Teak",
+       "count": 18
+      },
+      {
+       "value": "Tides",
+       "count": 6
+      },
+      {
+       "value": "Unchained",
+       "count": 16
+      }
+     ]
+    },
+    {
+     "group": "Collection",
+     "param": "collectionName",
+     "isRange": false,
+     "values": [
+      {
+       "value": "Art Intervention",
+       "count": 44
+      },
+      {
+       "value": "Imperfection",
+       "count": 35
+      },
+      {
+       "value": "Light Art",
+       "count": 60
+      },
+      {
+       "value": "Pattern",
+       "count": 48
+      },
+      {
+       "value": "Rudiments",
+       "count": 82
+      }
+     ]
+    },
+    {
+     "group": "Colour range",
+     "param": "secondaryColor",
+     "isRange": false,
+     "values": [
+      {
+       "value": "Purple",
+       "count": 6
+      },
+      {
+       "value": "Beige",
+       "count": 26
+      },
+      {
+       "value": "Black",
+       "count": 6
+      },
+      {
+       "value": "Blue",
+       "count": 26
+      },
+      {
+       "value": "Brown",
+       "count": 15
+      },
+      {
+       "value": "Green",
+       "count": 16
+      },
+      {
+       "value": "Grey",
+       "count": 50
+      },
+      {
+       "value": "Orange",
+       "count": 6
+      },
+      {
+       "value": "Pink",
+       "count": 7
+      },
+      {
+       "value": "Red",
+       "count": 3
+      },
+      {
+       "value": "Yellow",
+       "count": 3
+      }
+     ]
+    },
+    {
+     "group": "Dimensions",
+     "param": "commercialSize",
+     "isRange": false,
+     "values": [
+      {
+       "value": "250 x 1000 mm",
+       "count": 47
+      },
+      {
+       "value": "500 x 500 mm",
+       "count": 222
+      }
+     ]
+    },
+    {
+     "group": "Sector",
+     "param": "sectorOfUsage",
+     "isRange": false,
+     "values": [
+      {
+       "value": "Housing",
+       "count": 72
+      },
+      {
+       "value": "Hospitality & leisure",
+       "count": 152
+      },
+      {
+       "value": "Retail",
+       "count": 116
+      },
+      {
+       "value": "Office",
+       "count": 269
+      },
+      {
+       "value": "Education",
+       "count": 152
+      },
+      {
+       "value": "Hotel",
+       "count": 36
+      }
+     ]
+    },
+    {
+     "group": "Pattern type",
+     "param": "patternType",
+     "isRange": false,
+     "values": [
+      {
+       "value": "Geometric",
+       "count": 18
+      },
+      {
+       "value": "Graphic",
+       "count": 84
+      },
+      {
+       "value": "Lineair",
+       "count": 24
+      },
+      {
+       "value": "Organic",
+       "count": 93
+      },
+      {
+       "value": "Plain",
+       "count": 50
+      }
+     ]
+    },
+    {
+     "group": "Pile weight",
+     "param": "pileWeight",
+     "isRange": true,
+     "values": [
+      {
+       "value": "500 - 600 g/m²",
+       "count": 104
+      },
+      {
+       "value": "600 - 700 g/m²",
+       "count": 82
+      },
+      {
+       "value": "700 - 800 g/m²",
+       "count": 83
+      },
+      {
+       "value": "800 - 2000 g/m²",
+       "count": 0
+      }
+     ]
+    },
+    {
+     "group": "Pile material",
+     "param": "pileFibreComposition",
+     "isRange": false,
+     "values": [
+      {
+       "value": "100% SDN Thrive® Matter",
+       "count": 130
+      },
+      {
+       "value": "100% Solution Dyed Nylon",
+       "count": 104
+      },
+      {
+       "value": "Econyl®",
+       "count": 35
+      }
+     ]
+    },
+    {
+     "group": "Backing",
+     "param": "variant_BackingCode",
+     "isRange": false,
+     "values": [
+      {
+       "value": "EcoFlex™ Echo",
+       "count": 54
+      },
+      {
+       "value": "EcoFlex™ NXT",
+       "count": 82
+      },
+      {
+       "value": "EcoFlex™ One",
+       "count": 35
+      },
+      {
+       "value": "EcoFlex™ Statera",
+       "count": 152
+      }
+     ]
+    }
+   ]
+  },
+  "Betap": {
+   "sourceUrl": "https://betap.com/segments/commercial-interiors",
+   "xhr": "https://betap.com/actions/productfilter-module/product-filter/filters?segment=1143",
+   "method": "XHR used by the Vue ProductSearch block on the segment page. https://betap.com/products itself returns 404. Group names are derived from the API keys: the visible captions are rendered by JS and were not captured.",
+   "groups": [
+    {
+     "group": "Segment",
+     "param": "segments",
+     "values": [
+      "Residential Interiors",
+      "Commercial Interiors",
+      "PARQ by Betap",
+      "Yarn by Nature",
+      "Graphics"
+     ]
+    },
+    {
+     "group": "Collection",
+     "param": "collections",
+     "values": [
+      "Baltic",
+      "Chromata Base",
+      "Chromata Cascade",
+      "Chromata Feel",
+      "Chromata Style",
+      "Club",
+      "Lake",
+      "Larix",
+      "Line",
+      "Nevada",
+      "Pave",
+      "Santo Tile",
+      "Sierra",
+      "Transform",
+      "Translate",
+      "Vienna"
+     ]
+    },
+    {
+     "group": "Color",
+     "param": "colors",
+     "values": [
+      "Red",
+      "Pink",
+      "Orange",
+      "Yellow",
+      "Green",
+      "Blue",
+      "Purple",
+      "Brown",
+      "Black",
+      "Grey",
+      "Beige",
+      "Creme",
+      "White"
+     ]
+    },
+    {
+     "group": "Material",
+     "param": "materials",
+     "values": [
+      "PA",
+      "PP",
+      "PES",
+      "PE",
+      "Woolblend",
+      "PES - PP",
+      "PE + PP",
+      "100% polyolefin"
+     ]
+    },
+    {
+     "group": "Pattern",
+     "param": "patterns",
+     "values": [
+      "Cut pile",
+      "Loop pile",
+      "Nonwoven",
+      "Saxony",
+      "Tufted artificial grass",
+      "Non-directional artificial grass"
+     ]
+    }
+   ]
+  },
+  "BLOQ": {
+   "sourceUrl": "https://bloq.nl/products",
+   "method": "HTML. The site has no facet filters: the only control is a jump list \"Find your favourite product\" that scrolls to a design.",
+   "groups": [
+    {
+     "group": "Find your favourite product (jump list of designs, not a filter)",
+     "values": [
+      "Assembly",
+      "Balance",
+      "Canvas",
+      "Connexion",
+      "Eternity",
+      "Fantasy",
+      "Flow",
+      "Glory",
+      "Grain",
+      "Large",
+      "Majesty",
+      "Medium",
+      "Negative",
+      "Positive",
+      "R-Evolution",
+      "Renegade",
+      "Rhythm",
+      "Sculpture",
+      "Sensity",
+      "Small",
+      "Solace",
+      "Tradition",
+      "Unity"
+     ]
+    }
+   ]
+  },
+  "Associated Weavers": {
+   "sourceUrl": "https://associated-weavers.com/en/products/carpet-flooring/product-search?type=carpettile",
+   "xhr": "POST https://associated-weavers.com/api/productcatalog/filter/filter (body from the data-* attributes of #filter-1, filterType CarpetTile)",
+   "method": "XHR used by the React filter. Names and values are copied as returned; several are untranslated keys (Filter.FacetCategories.*) and type 24 is really room type although it is captioned \"Colours\". facetStatus is the raw number from data-facet-statuses (2 appears on preset groups such as Product type; its meaning is inferred, not documented).",
+   "groups": [
+    {
+     "group": "Filter.FacetCategories.CatalogType",
+     "facetType": 6,
+     "facetStatus": null,
+     "values": [
+      "EU",
+      "WW",
+      "CE"
+     ]
+    },
+    {
+     "group": "Brand",
+     "facetType": 2,
+     "facetStatus": null,
+     "values": [
+      "Invictus",
+      "Maverick"
+     ]
+    },
+    {
+     "group": "Product type",
+     "facetType": 13,
+     "facetStatus": null,
+     "values": [
+      "Carpet tiles",
+      "Filter.Facets.MaterialGroup.73"
+     ]
+    },
+    {
+     "group": "Size (mm)",
+     "facetType": 17,
+     "facetStatus": null,
+     "values": [
+      "0500 x 0500",
+      "0280 x 0750",
+      "0250 x 1000"
+     ]
+    },
+    {
+     "group": "Colours",
+     "facetType": 21,
+     "facetStatus": null,
+     "values": [
+      "Beige",
+      "Black",
+      "Blue",
+      "Brown",
+      "Green",
+      "Grey",
+      "Orange",
+      "Red",
+      "Yellow"
+     ]
+    },
+    {
+     "group": "Colours",
+     "facetType": 24,
+     "facetStatus": null,
+     "values": [
+      "Living room",
+      "Bedroom",
+      "Home office"
+     ]
+    },
+    {
+     "group": "Range",
+     "facetType": 23,
+     "facetStatus": null,
+     "values": [
+      "Crixus",
+      "Priscus",
+      "Spartacus"
+     ]
+    },
+    {
+     "group": "Collection",
+     "facetType": 20,
+     "facetStatus": null,
+     "values": [
+      "Modular Soft Flooring",
+      "Maverick Tiles"
+     ]
+    },
+    {
+     "group": "Filter.FacetCategories.CarpetTileBackingType",
+     "facetType": 19,
+     "facetStatus": null,
+     "values": [
+      "Bitumen",
+      "Filter.Facets.BackingTypes.FE"
+     ]
+    },
+    {
+     "group": "Height (mm)",
+     "facetType": 7,
+     "facetStatus": null,
+     "values": [
+      "0-10",
+      "10-15",
+      "15-20"
+     ]
+    },
+    {
+     "group": "Filter.FacetCategories.CarpetTilePileHeight",
+     "facetType": 22,
+     "facetStatus": null,
+     "values": [
+      "Short (< 1 centimeter)",
+      "Long (>= 1 centimeter)"
+     ]
+    }
+   ]
+  },
+  "Beaulieu": {
+   "sourceUrl": "https://www.beaulieu-needlefelt.com/en/product-finder",
+   "method": "Rendered filter panel in the HTML of the main product finder (173 results across all products). The Bedford collection page named in the brief has no filter panel, only \"Collection information\" and \"Technical information\". Counts are for the whole finder, not tiles only; Product type = Tiles has 5 products.",
+   "groups": [
+    {
+     "group": "Rewind®",
+     "values": [
+      {
+       "value": "Rewind® Contract",
+       "count": 6
+      },
+      {
+       "value": "Rewind® Event",
+       "count": 5
+      }
+     ]
+    },
+    {
+     "group": "Market",
+     "values": [
+      {
+       "value": "Automotive",
+       "count": 23
+      },
+      {
+       "value": "Commercial",
+       "count": 58
+      },
+      {
+       "value": "Event",
+       "count": 24
+      },
+      {
+       "value": "Outdoor",
+       "count": 14
+      },
+      {
+       "value": "Residential",
+       "count": 18
+      }
+     ]
+    },
+    {
+     "group": "Product type",
+     "values": [
+      {
+       "value": "Mats",
+       "count": 10
+      },
+      {
+       "value": "Rolls",
+       "count": 140
+      },
+      {
+       "value": "Runners",
+       "count": 18
+      },
+      {
+       "value": "Tiles",
+       "count": 5
+      }
+     ]
+    },
+    {
+     "group": "Features",
+     "values": [
+      {
+       "value": "Rewind®",
+       "count": 11
+      }
+     ]
+    },
+    {
+     "group": "Construction",
+     "values": [
+      {
+       "value": "Needle felt",
+       "count": 135
+      },
+      {
+       "value": "PVC",
+       "count": 1
+      },
+      {
+       "value": "Tufted",
+       "count": 8
+      },
+      {
+       "value": "Tufted grass",
+       "count": 29
+      }
+     ]
+    },
+    {
+     "group": "Surface structure",
+     "values": [
+      {
+       "value": "1 Rib + borders",
+       "count": 1
+      },
+      {
+       "value": "1 Rib 3.5",
+       "count": 21
+      },
+      {
+       "value": "1 Rib 4.7",
+       "count": 6
+      },
+      {
+       "value": "1 Rib 7.0",
+       "count": 3
+      },
+      {
+       "value": "3 Rib",
+       "count": 6
+      },
+      {
+       "value": "4 Rib",
+       "count": 5
+      },
+      {
+       "value": "Braille",
+       "count": 4
+      },
+      {
+       "value": "Dilour",
+       "count": 42
+      },
+      {
+       "value": "Dilour + thermoprint",
+       "count": 2
+      },
+      {
+       "value": "Flat",
+       "count": 11
+      },
+      {
+       "value": "Granada",
+       "count": 1
+      },
+      {
+       "value": "Granada 2-layer",
+       "count": 2
+      },
+      {
+       "value": "Granada Matrix",
+       "count": 2
+      },
+      {
+       "value": "Popcorn",
+       "count": 3
+      },
+      {
+       "value": "Rib AXA",
+       "count": 10
+      },
+      {
+       "value": "Rib AXA 2-layer",
+       "count": 2
+      },
+      {
+       "value": "Rib Diagonal 2-layer",
+       "count": 2
+      },
+      {
+       "value": "Rib Samos",
+       "count": 2
+      },
+      {
+       "value": "Tufted",
+       "count": 38
+      },
+      {
+       "value": "Vectra",
+       "count": 3
+      },
+      {
+       "value": "Velour",
+       "count": 6
+      }
+     ]
+    },
+    {
+     "group": "Fire classification",
+     "values": [
+      {
+       "value": "Bfl-s1",
+       "count": 23
+      },
+      {
+       "value": "Cfl-s1",
+       "count": 18
+      }
+     ]
+    },
+    {
+     "group": "Backing",
+     "values": [
+      {
+       "value": "Action back",
+       "count": 2
+      },
+      {
+       "value": "Bitumen",
+       "count": 5
+      },
+      {
+       "value": "EVAR",
+       "count": 1
+      },
+      {
+       "value": "Felt",
+       "count": 3
+      },
+      {
+       "value": "Foam",
+       "count": 2
+      },
+      {
+       "value": "Gel",
+       "count": 59
+      },
+      {
+       "value": "Granulate",
+       "count": 17
+      },
+      {
+       "value": "Latex",
+       "count": 1
+      },
+      {
+       "value": "Marine",
+       "count": 1
+      },
+      {
+       "value": "Marine Backing",
+       "count": 5
+      },
+      {
+       "value": "Marine Cfl",
+       "count": 1
+      },
+      {
+       "value": "None - latex free",
+       "count": 11
+      },
+      {
+       "value": "Precoat",
+       "count": 8
+      },
+      {
+       "value": "Precoat + dots",
+       "count": 5
+      },
+      {
+       "value": "Precoat Marine",
+       "count": 1
+      },
+      {
+       "value": "PU",
+       "count": 1
+      },
+      {
+       "value": "PVC",
+       "count": 3
+      },
+      {
+       "value": "Recycled EVO",
+       "count": 1
+      },
+      {
+       "value": "Resine",
+       "count": 21
+      },
+      {
+       "value": "Resine + dots",
+       "count": 3
+      },
+      {
+       "value": "TPE no borders",
+       "count": 1
+      },
+      {
+       "value": "TPE with borders",
+       "count": 1
+      },
+      {
+       "value": "TPE with borders (BCF)",
+       "count": 1
+      },
+      {
+       "value": "Unbacked",
+       "count": 1
+      },
+      {
+       "value": "Verdite Mono Backing",
+       "count": 13
+      },
+      {
+       "value": "Xtinguish",
+       "count": 5
+      }
+     ]
+    },
+    {
+     "group": "Total height",
+     "values": [
+      {
+       "value": "10 mm",
+       "count": 7
+      },
+      {
+       "value": "10.5 mm",
+       "count": 3
+      },
+      {
+       "value": "11 mm",
+       "count": 7
+      },
+      {
+       "value": "11.5 mm",
+       "count": 1
+      },
+      {
+       "value": "12 mm",
+       "count": 2
+      },
+      {
+       "value": "13 mm",
+       "count": 1
+      },
+      {
+       "value": "14 mm",
+       "count": 2
+      },
+      {
+       "value": "17 mm",
+       "count": 1
+      },
+      {
+       "value": "2 mm",
+       "count": 5
+      },
+      {
+       "value": "2.5 mm",
+       "count": 7
+      },
+      {
+       "value": "2.8 mm",
+       "count": 1
+      },
+      {
+       "value": "20 mm",
+       "count": 1
+      },
+      {
+       "value": "22 mm",
+       "count": 2
+      },
+      {
+       "value": "27 mm",
+       "count": 3
+      },
+      {
+       "value": "3 mm",
+       "count": 3
+      },
+      {
+       "value": "3.1 mm",
+       "count": 1
+      },
+      {
+       "value": "3.5 mm",
+       "count": 3
+      },
+      {
+       "value": "30 mm",
+       "count": 1
+      },
+      {
+       "value": "32 mm",
+       "count": 3
+      },
+      {
+       "value": "36 mm",
+       "count": 1
+      },
+      {
+       "value": "37 mm",
+       "count": 2
+      },
+      {
+       "value": "4 mm",
+       "count": 8
+      },
+      {
+       "value": "4.2 mm",
+       "count": 1
+      },
+      {
+       "value": "4.3 mm",
+       "count": 1
+      },
+      {
+       "value": "4.5 mm",
+       "count": 5
+      },
+      {
+       "value": "4.7 mm",
+       "count": 1
+      },
+      {
+       "value": "42 mm",
+       "count": 3
+      },
+      {
+       "value": "47 mm",
+       "count": 2
+      },
+      {
+       "value": "5 mm",
+       "count": 19
+      },
+      {
+       "value": "5.1 mm",
+       "count": 1
+      },
+      {
+       "value": "5.5 mm",
+       "count": 3
+      },
+      {
+       "value": "6 mm",
+       "count": 17
+      },
+      {
+       "value": "6.5 mm",
+       "count": 7
+      },
+      {
+       "value": "7 mm",
+       "count": 14
+      },
+      {
+       "value": "7.5 mm",
+       "count": 3
+      },
+      {
+       "value": "7.7 mm",
+       "count": 1
+      },
+      {
+       "value": "8 mm",
+       "count": 20
+      },
+      {
+       "value": "8.3 mm",
+       "count": 1
+      },
+      {
+       "value": "8.5 mm",
+       "count": 3
+      },
+      {
+       "value": "8.6 mm",
+       "count": 1
+      },
+      {
+       "value": "9 mm",
+       "count": 2
+      },
+      {
+       "value": "9.5 mm",
+       "count": 2
+      }
+     ]
+    },
+    {
+     "group": "Total weight class",
+     "values": [
+      {
+       "value": "> 2200",
+       "count": 22
+      },
+      {
+       "value": "0000-0599",
+       "count": 18
+      },
+      {
+       "value": "0600-0799",
+       "count": 14
+      },
+      {
+       "value": "0800-0999",
+       "count": 16
+      },
+      {
+       "value": "1000-1199",
+       "count": 14
+      },
+      {
+       "value": "1200-1399",
+       "count": 25
+      },
+      {
+       "value": "1400-1599",
+       "count": 15
+      },
+      {
+       "value": "1600-1799",
+       "count": 16
+      },
+      {
+       "value": "1800-1999",
+       "count": 16
+      },
+      {
+       "value": "2000-2199",
+       "count": 17
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

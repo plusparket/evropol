@@ -1,0 +1,2997 @@
+{
+ "collected": "2026-11-05",
+ "note": "Each value is {value, source[, note]} in the maker's wording. notFound lists fields the maker does not publish or that could not be determined.",
+ "products": [
+  {
+   "slug": "renegade-812",
+   "brand": "BLOQ",
+   "name": "Renegade 812 Coffee",
+   "sku": "812",
+   "sourceUrl": "https://bloq.nl/renegade-812",
+   "colourName": {
+    "value": "Coffee",
+    "source": "https://bloq.nl/renegade-812"
+   },
+   "colourGroup": null,
+   "design": null,
+   "construction": {
+    "value": "Tufted Patterned Loop Pile 1/10\"",
+    "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Binary_RENEGADE_TF_EN_MRT24.pdf"
+   },
+   "pileMaterial": {
+    "value": "100% Polyamide 6, Solution Dyed Nylon made by Aquafil",
+    "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Binary_RENEGADE_TF_EN_MRT24.pdf"
+   },
+   "pileWeight": {
+    "value": "650 g/m²",
+    "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Binary_RENEGADE_TF_EN_MRT24.pdf"
+   },
+   "totalWeight": {
+    "value": "4 400 g/m²",
+    "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Binary_RENEGADE_TF_EN_MRT24.pdf"
+   },
+   "pileHeight": {
+    "value": "3.8 mm",
+    "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Binary_RENEGADE_TF_EN_MRT24.pdf"
+   },
+   "totalThickness": {
+    "value": "6.9 mm",
+    "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Binary_RENEGADE_TF_EN_MRT24.pdf"
+   },
+   "usageClass": {
+    "value": "33 / LC1",
+    "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Binary_RENEGADE_TF_EN_MRT24.pdf",
+    "note": "EN 1307 classification and luxury rating"
+   },
+   "fireClass": {
+    "value": "Bfl-s1",
+    "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Binary_RENEGADE_TF_EN_MRT24.pdf"
+   },
+   "backing": {
+    "value": "Bitback, Modified Bitumen, 70% Recycled Content",
+    "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Binary_RENEGADE_TF_EN_MRT24.pdf"
+   },
+   "format": {
+    "value": "50 x 50 cm",
+    "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Binary_RENEGADE_TF_EN_MRT24.pdf"
+   },
+   "other": {
+    "collection": {
+     "value": "The Binary",
+     "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Binary_RENEGADE_TF_EN_MRT24.pdf"
+    },
+    "surfacePileWeight": {
+     "value": "380 g/m²",
+     "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Binary_RENEGADE_TF_EN_MRT24.pdf"
+    },
+    "castorChair": {
+     "value": "A: Intensive use",
+     "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Binary_RENEGADE_TF_EN_MRT24.pdf"
+    },
+    "impactSound": {
+     "value": "26 dB",
+     "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Binary_RENEGADE_TF_EN_MRT24.pdf"
+    },
+    "soundAbsorption": {
+     "value": "αw 0.20",
+     "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Binary_RENEGADE_TF_EN_MRT24.pdf"
+    },
+    "thermalResistance": {
+     "value": "0.082 m² K/W",
+     "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Binary_RENEGADE_TF_EN_MRT24.pdf"
+    },
+    "numberOfColours": {
+     "value": "18",
+     "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Binary_RENEGADE_TF_EN_MRT24.pdf"
+    },
+    "gutProdis": {
+     "value": "343D0EEE",
+     "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Binary_RENEGADE_TF_EN_MRT24.pdf"
+    }
+   },
+   "notFound": [
+    "colourGroup (BLOQ site has no colour filter or colour family, only the colour name)",
+    "design as a separate label (only \"Patterned\" in the construction line of Renegade)"
+   ],
+   "notes": []
+  },
+  {
+   "slug": "renegade-942",
+   "brand": "BLOQ",
+   "name": "Renegade 942 Shadow",
+   "sku": "942",
+   "sourceUrl": "https://bloq.nl/renegade-942",
+   "colourName": {
+    "value": "Shadow",
+    "source": "https://bloq.nl/renegade-942"
+   },
+   "colourGroup": null,
+   "design": null,
+   "construction": {
+    "value": "Tufted Patterned Loop Pile 1/10\"",
+    "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Binary_RENEGADE_TF_EN_MRT24.pdf"
+   },
+   "pileMaterial": {
+    "value": "100% Polyamide 6, Solution Dyed Nylon made by Aquafil",
+    "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Binary_RENEGADE_TF_EN_MRT24.pdf"
+   },
+   "pileWeight": {
+    "value": "650 g/m²",
+    "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Binary_RENEGADE_TF_EN_MRT24.pdf"
+   },
+   "totalWeight": {
+    "value": "4 400 g/m²",
+    "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Binary_RENEGADE_TF_EN_MRT24.pdf"
+   },
+   "pileHeight": {
+    "value": "3.8 mm",
+    "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Binary_RENEGADE_TF_EN_MRT24.pdf"
+   },
+   "totalThickness": {
+    "value": "6.9 mm",
+    "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Binary_RENEGADE_TF_EN_MRT24.pdf"
+   },
+   "usageClass": {
+    "value": "33 / LC1",
+    "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Binary_RENEGADE_TF_EN_MRT24.pdf",
+    "note": "EN 1307 classification and luxury rating"
+   },
+   "fireClass": {
+    "value": "Bfl-s1",
+    "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Binary_RENEGADE_TF_EN_MRT24.pdf"
+   },
+   "backing": {
+    "value": "Bitback, Modified Bitumen, 70% Recycled Content",
+    "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Binary_RENEGADE_TF_EN_MRT24.pdf"
+   },
+   "format": {
+    "value": "50 x 50 cm",
+    "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Binary_RENEGADE_TF_EN_MRT24.pdf"
+   },
+   "other": {
+    "collection": {
+     "value": "The Binary",
+     "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Binary_RENEGADE_TF_EN_MRT24.pdf"
+    },
+    "surfacePileWeight": {
+     "value": "380 g/m²",
+     "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Binary_RENEGADE_TF_EN_MRT24.pdf"
+    },
+    "castorChair": {
+     "value": "A: Intensive use",
+     "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Binary_RENEGADE_TF_EN_MRT24.pdf"
+    },
+    "impactSound": {
+     "value": "26 dB",
+     "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Binary_RENEGADE_TF_EN_MRT24.pdf"
+    },
+    "soundAbsorption": {
+     "value": "αw 0.20",
+     "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Binary_RENEGADE_TF_EN_MRT24.pdf"
+    },
+    "thermalResistance": {
+     "value": "0.082 m² K/W",
+     "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Binary_RENEGADE_TF_EN_MRT24.pdf"
+    },
+    "numberOfColours": {
+     "value": "18",
+     "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Binary_RENEGADE_TF_EN_MRT24.pdf"
+    },
+    "gutProdis": {
+     "value": "343D0EEE",
+     "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Binary_RENEGADE_TF_EN_MRT24.pdf"
+    }
+   },
+   "notFound": [
+    "colourGroup (BLOQ site has no colour filter or colour family, only the colour name)",
+    "design as a separate label (only \"Patterned\" in the construction line of Renegade)"
+   ],
+   "notes": []
+  },
+  {
+   "slug": "tradition-925",
+   "brand": "BLOQ",
+   "name": "Tradition 925 Flint",
+   "sku": "925",
+   "sourceUrl": "https://bloq.nl/tradition-925",
+   "colourName": {
+    "value": "Flint",
+    "source": "https://bloq.nl/tradition-925"
+   },
+   "colourGroup": null,
+   "design": null,
+   "construction": {
+    "value": "Tufted Loop Pile 1/10\"",
+    "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Workplace_TRADITION_TF_EN_MRT24.pdf"
+   },
+   "pileMaterial": {
+    "value": "100% Polyamide 6, Solution Dyed Nylon made by Aquafil",
+    "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Workplace_TRADITION_TF_EN_MRT24.pdf"
+   },
+   "pileWeight": {
+    "value": "540 g/m²",
+    "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Workplace_TRADITION_TF_EN_MRT24.pdf"
+   },
+   "totalWeight": {
+    "value": "4 250 g/m²",
+    "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Workplace_TRADITION_TF_EN_MRT24.pdf"
+   },
+   "pileHeight": {
+    "value": "2.7 mm",
+    "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Workplace_TRADITION_TF_EN_MRT24.pdf"
+   },
+   "totalThickness": {
+    "value": "6.0 mm",
+    "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Workplace_TRADITION_TF_EN_MRT24.pdf"
+   },
+   "usageClass": {
+    "value": "33 / LC1",
+    "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Workplace_TRADITION_TF_EN_MRT24.pdf",
+    "note": "EN 1307 classification and luxury rating"
+   },
+   "fireClass": {
+    "value": "Bfl-s1",
+    "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Workplace_TRADITION_TF_EN_MRT24.pdf"
+   },
+   "backing": {
+    "value": "Bitback, Modified Bitumen, 70% Recycled Content",
+    "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Workplace_TRADITION_TF_EN_MRT24.pdf"
+   },
+   "format": {
+    "value": "50 x 50 cm",
+    "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Workplace_TRADITION_TF_EN_MRT24.pdf"
+   },
+   "other": {
+    "collection": {
+     "value": "The Workplace",
+     "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Workplace_TRADITION_TF_EN_MRT24.pdf"
+    },
+    "surfacePileWeight": {
+     "value": "380 g/m²",
+     "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Workplace_TRADITION_TF_EN_MRT24.pdf"
+    },
+    "castorChair": {
+     "value": "A: Intensive use",
+     "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Workplace_TRADITION_TF_EN_MRT24.pdf"
+    },
+    "impactSound": {
+     "value": "24 dB",
+     "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Workplace_TRADITION_TF_EN_MRT24.pdf"
+    },
+    "soundAbsorption": {
+     "value": "αw 0.15",
+     "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Workplace_TRADITION_TF_EN_MRT24.pdf"
+    },
+    "thermalResistance": {
+     "value": "0.064 m² K/W",
+     "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Workplace_TRADITION_TF_EN_MRT24.pdf"
+    },
+    "numberOfColours": {
+     "value": "30",
+     "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Workplace_TRADITION_TF_EN_MRT24.pdf"
+    },
+    "gutProdis": {
+     "value": "23304A8C",
+     "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Workplace_TRADITION_TF_EN_MRT24.pdf"
+    }
+   },
+   "notFound": [
+    "colourGroup (BLOQ site has no colour filter or colour family, only the colour name)",
+    "design as a separate label (only \"Patterned\" in the construction line of Renegade)"
+   ],
+   "notes": []
+  },
+  {
+   "slug": "connexion-926",
+   "brand": "BLOQ",
+   "name": "Connexion 926 Silent Lane",
+   "sku": "926",
+   "sourceUrl": "https://bloq.nl/connexion-926",
+   "colourName": {
+    "value": "Silent Lane",
+    "source": "https://bloq.nl/connexion-926"
+   },
+   "colourGroup": null,
+   "design": null,
+   "construction": {
+    "value": "Tufted Loop Pile 1/10\"",
+    "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Workplace_CONNEXION_TF_EN_MRT24.pdf"
+   },
+   "pileMaterial": {
+    "value": "100% Polyamide 6, Solution Dyed Nylon made by Aquafil",
+    "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Workplace_CONNEXION_TF_EN_MRT24.pdf"
+   },
+   "pileWeight": {
+    "value": "540 g/m²",
+    "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Workplace_CONNEXION_TF_EN_MRT24.pdf"
+   },
+   "totalWeight": {
+    "value": "4 250 g/m²",
+    "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Workplace_CONNEXION_TF_EN_MRT24.pdf"
+   },
+   "pileHeight": {
+    "value": "2.7 mm",
+    "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Workplace_CONNEXION_TF_EN_MRT24.pdf"
+   },
+   "totalThickness": {
+    "value": "6.0 mm",
+    "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Workplace_CONNEXION_TF_EN_MRT24.pdf"
+   },
+   "usageClass": {
+    "value": "33 / LC1",
+    "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Workplace_CONNEXION_TF_EN_MRT24.pdf",
+    "note": "EN 1307 classification and luxury rating"
+   },
+   "fireClass": {
+    "value": "Bfl-s1",
+    "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Workplace_CONNEXION_TF_EN_MRT24.pdf"
+   },
+   "backing": {
+    "value": "Bitback, Modified Bitumen, 70% Recycled Content",
+    "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Workplace_CONNEXION_TF_EN_MRT24.pdf"
+   },
+   "format": {
+    "value": "50 x 50 cm",
+    "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Workplace_CONNEXION_TF_EN_MRT24.pdf"
+   },
+   "other": {
+    "collection": {
+     "value": "The Workplace",
+     "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Workplace_CONNEXION_TF_EN_MRT24.pdf"
+    },
+    "surfacePileWeight": {
+     "value": "330 g/m²",
+     "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Workplace_CONNEXION_TF_EN_MRT24.pdf"
+    },
+    "castorChair": {
+     "value": "A: Intensive use",
+     "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Workplace_CONNEXION_TF_EN_MRT24.pdf"
+    },
+    "impactSound": {
+     "value": "25 dB",
+     "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Workplace_CONNEXION_TF_EN_MRT24.pdf"
+    },
+    "soundAbsorption": {
+     "value": "αw 0.15",
+     "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Workplace_CONNEXION_TF_EN_MRT24.pdf"
+    },
+    "thermalResistance": {
+     "value": "0.064 m² K/W",
+     "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Workplace_CONNEXION_TF_EN_MRT24.pdf"
+    },
+    "numberOfColours": {
+     "value": "8",
+     "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Workplace_CONNEXION_TF_EN_MRT24.pdf"
+    },
+    "gutProdis": {
+     "value": "0D32FA3E",
+     "source": "https://bloq.nl/sites/default/files/2024-04/BLOQ_Workplace_CONNEXION_TF_EN_MRT24.pdf"
+    }
+   },
+   "notFound": [
+    "colourGroup (BLOQ site has no colour filter or colour family, only the colour name)",
+    "design as a separate label (only \"Patterned\" in the construction line of Renegade)"
+   ],
+   "notes": []
+  },
+  {
+   "slug": "creative-spark-232",
+   "brand": "Mohawk Group",
+   "name": "Creative Spark 232 Orange",
+   "sku": "232",
+   "sourceUrl": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-232",
+   "colourName": {
+    "value": "Orange",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-232"
+   },
+   "colourGroup": {
+    "value": "Orange",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-232",
+    "note": "Mohawk filter \"Colour range\""
+   },
+   "design": {
+    "value": "Plain",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-232",
+    "note": "Mohawk filter \"Pattern type\""
+   },
+   "construction": {
+    "value": "Tufted 1/10 gauge loop",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-232"
+   },
+   "pileMaterial": {
+    "value": "100% Solution Dyed Nylon",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-232"
+   },
+   "pileWeight": {
+    "value": "540 g/m²",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-232"
+   },
+   "totalWeight": {
+    "value": "EcoFlex™ Statera: ± 4100 g/m² | EcoFlex™ Echo: 4400 g/m²",
+    "source": "https://www.mohawkgroup.eu/-/media/ff14b1144c305ed29973cb2ab0be3c35.ashx?mode=inline&filename=CT_Technical+specifications_Art+Intervention+Statera_A4_CREATIVESPARK+EN.pdf | https://www.mohawkgroup.eu/-/media/02031b15bec358bcb6a696383db2c09e.ashx?mode=inline&filename=CT_Technical+specifications_CREATIVESPARK_A4_DEF_EN-FR-NL-DE_ECHO.pdf"
+   },
+   "pileHeight": {
+    "value": "± 3,1 mm",
+    "source": "https://www.mohawkgroup.eu/-/media/ff14b1144c305ed29973cb2ab0be3c35.ashx?mode=inline&filename=CT_Technical+specifications_Art+Intervention+Statera_A4_CREATIVESPARK+EN.pdf",
+    "note": "\"Surface pile thickness\", same in both backings"
+   },
+   "totalThickness": {
+    "value": "EcoFlex™ Statera: 6.3 mm | EcoFlex™ Echo: 8.4 mm",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-232"
+   },
+   "usageClass": {
+    "value": "33 / LC1",
+    "source": "https://www.mohawkgroup.eu/-/media/ff14b1144c305ed29973cb2ab0be3c35.ashx?mode=inline&filename=CT_Technical+specifications_Art+Intervention+Statera_A4_CREATIVESPARK+EN.pdf"
+   },
+   "fireClass": {
+    "value": "Bfl-s1",
+    "source": "https://www.mohawkgroup.eu/-/media/ff14b1144c305ed29973cb2ab0be3c35.ashx?mode=inline&filename=CT_Technical+specifications_Art+Intervention+Statera_A4_CREATIVESPARK+EN.pdf"
+   },
+   "backing": {
+    "value": "EcoFlex™ Statera | EcoFlex™ Echo",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-232",
+    "note": "two backings offered"
+   },
+   "format": {
+    "value": "500 x 500 mm",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-232"
+   },
+   "other": {
+    "collection": {
+     "value": "Art Intervention",
+     "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-232"
+    },
+    "designName": {
+     "value": "Creative Spark",
+     "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-232"
+    },
+    "sector": {
+     "value": "Hospitality, Office, Education, Retail",
+     "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-232"
+    },
+    "castorChair": {
+     "value": "A: Intensive use",
+     "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-232"
+    },
+    "gutProdis": {
+     "value": "3AA1D4DF",
+     "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-232"
+    },
+    "byBacking": [
+     {
+      "backing": "EcoFlex™ Statera (modified bitumen, 70% recycled content)",
+      "totalWeight": "± 4100 g/m²",
+      "totalThickness": "± 6,3 mm",
+      "impactSound": "∆Lw = 32 dB",
+      "soundAbsorption": "0,15 αw",
+      "thermalResistance": "0,072 m².K/W",
+      "source": "https://www.mohawkgroup.eu/-/media/ff14b1144c305ed29973cb2ab0be3c35.ashx?mode=inline&filename=CT_Technical+specifications_Art+Intervention+Statera_A4_CREATIVESPARK+EN.pdf"
+     },
+     {
+      "backing": "EcoFlex™ Echo (94% recycled PES Felt)",
+      "totalWeight": "4400 g/m²",
+      "totalThickness": "8,4 mm",
+      "impactSound": "∆Lw = 35 dB",
+      "soundAbsorption": "0,30 αw",
+      "thermalResistance": "0,114 m².K/W",
+      "source": "https://www.mohawkgroup.eu/-/media/02031b15bec358bcb6a696383db2c09e.ashx?mode=inline&filename=CT_Technical+specifications_CREATIVESPARK_A4_DEF_EN-FR-NL-DE_ECHO.pdf"
+     }
+    ],
+    "surfacePileWeight": {
+     "value": "± 370 g/m²",
+     "source": "https://www.mohawkgroup.eu/-/media/ff14b1144c305ed29973cb2ab0be3c35.ashx?mode=inline&filename=CT_Technical+specifications_Art+Intervention+Statera_A4_CREATIVESPARK+EN.pdf"
+    },
+    "numberOfColours": {
+     "value": "32",
+     "source": "https://www.mohawkgroup.eu/-/media/ff14b1144c305ed29973cb2ab0be3c35.ashx?mode=inline&filename=CT_Technical+specifications_Art+Intervention+Statera_A4_CREATIVESPARK+EN.pdf"
+    }
+   },
+   "notFound": [],
+   "notes": [
+    "Which backing is the in-stock one is not stated by the maker; see other.byBacking."
+   ]
+  },
+  {
+   "slug": "creative-spark-566",
+   "brand": "Mohawk Group",
+   "name": "Creative Spark 566 Blue",
+   "sku": "566",
+   "sourceUrl": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-566",
+   "colourName": {
+    "value": "Blue",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-566"
+   },
+   "colourGroup": {
+    "value": "Blue",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-566",
+    "note": "Mohawk filter \"Colour range\""
+   },
+   "design": {
+    "value": "Plain",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-566",
+    "note": "Mohawk filter \"Pattern type\""
+   },
+   "construction": {
+    "value": "Tufted 1/10 gauge loop",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-566"
+   },
+   "pileMaterial": {
+    "value": "100% Solution Dyed Nylon",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-566"
+   },
+   "pileWeight": {
+    "value": "540 g/m²",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-566"
+   },
+   "totalWeight": {
+    "value": "EcoFlex™ Statera: ± 4100 g/m² | EcoFlex™ Echo: 4400 g/m²",
+    "source": "https://www.mohawkgroup.eu/-/media/ff14b1144c305ed29973cb2ab0be3c35.ashx?mode=inline&filename=CT_Technical+specifications_Art+Intervention+Statera_A4_CREATIVESPARK+EN.pdf | https://www.mohawkgroup.eu/-/media/02031b15bec358bcb6a696383db2c09e.ashx?mode=inline&filename=CT_Technical+specifications_CREATIVESPARK_A4_DEF_EN-FR-NL-DE_ECHO.pdf"
+   },
+   "pileHeight": {
+    "value": "± 3,1 mm",
+    "source": "https://www.mohawkgroup.eu/-/media/ff14b1144c305ed29973cb2ab0be3c35.ashx?mode=inline&filename=CT_Technical+specifications_Art+Intervention+Statera_A4_CREATIVESPARK+EN.pdf",
+    "note": "\"Surface pile thickness\", same in both backings"
+   },
+   "totalThickness": {
+    "value": "EcoFlex™ Statera: 6.3 mm | EcoFlex™ Echo: 8.4 mm",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-566"
+   },
+   "usageClass": {
+    "value": "33 / LC1",
+    "source": "https://www.mohawkgroup.eu/-/media/ff14b1144c305ed29973cb2ab0be3c35.ashx?mode=inline&filename=CT_Technical+specifications_Art+Intervention+Statera_A4_CREATIVESPARK+EN.pdf"
+   },
+   "fireClass": {
+    "value": "Bfl-s1",
+    "source": "https://www.mohawkgroup.eu/-/media/ff14b1144c305ed29973cb2ab0be3c35.ashx?mode=inline&filename=CT_Technical+specifications_Art+Intervention+Statera_A4_CREATIVESPARK+EN.pdf"
+   },
+   "backing": {
+    "value": "EcoFlex™ Statera | EcoFlex™ Echo",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-566",
+    "note": "two backings offered"
+   },
+   "format": {
+    "value": "500 x 500 mm",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-566"
+   },
+   "other": {
+    "collection": {
+     "value": "Art Intervention",
+     "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-566"
+    },
+    "designName": {
+     "value": "Creative Spark",
+     "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-566"
+    },
+    "sector": {
+     "value": "Hospitality, Office, Education, Retail",
+     "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-566"
+    },
+    "castorChair": {
+     "value": "A: Intensive use",
+     "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-566"
+    },
+    "gutProdis": {
+     "value": "3AA1D4DF",
+     "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-566"
+    },
+    "byBacking": [
+     {
+      "backing": "EcoFlex™ Statera (modified bitumen, 70% recycled content)",
+      "totalWeight": "± 4100 g/m²",
+      "totalThickness": "± 6,3 mm",
+      "impactSound": "∆Lw = 32 dB",
+      "soundAbsorption": "0,15 αw",
+      "thermalResistance": "0,072 m².K/W",
+      "source": "https://www.mohawkgroup.eu/-/media/ff14b1144c305ed29973cb2ab0be3c35.ashx?mode=inline&filename=CT_Technical+specifications_Art+Intervention+Statera_A4_CREATIVESPARK+EN.pdf"
+     },
+     {
+      "backing": "EcoFlex™ Echo (94% recycled PES Felt)",
+      "totalWeight": "4400 g/m²",
+      "totalThickness": "8,4 mm",
+      "impactSound": "∆Lw = 35 dB",
+      "soundAbsorption": "0,30 αw",
+      "thermalResistance": "0,114 m².K/W",
+      "source": "https://www.mohawkgroup.eu/-/media/02031b15bec358bcb6a696383db2c09e.ashx?mode=inline&filename=CT_Technical+specifications_CREATIVESPARK_A4_DEF_EN-FR-NL-DE_ECHO.pdf"
+     }
+    ],
+    "surfacePileWeight": {
+     "value": "± 370 g/m²",
+     "source": "https://www.mohawkgroup.eu/-/media/ff14b1144c305ed29973cb2ab0be3c35.ashx?mode=inline&filename=CT_Technical+specifications_Art+Intervention+Statera_A4_CREATIVESPARK+EN.pdf"
+    },
+    "numberOfColours": {
+     "value": "32",
+     "source": "https://www.mohawkgroup.eu/-/media/ff14b1144c305ed29973cb2ab0be3c35.ashx?mode=inline&filename=CT_Technical+specifications_Art+Intervention+Statera_A4_CREATIVESPARK+EN.pdf"
+    }
+   },
+   "notFound": [],
+   "notes": [
+    "Which backing is the in-stock one is not stated by the maker; see other.byBacking."
+   ]
+  },
+  {
+   "slug": "creative-spark-621",
+   "brand": "Mohawk Group",
+   "name": "Creative Spark 621 Green",
+   "sku": "621",
+   "sourceUrl": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-621",
+   "colourName": {
+    "value": "Green",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-621"
+   },
+   "colourGroup": {
+    "value": "Green",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-621",
+    "note": "Mohawk filter \"Colour range\""
+   },
+   "design": {
+    "value": "Plain",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-621",
+    "note": "Mohawk filter \"Pattern type\""
+   },
+   "construction": {
+    "value": "Tufted 1/10 gauge loop",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-621"
+   },
+   "pileMaterial": {
+    "value": "100% Solution Dyed Nylon",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-621"
+   },
+   "pileWeight": {
+    "value": "540 g/m²",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-621"
+   },
+   "totalWeight": {
+    "value": "EcoFlex™ Statera: ± 4100 g/m² | EcoFlex™ Echo: 4400 g/m²",
+    "source": "https://www.mohawkgroup.eu/-/media/ff14b1144c305ed29973cb2ab0be3c35.ashx?mode=inline&filename=CT_Technical+specifications_Art+Intervention+Statera_A4_CREATIVESPARK+EN.pdf | https://www.mohawkgroup.eu/-/media/02031b15bec358bcb6a696383db2c09e.ashx?mode=inline&filename=CT_Technical+specifications_CREATIVESPARK_A4_DEF_EN-FR-NL-DE_ECHO.pdf"
+   },
+   "pileHeight": {
+    "value": "± 3,1 mm",
+    "source": "https://www.mohawkgroup.eu/-/media/ff14b1144c305ed29973cb2ab0be3c35.ashx?mode=inline&filename=CT_Technical+specifications_Art+Intervention+Statera_A4_CREATIVESPARK+EN.pdf",
+    "note": "\"Surface pile thickness\", same in both backings"
+   },
+   "totalThickness": {
+    "value": "EcoFlex™ Statera: 6.3 mm | EcoFlex™ Echo: 8.4 mm",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-621"
+   },
+   "usageClass": {
+    "value": "33 / LC1",
+    "source": "https://www.mohawkgroup.eu/-/media/ff14b1144c305ed29973cb2ab0be3c35.ashx?mode=inline&filename=CT_Technical+specifications_Art+Intervention+Statera_A4_CREATIVESPARK+EN.pdf"
+   },
+   "fireClass": {
+    "value": "Bfl-s1",
+    "source": "https://www.mohawkgroup.eu/-/media/ff14b1144c305ed29973cb2ab0be3c35.ashx?mode=inline&filename=CT_Technical+specifications_Art+Intervention+Statera_A4_CREATIVESPARK+EN.pdf"
+   },
+   "backing": {
+    "value": "EcoFlex™ Statera | EcoFlex™ Echo",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-621",
+    "note": "two backings offered"
+   },
+   "format": {
+    "value": "500 x 500 mm",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-621"
+   },
+   "other": {
+    "collection": {
+     "value": "Art Intervention",
+     "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-621"
+    },
+    "designName": {
+     "value": "Creative Spark",
+     "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-621"
+    },
+    "sector": {
+     "value": "Hospitality, Office, Retail, Education",
+     "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-621"
+    },
+    "castorChair": {
+     "value": "A: Intensive use",
+     "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-621"
+    },
+    "gutProdis": {
+     "value": "3AA1D4DF",
+     "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-621"
+    },
+    "byBacking": [
+     {
+      "backing": "EcoFlex™ Statera (modified bitumen, 70% recycled content)",
+      "totalWeight": "± 4100 g/m²",
+      "totalThickness": "± 6,3 mm",
+      "impactSound": "∆Lw = 32 dB",
+      "soundAbsorption": "0,15 αw",
+      "thermalResistance": "0,072 m².K/W",
+      "source": "https://www.mohawkgroup.eu/-/media/ff14b1144c305ed29973cb2ab0be3c35.ashx?mode=inline&filename=CT_Technical+specifications_Art+Intervention+Statera_A4_CREATIVESPARK+EN.pdf"
+     },
+     {
+      "backing": "EcoFlex™ Echo (94% recycled PES Felt)",
+      "totalWeight": "4400 g/m²",
+      "totalThickness": "8,4 mm",
+      "impactSound": "∆Lw = 35 dB",
+      "soundAbsorption": "0,30 αw",
+      "thermalResistance": "0,114 m².K/W",
+      "source": "https://www.mohawkgroup.eu/-/media/02031b15bec358bcb6a696383db2c09e.ashx?mode=inline&filename=CT_Technical+specifications_CREATIVESPARK_A4_DEF_EN-FR-NL-DE_ECHO.pdf"
+     }
+    ],
+    "surfacePileWeight": {
+     "value": "± 370 g/m²",
+     "source": "https://www.mohawkgroup.eu/-/media/ff14b1144c305ed29973cb2ab0be3c35.ashx?mode=inline&filename=CT_Technical+specifications_Art+Intervention+Statera_A4_CREATIVESPARK+EN.pdf"
+    },
+    "numberOfColours": {
+     "value": "32",
+     "source": "https://www.mohawkgroup.eu/-/media/ff14b1144c305ed29973cb2ab0be3c35.ashx?mode=inline&filename=CT_Technical+specifications_Art+Intervention+Statera_A4_CREATIVESPARK+EN.pdf"
+    }
+   },
+   "notFound": [],
+   "notes": [
+    "Which backing is the in-stock one is not stated by the maker; see other.byBacking."
+   ]
+  },
+  {
+   "slug": "creative-spark-574",
+   "brand": "Mohawk Group",
+   "name": "Creative Spark 574 Blue",
+   "sku": "574",
+   "sourceUrl": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-574",
+   "colourName": {
+    "value": "Blue",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-574"
+   },
+   "colourGroup": {
+    "value": "Blue",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-574",
+    "note": "Mohawk filter \"Colour range\""
+   },
+   "design": {
+    "value": "Plain",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-574",
+    "note": "Mohawk filter \"Pattern type\""
+   },
+   "construction": {
+    "value": "Tufted 1/10 gauge loop",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-574"
+   },
+   "pileMaterial": {
+    "value": "100% Solution Dyed Nylon",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-574"
+   },
+   "pileWeight": {
+    "value": "540 g/m²",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-574"
+   },
+   "totalWeight": {
+    "value": "EcoFlex™ Statera: ± 4100 g/m² | EcoFlex™ Echo: 4400 g/m²",
+    "source": "https://www.mohawkgroup.eu/-/media/ff14b1144c305ed29973cb2ab0be3c35.ashx?mode=inline&filename=CT_Technical+specifications_Art+Intervention+Statera_A4_CREATIVESPARK+EN.pdf | https://www.mohawkgroup.eu/-/media/02031b15bec358bcb6a696383db2c09e.ashx?mode=inline&filename=CT_Technical+specifications_CREATIVESPARK_A4_DEF_EN-FR-NL-DE_ECHO.pdf"
+   },
+   "pileHeight": {
+    "value": "± 3,1 mm",
+    "source": "https://www.mohawkgroup.eu/-/media/ff14b1144c305ed29973cb2ab0be3c35.ashx?mode=inline&filename=CT_Technical+specifications_Art+Intervention+Statera_A4_CREATIVESPARK+EN.pdf",
+    "note": "\"Surface pile thickness\", same in both backings"
+   },
+   "totalThickness": {
+    "value": "EcoFlex™ Statera: 6.3 mm | EcoFlex™ Echo: 8.4 mm",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-574"
+   },
+   "usageClass": {
+    "value": "33 / LC1",
+    "source": "https://www.mohawkgroup.eu/-/media/ff14b1144c305ed29973cb2ab0be3c35.ashx?mode=inline&filename=CT_Technical+specifications_Art+Intervention+Statera_A4_CREATIVESPARK+EN.pdf"
+   },
+   "fireClass": {
+    "value": "Bfl-s1",
+    "source": "https://www.mohawkgroup.eu/-/media/ff14b1144c305ed29973cb2ab0be3c35.ashx?mode=inline&filename=CT_Technical+specifications_Art+Intervention+Statera_A4_CREATIVESPARK+EN.pdf"
+   },
+   "backing": {
+    "value": "EcoFlex™ Statera | EcoFlex™ Echo",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-574",
+    "note": "two backings offered"
+   },
+   "format": {
+    "value": "500 x 500 mm",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-574"
+   },
+   "other": {
+    "collection": {
+     "value": "Art Intervention",
+     "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-574"
+    },
+    "designName": {
+     "value": "Creative Spark",
+     "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-574"
+    },
+    "sector": {
+     "value": "Education, Hospitality, Office, Retail",
+     "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-574"
+    },
+    "castorChair": {
+     "value": "A: Intensive use",
+     "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-574"
+    },
+    "gutProdis": {
+     "value": "3AA1D4DF",
+     "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-574"
+    },
+    "byBacking": [
+     {
+      "backing": "EcoFlex™ Statera (modified bitumen, 70% recycled content)",
+      "totalWeight": "± 4100 g/m²",
+      "totalThickness": "± 6,3 mm",
+      "impactSound": "∆Lw = 32 dB",
+      "soundAbsorption": "0,15 αw",
+      "thermalResistance": "0,072 m².K/W",
+      "source": "https://www.mohawkgroup.eu/-/media/ff14b1144c305ed29973cb2ab0be3c35.ashx?mode=inline&filename=CT_Technical+specifications_Art+Intervention+Statera_A4_CREATIVESPARK+EN.pdf"
+     },
+     {
+      "backing": "EcoFlex™ Echo (94% recycled PES Felt)",
+      "totalWeight": "4400 g/m²",
+      "totalThickness": "8,4 mm",
+      "impactSound": "∆Lw = 35 dB",
+      "soundAbsorption": "0,30 αw",
+      "thermalResistance": "0,114 m².K/W",
+      "source": "https://www.mohawkgroup.eu/-/media/02031b15bec358bcb6a696383db2c09e.ashx?mode=inline&filename=CT_Technical+specifications_CREATIVESPARK_A4_DEF_EN-FR-NL-DE_ECHO.pdf"
+     }
+    ],
+    "surfacePileWeight": {
+     "value": "± 370 g/m²",
+     "source": "https://www.mohawkgroup.eu/-/media/ff14b1144c305ed29973cb2ab0be3c35.ashx?mode=inline&filename=CT_Technical+specifications_Art+Intervention+Statera_A4_CREATIVESPARK+EN.pdf"
+    },
+    "numberOfColours": {
+     "value": "32",
+     "source": "https://www.mohawkgroup.eu/-/media/ff14b1144c305ed29973cb2ab0be3c35.ashx?mode=inline&filename=CT_Technical+specifications_Art+Intervention+Statera_A4_CREATIVESPARK+EN.pdf"
+    }
+   },
+   "notFound": [],
+   "notes": [
+    "Which backing is the in-stock one is not stated by the maker; see other.byBacking."
+   ]
+  },
+  {
+   "slug": "creative-spark-979",
+   "brand": "Mohawk Group",
+   "name": "Creative Spark 979 Grey",
+   "sku": "979",
+   "sourceUrl": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-979",
+   "colourName": {
+    "value": "Grey",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-979"
+   },
+   "colourGroup": {
+    "value": "Grey",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-979",
+    "note": "Mohawk filter \"Colour range\""
+   },
+   "design": {
+    "value": "Plain",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-979",
+    "note": "Mohawk filter \"Pattern type\""
+   },
+   "construction": {
+    "value": "Tufted 1/10 gauge loop",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-979"
+   },
+   "pileMaterial": {
+    "value": "100% Solution Dyed Nylon",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-979"
+   },
+   "pileWeight": {
+    "value": "540 g/m²",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-979"
+   },
+   "totalWeight": {
+    "value": "EcoFlex™ Statera: ± 4100 g/m² | EcoFlex™ Echo: 4400 g/m²",
+    "source": "https://www.mohawkgroup.eu/-/media/ff14b1144c305ed29973cb2ab0be3c35.ashx?mode=inline&filename=CT_Technical+specifications_Art+Intervention+Statera_A4_CREATIVESPARK+EN.pdf | https://www.mohawkgroup.eu/-/media/02031b15bec358bcb6a696383db2c09e.ashx?mode=inline&filename=CT_Technical+specifications_CREATIVESPARK_A4_DEF_EN-FR-NL-DE_ECHO.pdf"
+   },
+   "pileHeight": {
+    "value": "± 3,1 mm",
+    "source": "https://www.mohawkgroup.eu/-/media/ff14b1144c305ed29973cb2ab0be3c35.ashx?mode=inline&filename=CT_Technical+specifications_Art+Intervention+Statera_A4_CREATIVESPARK+EN.pdf",
+    "note": "\"Surface pile thickness\", same in both backings"
+   },
+   "totalThickness": {
+    "value": "EcoFlex™ Statera: 6.3 mm | EcoFlex™ Echo: 8.4 mm",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-979"
+   },
+   "usageClass": {
+    "value": "33 / LC1",
+    "source": "https://www.mohawkgroup.eu/-/media/ff14b1144c305ed29973cb2ab0be3c35.ashx?mode=inline&filename=CT_Technical+specifications_Art+Intervention+Statera_A4_CREATIVESPARK+EN.pdf"
+   },
+   "fireClass": {
+    "value": "Bfl-s1",
+    "source": "https://www.mohawkgroup.eu/-/media/ff14b1144c305ed29973cb2ab0be3c35.ashx?mode=inline&filename=CT_Technical+specifications_Art+Intervention+Statera_A4_CREATIVESPARK+EN.pdf"
+   },
+   "backing": {
+    "value": "EcoFlex™ Statera | EcoFlex™ Echo",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-979",
+    "note": "two backings offered"
+   },
+   "format": {
+    "value": "500 x 500 mm",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-979"
+   },
+   "other": {
+    "collection": {
+     "value": "Art Intervention",
+     "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-979"
+    },
+    "designName": {
+     "value": "Creative Spark",
+     "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-979"
+    },
+    "sector": {
+     "value": "Hospitality, Office, Retail, Education",
+     "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-979"
+    },
+    "castorChair": {
+     "value": "A: Intensive use",
+     "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-979"
+    },
+    "gutProdis": {
+     "value": "3AA1D4DF",
+     "source": "https://www.mohawkgroup.eu/en/carpet-tiles/creative-spark/creative-spark-979"
+    },
+    "byBacking": [
+     {
+      "backing": "EcoFlex™ Statera (modified bitumen, 70% recycled content)",
+      "totalWeight": "± 4100 g/m²",
+      "totalThickness": "± 6,3 mm",
+      "impactSound": "∆Lw = 32 dB",
+      "soundAbsorption": "0,15 αw",
+      "thermalResistance": "0,072 m².K/W",
+      "source": "https://www.mohawkgroup.eu/-/media/ff14b1144c305ed29973cb2ab0be3c35.ashx?mode=inline&filename=CT_Technical+specifications_Art+Intervention+Statera_A4_CREATIVESPARK+EN.pdf"
+     },
+     {
+      "backing": "EcoFlex™ Echo (94% recycled PES Felt)",
+      "totalWeight": "4400 g/m²",
+      "totalThickness": "8,4 mm",
+      "impactSound": "∆Lw = 35 dB",
+      "soundAbsorption": "0,30 αw",
+      "thermalResistance": "0,114 m².K/W",
+      "source": "https://www.mohawkgroup.eu/-/media/02031b15bec358bcb6a696383db2c09e.ashx?mode=inline&filename=CT_Technical+specifications_CREATIVESPARK_A4_DEF_EN-FR-NL-DE_ECHO.pdf"
+     }
+    ],
+    "surfacePileWeight": {
+     "value": "± 370 g/m²",
+     "source": "https://www.mohawkgroup.eu/-/media/ff14b1144c305ed29973cb2ab0be3c35.ashx?mode=inline&filename=CT_Technical+specifications_Art+Intervention+Statera_A4_CREATIVESPARK+EN.pdf"
+    },
+    "numberOfColours": {
+     "value": "32",
+     "source": "https://www.mohawkgroup.eu/-/media/ff14b1144c305ed29973cb2ab0be3c35.ashx?mode=inline&filename=CT_Technical+specifications_Art+Intervention+Statera_A4_CREATIVESPARK+EN.pdf"
+    }
+   },
+   "notFound": [],
+   "notes": [
+    "Product page repeats backing rows and labels some 6.3 mm rows as Echo; thickness per backing taken from the two technical sheets and the other Creative Spark pages.",
+    "Which backing is the in-stock one is not stated by the maker; see other.byBacking."
+   ]
+  },
+  {
+   "slug": "bruut-745",
+   "brand": "Mohawk Group",
+   "name": "Bruut 745 Brown",
+   "sku": "745",
+   "sourceUrl": "https://www.mohawkgroup.eu/en/carpet-tiles/imperfection/bruut-745",
+   "colourName": {
+    "value": "Brown",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/imperfection/bruut-745"
+   },
+   "colourGroup": {
+    "value": "Brown",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/imperfection/bruut-745",
+    "note": "Mohawk filter \"Colour range\""
+   },
+   "design": {
+    "value": "Organic",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/imperfection/bruut-745",
+    "note": "Mohawk filter \"Pattern type\""
+   },
+   "construction": {
+    "value": "Tufted 1/12 gauge loop",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/imperfection/bruut-745"
+   },
+   "pileMaterial": {
+    "value": "ECONYL® - 100% regenerated nylon",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/imperfection/bruut-745"
+   },
+   "pileWeight": {
+    "value": "780 g/m²",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/imperfection/bruut-745"
+   },
+   "totalWeight": {
+    "value": "± 3650 g/m²",
+    "source": "https://www.mohawkgroup.eu/-/media/28c8446ed07f5fcd91e7528082ae759a.ashx?mode=inline&filename=CT_Technical+specifications_Imperfection+One_A4_BRUUT+EN.pdf"
+   },
+   "pileHeight": {
+    "value": "± 3,2 mm",
+    "source": "https://www.mohawkgroup.eu/-/media/28c8446ed07f5fcd91e7528082ae759a.ashx?mode=inline&filename=CT_Technical+specifications_Imperfection+One_A4_BRUUT+EN.pdf",
+    "note": "\"Surface pile thickness\""
+   },
+   "totalThickness": {
+    "value": "± 8,5 mm",
+    "source": "https://www.mohawkgroup.eu/-/media/28c8446ed07f5fcd91e7528082ae759a.ashx?mode=inline&filename=CT_Technical+specifications_Imperfection+One_A4_BRUUT+EN.pdf"
+   },
+   "usageClass": {
+    "value": "33 / LC2",
+    "source": "https://www.mohawkgroup.eu/-/media/28c8446ed07f5fcd91e7528082ae759a.ashx?mode=inline&filename=CT_Technical+specifications_Imperfection+One_A4_BRUUT+EN.pdf"
+   },
+   "fireClass": {
+    "value": "Bfl-s1",
+    "source": "https://www.mohawkgroup.eu/-/media/28c8446ed07f5fcd91e7528082ae759a.ashx?mode=inline&filename=CT_Technical+specifications_Imperfection+One_A4_BRUUT+EN.pdf"
+   },
+   "backing": {
+    "value": "EcoFlex™ One (94% recycled felt)",
+    "source": "https://www.mohawkgroup.eu/-/media/28c8446ed07f5fcd91e7528082ae759a.ashx?mode=inline&filename=CT_Technical+specifications_Imperfection+One_A4_BRUUT+EN.pdf"
+   },
+   "format": {
+    "value": "250 x 1000 mm",
+    "source": "https://www.mohawkgroup.eu/en/carpet-tiles/imperfection/bruut-745"
+   },
+   "other": {
+    "collection": {
+     "value": "Imperfection",
+     "source": "https://www.mohawkgroup.eu/en/carpet-tiles/imperfection/bruut-745"
+    },
+    "designName": {
+     "value": "Bruut",
+     "source": "https://www.mohawkgroup.eu/en/carpet-tiles/imperfection/bruut-745"
+    },
+    "sector": {
+     "value": "Office",
+     "source": "https://www.mohawkgroup.eu/en/carpet-tiles/imperfection/bruut-745"
+    },
+    "castorChair": {
+     "value": "A: Intensive use",
+     "source": "https://www.mohawkgroup.eu/en/carpet-tiles/imperfection/bruut-745"
+    },
+    "gutProdis": {
+     "value": "CA7C5450",
+     "source": "https://www.mohawkgroup.eu/en/carpet-tiles/imperfection/bruut-745"
+    },
+    "surfacePileWeight": {
+     "value": "± 438 g/m²",
+     "source": "https://www.mohawkgroup.eu/-/media/28c8446ed07f5fcd91e7528082ae759a.ashx?mode=inline&filename=CT_Technical+specifications_Imperfection+One_A4_BRUUT+EN.pdf"
+    },
+    "impactSound": {
+     "value": "∆Lw = 28 dB",
+     "source": "https://www.mohawkgroup.eu/-/media/28c8446ed07f5fcd91e7528082ae759a.ashx?mode=inline&filename=CT_Technical+specifications_Imperfection+One_A4_BRUUT+EN.pdf"
+    },
+    "soundAbsorption": {
+     "value": "0,30 αw",
+     "source": "https://www.mohawkgroup.eu/-/media/28c8446ed07f5fcd91e7528082ae759a.ashx?mode=inline&filename=CT_Technical+specifications_Imperfection+One_A4_BRUUT+EN.pdf"
+    },
+    "thermalResistance": {
+     "value": "0,129 m².K/W",
+     "source": "https://www.mohawkgroup.eu/-/media/28c8446ed07f5fcd91e7528082ae759a.ashx?mode=inline&filename=CT_Technical+specifications_Imperfection+One_A4_BRUUT+EN.pdf"
+    },
+    "numberOfColours": {
+     "value": "12",
+     "source": "https://www.mohawkgroup.eu/-/media/28c8446ed07f5fcd91e7528082ae759a.ashx?mode=inline&filename=CT_Technical+specifications_Imperfection+One_A4_BRUUT+EN.pdf"
+    }
+   },
+   "notFound": [],
+   "notes": [
+    "Technical sheet construction wording: 1/12\" Pattern Perfect®"
+   ]
+  },
+  {
+   "slug": "vienna-7872",
+   "brand": "Betap",
+   "name": "Vienna 7872",
+   "sku": "7872",
+   "sourceUrl": "https://betap.com/products/vienna?color=15490",
+   "colourName": {
+    "value": "7872",
+    "source": "https://betap.com/products/vienna?color=15490",
+    "note": "Betap gives only a colour number on the page"
+   },
+   "colourGroup": null,
+   "design": null,
+   "construction": {
+    "value": "Level loop / Loop pile",
+    "source": "https://betap.com/assets/uploads/Vienna-Tile.pdf"
+   },
+   "pileMaterial": {
+    "value": "100% polypropylene solution-dyed",
+    "source": "https://betap.com/assets/uploads/Vienna-Tile.pdf"
+   },
+   "pileWeight": {
+    "value": "400 gr/m²",
+    "source": "https://betap.com/assets/uploads/Vienna-Tile.pdf"
+   },
+   "totalWeight": {
+    "value": "3700 gr/m²",
+    "source": "https://betap.com/assets/uploads/Vienna-Tile.pdf"
+   },
+   "pileHeight": {
+    "value": "2.9 mm",
+    "source": "https://betap.com/assets/uploads/Vienna-Tile.pdf"
+   },
+   "totalThickness": {
+    "value": "5.9 mm",
+    "source": "https://betap.com/assets/uploads/Vienna-Tile.pdf"
+   },
+   "usageClass": {
+    "value": "31 / LC1",
+    "source": "https://betap.com/assets/uploads/Vienna-Tile.pdf"
+   },
+   "fireClass": {
+    "value": "Cfl-s1",
+    "source": "https://betap.com/assets/uploads/Vienna-Tile.pdf"
+   },
+   "backing": {
+    "value": "Polyflex",
+    "source": "https://betap.com/assets/uploads/Vienna-Tile.pdf"
+   },
+   "format": {
+    "value": "50 x 50 cm",
+    "source": "https://betap.com/assets/uploads/Vienna-Tile.pdf"
+   },
+   "other": {
+    "filterPattern": {
+     "value": "Loop pile",
+     "source": "https://betap.com/actions/productfilter-module/product-filter/search?segment=1143&pattern=5873"
+    },
+    "filterMaterial": {
+     "value": "PP",
+     "source": "https://betap.com/actions/productfilter-module/product-filter/search?segment=1143&material=12458"
+    },
+    "typeOfProduct": {
+     "value": "Contract bouclé",
+     "source": "https://betap.com/products/vienna?color=15490"
+    },
+    "gauge": {
+     "value": "1/10\"",
+     "source": "https://betap.com/assets/uploads/Vienna-Tile.pdf"
+    },
+    "tuftDensity": {
+     "value": "193.550/m²",
+     "source": "https://betap.com/assets/uploads/Vienna-Tile.pdf"
+    },
+    "castorChair": {
+     "value": "B, occasional use",
+     "source": "https://betap.com/assets/uploads/Vienna-Tile.pdf"
+    },
+    "thermalResistance": {
+     "value": "0.10 m² K/W",
+     "source": "https://betap.com/assets/uploads/Vienna-Tile.pdf"
+    },
+    "tilesPerBox": {
+     "value": "20",
+     "source": "https://betap.com/assets/uploads/Vienna-Tile.pdf"
+    }
+   },
+   "notFound": [
+    "colourGroup for this exact colour (Betap search returns one matching colour per product, not this one; the product as a whole matches Blue, Brown, Grey, Beige)",
+    "design beyond the \"Pattern\" filter value in other.filterPattern"
+   ],
+   "notes": [
+    "The seed links Vienna_ab-lowres.pdf, which is the broadloom Actionback sheet (400 cm, total thickness 4.4 mm). The tile sheet is Vienna-Tile.pdf, used here."
+   ]
+  },
+  {
+   "slug": "larix-7578",
+   "brand": "Betap",
+   "name": "Larix 7578",
+   "sku": "7578",
+   "sourceUrl": "https://betap.com/products/larix-tile?color=90071",
+   "colourName": {
+    "value": "7578",
+    "source": "https://betap.com/products/larix-tile?color=90071",
+    "note": "Betap gives only a colour number on the page"
+   },
+   "colourGroup": null,
+   "design": null,
+   "construction": {
+    "value": "Tufted / Loop pile",
+    "source": "https://betap.com/assets/uploads/Larix-Tile_251210_151841.pdf"
+   },
+   "pileMaterial": {
+    "value": "100% PA SD",
+    "source": "https://betap.com/assets/uploads/Larix-Tile_251210_151841.pdf"
+   },
+   "pileWeight": {
+    "value": "600 gr/m²",
+    "source": "https://betap.com/assets/uploads/Larix-Tile_251210_151841.pdf"
+   },
+   "totalWeight": {
+    "value": "4200 gr/m²",
+    "source": "https://betap.com/assets/uploads/Larix-Tile_251210_151841.pdf"
+   },
+   "pileHeight": {
+    "value": "3.2 mm",
+    "source": "https://betap.com/assets/uploads/Larix-Tile_251210_151841.pdf",
+    "note": "product page says 3.5 mm"
+   },
+   "totalThickness": {
+    "value": "6.8 mm",
+    "source": "https://betap.com/assets/uploads/Larix-Tile_251210_151841.pdf"
+   },
+   "usageClass": {
+    "value": "23/33 / LC2",
+    "source": "https://betap.com/assets/uploads/Larix-Tile_251210_151841.pdf"
+   },
+   "fireClass": {
+    "value": "Bfl-s1",
+    "source": "https://betap.com/assets/uploads/Larix-Tile_251210_151841.pdf"
+   },
+   "backing": {
+    "value": "Polyflex",
+    "source": "https://betap.com/assets/uploads/Larix-Tile_251210_151841.pdf"
+   },
+   "format": {
+    "value": "50 x 50 cm",
+    "source": "https://betap.com/assets/uploads/Larix-Tile_251210_151841.pdf"
+   },
+   "other": {
+    "filterPattern": {
+     "value": "Loop pile",
+     "source": "https://betap.com/actions/productfilter-module/product-filter/search?segment=1143&pattern=5873"
+    },
+    "filterMaterial": {
+     "value": "PA",
+     "source": "https://betap.com/actions/productfilter-module/product-filter/search?segment=1143&material=12457"
+    },
+    "gauge": {
+     "value": "5/32\"",
+     "source": "https://betap.com/assets/uploads/Larix-Tile_251210_151841.pdf"
+    },
+    "tuftDensity": {
+     "value": "124.800 m2",
+     "source": "https://betap.com/assets/uploads/Larix-Tile_251210_151841.pdf"
+    },
+    "castorChair": {
+     "value": "A, Intensive use",
+     "source": "https://betap.com/assets/uploads/Larix-Tile_251210_151841.pdf"
+    },
+    "thermalResistance": {
+     "value": "0.17 M2 K/W",
+     "source": "https://betap.com/assets/uploads/Larix-Tile_251210_151841.pdf"
+    },
+    "soundAbsorption": {
+     "value": "0.15",
+     "source": "https://betap.com/assets/uploads/Larix-Tile_251210_151841.pdf"
+    },
+    "impactSound": {
+     "value": "24 dB",
+     "source": "https://betap.com/assets/uploads/Larix-Tile_251210_151841.pdf"
+    },
+    "gutProdis": {
+     "value": "D5B5C3F9",
+     "source": "https://betap.com/assets/uploads/Larix-Tile_251210_151841.pdf"
+    },
+    "tilesPerBox": {
+     "value": "20",
+     "source": "https://betap.com/assets/uploads/Larix-Tile_251210_151841.pdf"
+    }
+   },
+   "notFound": [
+    "colourGroup for this exact colour (Betap search returns one matching colour per product, not this one; the product as a whole matches Blue, Brown, Grey)",
+    "design beyond the \"Pattern\" filter value in other.filterPattern"
+   ],
+   "notes": [
+    "Pile height differs: 3.2 mm in the PDF, 3.5 mm on the product page. Pile weight and total weight are in the rendered PDF page only, not in its text layer."
+   ]
+  },
+  {
+   "slug": "first-sway-957",
+   "brand": "Modulyss",
+   "name": "First Sway 957",
+   "sku": "957",
+   "sourceUrl": "https://www.modulyss.com/en-INT/carpet/collections/first-sway",
+   "colourName": {
+    "value": "957",
+    "source": "https://www.modulyss.com/en-INT/carpet/collections/first-sway",
+    "note": "Modulyss gives only a colour number"
+   },
+   "colourGroup": {
+    "value": "Grey",
+    "source": "https://www.modulyss.com/en-INT/carpet/collections/filter (Colour filter)"
+   },
+   "design": {
+    "value": "Geometric",
+    "source": "https://www.modulyss.com/en-INT/carpet/collections/filter (Pattern filter)"
+   },
+   "construction": {
+    "value": "Tufted 1/12” Loop",
+    "source": "modulyss Technical sheet first-sway Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-sway)",
+    "note": "filter Structure: Loop pile"
+   },
+   "pileMaterial": {
+    "value": "100% PA6 Solution Dyed Nylon",
+    "source": "modulyss Technical sheet first-sway Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-sway)"
+   },
+   "pileWeight": {
+    "value": "590 g/m²",
+    "source": "modulyss Technical sheet first-sway Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-sway)"
+   },
+   "totalWeight": {
+    "value": "4.500 g/m²",
+    "source": "modulyss Technical sheet first-sway Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-sway)"
+   },
+   "pileHeight": {
+    "value": "2,7 mm",
+    "source": "modulyss Technical sheet first-sway Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-sway)"
+   },
+   "totalThickness": {
+    "value": "6,5 mm",
+    "source": "modulyss Technical sheet first-sway Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-sway)"
+   },
+   "usageClass": {
+    "value": "33 - LC1",
+    "source": "modulyss Technical sheet first-sway Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-sway)"
+   },
+   "fireClass": {
+    "value": "Bfl-s1",
+    "source": "modulyss Technical sheet first-sway Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-sway)"
+   },
+   "backing": {
+    "value": "back2back",
+    "source": "https://www.modulyss.com/en-INT/carpet/collections/first-sway",
+    "note": "standard; optional: comfortBACK ecoBACK comfortBACK ECO"
+   },
+   "format": {
+    "value": "50 x 50 cm",
+    "source": "https://www.modulyss.com/en-INT/carpet/collections/first-sway",
+    "note": "standard size; optional from 100 m²: 25 x 100 cm 50 x 100 cm 100 x 100 cm 400 x ... cm"
+   },
+   "other": {
+    "size": {
+     "value": "50 x 50 cm, 25 x 100 cm, 50 x 100 cm, 100 x 100 cm, 400 x ... cm",
+     "source": "https://www.modulyss.com/en-INT/carpet/collections/filter (Size filter)"
+    },
+    "installationMethod": {
+     "value": "Ashlar, Brick, Monolithic, Quarter turn",
+     "source": "https://www.modulyss.com/en-INT/carpet/collections/filter (Installation method filter)"
+    },
+    "sustainabilityOptions": null,
+    "castorChair": {
+     "value": "A: continuous use",
+     "source": "modulyss Technical sheet first-sway Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-sway)"
+    },
+    "byBacking": [
+     {
+      "backing": "Back2Back",
+      "totalWeight": "4.500 g/m²",
+      "pileWeight": "590 g/m²",
+      "pileAboveBacking": "360 g/m²",
+      "totalHeight": "6,5 mm",
+      "pileHeight": "2,7 mm",
+      "pileDensity": "0,124 g/cm³",
+      "tuftDensity": "202.000 /m²",
+      "construction": "Tufted 1/12” Loop",
+      "impactNoise": "Lw: 22 dB",
+      "classification": "33 - LC1",
+      "castorChair": "A: continuous use",
+      "fire": "Bfl-s1",
+      "rawFile": "raw/pdf-text/first-sway--Back2Back.txt"
+     },
+     {
+      "backing": "comfortBACK",
+      "totalWeight": "4.600 g/m²",
+      "pileWeight": "590 g/m²",
+      "pileAboveBacking": "360 g/m²",
+      "totalHeight": "8,9 mm",
+      "pileHeight": "3,0 mm",
+      "pileDensity": "0,120 g/cm³",
+      "tuftDensity": "202.000 /m²",
+      "construction": "Tufted 1/12” Loop",
+      "impactNoise": "Lw: 29 dB",
+      "classification": "33 - LC1",
+      "castorChair": "A: continuous use",
+      "fire": "Bfl-s1",
+      "rawFile": "raw/pdf-text/first-sway--comfortBACK.txt"
+     },
+     {
+      "backing": "comfortBACK ECO",
+      "totalWeight": "3.800 g/m²",
+      "pileWeight": "590 g/m²",
+      "pileAboveBacking": "360 g/m²",
+      "totalHeight": "8,4 mm",
+      "pileHeight": "2,7 mm",
+      "pileDensity": "0,124 g/cm³",
+      "tuftDensity": "202.000 /m²",
+      "construction": "Tufted 1/12” Loop",
+      "impactNoise": "Lw: 28 dB",
+      "classification": "33 - LC1",
+      "castorChair": "A: continuous use",
+      "fire": "Bfl-s1",
+      "rawFile": "raw/pdf-text/first-sway--comfortBACK_ECO.txt"
+     },
+     {
+      "backing": "ecoBACK",
+      "totalWeight": "3.800 g/m²",
+      "pileWeight": "590 g/m²",
+      "pileAboveBacking": "360 g/m²",
+      "totalHeight": "6,2 mm",
+      "pileHeight": "2,7 mm",
+      "pileDensity": "0,124 g/cm³",
+      "tuftDensity": "202.000 /m²",
+      "construction": "Tufted 1/12” Loop",
+      "impactNoise": "Lw: 26 dB",
+      "classification": "33 - LC1",
+      "castorChair": "A: continuous use",
+      "fire": "Bfl-s1",
+      "rawFile": "raw/pdf-text/first-sway--ecoBACK.txt"
+     }
+    ]
+   },
+   "notFound": [],
+   "notes": []
+  },
+  {
+   "slug": "first-sway-965",
+   "brand": "Modulyss",
+   "name": "First Sway 965",
+   "sku": "965",
+   "sourceUrl": "https://www.modulyss.com/en-INT/carpet/collections/first-sway",
+   "colourName": {
+    "value": "965",
+    "source": "https://www.modulyss.com/en-INT/carpet/collections/first-sway",
+    "note": "Modulyss gives only a colour number"
+   },
+   "colourGroup": {
+    "value": "Grey",
+    "source": "https://www.modulyss.com/en-INT/carpet/collections/filter (Colour filter)"
+   },
+   "design": {
+    "value": "Geometric",
+    "source": "https://www.modulyss.com/en-INT/carpet/collections/filter (Pattern filter)"
+   },
+   "construction": {
+    "value": "Tufted 1/12” Loop",
+    "source": "modulyss Technical sheet first-sway Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-sway)",
+    "note": "filter Structure: Loop pile"
+   },
+   "pileMaterial": {
+    "value": "100% PA6 Solution Dyed Nylon",
+    "source": "modulyss Technical sheet first-sway Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-sway)"
+   },
+   "pileWeight": {
+    "value": "590 g/m²",
+    "source": "modulyss Technical sheet first-sway Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-sway)"
+   },
+   "totalWeight": {
+    "value": "4.500 g/m²",
+    "source": "modulyss Technical sheet first-sway Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-sway)"
+   },
+   "pileHeight": {
+    "value": "2,7 mm",
+    "source": "modulyss Technical sheet first-sway Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-sway)"
+   },
+   "totalThickness": {
+    "value": "6,5 mm",
+    "source": "modulyss Technical sheet first-sway Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-sway)"
+   },
+   "usageClass": {
+    "value": "33 - LC1",
+    "source": "modulyss Technical sheet first-sway Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-sway)"
+   },
+   "fireClass": {
+    "value": "Bfl-s1",
+    "source": "modulyss Technical sheet first-sway Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-sway)"
+   },
+   "backing": {
+    "value": "back2back",
+    "source": "https://www.modulyss.com/en-INT/carpet/collections/first-sway",
+    "note": "standard; optional: comfortBACK ecoBACK comfortBACK ECO"
+   },
+   "format": {
+    "value": "50 x 50 cm",
+    "source": "https://www.modulyss.com/en-INT/carpet/collections/first-sway",
+    "note": "standard size; optional from 100 m²: 25 x 100 cm 50 x 100 cm 100 x 100 cm 400 x ... cm"
+   },
+   "other": {
+    "size": {
+     "value": "50 x 50 cm, 25 x 100 cm, 50 x 100 cm, 100 x 100 cm, 400 x ... cm",
+     "source": "https://www.modulyss.com/en-INT/carpet/collections/filter (Size filter)"
+    },
+    "installationMethod": {
+     "value": "Ashlar, Brick, Monolithic, Quarter turn",
+     "source": "https://www.modulyss.com/en-INT/carpet/collections/filter (Installation method filter)"
+    },
+    "sustainabilityOptions": null,
+    "castorChair": {
+     "value": "A: continuous use",
+     "source": "modulyss Technical sheet first-sway Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-sway)"
+    },
+    "byBacking": [
+     {
+      "backing": "Back2Back",
+      "totalWeight": "4.500 g/m²",
+      "pileWeight": "590 g/m²",
+      "pileAboveBacking": "360 g/m²",
+      "totalHeight": "6,5 mm",
+      "pileHeight": "2,7 mm",
+      "pileDensity": "0,124 g/cm³",
+      "tuftDensity": "202.000 /m²",
+      "construction": "Tufted 1/12” Loop",
+      "impactNoise": "Lw: 22 dB",
+      "classification": "33 - LC1",
+      "castorChair": "A: continuous use",
+      "fire": "Bfl-s1",
+      "rawFile": "raw/pdf-text/first-sway--Back2Back.txt"
+     },
+     {
+      "backing": "comfortBACK",
+      "totalWeight": "4.600 g/m²",
+      "pileWeight": "590 g/m²",
+      "pileAboveBacking": "360 g/m²",
+      "totalHeight": "8,9 mm",
+      "pileHeight": "3,0 mm",
+      "pileDensity": "0,120 g/cm³",
+      "tuftDensity": "202.000 /m²",
+      "construction": "Tufted 1/12” Loop",
+      "impactNoise": "Lw: 29 dB",
+      "classification": "33 - LC1",
+      "castorChair": "A: continuous use",
+      "fire": "Bfl-s1",
+      "rawFile": "raw/pdf-text/first-sway--comfortBACK.txt"
+     },
+     {
+      "backing": "comfortBACK ECO",
+      "totalWeight": "3.800 g/m²",
+      "pileWeight": "590 g/m²",
+      "pileAboveBacking": "360 g/m²",
+      "totalHeight": "8,4 mm",
+      "pileHeight": "2,7 mm",
+      "pileDensity": "0,124 g/cm³",
+      "tuftDensity": "202.000 /m²",
+      "construction": "Tufted 1/12” Loop",
+      "impactNoise": "Lw: 28 dB",
+      "classification": "33 - LC1",
+      "castorChair": "A: continuous use",
+      "fire": "Bfl-s1",
+      "rawFile": "raw/pdf-text/first-sway--comfortBACK_ECO.txt"
+     },
+     {
+      "backing": "ecoBACK",
+      "totalWeight": "3.800 g/m²",
+      "pileWeight": "590 g/m²",
+      "pileAboveBacking": "360 g/m²",
+      "totalHeight": "6,2 mm",
+      "pileHeight": "2,7 mm",
+      "pileDensity": "0,124 g/cm³",
+      "tuftDensity": "202.000 /m²",
+      "construction": "Tufted 1/12” Loop",
+      "impactNoise": "Lw: 26 dB",
+      "classification": "33 - LC1",
+      "castorChair": "A: continuous use",
+      "fire": "Bfl-s1",
+      "rawFile": "raw/pdf-text/first-sway--ecoBACK.txt"
+     }
+    ]
+   },
+   "notFound": [],
+   "notes": []
+  },
+  {
+   "slug": "first-forward-140",
+   "brand": "Modulyss",
+   "name": "First Forward 140",
+   "sku": "140",
+   "sourceUrl": "https://www.modulyss.com/en-INT/carpet/collections/first-forward",
+   "colourName": {
+    "value": "140",
+    "source": "https://www.modulyss.com/en-INT/carpet/collections/first-forward",
+    "note": "Modulyss gives only a colour number"
+   },
+   "colourGroup": {
+    "value": "Beige",
+    "source": "https://www.modulyss.com/en-INT/carpet/collections/filter (Colour filter)"
+   },
+   "design": {
+    "value": "Plain",
+    "source": "https://www.modulyss.com/en-INT/carpet/collections/filter (Pattern filter)"
+   },
+   "construction": {
+    "value": "Tufted 1/10” Loop",
+    "source": "modulyss Technical sheet first-forward Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-forward)",
+    "note": "filter Structure: Loop pile"
+   },
+   "pileMaterial": {
+    "value": "100% PA6 Solution Dyed Nylon",
+    "source": "modulyss Technical sheet first-forward Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-forward)"
+   },
+   "pileWeight": {
+    "value": "540 g/m²",
+    "source": "modulyss Technical sheet first-forward Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-forward)"
+   },
+   "totalWeight": {
+    "value": "4.300 g/m²",
+    "source": "modulyss Technical sheet first-forward Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-forward)"
+   },
+   "pileHeight": {
+    "value": "2,9 mm",
+    "source": "modulyss Technical sheet first-forward Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-forward)"
+   },
+   "totalThickness": {
+    "value": "6,2 mm",
+    "source": "modulyss Technical sheet first-forward Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-forward)"
+   },
+   "usageClass": {
+    "value": "33 - LC1",
+    "source": "modulyss Technical sheet first-forward Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-forward)"
+   },
+   "fireClass": {
+    "value": "Bfl-s1",
+    "source": "modulyss Technical sheet first-forward Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-forward)"
+   },
+   "backing": {
+    "value": "back2back",
+    "source": "https://www.modulyss.com/en-INT/carpet/collections/first-forward",
+    "note": "standard; optional: comfortBACK ecoBACK comfortBACK ECO"
+   },
+   "format": {
+    "value": "50 x 50 cm",
+    "source": "https://www.modulyss.com/en-INT/carpet/collections/first-forward",
+    "note": "standard size; optional from 100 m²: 25 x 100 cm 50 x 100 cm 100 x 100 cm 400 x ... cm"
+   },
+   "other": {
+    "size": {
+     "value": "50 x 50 cm, 25 x 100 cm, 50 x 100 cm, 100 x 100 cm, 400 x ... cm",
+     "source": "https://www.modulyss.com/en-INT/carpet/collections/filter (Size filter)"
+    },
+    "installationMethod": {
+     "value": "Ashlar, Brick, Monolithic, Quarter turn",
+     "source": "https://www.modulyss.com/en-INT/carpet/collections/filter (Installation method filter)"
+    },
+    "sustainabilityOptions": {
+     "value": "ecoBACK",
+     "source": "https://www.modulyss.com/en-INT/carpet/collections/filter (Sustainability options filter)"
+    },
+    "castorChair": {
+     "value": "A: continuous use",
+     "source": "modulyss Technical sheet first-forward Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-forward)"
+    },
+    "byBacking": [
+     {
+      "backing": "Back2Back",
+      "totalWeight": "4.300 g/m²",
+      "pileWeight": "540 g/m²",
+      "pileAboveBacking": "340 g/m²",
+      "totalHeight": "6,2 mm",
+      "pileHeight": "2,9 mm",
+      "pileDensity": "0,117 g/cm³",
+      "tuftDensity": "180.000 /m²",
+      "construction": "Tufted 1/10” Loop",
+      "impactNoise": "Lw: 26 dB",
+      "classification": "33 - LC1",
+      "castorChair": "A: continuous use",
+      "fire": "Bfl-s1",
+      "rawFile": "raw/pdf-text/first-forward--Back2Back.txt"
+     },
+     {
+      "backing": "comfortBACK",
+      "totalWeight": "4.400 g/m²",
+      "pileWeight": "540 g/m²",
+      "pileAboveBacking": "340 g/m²",
+      "totalHeight": "8,6 mm",
+      "pileHeight": "3,2 mm",
+      "pileDensity": "0,106 g/cm³",
+      "tuftDensity": "180.000 /m²",
+      "construction": "Tufted 1/10” Loop",
+      "impactNoise": "Lw: 28 dB",
+      "classification": "33 - LC1",
+      "castorChair": "A: continuous use",
+      "fire": "Bfl-s1",
+      "rawFile": "raw/pdf-text/first-forward--comfortBACK.txt"
+     },
+     {
+      "backing": "comfortBACK ECO",
+      "totalWeight": "3.600 g/m²",
+      "pileWeight": "540 g/m²",
+      "pileAboveBacking": "340 g/m²",
+      "totalHeight": "8,1 mm",
+      "pileHeight": "2,9 mm",
+      "pileDensity": "0,117 g/cm³",
+      "tuftDensity": "180.000 /m²",
+      "construction": "Tufted 1/10” Loop",
+      "impactNoise": "Lw: 30 dB",
+      "classification": "33 - LC1",
+      "castorChair": "A: continuous use",
+      "fire": "Bfl-s1",
+      "rawFile": "raw/pdf-text/first-forward--comfortBACK_ECO.txt"
+     },
+     {
+      "backing": "ecoBACK",
+      "totalWeight": "3.600 g/m²",
+      "pileWeight": "540 g/m²",
+      "pileAboveBacking": "340 g/m²",
+      "totalHeight": "5,9 mm",
+      "pileHeight": "2,9 mm",
+      "pileDensity": "0,117 g/cm³",
+      "tuftDensity": "180.000 /m²",
+      "construction": "Tufted 1/10” Loop",
+      "impactNoise": "Lw: 24 dB",
+      "classification": "33 - LC1",
+      "castorChair": "A: continuous use",
+      "fire": "Bfl-s1",
+      "rawFile": "raw/pdf-text/first-forward--ecoBACK.txt"
+     }
+    ]
+   },
+   "notFound": [],
+   "notes": []
+  },
+  {
+   "slug": "first-define-140",
+   "brand": "Modulyss",
+   "name": "First Define 140",
+   "sku": "140",
+   "sourceUrl": "https://www.modulyss.com/en-INT/carpet/collections/first-define",
+   "colourName": {
+    "value": "140",
+    "source": "https://www.modulyss.com/en-INT/carpet/collections/first-define",
+    "note": "Modulyss gives only a colour number"
+   },
+   "colourGroup": {
+    "value": "Beige, Brown",
+    "source": "https://www.modulyss.com/en-INT/carpet/collections/filter (Colour filter)"
+   },
+   "design": {
+    "value": "Varied",
+    "source": "https://www.modulyss.com/en-INT/carpet/collections/filter (Pattern filter)"
+   },
+   "construction": {
+    "value": "Tufted 1/12” Loop",
+    "source": "modulyss Technical sheet first-define Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-define)",
+    "note": "filter Structure: Loop pile"
+   },
+   "pileMaterial": {
+    "value": "100% PA6 Solution Dyed Nylon",
+    "source": "modulyss Technical sheet first-define Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-define)"
+   },
+   "pileWeight": {
+    "value": "590 g/m²",
+    "source": "modulyss Technical sheet first-define Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-define)"
+   },
+   "totalWeight": {
+    "value": "4.500 g/m²",
+    "source": "modulyss Technical sheet first-define Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-define)"
+   },
+   "pileHeight": {
+    "value": "2,7 mm",
+    "source": "modulyss Technical sheet first-define Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-define)"
+   },
+   "totalThickness": {
+    "value": "6,5 mm",
+    "source": "modulyss Technical sheet first-define Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-define)"
+   },
+   "usageClass": {
+    "value": "33 - LC1",
+    "source": "modulyss Technical sheet first-define Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-define)"
+   },
+   "fireClass": {
+    "value": "Bfl-s1",
+    "source": "modulyss Technical sheet first-define Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-define)"
+   },
+   "backing": {
+    "value": "back2back",
+    "source": "https://www.modulyss.com/en-INT/carpet/collections/first-define",
+    "note": "standard; optional: comfortBACK ecoBACK comfortBACK ECO"
+   },
+   "format": {
+    "value": "50 x 50 cm",
+    "source": "https://www.modulyss.com/en-INT/carpet/collections/first-define",
+    "note": "standard size; optional from 100 m²: 25 x 100 cm 50 x 100 cm 100 x 100 cm"
+   },
+   "other": {
+    "size": {
+     "value": "50 x 50 cm, 25 x 100 cm, 50 x 100 cm, 100 x 100 cm",
+     "source": "https://www.modulyss.com/en-INT/carpet/collections/filter (Size filter)"
+    },
+    "installationMethod": {
+     "value": "Ashlar, Brick, Monolithic, Quarter turn",
+     "source": "https://www.modulyss.com/en-INT/carpet/collections/filter (Installation method filter)"
+    },
+    "sustainabilityOptions": {
+     "value": "ecoBACK",
+     "source": "https://www.modulyss.com/en-INT/carpet/collections/filter (Sustainability options filter)"
+    },
+    "castorChair": {
+     "value": "A: continuous use",
+     "source": "modulyss Technical sheet first-define Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-define)"
+    },
+    "byBacking": [
+     {
+      "backing": "Back2Back",
+      "totalWeight": "4.500 g/m²",
+      "pileWeight": "590 g/m²",
+      "pileAboveBacking": "360 g/m²",
+      "totalHeight": "6,5 mm",
+      "pileHeight": "2,7 mm",
+      "pileDensity": "0,124 g/cm³",
+      "tuftDensity": "202.000 /m²",
+      "construction": "Tufted 1/12” Loop",
+      "impactNoise": "Lw: 25 dB",
+      "classification": "33 - LC1",
+      "castorChair": "A: continuous use",
+      "fire": "Bfl-s1",
+      "rawFile": "raw/pdf-text/first-define--Back2Back.txt"
+     },
+     {
+      "backing": "comfortBACK",
+      "totalWeight": "4.600 g/m²",
+      "pileWeight": "590 g/m²",
+      "pileAboveBacking": "360 g/m²",
+      "totalHeight": "8,9 mm",
+      "pileHeight": "3,0 mm",
+      "pileDensity": "0,120 g/cm³",
+      "tuftDensity": "202.000 /m²",
+      "construction": "Tufted 1/12” Loop",
+      "impactNoise": "Lw: 29 dB",
+      "classification": "33 - LC1",
+      "castorChair": "A: continuous use",
+      "fire": "Bfl-s1",
+      "rawFile": "raw/pdf-text/first-define--comfortBACK.txt"
+     },
+     {
+      "backing": "comfortBACK ECO",
+      "totalWeight": "3.800 g/m²",
+      "pileWeight": "590 g/m²",
+      "pileAboveBacking": "360 g/m²",
+      "totalHeight": "8,4 mm",
+      "pileHeight": "3,0 mm",
+      "pileDensity": "0,120 g/cm³",
+      "tuftDensity": "202.000 /m²",
+      "construction": "Tufted 1/12” Loop",
+      "impactNoise": "Lw: 28 dB",
+      "classification": "33 - LC1",
+      "castorChair": "A: continuous use",
+      "fire": "Bfl-s1",
+      "rawFile": "raw/pdf-text/first-define--comfortBACK_ECO.txt"
+     },
+     {
+      "backing": "ecoBACK",
+      "totalWeight": "3.800 g/m²",
+      "pileWeight": "590 g/m²",
+      "pileAboveBacking": "360 g/m²",
+      "totalHeight": "6,2 mm",
+      "pileHeight": "2,9 mm",
+      "pileDensity": "0,124 g/cm³",
+      "tuftDensity": "202.000 /m²",
+      "construction": "Tufted 1/12” Loop",
+      "impactNoise": "Lw: 26 dB",
+      "classification": "33 - LC1",
+      "castorChair": "A: continuous use",
+      "fire": "Bfl-s1",
+      "rawFile": "raw/pdf-text/first-define--ecoBACK.txt"
+     }
+    ]
+   },
+   "notFound": [],
+   "notes": []
+  },
+  {
+   "slug": "first-define-957",
+   "brand": "Modulyss",
+   "name": "First Define 957",
+   "sku": "957",
+   "sourceUrl": "https://www.modulyss.com/en-INT/carpet/collections/first-define",
+   "colourName": {
+    "value": "957",
+    "source": "https://www.modulyss.com/en-INT/carpet/collections/first-define",
+    "note": "Modulyss gives only a colour number"
+   },
+   "colourGroup": {
+    "value": "Grey",
+    "source": "https://www.modulyss.com/en-INT/carpet/collections/filter (Colour filter)"
+   },
+   "design": {
+    "value": "Varied",
+    "source": "https://www.modulyss.com/en-INT/carpet/collections/filter (Pattern filter)"
+   },
+   "construction": {
+    "value": "Tufted 1/12” Loop",
+    "source": "modulyss Technical sheet first-define Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-define)",
+    "note": "filter Structure: Loop pile"
+   },
+   "pileMaterial": {
+    "value": "100% PA6 Solution Dyed Nylon",
+    "source": "modulyss Technical sheet first-define Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-define)"
+   },
+   "pileWeight": {
+    "value": "590 g/m²",
+    "source": "modulyss Technical sheet first-define Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-define)"
+   },
+   "totalWeight": {
+    "value": "4.500 g/m²",
+    "source": "modulyss Technical sheet first-define Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-define)"
+   },
+   "pileHeight": {
+    "value": "2,7 mm",
+    "source": "modulyss Technical sheet first-define Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-define)"
+   },
+   "totalThickness": {
+    "value": "6,5 mm",
+    "source": "modulyss Technical sheet first-define Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-define)"
+   },
+   "usageClass": {
+    "value": "33 - LC1",
+    "source": "modulyss Technical sheet first-define Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-define)"
+   },
+   "fireClass": {
+    "value": "Bfl-s1",
+    "source": "modulyss Technical sheet first-define Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-define)"
+   },
+   "backing": {
+    "value": "back2back",
+    "source": "https://www.modulyss.com/en-INT/carpet/collections/first-define",
+    "note": "standard; optional: comfortBACK ecoBACK comfortBACK ECO"
+   },
+   "format": {
+    "value": "50 x 50 cm",
+    "source": "https://www.modulyss.com/en-INT/carpet/collections/first-define",
+    "note": "standard size; optional from 100 m²: 25 x 100 cm 50 x 100 cm 100 x 100 cm"
+   },
+   "other": {
+    "size": {
+     "value": "50 x 50 cm, 25 x 100 cm, 50 x 100 cm, 100 x 100 cm",
+     "source": "https://www.modulyss.com/en-INT/carpet/collections/filter (Size filter)"
+    },
+    "installationMethod": {
+     "value": "Ashlar, Brick, Monolithic, Quarter turn",
+     "source": "https://www.modulyss.com/en-INT/carpet/collections/filter (Installation method filter)"
+    },
+    "sustainabilityOptions": {
+     "value": "ecoBACK",
+     "source": "https://www.modulyss.com/en-INT/carpet/collections/filter (Sustainability options filter)"
+    },
+    "castorChair": {
+     "value": "A: continuous use",
+     "source": "modulyss Technical sheet first-define Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-define)"
+    },
+    "byBacking": [
+     {
+      "backing": "Back2Back",
+      "totalWeight": "4.500 g/m²",
+      "pileWeight": "590 g/m²",
+      "pileAboveBacking": "360 g/m²",
+      "totalHeight": "6,5 mm",
+      "pileHeight": "2,7 mm",
+      "pileDensity": "0,124 g/cm³",
+      "tuftDensity": "202.000 /m²",
+      "construction": "Tufted 1/12” Loop",
+      "impactNoise": "Lw: 25 dB",
+      "classification": "33 - LC1",
+      "castorChair": "A: continuous use",
+      "fire": "Bfl-s1",
+      "rawFile": "raw/pdf-text/first-define--Back2Back.txt"
+     },
+     {
+      "backing": "comfortBACK",
+      "totalWeight": "4.600 g/m²",
+      "pileWeight": "590 g/m²",
+      "pileAboveBacking": "360 g/m²",
+      "totalHeight": "8,9 mm",
+      "pileHeight": "3,0 mm",
+      "pileDensity": "0,120 g/cm³",
+      "tuftDensity": "202.000 /m²",
+      "construction": "Tufted 1/12” Loop",
+      "impactNoise": "Lw: 29 dB",
+      "classification": "33 - LC1",
+      "castorChair": "A: continuous use",
+      "fire": "Bfl-s1",
+      "rawFile": "raw/pdf-text/first-define--comfortBACK.txt"
+     },
+     {
+      "backing": "comfortBACK ECO",
+      "totalWeight": "3.800 g/m²",
+      "pileWeight": "590 g/m²",
+      "pileAboveBacking": "360 g/m²",
+      "totalHeight": "8,4 mm",
+      "pileHeight": "3,0 mm",
+      "pileDensity": "0,120 g/cm³",
+      "tuftDensity": "202.000 /m²",
+      "construction": "Tufted 1/12” Loop",
+      "impactNoise": "Lw: 28 dB",
+      "classification": "33 - LC1",
+      "castorChair": "A: continuous use",
+      "fire": "Bfl-s1",
+      "rawFile": "raw/pdf-text/first-define--comfortBACK_ECO.txt"
+     },
+     {
+      "backing": "ecoBACK",
+      "totalWeight": "3.800 g/m²",
+      "pileWeight": "590 g/m²",
+      "pileAboveBacking": "360 g/m²",
+      "totalHeight": "6,2 mm",
+      "pileHeight": "2,9 mm",
+      "pileDensity": "0,124 g/cm³",
+      "tuftDensity": "202.000 /m²",
+      "construction": "Tufted 1/12” Loop",
+      "impactNoise": "Lw: 26 dB",
+      "classification": "33 - LC1",
+      "castorChair": "A: continuous use",
+      "fire": "Bfl-s1",
+      "rawFile": "raw/pdf-text/first-define--ecoBACK.txt"
+     }
+    ]
+   },
+   "notFound": [],
+   "notes": []
+  },
+  {
+   "slug": "first-define-995",
+   "brand": "Modulyss",
+   "name": "First Define 995",
+   "sku": "995",
+   "sourceUrl": "https://www.modulyss.com/en-INT/carpet/collections/first-define",
+   "colourName": {
+    "value": "995",
+    "source": "https://www.modulyss.com/en-INT/carpet/collections/first-define",
+    "note": "Modulyss gives only a colour number"
+   },
+   "colourGroup": {
+    "value": "Black",
+    "source": "https://www.modulyss.com/en-INT/carpet/collections/filter (Colour filter)"
+   },
+   "design": {
+    "value": "Varied",
+    "source": "https://www.modulyss.com/en-INT/carpet/collections/filter (Pattern filter)"
+   },
+   "construction": {
+    "value": "Tufted 1/12” Loop",
+    "source": "modulyss Technical sheet first-define Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-define)",
+    "note": "filter Structure: Loop pile"
+   },
+   "pileMaterial": {
+    "value": "100% PA6 Solution Dyed Nylon",
+    "source": "modulyss Technical sheet first-define Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-define)"
+   },
+   "pileWeight": {
+    "value": "590 g/m²",
+    "source": "modulyss Technical sheet first-define Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-define)"
+   },
+   "totalWeight": {
+    "value": "4.500 g/m²",
+    "source": "modulyss Technical sheet first-define Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-define)"
+   },
+   "pileHeight": {
+    "value": "2,7 mm",
+    "source": "modulyss Technical sheet first-define Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-define)"
+   },
+   "totalThickness": {
+    "value": "6,5 mm",
+    "source": "modulyss Technical sheet first-define Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-define)"
+   },
+   "usageClass": {
+    "value": "33 - LC1",
+    "source": "modulyss Technical sheet first-define Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-define)"
+   },
+   "fireClass": {
+    "value": "Bfl-s1",
+    "source": "modulyss Technical sheet first-define Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-define)"
+   },
+   "backing": {
+    "value": "back2back",
+    "source": "https://www.modulyss.com/en-INT/carpet/collections/first-define",
+    "note": "standard; optional: comfortBACK ecoBACK comfortBACK ECO"
+   },
+   "format": {
+    "value": "50 x 50 cm",
+    "source": "https://www.modulyss.com/en-INT/carpet/collections/first-define",
+    "note": "standard size; optional from 100 m²: 25 x 100 cm 50 x 100 cm 100 x 100 cm"
+   },
+   "other": {
+    "size": {
+     "value": "50 x 50 cm, 25 x 100 cm, 50 x 100 cm, 100 x 100 cm",
+     "source": "https://www.modulyss.com/en-INT/carpet/collections/filter (Size filter)"
+    },
+    "installationMethod": {
+     "value": "Ashlar, Brick, Monolithic, Quarter turn",
+     "source": "https://www.modulyss.com/en-INT/carpet/collections/filter (Installation method filter)"
+    },
+    "sustainabilityOptions": {
+     "value": "ecoBACK",
+     "source": "https://www.modulyss.com/en-INT/carpet/collections/filter (Sustainability options filter)"
+    },
+    "castorChair": {
+     "value": "A: continuous use",
+     "source": "modulyss Technical sheet first-define Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-define)"
+    },
+    "byBacking": [
+     {
+      "backing": "Back2Back",
+      "totalWeight": "4.500 g/m²",
+      "pileWeight": "590 g/m²",
+      "pileAboveBacking": "360 g/m²",
+      "totalHeight": "6,5 mm",
+      "pileHeight": "2,7 mm",
+      "pileDensity": "0,124 g/cm³",
+      "tuftDensity": "202.000 /m²",
+      "construction": "Tufted 1/12” Loop",
+      "impactNoise": "Lw: 25 dB",
+      "classification": "33 - LC1",
+      "castorChair": "A: continuous use",
+      "fire": "Bfl-s1",
+      "rawFile": "raw/pdf-text/first-define--Back2Back.txt"
+     },
+     {
+      "backing": "comfortBACK",
+      "totalWeight": "4.600 g/m²",
+      "pileWeight": "590 g/m²",
+      "pileAboveBacking": "360 g/m²",
+      "totalHeight": "8,9 mm",
+      "pileHeight": "3,0 mm",
+      "pileDensity": "0,120 g/cm³",
+      "tuftDensity": "202.000 /m²",
+      "construction": "Tufted 1/12” Loop",
+      "impactNoise": "Lw: 29 dB",
+      "classification": "33 - LC1",
+      "castorChair": "A: continuous use",
+      "fire": "Bfl-s1",
+      "rawFile": "raw/pdf-text/first-define--comfortBACK.txt"
+     },
+     {
+      "backing": "comfortBACK ECO",
+      "totalWeight": "3.800 g/m²",
+      "pileWeight": "590 g/m²",
+      "pileAboveBacking": "360 g/m²",
+      "totalHeight": "8,4 mm",
+      "pileHeight": "3,0 mm",
+      "pileDensity": "0,120 g/cm³",
+      "tuftDensity": "202.000 /m²",
+      "construction": "Tufted 1/12” Loop",
+      "impactNoise": "Lw: 28 dB",
+      "classification": "33 - LC1",
+      "castorChair": "A: continuous use",
+      "fire": "Bfl-s1",
+      "rawFile": "raw/pdf-text/first-define--comfortBACK_ECO.txt"
+     },
+     {
+      "backing": "ecoBACK",
+      "totalWeight": "3.800 g/m²",
+      "pileWeight": "590 g/m²",
+      "pileAboveBacking": "360 g/m²",
+      "totalHeight": "6,2 mm",
+      "pileHeight": "2,9 mm",
+      "pileDensity": "0,124 g/cm³",
+      "tuftDensity": "202.000 /m²",
+      "construction": "Tufted 1/12” Loop",
+      "impactNoise": "Lw: 26 dB",
+      "classification": "33 - LC1",
+      "castorChair": "A: continuous use",
+      "fire": "Bfl-s1",
+      "rawFile": "raw/pdf-text/first-define--ecoBACK.txt"
+     }
+    ]
+   },
+   "notFound": [],
+   "notes": []
+  },
+  {
+   "slug": "first-streamline-106",
+   "brand": "Modulyss",
+   "name": "First Streamline 106",
+   "sku": "106",
+   "sourceUrl": "https://www.modulyss.com/en-INT/carpet/collections/first-streamline",
+   "colourName": {
+    "value": "106",
+    "source": "https://www.modulyss.com/en-INT/carpet/collections/first-streamline",
+    "note": "Modulyss gives only a colour number"
+   },
+   "colourGroup": {
+    "value": "Beige, Brown",
+    "source": "https://www.modulyss.com/en-INT/carpet/collections/filter (Colour filter)"
+   },
+   "design": {
+    "value": "Linear",
+    "source": "https://www.modulyss.com/en-INT/carpet/collections/filter (Pattern filter)"
+   },
+   "construction": {
+    "value": "Tufted 1/10” Loop",
+    "source": "modulyss Technical sheet first-streamline Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-streamline)",
+    "note": "filter Structure: Loop pile"
+   },
+   "pileMaterial": {
+    "value": "100% PA6 Solution Dyed Nylon",
+    "source": "modulyss Technical sheet first-streamline Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-streamline)"
+   },
+   "pileWeight": {
+    "value": "540 g/m²",
+    "source": "modulyss Technical sheet first-streamline Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-streamline)"
+   },
+   "totalWeight": {
+    "value": "4.300 g/m²",
+    "source": "modulyss Technical sheet first-streamline Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-streamline)"
+   },
+   "pileHeight": {
+    "value": "2,9 mm",
+    "source": "modulyss Technical sheet first-streamline Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-streamline)"
+   },
+   "totalThickness": {
+    "value": "6,2 mm",
+    "source": "modulyss Technical sheet first-streamline Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-streamline)"
+   },
+   "usageClass": {
+    "value": "33 - LC1",
+    "source": "modulyss Technical sheet first-streamline Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-streamline)"
+   },
+   "fireClass": {
+    "value": "Bfl-s1",
+    "source": "modulyss Technical sheet first-streamline Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-streamline)"
+   },
+   "backing": {
+    "value": "back2back",
+    "source": "https://www.modulyss.com/en-INT/carpet/collections/first-streamline",
+    "note": "standard; optional: comfortBACK ecoBACK comfortBACK ECO"
+   },
+   "format": {
+    "value": "50 x 50 cm",
+    "source": "https://www.modulyss.com/en-INT/carpet/collections/first-streamline",
+    "note": "standard size; optional from 100 m²: 25 x 100 cm 50 x 100 cm 100 x 100 cm 400 x ... cm"
+   },
+   "other": {
+    "size": {
+     "value": "50 x 50 cm, 25 x 100 cm, 50 x 100 cm, 100 x 100 cm",
+     "source": "https://www.modulyss.com/en-INT/carpet/collections/filter (Size filter)"
+    },
+    "installationMethod": {
+     "value": "Ashlar, Brick, Monolithic, Quarter turn",
+     "source": "https://www.modulyss.com/en-INT/carpet/collections/filter (Installation method filter)"
+    },
+    "sustainabilityOptions": {
+     "value": "ecoBACK",
+     "source": "https://www.modulyss.com/en-INT/carpet/collections/filter (Sustainability options filter)"
+    },
+    "castorChair": {
+     "value": "A: continuous use",
+     "source": "modulyss Technical sheet first-streamline Back2Back (linked from https://www.modulyss.com/en-INT/carpet/collections/first-streamline)"
+    },
+    "byBacking": [
+     {
+      "backing": "Back2Back",
+      "totalWeight": "4.300 g/m²",
+      "pileWeight": "540 g/m²",
+      "pileAboveBacking": "340 g/m²",
+      "totalHeight": "6,2 mm",
+      "pileHeight": "2,9 mm",
+      "pileDensity": "0,117 g/cm³",
+      "tuftDensity": "180.000 /m²",
+      "construction": "Tufted 1/10” Loop",
+      "impactNoise": "Lw: 26 dB",
+      "classification": "33 - LC1",
+      "castorChair": "A: continuous use",
+      "fire": "Bfl-s1",
+      "rawFile": "raw/pdf-text/first-streamline--Back2Back.txt"
+     },
+     {
+      "backing": "comfortBACK",
+      "totalWeight": "4.400 g/m²",
+      "pileWeight": "540 g/m²",
+      "pileAboveBacking": "340 g/m²",
+      "totalHeight": "8,6 mm",
+      "pileHeight": "3,2 mm",
+      "pileDensity": "0,106 g/cm³",
+      "tuftDensity": "180.000 /m²",
+      "construction": "Tufted 1/10” Loop",
+      "impactNoise": "Lw: 28 dB",
+      "classification": "33 - LC1",
+      "castorChair": "A: continuous use",
+      "fire": "Bfl-s1",
+      "rawFile": "raw/pdf-text/first-streamline--comfortBACK.txt"
+     },
+     {
+      "backing": "comfortBACK ECO",
+      "totalWeight": "3.600 g/m²",
+      "pileWeight": "540 g/m²",
+      "pileAboveBacking": "340 g/m²",
+      "totalHeight": "8,1 mm",
+      "pileHeight": "2,9 mm",
+      "pileDensity": "0,117 g/cm³",
+      "tuftDensity": "180.000 /m²",
+      "construction": "Tufted 1/10” Loop",
+      "impactNoise": "Lw: 30 dB",
+      "classification": "33 - LC1",
+      "castorChair": "A: continuous use",
+      "fire": "Bfl-s1",
+      "rawFile": "raw/pdf-text/first-streamline--comfortBACK_ECO.txt"
+     },
+     {
+      "backing": "ecoBACK",
+      "totalWeight": "3.600 g/m²",
+      "pileWeight": "540 g/m²",
+      "pileAboveBacking": "340 g/m²",
+      "totalHeight": "5,9 mm",
+      "pileHeight": "2,9 mm",
+      "pileDensity": "0,117 g/cm³",
+      "tuftDensity": "180.000 /m²",
+      "construction": "Tufted 1/10” Loop",
+      "impactNoise": "Lw: 24 dB",
+      "classification": "33 - LC1",
+      "castorChair": "A: continuous use",
+      "fire": "Bfl-s1",
+      "rawFile": "raw/pdf-text/first-streamline--ecoBACK.txt"
+     }
+    ]
+   },
+   "notFound": [],
+   "notes": []
+  },
+  {
+   "slug": "rocket-553",
+   "brand": "Modulyss",
+   "name": "Rocket 553",
+   "sku": "553",
+   "sourceUrl": "https://www.modulyss.com/en-INT/carpet/collections/rocket",
+   "colourName": {
+    "value": "553",
+    "source": "https://www.modulyss.com/en-INT/carpet/collections/rocket",
+    "note": "Modulyss gives only a colour number"
+   },
+   "colourGroup": {
+    "value": "Blue",
+    "source": "https://www.modulyss.com/en-INT/carpet/collections/filter (Colour filter)"
+   },
+   "design": {
+    "value": "Plain",
+    "source": "https://www.modulyss.com/en-INT/carpet/collections/filter (Pattern filter)"
+   },
+   "construction": {
+    "value": "Loop pile",
+    "source": "https://www.modulyss.com/en-INT/carpet/collections/filter (Structure filter)"
+   },
+   "pileMaterial": null,
+   "pileWeight": null,
+   "totalWeight": null,
+   "pileHeight": null,
+   "totalThickness": null,
+   "usageClass": null,
+   "fireClass": null,
+   "backing": {
+    "value": "back2back",
+    "source": "https://www.modulyss.com/en-INT/carpet/collections/rocket",
+    "note": "standard; optional: comfortBACK comfortBACK ECO"
+   },
+   "format": {
+    "value": "50 x 50 cm",
+    "source": "https://www.modulyss.com/en-INT/carpet/collections/rocket",
+    "note": "standard size; optional from 100 m²: 25 x 100 cm 50 x 100 cm 100 x 100 cm"
+   },
+   "other": {
+    "size": {
+     "value": "50 x 50 cm, 25 x 100 cm, 50 x 100 cm, 100 x 100 cm",
+     "source": "https://www.modulyss.com/en-INT/carpet/collections/filter (Size filter)"
+    },
+    "installationMethod": {
+     "value": "Brick, Monolithic, Quarter turn",
+     "source": "https://www.modulyss.com/en-INT/carpet/collections/filter (Installation method filter)"
+    },
+    "sustainabilityOptions": null,
+    "descriptionWording": {
+     "value": "level loop structure",
+     "source": "https://www.modulyss.com/en-INT/carpet/collections/rocket"
+    }
+   },
+   "notFound": [
+    "pileMaterial",
+    "pileWeight",
+    "totalWeight",
+    "pileHeight",
+    "totalThickness",
+    "usageClass",
+    "fireClass"
+   ],
+   "notes": [
+    "Rocket page has no technical datasheet (only sustainability sheets and EPDs). The Back2Back EPD is a generic declaration for many products, so nothing was taken from it."
+   ]
+  },
+  {
+   "slug": "bedford-5507",
+   "brand": "Beaulieu",
+   "name": "Bedford 5507 Blue",
+   "sku": "5507",
+   "sourceUrl": "https://www.beaulieu-needlefelt.com/en/product-finder/color/nf_needlefelt_tiles_bedfordtile_5507",
+   "colourName": {
+    "value": "Blue",
+    "source": "https://www.beaulieu-needlefelt.com/en/product-finder/color/nf_needlefelt_tiles_bedfordtile_5507"
+   },
+   "colourGroup": null,
+   "design": {
+    "value": "1 Rib 4.7",
+    "source": "https://www.beaulieu-needlefelt.com/en/product-finder/color/nf_needlefelt_tiles_bedfordtile_5507",
+    "note": "Beaulieu filter \"Surface structure\""
+   },
+   "construction": {
+    "value": "Needle felt",
+    "source": "https://www.beaulieu-needlefelt.com/en/product-finder/color/nf_needlefelt_tiles_bedfordtile_5507"
+   },
+   "pileMaterial": {
+    "value": "100% PP",
+    "source": "https://www.beaulieu-needlefelt.com/en/product-finder/color/nf_needlefelt_tiles_bedfordtile_5507"
+   },
+   "pileWeight": {
+    "value": "900 g/m²",
+    "source": "https://www.beaulieu-needlefelt.com/en/product-finder/color/nf_needlefelt_tiles_bedfordtile_5507"
+   },
+   "totalWeight": {
+    "value": "3660 g/m²",
+    "source": "https://www.beaulieu-needlefelt.com/en/product-finder/color/nf_needlefelt_tiles_bedfordtile_5507"
+   },
+   "pileHeight": {
+    "value": "3.5 mm",
+    "source": "https://www.beaulieu-needlefelt.com/en/product-finder/color/nf_needlefelt_tiles_bedfordtile_5507"
+   },
+   "totalThickness": {
+    "value": "8 mm",
+    "source": "https://www.beaulieu-needlefelt.com/en/product-finder/color/nf_needlefelt_tiles_bedfordtile_5507"
+   },
+   "usageClass": null,
+   "fireClass": null,
+   "backing": {
+    "value": "Bitumen",
+    "source": "https://www.beaulieu-needlefelt.com/en/product-finder/color/nf_needlefelt_tiles_bedfordtile_5507"
+   },
+   "format": {
+    "value": "50 x 50 cm",
+    "source": "https://www.beaulieu-needlefelt.com/en/product-finder/color/nf_needlefelt_tiles_bedfordtile_5507"
+   },
+   "other": {
+    "collection": {
+     "value": "Bedford Tile",
+     "source": "https://www.beaulieu-needlefelt.com/en/product-finder/color/nf_needlefelt_tiles_bedfordtile_5507"
+    },
+    "totalWeightClass": {
+     "value": "> 2200",
+     "source": "https://www.beaulieu-needlefelt.com/en/product-finder/color/nf_needlefelt_tiles_bedfordtile_5507"
+    },
+    "productType": {
+     "value": "Tiles",
+     "source": "https://www.beaulieu-needlefelt.com/en/product-finder/color/nf_needlefelt_tiles_bedfordtile_5507"
+    }
+   },
+   "notFound": [
+    "colourGroup (Beaulieu has no colour filter, only the colour name)",
+    "usageClass",
+    "fireClass for the tile"
+   ],
+   "notes": [
+    "The only datasheet found (\"Bedford\" Technical Datasheet, mediacenter.bintg.com asset 2101) is for rolls with Gel backing: 1500 g/m², 7 mm, Efl. Its values were not applied to the bitumen tile."
+   ]
+  },
+  {
+   "slug": "bedford-2531",
+   "brand": "Beaulieu",
+   "name": "Bedford 2531 Steel",
+   "sku": "2531",
+   "sourceUrl": "https://www.beaulieu-needlefelt.com/en/product-finder/color/nf_needlefelt_tiles_bedfordtile_2531",
+   "colourName": {
+    "value": "Steel",
+    "source": "https://www.beaulieu-needlefelt.com/en/product-finder/color/nf_needlefelt_tiles_bedfordtile_2531"
+   },
+   "colourGroup": null,
+   "design": {
+    "value": "1 Rib 4.7",
+    "source": "https://www.beaulieu-needlefelt.com/en/product-finder/color/nf_needlefelt_tiles_bedfordtile_2531",
+    "note": "Beaulieu filter \"Surface structure\""
+   },
+   "construction": {
+    "value": "Needle felt",
+    "source": "https://www.beaulieu-needlefelt.com/en/product-finder/color/nf_needlefelt_tiles_bedfordtile_2531"
+   },
+   "pileMaterial": {
+    "value": "100% PP",
+    "source": "https://www.beaulieu-needlefelt.com/en/product-finder/color/nf_needlefelt_tiles_bedfordtile_2531"
+   },
+   "pileWeight": {
+    "value": "900 g/m²",
+    "source": "https://www.beaulieu-needlefelt.com/en/product-finder/color/nf_needlefelt_tiles_bedfordtile_2531"
+   },
+   "totalWeight": {
+    "value": "3660 g/m²",
+    "source": "https://www.beaulieu-needlefelt.com/en/product-finder/color/nf_needlefelt_tiles_bedfordtile_2531"
+   },
+   "pileHeight": {
+    "value": "3.5 mm",
+    "source": "https://www.beaulieu-needlefelt.com/en/product-finder/color/nf_needlefelt_tiles_bedfordtile_2531"
+   },
+   "totalThickness": {
+    "value": "8 mm",
+    "source": "https://www.beaulieu-needlefelt.com/en/product-finder/color/nf_needlefelt_tiles_bedfordtile_2531"
+   },
+   "usageClass": null,
+   "fireClass": null,
+   "backing": {
+    "value": "Bitumen",
+    "source": "https://www.beaulieu-needlefelt.com/en/product-finder/color/nf_needlefelt_tiles_bedfordtile_2531"
+   },
+   "format": {
+    "value": "50 x 50 cm",
+    "source": "https://www.beaulieu-needlefelt.com/en/product-finder/color/nf_needlefelt_tiles_bedfordtile_2531"
+   },
+   "other": {
+    "collection": {
+     "value": "Bedford Tile",
+     "source": "https://www.beaulieu-needlefelt.com/en/product-finder/color/nf_needlefelt_tiles_bedfordtile_2531"
+    },
+    "totalWeightClass": {
+     "value": "> 2200",
+     "source": "https://www.beaulieu-needlefelt.com/en/product-finder/color/nf_needlefelt_tiles_bedfordtile_2531"
+    },
+    "productType": {
+     "value": "Tiles",
+     "source": "https://www.beaulieu-needlefelt.com/en/product-finder/color/nf_needlefelt_tiles_bedfordtile_2531"
+    }
+   },
+   "notFound": [
+    "colourGroup (Beaulieu has no colour filter, only the colour name)",
+    "usageClass",
+    "fireClass for the tile"
+   ],
+   "notes": [
+    "The only datasheet found (\"Bedford\" Technical Datasheet, mediacenter.bintg.com asset 2101) is for rolls with Gel backing: 1500 g/m², 7 mm, Efl. Its values were not applied to the bitumen tile."
+   ]
+  },
+  {
+   "slug": "mineral-29",
+   "brand": "Associated Weavers",
+   "name": "Mineral 29 Char Green",
+   "sku": "29",
+   "sourceUrl": "https://associated-weavers.com/en/carpet-tile-mineraltile-29",
+   "colourName": {
+    "value": "Char Green",
+    "source": "POST https://associated-weavers.com/api/productcatalog/filter/list"
+   },
+   "colourGroup": {
+    "value": "Green",
+    "source": "POST https://associated-weavers.com/api/productcatalog/filter/list (Colours facet)"
+   },
+   "design": {
+    "value": "Structured/dessin",
+    "source": "https://associated-weavers.com/en/carpet-tile-mineraltile-29",
+    "note": "\"Aspect\""
+   },
+   "construction": {
+    "value": "Loop pile",
+    "source": "https://associated-weavers.com/en/carpet-tile-mineraltile-29"
+   },
+   "pileMaterial": {
+    "value": "Solution Dyed Nylon (SDN)",
+    "source": "https://associated-weavers.com/en/carpet-tile-mineraltile-29"
+   },
+   "pileWeight": null,
+   "totalWeight": null,
+   "pileHeight": {
+    "value": "2,2 mm",
+    "source": "https://associated-weavers.com/en/carpet-tile-mineraltile-29"
+   },
+   "totalThickness": {
+    "value": "5,2 mm",
+    "source": "https://associated-weavers.com/en/carpet-tile-mineraltile-29"
+   },
+   "usageClass": {
+    "value": "23 / 33, LC1",
+    "source": "https://associated-weavers.com/en/carpet-tile-mineraltile-29",
+    "note": "read from symbols in the GUT Product Passport (class 23, class 33, luxury class LC1)"
+   },
+   "fireClass": {
+    "value": "Bfl-s1",
+    "source": "https://associated-weavers.com/en/carpet-tile-mineraltile-29",
+    "note": "GUT Product Passport text and CE label"
+   },
+   "backing": {
+    "value": "Bitumen",
+    "source": "https://associated-weavers.com/en/carpet-tile-mineraltile-29"
+   },
+   "format": {
+    "value": "50 x 50 cm",
+    "source": "https://associated-weavers.com/en/carpet-tile-mineraltile-29"
+   },
+   "other": {
+    "domesticUse": {
+     "value": "Intensive",
+     "source": "https://associated-weavers.com/en/carpet-tile-mineraltile-29"
+    },
+    "commercialUse": {
+     "value": "Intensive",
+     "source": "https://associated-weavers.com/en/carpet-tile-mineraltile-29"
+    },
+    "thermalResistance": {
+     "value": "0.06 m²C°/W",
+     "source": "https://associated-weavers.com/en/carpet-tile-mineraltile-29"
+    },
+    "piecesInCarton": {
+     "value": "20",
+     "source": "https://associated-weavers.com/en/carpet-tile-mineraltile-29"
+    },
+    "orderCode": {
+     "value": "TMNRLBA29050050N20",
+     "source": "POST https://associated-weavers.com/api/productcatalog/filter/list"
+    },
+    "brand": {
+     "value": "Maverick",
+     "source": "POST https://associated-weavers.com/api/productcatalog/filter/list"
+    },
+    "collection": {
+     "value": "Maverick Tiles",
+     "source": "POST https://associated-weavers.com/api/productcatalog/filter/list"
+    },
+    "castorChair": {
+     "value": "Suitable for chair castors - Permanent use",
+     "source": "https://associated-weavers.com/en/carpet-tile-mineraltile-29"
+    }
+   },
+   "notFound": [
+    "pileWeight",
+    "totalWeight"
+   ],
+   "notes": []
+  },
+  {
+   "slug": "mineral-79",
+   "brand": "Associated Weavers",
+   "name": "Mineral 79 Cool Grey",
+   "sku": "79",
+   "sourceUrl": "https://associated-weavers.com/en/carpet-tile-mineraltile-79",
+   "colourName": {
+    "value": "Cool Grey",
+    "source": "POST https://associated-weavers.com/api/productcatalog/filter/list"
+   },
+   "colourGroup": {
+    "value": "Blue",
+    "source": "POST https://associated-weavers.com/api/productcatalog/filter/list (Colours facet)"
+   },
+   "design": {
+    "value": "Structured/dessin",
+    "source": "https://associated-weavers.com/en/carpet-tile-mineraltile-79",
+    "note": "\"Aspect\""
+   },
+   "construction": {
+    "value": "Loop pile",
+    "source": "https://associated-weavers.com/en/carpet-tile-mineraltile-79"
+   },
+   "pileMaterial": {
+    "value": "Solution Dyed Nylon (SDN)",
+    "source": "https://associated-weavers.com/en/carpet-tile-mineraltile-79"
+   },
+   "pileWeight": null,
+   "totalWeight": null,
+   "pileHeight": {
+    "value": "2,2 mm",
+    "source": "https://associated-weavers.com/en/carpet-tile-mineraltile-79"
+   },
+   "totalThickness": {
+    "value": "5,2 mm",
+    "source": "https://associated-weavers.com/en/carpet-tile-mineraltile-79"
+   },
+   "usageClass": {
+    "value": "23 / 33, LC1",
+    "source": "https://associated-weavers.com/en/carpet-tile-mineraltile-79",
+    "note": "read from symbols in the GUT Product Passport (class 23, class 33, luxury class LC1)"
+   },
+   "fireClass": {
+    "value": "Bfl-s1",
+    "source": "https://associated-weavers.com/en/carpet-tile-mineraltile-79",
+    "note": "GUT Product Passport text and CE label"
+   },
+   "backing": {
+    "value": "Bitumen",
+    "source": "https://associated-weavers.com/en/carpet-tile-mineraltile-79"
+   },
+   "format": {
+    "value": "50 x 50 cm",
+    "source": "https://associated-weavers.com/en/carpet-tile-mineraltile-79"
+   },
+   "other": {
+    "domesticUse": {
+     "value": "Intensive",
+     "source": "https://associated-weavers.com/en/carpet-tile-mineraltile-79"
+    },
+    "commercialUse": {
+     "value": "Intensive",
+     "source": "https://associated-weavers.com/en/carpet-tile-mineraltile-79"
+    },
+    "thermalResistance": {
+     "value": "0.06 m²C°/W",
+     "source": "https://associated-weavers.com/en/carpet-tile-mineraltile-79"
+    },
+    "piecesInCarton": {
+     "value": "20",
+     "source": "https://associated-weavers.com/en/carpet-tile-mineraltile-79"
+    },
+    "orderCode": {
+     "value": "TMNRLBA79050050N20",
+     "source": "POST https://associated-weavers.com/api/productcatalog/filter/list"
+    },
+    "brand": {
+     "value": "Maverick",
+     "source": "POST https://associated-weavers.com/api/productcatalog/filter/list"
+    },
+    "collection": {
+     "value": "Maverick Tiles",
+     "source": "POST https://associated-weavers.com/api/productcatalog/filter/list"
+    },
+    "castorChair": {
+     "value": "Suitable for chair castors - Permanent use",
+     "source": "https://associated-weavers.com/en/carpet-tile-mineraltile-79"
+    }
+   },
+   "notFound": [
+    "pileWeight",
+    "totalWeight"
+   ],
+   "notes": []
+  },
+  {
+   "slug": "medusa-99",
+   "brand": "Associated Weavers",
+   "name": "Medusa 99 Raven",
+   "sku": "99",
+   "sourceUrl": "https://associated-weavers.com/en/carpet-tile-medusatile-99",
+   "colourName": {
+    "value": "Raven",
+    "source": "POST https://associated-weavers.com/api/productcatalog/filter/list"
+   },
+   "colourGroup": {
+    "value": "Black",
+    "source": "POST https://associated-weavers.com/api/productcatalog/filter/list (Colours facet)"
+   },
+   "design": {
+    "value": "Structured/dessin",
+    "source": "https://associated-weavers.com/en/carpet-tile-medusatile-99",
+    "note": "\"Aspect\""
+   },
+   "construction": {
+    "value": "Loop pile",
+    "source": "https://associated-weavers.com/en/carpet-tile-medusatile-99"
+   },
+   "pileMaterial": {
+    "value": "Solution Dyed Nylon (SDN)",
+    "source": "https://associated-weavers.com/en/carpet-tile-medusatile-99"
+   },
+   "pileWeight": null,
+   "totalWeight": null,
+   "pileHeight": {
+    "value": "2,5 mm",
+    "source": "https://associated-weavers.com/en/carpet-tile-medusatile-99"
+   },
+   "totalThickness": {
+    "value": "5,5 mm",
+    "source": "https://associated-weavers.com/en/carpet-tile-medusatile-99"
+   },
+   "usageClass": {
+    "value": "23 / 33, LC1",
+    "source": "https://associated-weavers.com/en/carpet-tile-medusatile-99",
+    "note": "read from symbols in the GUT Product Passport (class 23, class 33, luxury class LC1)"
+   },
+   "fireClass": {
+    "value": "Bfl-s1",
+    "source": "https://associated-weavers.com/en/carpet-tile-medusatile-99",
+    "note": "GUT Product Passport text and CE label"
+   },
+   "backing": {
+    "value": "Bitumen",
+    "source": "https://associated-weavers.com/en/carpet-tile-medusatile-99"
+   },
+   "format": {
+    "value": "50 x 50 cm",
+    "source": "https://associated-weavers.com/en/carpet-tile-medusatile-99"
+   },
+   "other": {
+    "domesticUse": {
+     "value": "Intensive",
+     "source": "https://associated-weavers.com/en/carpet-tile-medusatile-99"
+    },
+    "commercialUse": {
+     "value": "Intensive",
+     "source": "https://associated-weavers.com/en/carpet-tile-medusatile-99"
+    },
+    "thermalResistance": {
+     "value": "0.09 m²C°/W",
+     "source": "https://associated-weavers.com/en/carpet-tile-medusatile-99"
+    },
+    "piecesInCarton": {
+     "value": "20",
+     "source": "https://associated-weavers.com/en/carpet-tile-medusatile-99"
+    },
+    "orderCode": {
+     "value": "TMDTIBA99050050N20",
+     "source": "POST https://associated-weavers.com/api/productcatalog/filter/list"
+    },
+    "brand": {
+     "value": "Maverick",
+     "source": "POST https://associated-weavers.com/api/productcatalog/filter/list"
+    },
+    "collection": {
+     "value": "Maverick Tiles",
+     "source": "POST https://associated-weavers.com/api/productcatalog/filter/list"
+    },
+    "castorChair": {
+     "value": "Suitable for chair castors - Permanent use",
+     "source": "https://associated-weavers.com/en/carpet-tile-medusatile-99"
+    }
+   },
+   "notFound": [
+    "pileWeight",
+    "totalWeight"
+   ],
+   "notes": []
+  },
+  {
+   "slug": "medusa-40",
+   "brand": "Associated Weavers",
+   "name": "Medusa 40 Bistro",
+   "sku": "40",
+   "sourceUrl": "https://associated-weavers.com/en/carpet-tile-medusatile-40",
+   "colourName": {
+    "value": "Bistro",
+    "source": "POST https://associated-weavers.com/api/productcatalog/filter/list"
+   },
+   "colourGroup": {
+    "value": "Brown",
+    "source": "POST https://associated-weavers.com/api/productcatalog/filter/list (Colours facet)"
+   },
+   "design": {
+    "value": "Structured/dessin",
+    "source": "https://associated-weavers.com/en/carpet-tile-medusatile-40",
+    "note": "\"Aspect\""
+   },
+   "construction": {
+    "value": "Loop pile",
+    "source": "https://associated-weavers.com/en/carpet-tile-medusatile-40"
+   },
+   "pileMaterial": {
+    "value": "Solution Dyed Nylon (SDN)",
+    "source": "https://associated-weavers.com/en/carpet-tile-medusatile-40"
+   },
+   "pileWeight": null,
+   "totalWeight": null,
+   "pileHeight": {
+    "value": "2,5 mm",
+    "source": "https://associated-weavers.com/en/carpet-tile-medusatile-40"
+   },
+   "totalThickness": {
+    "value": "5,5 mm",
+    "source": "https://associated-weavers.com/en/carpet-tile-medusatile-40"
+   },
+   "usageClass": {
+    "value": "23 / 33, LC1",
+    "source": "https://associated-weavers.com/en/carpet-tile-medusatile-40",
+    "note": "read from symbols in the GUT Product Passport (class 23, class 33, luxury class LC1)"
+   },
+   "fireClass": {
+    "value": "Bfl-s1",
+    "source": "https://associated-weavers.com/en/carpet-tile-medusatile-40",
+    "note": "GUT Product Passport text and CE label"
+   },
+   "backing": {
+    "value": "Bitumen",
+    "source": "https://associated-weavers.com/en/carpet-tile-medusatile-40"
+   },
+   "format": {
+    "value": "50 x 50 cm",
+    "source": "https://associated-weavers.com/en/carpet-tile-medusatile-40"
+   },
+   "other": {
+    "domesticUse": {
+     "value": "Intensive",
+     "source": "https://associated-weavers.com/en/carpet-tile-medusatile-40"
+    },
+    "commercialUse": {
+     "value": "Intensive",
+     "source": "https://associated-weavers.com/en/carpet-tile-medusatile-40"
+    },
+    "thermalResistance": {
+     "value": "0.09 m²C°/W",
+     "source": "https://associated-weavers.com/en/carpet-tile-medusatile-40"
+    },
+    "piecesInCarton": {
+     "value": "20",
+     "source": "https://associated-weavers.com/en/carpet-tile-medusatile-40"
+    },
+    "orderCode": {
+     "value": "TMDTIBA40050050N20",
+     "source": "POST https://associated-weavers.com/api/productcatalog/filter/list"
+    },
+    "brand": {
+     "value": "Maverick",
+     "source": "POST https://associated-weavers.com/api/productcatalog/filter/list"
+    },
+    "collection": {
+     "value": "Maverick Tiles",
+     "source": "POST https://associated-weavers.com/api/productcatalog/filter/list"
+    },
+    "castorChair": {
+     "value": "Suitable for chair castors - Permanent use",
+     "source": "https://associated-weavers.com/en/carpet-tile-medusatile-40"
+    }
+   },
+   "notFound": [
+    "pileWeight",
+    "totalWeight"
+   ],
+   "notes": []
+  },
+  {
+   "slug": "medusa-77",
+   "brand": "Associated Weavers",
+   "name": "Medusa 77 Royale",
+   "sku": "77",
+   "sourceUrl": "https://associated-weavers.com/en/carpet-tile-medusatile-77",
+   "colourName": {
+    "value": "Royale",
+    "source": "POST https://associated-weavers.com/api/productcatalog/filter/list"
+   },
+   "colourGroup": {
+    "value": "Blue",
+    "source": "POST https://associated-weavers.com/api/productcatalog/filter/list (Colours facet)"
+   },
+   "design": {
+    "value": "Structured/dessin",
+    "source": "https://associated-weavers.com/en/carpet-tile-medusatile-77",
+    "note": "\"Aspect\""
+   },
+   "construction": {
+    "value": "Loop pile",
+    "source": "https://associated-weavers.com/en/carpet-tile-medusatile-77"
+   },
+   "pileMaterial": {
+    "value": "Solution Dyed Nylon (SDN)",
+    "source": "https://associated-weavers.com/en/carpet-tile-medusatile-77"
+   },
+   "pileWeight": null,
+   "totalWeight": null,
+   "pileHeight": {
+    "value": "2,5 mm",
+    "source": "https://associated-weavers.com/en/carpet-tile-medusatile-77"
+   },
+   "totalThickness": {
+    "value": "5,5 mm",
+    "source": "https://associated-weavers.com/en/carpet-tile-medusatile-77"
+   },
+   "usageClass": {
+    "value": "23 / 33, LC1",
+    "source": "https://associated-weavers.com/en/carpet-tile-medusatile-77",
+    "note": "read from symbols in the GUT Product Passport (class 23, class 33, luxury class LC1)"
+   },
+   "fireClass": {
+    "value": "Bfl-s1",
+    "source": "https://associated-weavers.com/en/carpet-tile-medusatile-77",
+    "note": "GUT Product Passport text and CE label"
+   },
+   "backing": {
+    "value": "Bitumen",
+    "source": "https://associated-weavers.com/en/carpet-tile-medusatile-77"
+   },
+   "format": {
+    "value": "50 x 50 cm",
+    "source": "https://associated-weavers.com/en/carpet-tile-medusatile-77"
+   },
+   "other": {
+    "domesticUse": {
+     "value": "Intensive",
+     "source": "https://associated-weavers.com/en/carpet-tile-medusatile-77"
+    },
+    "commercialUse": {
+     "value": "Intensive",
+     "source": "https://associated-weavers.com/en/carpet-tile-medusatile-77"
+    },
+    "thermalResistance": {
+     "value": "0.09 m²C°/W",
+     "source": "https://associated-weavers.com/en/carpet-tile-medusatile-77"
+    },
+    "piecesInCarton": {
+     "value": "20",
+     "source": "https://associated-weavers.com/en/carpet-tile-medusatile-77"
+    },
+    "orderCode": {
+     "value": "TMDTIBA77050050N20",
+     "source": "POST https://associated-weavers.com/api/productcatalog/filter/list"
+    },
+    "brand": {
+     "value": "Maverick",
+     "source": "POST https://associated-weavers.com/api/productcatalog/filter/list"
+    },
+    "collection": {
+     "value": "Maverick Tiles",
+     "source": "POST https://associated-weavers.com/api/productcatalog/filter/list"
+    },
+    "castorChair": {
+     "value": "Suitable for chair castors - Permanent use",
+     "source": "https://associated-weavers.com/en/carpet-tile-medusatile-77"
+    }
+   },
+   "notFound": [
+    "pileWeight",
+    "totalWeight"
+   ],
+   "notes": []
+  }
+ ]
+}

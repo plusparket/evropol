@@ -1,0 +1,21 @@
+#colour:Blue: firstdefine512 firstdefine596 firstforward573 firstsway512 firstsway596 rocket504 rocket553 
+#colour:Grey: firstdefine914 firstdefine957 firstdefine965 firstforward810 firstforward817 firstforward907 firstforward961 firstforward983 firstforward989 firstforward990 firstforward995 firststreamline909 firststreamline942 firststreamline961 firstsway140 firstsway914 firstsway957 firstsway965 firstsway995 rocket914 rocket961 
+#colour:Black: firstdefine995 firstforward989 firstforward990 firstforward995 firststreamline991 firstsway140 firstsway995 rocket990 rocket994 
+#colour:Brown: firstdefine140 firstdefine815 firstdefine842 firstdefine847 firstforward810 firstforward817 firststreamline106 firststreamline817 firstsway175 firstsway815 firstsway847 
+#colour:Green: firstdefine626 firstdefine658 firstsway626 firstsway658 
+#colour:Red: firstdefine345 firstdefine388 firststreamline356 firstsway345 firstsway388 firstsway842 
+#colour:Orange: 
+#colour:Yellow: firstdefine215 firstsway215 
+#colour:Beige: firstdefine061 firstdefine102 firstdefine140 firstdefine175 firstforward061 firstforward140 firststreamline106 firststreamline180 firststreamline356 firstsway061 firstsway102 firstsway175 
+#colour:White: 
+#colour:Purple: 
+#colour:Pink: 
+#pattern:Plain: firstforward061 firstforward140 firstforward573 firstforward810 firstforward817 firstforward907 firstforward961 firstforward983 firstforward989 firstforward990 firstforward995 rocket504 rocket553 rocket914 rocket961 rocket990 rocket994 
+#pattern:Geometric: firstsway061 firstsway102 firstsway140 firstsway175 firstsway215 firstsway345 firstsway388 firstsway512 firstsway596 firstsway626 firstsway658 firstsway815 firstsway842 firstsway847 firstsway914 firstsway957 firstsway965 firstsway995 
+#pattern:Organic: 
+#pattern:Linear: firststreamline106 firststreamline180 firststreamline356 firststreamline817 firststreamline909 firststreamline942 firststreamline961 firststreamline991 
+#pattern:Varied: firstdefine061 firstdefine102 firstdefine140 firstdefine175 firstdefine215 firstdefine345 firstdefine388 firstdefine512 firstdefine596 firstdefine626 firstdefine658 firstdefine815 firstdefine842 firstdefine847 firstdefine914 firstdefine957 firstdefine965 firstdefine995 
+#structure:Loop_pile: firstdefine061 firstdefine102 firstdefine140 firstdefine175 firstdefine215 firstdefine345 firstdefine388 firstdefine512 firstdefine596 firstdefine626 firstdefine658 firstdefine815 firstdefine842 firstdefine847 firstdefine914 firstdefine957 firstdefine965 firstdefine995 firstforward061 firstforward140 firstforward573 firstforward810 firstforward817 firstforward907 firstforward961 firstforward983 firstforward989 firstforward990 firstforward995 firststreamline106 firststreamline180 firststreamline356 firststreamline817 firststreamline909 firststreamline942 firststreamline961 firststreamline991 firstsway061 firstsway102 firstsway140 firstsway175 firstsway215 firstsway345 firstsway388 firstsway512 firstsway596 firstsway626 firstsway658 firstsway815 firstsway842 firstsway847 firstsway914 firstsway957 firstsway965 firstsway995 rocket504 rocket553 rocket914 rocket961 rocket990 rocket994 
+#structure:Cut_pile: 
+#structure:minituft: 
+#structure:Loop_tip_sheared: 

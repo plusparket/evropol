@@ -1,0 +1,2 @@
+export const dec=s=>String(s??'').replace(/&nbsp;/g,' ').replace(/&#0?39;|&#x27;|&apos;/g,"'").replace(/&quot;/g,'"').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&').replace(/&#(\d+);/g,(m,n)=>String.fromCodePoint(+n));
+export const text=h=>dec(h.replace(/<script[\s\S]*?<\/script>/gi,' ').replace(/<style[\s\S]*?<\/style>/gi,' ').replace(/<[^>]+>/g,' ')).replace(/[ \t\r\f\v]+/g,' ').trim();
