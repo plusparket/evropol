@@ -4,9 +4,10 @@ import SiteLayout from '../layouts/SiteLayout.astro';
 import NotFound from '../components/NotFound.astro';
 import SectionView from '../components/SectionView.astro';
 import PageView from '../components/PageView.astro';
+import OfficeMap from '../components/OfficeMap.astro';
 import { getPageBySlug } from '../server/content.ts';
 import { getActiveBrands, getSectionBySlug, siteUrl } from '../server/sections.ts';
-import { fillPlaceholders, getSettings } from '../server/settings.ts';
+import { fillPlaceholders, getSettings, officeMaps } from '../server/settings.ts';
 import { plainText } from '../server/util.ts';
 import { breadcrumbJsonLd, organizationJsonLd, sectionDescription, sectionTitle, siteBase, withSiteName } from '../server/seo.ts';
 import { findRedirect } from '../server/redirects.ts';
@@ -40,6 +41,8 @@ const heading = section ? section.heading || section.name : '';
 const crumbsLd = section ? breadcrumbJsonLd(base, [{ name: heading, url: `/${section.slug}` }]) : undefined;
 // На странице «Контакты» — разметка компании (адрес, телефон, часы работы)
 const pageLd = page?.slug === 'contact' ? organizationJsonLd(settings, base, `${base}/img/og-evropol.jpg`) : undefined;
+// На странице «Контакты» справа от текста — Google-карта с точкой офиса
+const maps = page?.slug === 'contact' ? officeMaps(settings) : [];
 ---
 
 {
@@ -60,7 +63,9 @@ const pageLd = page?.slug === 'contact' ? organizationJsonLd(settings, base, `${
       canonicalPath={`/${page.slug}`}
       jsonLd={pageLd}
     >
-      <PageView title={page.title} html={pageContent} />
+      <PageView title={page.title} html={pageContent}>
+        {maps.length > 0 && <OfficeMap slot="aside" maps={maps} variant="side" />}
+      </PageView>
     </SiteLayout>
   ) : (
     <SiteLayout title="Страница не найдена" noindex>

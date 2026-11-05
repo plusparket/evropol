@@ -83,3 +83,14 @@ export async function upgradeEmail(): Promise<number> {
   });
   return changed;
 }
+
+/**
+ * Карта переехала из подвала вправо на странице «Контакты» (просьба владельца 05.11.2026): убирает строку
+ * «Карта внизу страницы.» из текста страницы. Запускается при каждом старте, меняет только страницу с этой строкой.
+ */
+export async function upgradeContactMap(): Promise<boolean> {
+  const res = await sql`UPDATE pages SET content = regexp_replace(content, '\s*<p>\s*Карта внизу страницы\.?\s*</p>', '', 'g'),
+                          updated_at = now()
+                         WHERE content ~ '<p>\s*Карта внизу страницы'`;
+  return res.count > 0;
+}

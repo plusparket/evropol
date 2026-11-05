@@ -10,7 +10,7 @@ import { ensureNewsSlugs } from '../src/server/content.ts';
 import { importLegacyPhotos } from '../src/server/legacy-photos.ts';
 import { upgradeHome } from '../src/server/home.ts';
 import { upgradeSections } from '../src/server/upgrade-sections.ts';
-import { upgradeContacts, upgradeEmail, upgradeWhatsapp } from '../src/server/upgrade-contacts.ts';
+import { upgradeContactMap, upgradeContacts, upgradeEmail, upgradeWhatsapp } from '../src/server/upgrade-contacts.ts';
 import { setupSectionSites } from '../src/server/section-sites.ts';
 import { upgradeSeo } from '../src/server/upgrade-seo.ts';
 import { upgradeBrand } from '../src/server/upgrade-brand.ts';
@@ -34,6 +34,7 @@ export async function prepare(): Promise<void> {
   if (await upgradeWhatsapp()) log('WhatsApp: новый номер +996 (779) 37 72 73');
   const emails = await upgradeEmail();
   if (emails) log(`почта info@bino.kg: изменено записей ${emails}`);
+  if (await upgradeContactMap()) log('«Контакты»: убрана строка «Карта внизу страницы» (карта теперь справа)');
   for (const msg of await upgradeSeo()) log(`поиск Google: ${msg}`);
   const renamed = await upgradeBrand();
   if (renamed) log(`название ЕвроПол вместо Европроект: изменено записей ${renamed}`);

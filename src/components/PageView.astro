@@ -1,5 +1,6 @@
 ---
 // Текстовая страница: крупный заголовок и текст в спокойной колонке на тёмной полосе.
+// Слот aside (например, карта на странице «Контакты») встаёт справа от текста, на телефоне — под ним.
 import Crumbs from './Crumbs.astro';
 
 interface Props {
@@ -11,19 +12,30 @@ interface Props {
   meta?: string;
 }
 const { title, html, parents = [], meta } = Astro.props;
+const aside = Astro.slots.has('aside');
+const width = aside ? 'ppage-wide' : 'ppage-narrow';
 ---
 
 <article class="ppage">
   <header class="ppage-head">
-    <div class="pin ppage-narrow">
+    <div class:list={['pin', width]}>
       <Crumbs items={[...parents, { name: title }]} />
       <h1 class="ppage-title">{title}</h1>
       {meta && <div class="ppage-meta">{meta}</div>}
     </div>
   </header>
-  <div class="pin ppage-narrow">
+  <div class:list={['pin', width]}>
     <slot name="before" />
-    <div class="ppage-text" set:html={html} />
+    {
+      aside ? (
+        <div class="ppage-cols">
+          <div class="ppage-text" set:html={html} />
+          <aside class="ppage-aside"><slot name="aside" /></aside>
+        </div>
+      ) : (
+        <div class="ppage-text" set:html={html} />
+      )
+    }
     <slot />
   </div>
 </article>
