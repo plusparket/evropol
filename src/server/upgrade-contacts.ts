@@ -94,3 +94,35 @@ export async function upgradeContactMap(): Promise<boolean> {
                          WHERE content ~ '<p>\s*Карта внизу страницы'`;
   return res.count > 0;
 }
+
+const HOURS_FLAG = 'contacts_text_2026_11_05';
+/** Прежний текст «Контактов» из seed/pages/contact.html (если его не меняли в админке) */
+const OLD_CONTACT_PAGE = `<p><b>Адрес:</b> {{address}}</p>
+<p><b>Телефон:</b> <a href="tel:{{phone_main}}">{{phone_main}}</a></p>
+<p><b>WhatsApp:</b> {{panel_whatsapp}}</p>
+<p><b>Email:</b> <a href="mailto:{{email}}">{{email}}</a></p>`;
+
+/**
+ * Контакты в виде, который попросил владелец 05.11.2026: «Магазин «ЕвроПол»:», адрес, телефон, «Режим работы:
+ * с 9.00 до 17.00». Один раз: режим работы, если в нём прежнее «Пн–Сб 9:00–17:00», и текст страницы «Контакты»,
+ * если его не меняли в админке. Возвращает список изменений для журнала запуска.
+ */
+export async function upgradeContactsText(newPageHtml: string): Promise<string[]> {
+  const [done] = await sql`SELECT 1 FROM settings WHERE key = ${HOURS_FLAG}`;
+  if (done) return [];
+  const log: string[] = [];
+  const hours = SETTINGS_SCHEMA.find((s) => s.key === 'work_hours')?.default ?? '';
+  await sql.begin(async (tx) => {
+    if ((await tx`UPDATE settings SET value = ${hours} WHERE key = 'work_hours' AND value = 'Пн–Сб 9:00–17:00'`).count) {
+      log.push(`режим работы: ${hours}`);
+    }
+    const pages = await tx<{ id: number; content: string }[]>`SELECT id, content FROM pages WHERE slug = 'contact'`;
+    for (const p of pages) {
+      if (p.content.replace(/\s+/g, ' ').trim() !== OLD_CONTACT_PAGE.replace(/\s+/g, ' ').trim()) continue;
+      await tx`UPDATE pages SET content = ${newPageHtml}, updated_at = now() WHERE id = ${p.id}`;
+      log.push('текст страницы «Контакты»');
+    }
+    await tx`INSERT INTO settings (key, value) VALUES (${HOURS_FLAG}, ${new Date().toISOString()}) ON CONFLICT (key) DO NOTHING`;
+  });
+  return log;
+}

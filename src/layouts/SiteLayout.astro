@@ -4,7 +4,7 @@ import '../styles/site.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import SearchHead from '../components/SearchHead.astro';
-import { getSettings } from '../server/settings.ts';
+import { getSettings, officeMaps } from '../server/settings.ts';
 import { getMenus } from '../server/content.ts';
 import { getSections } from '../server/sections.ts';
 import { siteBase } from '../server/seo.ts';
@@ -32,6 +32,8 @@ const ogImage = siteUrl + (image || '/img/og-evropol.jpg');
 const ldBlocks = (Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : []).map((o) => JSON.stringify(o).replace(/</g, '\\u003c'));
 const copyright = settings.copyright.replaceAll('{year}', String(new Date().getFullYear()));
 const waHref = 'https://wa.me/' + settings.panel_whatsapp.replace(/\D/g, '');
+// Небольшая карта в подвале — только на главной (на «Контактах» карта справа от текста)
+const footerMap = Astro.url.pathname === '/' ? officeMaps(settings)[0] : undefined;
 ---
 
 <!doctype html>
@@ -72,7 +74,7 @@ const waHref = 'https://wa.me/' + settings.panel_whatsapp.replace(/\D/g, '');
       <slot />
     </main>
 
-    <Footer settings={settings} menus={menus} sections={sections} copyright={copyright} />
+    <Footer settings={settings} menus={menus} sections={sections} copyright={copyright} map={footerMap} />
 
     {
       settings.panel_whatsapp && (

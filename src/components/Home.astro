@@ -1,15 +1,14 @@
 ---
 // Главная как на europroject.kg: слайдер фото во всю ширину, плитки разделов на его нижнем крае, слева
 // «Наши контакты», справа три новости. Карточки разделов, производители и текст о компании выводятся, только
-// если в админке у этих блоков есть заголовок (по умолчанию пусто, как на старом сайте). В самом низу — Google-карта
-// с точкой ЕвроПол (ссылка и координаты — в «Настройках сайта»).
+// если в админке у этих блоков есть заголовок (по умолчанию пусто, как на старом сайте).
+// Небольшая Google-карта с точкой ЕвроПол — в подвале главной, справа от контактов (Footer.astro).
 // Тексты редактируются в админке: «Главная страница» (src/server/home.ts), карточки — «Разделы», логотипы — «Бренды».
 import Lines from './Lines.astro';
-import OfficeMap from './OfficeMap.astro';
 import type { HomeContent } from '../server/home.ts';
 import type { News } from '../server/content.ts';
 import { isExternal, linkLabel, sectionHref, sectionLink, sectionUrl, type Brand, type Section } from '../server/sections.ts';
-import { officeMaps, type Settings } from '../server/settings.ts';
+import type { Settings } from '../server/settings.ts';
 import { homeSrcset, uploadUrl } from '../server/uploads.ts';
 import { formatDate, plainText } from '../server/util.ts';
 
@@ -31,7 +30,6 @@ const brandHref = (b: Brand) => {
   const s = sections.find((x) => x.id === b.sectionId);
   return s ? sectionHref(s) : b.link;
 };
-const maps = officeMaps(settings);
 const cover = (n: News) => (n.image ? uploadUrl(n.image) : (n.content.match(/<img[^>]+src="([^"]+)"/)?.[1] ?? ''));
 ---
 
@@ -192,17 +190,6 @@ const cover = (n: News) => (n.image ? uploadUrl(n.image) : (n.content.match(/<im
         <h2 class="ptitle">{home.about.title}</h2>
         <div class="psalon-text" set:html={aboutHtml} />
         {home.about.linkText && <a class="plink" href={home.about.link}>{home.about.linkText}</a>}
-      </div>
-    </section>
-  )
-}
-
-{
-  maps.length > 0 && (
-    <section class="psec pmap-home" aria-labelledby="map-title">
-      <div class="pin">
-        <h2 class="ptitle" id="map-title">Как нас найти</h2>
-        <OfficeMap maps={maps} variant="wide" />
       </div>
     </section>
   )

@@ -1,9 +1,9 @@
 ---
 // Подвал как на europroject.kg: чёрный, четыре колонки с заголовками и ссылками с точками, внизу копирайт.
-// Карта — не здесь: справа на странице «Контакты» и внизу главной (OfficeMap.astro).
+// На главной справа от контактов — небольшая Google-карта с точкой ЕвроПол (на «Контактах» карта справа от текста).
 import type { MenuName, MenuItem } from '../server/content.ts';
 import { sectionHref, type Section } from '../server/sections.ts';
-import type { Settings } from '../server/settings.ts';
+import type { OfficeMap, Settings } from '../server/settings.ts';
 import SocialIcon from './SocialIcon.astro';
 
 interface Props {
@@ -11,13 +11,15 @@ interface Props {
   menus: Record<MenuName, MenuItem[]>;
   sections: Section[];
   copyright: string;
+  /** Карта офиса (только на главной) */
+  map?: OfficeMap;
 }
-const { settings, menus, sections, copyright } = Astro.props;
+const { settings, menus, sections, copyright, map } = Astro.props;
 const phoneHref = (p: string) => 'tel:' + p.replace(/[^\d+]/g, '');
 ---
 
 <footer class="pf">
-  <div class="pf-cols">
+  <div class:list={['pf-cols', { 'pf-cols--map': map }]}>
     <div class="pf-col">
       <div class="pf-title">О компании</div>
       <ul>{menus.footer_company.map((m) => <li><a href={m.url} target={m.newTab ? '_blank' : undefined}>{m.label}</a></li>)}</ul>
@@ -33,14 +35,22 @@ const phoneHref = (p: string) => 'tel:' + p.replace(/[^\d+]/g, '');
     <div class="pf-col">
       <div class="pf-title">Контакты</div>
       <ul>
-        <li>{settings.address}</li>
-        <li><a href={phoneHref(settings.phone_main)}>{settings.phone_main}</a></li>
-        {settings.work_hours && <li>{settings.work_hours}</li>}
+        <li>Магазин «{settings.site_name}»:<br />{settings.address}</li>
+        <li>Телефон: <a href={phoneHref(settings.phone_main)}>{settings.phone_main}</a></li>
+        {settings.work_hours && <li>Режим работы: {settings.work_hours}</li>}
         {settings.address_second && <li>{settings.name_second}, {settings.address_second}</li>}
         {settings.phone_second && <li><a href={phoneHref(settings.phone_second)}>{settings.phone_second}</a></li>}
         {settings.email && <li><a href={`mailto:${settings.email}`}>{settings.email}</a></li>}
       </ul>
     </div>
+    {
+      map && (
+        <figure class="pf-map">
+          <iframe data-src={map.src} title={`Карта: ${map.name}, ${map.address}`} allowfullscreen referrerpolicy="strict-origin-when-cross-origin" />
+          <figcaption><a href={map.link} target="_blank" rel="noopener">Открыть в Google Картах</a></figcaption>
+        </figure>
+      )
+    }
     <div class="pf-col">
       <div class="pf-title">Соц. сети</div>
       <p class="pf-note">Связаться с нами:</p>
