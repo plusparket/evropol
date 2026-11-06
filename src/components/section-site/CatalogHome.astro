@@ -28,6 +28,12 @@ const showBrand = new Set(products.map((p) => p.brand).filter(Boolean)).size > 1
 const word = (n: number) => (n % 10 === 1 && n % 100 !== 11 ? 'товара' : 'товаров');
 // По 24 товара на странице (?page=N), «В наличии» первыми, как в getProducts
 const { page, pages, slice, from, to } = paginate(items, Astro.url.searchParams.get('page'));
+/** «Подберём …»: название раздела с маленькой буквы в винительном падеже («Ковровая плитка» → «ковровую плитку») */
+const accusative = (name: string) =>
+  (/^\p{Lu}\p{Ll}/u.test(name) ? name[0].toLowerCase() + name.slice(1) : name)
+    .split(' ')
+    .map((w) => w.replace(/ая$/, 'ую').replace(/яя$/, 'юю').replace(/(?<=[бвгджзклмнпрстфхцчшщ])а$/, 'у').replace(/(?<=[льи])я$/, 'ю'))
+    .join(' ');
 ---
 
 <div class="pin cat">
@@ -104,7 +110,7 @@ const { page, pages, slice, from, to } = paginate(items, Astro.url.searchParams.
 <section class="psec pcontact" id="contacts">
   <div class="pin pcontact-grid">
     <div>
-      <h2 class="ptitle">Подберём {/^\p{Lu}\p{Ll}/u.test(site.name) ? site.name[0].toLowerCase() + site.name.slice(1) : site.name}</h2>
+      <h2 class="ptitle">Подберём {accusative(site.name)}</h2>
       <p class="psub">Позвоните или напишите: покажем образцы в офисе и рассчитаем количество. Цену и наличие сообщим там же.</p>
     </div>
     <div class="pcontact-list">
