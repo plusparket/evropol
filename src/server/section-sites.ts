@@ -228,7 +228,15 @@ async function addSeedProducts(tx: Tx, sectionId: number, seed: SeedCatalog): Pr
   return added;
 }
 
+/** Фото, которые лежат в репозитории: «seed:photos/<раздел>/<файл>» — путь от папки seed. */
+const SEED_DIR = path.dirname(CATALOG_DIR);
+
 async function download(url: string): Promise<Buffer | null> {
+  if (url.startsWith('seed:')) {
+    const file = path.resolve(SEED_DIR, url.slice(5));
+    if (!file.startsWith(SEED_DIR + path.sep)) return null;
+    return readFile(file).catch(() => null);
+  }
   try {
     const res = await fetch(url, { signal: AbortSignal.timeout(30_000) });
     return res.ok ? Buffer.from(await res.arrayBuffer()) : null;
