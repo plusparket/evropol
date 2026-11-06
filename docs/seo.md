@@ -14,7 +14,7 @@ JavaScript для чтения страницы не нужен.
 |---|---|---|---|
 | Заголовок с городом: «Ламинат в Бишкеке: каталог \| …», у товара «Бренд Название, коллекция в Бишкеке» | `src/server/seo.ts`, страницы | да | да |
 | Разные заголовки у одноимённых товаров (декор в двух форматах): «…, узкая доска Loft» | `namesakeSuffix` | — | да |
-| Описание до 160 знаков, в конце «Бишкек, тел. …» или «В наличии в Бишкеке» | `sectionSiteDescription`, `productDescription`, `categoryDescription` | да | да |
+| Описание до 160 знаков, в конце «Бишкек, тел. …» | `sectionSiteDescription`, `productDescription`, `categoryDescription` | да | да |
 | Один адрес у страницы (canonical), без `/` в конце, `www.` → без www (301) | layouts, `src/middleware.ts` | да | да |
 | `sitemap.xml` с фото для Google Картинок, `robots.txt` со ссылкой на него | `src/pages/sitemap.xml.ts`, `src/pages/section-site/sitemap.xml.ts` | да | у каждого свой |
 | Разметка schema.org: компания и офис (`Organization`, `LocalBusiness`) | `organizationJsonLd` | главная, «Контакты» | — |

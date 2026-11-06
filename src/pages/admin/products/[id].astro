@@ -1,5 +1,5 @@
 ---
-// Товар сайта раздела: название, раздел и бренд, метки «Новинка» и «В наличии», категории, характеристики, фото, описание.
+// Товар сайта раздела: название, раздел и бренд, метки «Новинка» и «Со склада», категории, характеристики, фото, описание.
 import AdminLayout from '../../../layouts/AdminLayout.astro';
 import RowsEditor from '../../../components/admin/RowsEditor.astro';
 import { sql } from '../../../server/db.ts';
@@ -173,7 +173,7 @@ const title = isNew ? 'Новый товар' : form.name || 'Товар';
         <div class="field full inline">
           <label class="check"><input type="checkbox" name="is_published" checked={form.isPublished} /> Показывать на сайте</label>
           <label class="check"><input type="checkbox" name="is_new" checked={form.isNew} /> Метка «Новинка»</label>
-          <label class="check"><input type="checkbox" name="in_stock" checked={form.inStock} /> Метка «В наличии» (в каталоге и категориях — первым)</label>
+          <label class="check"><input type="checkbox" name="in_stock" checked={form.inStock} /> Со склада: на сайте показывать первым (надпись на сайте не видна)</label>
         </div>
       </div>
     </div>

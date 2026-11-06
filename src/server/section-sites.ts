@@ -3,7 +3,7 @@
 // setupSectionSites() — при запуске, один раз для каждого раздела из SITES: включает сайт раздела по адресу
 // <раздел>.<адрес главного сайта> (на компьютере — vinyl.localhost, laminate.localhost), добавляет разделу бренды
 // и товары из seed/catalog/<раздел>.json, если товаров в разделе ещё нет. Отметка в настройках: section_site:<раздел>.
-// При каждом запуске: если в файле выросло поле version, добавляет новые товары, обновляет метку «В наличии»
+// При каждом запуске: если в файле выросло поле version, добавляет новые товары, обновляет отметку «со склада»
 // и ссылки на фото у товаров, у которых фото ещё нет (upgradeCatalog, отметка catalog_version:<раздел>).
 // Адрес и цвет потом меняются в админке: «Разделы» → раздел → «Сайт раздела».
 //
@@ -28,7 +28,7 @@ type SeedProduct = {
   specs: Attr[]; description: string; images: string[]; sourceUrl: string; isNew?: boolean;
   /** Исправления в описании уже загруженного товара: «старый текст» → «новый» (например, битая ссылка на PDF) */
   descriptionFixes?: Record<string, string>;
-  /** Метка «В наличии» */
+  /** Товар со склада владельца (из таблицы остатков): в каталоге идёт первым, надписи на сайте нет */
   inStock?: boolean;
   /** Адреса категорий товара (из categories файла) */
   categories?: string[];
@@ -38,7 +38,7 @@ type SeedBrand = { name: string; link?: string; description?: string };
 type SeedSite = { layout?: string; address?: string; heading?: string; summary?: string; description?: string; seoTitle?: string; seoDescription?: string };
 /**
  * hideBrands — убрать бренды раздела с сайта (товары без бренда, производитель указан в характеристиках).
- * version — номер версии каталога: когда он растёт, при запуске добавляются новые товары и обновляется «В наличии»
+ * version — номер версии каталога: когда он растёт, при запуске добавляются новые товары и обновляется отметка «со склада»
  * (см. upgradeCatalog). categories — группы и категории товаров (вид главной 'groups').
  */
 type SeedCatalog = {
@@ -46,6 +46,11 @@ type SeedCatalog = {
   /** Исправления в текстах уже работающего сайта (заголовок, описания): «старый текст» → «новый», если их не меняли в админке */
   siteFixes?: Record<string, string>;
   hideBrands?: boolean; brands?: SeedBrand[]; categories?: SeedCategory[]; products: SeedProduct[];
+  /**
+   * Новая версия переписывает у загруженных товаров из файла название, коллекцию, характеристики, значения
+   * для фильтров и описание (правки этих полей в админке теряются). Фото и метки не трогает.
+   */
+  refreshProducts?: boolean;
 };
 
 /** Адрес сайта раздела по адресу главного сайта: localhost → vinyl.localhost, evropol.kg → vinyl.evropol.kg */
@@ -66,7 +71,7 @@ export async function setupSectionSites(): Promise<string[]> {
       const [section] = await sql<{ id: number; name: string }[]>`SELECT id, name FROM sections WHERE slug = ${slug}`;
       const up = section ? await upgradeCatalog(section.id, slug) : null;
       if (up?.added) log.push(`«${section!.name}»: новых товаров ${up.added}`);
-      if (up?.inStock) log.push(`«${section!.name}»: метка «В наличии» обновлена у ${up.inStock}`);
+      if (up?.inStock) log.push(`«${section!.name}»: отметка «со склада» обновлена у ${up.inStock}`);
       continue;
     }
     const [section] = await sql<{ id: number; name: string }[]>`SELECT id, name FROM sections WHERE slug = ${slug}`;
@@ -115,7 +120,7 @@ async function loadCatalog(sectionId: number, slug: string): Promise<number> {
 
 /**
  * Новая версия каталога в seed/catalog/<раздел>.json (поле version больше записанного в настройках
- * catalog_version:<раздел>): добавляет товары, которых в разделе ещё нет (по адресу), и ставит метку «В наличии»
+ * catalog_version:<раздел>): добавляет товары, которых в разделе ещё нет (по адресу), и ставит отметку «со склада»
  * товарам из файла так, как в файле. Остальные товары и правки в админке не трогает. Возвращает число новых товаров.
  */
 async function upgradeCatalog(sectionId: number, slug: string): Promise<{ added: number; inStock: number } | null> {
@@ -133,12 +138,19 @@ async function upgradeCatalog(sectionId: number, slug: string): Promise<{ added:
           WHERE id = ${sectionId} AND strpos(${tx(col)}, ${from}) > 0 AND strpos(${tx(col)}, ${to}) = 0`;
       }
     }
+    if (seed.hideBrands) await tx`UPDATE brands SET is_active = false WHERE section_id = ${sectionId} AND is_active`;
     const added = await addSeedProducts(tx, sectionId, seed);
     let inStock = 0;
     for (const p of seed.products) {
       const r = await tx`UPDATE products SET in_stock = ${p.inStock ?? false}, updated_at = now()
         WHERE section_id = ${sectionId} AND slug = ${p.slug} AND in_stock <> ${p.inStock ?? false}`;
       inStock += r.count;
+      if (seed.refreshProducts) {
+        await tx`UPDATE products SET ${tx({
+          name: p.name, collection: p.collection, sku: p.sku, attributes: tx.json(p.attributes), facets: tx.json(p.facets),
+          specs: tx.json(p.specs), description: p.description,
+        })}, updated_at = now() WHERE section_id = ${sectionId} AND slug = ${p.slug}`;
+      }
       for (const [from, to] of Object.entries(p.descriptionFixes ?? {})) {
         await tx`UPDATE products SET description = replace(description, ${from}, ${to}), updated_at = now()
           WHERE section_id = ${sectionId} AND slug = ${p.slug} AND strpos(description, ${from}) > 0 AND strpos(description, ${to}) = 0`;
@@ -216,7 +228,15 @@ async function addSeedProducts(tx: Tx, sectionId: number, seed: SeedCatalog): Pr
   return added;
 }
 
+/** Фото, которые лежат в репозитории: «seed:photos/<раздел>/<файл>» — путь от папки seed. */
+const SEED_DIR = path.dirname(CATALOG_DIR);
+
 async function download(url: string): Promise<Buffer | null> {
+  if (url.startsWith('seed:')) {
+    const file = path.resolve(SEED_DIR, url.slice(5));
+    if (!file.startsWith(SEED_DIR + path.sep)) return null;
+    return readFile(file).catch(() => null);
+  }
   try {
     const res = await fetch(url, { signal: AbortSignal.timeout(30_000) });
     return res.ok ? Buffer.from(await res.arrayBuffer()) : null;
@@ -237,6 +257,7 @@ export async function importProductPhotos(log: (msg: string) => void = console.l
     if (!todo.length) return 0;
     log(`фото товаров: скачиваю для ${todo.length} товаров`);
     let done = 0;
+    let failed = 0;
     for (const p of todo) {
       const saved: string[] = [];
       for (const url of p.sourceImages) {
@@ -246,8 +267,9 @@ export async function importProductPhotos(log: (msg: string) => void = console.l
         if (rel) saved.push(rel);
       }
       if (!saved.length) {
-        // Первый товар без единого фото — скорее всего, нет интернета: остальные не мучаем, повтор при следующем запуске
-        if (!done) {
+        // Первые пять товаров без единого фото — скорее всего, нет интернета: остальные не мучаем,
+        // повтор при следующем запуске. Одна битая ссылка не останавливает загрузку остальных.
+        if (!done && ++failed >= 5) {
           log('фото товаров: сайт производителя недоступен, попробую при следующем запуске');
           return 0;
         }

@@ -35,7 +35,7 @@ const sectionOf = (id: number) => sections.find((s) => s.id === id);
   </div>
   <p class="muted">
     Товары показываются на сайте своего раздела (включается в «Разделах» → раздел → «Сайт раздела»). На главном сайте
-    товаров нет. По «Значениям для фильтров» строятся фильтры каталога. Товары с меткой «В наличии» идут в каталоге первыми.
+    товаров нет. По «Значениям для фильтров» строятся фильтры каталога. Товары с отметкой «Со склада» идут в каталоге первыми, надписи на сайте нет.
   </p>
 
   <form class="card inline" method="get" style="padding:14px">
@@ -44,7 +44,7 @@ const sectionOf = (id: number) => sections.find((s) => s.id === id);
       <option value="">Все разделы</option>
       {sections.map((s) => <option value={s.id} selected={s.id === sectionId}>{s.name}</option>)}
     </select>
-    <label class="check"><input type="checkbox" name="stock" value="1" checked={stockOnly} /> только «В наличии»</label>
+    <label class="check"><input type="checkbox" name="stock" value="1" checked={stockOnly} /> только «Со склада»</label>
     <button class="btn secondary" type="submit">Найти</button>
     {(q || sectionId || stockOnly) && <a href="/admin/products">Сбросить</a>}
   </form>
@@ -66,7 +66,7 @@ const sectionOf = (id: number) => sections.find((s) => s.id === id);
                 <td class="muted">{p.sku}</td>
                 <td>{s?.name}</td>
                 <td class="nowrap">
-                  {p.inStock && <span class="tag">в наличии</span>}{' '}
+                  {p.inStock && <span class="tag">со склада</span>}{' '}
                   {!p.isPublished && <span class="tag off">скрыт</span>}{' '}
                   {s?.siteHost ? <a class="muted small" href={`${siteUrl(s)}/${p.slug}`} target="_blank" rel="noopener">на сайте ↗</a> : <span class="tag off">сайт раздела выключен</span>}
                 </td>

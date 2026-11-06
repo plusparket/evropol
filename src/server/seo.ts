@@ -53,12 +53,11 @@ function withTail(text: string, tail: string, max = 160): string {
   return t + (/[.!?…]$/.test(t) ? ' ' : '. ') + tail;
 }
 
-/** Главная сайта раздела: краткое описание, число товаров и наличие, город и телефон */
+/** Главная сайта раздела: краткое описание, число товаров, город и телефон */
 export function sectionSiteDescription(site: Section, products: ProductItem[], s: Settings): string {
   if (site.seoDescription) return site.seoDescription;
-  const inStock = products.filter((p) => p.inStock).length;
   const count = products.length
-    ? `${products.length} ${pluralRu(products.length, ['позиция', 'позиции', 'позиций'])} в каталоге` + (inStock ? `, ${inStock} в наличии` : '') + '.'
+    ? `${products.length} ${pluralRu(products.length, ['позиция', 'позиции', 'позиций'])} в каталоге.`
     : '';
   const lead = site.summary || plainText(site.description, 400);
   return withTail([lead, count].filter(Boolean).join(lead && !/[.!?…]$/.test(lead) ? '. ' : ' '), `Бишкек, тел. ${s.phone_main}.`);
@@ -70,11 +69,11 @@ export function categoryDescription(name: string, description: string, count: nu
   return withTail(lead, `Бишкек, тел. ${s.phone_main}.`);
 }
 
-/** Страница товара: начало описания, «В наличии в Бишкеке» или телефон */
+/** Страница товара: начало описания, город и телефон */
 export function productDescription(p: ProductItem, s: Settings): string {
   if (p.seoDescription) return p.seoDescription;
   const lead = plainText(p.description, 400) || [p.brand, p.collection, p.name].filter(Boolean).join(' ');
-  return withTail(lead, p.inStock ? 'В наличии в Бишкеке.' : `Бишкек, тел. ${s.phone_main}.`);
+  return withTail(lead, `Бишкек, тел. ${s.phone_main}.`);
 }
 
 // --- Разметка schema.org ----------------------------------------------------------------

@@ -11,14 +11,13 @@ interface Props {
   products: ProductItem[];
   tree: CategoryNode[];
   settings: Settings;
-  stockOnly?: boolean;
 }
-const { site, products, tree, settings, stockOnly } = Astro.props;
+const { site, products, tree, settings } = Astro.props;
 const phoneHref = 'tel:' + settings.phone_main.replace(/[^\d+]/g, '');
 const waHref = 'https://wa.me/' + settings.panel_whatsapp.replace(/\D/g, '');
 ---
 
-<CategoryView site={site} tree={tree} products={products} stockOnly={stockOnly} />
+<CategoryView site={site} tree={tree} products={products} />
 
 {
   site.description && (
