@@ -17,6 +17,9 @@ const OLD_CONTACT_PAGE = `<p><b>Магазин «{{site_name}}»:</b><br>
 Режим работы: {{work_hours}}</p>
 <p>WhatsApp: {{panel_whatsapp}}<br>
 Email: <a href="mailto:{{email}}">{{email}}</a></p>`;
+/** Адрес салона «Дом Паркета» уточнён владельцем 06.11.2026: строительный комплекс «Монолит» */
+const OLD_SALON = 'г. Бишкек, ул. Шабдан Баатыра 354, бутик Д4';
+const NEW_SALON = 'г. Бишкек, строительный комплекс «Монолит», ул. Шабдан Баатыра, 354, бутик Д4';
 const norm = (t: string) => t.replace(/\s+/g, ' ').trim();
 /** Признаки прежних версий страницы: первая фраза и блок «Производители» */
 const OLD_ABOUT_MARKS = ['напольные покрытия европейских производителей', '<h2>Производители</h2>'];
@@ -26,6 +29,9 @@ const OLD_HOME_ABOUT_START = '<p>Мы поставляем в Кыргызста
 /** Возвращает список изменений для журнала запуска. */
 export async function upgradeAbout(): Promise<string[]> {
   const log = await upgradeContactShops();
+  const fixed = await sql`UPDATE pages SET content = replace(content, ${OLD_SALON}, ${NEW_SALON}), updated_at = now()
+                          WHERE slug IN ('about', 'contact') AND position(${OLD_SALON} in content) > 0`;
+  if (fixed.count) log.push('адрес салона «Дом Паркета»: строительный комплекс «Монолит»');
   const [done] = await sql`SELECT 1 FROM settings WHERE key = ${FLAG}`;
   if (done) return log;
   const html = (await readFile(path.resolve(process.cwd(), 'seed', 'pages', 'about.html'), 'utf8')).trim();
