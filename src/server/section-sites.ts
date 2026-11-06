@@ -257,6 +257,7 @@ export async function importProductPhotos(log: (msg: string) => void = console.l
     if (!todo.length) return 0;
     log(`фото товаров: скачиваю для ${todo.length} товаров`);
     let done = 0;
+    let failed = 0;
     for (const p of todo) {
       const saved: string[] = [];
       for (const url of p.sourceImages) {
@@ -266,8 +267,9 @@ export async function importProductPhotos(log: (msg: string) => void = console.l
         if (rel) saved.push(rel);
       }
       if (!saved.length) {
-        // Первый товар без единого фото — скорее всего, нет интернета: остальные не мучаем, повтор при следующем запуске
-        if (!done) {
+        // Первые пять товаров без единого фото — скорее всего, нет интернета: остальные не мучаем,
+        // повтор при следующем запуске. Одна битая ссылка не останавливает загрузку остальных.
+        if (!done && ++failed >= 5) {
           log('фото товаров: сайт производителя недоступен, попробую при следующем запуске');
           return 0;
         }

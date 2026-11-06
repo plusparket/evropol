@@ -12,6 +12,7 @@ const ICONS: Record<string, string> = {
   'Цвет:Жёлтый': 'color-zheltyy.png',
   'Цвет:Зелёный': 'color-zelenyy.png',
   'Цвет:Коричневый': 'color-korichnevyy.png',
+  'Цвет:Красный': 'color-krasnyy.png',
   'Цвет:Оранжевый': 'color-oranzhevyy.png',
   'Цвет:Натуральный': 'color-naturalnyy.png',
   'Цвет:Рыжий': 'color-ryzhiy.png',
@@ -20,6 +21,7 @@ const ICONS: Record<string, string> = {
   'Цвет:Серый': 'color-seryy.png',
   'Цвет:Синий': 'color-siniy.png',
   'Цвет:Тёмно-серый': 'color-temno-seryy.png',
+  'Цвет:Фиолетовый': 'color-fioletovyy.png',
   'Цвет:Чёрный': 'color-chernyy.png',
 };
 
