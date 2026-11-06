@@ -1,7 +1,7 @@
 {
  "section": "vinyl",
- "version": 5,
- "note": "Кварцвинил SPC и LVT. Версия 1: BerryAlloc Click Comfort 55 (Zenn), данные и фото berryalloc.com, снимок 2026-10. Версия 2 (2026-11-05): позиции со склада из таблицы владельца SPC_LVT_2026.xls, лист «ОКТЯБРЬ». Отмечены «В наличии»: BerryAlloc Zenn Orlando (доска и ёлочка), Monsanto и Porto (ёлочка); Noventis Grand Canyon 2001–2008 (вся коллекция с bigfloor.pro, 2009 и 2010 без метки; «Дуб Колорадо 2000» на сайте BIG нет); Fine Floor Made In Belgium MIB-0041, 0042, 0049, 0056 (вся коллекция с finefloor.ru; 0042 и 0056 сняты с сайта Fine Floor, данные и фото у дилера finefloor.spb.ru); Enviro Nature 006 (доска), Rustic 013 (доска и ёлочка), вся линия SPC с enviroflooring.com; Kährs Dom (Dry Back Stone, kahrs.com). Не добавлены: Moduleo Select/Transform (по решению владельца), VIT VIVO Stockton Oak (производитель не найден). Страницы скачаны компьютером владельца (ветка claude/spc-data). Цвет пола для Noventis и Fine Floor определён по фото. Фото скачиваются при запуске (src/server/section-sites.ts). Версия 3 (2026-11-06): до 150 товаров по просьбе владельца, по 15 новых от BerryAlloc (Spirit Soul, Zenn Click Comfort 30, Zenn Gluedown), Noventis (bigfloor.pro), Fine Floor (finefloor.ru: R-Line, Strong, Light, Wood), Enviro (клеевые LVT тех же декоров, enviroflooring.com) и 14 Kährs (kahrs.com). Цвет Noventis и Fine Floor определён по фото производителя (ветка claude/fill150-data). Версия 4 (2026-11-06): убрана фраза о метке «В наличии». Версия 5 (2026-11-06): фото Kährs через пересчёт CDN (?w=1534&q=70&f=webp: у части товаров ссылка без параметров отдаёт PDF), убрана фраза о метке «В наличии» в любом месте описания.",
+ "version": 6,
+ "note": "Кварцвинил SPC и LVT. Версия 1: BerryAlloc Click Comfort 55 (Zenn), данные и фото berryalloc.com, снимок 2026-10. Версия 2 (2026-11-05): позиции со склада из таблицы владельца SPC_LVT_2026.xls, лист «ОКТЯБРЬ». Отмечены «В наличии»: BerryAlloc Zenn Orlando (доска и ёлочка), Monsanto и Porto (ёлочка); Noventis Grand Canyon 2001–2008 (вся коллекция с bigfloor.pro, 2009 и 2010 без метки; «Дуб Колорадо 2000» на сайте BIG нет); Fine Floor Made In Belgium MIB-0041, 0042, 0049, 0056 (вся коллекция с finefloor.ru; 0042 и 0056 сняты с сайта Fine Floor, данные и фото у дилера finefloor.spb.ru); Enviro Nature 006 (доска), Rustic 013 (доска и ёлочка), вся линия SPC с enviroflooring.com; Kährs Dom (Dry Back Stone, kahrs.com). Не добавлены: Moduleo Select/Transform (по решению владельца), VIT VIVO Stockton Oak (производитель не найден). Страницы скачаны компьютером владельца (ветка claude/spc-data). Цвет пола для Noventis и Fine Floor определён по фото. Фото скачиваются при запуске (src/server/section-sites.ts). Версия 3 (2026-11-06): до 150 товаров по просьбе владельца, по 15 новых от BerryAlloc (Spirit Soul, Zenn Click Comfort 30, Zenn Gluedown), Noventis (bigfloor.pro), Fine Floor (finefloor.ru: R-Line, Strong, Light, Wood), Enviro (клеевые LVT тех же декоров, enviroflooring.com) и 14 Kährs (kahrs.com). Цвет Noventis и Fine Floor определён по фото производителя (ветка claude/fill150-data). Версия 4 (2026-11-06): убрана фраза о метке «В наличии». Версия 5 (2026-11-06): фото Kährs через пересчёт CDN (?w=1534&q=70&f=webp: у части товаров ссылка без параметров отдаёт PDF), убрана фраза о метке «В наличии» в любом месте описания. Версия 6 (2026-11-06): у пяти товаров Kährs фото из галереи страницы товара (прежние ссылки вели на PDF).",
  "site": {
   "layout": "catalog",
   "heading": "Кварцвиниловые полы SPC и LVT",
@@ -10574,7 +10574,7 @@
    ],
    "description": "<p>Рисунок дуба натурального цвета.</p>\n<p>Kährs Hanmer из коллекции Dry Back Herringbone: ёлочка 457 × 102 мм, толщина 2,5 мм, защитный слой 0,7 мм. Покрытие приклеивают к ровному основанию. Можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
    "images": [
-    "https://kahrs.cdn-norce.tech/783e1d6c-6bf9-4a4a-9a05-829e02a53b64?w=1534&q=70&f=webp"
+    "https://kahrs.cdn-norce.tech/728a9550-dce1-47a7-b7f2-88cc65823bd8?w=1534&q=70&f=webp"
    ],
    "sourceUrl": "https://www.kahrs.com/uk/product/hanmer-dry-back-herringbone-07-mm"
   },
@@ -10664,7 +10664,7 @@
    ],
    "description": "<p>Рисунок дуба коричневого цвета.</p>\n<p>Kährs Harz из коллекции Impression Wood: доска 1829 × 220 мм, толщина 6 мм, защитный слой 0,55 мм. Собирается на замок без клея, не боится воды. Можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
    "images": [
-    "https://kahrs.cdn-norce.tech/a6239701-eaa0-4bc7-a6e9-d03d5fa5bbcb?w=1534&q=70&f=webp"
+    "https://kahrs.cdn-norce.tech/49522bb5-e226-453e-9dfc-66433a79d5dc?w=1534&q=70&f=webp"
    ],
    "sourceUrl": "https://www.kahrs.com/uk/product/harz-click-xxl-6-mm"
   },
@@ -10754,7 +10754,7 @@
    ],
    "description": "<p>Рисунок дуба натурального цвета.</p>\n<p>Kährs Jasmund из коллекции Impression Wood: доска 1829 × 220 мм, толщина 6 мм, защитный слой 0,55 мм. Собирается на замок без клея, не боится воды. Можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
    "images": [
-    "https://kahrs.cdn-norce.tech/f1ff33d2-2cbe-4b5d-a6db-6f3626dec6ff?w=1534&q=70&f=webp"
+    "https://kahrs.cdn-norce.tech/2a62dd7f-c9c6-4c56-9976-a7799bf4b590?w=1534&q=70&f=webp"
    ],
    "sourceUrl": "https://www.kahrs.com/uk/product/jasmund-click-xxl-6-mm"
   },
@@ -10844,7 +10844,7 @@
    ],
    "description": "<p>Плитка под камень бежевого цвета.</p>\n<p>Kährs Lhotse из коллекции Click 6 mm Stone: плитка 600 × 300 мм, толщина 6 мм, защитный слой 0,55 мм. Собирается на замок без клея, не боится воды. Можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
    "images": [
-    "https://kahrs.cdn-norce.tech/cb86852b-97c2-4c28-89e0-7220cae66456?w=1534&q=70&f=webp"
+    "https://kahrs.cdn-norce.tech/c0f667b4-39bb-4b37-aac4-8736e5806ffe?w=1534&q=70&f=webp"
    ],
    "sourceUrl": "https://www.kahrs.com/uk/product/lhotse-click-6-mm"
   },
@@ -11380,7 +11380,7 @@
    ],
    "description": "<p>Рисунок дуба натурального цвета.</p>\n<p>Kährs Sapo из коллекции Dry Back Herringbone: ёлочка 457 × 102 мм, толщина 2,5 мм, защитный слой 0,7 мм. Покрытие приклеивают к ровному основанию. Можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
    "images": [
-    "https://kahrs.cdn-norce.tech/783e1d6c-6bf9-4a4a-9a05-829e02a53b64?w=1534&q=70&f=webp"
+    "https://kahrs.cdn-norce.tech/87525430-613f-40de-82cd-37f66a85a34f?w=1534&q=70&f=webp"
    ],
    "sourceUrl": "https://www.kahrs.com/uk/product/sapo-dry-back-herringbone-07-mm"
   },
