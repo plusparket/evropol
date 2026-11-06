@@ -132,10 +132,13 @@ async function upgradeCatalog(sectionId: number, slug: string): Promise<{ added:
   return sql.begin(async (tx) => {
     // Вид главной из файла ставим, только если в админке его не выбирали (пустой — вид по умолчанию)
     if (seed.site?.layout) await tx`UPDATE sections SET site_layout = ${seed.site.layout}, updated_at = now() WHERE id = ${sectionId} AND site_layout = ''`;
+    // Правка срабатывает, где старый текст ещё есть. Новый текст может быть пустым (фразу убрать), но не должен
+    // содержать старый: иначе текст рос бы при каждой новой версии каталога.
     for (const [from, to] of Object.entries(seed.siteFixes ?? {})) {
+      if (!from || to.includes(from)) continue;
       for (const col of ['summary', 'description', 'heading'] as const) {
         await tx`UPDATE sections SET ${tx(col)} = replace(${tx(col)}, ${from}, ${to}), updated_at = now()
-          WHERE id = ${sectionId} AND strpos(${tx(col)}, ${from}) > 0 AND strpos(${tx(col)}, ${to}) = 0`;
+          WHERE id = ${sectionId} AND strpos(${tx(col)}, ${from}) > 0`;
       }
     }
     if (seed.hideBrands) await tx`UPDATE brands SET is_active = false WHERE section_id = ${sectionId} AND is_active`;
