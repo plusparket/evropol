@@ -45,7 +45,9 @@ async function getToken(): Promise<string> {
 }
 
 async function api<T>(url: string): Promise<T> {
-  const res = await fetch(url);
+  const res = await fetch(url).catch(() => {
+    throw new Error('Нет связи с Instagram: проверьте интернет и попробуйте ещё раз');
+  });
   const body = (await res.json().catch(() => ({}))) as T & { error?: { message: string } };
   if (!res.ok || body.error) throw new Error(`Instagram API: ${body.error?.message ?? res.status}`);
   return body;
@@ -63,15 +65,15 @@ async function refreshToken(token: string, log: (m: string) => void): Promise<st
   }
 }
 
-/** Посты новее даты since (новые первыми). */
-async function fetchPosts(token: string, since: Date): Promise<Post[]> {
+/** Посты новее даты since (новые первыми), не больше limit. */
+async function fetchPosts(token: string, since: Date, limit = KEEP_POSTS): Promise<Post[]> {
   const fields = 'id,caption,media_type,media_url,thumbnail_url,permalink,timestamp,children{id,media_type,media_url,thumbnail_url}';
   let url: string | undefined = `${API}/me/media?fields=${fields}&limit=50&access_token=${encodeURIComponent(token)}`;
   const out: Post[] = [];
   while (url) {
     const page: { data: Post[]; paging?: { next?: string } } = await api(url);
     for (const p of page.data) {
-      if (new Date(p.timestamp) < since) return out;
+      if (new Date(p.timestamp) < since || out.length >= limit) return out;
       out.push(p);
     }
     url = page.paging?.next;
@@ -159,9 +161,47 @@ export async function syncInstagram(days = 90, log: (m: string) => void = consol
     }
   }
   result.removed = await pruneInstagram();
+  await hideDemoNews();
   await setSetting(SYNCED_KEY, new Date().toISOString());
   log(`Instagram: новых записей ${result.added} (скрыто ${result.hidden}), уже были ${result.skipped}, удалено старых ${result.removed}`);
   return result;
+}
+
+/**
+ * Новости, перенесённые со старого сайта (seed/content.json), скрываются, когда в новостях появились посты Instagram:
+ * владелец решил, что в «Новостях» показываются посты из Instagram (11.2026). Записи не удаляются, их можно
+ * снова опубликовать в админке; повторно они не скрываются (только при первой загрузке постов).
+ */
+const DEMO_NEWS = ['website-launch', 'new-carpet-collection', 'decking-for-summer-terraces'];
+const DEMO_HIDDEN_KEY = 'instagram_demo_hidden';
+async function hideDemoNews(): Promise<void> {
+  if (await setting(DEMO_HIDDEN_KEY)) return;
+  const [{ n }] = await sql<{ n: number }[]>`SELECT count(*)::int AS n FROM news WHERE source = 'instagram' AND is_published`;
+  if (!n) return;
+  await sql`UPDATE news SET is_published = false, updated_at = now() WHERE source IS DISTINCT FROM 'instagram' AND slug IN ${sql(DEMO_NEWS)}`;
+  await setSetting(DEMO_HIDDEN_KEY, new Date().toISOString());
+}
+
+export type InstagramStatus = { hasToken: boolean; syncedAt: Date | null; posts: number };
+
+/** Состояние загрузки для админки: есть ли ключ, когда загружали, сколько постов в новостях. */
+export async function instagramStatus(): Promise<InstagramStatus> {
+  const hasToken = Boolean((await setting(TOKEN_KEY)) || process.env.INSTAGRAM_TOKEN);
+  const synced = Date.parse(await setting(SYNCED_KEY));
+  const [{ n }] = await sql<{ n: number }[]>`SELECT count(*)::int AS n FROM news WHERE source = 'instagram'`;
+  return { hasToken, syncedAt: Number.isNaN(synced) ? null : new Date(synced), posts: n };
+}
+
+/**
+ * Ключ доступа, вставленный в админке: проверяется запросом к Instagram и сохраняется в базе
+ * (с этого момента он главнее INSTAGRAM_TOKEN из .env). Возвращает имя аккаунта.
+ */
+export async function saveInstagramToken(token: string): Promise<string> {
+  const clean = token.trim();
+  if (!/^[A-Za-z0-9_\-|.]{20,}$/.test(clean)) throw new Error('Это не похоже на ключ доступа: скопируйте его целиком, он начинается с IG');
+  const me = await api<{ username?: string }>(`${API}/me?fields=username&access_token=${encodeURIComponent(clean)}`);
+  await setSetting(TOKEN_KEY, clean);
+  return me.username ?? '';
 }
 
 /**
