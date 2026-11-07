@@ -1,6 +1,6 @@
 ---
-// Карточка товара в плитке каталога (виды «только каталог» и «группы и категории»): квадратное фото с метками
-// «В наличии» и «Новинка», бренд (если их в разделе несколько) и коллекция, название, кнопка «Подробно».
+// Карточка товара в плитке каталога (виды «только каталог» и «группы и категории»): квадратное фото с меткой
+// «Новинка», бренд (если их в разделе несколько) и коллекция, название, кнопка «Подробно».
 import { productThumb, type ProductItem } from '../../server/products.ts';
 import { uploadUrl } from '../../server/uploads.ts';
 
@@ -20,10 +20,9 @@ const sub = [showBrand && p.brand, p.collection].filter(Boolean).join(' · ');
     ) : (
       <span class="pcard2-noimg" />
     )}
-    {(p.isNew || p.inStock) && (
+    {p.isNew && (
       <span class="ss-badges">
-        {p.inStock && <span class="ss-badge ss-badge--stock">В наличии</span>}
-        {p.isNew && <span class="ss-badge">Новинка</span>}
+        <span class="ss-badge">Новинка</span>
       </span>
     )}
   </a>

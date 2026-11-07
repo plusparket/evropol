@@ -1,7 +1,7 @@
 ---
 // Каталог сайта с категориями (вид 'groups', структура как у Forbo Eurocol), оформлен как «только каталог»:
-// крошки, заголовок, слева группы и категории (у открытой группы раскрыты её категории) и «Только в наличии»,
-// справа плитка товаров по четыре в ряд, сначала «В наличии». Без группы — все товары (главная сайта).
+// крошки, заголовок, слева группы и категории (у открытой группы раскрыты её категории),
+// справа плитка товаров по четыре в ряд, сначала товары со склада (порядок из getProducts). Без группы — все товары (главная сайта).
 import Crumbs from '../Crumbs.astro';
 import CatalogCard from './CatalogCard.astro';
 import Pager from './Pager.astro';
@@ -16,14 +16,11 @@ interface Props {
   /** Категория внутри группы */
   category?: CategoryNode;
   products: ProductItem[];
-  /** Показать только товары «В наличии» (?stock=1) */
-  stockOnly?: boolean;
 }
-const { site, tree, group, category, products, stockOnly = false } = Astro.props;
+const { site, tree, group, category, products } = Astro.props;
 const current = category ?? group;
 const all = current ? productsOf(products, current) : products;
-const items = stockOnly ? all.filter((p) => p.inStock) : all;
-const stock = all.filter((p) => p.inStock).length;
+const items = all;
 const here = current ? `/${current.slug}` : '/';
 const crumbs = current
   ? [{ name: site.name, url: '/' }, ...(category && group ? [{ name: group.name, url: `/${group.slug}` }] : []), { name: current.name }]
@@ -62,13 +59,6 @@ const { page, pages, slice, from, to } = paginate(items, Astro.url.searchParams.
             ))
           }
         </ul>
-        {
-          stock > 0 && (
-            <a class="ss-cat-stock" href={stockOnly ? here : `${here}?stock=1`} aria-pressed={stockOnly ? 'true' : 'false'}>
-              <span class="ss-cat-box" aria-hidden="true">{stockOnly ? '✓' : ''}</span> Только в наличии ({stock})
-            </a>
-          )
-        }
       </nav>
     </details>
 

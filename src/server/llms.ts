@@ -237,9 +237,7 @@ function siteHeader(d: SiteData, full: boolean): string[] {
   const out = [`# ${heading}: ${d.settings.site_name}${full ? ', полная информация' : ''}`, ''];
   out.push(`> ${(s.summary || heading).replace(/\.$/, '')}. Сайт раздела «${s.name}» компании «${d.settings.site_name}» (Бишкек, Кыргызстан). ` +
     `Офис: ${d.settings.address}. Телефон ${d.settings.phone_main}.`, '');
-  const stock = d.products.filter((p) => p.inStock).length;
-  out.push(`Каталог на сайте: ${d.products.length} ${pluralRu(d.products.length, ['товар', 'товара', 'товаров'])}` +
-    (stock ? `, из них ${stock} с меткой «В наличии» (в каталоге они идут первыми)` : '') + '. ' +
+  out.push(`Каталог на сайте: ${d.products.length} ${pluralRu(d.products.length, ['товар', 'товара', 'товаров'])}. ` +
     'Цен на сайте нет: цену и наличие сообщают по телефону или в WhatsApp.' + (s.siteLayout === 'groups' ? '' : ' Образцы есть в офисе.'), '');
   // Виды «только каталог» и «группы и категории» не ссылаются на главный сайт — и здесь его нет
   if (!['catalog', 'groups'].includes(s.siteLayout)) out.push(`Главный сайт компании со всеми разделами: ${d.base}/`, '');
@@ -265,7 +263,7 @@ export async function buildSiteLlmsTxt(site: Section): Promise<string> {
     for (const p of d.products) {
       const facts = p.attributes.map((a) => a.value).join(', ');
       const cats = categoriesOf(d, p);
-      out.push(`- [${productLine(p)}](${d.siteBase}/${p.slug})${p.inStock ? ' · в наличии' : ''}${p.isNew ? ' · новинка' : ''}` +
+      out.push(`- [${productLine(p)}](${d.siteBase}/${p.slug})${p.isNew ? ' · новинка' : ''}` +
         `${p.sku ? ` · артикул ${p.sku}` : ''}${cats ? ` · категория: ${cats}` : ''}${facts ? ` · ${oneLine(facts, 200)}` : ''}`);
     }
     out.push('');
@@ -299,7 +297,7 @@ export async function buildSiteLlmsFullTxt(site: Section): Promise<string> {
     for (const p of d.products) {
       const cats = categoriesOf(d, p);
       out.push(`### ${productLine(p)}`, '',
-        `Адрес: ${d.siteBase}/${p.slug}${p.sku ? ` · артикул ${p.sku}` : ''}${p.inStock ? ' · в наличии' : ''}${p.isNew ? ' · новинка' : ''}`, '');
+        `Адрес: ${d.siteBase}/${p.slug}${p.sku ? ` · артикул ${p.sku}` : ''}${p.isNew ? ' · новинка' : ''}`, '');
       if (cats) out.push(`Категория: ${cats}`, '');
       if (p.description) out.push(md(p.description), '');
       for (const sp of p.specs) out.push(`- ${sp.label}: ${sp.value}`);

@@ -1,17 +1,19 @@
 {
  "section": "vinyl",
- "version": 2,
- "note": "Кварцвинил SPC и LVT. Версия 1: BerryAlloc Click Comfort 55 (Zenn), данные и фото berryalloc.com, снимок 2026-10. Версия 2 (2026-11-05): позиции со склада из таблицы владельца SPC_LVT_2026.xls, лист «ОКТЯБРЬ». Отмечены «В наличии»: BerryAlloc Zenn Orlando (доска и ёлочка), Monsanto и Porto (ёлочка); Noventis Grand Canyon 2001–2008 (вся коллекция с bigfloor.pro, 2009 и 2010 без метки; «Дуб Колорадо 2000» на сайте BIG нет); Fine Floor Made In Belgium MIB-0041, 0042, 0049, 0056 (вся коллекция с finefloor.ru; 0042 и 0056 сняты с сайта Fine Floor, данные и фото у дилера finefloor.spb.ru); Enviro Nature 006 (доска), Rustic 013 (доска и ёлочка), вся линия SPC с enviroflooring.com; Kährs Dom (Dry Back Stone, kahrs.com). Не добавлены: Moduleo Select/Transform (по решению владельца), VIT VIVO Stockton Oak (производитель не найден). Страницы скачаны компьютером владельца (ветка claude/spc-data). Цвет пола для Noventis и Fine Floor определён по фото. Фото скачиваются при запуске (src/server/section-sites.ts).",
+ "version": 6,
+ "note": "Кварцвинил SPC и LVT. Версия 1: BerryAlloc Click Comfort 55 (Zenn), данные и фото berryalloc.com, снимок 2026-10. Версия 2 (2026-11-05): позиции со склада из таблицы владельца SPC_LVT_2026.xls, лист «ОКТЯБРЬ». Отмечены «В наличии»: BerryAlloc Zenn Orlando (доска и ёлочка), Monsanto и Porto (ёлочка); Noventis Grand Canyon 2001–2008 (вся коллекция с bigfloor.pro, 2009 и 2010 без метки; «Дуб Колорадо 2000» на сайте BIG нет); Fine Floor Made In Belgium MIB-0041, 0042, 0049, 0056 (вся коллекция с finefloor.ru; 0042 и 0056 сняты с сайта Fine Floor, данные и фото у дилера finefloor.spb.ru); Enviro Nature 006 (доска), Rustic 013 (доска и ёлочка), вся линия SPC с enviroflooring.com; Kährs Dom (Dry Back Stone, kahrs.com). Не добавлены: Moduleo Select/Transform (по решению владельца), VIT VIVO Stockton Oak (производитель не найден). Страницы скачаны компьютером владельца (ветка claude/spc-data). Цвет пола для Noventis и Fine Floor определён по фото. Фото скачиваются при запуске (src/server/section-sites.ts). Версия 3 (2026-11-06): до 150 товаров по просьбе владельца, по 15 новых от BerryAlloc (Spirit Soul, Zenn Click Comfort 30, Zenn Gluedown), Noventis (bigfloor.pro), Fine Floor (finefloor.ru: R-Line, Strong, Light, Wood), Enviro (клеевые LVT тех же декоров, enviroflooring.com) и 14 Kährs (kahrs.com). Цвет Noventis и Fine Floor определён по фото производителя (ветка claude/fill150-data). Версия 4 (2026-11-06): убрана фраза о метке «В наличии». Версия 5 (2026-11-06): фото Kährs через пересчёт CDN (?w=1534&q=70&f=webp: у части товаров ссылка без параметров отдаёт PDF), убрана фраза о метке «В наличии» в любом месте описания. Версия 6 (2026-11-06): у пяти товаров Kährs фото из галереи страницы товара (прежние ссылки вели на PDF).",
  "site": {
   "layout": "catalog",
   "heading": "Кварцвиниловые полы SPC и LVT",
   "summary": "Кварцвиниловая доска, ёлочка и плитка SPC и LVT от BerryAlloc, Noventis, Fine Floor, Enviro и Kährs для квартир, офисов и магазинов.",
-  "description": "<p>Кварцвиниловый пол не боится воды, поэтому его кладут на кухне, в ванной, в прихожей и в торговом зале. LVT приклеивают к основанию. У SPC жёсткая основа из каменной муки и пластика и замок, его собирают без клея.</p><p>В каталоге доска, ёлочка и плитка BerryAlloc, Noventis, Fine Floor, Enviro и Kährs с рисунком дерева и камня. Позиции с меткой «В наличии» лежат на складе в Бишкеке. Позвоните или напишите в WhatsApp: подскажем покрытие для вашей комнаты и рассчитаем метраж.</p>"
+  "description": "<p>Кварцвиниловый пол не боится воды, поэтому его кладут на кухне, в ванной, в прихожей и в торговом зале. LVT приклеивают к основанию. У SPC жёсткая основа из каменной муки и пластика и замок, его собирают без клея.</p><p>В каталоге доска, ёлочка и плитка BerryAlloc, Noventis, Fine Floor, Enviro и Kährs с рисунком дерева и камня. Позвоните или напишите в WhatsApp: подскажем покрытие для вашей комнаты и рассчитаем метраж.</p>"
  },
  "siteFixes": {
   "SPC и LVT от Moduleo и BerryAlloc для квартир": "SPC и LVT от BerryAlloc, Noventis, Fine Floor, Enviro и Kährs для квартир",
   "Кварцвиниловая плитка и доска Moduleo и BerryAlloc для квартир": "Кварцвиниловая доска, ёлочка и плитка BerryAlloc, Noventis, Fine Floor, Enviro и Kährs для квартир",
-  "Moduleo и BerryAlloc выпускают плитку и доску с рисунком дерева и камня.": "В каталоге доска, ёлочка и плитка BerryAlloc, Noventis, Fine Floor, Enviro и Kährs с рисунком дерева и камня. Позиции с меткой «В наличии» лежат на складе в Бишкеке."
+  "Moduleo и BerryAlloc выпускают плитку и доску с рисунком дерева и камня.": "В каталоге доска, ёлочка и плитка BerryAlloc, Noventis, Fine Floor, Enviro и Kährs с рисунком дерева и камня.",
+  "с рисунком дерева и камня. Позиции с меткой «В наличии» лежат на складе в Бишкеке. Позвоните": "с рисунком дерева и камня. Позвоните",
+  " Позиции с меткой «В наличии» лежат на складе в Бишкеке.": ""
  },
  "brands": [
   {
@@ -7280,10 +7282,6721 @@
    ],
    "description": "<p>Плитка под тёмно-серый бетон с мягкими пятнами и неровным тоном, как у шлифованного цементного пола.</p>\n<p>Kährs Dom из коллекции Dry Back Stone: плитка LVT 457 × 457 мм толщиной 2,5 мм с защитным слоем 0,55 мм и микрофаской по четырём сторонам. Плитку приклеивают к ровному основанию.</p>",
    "images": [
-    "https://kahrs.cdn-norce.tech/b69dac6a-c3f8-4dbe-b77a-fa78300c68c0"
+    "https://kahrs.cdn-norce.tech/b69dac6a-c3f8-4dbe-b77a-fa78300c68c0?w=1534&q=70&f=webp"
    ],
    "sourceUrl": "https://www.kahrs.com/uk/product/dom-dry-back-v9880",
    "inStock": true
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Aria (Ёлочка)",
+   "slug": "spirit-soul-click-comfort-55-herringbone-aria",
+   "collection": "Spirit Soul Click Comfort 55 Herringbone",
+   "sku": "60002406",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-коричневый"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "спокойный"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "60002406"
+    },
+    {
+     "label": "Серия",
+     "value": "Spirit Soul Click Comfort 55 Herringbone"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "красный"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Замок",
+     "value": "2G/5G"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "609 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "107,95 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,97419 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "30"
+    },
+    {
+     "label": "Гарантия",
+     "value": "пожизненная для дома"
+    }
+   ],
+   "description": "<p>Дуб светло-коричневого цвета, спокойный рисунок.</p>\n<p>BerryAlloc Spirit Soul Click Comfort 55 Herringbone: ёлочка 609 × 107,95 мм, толщина 6 мм, защитный слой 0,55 мм. Собирается на замок без клея. Не боится воды, подходит для тёплого пола. Класс использования 23 для дома и 33 для офиса. Разработано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak36gk44h7sd7e9e/beaulieu_1000w,default/aria_lvt_610x114_berryalloc_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak3fxudkfur7inbo/beaulieu_1000w,default/aria_matching_skirting_lvt_610x108_berryalloc_rsh"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/spirit-soul/60002406"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Eliza (Ёлочка)",
+   "slug": "spirit-soul-click-comfort-55-herringbone-eliza",
+   "collection": "Spirit Soul Click Comfort 55 Herringbone",
+   "sku": "60002407",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "натуральный"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "спокойный"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "60002407"
+    },
+    {
+     "label": "Серия",
+     "value": "Spirit Soul Click Comfort 55 Herringbone"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "оранжевый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Замок",
+     "value": "2G/5G"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "609 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "107,95 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,97419 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "30"
+    },
+    {
+     "label": "Гарантия",
+     "value": "пожизненная для дома"
+    }
+   ],
+   "description": "<p>Дуб натурального цвета, спокойный рисунок.</p>\n<p>BerryAlloc Spirit Soul Click Comfort 55 Herringbone: ёлочка 609 × 107,95 мм, толщина 6 мм, защитный слой 0,55 мм. Собирается на замок без клея. Не боится воды, подходит для тёплого пола. Класс использования 23 для дома и 33 для офиса. Разработано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5i3i4dn5pw5jpy/beaulieu_1000w,default/eliza_lvt_610x114_berryalloc_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak3wy77g1573fope/beaulieu_1000w,default/eliza_lvt_610x108_berryalloc_rsh"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/spirit-soul/60002407"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Flora (доска)",
+   "slug": "spirit-soul-click-comfort-55-plank-flora",
+   "collection": "Spirit Soul Click Comfort 55 Plank",
+   "sku": "60002375",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светлый натуральный"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "живой"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "60002375"
+    },
+    {
+     "label": "Серия",
+     "value": "Spirit Soul Click Comfort 55 Plank"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "жёлтый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Замок",
+     "value": "2G/5G"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1524 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "228 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,08483 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "6"
+    },
+    {
+     "label": "Гарантия",
+     "value": "пожизненная для дома"
+    }
+   ],
+   "description": "<p>Дуб светлого натурального цвета, живой рисунок.</p>\n<p>BerryAlloc Spirit Soul Click Comfort 55 Plank: доска 1524 × 228 мм, толщина 6 мм, защитный слой 0,55 мм. Собирается на замок без клея. Не боится воды, подходит для тёплого пола. Класс использования 23 для дома и 33 для офиса. Разработано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak4tipy7feq5kkro/beaulieu_1000w,default/flora_lvt_1500x230_berryalloc_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak4b8bzor3rs5cqy/beaulieu_1000w,default/flora_lvt_1524x228_berryalloc_rsh_01"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/spirit-soul/60002375"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Eliza (доска)",
+   "slug": "spirit-soul-click-comfort-55-plank-eliza",
+   "collection": "Spirit Soul Click Comfort 55 Plank",
+   "sku": "60002371",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "натуральный"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "спокойный"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "60002371"
+    },
+    {
+     "label": "Серия",
+     "value": "Spirit Soul Click Comfort 55 Plank"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "оранжевый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Замок",
+     "value": "2G/5G"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1524 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "228 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,08483 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "6"
+    },
+    {
+     "label": "Гарантия",
+     "value": "пожизненная для дома"
+    }
+   ],
+   "description": "<p>Дуб натурального цвета, спокойный рисунок.</p>\n<p>BerryAlloc Spirit Soul Click Comfort 55 Plank: доска 1524 × 228 мм, толщина 6 мм, защитный слой 0,55 мм. Собирается на замок без клея. Не боится воды, подходит для тёплого пола. Класс использования 23 для дома и 33 для офиса. Разработано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5hp45xioab4dby/beaulieu_1000w,default/eliza_lvt_1500x230_berryalloc_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5zdoqe1uf9bn7a/beaulieu_1000w,default/eliza_lvt_1524x228_berryalloc_rsh_02"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/spirit-soul/60002371"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Aria (доска)",
+   "slug": "spirit-soul-click-comfort-55-plank-aria",
+   "collection": "Spirit Soul Click Comfort 55 Plank",
+   "sku": "60002370",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-коричневый"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "спокойный"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "60002370"
+    },
+    {
+     "label": "Серия",
+     "value": "Spirit Soul Click Comfort 55 Plank"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "красный"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Замок",
+     "value": "2G/5G"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1524 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "228 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,08483 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "6"
+    },
+    {
+     "label": "Гарантия",
+     "value": "пожизненная для дома"
+    }
+   ],
+   "description": "<p>Дуб светло-коричневого цвета, спокойный рисунок.</p>\n<p>BerryAlloc Spirit Soul Click Comfort 55 Plank: доска 1524 × 228 мм, толщина 6 мм, защитный слой 0,55 мм. Собирается на замок без клея. Не боится воды, подходит для тёплого пола. Класс использования 23 для дома и 33 для офиса. Разработано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak3arbz6dizmhqka/beaulieu_1000w,default/aria_lvt_1500x230_berryalloc_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak3zhk75krhcg9yy/beaulieu_1000w,default/aria_matching_stair_nose_lvt_1524x228_berryalloc_rsh"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/spirit-soul/60002370"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Terra (доска)",
+   "slug": "spirit-soul-click-comfort-55-plank-terra",
+   "collection": "Spirit Soul Click Comfort 55 Plank",
+   "sku": "60002376",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-коричневый"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "живой"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "60002376"
+    },
+    {
+     "label": "Серия",
+     "value": "Spirit Soul Click Comfort 55 Plank"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "красный"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Замок",
+     "value": "2G/5G"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1524 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "228 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,08483 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "6"
+    },
+    {
+     "label": "Гарантия",
+     "value": "пожизненная для дома"
+    }
+   ],
+   "description": "<p>Дуб тёмно-коричневого цвета, живой рисунок.</p>\n<p>BerryAlloc Spirit Soul Click Comfort 55 Plank: доска 1524 × 228 мм, толщина 6 мм, защитный слой 0,55 мм. Собирается на замок без клея. Не боится воды, подходит для тёплого пола. Класс использования 23 для дома и 33 для офиса. Разработано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5ohxr346u7fh5o/beaulieu_1000w,default/terra_lvt_1500x230_berryalloc_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak4xoajbsb37o6fa/beaulieu_1000w,default/terra_lvt_1524x228_berryalloc_rsh_01"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/spirit-soul/60002376"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Jutta (доска)",
+   "slug": "spirit-soul-click-comfort-55-plank-jutta",
+   "collection": "Spirit Soul Click Comfort 55 Plank",
+   "sku": "60002373",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "натуральный"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "живой"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "60002373"
+    },
+    {
+     "label": "Серия",
+     "value": "Spirit Soul Click Comfort 55 Plank"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "оранжевый, красный"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Замок",
+     "value": "2G/5G"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1524 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "228 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,08483 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "6"
+    },
+    {
+     "label": "Гарантия",
+     "value": "пожизненная для дома"
+    }
+   ],
+   "description": "<p>Дуб натурального цвета, живой рисунок.</p>\n<p>BerryAlloc Spirit Soul Click Comfort 55 Plank: доска 1524 × 228 мм, толщина 6 мм, защитный слой 0,55 мм. Собирается на замок без клея. Не боится воды, подходит для тёплого пола. Класс использования 23 для дома и 33 для офиса. Разработано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5un3dttdncjjte/beaulieu_1000w,default/jutta_lvt_1500x230_berryalloc_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak3hp69ribf1qzze/beaulieu_1000w,default/jutta_lvt_1524x228_berryalloc_rsh_01"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/spirit-soul/60002373"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Lara (доска)",
+   "slug": "spirit-soul-click-comfort-55-plank-lara",
+   "collection": "Spirit Soul Click Comfort 55 Plank",
+   "sku": "60002372",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-серый"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "живой"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "60002372"
+    },
+    {
+     "label": "Серия",
+     "value": "Spirit Soul Click Comfort 55 Plank"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "фиолетовый, синий"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Замок",
+     "value": "2G/5G"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1524 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "228 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,08483 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "6"
+    },
+    {
+     "label": "Гарантия",
+     "value": "пожизненная для дома"
+    }
+   ],
+   "description": "<p>Дуб светло-серого цвета, живой рисунок.</p>\n<p>BerryAlloc Spirit Soul Click Comfort 55 Plank: доска 1524 × 228 мм, толщина 6 мм, защитный слой 0,55 мм. Собирается на замок без клея. Не боится воды, подходит для тёплого пола. Класс использования 23 для дома и 33 для офиса. Разработано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5akaz5godtd6364ie/beaulieu_1000w,default/lara_lvt_1500x230_berryalloc_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5akapiu157tiba5na/beaulieu_1000w,default/lara_lvt_1524x228_berryalloc_rsh"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/spirit-soul/60002372"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Allegra (доска)",
+   "slug": "spirit-soul-click-comfort-55-plank-allegra",
+   "collection": "Spirit Soul Click Comfort 55 Plank",
+   "sku": "60002377",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "натуральный"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "рустикальный"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "60002377"
+    },
+    {
+     "label": "Серия",
+     "value": "Spirit Soul Click Comfort 55 Plank"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "жёлтый, оранжевый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Замок",
+     "value": "2G/5G"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1524 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "228 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,08483 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "6"
+    },
+    {
+     "label": "Гарантия",
+     "value": "пожизненная для дома"
+    }
+   ],
+   "description": "<p>Дуб натурального цвета, рустикальный рисунок.</p>\n<p>BerryAlloc Spirit Soul Click Comfort 55 Plank: доска 1524 × 228 мм, толщина 6 мм, защитный слой 0,55 мм. Собирается на замок без клея. Не боится воды, подходит для тёплого пола. Класс использования 23 для дома и 33 для офиса. Разработано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak4mzrzpyzgs487o/beaulieu_1000w,default/allegra_lvt_1500x230_berryalloc_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5akan6q66cxarpcco/beaulieu_1000w,default/allegra_lvt_1524x228_berryalloc_rsh_01"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/spirit-soul/60002377"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Fiori",
+   "slug": "spirit-soul-click-comfort-55-tile-fiori",
+   "collection": "Spirit Soul Click Comfort 55 Tile",
+   "sku": "60002379",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светлый натуральный"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под камень"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "60002379"
+    },
+    {
+     "label": "Серия",
+     "value": "Spirit Soul Click Comfort 55 Tile"
+    },
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "жёлтый, синий"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Замок",
+     "value": "2G/5G"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "914 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "457,2 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,67224 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "4"
+    },
+    {
+     "label": "Гарантия",
+     "value": "пожизненная для дома"
+    }
+   ],
+   "description": "<p>Плитка под камень светлого натурального цвета.</p>\n<p>BerryAlloc Spirit Soul Click Comfort 55 Tile: плитка 914 × 457,2 мм, толщина 6 мм, защитный слой 0,55 мм. Собирается на замок без клея. Не боится воды, подходит для тёплого пола. Класс использования 23 для дома и 33 для офиса. Разработано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5ny9q1znqz9rao/beaulieu_1000w,default/fiori_lvt_914x457_berryalloc_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak3eoi6cdczp7pwo/beaulieu_1000w,default/fiori_lvt_914x457_berryalloc_rsh_01"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/spirit-soul/60002379"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Santi",
+   "slug": "spirit-soul-click-comfort-55-tile-santi",
+   "collection": "Spirit Soul Click Comfort 55 Tile",
+   "sku": "60002385",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-серый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под камень"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "60002385"
+    },
+    {
+     "label": "Серия",
+     "value": "Spirit Soul Click Comfort 55 Tile"
+    },
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "синий, красный"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Замок",
+     "value": "2G/5G"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "914 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "457,2 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,67224 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "4"
+    },
+    {
+     "label": "Гарантия",
+     "value": "пожизненная для дома"
+    }
+   ],
+   "description": "<p>Плитка под камень светло-серого цвета.</p>\n<p>BerryAlloc Spirit Soul Click Comfort 55 Tile: плитка 914 × 457,2 мм, толщина 6 мм, защитный слой 0,55 мм. Собирается на замок без клея. Не боится воды, подходит для тёплого пола. Класс использования 23 для дома и 33 для офиса. Разработано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak4bdaj8kd11ai1e/beaulieu_1000w,default/santi_lvt_914x457_berryalloc_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak3t75yu58utgdme/beaulieu_1000w,default/santi_lvt_914x457_berryalloc_rsh_03"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/spirit-soul/60002385"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Zigi",
+   "slug": "spirit-soul-click-comfort-55-tile-zigi",
+   "collection": "Spirit Soul Click Comfort 55 Tile",
+   "sku": "60002380",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-серый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под камень"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "60002380"
+    },
+    {
+     "label": "Серия",
+     "value": "Spirit Soul Click Comfort 55 Tile"
+    },
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "синий"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Замок",
+     "value": "2G/5G"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "914 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "457,2 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,67224 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "4"
+    },
+    {
+     "label": "Гарантия",
+     "value": "пожизненная для дома"
+    }
+   ],
+   "description": "<p>Плитка под камень тёмно-серого цвета.</p>\n<p>BerryAlloc Spirit Soul Click Comfort 55 Tile: плитка 914 × 457,2 мм, толщина 6 мм, защитный слой 0,55 мм. Собирается на замок без клея. Не боится воды, подходит для тёплого пола. Класс использования 23 для дома и 33 для офиса. Разработано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5aka5w6jdfx983uge/beaulieu_1000w,default/zigi_lvt_914x457_berryalloc_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5akazgqeppe19ksze/beaulieu_1000w,default/zigi_lvt_914x457_berryalloc_rsh_01"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/spirit-soul/60002380"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Tori",
+   "slug": "spirit-soul-click-comfort-55-tile-tori",
+   "collection": "Spirit Soul Click Comfort 55 Tile",
+   "sku": "60002384",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-серый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под камень"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "60002384"
+    },
+    {
+     "label": "Серия",
+     "value": "Spirit Soul Click Comfort 55 Tile"
+    },
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "синий, зелёный"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "Замок",
+     "value": "2G/5G"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "914 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "457,2 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,67224 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "4"
+    },
+    {
+     "label": "Гарантия",
+     "value": "пожизненная для дома"
+    }
+   ],
+   "description": "<p>Плитка под камень тёмно-серого цвета.</p>\n<p>BerryAlloc Spirit Soul Click Comfort 55 Tile: плитка 914 × 457,2 мм, толщина 6 мм, защитный слой 0,55 мм. Собирается на замок без клея. Не боится воды, подходит для тёплого пола. Класс использования 23 для дома и 33 для офиса. Разработано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak577wnpiewxc7iy/beaulieu_1000w,default/tori_lvt_914x457_berryalloc_dsh",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak5kdzcdcpkueiry/beaulieu_1000w,default/tori_lvt_914x457_berryalloc_rsh_02"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/spirit-soul/60002384"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Sorrento (доска)",
+   "slug": "zenn-click-comfort-30-plank-sorrento",
+   "collection": "Zenn Click Comfort 30 Plank",
+   "sku": "60002205",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "5 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 32"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светлый натуральный"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "живой"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "60002205"
+    },
+    {
+     "label": "Серия",
+     "value": "Zenn Click Comfort 30 Plank"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "жёлтый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 32"
+    },
+    {
+     "label": "Замок",
+     "value": "2G/2G"
+    },
+    {
+     "label": "Толщина",
+     "value": "5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1219 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "177,8 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,16774 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "10"
+    },
+    {
+     "label": "Гарантия",
+     "value": "20 лет для дома"
+    }
+   ],
+   "description": "<p>Дуб светлого натурального цвета, живой рисунок.</p>\n<p>BerryAlloc Zenn Click Comfort 30 Plank: доска 1219 × 177,8 мм, толщина 5 мм, защитный слой 0,3 мм. Собирается на замок без клея. Не боится воды, подходит для тёплого пола. Класс использования 23 для дома и 32 для офиса. Разработано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak3xgzytf9rg7tny/beaulieu_1000w,default/sorrento_lvt_1219x177_berryalloc_dsh_01",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak4dfqfrk3k456wa/beaulieu_1000w,default/bali_sorrento_lvt_914x457_berryalloc_rsh_01"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/zenn/60002205"
+  },
+  {
+   "brand": "BerryAlloc",
+   "name": "Caïro (доска)",
+   "slug": "zenn-click-comfort-30-plank-cairo",
+   "collection": "Zenn Click Comfort 30 Plank",
+   "sku": "60002211",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "5 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 32"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-коричневый"
+    },
+    {
+     "label": "Характер древесины",
+     "value": "рустикальный"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "60002211"
+    },
+    {
+     "label": "Серия",
+     "value": "Zenn Click Comfort 30 Plank"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цветовой характер",
+     "value": "оранжевый, жёлтый"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 32"
+    },
+    {
+     "label": "Замок",
+     "value": "2G/2G"
+    },
+    {
+     "label": "Толщина",
+     "value": "5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    },
+    {
+     "label": "Длина",
+     "value": "1219 мм"
+    },
+    {
+     "label": "Ширина",
+     "value": "177,8 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,16774 м²"
+    },
+    {
+     "label": "Досок в упаковке",
+     "value": "10"
+    },
+    {
+     "label": "Гарантия",
+     "value": "20 лет для дома"
+    }
+   ],
+   "description": "<p>Дуб светло-коричневого цвета, рустикальный рисунок.</p>\n<p>BerryAlloc Zenn Click Comfort 30 Plank: доска 1219 × 177,8 мм, толщина 5 мм, защитный слой 0,3 мм. Собирается на замок без клея. Не боится воды, подходит для тёплого пола. Класс использования 23 для дома и 32 для офиса. Разработано в Бельгии.</p>",
+   "images": [
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak34ibgejnum1p3a/beaulieu_1000w,default/cairo_lvt_1219x177_berryalloc_dsh_01",
+    "https://mediacenter.bintg.com/api/wedia/dam/variation/c3aic83pi1iqd1jtdrsa3i5ak4rr8csw67xkrwy/beaulieu_1000w,default/cairo_delhi_lvt_1219x177_berryalloc_rsh_01"
+   ],
+   "sourceUrl": "https://www.berryalloc.com/en/products/zenn/60002211"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Nature 001 (доска, клеевая)",
+   "slug": "enviro-nature-001-lvt-doska",
+   "collection": "Nature",
+   "sku": "001",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светлый натуральный"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "001"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Nature"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Тип",
+     "value": "LVT, клеевая укладка"
+    },
+    {
+     "label": "Размер",
+     "value": "1524 × 228,6 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "3,8323 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "11"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "17,35 кг"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Дуб мягкого натурального цвета со спокойным рисунком.</p>\n<p>Enviro Nature: доска LVT для клеевой укладки, 1524 × 228,6 мм, толщина 2,5 мм, защитный слой 0,55 мм. Покрытие приклеивают к ровному основанию, его можно класть на водяной тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9c5c8d7c15d2debee0_6aa97e7726bd6aaed6ef304b_enviroflooring-nature-001-plank-02.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/nature-001-lvt-rechte-plank"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Nature 002 (доска, клеевая)",
+   "slug": "enviro-nature-002-lvt-doska",
+   "collection": "Nature",
+   "sku": "002",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "бежевый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "002"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Nature"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Тип",
+     "value": "LVT, клеевая укладка"
+    },
+    {
+     "label": "Размер",
+     "value": "1524 × 228,6 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "3,8323 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "11"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "17,35 кг"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Светлый, почти бежевый дуб с ровным рисунком. С таким полом комната выглядит просторнее.</p>\n<p>Enviro Nature: доска LVT для клеевой укладки, 1524 × 228,6 мм, толщина 2,5 мм, защитный слой 0,55 мм. Покрытие приклеивают к ровному основанию, его можно класть на водяной тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9c5c8d7c15d2debeda_6aa97e78c431a8c4708873f0_enviroflooring-nature-002-plank-02.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/nature-002-lvt-rechte-plank"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Nature 003 (доска, клеевая)",
+   "slug": "enviro-nature-003-lvt-doska",
+   "collection": "Nature",
+   "sku": "003",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "003"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Nature"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Тип",
+     "value": "LVT, клеевая укладка"
+    },
+    {
+     "label": "Размер",
+     "value": "1524 × 228,6 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "3,8323 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "11"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "17,35 кг"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Дуб тёплого золотистого оттенка с тонким рисунком волокон.</p>\n<p>Enviro Nature: доска LVT для клеевой укладки, 1524 × 228,6 мм, толщина 2,5 мм, защитный слой 0,55 мм. Покрытие приклеивают к ровному основанию, его можно класть на водяной тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9a49b2e642a87b0eb3_6aa97e7b223eaf500ada1c55_enviroflooring-nature-003-plank-02.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/nature-003-lvt-rechte-plank"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Nature 004 (доска, клеевая)",
+   "slug": "enviro-nature-004-lvt-doska",
+   "collection": "Nature",
+   "sku": "004",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "004"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Nature"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Тип",
+     "value": "LVT, клеевая укладка"
+    },
+    {
+     "label": "Размер",
+     "value": "1524 × 228,6 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "3,8323 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "11"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "17,35 кг"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Дуб в разных оттенках коричневого: тон меняется от доски к доске.</p>\n<p>Enviro Nature: доска LVT для клеевой укладки, 1524 × 228,6 мм, толщина 2,5 мм, защитный слой 0,55 мм. Покрытие приклеивают к ровному основанию, его можно класть на водяной тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9a49b2e642a87b0eaa_6aa97e7cec7f65b3b93851f4_enviroflooring-nature-004-plank-02.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/nature-004-lvt-rechte-plank"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Nature 005 (доска, клеевая)",
+   "slug": "enviro-nature-005-lvt-doska",
+   "collection": "Nature",
+   "sku": "005",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "005"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Nature"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Тип",
+     "value": "LVT, клеевая укладка"
+    },
+    {
+     "label": "Размер",
+     "value": "1524 × 228,6 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "3,8323 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "11"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "17,35 кг"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Самый тёмный цвет серии Nature: коричневый дуб с хорошо заметным рисунком древесины.</p>\n<p>Enviro Nature: доска LVT для клеевой укладки, 1524 × 228,6 мм, толщина 2,5 мм, защитный слой 0,55 мм. Покрытие приклеивают к ровному основанию, его можно класть на водяной тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9a49b2e642a87b0e9d_6aa97e7d833e29173f10e155_enviroflooring-nature-005-plank-02.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/nature-005-lvt-rechte-plank"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Nature 006 (доска, клеевая)",
+   "slug": "enviro-nature-006-lvt-doska",
+   "collection": "Nature",
+   "sku": "006",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светлый натуральный"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "006"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Nature"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Тип",
+     "value": "LVT, клеевая укладка"
+    },
+    {
+     "label": "Размер",
+     "value": "1524 × 228,6 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "3,8323 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "11"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "17,35 кг"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Светлый дуб спокойного ровного тона с тонкими волокнами.</p>\n<p>Enviro Nature: доска LVT для клеевой укладки, 1524 × 228,6 мм, толщина 2,5 мм, защитный слой 0,55 мм. Покрытие приклеивают к ровному основанию, его можно класть на водяной тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9a49b2e642a87b0e89_6aa97e807e3297ba3900606f_enviroflooring-nature-006-plank-02.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/nature-006-lvt-rechte-plank"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Rustic 010 (доска, клеевая)",
+   "slug": "enviro-rustic-010-lvt-doska",
+   "collection": "Rustic",
+   "sku": "010",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светлый натуральный"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "010"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Rustic"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Тип",
+     "value": "LVT, клеевая укладка"
+    },
+    {
+     "label": "Размер",
+     "value": "1524 × 228,6 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "3,8323 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "11"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "17,35 кг"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Светлый дуб с заметными сучками и тонкими волокнами.</p>\n<p>Enviro Rustic: доска LVT для клеевой укладки, 1524 × 228,6 мм, толщина 2,5 мм, защитный слой 0,55 мм. Покрытие приклеивают к ровному основанию, его можно класть на водяной тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9b5c8d7c15d2debe97_6aa97e8191afbb725e6cb57a_enviroflooring-rustic-010-plank-02.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/rustic-010-lvt-rechte-plank"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Rustic 011 (доска, клеевая)",
+   "slug": "enviro-rustic-011-lvt-doska",
+   "collection": "Rustic",
+   "sku": "011",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "011"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Rustic"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Тип",
+     "value": "LVT, клеевая укладка"
+    },
+    {
+     "label": "Размер",
+     "value": "1524 × 228,6 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "3,8323 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "11"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "17,35 кг"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Дуб тёплого коричневого цвета средней тональности с выраженными волокнами.</p>\n<p>Enviro Rustic: доска LVT для клеевой укладки, 1524 × 228,6 мм, толщина 2,5 мм, защитный слой 0,55 мм. Покрытие приклеивают к ровному основанию, его можно класть на водяной тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9b5c8d7c15d2debe82_6aa97e82f3cc0fef7393738f_enviroflooring-rustic-011-plank-02.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/rustic-011-lvt-rechte-plank"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Rustic 012 (доска, клеевая)",
+   "slug": "enviro-rustic-012-lvt-doska",
+   "collection": "Rustic",
+   "sku": "012",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "012"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Rustic"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Тип",
+     "value": "LVT, клеевая укладка"
+    },
+    {
+     "label": "Размер",
+     "value": "1524 × 228,6 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "3,8323 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "11"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "17,35 кг"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Дуб медово-коричневого тона с глубоким рисунком волокон.</p>\n<p>Enviro Rustic: доска LVT для клеевой укладки, 1524 × 228,6 мм, толщина 2,5 мм, защитный слой 0,55 мм. Покрытие приклеивают к ровному основанию, его можно класть на водяной тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9b5c8d7c15d2debe8c_6aa97e836be5513aa61972c8_enviroflooring-rustic-012-plank-02.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/rustic-012-lvt-rechte-plank"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Rustic 013 (доска, клеевая)",
+   "slug": "enviro-rustic-013-lvt-doska",
+   "collection": "Rustic",
+   "sku": "013",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "013"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Rustic"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Тип",
+     "value": "LVT, клеевая укладка"
+    },
+    {
+     "label": "Размер",
+     "value": "1524 × 228,6 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "3,8323 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "11"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "17,35 кг"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Дуб тёплого песочного цвета. Тон натуральный, но теплее классического дуба.</p>\n<p>Enviro Rustic: доска LVT для клеевой укладки, 1524 × 228,6 мм, толщина 2,5 мм, защитный слой 0,55 мм. Покрытие приклеивают к ровному основанию, его можно класть на водяной тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9a49b2e642a87b0ef5_6aa97e84833e29173f10e470_enviroflooring-rustic-013-plank-02.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/rustic-013-lvt-rechte-plank"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Rustic 014 (доска, клеевая)",
+   "slug": "enviro-rustic-014-lvt-doska",
+   "collection": "Rustic",
+   "sku": "014",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-серый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "014"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Rustic"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Тип",
+     "value": "LVT, клеевая укладка"
+    },
+    {
+     "label": "Размер",
+     "value": "1524 × 228,6 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "3,8323 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "11"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "17,35 кг"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Дуб холодного серого цвета с матовой поверхностью без бликов.</p>\n<p>Enviro Rustic: доска LVT для клеевой укладки, 1524 × 228,6 мм, толщина 2,5 мм, защитный слой 0,55 мм. Покрытие приклеивают к ровному основанию, его можно класть на водяной тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9a49b2e642a87b0ee8_6aa97e85b423f115f6b8de20_enviroflooring-rustic-014-plank-02.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/rustic-014-lvt-rechte-plank"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Rustic 015 (доска, клеевая)",
+   "slug": "enviro-rustic-015-lvt-doska",
+   "collection": "Rustic",
+   "sku": "015",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-серый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "015"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Rustic"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Тип",
+     "value": "LVT, клеевая укладка"
+    },
+    {
+     "label": "Размер",
+     "value": "1524 × 228,6 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "3,8323 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "11"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "17,35 кг"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Почти угольно-чёрный дуб, сквозь тёмный тон видны волокна древесины.</p>\n<p>Enviro Rustic: доска LVT для клеевой укладки, 1524 × 228,6 мм, толщина 2,5 мм, защитный слой 0,55 мм. Покрытие приклеивают к ровному основанию, его можно класть на водяной тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6aa97f9a49b2e642a87b0ed8_6aa97e87ea0b6b66c06ef289_enviroflooring-rustic-015-plank-02.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/rustic-015-lvt-rechte-plank"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Stone 01 (плитка, клеевая)",
+   "slug": "enviro-stone-01-lvt-plitka",
+   "collection": "Stone",
+   "sku": "01",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "бежевый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под камень"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "01"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Stone"
+    },
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Тип",
+     "value": "LVT, клеевая укладка"
+    },
+    {
+     "label": "Размер",
+     "value": "914,4 × 914,4 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "5,02 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "6"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "22,58 кг"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Самый светлый бетон коллекции Stone, почти цвета слоновой кости.</p>\n<p>Enviro Stone: плитка LVT для клеевой укладки, 914,4 × 914,4 мм, толщина 2,5 мм, защитный слой 0,55 мм. Покрытие приклеивают к ровному основанию, его можно класть на водяной тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6a9ebc56a8294028301ee949_6a9ebaa99dad3573b97ead9a_enviro-stone-01-tegel-heel-hero.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/stone-01-lvt-hele-tegel"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Stone 02 (плитка, клеевая)",
+   "slug": "enviro-stone-02-lvt-plitka",
+   "collection": "Stone",
+   "sku": "02",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "серый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под камень"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "02"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Stone"
+    },
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Тип",
+     "value": "LVT, клеевая укладка"
+    },
+    {
+     "label": "Размер",
+     "value": "914,4 × 914,4 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "5,02 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "6"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "22,58 кг"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Бетон среднего серого цвета с естественными пятнами и мягкими переходами тона.</p>\n<p>Enviro Stone: плитка LVT для клеевой укладки, 914,4 × 914,4 мм, толщина 2,5 мм, защитный слой 0,55 мм. Покрытие приклеивают к ровному основанию, его можно класть на водяной тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6a9ebc809a08d655a443b705_6a9ebaaa1a22c44cc128f916_enviro-stone-02-tegel-heel-hero.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/stone-02-lvt-hele-tegel"
+  },
+  {
+   "brand": "Enviro",
+   "name": "Stone 03 (плитка, клеевая)",
+   "slug": "enviro-stone-03-lvt-plitka",
+   "collection": "Stone",
+   "sku": "03",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Класс",
+     "value": "бытовой 23, коммерческий 33"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-серый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под камень"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код цвета",
+     "value": "03"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Stone"
+    },
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Тип",
+     "value": "LVT, клеевая укладка"
+    },
+    {
+     "label": "Размер",
+     "value": "914,4 × 914,4 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Класс использования",
+     "value": "бытовой 23, коммерческий 33"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "5,02 м²"
+    },
+    {
+     "label": "Штук в упаковке",
+     "value": "6"
+    },
+    {
+     "label": "Вес упаковки",
+     "value": "22,58 кг"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "Bfl-s1"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "15 лет"
+    }
+   ],
+   "description": "<p>Тёмно-серый бетон с заметной шероховатой фактурой.</p>\n<p>Enviro Stone: плитка LVT для клеевой укладки, 914,4 × 914,4 мм, толщина 2,5 мм, защитный слой 0,55 мм. Покрытие приклеивают к ровному основанию, его можно класть на водяной тёплый пол. Класс использования 23 для дома и 33 для коммерческих помещений, гарантия производителя 15 лет.</p>",
+   "images": [
+    "https://cdn.prod.website-files.com/6a9004aefb0202d3b4606644/6a9ebc819a08d655a443b7b2_6a9ebac940010cb23fa97712_enviro-stone-03-tegel-heel-hero.avif"
+   ],
+   "sourceUrl": "https://www.enviroflooring.com/producten/stone-03-lvt-hele-tegel"
+  },
+  {
+   "brand": "Kährs",
+   "name": "Cremello",
+   "slug": "kahrs-cremello-click-5-mm-13999",
+   "collection": "Hacienda",
+   "sku": "LTCLW2610-228",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-серый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "LTCLW2610-228"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Hacienda"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "1220 × 228 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Замок",
+     "value": "Click5G"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно, до 27 °C"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "25 лет"
+    },
+    {
+     "label": "Страна",
+     "value": "Швеция (бренд)"
+    }
+   ],
+   "description": "<p>Рисунок дуба светло-серого цвета.</p>\n<p>Kährs Cremello из коллекции Hacienda: доска 1220 × 228 мм, толщина 5 мм, защитный слой 0,55 мм. Собирается на замок без клея, не боится воды. Можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
+   "images": [
+    "https://kahrs.cdn-norce.tech/fb12035e-d964-49d0-b794-aff49afc0ac9?w=1534&q=70&f=webp"
+   ],
+   "sourceUrl": "https://www.kahrs.com/uk/product/cremello-click-5-mm-13999"
+  },
+  {
+   "brand": "Kährs",
+   "name": "Dovecot",
+   "slug": "kahrs-dovecot-click-xxl-6-mm",
+   "collection": "Impression Wood",
+   "sku": "LTCLW2201-218",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "серый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "LTCLW2201-218"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Impression Wood"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "1829 × 220 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Замок",
+     "value": "Click5G"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно, до 27 °C"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "30 лет"
+    },
+    {
+     "label": "Страна",
+     "value": "Швеция (бренд)"
+    }
+   ],
+   "description": "<p>Рисунок дуба серого цвета.</p>\n<p>Kährs Dovecot из коллекции Impression Wood: доска 1829 × 220 мм, толщина 6 мм, защитный слой 0,55 мм. Собирается на замок без клея, не боится воды. Можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
+   "images": [
+    "https://kahrs.cdn-norce.tech/e253fd14-98e5-43cb-b20a-2e03c9561168?w=1534&q=70&f=webp"
+   ],
+   "sourceUrl": "https://www.kahrs.com/uk/product/dovecot-click-xxl-6-mm"
+  },
+  {
+   "brand": "Kährs",
+   "name": "Fontin (клеевая)",
+   "slug": "kahrs-fontin-dry-back-055-mm",
+   "collection": "Dry Back Wood",
+   "sku": "LTDBW2009-229-5",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "натуральный"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "LTDBW2009-229-5"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Dry Back Wood"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Тип",
+     "value": "LVT, клеевая укладка (Dry Back)"
+    },
+    {
+     "label": "Размер",
+     "value": "1219 × 229 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно, до 27 °C"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "30 лет"
+    },
+    {
+     "label": "Страна",
+     "value": "Швеция (бренд)"
+    }
+   ],
+   "description": "<p>Рисунок дуба натурального цвета.</p>\n<p>Kährs Fontin из коллекции Dry Back Wood: доска 1219 × 229 мм, толщина 2,5 мм, защитный слой 0,55 мм. Покрытие приклеивают к ровному основанию. Можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
+   "images": [
+    "https://kahrs.cdn-norce.tech/ad190075-ffd4-406d-bd14-4ef6c8faec2b?w=1534&q=70&f=webp"
+   ],
+   "sourceUrl": "https://www.kahrs.com/uk/product/fontin-dry-back-055-mm"
+  },
+  {
+   "brand": "Kährs",
+   "name": "Hanmer (ёлочка) (клеевая)",
+   "slug": "kahrs-hanmer-dry-back-herringbone-07-mm",
+   "collection": "Dry Back Herringbone",
+   "sku": "LTDBW2010-102",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,7 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "натуральный"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "LTDBW2010-102"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Dry Back Herringbone"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Тип",
+     "value": "LVT, клеевая укладка (Dry Back)"
+    },
+    {
+     "label": "Размер",
+     "value": "457 × 102 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,7 мм"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно, до 27 °C"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "30 лет"
+    },
+    {
+     "label": "Страна",
+     "value": "Швеция (бренд)"
+    }
+   ],
+   "description": "<p>Рисунок дуба натурального цвета.</p>\n<p>Kährs Hanmer из коллекции Dry Back Herringbone: ёлочка 457 × 102 мм, толщина 2,5 мм, защитный слой 0,7 мм. Покрытие приклеивают к ровному основанию. Можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
+   "images": [
+    "https://kahrs.cdn-norce.tech/728a9550-dce1-47a7-b7f2-88cc65823bd8?w=1534&q=70&f=webp"
+   ],
+   "sourceUrl": "https://www.kahrs.com/uk/product/hanmer-dry-back-herringbone-07-mm"
+  },
+  {
+   "brand": "Kährs",
+   "name": "Harz",
+   "slug": "kahrs-harz-click-xxl-6-mm",
+   "collection": "Impression Wood",
+   "sku": "LTCLW2210-218",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "LTCLW2210-218"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Impression Wood"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "1829 × 220 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Замок",
+     "value": "Click5G"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно, до 27 °C"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "30 лет"
+    },
+    {
+     "label": "Страна",
+     "value": "Швеция (бренд)"
+    }
+   ],
+   "description": "<p>Рисунок дуба коричневого цвета.</p>\n<p>Kährs Harz из коллекции Impression Wood: доска 1829 × 220 мм, толщина 6 мм, защитный слой 0,55 мм. Собирается на замок без клея, не боится воды. Можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
+   "images": [
+    "https://kahrs.cdn-norce.tech/49522bb5-e226-453e-9dfc-66433a79d5dc?w=1534&q=70&f=webp"
+   ],
+   "sourceUrl": "https://www.kahrs.com/uk/product/harz-click-xxl-6-mm"
+  },
+  {
+   "brand": "Kährs",
+   "name": "Jasmund",
+   "slug": "kahrs-jasmund-click-xxl-6-mm",
+   "collection": "Impression Wood",
+   "sku": "LTCLW2209-218",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "натуральный"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "LTCLW2209-218"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Impression Wood"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "1829 × 220 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Замок",
+     "value": "Click5G"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно, до 27 °C"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "30 лет"
+    },
+    {
+     "label": "Страна",
+     "value": "Швеция (бренд)"
+    }
+   ],
+   "description": "<p>Рисунок дуба натурального цвета.</p>\n<p>Kährs Jasmund из коллекции Impression Wood: доска 1829 × 220 мм, толщина 6 мм, защитный слой 0,55 мм. Собирается на замок без клея, не боится воды. Можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
+   "images": [
+    "https://kahrs.cdn-norce.tech/2a62dd7f-c9c6-4c56-9976-a7799bf4b590?w=1534&q=70&f=webp"
+   ],
+   "sourceUrl": "https://www.kahrs.com/uk/product/jasmund-click-xxl-6-mm"
+  },
+  {
+   "brand": "Kährs",
+   "name": "Lhotse",
+   "slug": "kahrs-lhotse-click-6-mm",
+   "collection": "Click 6 mm Stone",
+   "sku": "LTCLS3010-300",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "бежевый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под камень"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "LTCLS3010-300"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Click 6 mm Stone"
+    },
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "600 × 300 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Замок",
+     "value": "Click5G"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно, до 27 °C"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "30 лет"
+    },
+    {
+     "label": "Страна",
+     "value": "Швеция (бренд)"
+    }
+   ],
+   "description": "<p>Плитка под камень бежевого цвета.</p>\n<p>Kährs Lhotse из коллекции Click 6 mm Stone: плитка 600 × 300 мм, толщина 6 мм, защитный слой 0,55 мм. Собирается на замок без клея, не боится воды. Можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
+   "images": [
+    "https://kahrs.cdn-norce.tech/c0f667b4-39bb-4b37-aac4-8736e5806ffe?w=1534&q=70&f=webp"
+   ],
+   "sourceUrl": "https://www.kahrs.com/uk/product/lhotse-click-6-mm"
+  },
+  {
+   "brand": "Kährs",
+   "name": "Makalu",
+   "slug": "kahrs-makalu-click-6-mm",
+   "collection": "Click 6 mm Stone",
+   "sku": "LTCLS3007-300",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "серый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под камень"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "LTCLS3007-300"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Click 6 mm Stone"
+    },
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "600 × 300 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Замок",
+     "value": "Click5G"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно, до 27 °C"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "30 лет"
+    },
+    {
+     "label": "Страна",
+     "value": "Швеция (бренд)"
+    }
+   ],
+   "description": "<p>Плитка под камень серого цвета.</p>\n<p>Kährs Makalu из коллекции Click 6 mm Stone: плитка 600 × 300 мм, толщина 6 мм, защитный слой 0,55 мм. Собирается на замок без клея, не боится воды. Можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
+   "images": [
+    "https://kahrs.cdn-norce.tech/071d8798-982d-4c86-89be-c19a95af7f26?w=1534&q=70&f=webp"
+   ],
+   "sourceUrl": "https://www.kahrs.com/uk/product/makalu-click-6-mm"
+  },
+  {
+   "brand": "Kährs",
+   "name": "Marrone",
+   "slug": "kahrs-marrone-click-5-mm-13998",
+   "collection": "Ranch",
+   "sku": "LTCLW2605-228",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "LTCLW2605-228"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Ranch"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "1220 × 228 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Замок",
+     "value": "Click5G"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно, до 27 °C"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "25 лет"
+    },
+    {
+     "label": "Страна",
+     "value": "Швеция (бренд)"
+    }
+   ],
+   "description": "<p>Рисунок дуба коричневого цвета.</p>\n<p>Kährs Marrone из коллекции Ranch: доска 1220 × 228 мм, толщина 5 мм, защитный слой 0,55 мм. Собирается на замок без клея, не боится воды. Можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
+   "images": [
+    "https://kahrs.cdn-norce.tech/c6784d69-2c40-4ba7-aa34-0f5edf9b36fc?w=1534&q=70&f=webp"
+   ],
+   "sourceUrl": "https://www.kahrs.com/uk/product/marrone-click-5-mm-13998"
+  },
+  {
+   "brand": "Kährs",
+   "name": "Oulanka",
+   "slug": "kahrs-oulanka-click-5-mm-6233",
+   "collection": "Click 5 mm Wood",
+   "sku": "LTCLW2110-172",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "натуральный"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "LTCLW2110-172"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Click 5 mm Wood"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "1210 × 172 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Замок",
+     "value": "Click5G"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно, до 27 °C"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "10 лет"
+    },
+    {
+     "label": "Страна",
+     "value": "Швеция (бренд)"
+    }
+   ],
+   "description": "<p>Рисунок дуба натурального цвета.</p>\n<p>Kährs Oulanka из коллекции Click 5 mm Wood: доска 1210 × 172 мм, толщина 5 мм, защитный слой 0,3 мм. Собирается на замок без клея, не боится воды. Можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
+   "images": [
+    "https://kahrs.cdn-norce.tech/055ed3f8-0eb3-44ec-bf70-2650516c5566?w=1534&q=70&f=webp"
+   ],
+   "sourceUrl": "https://www.kahrs.com/uk/product/oulanka-click-5-mm-6233"
+  },
+  {
+   "brand": "Kährs",
+   "name": "Overo",
+   "slug": "kahrs-overo-click-5-mm-13997",
+   "collection": "Ranch",
+   "sku": "LTCLW2604-228",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "натуральный"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "LTCLW2604-228"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Ranch"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "1220 × 228 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Замок",
+     "value": "Click5G"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно, до 27 °C"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "25 лет"
+    },
+    {
+     "label": "Страна",
+     "value": "Швеция (бренд)"
+    }
+   ],
+   "description": "<p>Рисунок дуба натурального цвета.</p>\n<p>Kährs Overo из коллекции Ranch: доска 1220 × 228 мм, толщина 5 мм, защитный слой 0,55 мм. Собирается на замок без клея, не боится воды. Можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
+   "images": [
+    "https://kahrs.cdn-norce.tech/fbdfc432-8ae1-4d6d-8a31-8b7c9d3acc61?w=1534&q=70&f=webp"
+   ],
+   "sourceUrl": "https://www.kahrs.com/uk/product/overo-click-5-mm-13997"
+  },
+  {
+   "brand": "Kährs",
+   "name": "Redwood",
+   "slug": "kahrs-redwood-click-5-mm-6236",
+   "collection": "Click 5 mm Wood",
+   "sku": "LTCLW2101-172",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "LTCLW2101-172"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Click 5 mm Wood"
+    },
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "1210 × 172 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Замок",
+     "value": "Click5G"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно, до 27 °C"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "10 лет"
+    },
+    {
+     "label": "Страна",
+     "value": "Швеция (бренд)"
+    }
+   ],
+   "description": "<p>Рисунок дуба коричневого цвета.</p>\n<p>Kährs Redwood из коллекции Click 5 mm Wood: доска 1210 × 172 мм, толщина 5 мм, защитный слой 0,3 мм. Собирается на замок без клея, не боится воды. Можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
+   "images": [
+    "https://kahrs.cdn-norce.tech/078ce097-6d8a-4e6b-a6d3-60521af0c488?w=1534&q=70&f=webp"
+   ],
+   "sourceUrl": "https://www.kahrs.com/uk/product/redwood-click-5-mm-6236"
+  },
+  {
+   "brand": "Kährs",
+   "name": "Sapo (ёлочка) (клеевая)",
+   "slug": "kahrs-sapo-dry-back-herringbone-07-mm",
+   "collection": "Dry Back Herringbone",
+   "sku": "LTDBW2122-102",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,7 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "натуральный"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "LTDBW2122-102"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Dry Back Herringbone"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Тип",
+     "value": "LVT, клеевая укладка (Dry Back)"
+    },
+    {
+     "label": "Размер",
+     "value": "457 × 102 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,7 мм"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно, до 27 °C"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "30 лет"
+    },
+    {
+     "label": "Страна",
+     "value": "Швеция (бренд)"
+    }
+   ],
+   "description": "<p>Рисунок дуба натурального цвета.</p>\n<p>Kährs Sapo из коллекции Dry Back Herringbone: ёлочка 457 × 102 мм, толщина 2,5 мм, защитный слой 0,7 мм. Покрытие приклеивают к ровному основанию. Можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
+   "images": [
+    "https://kahrs.cdn-norce.tech/87525430-613f-40de-82cd-37f66a85a34f?w=1534&q=70&f=webp"
+   ],
+   "sourceUrl": "https://www.kahrs.com/uk/product/sapo-dry-back-herringbone-07-mm"
+  },
+  {
+   "brand": "Kährs",
+   "name": "Sarek (ёлочка)",
+   "slug": "kahrs-sarek-click-herringbone-5-mm-2925",
+   "collection": "Click Herringbone",
+   "sku": "LTCHW2116L120",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Толщина",
+     "value": "5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "серо-коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "LTCHW2116L120"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Click Herringbone"
+    },
+    {
+     "label": "Формат",
+     "value": "Ёлочка"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер",
+     "value": "720 × 120 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя микрофаска"
+    },
+    {
+     "label": "Замок",
+     "value": "Click5Gi"
+    },
+    {
+     "label": "Тёплый пол",
+     "value": "можно, до 27 °C"
+    },
+    {
+     "label": "Гарантия производителя",
+     "value": "30 лет"
+    },
+    {
+     "label": "Страна",
+     "value": "Швеция (бренд)"
+    }
+   ],
+   "description": "<p>Рисунок дуба серо-коричневого цвета.</p>\n<p>Kährs Sarek из коллекции Click Herringbone: ёлочка 720 × 120 мм, толщина 5 мм, защитный слой 0,55 мм. Собирается на замок без клея, не боится воды. Можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
+   "images": [
+    "https://kahrs.cdn-norce.tech/3eb2d435-8b2b-4ec1-8399-59e570404229?w=1534&q=70&f=webp"
+   ],
+   "sourceUrl": "https://www.kahrs.com/uk/product/sarek-click-herringbone-5-mm-2925"
+  },
+  {
+   "brand": "Noventis",
+   "name": "Beauty Natural",
+   "slug": "noventis-spirit-gd-beauty-natural",
+   "collection": "Spirit GD",
+   "sku": "Beauty Natural",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "2 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светлый натуральный"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код",
+     "value": "Beauty Natural"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Spirit GD"
+    },
+    {
+     "label": "Тип",
+     "value": "LVT, клеевая укладка"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1200 × 180 мм"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "2 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    },
+    {
+     "label": "Дополнительный защитный лак",
+     "value": "да"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя (4V)"
+    },
+    {
+     "label": "Вес",
+     "value": "4,11 кг/м²"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "3,24 м²"
+    },
+    {
+     "label": "Снижение ударного шума",
+     "value": "3 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "КМ2 (В2, Д2, Т2, РП1)"
+    },
+    {
+     "label": "Срок службы",
+     "value": "15 лет"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Россия"
+    }
+   ],
+   "description": "<p>Рисунок дуба светлого натурального цвета.</p>\n<p>Noventis Spirit GD: доска LVT 1200 × 180 мм, толщина 2 мм, защитный слой 0,3 мм с фаской по четырём сторонам. Покрытие приклеивают к ровному основанию. Покрытие не боится воды, его можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
+   "images": [
+    "https://bigfloor.pro/upload/iblock/968/4pcnl67w2oy6yi3v62yei61uj6rk71hi/tmp2227000efc8c8d41ae33e6826df2592b.jpg"
+   ],
+   "sourceUrl": "https://bigfloor.pro/catalog/lvt/spirit-gd/item-71720/"
+  },
+  {
+   "brand": "Noventis",
+   "name": "Canyon Brown",
+   "slug": "noventis-spirit-gd-canyon-brown",
+   "collection": "Spirit GD",
+   "sku": "Canyon Brown",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "2 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код",
+     "value": "Canyon Brown"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Spirit GD"
+    },
+    {
+     "label": "Тип",
+     "value": "LVT, клеевая укладка"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1200 × 180 мм"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "2 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    },
+    {
+     "label": "Дополнительный защитный лак",
+     "value": "да"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя (4V)"
+    },
+    {
+     "label": "Вес",
+     "value": "4,11 кг/м²"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "3,24 м²"
+    },
+    {
+     "label": "Снижение ударного шума",
+     "value": "3 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "КМ2 (В2, Д2, Т2, РП1)"
+    },
+    {
+     "label": "Срок службы",
+     "value": "15 лет"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Россия"
+    }
+   ],
+   "description": "<p>Рисунок дуба коричневого цвета.</p>\n<p>Noventis Spirit GD: доска LVT 1200 × 180 мм, толщина 2 мм, защитный слой 0,3 мм с фаской по четырём сторонам. Покрытие приклеивают к ровному основанию. Покрытие не боится воды, его можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
+   "images": [
+    "https://bigfloor.pro/upload/iblock/6b4/h27gu5wecyrd0hb07u0xnezj5rx6guzq/tmpafbd26f36b418c9bfa435e55492c870e.jpg"
+   ],
+   "sourceUrl": "https://bigfloor.pro/catalog/lvt/spirit-gd/item-71719/"
+  },
+  {
+   "brand": "Noventis",
+   "name": "Beauty Natural",
+   "slug": "noventis-spirit-cl-beauty-natural",
+   "collection": "Spirit CL",
+   "sku": "Beauty Natural",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "4 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светлый натуральный"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код",
+     "value": "Beauty Natural"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Spirit CL"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1200 × 180 мм"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "4 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    },
+    {
+     "label": "Дополнительный защитный лак",
+     "value": "да"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя (4V)"
+    },
+    {
+     "label": "Вес",
+     "value": "7,56 кг/м²"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,16 м²"
+    },
+    {
+     "label": "Снижение ударного шума",
+     "value": "20 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "КМ2 (В2, Д2, Т2, РП1)"
+    },
+    {
+     "label": "Срок службы",
+     "value": "20 лет"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Россия"
+    }
+   ],
+   "description": "<p>Рисунок дуба светлого натурального цвета.</p>\n<p>Noventis Spirit CL: доска SPC 1200 × 180 мм, толщина 4 мм, защитный слой 0,3 мм с фаской по четырём сторонам. Доски соединяются замком, клей не нужен. Покрытие не боится воды, его можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
+   "images": [
+    "https://bigfloor.pro/upload/iblock/57c/jgowdds88vu7cyfrnunk50kbxpbiykay/tmp3554eabd811ed0fc4ec86075c99e2b79.jpg"
+   ],
+   "sourceUrl": "https://bigfloor.pro/catalog/lvt/spirit-cl/item-54900/"
+  },
+  {
+   "brand": "Noventis",
+   "name": "Canyon Brown",
+   "slug": "noventis-spirit-cl-canyon-brown",
+   "collection": "Spirit CL",
+   "sku": "Canyon Brown",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "4 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код",
+     "value": "Canyon Brown"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Spirit CL"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1200 × 180 мм"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "4 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    },
+    {
+     "label": "Дополнительный защитный лак",
+     "value": "да"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя (4V)"
+    },
+    {
+     "label": "Вес",
+     "value": "7,56 кг/м²"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,16 м²"
+    },
+    {
+     "label": "Снижение ударного шума",
+     "value": "20 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "КМ2 (В2, Д2, Т2, РП1)"
+    },
+    {
+     "label": "Срок службы",
+     "value": "20 лет"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Россия"
+    }
+   ],
+   "description": "<p>Рисунок дуба коричневого цвета.</p>\n<p>Noventis Spirit CL: доска SPC 1200 × 180 мм, толщина 4 мм, защитный слой 0,3 мм с фаской по четырём сторонам. Доски соединяются замком, клей не нужен. Покрытие не боится воды, его можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
+   "images": [
+    "https://bigfloor.pro/upload/iblock/3c1/dyzn1jyaa4hnsowlf8cxo83lwzoftwmk/tmp13daadda6a7d31df34fff77168bd1e3b.jpg"
+   ],
+   "sourceUrl": "https://bigfloor.pro/catalog/lvt/spirit-cl/item-54899/"
+  },
+  {
+   "brand": "Noventis",
+   "name": "Берген 5010",
+   "slug": "noventis-asgard-bergen-5010",
+   "collection": "Asgard",
+   "sku": "5010",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Толщина",
+     "value": "4 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-серый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под камень"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код",
+     "value": "5010"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Asgard"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер плитки",
+     "value": "600 × 300 мм"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "4 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    },
+    {
+     "label": "Дополнительный защитный лак",
+     "value": "да"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя (4V)"
+    },
+    {
+     "label": "Вес",
+     "value": "7,78 кг/м²"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,8 м²"
+    },
+    {
+     "label": "Срок службы",
+     "value": "20 лет"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Россия"
+    }
+   ],
+   "description": "<p>Плитка под камень светло-серого цвета.</p>\n<p>Noventis Asgard: плитка SPC 600 × 300 мм, толщина 4 мм, защитный слой 0,3 мм с фаской по четырём сторонам. Доски соединяются замком, клей не нужен. Покрытие не боится воды, его можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
+   "images": [
+    "https://bigfloor.pro/upload/iblock/512/ix2sejgrct0f9y025vl0wg958xgz6cul/tmp41837a86928d59b35b11a4d24c5568ea.jpeg"
+   ],
+   "sourceUrl": "https://bigfloor.pro/catalog/lvt/asgard/item-54788/"
+  },
+  {
+   "brand": "Noventis",
+   "name": "Гери 5007",
+   "slug": "noventis-asgard-geri-5007",
+   "collection": "Asgard",
+   "sku": "5007",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Толщина",
+     "value": "4 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Плитка"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "серый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под камень"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код",
+     "value": "5007"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Asgard"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер плитки",
+     "value": "600 × 300 мм"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "4 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    },
+    {
+     "label": "Дополнительный защитный лак",
+     "value": "да"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя (4V)"
+    },
+    {
+     "label": "Вес",
+     "value": "7,78 кг/м²"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,8 м²"
+    },
+    {
+     "label": "Срок службы",
+     "value": "20 лет"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Россия"
+    }
+   ],
+   "description": "<p>Плитка под камень серого цвета.</p>\n<p>Noventis Asgard: плитка SPC 600 × 300 мм, толщина 4 мм, защитный слой 0,3 мм с фаской по четырём сторонам. Доски соединяются замком, клей не нужен. Покрытие не боится воды, его можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
+   "images": [
+    "https://bigfloor.pro/upload/iblock/273/vdkn5ru8z1sz6ck6ae3j4b0vn16odqth/tmp765f297bb33a1cf1fcb7d45d500eba8e.jpg"
+   ],
+   "sourceUrl": "https://bigfloor.pro/catalog/lvt/asgard/item-54785/"
+  },
+  {
+   "brand": "Noventis",
+   "name": "Дуб Арден 1588",
+   "slug": "noventis-avalon-dub-arden-1588",
+   "collection": "Avalon",
+   "sku": "1588",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "3,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "серый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код",
+     "value": "1588"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Avalon"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1200 × 180 мм"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "3,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    },
+    {
+     "label": "Дополнительный защитный лак",
+     "value": "да"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя (4V)"
+    },
+    {
+     "label": "Вес",
+     "value": "6,4 кг/м²"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,16 м²"
+    },
+    {
+     "label": "Снижение ударного шума",
+     "value": "3 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "КМ2 (В2, Д2, Т2, РП1)"
+    },
+    {
+     "label": "Срок службы",
+     "value": "15 лет"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Россия"
+    }
+   ],
+   "description": "<p>Рисунок дуба серого цвета.</p>\n<p>Noventis Avalon: доска SPC 1200 × 180 мм, толщина 3,5 мм, защитный слой 0,3 мм с фаской по четырём сторонам. Доски соединяются замком, клей не нужен. Покрытие не боится воды, его можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
+   "images": [
+    "https://bigfloor.pro/upload/iblock/31b/8i4z7gizp00d6gas16zz6ixed4ky6r6q/tmpf47b562eb8e94fc5981388c1ef6a1f1e.jpg"
+   ],
+   "sourceUrl": "https://bigfloor.pro/catalog/lvt/avalon/item-54351/"
+  },
+  {
+   "brand": "Noventis",
+   "name": "Дуб Валлийский 1586",
+   "slug": "noventis-avalon-dub-valliyskiy-1586",
+   "collection": "Avalon",
+   "sku": "1586",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "3,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код",
+     "value": "1586"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Avalon"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1200 × 180 мм"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "3,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    },
+    {
+     "label": "Дополнительный защитный лак",
+     "value": "да"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя (4V)"
+    },
+    {
+     "label": "Вес",
+     "value": "6,4 кг/м²"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,16 м²"
+    },
+    {
+     "label": "Снижение ударного шума",
+     "value": "3 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "КМ2 (В2, Д2, Т2, РП1)"
+    },
+    {
+     "label": "Срок службы",
+     "value": "15 лет"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Россия"
+    }
+   ],
+   "description": "<p>Рисунок дуба светло-коричневого цвета.</p>\n<p>Noventis Avalon: доска SPC 1200 × 180 мм, толщина 3,5 мм, защитный слой 0,3 мм с фаской по четырём сторонам. Доски соединяются замком, клей не нужен. Покрытие не боится воды, его можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
+   "images": [
+    "https://bigfloor.pro/upload/iblock/a3c/4c55dxdk1b0x4qaqabekccnmdnts8e11/tmp19151d9fa9c21c120f0aa3ac40582801.jpg"
+   ],
+   "sourceUrl": "https://bigfloor.pro/catalog/lvt/avalon/item-54349/"
+  },
+  {
+   "brand": "Noventis",
+   "name": "Дуб Камелот 1581",
+   "slug": "noventis-avalon-gd-dub-kamelot-1581",
+   "collection": "Avalon GD",
+   "sku": "1581",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "2 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "серый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код",
+     "value": "1581"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Avalon GD"
+    },
+    {
+     "label": "Тип",
+     "value": "LVT, клеевая укладка"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1200 × 180 мм"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "2 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    },
+    {
+     "label": "Дополнительный защитный лак",
+     "value": "да"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя (4V)"
+    },
+    {
+     "label": "Вес",
+     "value": "4,11 кг/м²"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "3,24 м²"
+    },
+    {
+     "label": "Снижение ударного шума",
+     "value": "3 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "КМ2 (В2, Д2, Т2, РП1)"
+    },
+    {
+     "label": "Срок службы",
+     "value": "15 лет"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Россия"
+    }
+   ],
+   "description": "<p>Рисунок дуба серого цвета.</p>\n<p>Noventis Avalon GD: доска LVT 1200 × 180 мм, толщина 2 мм, защитный слой 0,3 мм с фаской по четырём сторонам. Покрытие приклеивают к ровному основанию. Покрытие не боится воды, его можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
+   "images": [
+    "https://bigfloor.pro/upload/iblock/f55/baf63xyzkkse4w4cwai69h7br1ha6s72/tmp2d2b3312f031b343755b4b3be0dbf4e7.png"
+   ],
+   "sourceUrl": "https://bigfloor.pro/catalog/lvt/avalon-gd/item-71709/"
+  },
+  {
+   "brand": "Noventis",
+   "name": "Дуб Кельтский 1583",
+   "slug": "noventis-avalon-gd-dub-keltskiy-1583",
+   "collection": "Avalon GD",
+   "sku": "1583",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "2 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "серо-коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код",
+     "value": "1583"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Avalon GD"
+    },
+    {
+     "label": "Тип",
+     "value": "LVT, клеевая укладка"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1200 × 180 мм"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "2 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    },
+    {
+     "label": "Дополнительный защитный лак",
+     "value": "да"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя (4V)"
+    },
+    {
+     "label": "Вес",
+     "value": "4,11 кг/м²"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "3,24 м²"
+    },
+    {
+     "label": "Снижение ударного шума",
+     "value": "3 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "КМ2 (В2, Д2, Т2, РП1)"
+    },
+    {
+     "label": "Срок службы",
+     "value": "15 лет"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Россия"
+    }
+   ],
+   "description": "<p>Рисунок дуба серо-коричневого цвета.</p>\n<p>Noventis Avalon GD: доска LVT 1200 × 180 мм, толщина 2 мм, защитный слой 0,3 мм с фаской по четырём сторонам. Покрытие приклеивают к ровному основанию. Покрытие не боится воды, его можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
+   "images": [
+    "https://bigfloor.pro/upload/iblock/277/fnofhx7jroq1i45d0opz1vrvefq6v0gc/tmp118a5ad87d6ef555b5258af8d26a50ae.jpg"
+   ],
+   "sourceUrl": "https://bigfloor.pro/catalog/lvt/avalon-gd/item-71710/"
+  },
+  {
+   "brand": "Noventis",
+   "name": "Айс 6007",
+   "slug": "noventis-granit-ays-6007",
+   "collection": "Granit",
+   "sku": "6007",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,5 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под камень"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код",
+     "value": "6007"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Granit"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1200 × 180 мм"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,5 мм"
+    },
+    {
+     "label": "Дополнительный защитный лак",
+     "value": "да"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя (4V)"
+    },
+    {
+     "label": "Вес",
+     "value": "10,23 кг/м²"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,16 м²"
+    },
+    {
+     "label": "Снижение ударного шума",
+     "value": "3 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "КМ2 (В2, Д2, Т2, РП1)"
+    },
+    {
+     "label": "Срок службы",
+     "value": "20 лет"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Россия"
+    }
+   ],
+   "description": "<p>Доска под камень светло-коричневого цвета.</p>\n<p>Noventis Granit: доска SPC 1200 × 180 мм, толщина 5 мм, защитный слой 0,5 мм с фаской по четырём сторонам. Доски соединяются замком, клей не нужен. Покрытие не боится воды, его можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
+   "images": [
+    "https://bigfloor.pro/upload/iblock/85e/9t09ilnw6k9ls99ak4kar2tmmlgs00sl/tmp52f387a6ec339de640d652f185520dd0.jpg"
+   ],
+   "sourceUrl": "https://bigfloor.pro/catalog/lvt/granit/item-54441/"
+  },
+  {
+   "brand": "Noventis",
+   "name": "Гайя 6004",
+   "slug": "noventis-granit-gayya-6004",
+   "collection": "Granit",
+   "sku": "6004",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,5 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под камень"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код",
+     "value": "6004"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Granit"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1200 × 180 мм"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,5 мм"
+    },
+    {
+     "label": "Дополнительный защитный лак",
+     "value": "да"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя (4V)"
+    },
+    {
+     "label": "Вес",
+     "value": "10,23 кг/м²"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,16 м²"
+    },
+    {
+     "label": "Снижение ударного шума",
+     "value": "3 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "КМ2 (В2, Д2, Т2, РП1)"
+    },
+    {
+     "label": "Срок службы",
+     "value": "20 лет"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Россия"
+    }
+   ],
+   "description": "<p>Доска под камень светло-коричневого цвета.</p>\n<p>Noventis Granit: доска SPC 1200 × 180 мм, толщина 5 мм, защитный слой 0,5 мм с фаской по четырём сторонам. Доски соединяются замком, клей не нужен. Покрытие не боится воды, его можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
+   "images": [
+    "https://bigfloor.pro/upload/iblock/4ff/ty8rda1r0mheap0ymxbyoo95beyacvmy/tmpc5c4d806db6014601a3cc63ae22afc05.jpg"
+   ],
+   "sourceUrl": "https://bigfloor.pro/catalog/lvt/granit/item-54442/"
+  },
+  {
+   "brand": "Noventis",
+   "name": "Дуб Вестфонна 3006",
+   "slug": "noventis-iceberg-dub-vestfonna-3006",
+   "collection": "Iceberg",
+   "sku": "3006",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "4 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-серый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код",
+     "value": "3006"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Iceberg"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1200 × 180 мм"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "4 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    },
+    {
+     "label": "Дополнительный защитный лак",
+     "value": "да"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя (4V)"
+    },
+    {
+     "label": "Вес",
+     "value": "7,78 кг/м²"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,16 м²"
+    },
+    {
+     "label": "Снижение ударного шума",
+     "value": "20 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "КМ2 (В2, Д2, Т2, РП1)"
+    },
+    {
+     "label": "Срок службы",
+     "value": "20 лет"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Россия"
+    }
+   ],
+   "description": "<p>Рисунок дуба светло-серого цвета.</p>\n<p>Noventis Iceberg: доска SPC 1200 × 180 мм, толщина 4 мм, защитный слой 0,3 мм с фаской по четырём сторонам. Доски соединяются замком, клей не нужен. Покрытие не боится воды, его можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
+   "images": [
+    "https://bigfloor.pro/upload/iblock/ea3/wogh721r1bxd97j282bf1ytwhu6twwrt/tmp87f29e43c8a4ece27fd5a8ebf4ec4d62.jpg"
+   ],
+   "sourceUrl": "https://bigfloor.pro/catalog/lvt/iceberg/item-54369/"
+  },
+  {
+   "brand": "Noventis",
+   "name": "Дуб Виктория 3000",
+   "slug": "noventis-iceberg-dub-viktoriya-3000",
+   "collection": "Iceberg",
+   "sku": "3000",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "4 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код",
+     "value": "3000"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Iceberg"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1200 × 180 мм"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "4 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    },
+    {
+     "label": "Дополнительный защитный лак",
+     "value": "да"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя (4V)"
+    },
+    {
+     "label": "Вес",
+     "value": "7,78 кг/м²"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,16 м²"
+    },
+    {
+     "label": "Снижение ударного шума",
+     "value": "20 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "КМ2 (В2, Д2, Т2, РП1)"
+    },
+    {
+     "label": "Срок службы",
+     "value": "20 лет"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Россия"
+    }
+   ],
+   "description": "<p>Рисунок дуба тёмно-коричневого цвета.</p>\n<p>Noventis Iceberg: доска SPC 1200 × 180 мм, толщина 4 мм, защитный слой 0,3 мм с фаской по четырём сторонам. Доски соединяются замком, клей не нужен. Покрытие не боится воды, его можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
+   "images": [
+    "https://bigfloor.pro/upload/iblock/625/kj0dvn7wp8j9v0ykjqoalqkviw9qjrh8/tmpbc8f0f0e5d12bbc4074e409666493993.jpg"
+   ],
+   "sourceUrl": "https://bigfloor.pro/catalog/lvt/iceberg/item-54363/"
+  },
+  {
+   "brand": "Noventis",
+   "name": "Дуб Йеллоустон 2006",
+   "slug": "noventis-grand-canyon-gd-dub-yellouston-2006",
+   "collection": "Grand Canyon GD",
+   "sku": "2006",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,5 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Код",
+     "value": "2006"
+    },
+    {
+     "label": "Коллекция",
+     "value": "Grand Canyon GD"
+    },
+    {
+     "label": "Тип",
+     "value": "LVT, клеевая укладка"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1200 × 180 мм"
+    },
+    {
+     "label": "Общая толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,5 мм"
+    },
+    {
+     "label": "Дополнительный защитный лак",
+     "value": "да"
+    },
+    {
+     "label": "Фаска",
+     "value": "4-сторонняя (4V)"
+    },
+    {
+     "label": "Вес",
+     "value": "5,16 кг/м²"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "3,24 м²"
+    },
+    {
+     "label": "Снижение ударного шума",
+     "value": "3 дБ"
+    },
+    {
+     "label": "Пожарная безопасность",
+     "value": "КМ2 (В2, Д2, Т2, РП1)"
+    },
+    {
+     "label": "Срок службы",
+     "value": "20 лет"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Россия"
+    }
+   ],
+   "description": "<p>Рисунок дуба светло-коричневого цвета.</p>\n<p>Noventis Grand Canyon GD: доска LVT 1200 × 180 мм, толщина 2,5 мм, защитный слой 0,5 мм с фаской по четырём сторонам. Покрытие приклеивают к ровному основанию. Покрытие не боится воды, его можно класть на тёплый пол с температурой поверхности до 27 °C.</p>",
+   "images": [
+    "https://bigfloor.pro/upload/iblock/401/hz2r1db5x125lv371oksxzk8hf83z9dq/tmpb235d5057d0868a1210f00f9ba62c952.jpg"
+   ],
+   "sourceUrl": "https://bigfloor.pro/catalog/lvt/grand-canyon-gd/item-71714/"
+  },
+  {
+   "brand": "Fine Floor",
+   "name": "FF-1179 Дуб Ситте",
+   "slug": "fine-floor-ff-1179-dub-sitte",
+   "collection": "FF-1100 R-Line",
+   "sku": "FF-1179",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "4,5 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "натуральный"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "FF-1179"
+    },
+    {
+     "label": "Коллекция",
+     "value": "FF-1100 R-Line"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1220 × 183 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "4,5 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,79 м²"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Россия"
+    }
+   ],
+   "description": "<p>Рисунок дуба натурального цвета.</p>\n<p>Fine Floor FF-1100 R-Line: доска 1220 × 183 мм толщиной 4,5 мм. Доски соединяются замком, клей не нужен.</p>",
+   "images": [
+    "https://finefloor.ru/upload/iblock/441/4411ed1d8daabea629c295cc1091da99.jpg"
+   ],
+   "sourceUrl": "https://finefloor.ru/product/dub-sitte/"
+  },
+  {
+   "brand": "Fine Floor",
+   "name": "FF-1178 Дуб Тикьян",
+   "slug": "fine-floor-ff-1178-dub-tikyan",
+   "collection": "FF-1100 R-Line",
+   "sku": "FF-1178",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "4,5 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "натуральный"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "FF-1178"
+    },
+    {
+     "label": "Коллекция",
+     "value": "FF-1100 R-Line"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1220 × 183 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "4,5 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,79 м²"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Россия"
+    }
+   ],
+   "description": "<p>Рисунок дуба натурального цвета.</p>\n<p>Fine Floor FF-1100 R-Line: доска 1220 × 183 мм толщиной 4,5 мм. Доски соединяются замком, клей не нужен.</p>",
+   "images": [
+    "https://finefloor.ru/upload/iblock/92e/92ec39dd6d0610d9b3d4be670062e4be.jpg"
+   ],
+   "sourceUrl": "https://finefloor.ru/product/dub-tikyan/"
+  },
+  {
+   "brand": "Fine Floor",
+   "name": "FF-1177 Дуб Натара",
+   "slug": "fine-floor-ff-1177-dub-natara",
+   "collection": "FF-1100 R-Line",
+   "sku": "FF-1177",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "4,5 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "натуральный"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "FF-1177"
+    },
+    {
+     "label": "Коллекция",
+     "value": "FF-1100 R-Line"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1220 × 183 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "4,5 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,79 м²"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Россия"
+    }
+   ],
+   "description": "<p>Рисунок дуба натурального цвета.</p>\n<p>Fine Floor FF-1100 R-Line: доска 1220 × 183 мм толщиной 4,5 мм. Доски соединяются замком, клей не нужен.</p>",
+   "images": [
+    "https://finefloor.ru/upload/iblock/b90/b90997c2a96a2c0df9b1fbcb5d5f5cd1.jpg"
+   ],
+   "sourceUrl": "https://finefloor.ru/product/dub-natara/"
+  },
+  {
+   "brand": "Fine Floor",
+   "name": "FF-1176 Дуб Нуора",
+   "slug": "fine-floor-ff-1176-dub-nuora",
+   "collection": "FF-1100 R-Line",
+   "sku": "FF-1176",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "4,5 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "FF-1176"
+    },
+    {
+     "label": "Коллекция",
+     "value": "FF-1100 R-Line"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1220 × 183 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "4,5 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,79 м²"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Россия"
+    }
+   ],
+   "description": "<p>Рисунок дуба коричневого цвета.</p>\n<p>Fine Floor FF-1100 R-Line: доска 1220 × 183 мм толщиной 4,5 мм. Доски соединяются замком, клей не нужен.</p>",
+   "images": [
+    "https://finefloor.ru/upload/iblock/c82/c82da04b91eed37027e0378d9adeec16.jpg"
+   ],
+   "sourceUrl": "https://finefloor.ru/product/dub-nuora/"
+  },
+  {
+   "brand": "Fine Floor",
+   "name": "FF-1175 Дуб Батамай",
+   "slug": "fine-floor-ff-1175-dub-batamay",
+   "collection": "FF-1100 R-Line",
+   "sku": "FF-1175",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "4,5 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "бежевый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "FF-1175"
+    },
+    {
+     "label": "Коллекция",
+     "value": "FF-1100 R-Line"
+    },
+    {
+     "label": "Тип",
+     "value": "SPC, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1220 × 183 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "4,5 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "1,79 м²"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Россия"
+    }
+   ],
+   "description": "<p>Рисунок дуба бежевого цвета.</p>\n<p>Fine Floor FF-1100 R-Line: доска 1220 × 183 мм толщиной 4,5 мм. Доски соединяются замком, клей не нужен.</p>",
+   "images": [
+    "https://finefloor.ru/upload/iblock/ff3/ff3cc8baeefc38990cd98fd1167f0a72.jpg"
+   ],
+   "sourceUrl": "https://finefloor.ru/product/dub-batamay/"
+  },
+  {
+   "brand": "Fine Floor",
+   "name": "FF-1265 Дуб Твизл",
+   "slug": "fine-floor-ff-1265-dub-tvizl",
+   "collection": "FF-1200 Strong",
+   "sku": "FF-1265",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "4 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "FF-1265"
+    },
+    {
+     "label": "Коллекция",
+     "value": "FF-1200 Strong"
+    },
+    {
+     "label": "Тип",
+     "value": "кварцвинил, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1318 × 189 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "4 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,49 м²"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Россия"
+    }
+   ],
+   "description": "<p>Рисунок дуба тёмно-коричневого цвета.</p>\n<p>Fine Floor FF-1200 Strong: доска 1318 × 189 мм толщиной 4 мм с защитным слоем 0,3 мм. Доски соединяются замком, клей не нужен.</p>",
+   "images": [
+    "https://finefloor.ru/upload/resize_cache/iblock/761/1500_1500_1/7617b5f50705db42cd3caa3290e23230.jpg"
+   ],
+   "sourceUrl": "https://finefloor.ru/product/dub-tvizl/"
+  },
+  {
+   "brand": "Fine Floor",
+   "name": "FF-1263 Дуб Рибель",
+   "slug": "fine-floor-ff-1263-dub-ribel",
+   "collection": "FF-1200 Strong",
+   "sku": "FF-1263",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "4 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "серый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "FF-1263"
+    },
+    {
+     "label": "Коллекция",
+     "value": "FF-1200 Strong"
+    },
+    {
+     "label": "Тип",
+     "value": "кварцвинил, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1318 × 189 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "4 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,49 м²"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Россия"
+    }
+   ],
+   "description": "<p>Рисунок дуба серого цвета.</p>\n<p>Fine Floor FF-1200 Strong: доска 1318 × 189 мм толщиной 4 мм с защитным слоем 0,3 мм. Доски соединяются замком, клей не нужен.</p>",
+   "images": [
+    "https://finefloor.ru/upload/resize_cache/iblock/44e/1500_1500_1/44eb71280616866da64bea29c96d5715.jpg"
+   ],
+   "sourceUrl": "https://finefloor.ru/product/dub-ribel/"
+  },
+  {
+   "brand": "Fine Floor",
+   "name": "FF-1262 Дуб Генезис",
+   "slug": "fine-floor-ff-1262-dub-genezis",
+   "collection": "FF-1200 Strong",
+   "sku": "FF-1262",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "4 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "серо-коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "FF-1262"
+    },
+    {
+     "label": "Коллекция",
+     "value": "FF-1200 Strong"
+    },
+    {
+     "label": "Тип",
+     "value": "кварцвинил, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1318 × 189 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "4 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,49 м²"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Россия"
+    }
+   ],
+   "description": "<p>Рисунок дуба серо-коричневого цвета.</p>\n<p>Fine Floor FF-1200 Strong: доска 1318 × 189 мм толщиной 4 мм с защитным слоем 0,3 мм. Доски соединяются замком, клей не нужен.</p>",
+   "images": [
+    "https://finefloor.ru/upload/resize_cache/iblock/20c/1500_1500_1/20c603d718094b5f9291645132bfd468.jpg"
+   ],
+   "sourceUrl": "https://finefloor.ru/product/dub-genezis/"
+  },
+  {
+   "brand": "Fine Floor",
+   "name": "FF-1259 Дуб Квантум",
+   "slug": "fine-floor-ff-1259-dub-kvantum",
+   "collection": "FF-1200 Strong",
+   "sku": "FF-1259",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "4 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "FF-1259"
+    },
+    {
+     "label": "Коллекция",
+     "value": "FF-1200 Strong"
+    },
+    {
+     "label": "Тип",
+     "value": "кварцвинил, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1318 × 189 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "4 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,49 м²"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Россия"
+    }
+   ],
+   "description": "<p>Рисунок дуба тёмно-коричневого цвета.</p>\n<p>Fine Floor FF-1200 Strong: доска 1318 × 189 мм толщиной 4 мм с защитным слоем 0,3 мм. Доски соединяются замком, клей не нужен.</p>",
+   "images": [
+    "https://finefloor.ru/upload/resize_cache/iblock/879/1500_1500_1/879656eeb80abaa0ba307cb8a5eb22a2.jpg"
+   ],
+   "sourceUrl": "https://finefloor.ru/product/dub-kvantum/"
+  },
+  {
+   "brand": "Fine Floor",
+   "name": "FF-1377 Дуб Веллингтон",
+   "slug": "fine-floor-ff-1377-dub-vellington",
+   "collection": "FF-1300 Light",
+   "sku": "FF-1377",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "3,6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-серый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "FF-1377"
+    },
+    {
+     "label": "Коллекция",
+     "value": "FF-1300 Light"
+    },
+    {
+     "label": "Тип",
+     "value": "кварцвинил, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1314 × 190 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "3,6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,25 м²"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Россия"
+    }
+   ],
+   "description": "<p>Рисунок дуба светло-серого цвета.</p>\n<p>Fine Floor FF-1300 Light: доска 1314 × 190 мм толщиной 3,6 мм с защитным слоем 0,3 мм. Доски соединяются замком, клей не нужен.</p>",
+   "images": [
+    "https://finefloor.ru/upload/resize_cache/iblock/ddf/1500_1500_1/ddfd407600f3739f0936c653dde51ea3.jpg"
+   ],
+   "sourceUrl": "https://finefloor.ru/product/dub-vellington/"
+  },
+  {
+   "brand": "Fine Floor",
+   "name": "FF-1376 Дуб Богемия",
+   "slug": "fine-floor-ff-1376-dub-bogemiya",
+   "collection": "FF-1300 Light",
+   "sku": "FF-1376",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "3,6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-серый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "FF-1376"
+    },
+    {
+     "label": "Коллекция",
+     "value": "FF-1300 Light"
+    },
+    {
+     "label": "Тип",
+     "value": "кварцвинил, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1314 × 190 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "3,6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,25 м²"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Россия"
+    }
+   ],
+   "description": "<p>Рисунок дуба светло-серого цвета.</p>\n<p>Fine Floor FF-1300 Light: доска 1314 × 190 мм толщиной 3,6 мм с защитным слоем 0,3 мм. Доски соединяются замком, клей не нужен.</p>",
+   "images": [
+    "https://finefloor.ru/upload/resize_cache/iblock/6c5/1500_1500_1/6c5cd0542f2b69d409991b7a97915246.jpg"
+   ],
+   "sourceUrl": "https://finefloor.ru/product/dub-bogemiya/"
+  },
+  {
+   "brand": "Fine Floor",
+   "name": "FF-1375 Дуб Котка",
+   "slug": "fine-floor-ff-1375-dub-kotka",
+   "collection": "FF-1300 Light",
+   "sku": "FF-1375",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "3,6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "светло-серый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "FF-1375"
+    },
+    {
+     "label": "Коллекция",
+     "value": "FF-1300 Light"
+    },
+    {
+     "label": "Тип",
+     "value": "кварцвинил, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1314 × 190 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "3,6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,25 м²"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Россия"
+    }
+   ],
+   "description": "<p>Рисунок дуба светло-серого цвета.</p>\n<p>Fine Floor FF-1300 Light: доска 1314 × 190 мм толщиной 3,6 мм с защитным слоем 0,3 мм. Доски соединяются замком, клей не нужен.</p>",
+   "images": [
+    "https://finefloor.ru/upload/resize_cache/iblock/8d9/1500_1500_1/8d9c31d232d0a8a4ae7789c83a3bc404.jpg"
+   ],
+   "sourceUrl": "https://finefloor.ru/product/dub-kotka/"
+  },
+  {
+   "brand": "Fine Floor",
+   "name": "FF-1372 Дуб Берген",
+   "slug": "fine-floor-ff-1372-dub-bergen",
+   "collection": "FF-1300 Light",
+   "sku": "FF-1372",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "3,6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "FF-1372"
+    },
+    {
+     "label": "Коллекция",
+     "value": "FF-1300 Light"
+    },
+    {
+     "label": "Тип",
+     "value": "кварцвинил, замковое соединение"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1314 × 190 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "3,6 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,3 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "2,25 м²"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Россия"
+    }
+   ],
+   "description": "<p>Рисунок дуба тёмно-коричневого цвета.</p>\n<p>Fine Floor FF-1300 Light: доска 1314 × 190 мм толщиной 3,6 мм с защитным слоем 0,3 мм. Доски соединяются замком, клей не нужен.</p>",
+   "images": [
+    "https://finefloor.ru/upload/resize_cache/iblock/b4b/1500_1500_1/b4baa72c4aaa05b3451c9723a581150f.jpg"
+   ],
+   "sourceUrl": "https://finefloor.ru/product/dub-bergen/"
+  },
+  {
+   "brand": "Fine Floor",
+   "name": "FF-1408 Дуб Квебек",
+   "slug": "fine-floor-ff-1408-dub-kvebek",
+   "collection": "FF-1400 Wood",
+   "sku": "FF-1408",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "FF-1408"
+    },
+    {
+     "label": "Коллекция",
+     "value": "FF-1400 Wood"
+    },
+    {
+     "label": "Тип",
+     "value": "кварцвинил, клеевая укладка"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1320 × 196 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "3,88 м²"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Россия"
+    }
+   ],
+   "description": "<p>Рисунок дуба коричневого цвета.</p>\n<p>Fine Floor FF-1400 Wood: доска 1320 × 196 мм толщиной 2,5 мм с защитным слоем 0,55 мм. Плитку приклеивают к ровному основанию.</p>",
+   "images": [
+    "https://finefloor.ru/upload/iblock/833/83348ea4814ba7ee9e84bb91c3e522db.jpg"
+   ],
+   "sourceUrl": "https://finefloor.ru/product/dub-kvebekDB-1/"
+  },
+  {
+   "brand": "Fine Floor",
+   "name": "FF-1418 Дуб Этна",
+   "slug": "fine-floor-ff-1418-dub-etna",
+   "collection": "FF-1400 Wood",
+   "sku": "FF-1418",
+   "attributes": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    }
+   ],
+   "facets": [
+    {
+     "label": "Формат",
+     "value": "Однополосная доска"
+    },
+    {
+     "label": "Цвет пола",
+     "value": "тёмно-коричневый"
+    },
+    {
+     "label": "Тип дизайна",
+     "value": "под дерево"
+    }
+   ],
+   "specs": [
+    {
+     "label": "Артикул",
+     "value": "FF-1418"
+    },
+    {
+     "label": "Коллекция",
+     "value": "FF-1400 Wood"
+    },
+    {
+     "label": "Тип",
+     "value": "кварцвинил, клеевая укладка"
+    },
+    {
+     "label": "Размер доски",
+     "value": "1320 × 196 мм"
+    },
+    {
+     "label": "Толщина",
+     "value": "2,5 мм"
+    },
+    {
+     "label": "Защитный слой",
+     "value": "0,55 мм"
+    },
+    {
+     "label": "М² в упаковке",
+     "value": "3,88 м²"
+    },
+    {
+     "label": "Страна производства",
+     "value": "Россия"
+    }
+   ],
+   "description": "<p>Рисунок дуба тёмно-коричневого цвета.</p>\n<p>Fine Floor FF-1400 Wood: доска 1320 × 196 мм толщиной 2,5 мм с защитным слоем 0,55 мм. Плитку приклеивают к ровному основанию.</p>",
+   "images": [
+    "https://finefloor.ru/upload/iblock/b8c/b8c89d0b8dc6c9c21c756c1f03644dce.jpg"
+   ],
+   "sourceUrl": "https://finefloor.ru/product/dub-etna-1/"
   }
  ]
 }

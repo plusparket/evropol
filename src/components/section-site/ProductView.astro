@@ -51,7 +51,6 @@ const alt = [p.brand, p.collection, p.name].filter(Boolean).join(' ');
     </div>
 
     <div class="ss-product-info">
-      {p.inStock && <span class="ss-badge ss-badge--inline ss-badge--stock">В наличии</span>}
       {p.isNew && <span class="ss-badge ss-badge--inline">Новинка</span>}
       {sub && <div class="pcard2-sub">{sub}</div>}
       <h1 class="pcat-title">{p.name}</h1>
@@ -70,7 +69,7 @@ const alt = [p.brand, p.collection, p.name].filter(Boolean).join(' ');
         <a class="pbtn pbtn-outline" href={phoneHref}>{settings.phone_main}</a>
       </div>
       <p class="ss-note">
-        {p.inStock ? 'Товар есть в наличии. Цену сообщим по телефону или в WhatsApp.' : 'Цену и наличие сообщим по телефону или в WhatsApp.'}
+        Цену и наличие сообщим по телефону или в WhatsApp.
         {samples && ` Образцы можно посмотреть в офисе: ${settings.address}.`}
       </p>
 
