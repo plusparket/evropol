@@ -16,6 +16,7 @@ import type { TransactionSql } from 'postgres';
 import { normalizeHost } from './sections.ts';
 import { removeUploads, saveImage } from './uploads.ts';
 import type { Attr } from './products.ts';
+import { categorySlug, cleanSeedProduct } from './upgrade-no-brands.ts';
 
 const CATALOG_DIR = path.resolve(process.cwd(), 'seed/catalog');
 /** Разделы, у которых сайт включается сам (по решению владельца); остальные — из админки */
@@ -94,9 +95,13 @@ export async function setupSectionSites(): Promise<string[]> {
 
 type SeedCategory = { slug: string; name: string; description?: string; children?: SeedCategory[] };
 
+/** Каталог из файла. Названия брендов и ссылки на PDF из товаров убираются сразу (сайт без брендов, src/server/upgrade-no-brands.ts) */
 async function readSeed(slug: string): Promise<SeedCatalog | null> {
   const raw = await readFile(path.join(CATALOG_DIR, `${slug}.json`), 'utf8').catch(() => '');
-  return raw ? (JSON.parse(raw) as SeedCatalog) : null;
+  if (!raw) return null;
+  const seed = JSON.parse(raw) as SeedCatalog;
+  const cats = (list: SeedCategory[] = []): SeedCategory[] => list.map((c) => ({ ...c, slug: categorySlug(c.slug), children: cats(c.children) }));
+  return { ...seed, categories: seed.categories && cats(seed.categories), products: seed.products.map(cleanSeedProduct) };
 }
 
 /** Бренды и товары из seed/catalog/<раздел>.json — только в раздел без товаров. Возвращает число товаров. */
@@ -178,7 +183,8 @@ async function addSeedProducts(tx: Tx, sectionId: number, seed: SeedCatalog): Pr
     const [same] = await tx<{ logo: string }[]>`SELECT logo FROM brands WHERE name = ${b.name} AND logo <> '' LIMIT 1`;
     const [{ max }] = await tx<{ max: number }[]>`SELECT coalesce(max(sort_order), 0)::int AS max FROM brands WHERE section_id = ${sectionId}`;
     await tx`INSERT INTO brands ${tx({
-      sectionId, name: b.name, logo: same?.logo ?? '', link: b.link ?? '', description: b.description ?? '', sortOrder: max + 10,
+      // Бренды на сайте не показываются (решение владельца 08.11.2026): заводим выключенными
+      sectionId, name: b.name, logo: same?.logo ?? '', link: b.link ?? '', description: b.description ?? '', sortOrder: max + 10, isActive: false,
     })}`;
   }
   const brands = new Map(
