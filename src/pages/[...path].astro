@@ -6,7 +6,8 @@ import SectionView from '../components/SectionView.astro';
 import PageView from '../components/PageView.astro';
 import OfficeMap from '../components/OfficeMap.astro';
 import { getPageBySlug } from '../server/content.ts';
-import { getActiveBrands, getSectionBySlug } from '../server/sections.ts';
+import { getActiveBrands, getSectionBySlug, getSections } from '../server/sections.ts';
+import { pagePath } from '../server/section-guides.ts';
 import { fillPlaceholders, getSettings, officeMaps } from '../server/settings.ts';
 import { plainText } from '../server/util.ts';
 import { breadcrumbJsonLd, organizationJsonLd, sectionDescription, sectionTitle, siteBase, withSiteName } from '../server/seo.ts';
@@ -18,6 +19,11 @@ const single = !path.includes('/');
 const section = single && path ? await getSectionBySlug(path) : undefined;
 const page = single && path && !section ? await getPageBySlug(path) : undefined;
 
+// Страница «Укладка и уход» раздела (linoleum-ukladka) открывается в каталоге: /linoleum/ukladka
+if (page) {
+  const target = pagePath(page.slug, await getSections({ publishedOnly: true }));
+  if (target !== `/${page.slug}`) return Astro.redirect(target, 301);
+}
 // Один адрес у страницы: /vinyl/ → /vinyl (постоянная переадресация, как любит Google)
 const canonicalPath = section ? `/${section.slug}` : page ? `/${page.slug}` : undefined;
 if (canonicalPath && Astro.url.pathname !== canonicalPath) return Astro.redirect(canonicalPath + Astro.url.search, 301);

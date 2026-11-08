@@ -3,6 +3,7 @@
 //   /linoleum              → каталог раздела (вид 'groups': все товары, слева группы и категории)
 //   /linoleum/<товар>      → страница товара
 //   /linoleum/<категория>  → группа или категория товаров (вид 'groups')
+//   /linoleum/ukladka, /uhod → «Укладка и уход» (страницы linoleum-ukladka, linoleum-uhod; src/server/section-guides.ts)
 //   остальное              → 404
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import NotFound from '../../components/NotFound.astro';
@@ -11,11 +12,14 @@ import CatalogHome from '../../components/section-site/CatalogHome.astro';
 import GroupsHome from '../../components/section-site/GroupsHome.astro';
 import CategoryView from '../../components/section-site/CategoryView.astro';
 import ProductView from '../../components/section-site/ProductView.astro';
+import PageView from '../../components/PageView.astro';
+import { getSectionGuides } from '../../server/section-guides.ts';
 import { catalogPath, getActiveBrands, mainUrl, siteUrl } from '../../server/sections.ts';
 import {
   applyFilters, categoryPaths, getCategoryTree, getProducts, parseFilters, relatedInCategory, relatedProducts, type CategoryNode,
 } from '../../server/products.ts';
-import { getSettings, siteSettings } from '../../server/settings.ts';
+import { fillPlaceholders, getSettings, siteSettings } from '../../server/settings.ts';
+import { plainText } from '../../server/util.ts';
 import {
   breadcrumbJsonLd, categoryDescription, namesakeSuffix, productDescription, sectionSiteDescription, sectionSiteJsonLd, withSiteName,
 } from '../../server/seo.ts';
@@ -45,7 +49,9 @@ if (withGroups && path && !product && !path.includes('/')) {
     if (c) catPath = [g, c];
   }
 }
-if (!isHome && !product && !catPath) Astro.response.status = 404;
+// «Укладка и уход»: /linoleum/ukladka, /linoleum/uhod
+const guide = path && !product && !catPath ? (await getSectionGuides(site)).find((g) => g.key === path) : undefined;
+if (!isHome && !product && !catPath && !guide) Astro.response.status = 404;
 
 const brands = isHome && !catalogOnly && !withGroups ? await getActiveBrands(site.id) : [];
 const { items, groups } = isHome && !withGroups
@@ -116,6 +122,16 @@ const catalog = { color: site.siteColor, layout: site.siteLayout };
       jsonLd={breadcrumbJsonLd(base, [{ name: site.name, url: at() }, ...catPath.map((c) => ({ name: c.name, url: at(c.slug) }))])}
     >
       <CategoryView site={site} tree={tree} group={catPath[0]} category={catPath[1]} products={products} />
+    </SiteLayout>
+  ) : guide ? (
+    <SiteLayout
+      catalog={catalog}
+      title={guide.seoTitle || withSiteName(guide.title, settings)}
+      description={guide.seoDescription || plainText(guide.content) || undefined}
+      canonicalPath={guide.url}
+      jsonLd={breadcrumbJsonLd(base, [{ name: site.name, url: at() }, { name: guide.title, url: guide.url }])}
+    >
+      <PageView title={guide.title} html={fillPlaceholders(guide.content, settings)} parents={[{ name: site.name, url: at() }]} />
     </SiteLayout>
   ) : (
     <SiteLayout catalog={catalog} title="Страница не найдена" noindex>

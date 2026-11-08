@@ -9,6 +9,7 @@ import { getSettings, officeMaps } from '../server/settings.ts';
 import { getMenus } from '../server/content.ts';
 import { DEFAULT_SITE_COLOR, getSections } from '../server/sections.ts';
 import { siteBase } from '../server/seo.ts';
+import { getSectionGuides } from '../server/section-guides.ts';
 
 interface Props {
   title: string;
@@ -28,6 +29,8 @@ const { title, description, noindex = false, canonicalPath, image, ogType = 'web
 const catalogColor = catalog && /^#[0-9a-f]{6}$/i.test(catalog.color) ? catalog.color : DEFAULT_SITE_COLOR;
 
 const [settings, menus, sections] = await Promise.all([getSettings(), getMenus(), getSections({ publishedOnly: true })]);
+// В каталоге раздела (/linoleum …) «Укладка и уход» встаёт в меню вместо «Новости и события»
+const guides = Astro.locals.site ? (await getSectionGuides(Astro.locals.site)).map((g) => ({ label: g.label, url: g.url })) : [];
 const countersOn = settings.counters_enabled === '1';
 const forest = settings.forest_design === '1'; // набор цветов «Лесной» (настройка «Лесной дизайн главного сайта»)
 const siteUrl = siteBase(Astro.url.origin);
@@ -70,7 +73,7 @@ const footerMap = Astro.url.pathname === '/' ? officeMaps(settings)[0] : undefin
   <body class:list={{ ss: !!catalog, 'ss--groups': catalog?.layout === 'groups' }} style={catalog ? `--site: ${catalogColor}` : undefined}>
     <div class="wrapper" id="overlay"></div>
 
-    <Header sections={sections} settings={settings} menus={menus} />
+    <Header sections={sections} settings={settings} menus={menus} guides={guides} />
 
     <div class="loading" id="loading"></div>
 

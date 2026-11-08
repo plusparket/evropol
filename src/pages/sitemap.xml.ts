@@ -1,7 +1,9 @@
-// Карта сайта: главная, разделы, каталоги разделов (группы, категории и товары с фото), страницы, новости.
+// Карта сайта: главная, разделы, каталоги разделов (группы, категории и товары с фото), страницы (в том числе
+// «Укладка и уход» в каталоге: /linoleum/ukladka), новости.
 import type { APIRoute } from 'astro';
 import { sql } from '../server/db.ts';
 import { catalogPath, getSections } from '../server/sections.ts';
+import { pagePath } from '../server/section-guides.ts';
 import { getCategoryTree, getProducts } from '../server/products.ts';
 
 export const GET: APIRoute = async ({ url }) => {
@@ -31,7 +33,7 @@ export const GET: APIRoute = async ({ url }) => {
     // Разделы со ссылкой на другой сайт (Паркет) сюда не входят: их адреса здесь переадресуют
     ...sections.filter((s) => !s.siteHost && !s.link).map((s) => entry(`/${s.slug}`, s.updatedAt, [s.image])),
     ...catalogs,
-    ...pages.map((p) => entry(`/${p.slug}`, p.updatedAt)),
+    ...pages.map((p) => entry(pagePath(p.slug, sections), p.updatedAt)),
     entry('/news'),
     ...news.map((n) => entry(`/news/${n.slug}`, n.updatedAt)),
   ];
