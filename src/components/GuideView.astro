@@ -1,14 +1,17 @@
 ---
 // Страница «Укладка и уход» с вёрсткой как у страниц производителя (текст страницы начинается с <div class="gd">):
 // крошки, крупный заголовок (или первый экран gd-hero со своим заголовком) на белом фоне, широкая колонка. Блоки внутри текста описаны в site.css (раздел «gd»).
+// Вёрстка «по шагам» (<div class="gs">, раздел «gs» в site.css) несёт заголовок h1 в самом тексте: ownTitle.
 import Crumbs from './Crumbs.astro';
 
 interface Props {
   title: string;
   html: string;
   parents?: { name: string; url: string }[];
+  /** Заголовок h1 уже есть в тексте страницы */
+  ownTitle?: boolean;
 }
-const { title, html, parents = [] } = Astro.props;
+const { title, html, parents = [], ownTitle = false } = Astro.props;
 // Свой первый экран «фото + заголовок» (блок gd-hero) — заголовок уже в тексте страницы
 const hasHero = html.includes('class="gd-hero"');
 ---
@@ -16,7 +19,7 @@ const hasHero = html.includes('class="gd-hero"');
 <article class="gd-page">
   <div class="gd-wrap">
     <Crumbs items={[...parents, { name: title }]} />
-    {!hasHero && <h1 class="gd-title">{title}</h1>}
+    {!hasHero && !ownTitle && <h1 class="gd-title">{title}</h1>}
     <div set:html={html} />
   </div>
 </article>
