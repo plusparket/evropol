@@ -11,6 +11,7 @@ import { getActiveBrands, getSections, linkLabel, sectionLink, siteUrl, type Bra
 import { categoryPaths, getCategoryTree, getProducts, type CategoryNode, type ProductItem } from './products.ts';
 import { pluralRu } from './util.ts';
 import { fillPlaceholders, getSettings, officeMaps, siteSettings, type Settings } from './settings.ts';
+import { GUIDES_LABEL, getSectionGuides, pagePath } from './section-guides.ts';
 
 const ENTITIES: Record<string, string> = {
   nbsp: ' ', amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", laquo: '«', raquo: '»',
@@ -152,7 +153,7 @@ export async function buildLlmsTxt(origin: string): Promise<string> {
 
   out.push('## Страницы', '');
   out.push(`- [Главная](${d.base}/)`);
-  for (const p of d.pages) out.push(`- [${p.title}](${d.base}/${p.slug}): ${oneLine(htmlToMd(fillPlaceholders(p.content, d.settings), d.base), 140)}`);
+  for (const p of d.pages) out.push(`- [${p.title}](${d.base}${pagePath(p.slug, d.sections)}): ${oneLine(htmlToMd(fillPlaceholders(p.content, d.settings), d.base), 140)}`);
   if (d.news.length) {
     out.push(`- [Новости и события](${d.base}/news)`);
     for (const n of d.news) out.push(`  - [${n.title}](${d.base}/news/${n.slug}) · ${new Date(n.publishedAt).toLocaleDateString('ru-RU')}`);
@@ -200,7 +201,7 @@ export async function buildLlmsFullTxt(origin: string): Promise<string> {
 
   out.push('## Страницы', '');
   for (const p of d.pages) {
-    out.push(`### ${p.title}`, '', `Адрес: ${d.base}/${p.slug}`, '', md(p.content), '');
+    out.push(`### ${p.title}`, '', `Адрес: ${d.base}${pagePath(p.slug, d.sections)}`, '', md(p.content), '');
   }
 
   if (d.news.length) {
@@ -269,6 +270,12 @@ export async function buildSiteLlmsTxt(site: Section): Promise<string> {
     out.push('');
   }
   if (d.tree.length) out.push('## Группы и категории', '', ...categoryList(d, md), '');
+  const guides = await getSectionGuides(site);
+  if (guides.length) {
+    out.push(`## ${GUIDES_LABEL}`, '');
+    for (const g of guides) out.push(`- [${g.title}](${d.base}${g.url}): ${oneLine(md(g.content), 160)}`);
+    out.push('');
+  }
   if (d.products.length) {
     out.push('## Каталог', '');
     for (const p of d.products) {
@@ -304,6 +311,11 @@ export async function buildSiteLlmsFullTxt(site: Section): Promise<string> {
     }
   }
   if (d.tree.length) out.push('## Группы и категории', '', ...categoryList(d, md), '');
+  const guides = await getSectionGuides(site);
+  if (guides.length) {
+    out.push(`## ${GUIDES_LABEL}`, '');
+    for (const g of guides) out.push(`### ${g.title}`, '', `Адрес: ${d.base}${g.url}`, '', md(g.content), '');
+  }
   if (d.products.length) {
     out.push('## Каталог', '');
     for (const p of d.products) {

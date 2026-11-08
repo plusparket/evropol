@@ -259,6 +259,12 @@ h1, h2, h3 { font-weight: 500; }
 .ppage-text ul, .ppage-text ol { margin: 0 0 16px; padding-left: 22px; }
 .ppage-text li { margin-bottom: 6px; }
 .ppage-text img { max-width: 100%; height: auto; }
+/* «Укладка и уход» в каталоге раздела: фото слева, текст шага справа (на телефоне — фото над текстом) */
+.ppage-text .gstep { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; margin: 34px 0; }
+.ppage-text .gstep img { display: block; width: 100%; border-radius: 4px; }
+.ppage-text .gstep h2 { margin-top: 0; }
+.ppage-text .gstep > div > :last-child { margin-bottom: 0; }
+@media (max-width: 700px) { .ppage-text .gstep { grid-template-columns: 1fr; gap: 16px; margin: 26px 0; } }
 .ppage-text table { width: 100%; margin: 0 0 18px; border-collapse: collapse; }
 .ppage-text td, .ppage-text th { padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
 
