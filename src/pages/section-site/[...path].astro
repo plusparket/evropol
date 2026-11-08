@@ -13,6 +13,7 @@ import GroupsHome from '../../components/section-site/GroupsHome.astro';
 import CategoryView from '../../components/section-site/CategoryView.astro';
 import ProductView from '../../components/section-site/ProductView.astro';
 import PageView from '../../components/PageView.astro';
+import GuideView from '../../components/GuideView.astro';
 import { getSectionGuides } from '../../server/section-guides.ts';
 import { catalogPath, getActiveBrands, mainUrl, siteUrl } from '../../server/sections.ts';
 import {
@@ -131,7 +132,11 @@ const catalog = { color: site.siteColor, layout: site.siteLayout };
       canonicalPath={guide.url}
       jsonLd={breadcrumbJsonLd(base, [{ name: site.name, url: at() }, { name: guide.title, url: guide.url }])}
     >
-      <PageView title={guide.title} html={fillPlaceholders(guide.content, settings)} parents={[{ name: site.name, url: at() }]} />
+      {guide.content.trimStart().startsWith('<div class="gd"') ? (
+        <GuideView title={guide.title} html={fillPlaceholders(guide.content, settings)} parents={[{ name: site.name, url: at() }]} />
+      ) : (
+        <PageView title={guide.title} html={fillPlaceholders(guide.content, settings)} parents={[{ name: site.name, url: at() }]} />
+      )}
     </SiteLayout>
   ) : (
     <SiteLayout catalog={catalog} title="Страница не найдена" noindex>

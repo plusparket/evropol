@@ -41,8 +41,10 @@ export function pagePath(slug: string, sections: Pick<Section, 'slug' | 'siteHos
 }
 
 /** Стартовые страницы (seed/pages/<адрес>.html, заголовок — в первой строке <!-- title: … -->).
- *  Каждая группа создаётся один раз, по своей отметке в settings: удалённую в админке страницу запуск не вернёт. */
-const SEEDED: { flag: string; pages: { slug: string; seoDescription: string }[] }[] = [
+ *  Каждая группа создаётся один раз, по своей отметке в settings: удалённую в админке страницу запуск не вернёт.
+ *  overwrite: при первом запуске с этой отметкой заменить текст уже созданной страницы (новая вёрстка). */
+type SeedPage = { slug: string; seoTitle?: string; seoDescription: string };
+const SEEDED: { flag: string; overwrite?: boolean; pages: SeedPage[] }[] = [
   {
     flag: 'guides_linoleum_2026_11_08',
     pages: [
@@ -51,10 +53,20 @@ const SEEDED: { flag: string; pages: { slug: string; seoDescription: string }[] 
     ],
   },
   {
-    flag: 'guides_carpet_tiles_2026_11_08',
+    // Вёрстка как у страниц производителя: блоки «текст + картинка», карточки в две колонки, колонки советов
+    flag: 'guides_carpet_tiles_v2_2026_11_08',
+    overwrite: true,
     pages: [
-      { slug: 'carpet-tiles-ukladka', seoDescription: 'Как уложить ковровую плитку: подготовка основания, разметка, резка, фиксатор вместо клея и шесть способов укладки.' },
-      { slug: 'carpet-tiles-uhod', seoDescription: 'Уход за ковровой плиткой: пылесос, как вывести пятна на водной и масляной основе, глубокая чистка два-три раза в год.' },
+      {
+        slug: 'carpet-tiles-ukladka',
+        seoTitle: 'Укладка ковровой плитки: общие правила | ЕвроПол',
+        seoDescription: 'Как уложить ковровую плитку: хранение, подготовка основания, фиксатор вместо клея, разметка, резка и шесть схем укладки.',
+      },
+      {
+        slug: 'carpet-tiles-uhod',
+        seoTitle: 'Уход за ковровой плиткой и чистка | ЕвроПол',
+        seoDescription: 'Уход за ковровой плиткой: выбор цвета, пылесос, как вывести пятна, глубокая чистка два-три раза в год. Уход за виниловой плиткой LVT.',
+      },
     ],
   },
 ];
@@ -71,8 +83,14 @@ export async function upgradeGuides(): Promise<string[]> {
         const m = raw.match(/^<!--\s*title:\s*(.+?)\s*-->\s*/);
         const title = m?.[1] ?? s.slug;
         const html = m ? raw.slice(m[0].length) : raw;
-        const res = await tx`INSERT INTO pages (slug, title, content, seo_description, is_published)
-                             VALUES (${s.slug}, ${title}, ${html}, ${s.seoDescription}, true) ON CONFLICT (slug) DO NOTHING`;
+        const seoTitle = s.seoTitle ?? '';
+        const res = group.overwrite
+          ? await tx`INSERT INTO pages (slug, title, content, seo_title, seo_description, is_published)
+                     VALUES (${s.slug}, ${title}, ${html}, ${seoTitle}, ${s.seoDescription}, true)
+                     ON CONFLICT (slug) DO UPDATE SET title = EXCLUDED.title, content = EXCLUDED.content,
+                       seo_title = EXCLUDED.seo_title, seo_description = EXCLUDED.seo_description, updated_at = now()`
+          : await tx`INSERT INTO pages (slug, title, content, seo_title, seo_description, is_published)
+                     VALUES (${s.slug}, ${title}, ${html}, ${seoTitle}, ${s.seoDescription}, true) ON CONFLICT (slug) DO NOTHING`;
         if (res.count) log.push(`страница «${title}»`);
       }
       await tx`INSERT INTO settings (key, value) VALUES (${group.flag}, '1') ON CONFLICT (key) DO NOTHING`;
