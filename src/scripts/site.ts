@@ -21,6 +21,19 @@ document.addEventListener('click', (e) => {
   if (target.closest('#overlay, [data-menu-close]')) return setSidebar(false);
 
   if (target.closest('#to-top')) window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  // «Продукты» в шапке: нажатие только раскрывает список разделов, нажатие мимо закрывает его
+  const btn = target.closest<HTMLElement>('[data-drop]');
+  document.querySelectorAll<HTMLElement>('.ph-drop.open').forEach((d) => {
+    if (!btn || d !== btn.parentElement) {
+      d.classList.remove('open');
+      d.querySelector('[data-drop]')?.setAttribute('aria-expanded', 'false');
+    }
+  });
+  if (btn) {
+    const open = btn.parentElement!.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(open));
+  }
 }, true); // capture: раньше обработчика ClientRouter
 
 // --- Кнопка «Наверх»: видна, когда страница прокручена ---------------------------------
