@@ -1,6 +1,6 @@
 ---
 // Страница «Укладка и уход» с вёрсткой как у страниц производителя (текст страницы начинается с <div class="gd">):
-// крошки, крупный заголовок на белом фоне, широкая колонка. Блоки внутри текста описаны в site.css (раздел «gd»).
+// крошки, крупный заголовок (или первый экран gd-hero со своим заголовком) на белом фоне, широкая колонка. Блоки внутри текста описаны в site.css (раздел «gd»).
 import Crumbs from './Crumbs.astro';
 
 interface Props {
@@ -9,12 +9,14 @@ interface Props {
   parents?: { name: string; url: string }[];
 }
 const { title, html, parents = [] } = Astro.props;
+// Свой первый экран «фото + заголовок» (блок gd-hero) — заголовок уже в тексте страницы
+const hasHero = html.includes('class="gd-hero"');
 ---
 
 <article class="gd-page">
   <div class="gd-wrap">
     <Crumbs items={[...parents, { name: title }]} />
-    <h1 class="gd-title">{title}</h1>
+    {!hasHero && <h1 class="gd-title">{title}</h1>}
     <div set:html={html} />
   </div>
 </article>

@@ -127,10 +127,13 @@ export const PLACEHOLDER_KEYS = [
  */
 export function fillPlaceholders(html: string, settings: Settings): string {
   const allowed = new Set<string>(PLACEHOLDER_KEYS);
-  // В ссылке tel: только цифры и «+»: «tel:{{phone_main}}» → «tel:+996779377273»
-  return html.replace(/(tel:)?\{\{\s*([a-z_]+)\s*\}\}/g, (match, tel: string | undefined, key: string) => {
+  // В ссылке tel: только цифры и «+»: «tel:{{phone_main}}» → «tel:+996779377273»,
+  // в ссылке WhatsApp только цифры: «https://wa.me/{{panel_whatsapp}}» → «https://wa.me/996779377273»
+  return html.replace(/(tel:|https:\/\/wa\.me\/)?\{\{\s*([a-z_]+)\s*\}\}/g, (match, link: string | undefined, key: string) => {
     if (!allowed.has(key)) return match;
     const value = settings[key as SettingKey] ?? '';
-    return tel ? 'tel:' + value.replace(/[^\d+]/g, '') : escapeHtml(value);
+    if (link === 'tel:') return 'tel:' + value.replace(/[^\d+]/g, '');
+    if (link) return link + value.replace(/\D/g, '');
+    return escapeHtml(value);
   });
 }

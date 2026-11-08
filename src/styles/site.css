@@ -299,6 +299,45 @@ h1, h2, h3 { font-weight: 500; }
 .gd-card-body { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
 .gd-three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin: 0 0 clamp(50px, 6vw, 90px); }
 .gd-col h3 { margin-top: 0; font-size: clamp(22px, 2vw, 28px); }
+/* Блоки страниц «Укладка и уход» винила: первый экран «фото + заголовок», фото на светлой плашке, шаги с номерами,
+ * полоса во всю ширину с колонками, карточки с номером на фото, блок «Свяжитесь с нами» */
+.gd-hero { display: grid; grid-template-columns: 47% 1fr; column-gap: 9%; align-items: center; margin: 0 0 clamp(60px, 8vw, 120px); }
+.gd-hero .gd-media img { aspect-ratio: 4 / 5; object-fit: cover; }
+.gd-hero-text { max-width: 400px; }
+.gd-eyebrow { margin: 0 0 12px !important; color: var(--muted); font: 500 12px/1.3 var(--font); letter-spacing: .12em; text-transform: uppercase; }
+.gd-hero h1 { margin: 0 0 20px; color: var(--g, var(--ink)); font: 500 clamp(32px, 3.6vw, 52px)/1.1 var(--font); }
+.gd-row--panel { grid-template-columns: 1fr 1fr; }
+.gd-row--panel > .gd-text { max-width: 420px; justify-self: center; }
+.gd-media--panel { position: relative; padding: 30px 0; }
+.gd-media--panel::before { content: ''; position: absolute; inset: 0 0 0 17%; background: var(--band); }
+.gd-media--panel img { position: relative; width: 83%; aspect-ratio: 2 / 3; object-fit: cover; }
+.gd h2.gd-center { margin-bottom: clamp(36px, 4vw, 60px); text-align: center; }
+.gd h2.gd-center::before, .gd-cta h2::before { display: none; }
+.gd-steps { display: grid; grid-template-columns: 1fr 1fr; column-gap: 40px; align-items: center; margin: 0 0 clamp(60px, 8vw, 120px); }
+.gd-steps-list { margin: 0; padding: 0; list-style: none; }
+.gd-steps-list li { display: grid; grid-template-columns: 50px 1fr; column-gap: 26px; margin: 0 0 44px; }
+.gd-steps-list li:last-child { margin-bottom: 0; }
+.gd-steps-list h3 { margin: 0 0 10px; font-size: clamp(24px, 2.4vw, 36px); }
+.gd-steps-list p { margin: 0; }
+.gd-num { display: grid; place-items: center; width: 40px; height: 40px; margin-top: 2px; background: var(--g, var(--ink)); color: #fff; font: 500 20px/1 var(--font); }
+.gd-media--square img { aspect-ratio: 1; object-fit: cover; }
+.gd-band { display: grid; grid-template-columns: 1fr 1fr; column-gap: 60px; margin: 0 0 clamp(60px, 8vw, 120px); padding: clamp(40px, 5vw, 70px) 20px;
+  background: var(--band); box-shadow: 0 0 0 100vmax var(--band); clip-path: inset(0 -100vmax); }
+.gd-band h3 { margin: 0 0 12px; font-size: clamp(20px, 1.8vw, 26px); }
+.gd-band p { margin-bottom: 26px; }
+.gd-three--cards h3 { margin: 18px 0 10px; font-size: clamp(20px, 1.8vw, 26px); }
+.gd-media--num { position: relative; }
+.gd-media--num img { aspect-ratio: 4 / 3; object-fit: cover; }
+.gd-media--num .gd-num { position: absolute; left: 0; bottom: 0; }
+.gd-row--top { align-items: start; }
+.gd-row--top h3:first-child { margin-top: 0; }
+.gd-media--tall img { aspect-ratio: 4 / 5; object-fit: cover; }
+.gd ul.gd-plain { padding: 0; list-style: none; }
+.gd ul.gd-plain li { margin: 0 0 10px; }
+.gd-cta { margin: 0; padding: clamp(50px, 6vw, 80px) 20px; text-align: center;
+  background: var(--band); box-shadow: 0 0 0 100vmax var(--band); clip-path: inset(0 -100vmax); }
+.gd-cta h2 { margin: 0 auto 26px; max-width: 760px; }
+.gd-page:has(.gd-cta:last-child) { padding-bottom: 0; }
 @media (max-width: 1100px) {
   .gd-card h2 { white-space: normal; }
   .gd-two { grid-template-columns: 1fr; }
@@ -311,6 +350,10 @@ h1, h2, h3 { font-weight: 500; }
   .gd-row--img-left > .gd-media, .gd-row--img-left > .gd-text { grid-row: auto; grid-column: auto; }
   .gd-row--img-left > .gd-media { order: 2; }
   .gd-media--icon img { width: 70%; }
+  .gd-hero, .gd-row--panel, .gd-steps, .gd-band { grid-template-columns: 1fr; row-gap: 26px; }
+  .gd-hero-text, .gd-row--panel > .gd-text { max-width: none; }
+  .gd-steps-list li { grid-template-columns: 40px 1fr; column-gap: 16px; margin-bottom: 30px; }
+  .gd-band { padding: 36px 0; }
   .gd h2 { font-size: 22px; }
   .gd h3 { margin-top: 18px; font-size: 17px; }
 }
