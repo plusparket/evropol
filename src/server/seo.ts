@@ -169,20 +169,19 @@ export function breadcrumbJsonLd(base: string, items: { name: string; url: strin
 }
 
 /**
- * Главная сайта раздела: магазин раздела (адрес, телефон, часы, координаты) и сам сайт.
- * Магазин связан с компанией на главном сайте (parentOrganization), чтобы Google видел одну компанию.
+ * Каталог раздела (/linoleum): магазин раздела (адрес, телефон, часы, координаты). base — адрес каталога
+ * (https://evropol.kg/linoleum). Магазин связан с компанией (parentOrganization), чтобы Google видел одну компанию.
  */
 export function sectionSiteJsonLd(site: Section, s: Settings, base: string, mainBase: string, image?: string) {
-  const heading = site.heading || site.name;
   return {
     '@context': 'https://schema.org',
     '@graph': [
       {
         '@type': 'Store',
-        '@id': `${base}/#store`,
+        '@id': `${base}#store`,
         name: `${s.site_name}: ${site.name}`,
         description: site.summary || undefined,
-        url: `${base}/`,
+        url: base,
         image: image ?? `${mainBase}/img/og-evropol.jpg`,
         telephone: e164(s.phone_main),
         email: s.email || undefined,
@@ -192,7 +191,6 @@ export function sectionSiteJsonLd(site: Section, s: Settings, base: string, main
         areaServed: { '@type': 'Country', name: 'Кыргызстан' },
         parentOrganization: { '@type': 'Organization', '@id': `${mainBase}/#organization`, name: s.site_name, url: `${mainBase}/` },
       },
-      { '@type': 'WebSite', '@id': `${base}/#website`, name: `${heading} · ${s.site_name}`, url: `${base}/`, inLanguage: 'ru', publisher: { '@id': `${base}/#store` } },
     ],
   };
 }

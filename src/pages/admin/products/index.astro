@@ -34,8 +34,7 @@ const sectionOf = (id: number) => sections.find((s) => s.id === id);
     <div class="actions"><a class="btn" href={`/admin/products/new${sectionId ? `?section=${sectionId}` : ''}`}>+ Добавить товар</a></div>
   </div>
   <p class="muted">
-    Товары показываются на сайте своего раздела (включается в «Разделах» → раздел → «Сайт раздела»). На главном сайте
-    товаров нет. По «Значениям для фильтров» строятся фильтры каталога. Товары с отметкой «Со склада» идут в каталоге первыми, надписи на сайте нет.
+    Товары показываются в каталоге своего раздела, например /linoleum (включается в «Разделах» → раздел → «Каталог раздела»). По «Значениям для фильтров» строятся фильтры каталога. Товары с отметкой «Со склада» идут в каталоге первыми, надписи на сайте нет.
   </p>
 
   <form class="card inline" method="get" style="padding:14px">
@@ -68,7 +67,7 @@ const sectionOf = (id: number) => sections.find((s) => s.id === id);
                 <td class="nowrap">
                   {p.inStock && <span class="tag">со склада</span>}{' '}
                   {!p.isPublished && <span class="tag off">скрыт</span>}{' '}
-                  {s?.siteHost ? <a class="muted small" href={`${siteUrl(s)}/${p.slug}`} target="_blank" rel="noopener">на сайте ↗</a> : <span class="tag off">сайт раздела выключен</span>}
+                  {s?.siteHost ? <a class="muted small" href={`${siteUrl(s)}/${p.slug}`} target="_blank" rel="noopener">на сайте ↗</a> : <span class="tag off">каталог раздела выключен</span>}
                 </td>
               </tr>
             );

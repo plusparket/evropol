@@ -143,7 +143,7 @@ const title = isNew ? 'Новый товар' : form.name || 'Товар';
         <div class="field">
           <label for="section_id">Раздел *</label>
           <select id="section_id" name="section_id" required>
-            {sections.map((s) => <option value={s.id} selected={s.id === form.sectionId}>{s.name}{s.siteHost ? '' : ' (сайт выключен)'}</option>)}
+            {sections.map((s) => <option value={s.id} selected={s.id === form.sectionId}>{s.name}{s.siteHost ? '' : ' (каталог выключен)'}</option>)}
           </select>
         </div>
         <div class="field">
@@ -162,9 +162,9 @@ const title = isNew ? 'Новый товар' : form.name || 'Товар';
           <input type="text" id="sku" name="sku" value={form.sku} />
         </div>
         <div class="field">
-          <label for="slug">Адрес на сайте раздела</label>
+          <label for="slug">Адрес в каталоге раздела</label>
           <input type="text" id="slug" name="slug" value={form.slug} data-slug-from="name" pattern="[a-z0-9][a-z0-9_\-]*" />
-          <div class="hint">Например <code>cairo-doska</code> → {section?.siteHost || 'адрес-раздела'}/cairo-doska. Пусто — из названия.</div>
+          <div class="hint">Например <code>cairo-doska</code> → /{section?.slug || 'razdel'}/cairo-doska. Пусто — из названия.</div>
         </div>
         <div class="field">
           <label for="sort_order">Порядок в каталоге</label>
@@ -218,7 +218,7 @@ const title = isNew ? 'Новый товар' : form.name || 'Товар';
       <div class="field">
         <label for="images">Добавить фото</label>
         <input type="file" id="images" name="images" accept="image/*" multiple />
-        <div class="hint">Первое фото — в каталоге, второе — на главном экране сайта раздела (лучше пол в комнате). Фото уменьшаются и сохраняются в WebP.</div>
+        <div class="hint">Первое фото — в каталоге, второе — на главном экране каталога раздела (лучше пол в комнате). Фото уменьшаются и сохраняются в WebP.</div>
       </div>
     </div>
 

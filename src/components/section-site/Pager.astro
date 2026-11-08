@@ -3,7 +3,7 @@
 interface Props {
   page: number;
   pages: number;
-  /** Адрес списка на сайте раздела: «/» или «/<категория>» (Astro.url здесь внутренний, /section-site/…) */
+  /** Адрес списка в каталоге раздела: «/» или «/<категория>» (Astro.url здесь внутренний, /section-site/…) */
   path: string;
 }
 const { page, pages, path } = Astro.props;

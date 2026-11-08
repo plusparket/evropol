@@ -1,8 +1,8 @@
 ---
-// Главная сайта раздела: фото и заголовок, каталог с фильтрами, текст о покрытии, производители, связь.
+// Каталог раздела (/linoleum): фото и заголовок, каталог с фильтрами, текст о покрытии, производители, связь.
 // Фильтры — обычная форма GET (?f=Формат:Ёлочка): работают и без скриптов, со скриптом применяются сразу.
 import ProductCard from './ProductCard.astro';
-import { isExternal, type Brand, type Section } from '../../server/sections.ts';
+import { catalogPath, isExternal, type Brand, type Section } from '../../server/sections.ts';
 import type { FilterGroup, ProductItem } from '../../server/products.ts';
 import type { Settings } from '../../server/settings.ts';
 import { homeSrcset, uploadUrl } from '../../server/uploads.ts';
@@ -55,7 +55,7 @@ const countText = `${items.length} ${pluralRu(items.length, ['товар', 'то
           {groups.length > 0 && (
             <details class="ss-filters-box" open data-filters-box>
             <summary>Фильтры{filtered && ' (выбраны)'}</summary>
-            <form class="ss-filters" method="get" action="/#catalog" data-filters>
+            <form class="ss-filters" method="get" action={`${catalogPath(site)}#catalog`} data-filters>
               {groups.map((g) => (
                 <fieldset class="ss-filter">
                   <legend>{g.label}</legend>
@@ -69,7 +69,7 @@ const countText = `${items.length} ${pluralRu(items.length, ['товар', 'то
                 </fieldset>
               ))}
               <noscript><button class="pbtn" type="submit">Показать</button></noscript>
-              {filtered && <a class="plink ss-reset" href="/#catalog">Сбросить фильтры</a>}
+              {filtered && <a class="plink ss-reset" href={`${catalogPath(site)}#catalog`}>Сбросить фильтры</a>}
             </form>
             </details>
           )}
@@ -77,7 +77,7 @@ const countText = `${items.length} ${pluralRu(items.length, ['товар', 'то
             {items.length > 0 ? (
               <div class="pgrid ss-grid">{items.map((p) => <ProductCard product={p} />)}</div>
             ) : (
-              <p class="psub">Нет товаров с такими параметрами. <a href="/#catalog">Сбросить фильтры</a></p>
+              <p class="psub">Нет товаров с такими параметрами. <a href={`${catalogPath(site)}#catalog`}>Сбросить фильтры</a></p>
             )}
           </div>
         </div>

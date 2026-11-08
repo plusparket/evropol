@@ -1,12 +1,12 @@
 // Разделы сайта (Линолеум, Ковролин …) и бренды в них.
-// Главный сайт — визитка без товаров. Раздел ведёт на свой сайт: либо сайт раздела в этом же приложении
-// (поле site_host, каталог товаров — src/server/products.ts), либо любой другой адрес (поле link).
+// Раздел ведёт либо на свой каталог на главном сайте (/linoleum, поле site_host не пустое, товары —
+// src/server/products.ts), либо на любой другой адрес (поле link, например «Паркет» → domparketa.kg/parquet).
 import { sql } from './db.ts';
 
 export type Section = {
   id: number; slug: string; name: string; heading: string; summary: string; description: string; image: string;
   link: string; linkLabel: string; seoTitle: string; seoDescription: string; sortOrder: number; isPublished: boolean;
-  /** Адрес сайта раздела без http:// (vinyl.localhost); пусто — своего сайта нет */
+  /** Старый адрес сайта раздела без http:// (vinyl.localhost): с него переадресация на /vinyl. Не пусто — у раздела есть каталог */
   siteHost: string;
   /** Основной цвет сайта раздела; пусто — зелёный логотипа */
   siteColor: string;
@@ -38,24 +38,20 @@ export function mainDomain(): string {
   const h = normalizeHost(process.env.SITE_URL || '').replace(/^www\./, '');
   return h.includes('.') && !/(^|\.)localhost$/.test(h) ? h : '';
 }
+/** Адрес главного сайта без / в конце: https://evropol.kg, на компьютере http://localhost */
+export const mainUrl = () => (process.env.SITE_URL || 'http://localhost').replace(/\/$/, '');
 /**
- * Адрес сайта раздела для посетителей и Google. Если на сервере у раздела остался адрес с компьютера
- * (vinyl.localhost), он становится поддоменом главного сайта: vinyl.evropol.kg. Так в canonical, sitemap.xml
- * и ссылках не окажется localhost. Свой домен из админки (например, vinyl.kg) не меняется.
+ * Полный адрес каталога раздела на главном сайте: https://evropol.kg/linoleum. С 08.11.2026 каталоги разделов —
+ * страницы главного сайта, а не отдельные сайты. Каталог есть у раздела с заполненным site_host: там хранится
+ * старый адрес сайта раздела (linoleum.localhost), с которого идёт переадресация сюда (src/middleware.ts).
  */
-export function publicHost(host: string): string {
-  const d = mainDomain();
-  return d && /\.localhost$/i.test(host) ? host.replace(/\.localhost$/i, `.${d}`) : host;
-}
-/** Адрес сайта раздела: http для *.localhost (компьютер владельца), https для настоящих доменов */
-export const siteUrl = (s: Pick<Section, 'siteHost'>) => {
-  const host = s.siteHost ? publicHost(s.siteHost) : '';
-  return host ? `${/(^|\.)localhost$/i.test(host) ? 'http' : 'https'}://${host}` : '';
-};
-/** Куда ведёт раздел: на свой сайт, иначе на ссылку из админки */
-export const sectionLink = (s: Pick<Section, 'siteHost' | 'link'>) => siteUrl(s) || s.link;
-/** Пункт меню и плитка раздела на главном сайте: сразу на сайт раздела, если он есть, иначе на страницу раздела */
-export const sectionHref = (s: Pick<Section, 'siteHost' | 'slug' | 'link'>) => siteUrl(s) || s.link || sectionUrl(s);
+export const siteUrl = (s: Pick<Section, 'siteHost' | 'slug'>) => (s.siteHost ? mainUrl() + sectionUrl(s) : '');
+/** Адрес страницы каталога раздела от корня сайта: catalogPath(раздел) → /linoleum, catalogPath(раздел, 'ivc-x') → /linoleum/ivc-x */
+export const catalogPath = (s: Pick<Section, 'slug'>, rest = '') => sectionUrl(s) + (rest ? `/${rest.replace(/^\/+/, '')}` : '');
+/** Куда ведёт кнопка раздела: на каталог раздела, иначе на ссылку из админки */
+export const sectionLink = (s: Pick<Section, 'siteHost' | 'link' | 'slug'>) => (s.siteHost ? sectionUrl(s) : s.link);
+/** Пункт меню и плитка раздела на главном сайте: каталог раздела, иначе ссылка из админки, иначе страница раздела */
+export const sectionHref = (s: Pick<Section, 'siteHost' | 'slug' | 'link'>) => (s.siteHost ? sectionUrl(s) : s.link || sectionUrl(s));
 
 /** Ссылка ведёт на другой сайт — открываем в новой вкладке */
 export const isExternal = (url: string) => /^https?:\/\//i.test(url);
@@ -71,11 +67,11 @@ export async function getSectionBySlug(slug: string): Promise<Section | undefine
   return s;
 }
 
-/** Опубликованный раздел, у которого свой сайт по этому адресу (Host запроса) */
+/** Опубликованный раздел, у которого был свой сайт по этому адресу (Host запроса): отсюда переадресация на каталог */
 export async function getSectionByHost(host: string): Promise<Section | undefined> {
   const h = normalizeHost(host);
   if (!h || !h.includes('.')) return undefined;
-  // vinyl.evropol.kg находит и раздел, у которого в базе ещё адрес с компьютера vinyl.localhost (см. publicHost)
+  // vinyl.evropol.kg находит и раздел, у которого в базе адрес с компьютера vinyl.localhost
   const d = mainDomain();
   const hosts = d && h.endsWith(`.${d}`) ? [h, h.slice(0, -d.length) + 'localhost'] : [h];
   const [s] = await sql<Section[]>`

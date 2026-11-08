@@ -2,7 +2,7 @@
 import AdminLayout from '../../layouts/AdminLayout.astro';
 import { sql } from '../../server/db.ts';
 import { visitStats } from '../../server/content.ts';
-import { getSections, isExternal } from '../../server/sections.ts';
+import { getSections, isExternal, siteUrl } from '../../server/sections.ts';
 
 const [counts] = await sql<{ sections: number; brands: number; pages: number; news: number }[]>`
   SELECT
@@ -50,7 +50,7 @@ const sections = await getSections();
             sections.map((s) => (
               <tr>
                 <td><a href={`/admin/sections/${s.id}`}>{s.name}</a> {!s.isPublished && <span class="tag off">скрыт</span>}</td>
-                <td>{s.link ? <a class="muted" href={s.link} target={isExternal(s.link) ? '_blank' : undefined} rel="noopener">{s.link}</a> : <span class="tag off">сайт раздела не задан</span>}</td>
+                <td>{s.siteHost ? <a class="muted" href={siteUrl(s)} target="_blank" rel="noopener">каталог {siteUrl(s)}</a> : s.link ? <a class="muted" href={s.link} target={isExternal(s.link) ? '_blank' : undefined} rel="noopener">{s.link}</a> : <span class="tag off">сайт раздела не задан</span>}</td>
               </tr>
             ))
           }

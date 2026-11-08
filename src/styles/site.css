@@ -72,15 +72,16 @@ h1, h2, h3 { font-weight: 500; }
 .ph-logo img { display: block; width: auto; height: 46px; transition: height .25s; }
 .ph--compact .ph-logo img { height: 38px; }
 .ph-nav { display: flex; align-items: center; flex-wrap: nowrap; margin-left: 5px; }
-.ph-nav > a, .ph-drop > a { display: block; padding: 10px 22px; color: var(--menu); font: 400 16px var(--font); letter-spacing: 1px; white-space: nowrap; }
-.ph-nav > a:hover, .ph-drop > a:hover { color: var(--navy); }
-.ph-nav > a.active, .ph-drop > a.active { color: var(--navy); }
+.ph-drop-btn { border: 0; background: none; cursor: pointer; }
+.ph-nav > a, .ph-drop > a, .ph-drop-btn { display: block; padding: 10px 22px; color: var(--menu); font: 400 16px var(--font); letter-spacing: 1px; white-space: nowrap; }
+.ph-nav > a:hover, .ph-drop > a:hover, .ph-drop-btn:hover { color: var(--navy); }
+.ph-nav > a.active, .ph-drop > a.active, .ph-drop-btn.active { color: var(--navy); }
 .ph-drop { position: relative; }
 .ph-drop-list {
   position: absolute; top: 100%; left: 0; z-index: 5; min-width: 250px; padding: 8px 0; background: #fff;
   box-shadow: 0 8px 24px rgba(0, 0, 0, .12); opacity: 0; visibility: hidden; transform: translateY(6px); transition: opacity .2s, transform .2s, visibility .2s;
 }
-.ph-drop:hover .ph-drop-list, .ph-drop:focus-within .ph-drop-list { opacity: 1; visibility: visible; transform: none; }
+.ph-drop:hover .ph-drop-list, .ph-drop:focus-within .ph-drop-list, .ph-drop.open .ph-drop-list { opacity: 1; visibility: visible; transform: none; }
 .ph-drop-list a { display: block; padding: 8px 22px; color: var(--menu); font-size: 14px; letter-spacing: .5px; }
 .ph-drop-list a:hover, .ph-drop-list a.active { background: var(--band); color: var(--navy); }
 /* «Связаться с нами» и Instagram — над меню справа */
@@ -355,7 +356,7 @@ h1, h2, h3 { font-weight: 500; }
   .ptiles { margin-left: 15px; margin-right: 15px; }
 }
 @media (max-width: 960px) {
-  .ph-nav > a, .ph-drop > a { padding: 10px 12px; font-size: 15px; letter-spacing: .5px; }
+  .ph-nav > a, .ph-drop > a, .ph-drop-btn { padding: 10px 12px; font-size: 15px; letter-spacing: .5px; }
   .pinfo-grid { grid-template-columns: 200px 1fr; gap: 40px; }
   .pnews-grid { gap: 24px; }
   .pf-cols { grid-template-columns: 1fr 1fr; }

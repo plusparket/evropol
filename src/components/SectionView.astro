@@ -1,5 +1,5 @@
 ---
-// Страница раздела: фото и текст, кнопка на сайт раздела (товары и заказ), бренды раздела, связь.
+// Страница раздела без каталога: фото и текст, кнопка на сайт по ссылке раздела, бренды раздела, связь.
 import Crumbs from './Crumbs.astro';
 import { isExternal, linkLabel, sectionLink, type Brand, type Section } from '../server/sections.ts';
 import type { Settings } from '../server/settings.ts';
@@ -13,7 +13,7 @@ interface Props {
 const { section: s, brands, settings } = Astro.props;
 const heading = s.heading || s.name;
 const link = sectionLink(s);
-// Свой сайт раздела открываем в той же вкладке, чужой сайт — в новой
+// Страницу этого сайта открываем в той же вкладке, чужой сайт — в новой
 const external = !s.siteHost && isExternal(s.link);
 const phoneHref = 'tel:' + settings.phone_main.replace(/[^\d+]/g, '');
 const waHref = 'https://wa.me/' + settings.panel_whatsapp.replace(/\D/g, '');

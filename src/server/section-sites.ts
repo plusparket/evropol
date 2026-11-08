@@ -1,11 +1,11 @@
-// Сайты разделов: первичная настройка и фото товаров.
+// Каталоги разделов: первичная настройка и фото товаров.
 //
-// setupSectionSites() — при запуске, один раз для каждого раздела из SITES: включает сайт раздела по адресу
-// <раздел>.<адрес главного сайта> (на компьютере — vinyl.localhost, laminate.localhost), добавляет разделу бренды
+// setupSectionSites() — при запуске, один раз для каждого раздела из SITES: включает каталог раздела (/vinyl,
+// /laminate; в site_host пишется адрес бывшего сайта раздела vinyl.localhost для переадресации), добавляет разделу бренды
 // и товары из seed/catalog/<раздел>.json, если товаров в разделе ещё нет. Отметка в настройках: section_site:<раздел>.
 // При каждом запуске: если в файле выросло поле version, добавляет новые товары, обновляет отметку «со склада»
 // и ссылки на фото у товаров, у которых фото ещё нет (upgradeCatalog, отметка catalog_version:<раздел>).
-// Адрес и цвет потом меняются в админке: «Разделы» → раздел → «Сайт раздела».
+// Цвет и вид каталога потом меняются в админке: «Разделы» → раздел → «Каталог раздела».
 //
 // importProductPhotos() — при каждом запуске, в фоне: скачивает фото производителя для товаров, у которых фото
 // ещё нет. Нет интернета — попробует при следующем запуске. Фото, загруженные в админке, не трогает.
@@ -16,6 +16,7 @@ import type { TransactionSql } from 'postgres';
 import { normalizeHost } from './sections.ts';
 import { removeUploads, saveImage } from './uploads.ts';
 import type { Attr } from './products.ts';
+import { categorySlug, cleanSeedProduct } from './upgrade-no-brands.ts';
 
 const CATALOG_DIR = path.resolve(process.cwd(), 'seed/catalog');
 /** Разделы, у которых сайт включается сам (по решению владельца); остальные — из админки */
@@ -53,7 +54,7 @@ type SeedCatalog = {
   refreshProducts?: boolean;
 };
 
-/** Адрес сайта раздела по адресу главного сайта: localhost → vinyl.localhost, evropol.kg → vinyl.evropol.kg */
+/** Адрес бывшего сайта раздела (для переадресации на каталог): localhost → vinyl.localhost, evropol.kg → vinyl.evropol.kg */
 export function defaultSiteHost(slug: string): string {
   const main = normalizeHost(process.env.SITE_URL || 'localhost').replace(/^www\./, '');
   return `${slug}.${main}`;
@@ -80,7 +81,7 @@ export async function setupSectionSites(): Promise<string[]> {
       const on = await sql`
         UPDATE sections SET site_host = ${host}, updated_at = now()
         WHERE id = ${section.id} AND site_host = '' AND NOT EXISTS (SELECT 1 FROM sections WHERE lower(site_host) = ${host})`;
-      if (on.count) log.push(`«${section.name}»: сайт раздела http://${host}`);
+      if (on.count) log.push(`«${section.name}»: каталог раздела /${slug}`);
       const added = await loadCatalog(section.id, slug);
       if (added) log.push(`«${section.name}»: товаров ${added}`);
       // Если товары в разделе уже были, загрузка пропущена: недостающие добавит новая версия каталога
@@ -94,9 +95,13 @@ export async function setupSectionSites(): Promise<string[]> {
 
 type SeedCategory = { slug: string; name: string; description?: string; children?: SeedCategory[] };
 
+/** Каталог из файла. Названия брендов и ссылки на PDF из товаров убираются сразу (сайт без брендов, src/server/upgrade-no-brands.ts) */
 async function readSeed(slug: string): Promise<SeedCatalog | null> {
   const raw = await readFile(path.join(CATALOG_DIR, `${slug}.json`), 'utf8').catch(() => '');
-  return raw ? (JSON.parse(raw) as SeedCatalog) : null;
+  if (!raw) return null;
+  const seed = JSON.parse(raw) as SeedCatalog;
+  const cats = (list: SeedCategory[] = []): SeedCategory[] => list.map((c) => ({ ...c, slug: categorySlug(c.slug), children: cats(c.children) }));
+  return { ...seed, categories: seed.categories && cats(seed.categories), products: seed.products.map(cleanSeedProduct) };
 }
 
 /** Бренды и товары из seed/catalog/<раздел>.json — только в раздел без товаров. Возвращает число товаров. */
@@ -178,7 +183,8 @@ async function addSeedProducts(tx: Tx, sectionId: number, seed: SeedCatalog): Pr
     const [same] = await tx<{ logo: string }[]>`SELECT logo FROM brands WHERE name = ${b.name} AND logo <> '' LIMIT 1`;
     const [{ max }] = await tx<{ max: number }[]>`SELECT coalesce(max(sort_order), 0)::int AS max FROM brands WHERE section_id = ${sectionId}`;
     await tx`INSERT INTO brands ${tx({
-      sectionId, name: b.name, logo: same?.logo ?? '', link: b.link ?? '', description: b.description ?? '', sortOrder: max + 10,
+      // Бренды на сайте не показываются (решение владельца 08.11.2026): заводим выключенными
+      sectionId, name: b.name, logo: same?.logo ?? '', link: b.link ?? '', description: b.description ?? '', sortOrder: max + 10, isActive: false,
     })}`;
   }
   const brands = new Map(

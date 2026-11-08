@@ -1,12 +1,13 @@
 ---
 import { ClientRouter } from 'astro:transitions';
 import '../styles/site.css';
+import '../styles/section-site.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import SearchHead from '../components/SearchHead.astro';
 import { getSettings, officeMaps } from '../server/settings.ts';
 import { getMenus } from '../server/content.ts';
-import { getSections } from '../server/sections.ts';
+import { DEFAULT_SITE_COLOR, getSections } from '../server/sections.ts';
 import { siteBase } from '../server/seo.ts';
 
 interface Props {
@@ -20,8 +21,11 @@ interface Props {
   ogType?: 'website' | 'article';
   /** Разметка schema.org (JSON-LD) */
   jsonLd?: object | object[];
+  /** Страница каталога раздела (/linoleum …): цвет раздела и оформление каталога (section-site.css) */
+  catalog?: { color: string; layout: string };
 }
-const { title, description, noindex = false, canonicalPath, image, ogType = 'website', jsonLd } = Astro.props;
+const { title, description, noindex = false, canonicalPath, image, ogType = 'website', jsonLd, catalog } = Astro.props;
+const catalogColor = catalog && /^#[0-9a-f]{6}$/i.test(catalog.color) ? catalog.color : DEFAULT_SITE_COLOR;
 
 const [settings, menus, sections] = await Promise.all([getSettings(), getMenus(), getSections({ publishedOnly: true })]);
 const countersOn = settings.counters_enabled === '1';
@@ -63,7 +67,7 @@ const footerMap = Astro.url.pathname === '/' ? officeMaps(settings)[0] : undefin
     <SearchHead settings={settings} />
     {countersOn && settings.head_code && <Fragment set:html={settings.head_code} />}
   </head>
-  <body>
+  <body class:list={{ ss: !!catalog, 'ss--groups': catalog?.layout === 'groups' }} style={catalog ? `--site: ${catalogColor}` : undefined}>
     <div class="wrapper" id="overlay"></div>
 
     <Header sections={sections} settings={settings} menus={menus} />
@@ -90,6 +94,7 @@ const footerMap = Astro.url.pathname === '/' ? officeMaps(settings)[0] : undefin
     <script>
       import '../scripts/site.ts';
       import '../scripts/ui.ts';
+      import '../scripts/section-site.ts';
     </script>
   </body>
 </html>

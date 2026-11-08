@@ -13,7 +13,8 @@ interface Props {
 }
 const { sections, settings, menus } = Astro.props;
 const phoneHref = (p: string) => 'tel:' + p.replace(/[^\d+]/g, '');
-const path = Astro.url.pathname;
+// На странице каталога раздела адрес внутри приложения другой (/section-site/…): берём адрес раздела
+const path = Astro.locals.site ? sectionUrl(Astro.locals.site) : Astro.url.pathname;
 // В «Лесном» дизайне значок Instagram зелёный, под цвет логотипа
 const forest = settings.forest_design === '1';
 // Пункты меню: «Главная», затем верхнее меню из админки; «Продукты» (разделы) встают после «О компании»
@@ -41,7 +42,7 @@ const here = (l: Link) =>
         links.map((l) =>
           l.products ? (
             <div class="ph-drop">
-              <a href={l.url} class:list={{ active: here(l) }}>{l.label}</a>
+              <button type="button" class:list={['ph-drop-btn', { active: here(l) }]} aria-haspopup="true" aria-expanded="false" data-drop>{l.label}</button>
               <div class="ph-drop-list">
                 {sections.map((s) => <a href={sectionHref(s)} class:list={{ active: path === sectionUrl(s) }}>{s.name}</a>)}
               </div>

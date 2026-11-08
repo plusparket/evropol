@@ -79,7 +79,7 @@ const nextOrder = (groups.at(-1)?.sortOrder ?? 0) + 10;
     Группы и категории показываются на сайте раздела с видом «Группы и категории товаров» (Разделы → раздел → Вид главной).
     Группа без своих категорий сразу показывает товары. Товары отмечаются на странице товара, в одной категории сначала идут
     товары со склада. Пустые категории на сайте не видны.
-    {section?.siteHost && <Fragment> Сайт раздела: <a href={siteUrl(section)} target="_blank" rel="noopener">{section.siteHost} ↗</a></Fragment>}
+    {section?.siteHost && <Fragment> Каталог раздела: <a href={siteUrl(section)} target="_blank" rel="noopener">{siteUrl(section)} ↗</a></Fragment>}
   </p>
   {error && <div class="flash err">{error}</div>}
 
