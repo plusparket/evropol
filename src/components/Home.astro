@@ -148,12 +148,18 @@ const cover = (n: News) => (n.image ? uploadUrl(n.image) : (n.content.match(/<im
                 <h3 class="psection-title"><a href={sectionHref(s)}>{s.name}</a></h3>
                 {s.summary && <p class="psection-text">{s.summary}</p>}
                 <div class="psection-links">
-                  {sectionLink(s) && (
-                    <a class="pbtn" href={sectionLink(s)} target={isExternal(s.link) && !s.siteHost ? '_blank' : undefined} rel={isExternal(s.link) && !s.siteHost ? 'noopener' : undefined}>
-                      {linkLabel(s)}
-                    </a>
+                  {s.siteHost ? (
+                    <a class="pbtn" href={sectionUrl(s)}>Смотреть каталог</a>
+                  ) : (
+                    <Fragment>
+                      {sectionLink(s) && (
+                        <a class="pbtn" href={sectionLink(s)} target={isExternal(s.link) ? '_blank' : undefined} rel={isExternal(s.link) ? 'noopener' : undefined}>
+                          {linkLabel(s)}
+                        </a>
+                      )}
+                      <a class="plink" href={sectionUrl(s)}>Подробнее</a>
+                    </Fragment>
                   )}
-                  <a class="plink" href={sectionUrl(s)}>Подробнее</a>
                 </div>
               </div>
             </article>

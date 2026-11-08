@@ -26,13 +26,13 @@ docker compose up -d --build
 - `SITE_ADDRESS=evropol.kg, www.evropol.kg`
 - `SITE_URL=https://evropol.kg`
 - `OLD_SITE_ADDRESS=europroject.kg, www.europroject.kg` — старый домен переадресует на новый (301), см. [seo.md](seo.md);
-- `SECTION_SITES_ADDRESS=vinyl.evropol.kg` — адреса сайтов разделов через запятую; те же адреса — в админке
-  у разделов («Адрес сайта») и DNS-записями на сервер, см. [section-sites.md](section-sites.md);
+- `SECTION_SITES_ADDRESS` — не нужен: каталоги разделов — страницы главного сайта (`evropol.kg/linoleum`). Заполняют,
+  только если бывшие поддомены разделов (`linoleum.evropol.kg`) уже кто-то видел: они переадресуют на каталог,
+  см. [section-sites.md](section-sites.md);
 - свои `POSTGRES_PASSWORD` и `ADMIN_PASSWORD`. Пароль базы задаётся один раз: база создаётся с ним при первом запуске;
 - `INSTAGRAM_TOKEN` — по желанию, см. [news-instagram.md](news-instagram.md).
 
-Адреса разделов `*.localhost` из базы с компьютера на сервере сами становятся поддоменами `SITE_URL`
-(`vinyl.evropol.kg`). После запуска — шаги в Google по [seo.md](seo.md): Search Console, карты сайтов, Analytics.
+После запуска — шаги в Google по [seo.md](seo.md): Search Console, карты сайтов, Analytics.
 
 ## Обновление
 

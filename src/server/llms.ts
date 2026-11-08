@@ -2,9 +2,9 @@
 // Собираются из базы при каждом запросе, поэтому всегда совпадают с сайтом: правки в админке попадают в них сразу.
 // Правила поддержки — AGENTS.md.
 //
-// В файлы попадает только то, что видно на сайте: опубликованные разделы с их сайтами, включённые бренды,
-// страницы и новости. У каждого сайта раздела (vinyl.localhost …) свои файлы: раздел, бренды, товары
-// (buildSiteLlmsTxt и buildSiteLlmsFullTxt).
+// В файлы попадает только то, что видно на сайте: опубликованные разделы с их каталогами, включённые бренды,
+// страницы и новости. У каталога каждого раздела (/linoleum) свои файлы /linoleum/llms.txt и /linoleum/llms-full.txt:
+// раздел, бренды, товары (buildSiteLlmsTxt и buildSiteLlmsFullTxt).
 import { sql } from './db.ts';
 import { getHome } from './home.ts';
 import { getActiveBrands, getSections, linkLabel, sectionLink, siteUrl, type Brand, type Section } from './sections.ts';
@@ -64,6 +64,8 @@ type Data = {
   brands: Brand[];
   pages: { slug: string; title: string; content: string }[];
   news: { id: number; slug: string; title: string; excerpt: string; content: string; publishedAt: Date }[];
+  /** Число товаров в каталоге раздела (по id раздела) */
+  counts: Map<number, number>;
 };
 
 async function load(origin: string): Promise<Data> {
@@ -78,9 +80,19 @@ async function load(origin: string): Promise<Data> {
       SELECT id, slug, title, excerpt, content, published_at FROM news
       WHERE is_published AND published_at <= now() ORDER BY published_at DESC`,
   ]);
-  return { base, settings, home, sections, brands, pages, news };
+  const counts = new Map(
+    (await sql<{ sectionId: number; n: number }[]>`
+      SELECT section_id, count(*)::int AS n FROM products WHERE is_published GROUP BY section_id`).map((r) => [r.sectionId, r.n]),
+  );
+  return { base, settings, home, sections, brands, pages, news, counts };
 }
 
+const CATALOG_NOTE = 'Каталоги разделов: страницы товаров с фото и характеристиками. Цен на сайте нет: ' +
+  'цену и наличие сообщают по телефону или в WhatsApp. «Паркет» ведёт на сайт domparketa.kg.';
+const countText = (d: Data, s: Section) => {
+  const n = d.counts.get(s.id) ?? 0;
+  return `${n} ${pluralRu(n, ['товар', 'товара', 'товаров'])}`;
+};
 const abs = (d: Data, url: string) => (/^https?:/i.test(url) ? url : `${d.base}${url.startsWith('/') ? '' : '/'}${url}`);
 const brandsOf = (d: Data, s: Section) => d.brands.filter((b) => b.sectionId === s.id);
 /** Бренды без раздела */
@@ -122,20 +134,18 @@ export async function buildLlmsTxt(origin: string): Promise<string> {
   const d = await load(origin);
   const out: string[] = [`# ${d.settings.site_name}`, '', `> ${summary(d)}`, ''];
   if (d.home.about.title && d.home.about.text) out.push(oneLine(htmlToMd(fillPlaceholders(d.home.about.text, d.settings), d.base), 600), '');
-  out.push(
-    'Этот сайт рассказывает о компании и разделах. Коллекции, цены и заказ — на сайте каждого раздела; ' +
-      'если у раздела сайта пока нет, цену и наличие уточняйте по телефону или в WhatsApp.',
-    '',
-  );
+  out.push(CATALOG_NOTE, '');
   out.push('## Контакты', '', ...contacts(d), '');
 
   out.push('## Разделы', '');
   for (const s of d.sections) {
     const brands = brandsOf(d, s).map((b) => b.name).join(', ');
-    // У раздела со своим сайтом страница на главном сайте переадресует туда: ссылка сразу на сайт раздела
+    // Раздел с каталогом: ссылка на каталог и его llms.txt; раздел со ссылкой на другой сайт (Паркет): ссылка туда
     const link = sectionLink(s);
-    const site = link && !s.siteHost ? ` · ${linkLabel(s)}: ${abs(d, link)}` : '';
-    out.push(`- [${s.heading || s.name}](${s.siteHost ? siteUrl(s) : `${d.base}/${s.slug}`})${brands ? `: ${brands}` : ''}${site}`);
+    // Страница раздела со ссылкой переадресует по ней: даём ссылку сразу
+    const url = s.siteHost ? siteUrl(s) : link ? abs(d, link) : `${d.base}/${s.slug}`;
+    const site = s.siteHost ? ` · каталог: ${countText(d, s)}, список товаров: ${siteUrl(s)}/llms.txt` : '';
+    out.push(`- [${s.heading || s.name}](${url})${brands ? `: ${brands}` : ''}${site}`);
   }
   for (const b of looseBrands(d)) out.push(`- ${b.name}${b.link ? `: ${abs(d, b.link)}` : ''}`);
   out.push('');
@@ -163,12 +173,14 @@ export async function buildLlmsFullTxt(origin: string): Promise<string> {
   out.push(`Сайт: ${d.base}. Данные собраны с сайта ${new Date().toLocaleDateString('ru-RU')} и всегда совпадают с ним.`, '');
 
   if (d.home.about.title && d.home.about.text) out.push('## О компании', '', md(d.home.about.text), '');
-  out.push('Коллекции, цены и заказ — на сайте каждого раздела; если у раздела сайта пока нет, уточняйте по телефону или в WhatsApp.', '');
+  out.push(CATALOG_NOTE, '');
   out.push('## Контакты', '', ...contacts(d), '');
 
   out.push('## Разделы', '');
   for (const s of d.sections) {
-    out.push(`### ${s.heading || s.name}`, '', s.siteHost ? `Сайт раздела: ${siteUrl(s)}` : `Адрес: ${d.base}/${s.slug}`);
+    out.push(`### ${s.heading || s.name}`, '', s.siteHost
+      ? `Каталог: ${siteUrl(s)} (${countText(d, s)}). Описания и характеристики товаров: ${siteUrl(s)}/llms-full.txt`
+      : `Адрес: ${d.base}/${s.slug}`);
     if (sectionLink(s) && !s.siteHost) out.push(`${linkLabel(s)}: ${abs(d, sectionLink(s))}`);
     if (s.description) out.push('', md(s.description));
     for (const b of brandsOf(d, s)) {
@@ -235,12 +247,11 @@ function siteHeader(d: SiteData, full: boolean): string[] {
   const s = d.site;
   const heading = s.heading || s.name;
   const out = [`# ${heading}: ${d.settings.site_name}${full ? ', полная информация' : ''}`, ''];
-  out.push(`> ${(s.summary || heading).replace(/\.$/, '')}. Сайт раздела «${s.name}» компании «${d.settings.site_name}» (Бишкек, Кыргызстан). ` +
+  out.push(`> ${(s.summary || heading).replace(/\.$/, '')}. Каталог раздела «${s.name}» на сайте компании «${d.settings.site_name}» (Бишкек, Кыргызстан). ` +
     `Офис: ${d.settings.address}. Телефон ${d.settings.phone_main}.`, '');
   out.push(`Каталог на сайте: ${d.products.length} ${pluralRu(d.products.length, ['товар', 'товара', 'товаров'])}. ` +
     'Цен на сайте нет: цену и наличие сообщают по телефону или в WhatsApp.' + (s.siteLayout === 'groups' ? '' : ' Образцы есть в офисе.'), '');
-  // Виды «только каталог» и «группы и категории» не ссылаются на главный сайт — и здесь его нет
-  if (!['catalog', 'groups'].includes(s.siteLayout)) out.push(`Главный сайт компании со всеми разделами: ${d.base}/`, '');
+  out.push(`Каталог: ${d.siteBase}. Главная страница сайта со всеми разделами: ${d.base}/`, '');
   return out;
 }
 
@@ -250,7 +261,7 @@ export async function buildSiteLlmsTxt(site: Section): Promise<string> {
   const md = (html: string) => htmlToMd(fillPlaceholders(html, d.settings), d.siteBase);
   const out = siteHeader(d, false);
   if (site.description) out.push(oneLine(md(site.description), 600), '');
-  out.push('## Контакты', '', ...contacts(d, !site.siteAddress && !['catalog', 'groups'].includes(site.siteLayout)), '');
+  out.push('## Контакты', '', ...contacts(d, !site.siteAddress), '');
   const brands = brandsOf(d, site);
   if (brands.length) {
     out.push('## Производители', '');
@@ -270,7 +281,8 @@ export async function buildSiteLlmsTxt(site: Section): Promise<string> {
   }
   out.push('## Optional', '');
   out.push(`- [Полная версия](${d.siteBase}/llms-full.txt): описания и характеристики всех товаров`);
-  out.push(`- [Карта сайта](${d.siteBase}/sitemap.xml)`);
+  out.push(`- [Обзор всего сайта](${d.base}/llms.txt)`);
+  out.push(`- [Карта сайта](${d.base}/sitemap.xml)`);
   return out.join('\n') + '\n';
 }
 
@@ -279,9 +291,9 @@ export async function buildSiteLlmsFullTxt(site: Section): Promise<string> {
   const d = await loadSite(site);
   const md = (html: string) => htmlToMd(fillPlaceholders(html, d.settings), d.siteBase);
   const out = siteHeader(d, true);
-  out.push(`Сайт: ${d.siteBase}. Данные собраны с сайта ${new Date().toLocaleDateString('ru-RU')} и всегда совпадают с ним.`, '');
+  out.push(`Каталог: ${d.siteBase}. Данные собраны с сайта ${new Date().toLocaleDateString('ru-RU')} и всегда совпадают с ним.`, '');
   if (site.description) out.push(`## ${site.siteLayout === 'groups' ? 'О продукции' : 'О покрытии'}`, '', md(site.description), '');
-  out.push('## Контакты', '', ...contacts(d, !site.siteAddress && !['catalog', 'groups'].includes(site.siteLayout)), '');
+  out.push('## Контакты', '', ...contacts(d, !site.siteAddress), '');
   const brands = brandsOf(d, site);
   if (brands.length) {
     out.push('## Производители', '');

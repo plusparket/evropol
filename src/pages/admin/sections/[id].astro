@@ -70,7 +70,7 @@ if (Astro.request.method === 'POST') {
   else if (RESERVED_SLUGS.has(form.slug)) error = `Адрес «${form.slug}» зарезервирован системой`;
   else if ((await sql`SELECT 1 FROM pages WHERE slug = ${form.slug}`).length) error = `Адрес «${form.slug}» уже занят страницей`;
   else if (form.link && !/^(https?:\/\/|\/)/i.test(form.link)) error = 'Ссылка на сайт раздела начинается с https:// (или с / для страницы этого сайта)';
-  else if (form.siteHost && !/^[a-z0-9-]+(\.[a-z0-9-]+)+$/.test(form.siteHost)) error = 'Адрес сайта раздела: латинские буквы, цифры и точки, например vinyl.localhost или vinyl.evropol.kg';
+  else if (form.siteHost && !/^[a-z0-9-]+(\.[a-z0-9-]+)+$/.test(form.siteHost)) error = 'Старый адрес сайта раздела: латинские буквы, цифры и точки, например vinyl.localhost';
   else if (form.siteHost && (await sql`SELECT 1 FROM sections WHERE lower(site_host) = ${form.siteHost} AND id <> ${id ?? 0}`).length) error = `Адрес «${form.siteHost}» уже занят другим разделом`;
   else if (form.siteColor && !/^#[0-9a-f]{6}$/.test(form.siteColor)) error = 'Цвет сайта: шесть знаков после #, например #006338';
 
@@ -138,28 +138,28 @@ const title = isNew ? 'Новый раздел' : form.name;
     </div>
 
     <div class="card">
-      <h2>Сайт раздела</h2>
-      <p class="hint">Свой сайт раздела с каталогом товаров. Работает на этом же сервере, товары заводятся в «Товарах».
-        Если сайт включён, плитка и пункт меню раздела на главной ведут сразу на него.</p>
+      <h2>Каталог раздела</h2>
+      <p class="hint">Каталог товаров раздела на этом сайте: страница <code>/{form.slug || 'razdel'}</code>, товары заводятся в «Товарах».
+        Если каталог включён, плитка и пункт меню раздела ведут на него.</p>
       <div class="form-grid">
         <div class="field full inline">
-          <label class="check"><input type="checkbox" name="site_on" checked={!!form.siteHost} /> Включить сайт раздела</label>
+          <label class="check"><input type="checkbox" name="site_on" checked={!!form.siteHost} /> Включить каталог раздела</label>
           {current?.siteHost && <a href={siteUrl(current)} target="_blank" rel="noopener">{siteUrl(current)} ↗</a>}
           {current && <a href={`/admin/products?section=${current.id}`}>Товары раздела</a>}
         </div>
         <div class="field">
-          <label for="site_host">Адрес сайта</label>
+          <label for="site_host">Старый адрес сайта раздела</label>
           <input type="text" id="site_host" name="site_host" value={form.siteHost} placeholder={defaultSiteHost(form.slug || 'razdel')} />
-          <div class="hint">На компьютере: <code>{form.slug || 'razdel'}.localhost</code>. На сервере — свой домен или поддомен, например
-            <code>{form.slug || 'razdel'}.evropol.kg</code> (его нужно добавить и в настройки сервера, docs/deployment.md).</div>
+          <div class="hint">Раньше у раздела был отдельный сайт. Кто откроет этот адрес, попадёт на каталог раздела.
+            Менять не нужно.</div>
         </div>
         <div class="field">
-          <label for="site_color">Цвет сайта</label>
+          <label for="site_color">Цвет каталога</label>
           <input type="color" id="site_color" name="site_color" value={form.siteColor || DEFAULT_SITE_COLOR} style="width:80px;height:40px;padding:2px" />
-          <div class="hint">Кнопки, полоса сверху, галочки фильтров. По умолчанию — зелёный логотипа.</div>
+          <div class="hint">Кнопки и галочки фильтров. По умолчанию зелёный, как у логотипа.</div>
         </div>
         <div class="field">
-          <label for="site_layout">Вид главной</label>
+          <label for="site_layout">Вид каталога</label>
           <select id="site_layout" name="site_layout">
             <option value="" selected={!form.siteLayout}>Фото, каталог, о покрытии, производители</option>
             <option value="catalog" selected={form.siteLayout === 'catalog'}>Только каталог с фильтрами слева</option>
@@ -169,7 +169,7 @@ const title = isNew ? 'Новый раздел' : form.name;
             задаются в <a href="/admin/categories">«Категориях товаров»</a>.</div>
         </div>
         <div class="field">
-          <label for="site_address">Адрес на сайте раздела</label>
+          <label for="site_address">Адрес в каталоге раздела</label>
           <input type="text" id="site_address" name="site_address" value={form.siteAddress} placeholder="пусто — адрес офиса из настроек" />
           <div class="hint">Если у раздела свой магазин или склад: г. Бишкек, ул. Матросова 6/1.</div>
         </div>

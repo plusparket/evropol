@@ -1,6 +1,6 @@
 # Поиск Google (SEO)
 
-Цель владельца (31.10.2026): главный сайт и все сайты разделов находятся в Google по запросам «ламинат Бишкек»,
+Цель владельца (31.10.2026): сайт и каталоги всех разделов находятся в Google по запросам «ламинат Бишкек»,
 «линолеум Бишкек», «ковровая плитка Бишкек» и так далее. На domparketa.kg сайт сначала сделали, а о поиске подумали
 после: Search Console и аналитику не подключили, старый сайт в индексе остался с дублями адресов. Здесь всё нужное
 для Google заложено в код до покупки доменов, а шаги в аккаунтах Google перечислены ниже, чтобы их сделать в день запуска.
@@ -10,69 +10,57 @@
 Каждая страница собирается на сервере (Astro, `output: 'server'`): Google получает готовый HTML с текстом и товарами,
 JavaScript для чтения страницы не нужен.
 
-| Что | Где | Главный сайт | Сайты разделов |
+| Что | Где | Страницы сайта | Каталоги разделов |
 |---|---|---|---|
 | Заголовок с городом: «Ламинат в Бишкеке: каталог \| …», у товара «Бренд Название, коллекция в Бишкеке» | `src/server/seo.ts`, страницы | да | да |
 | Разные заголовки у одноимённых товаров (декор в двух форматах): «…, узкая доска Loft» | `namesakeSuffix` | — | да |
 | Описание до 160 знаков, в конце «Бишкек, тел. …» | `sectionSiteDescription`, `productDescription`, `categoryDescription` | да | да |
 | Один адрес у страницы (canonical), без `/` в конце, `www.` → без www (301) | layouts, `src/middleware.ts` | да | да |
-| `sitemap.xml` с фото для Google Картинок, `robots.txt` со ссылкой на него | `src/pages/sitemap.xml.ts`, `src/pages/section-site/sitemap.xml.ts` | да | у каждого свой |
+| `sitemap.xml` с фото для Google Картинок, `robots.txt` со ссылкой на него | `src/pages/sitemap.xml.ts` | да | в той же карте |
 | Разметка schema.org: компания и офис (`Organization`, `LocalBusiness`) | `organizationJsonLd` | главная, «Контакты» | — |
-| Разметка магазина раздела (`Store`: адрес, телефон, координаты, связь с компанией) | `sectionSiteJsonLd` | — | главная |
+| Разметка магазина раздела (`Store`: адрес, телефон, координаты, связь с компанией) | `sectionSiteJsonLd` | — | страница каталога |
 | Хлебные крошки (`BreadcrumbList`) | `breadcrumbJsonLd` | разделы | товары, категории |
 | Превью ссылки в WhatsApp и Telegram (Open Graph): логотип ЕвроПол или фото товара | `public/img/og-evropol.jpg` | да | да |
-| Коды Search Console и Яндекс.Вебмастера, Google Analytics 4 | `src/components/SearchHead.astro`, админка → «Настройки» | да | да, те же |
+| Коды Search Console и Яндекс.Вебмастера, Google Analytics 4 | `src/components/SearchHead.astro`, админка → «Настройки» | да | да |
 | Фильтры каталога (`?f=`, `?stock=1`) закрыты от индекса: это те же товары | `robots.txt`, `noindex` | — | да |
 | Подписи фото (alt) с брендом и коллекцией | карточки и страница товара | — | да |
 | Фото в WebP и копии 600 px для каталога, CSS и JS кэшируются на год | `src/server/uploads.ts`, `Caddyfile` | да | да |
-| `/llms.txt` и `/llms-full.txt` для ChatGPT, Claude, Perplexity | `src/server/llms.ts` | да | у каждого свой |
+| `/llms.txt` и `/llms-full.txt` для ChatGPT, Claude, Perplexity | `src/server/llms.ts` | да | `/<раздел>/llms.txt` |
 | Переадресации со старых адресов europroject.kg (301) | админка → «Переадресации» | да | — |
 
-Страница раздела на главном сайте (`/laminate`) переадресует (301) на сайт раздела: тексты там те же, а две страницы
-с одним текстом в Google мешают друг другу. В `sitemap.xml` главного сайта таких разделов нет.
-
-### Адреса сайтов разделов на сервере
-
-Пока сайты работают на компьютере, адреса разделов `vinyl.localhost`, `laminate.localhost` и т. д. Когда в `.env`
-сервера записан `SITE_URL=https://evropol.kg`, адрес `*.localhost` у раздела сам становится поддоменом:
-`vinyl.evropol.kg` (`publicHost` в `src/server/sections.ts`). Это касается canonical, `sitemap.xml`, `robots.txt`,
-ссылок меню и llms-файлов, поэтому в Google не попадёт ни одной ссылки на localhost, даже если базу перенести с
-компьютера на сервер как есть. Свой домен у раздела (например, `laminat.kg`) задаётся в админке у раздела, поле
-«Адрес сайта», и не меняется.
+С 08.11.2026 (решение владельца) каталоги разделов — страницы главного сайта: `evropol.kg/laminate`,
+`evropol.kg/laminate/<товар>`. Все они в одной карте `evropol.kg/sitemap.xml`. Бывшие сайты разделов
+(`laminate.localhost`, `laminate.evropol.kg`, свой домен из поля «Старый адрес сайта раздела») переадресуют на
+каталог с тем же путём (301, `src/middleware.ts`), поэтому ссылки, закладки и позиции в Google переходят на
+главный сайт.
 
 ## Что сделать, когда будут домены
 
 ### 1. Адреса (решение владельца 31.10.2026)
 
 - Главный сайт: **evropol.kg** (не europroject.kg).
-- Сайт раздела: свой домен, если свободен (`laminate.kg`), иначе поддомен главного (`laminate.evropol.kg`).
-  Поддомен получается сам (см. выше). Свой домен вписывают в админке у раздела, поле «Адрес сайта». Если раздел
-  переехал с поддомена на свой домен, старый адрес `laminate.evropol.kg/…` переадресует на `laminate.kg/…` (301,
-  `src/middleware.ts`).
+- Каталоги разделов: страницы главного сайта (`evropol.kg/laminate`), отдельные домены и поддомены не нужны
+  (решение владельца 08.11.2026).
 - Старый домен **europroject.kg** не бросать: он давно в Google. Его направляют на тот же сервер, и Caddy
   переадресует любой адрес на evropol.kg (301, переменная `OLD_SITE_ADDRESS`). Старые страницы вида
   `/o-kompanii.html` дальше переводит таблица «Переадресации». В Search Console у старого домена —
   «Изменение адреса» на evropol.kg.
 
-У каждого отдельного домена в Search Console свой ресурс и своя запись TXT. Поддомены evropol.kg покрывает один
-ресурс-домен `evropol.kg`.
+В Search Console один ресурс-домен `evropol.kg`.
 
 ### 2. На сервере
 
-1. DNS: A-записи `evropol.kg`, `www.evropol.kg`, поддомены разделов (или `*.evropol.kg`), отдельные домены
-   разделов и `europroject.kg`, `www.europroject.kg` → IP сервера.
+1. DNS: A-записи `evropol.kg`, `www.evropol.kg`, `europroject.kg`, `www.europroject.kg` → IP сервера.
 2. `.env`: `SITE_URL=https://evropol.kg`, `SITE_ADDRESS=evropol.kg, www.evropol.kg`,
-   `SECTION_SITES_ADDRESS=` все адреса сайтов разделов через запятую (например, `laminate.kg, vinyl.evropol.kg`),
-   `OLD_SITE_ADDRESS=europroject.kg, www.europroject.kg`.
-3. Проверка: каждый сайт открывается по https, `/robots.txt` и `/sitemap.xml` отвечают 200, в них нет `localhost`.
+   `OLD_SITE_ADDRESS=europroject.kg, www.europroject.kg`. `SECTION_SITES_ADDRESS` нужен, только если поддомены
+   разделов (`laminate.evropol.kg`) где-то уже публиковались: тогда их перечисляют там и в DNS, и они переадресуют на каталог.
+3. Проверка: сайт открывается по https, `/robots.txt` и `/sitemap.xml` отвечают 200, в них нет `localhost`.
 
 ### 3. В аккаунтах Google (владелец входит в свой аккаунт, Claude подсказывает по шагам)
 
 1. **Search Console** (search.google.com/search-console): «Добавить ресурс» → «Доменный ресурс» → `evropol.kg`.
-   Google даст запись TXT для DNS: её добавляют у регистратора домена. Один такой ресурс покрывает главный сайт и все
-   поддомены. Для каждого отдельного домена раздела (`laminate.kg`) то же самое.
-2. В Search Console → «Файлы Sitemap» отправить карту каждого сайта: `https://evropol.kg/sitemap.xml`,
-   `https://laminate.evropol.kg/sitemap.xml` и остальные.
+   Google даст запись TXT для DNS: её добавляют у регистратора домена.
+2. В Search Console → «Файлы Sitemap» отправить `https://evropol.kg/sitemap.xml`: в ней и все каталоги разделов.
 3. «Проверка URL» → главная каждого сайта → «Запросить индексирование». Первые страницы появляются в Google
    через несколько дней, весь каталог за 2–4 недели.
 4. **Google Analytics 4**: создать ресурс, скопировать идентификатор `G-…` в админку → «Настройки» → «Поисковики

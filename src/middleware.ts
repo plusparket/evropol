@@ -1,13 +1,13 @@
 import { defineMiddleware } from 'astro:middleware';
 import { getSessionUser } from './server/auth.ts';
-import { trackVisit } from './server/content.ts';
-import { getSectionByHost, getSectionBySlug, mainDomain, normalizeHost, siteUrl } from './server/sections.ts';
+import { RESERVED_SLUGS, trackVisit } from './server/content.ts';
+import { catalogPath, getSectionByHost, getSectionBySlug, mainDomain, mainUrl, normalizeHost, type Section } from './server/sections.ts';
 
 const VISIT_COOKIE = 'ep_visit';
 const BOT_RE = /bot|crawl|spider|slurp|facebookexternalhit|preview|monitor|curl|wget|python|headless/i;
-/** Страницы сайтов разделов: src/pages/section-site/. Снаружи этот адрес не открывается */
+/** Страницы каталогов разделов: src/pages/section-site/. Снаружи этот адрес не открывается */
 const SECTION_SITE = '/section-site';
-/** Общие файлы: одни и те же на главном сайте и на сайтах разделов */
+/** Общие файлы: на старых адресах сайтов разделов отдаются как есть (фото в старых ссылках не ломаются) */
 const SHARED_RE = /^\/(uploads|_astro|_image|img|fonts)\/|^\/(favicon[^/]*|apple-touch-icon\.png|healthz)$/;
 
 export const onRequest = defineMiddleware(async (ctx, next) => {
@@ -22,27 +22,36 @@ export const onRequest = defineMiddleware(async (ctx, next) => {
     return Response.redirect(new URL(pathname + ctx.url.search, base), 301);
   }
 
-  // --- Сайт раздела (vinyl.localhost …): тот же код, страницы из src/pages/section-site --------------
-  const site = host && !SHARED_RE.test(pathname) ? await getSectionByHost(host) : undefined;
-  if (site) {
-    ctx.locals.site = site;
-    // Админка одна на все сайты — на главном
-    if (pathname === '/admin' || pathname.startsWith('/admin/')) {
-      const main = process.env.SITE_URL || `${ctx.url.protocol}//localhost`;
-      return Response.redirect(new URL(pathname + ctx.url.search, main), 302);
+  // --- Старые сайты разделов (linoleum.localhost, linoleum.evropol.kg, свой домен раздела) ---------------------
+  // С 08.11.2026 каталог раздела — страница главного сайта (/linoleum). Старый адрес ведёт на неё постоянной
+  // переадресацией (301): ссылки и закладки работают, Google переносит страницы на главный сайт.
+  if (host && !SHARED_RE.test(pathname)) {
+    const old = await oldSectionSite(host);
+    if (old) {
+      const main = mainUrl();
+      const target =
+        pathname === '/admin' || pathname.startsWith('/admin/') || pathname === '/sitemap.xml' || pathname === '/robots.txt'
+          ? pathname
+          : catalogPath(old, pathname.replace(/\/+$/, ''));
+      return Response.redirect(main + target + ctx.url.search, 301);
     }
-    trackPageView(ctx, pathname);
-    return next(new URL(SECTION_SITE + (pathname === '/' ? '' : pathname) + ctx.url.search, ctx.url));
   }
-  // Раздел переехал с поддомена на свой домен (laminate.evropol.kg → laminate.kg): старый адрес ведёт на новый (301),
-  // чтобы Google перенёс страницы, а не показывал на поддомене главный сайт
-  const domain = mainDomain();
-  const h = normalizeHost(host);
-  if (domain && h.endsWith(`.${domain}`) && !h.startsWith('www.')) {
-    const moved = await getSectionBySlug(h.slice(0, -domain.length - 1));
-    if (moved?.siteHost) return Response.redirect(siteUrl(moved) + pathname + ctx.url.search, 301);
-  }
+
+  // --- Каталог раздела: /linoleum, /linoleum/<товар>, /linoleum/<категория> ----------------------------------
+  // Тот же код, что был у сайтов разделов: страницы из src/pages/section-site/, раздел — в locals.site
   if (pathname === SECTION_SITE || pathname.startsWith(SECTION_SITE + '/')) return new Response('Not found', { status: 404 });
+  const m = pathname.match(/^\/([a-z0-9_-]+)(\/.*)?$/i);
+  if (m && !RESERVED_SLUGS.has(m[1])) {
+    const site = await getSectionBySlug(m[1]);
+    if (site?.siteHost) {
+      const rest = (m[2] ?? '').replace(/\/+$/, '');
+      // Один адрес у страницы: /linoleum/ → /linoleum, /linoleum/x/ → /linoleum/x
+      if (m[1] !== site.slug || pathname !== catalogPath(site, rest)) return ctx.redirect(catalogPath(site, rest) + ctx.url.search, 301);
+      ctx.locals.site = site;
+      trackPageView(ctx, pathname);
+      return next(new URL(SECTION_SITE + rest + ctx.url.search, ctx.url));
+    }
+  }
 
   // --- Панель управления: только для авторизованных -----------------------------
   if (pathname === '/admin' || pathname.startsWith('/admin/')) {
@@ -81,4 +90,19 @@ function trackPageView(ctx: Parameters<Parameters<typeof defineMiddleware>[0]>[0
     }
     trackVisit(isNewVisitor).catch((err) => console.error('trackVisit', err));
   }
+}
+
+/**
+ * Раздел, чей старый сайт открыли: адрес из «site_host» (linoleum.localhost, свой домен) или поддомен главного
+ * сайта с адресом раздела (linoleum.evropol.kg). Главный сайт и www сюда не попадают.
+ */
+async function oldSectionSite(host: string): Promise<Section | undefined> {
+  const h = normalizeHost(host);
+  if (h === normalizeHost(mainUrl()) || h.startsWith('www.')) return undefined;
+  const byHost = await getSectionByHost(h);
+  if (byHost) return byHost;
+  const domain = mainDomain();
+  if (!domain || !h.endsWith(`.${domain}`)) return undefined;
+  const s = await getSectionBySlug(h.slice(0, -domain.length - 1));
+  return s?.siteHost ? s : undefined;
 }

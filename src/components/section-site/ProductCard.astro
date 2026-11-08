@@ -1,8 +1,9 @@
 ---
-// Карточка товара в каталоге сайта раздела: фото с меткой «Новинка», бренд и коллекция, название,
+// Карточка товара в каталоге раздела: фото с меткой «Новинка», бренд и коллекция, название,
 // коротко характеристики.
 import { productThumb, type ProductItem } from '../../server/products.ts';
 import { uploadUrl } from '../../server/uploads.ts';
+import { catalogPath } from '../../server/sections.ts';
 
 interface Props {
   product: ProductItem;
@@ -12,7 +13,7 @@ const img = p.images[0];
 const sub = [p.brand, p.collection].filter(Boolean).join(' · ');
 ---
 
-<a class="pcard2 ss-card" href={`/${p.slug}`}>
+<a class="pcard2 ss-card" href={catalogPath(Astro.locals.site!, p.slug)}>
   <span class="pcard2-img">
     {p.isNew && (
       <span class="ss-badges">

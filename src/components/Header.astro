@@ -13,7 +13,8 @@ interface Props {
 }
 const { sections, settings, menus } = Astro.props;
 const phoneHref = (p: string) => 'tel:' + p.replace(/[^\d+]/g, '');
-const path = Astro.url.pathname;
+// На странице каталога раздела адрес внутри приложения другой (/section-site/…): берём адрес раздела
+const path = Astro.locals.site ? sectionUrl(Astro.locals.site) : Astro.url.pathname;
 // В «Лесном» дизайне значок Instagram зелёный, под цвет логотипа
 const forest = settings.forest_design === '1';
 // Пункты меню: «Главная», затем верхнее меню из админки; «Продукты» (разделы) встают после «О компании»

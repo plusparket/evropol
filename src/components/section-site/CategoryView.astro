@@ -6,7 +6,7 @@ import Crumbs from '../Crumbs.astro';
 import CatalogCard from './CatalogCard.astro';
 import Pager from './Pager.astro';
 import { paginate, productsOf, type CategoryNode, type ProductItem } from '../../server/products.ts';
-import type { Section } from '../../server/sections.ts';
+import { catalogPath, type Section } from '../../server/sections.ts';
 
 interface Props {
   site: Section;
@@ -21,9 +21,10 @@ const { site, tree, group, category, products } = Astro.props;
 const current = category ?? group;
 const all = current ? productsOf(products, current) : products;
 const items = all;
-const here = current ? `/${current.slug}` : '/';
+const root = catalogPath(site);
+const here = catalogPath(site, current?.slug);
 const crumbs = current
-  ? [{ name: site.name, url: '/' }, ...(category && group ? [{ name: group.name, url: `/${group.slug}` }] : []), { name: current.name }]
+  ? [{ name: site.name, url: root }, ...(category && group ? [{ name: group.name, url: catalogPath(site, group.slug) }] : []), { name: current.name }]
   : [{ name: site.name }];
 // После «из»: из 21 товара, из 143 товаров
 const word = (n: number) => (n % 10 === 1 && n % 100 !== 11 ? 'товара' : 'товаров');
@@ -43,15 +44,15 @@ const { page, pages, slice, from, to } = paginate(items, Astro.url.searchParams.
       <summary>Категории{current && `: ${current.name}`}</summary>
       <nav class="ss-cat-nav" aria-label="Группы продукции">
         <ul>
-          <li><a href="/" aria-current={!current ? 'page' : undefined}>Все товары</a></li>
+          <li><a href={root} aria-current={!current ? 'page' : undefined}>Все товары</a></li>
           {
             tree.map((g) => (
               <li class:list={{ 'is-open': g.id === group?.id }}>
-                <a href={`/${g.slug}`} aria-current={g.id === current?.id ? 'page' : undefined}>{g.name}</a>
+                <a href={catalogPath(site, g.slug)} aria-current={g.id === current?.id ? 'page' : undefined}>{g.name}</a>
                 {g.id === group?.id && g.children.length > 0 && (
                   <ul>
                     {g.children.map((c) => (
-                      <li><a href={`/${c.slug}`} aria-current={c.id === current?.id ? 'page' : undefined}>{c.name}</a></li>
+                      <li><a href={catalogPath(site, c.slug)} aria-current={c.id === current?.id ? 'page' : undefined}>{c.name}</a></li>
                     ))}
                   </ul>
                 )}
@@ -66,7 +67,7 @@ const { page, pages, slice, from, to } = paginate(items, Astro.url.searchParams.
       {
         group && !category && group.children.length > 0 && (
           <div class="ss-chips">
-            {group.children.map((c) => <a class="ss-chip" href={`/${c.slug}`}>{c.name}</a>)}
+            {group.children.map((c) => <a class="ss-chip" href={catalogPath(site, c.slug)}>{c.name}</a>)}
           </div>
         )
       }

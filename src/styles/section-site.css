@@ -9,7 +9,6 @@
 .ss .pbtn-outline { background: transparent; color: var(--site); }
 .ss .pbtn-outline:hover { background: var(--site); color: #fff; }
 .ss .plink:hover, .ss .ph-nav > a:hover, .ss .ph-drop > a:hover { color: var(--site); }
-.ss .ph { border-top: 0; }
 .ss .ph-burger i { background: var(--site); }
 .ss .to-top { background: var(--site); }
 

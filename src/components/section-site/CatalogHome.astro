@@ -1,5 +1,5 @@
 ---
-// Главная сайта раздела в виде «только каталог» (поле «Вид главной» у раздела): крошки, заголовок,
+// Каталог раздела (/linoleum) в виде «только каталог» (поле «Вид главной» у раздела): крошки, заголовок,
 // слева фильтры раскрывающимися группами (у типа дизайна и цвета — значки), справа плитка товаров
 // по четыре в ряд с меткой «Новинка» и кнопкой «Подробно», внизу связь.
 // Фильтры — обычная форма GET (?f=Цвет:Серый), как в SiteHome.astro.
@@ -8,7 +8,7 @@ import CatalogCard from './CatalogCard.astro';
 import Pager from './Pager.astro';
 import { facetIcon } from './facet-icons.ts';
 import { paginate, type FilterGroup, type ProductItem } from '../../server/products.ts';
-import type { Section } from '../../server/sections.ts';
+import { catalogPath, type Section } from '../../server/sections.ts';
 import type { Settings } from '../../server/settings.ts';
 
 interface Props {
@@ -20,6 +20,7 @@ interface Props {
 }
 const { site, products, items, groups, settings } = Astro.props;
 const heading = site.heading || site.name;
+const root = catalogPath(site);
 const phoneHref = 'tel:' + settings.phone_main.replace(/[^\d+]/g, '');
 const waHref = 'https://wa.me/' + settings.panel_whatsapp.replace(/\D/g, '');
 const filtered = groups.some((g) => g.values.some((v) => v.checked));
@@ -51,10 +52,10 @@ const accusative = (name: string) =>
       <div class="cat-grid" id="catalog">
         <details class="cat-filters-box" open data-filters-box>
           <summary>Фильтры{filtered && ' (выбраны)'}</summary>
-          <form class="cat-filters" method="get" action="/" data-filters>
+          <form class="cat-filters" method="get" action={root} data-filters>
             <div class="cat-filters-head">
               <span class="cat-filters-title">Фильтры</span>
-              {filtered && <a class="cat-reset" href="/">Очистить фильтр</a>}
+              {filtered && <a class="cat-reset" href={root}>Очистить фильтр</a>}
             </div>
             {groups.map((g) => (
               <details class="cat-filter" open={g.values.some((v) => v.checked)}>
@@ -84,9 +85,9 @@ const accusative = (name: string) =>
               {slice.map((p) => <CatalogCard product={p} showBrand={showBrand} />)}
             </div>
           ) : (
-            <p class="psub">Нет товаров с такими параметрами. <a href="/">Очистить фильтр</a></p>
+            <p class="psub">Нет товаров с такими параметрами. <a href={root}>Очистить фильтр</a></p>
           )}
-          <Pager page={page} pages={pages} path="/" />
+          <Pager page={page} pages={pages} path={root} />
           <p class="cat-count">
             {pages > 1 ? `Показано ${from}–${to} из ${items.length} ${word(items.length)}` : `Показано ${items.length} из ${products.length} ${word(products.length)}`}
           </p>

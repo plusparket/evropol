@@ -1,10 +1,10 @@
 # Адрес сайта берётся из переменной SITE_ADDRESS (.env):
 #   http://localhost                     — локально, без HTTPS
 #   evropol.kg, www.evropol.kg     — на сервере; Caddy сам получит и продлит сертификаты Let's Encrypt
-# Сайты разделов — из переменной SECTION_SITES_ADDRESS. Это то же приложение: оно узнаёт раздел по адресу запроса
-# (поле «Адрес сайта» у раздела в админке).
+# Бывшие адреса сайтов разделов — из переменной SECTION_SITES_ADDRESS. Приложение переадресует их на каталог
+# раздела на главном сайте (vinyl.localhost → localhost/vinyl, src/middleware.ts).
 #   http://*.localhost                   — локально: vinyl.localhost, carpet.localhost …
-#   vinyl.evropol.kg, carpet.evropol.kg — на сервере, каждый адрес через запятую
+#   vinyl.evropol.kg, carpet.evropol.kg — на сервере, если эти адреса уже публиковались
 
 {$SITE_ADDRESS}, {$SECTION_SITES_ADDRESS:http://*.localhost} {
 	encode zstd gzip

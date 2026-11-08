@@ -1,11 +1,11 @@
-// Сайты разделов: первичная настройка и фото товаров.
+// Каталоги разделов: первичная настройка и фото товаров.
 //
-// setupSectionSites() — при запуске, один раз для каждого раздела из SITES: включает сайт раздела по адресу
-// <раздел>.<адрес главного сайта> (на компьютере — vinyl.localhost, laminate.localhost), добавляет разделу бренды
+// setupSectionSites() — при запуске, один раз для каждого раздела из SITES: включает каталог раздела (/vinyl,
+// /laminate; в site_host пишется адрес бывшего сайта раздела vinyl.localhost для переадресации), добавляет разделу бренды
 // и товары из seed/catalog/<раздел>.json, если товаров в разделе ещё нет. Отметка в настройках: section_site:<раздел>.
 // При каждом запуске: если в файле выросло поле version, добавляет новые товары, обновляет отметку «со склада»
 // и ссылки на фото у товаров, у которых фото ещё нет (upgradeCatalog, отметка catalog_version:<раздел>).
-// Адрес и цвет потом меняются в админке: «Разделы» → раздел → «Сайт раздела».
+// Цвет и вид каталога потом меняются в админке: «Разделы» → раздел → «Каталог раздела».
 //
 // importProductPhotos() — при каждом запуске, в фоне: скачивает фото производителя для товаров, у которых фото
 // ещё нет. Нет интернета — попробует при следующем запуске. Фото, загруженные в админке, не трогает.
@@ -53,7 +53,7 @@ type SeedCatalog = {
   refreshProducts?: boolean;
 };
 
-/** Адрес сайта раздела по адресу главного сайта: localhost → vinyl.localhost, evropol.kg → vinyl.evropol.kg */
+/** Адрес бывшего сайта раздела (для переадресации на каталог): localhost → vinyl.localhost, evropol.kg → vinyl.evropol.kg */
 export function defaultSiteHost(slug: string): string {
   const main = normalizeHost(process.env.SITE_URL || 'localhost').replace(/^www\./, '');
   return `${slug}.${main}`;
@@ -80,7 +80,7 @@ export async function setupSectionSites(): Promise<string[]> {
       const on = await sql`
         UPDATE sections SET site_host = ${host}, updated_at = now()
         WHERE id = ${section.id} AND site_host = '' AND NOT EXISTS (SELECT 1 FROM sections WHERE lower(site_host) = ${host})`;
-      if (on.count) log.push(`«${section.name}»: сайт раздела http://${host}`);
+      if (on.count) log.push(`«${section.name}»: каталог раздела /${slug}`);
       const added = await loadCatalog(section.id, slug);
       if (added) log.push(`«${section.name}»: товаров ${added}`);
       // Если товары в разделе уже были, загрузка пропущена: недостающие добавит новая версия каталога
