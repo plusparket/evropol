@@ -1,0 +1,190 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "entityone";
+  src: url("/themes/custom/entityone/_sass-essentials/iconfonts/dist/entityone.eot");
+  src: url("/themes/custom/entityone/_sass-essentials/iconfonts/dist/entityone.eot?#iefix") format("eot"), url("/themes/custom/entityone/_sass-essentials/iconfonts/dist/entityone.woff2") format("woff2"), url("/themes/custom/entityone/_sass-essentials/iconfonts/dist/entityone.woff") format("woff"), url("/themes/custom/entityone/_sass-essentials/iconfonts/dist/entityone.ttf") format("truetype"), url("/themes/custom/entityone/_sass-essentials/iconfonts/dist/entityone.svg#entityone") format("svg");
+}
+
+.icon-arrow-down:before, .icon-arrow-left:before, .icon-arrow-right:before, .icon-chevron-down-light:before, .icon-chevron-down-solid:before, .icon-close:before, .icon-external-link:before, .icon-facebook:before, .icon-instagram:before, .icon-linkedin:before, .icon-pinterest:before, .icon-play:before, .icon-plus:before, .icon-samples:before, .icon-twitter:before, .icon-vimeo:before, .icon-volume-slash:before, .icon-volume-up:before {
+  font-family: "entityone";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+.icon-arrow-down:before {
+  content: "";
+}
+
+.icon-arrow-left:before {
+  content: "";
+}
+
+.icon-arrow-right:before {
+  content: "";
+}
+
+.icon-chevron-down-light:before {
+  content: "";
+}
+
+.icon-chevron-down-solid:before {
+  content: "";
+}
+
+.icon-close:before {
+  content: "";
+}
+
+.icon-external-link:before {
+  content: "";
+}
+
+.icon-facebook:before {
+  content: "";
+}
+
+.icon-instagram:before {
+  content: "";
+}
+
+.icon-linkedin:before {
+  content: "";
+}
+
+.icon-pinterest:before {
+  content: "";
+}
+
+.icon-play:before {
+  content: "";
+}
+
+.icon-plus:before {
+  content: "";
+}
+
+.icon-samples:before {
+  content: "";
+}
+
+.icon-twitter:before {
+  content: "";
+}
+
+.icon-vimeo:before {
+  content: "";
+}
+
+.icon-volume-slash:before {
+  content: "";
+}
+
+.icon-volume-up:before {
+  content: "";
+}
+
+.block--text-one-col,
+.paragraph--text-one-col {
+  font-size: 1.75rem;
+}
+
+@media (max-width: 1440px) {
+  .block--text-one-col,
+  .paragraph--text-one-col {
+    font-size: calc(1.15rem + 0.66667vw) ;
+  }
+}
+
+@media (min-width: 1440px) {
+  .block--text-one-col,
+  .paragraph--text-one-col {
+    font-size: 28px;
+    font-size: 1.96vw;
+    font-size: 1.96vmax;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .block--text-one-col,
+  .paragraph--text-one-col {
+    width: 66.66667%;
+  }
+}
+
+.offset-container .block--text-one-col {
+  font-size: 1rem;
+}
+
+@media (min-width: 1440px) {
+  .offset-container .block--text-one-col {
+    font-size: 16px;
+    font-size: 1.12vw;
+    font-size: 1.12vmax;
+  }
+}
+
+.offset-container .block--text-one-col .layout__item > .indent--inner > h2 {
+  font-size: 1.5625rem;
+  word-break: break-word;
+}
+
+@media (max-width: 1440px) {
+  .offset-container .block--text-one-col .layout__item > .indent--inner > h2 {
+    font-size: calc(1.1125rem + 0.5vw) ;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .offset-container .block--text-one-col .layout__item > .indent--inner > h2 {
+    font-size: 1.75rem;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1440px) {
+  .offset-container .block--text-one-col .layout__item > .indent--inner > h2 {
+    font-size: calc(1.15rem + 0.66667vw) ;
+  }
+}
+
+@media all and (min-width: 768px) and (min-width: 1440px) {
+  .offset-container .block--text-one-col .layout__item > .indent--inner > h2 {
+    font-size: 28px;
+    font-size: 1.96vw;
+    font-size: 1.96vmax;
+  }
+}
+
+@media all and (min-width: 1440px) {
+  .offset-container .block--text-one-col .layout__item > .indent--inner > h2 {
+    font-size: 2rem;
+  }
+}
+
+@media all and (min-width: 1440px) and (max-width: 1440px) {
+  .offset-container .block--text-one-col .layout__item > .indent--inner > h2 {
+    font-size: calc(1.2rem + 0.88889vw) ;
+  }
+}
+
+@media all and (min-width: 1440px) and (min-width: 1440px) {
+  .offset-container .block--text-one-col .layout__item > .indent--inner > h2 {
+    font-size: 32px;
+    font-size: 2.24vw;
+    font-size: 2.24vmax;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .offset-container .block--text-one-col {
+    width: auto;
+  }
+  .offset-container .block--text-one-col .layout__item {
+    margin-left: 35%;
+    width: 65%;
+  }
+}

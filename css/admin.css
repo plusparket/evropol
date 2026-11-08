@@ -1,0 +1,25 @@
+/* Keep the Gin admin title readable when the top bar contains local tasks. */
+.gin--navigation-top-bar .region-sticky__items__inner .block-page-title-block .page-title {
+  max-width: none;
+}
+
+/* Primary local tasks are presented as pills by Gin; remove inherited
+ * outlines and borders that make the tabs look like separate boxes. */
+.gin--navigation-top-bar .tabs--primary .tabs__tab,
+.gin--navigation-top-bar .tabs--primary .tabs__link {
+  border: 0;
+  box-shadow: none;
+}
+
+.gin--navigation-top-bar .translation-entity-all-languages {
+  display: none;
+}
+
+html [data-drupal-admin-styles].gin--navigation-top-bar .toolbar-badge {
+  display: none !important;
+}
+
+/* Keep Preview available in the form without adding it to the Case study header. */
+.gin--navigation-top-bar .modulyss-case-study-preview {
+  display: none;
+}

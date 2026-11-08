@@ -1,0 +1,29 @@
+div.global-texts {
+  position: relative;
+}
+
+div.global-texts a.edit {
+  position: absolute;
+  display: none;
+  width: 26px !important;
+  height: 26px !important;
+  text-indent: -9999px;
+  background-image: url(/core/themes/stable/images/core/icons/bebebe/pencil.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 16px 16px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 13px;
+  background-color: #fff;
+  background-attachment: scroll;
+  right: 0;
+}
+
+div.global-texts a.edit.active {
+  display: block;
+}
+
+div.global-texts a.edit.active:hover {
+  background-image: url(/core/themes/stable/images/core/icons/787878/pencil.svg);
+}
