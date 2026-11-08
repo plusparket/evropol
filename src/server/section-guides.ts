@@ -1,4 +1,5 @@
-// «Укладка и уход» в каталоге раздела: две текстовые страницы, /linoleum/ukladka и /linoleum/uhod.
+// «Укладка и уход» в каталоге раздела: две текстовые страницы, /linoleum/ukladka и /linoleum/uhod
+// (так же /carpet-tiles/ukladka и /carpet-tiles/uhod).
 // Тексты хранятся как обычные страницы (админка → «Страницы») с адресом <раздел>-<подраздел>: linoleum-ukladka,
 // linoleum-uhod. Показываются по адресу внутри каталога, а в шапке каталога пункт «Укладка и уход» с двумя
 // подразделами встаёт вместо «Новости и события». Нет страницы или она скрыта — нет и пункта меню.
@@ -39,29 +40,43 @@ export function pagePath(slug: string, sections: Pick<Section, 'slug' | 'siteHos
   return `/${slug}`;
 }
 
-/** Стартовые страницы (seed/pages/<адрес>.html, заголовок — в первой строке <!-- title: … -->) */
-const SEEDED: { slug: string; seoDescription: string }[] = [
-  { slug: 'linoleum-ukladka', seoDescription: 'Как уложить линолеум на клей: инструменты, пять шагов укладки, сварка швов и первые 72 часа после укладки.' },
-  { slug: 'linoleum-uhod', seoDescription: 'Уход за линолеумом: ежедневная уборка, какие средства подходят и какие нет, коврики у входа и защитный слой PU.' },
+/** Стартовые страницы (seed/pages/<адрес>.html, заголовок — в первой строке <!-- title: … -->).
+ *  Каждая группа создаётся один раз, по своей отметке в settings: удалённую в админке страницу запуск не вернёт. */
+const SEEDED: { flag: string; pages: { slug: string; seoDescription: string }[] }[] = [
+  {
+    flag: 'guides_linoleum_2026_11_08',
+    pages: [
+      { slug: 'linoleum-ukladka', seoDescription: 'Как уложить линолеум на клей: инструменты, пять шагов укладки, сварка швов и первые 72 часа после укладки.' },
+      { slug: 'linoleum-uhod', seoDescription: 'Уход за линолеумом: ежедневная уборка, какие средства подходят и какие нет, коврики у входа и защитный слой PU.' },
+    ],
+  },
+  {
+    flag: 'guides_carpet_tiles_2026_11_08',
+    pages: [
+      { slug: 'carpet-tiles-ukladka', seoDescription: 'Как уложить ковровую плитку: подготовка основания, разметка, резка, фиксатор вместо клея и шесть способов укладки.' },
+      { slug: 'carpet-tiles-uhod', seoDescription: 'Уход за ковровой плиткой: пылесос, как вывести пятна на водной и масляной основе, глубокая чистка два-три раза в год.' },
+    ],
+  },
 ];
-const FLAG = 'guides_linoleum_2026_11_08';
 
-/** Один раз создаёт страницы «Укладка» и «Уход» для линолеума. Возвращает список изменений для журнала запуска. */
+/** Один раз создаёт страницы «Укладка» и «Уход» разделов. Возвращает список изменений для журнала запуска. */
 export async function upgradeGuides(): Promise<string[]> {
-  const [done] = await sql`SELECT 1 FROM settings WHERE key = ${FLAG}`;
-  if (done) return [];
   const log: string[] = [];
-  await sql.begin(async (tx) => {
-    for (const s of SEEDED) {
-      const raw = (await readFile(path.resolve(process.cwd(), 'seed', 'pages', `${s.slug}.html`), 'utf8')).trim();
-      const m = raw.match(/^<!--\s*title:\s*(.+?)\s*-->\s*/);
-      const title = m?.[1] ?? s.slug;
-      const html = m ? raw.slice(m[0].length) : raw;
-      const res = await tx`INSERT INTO pages (slug, title, content, seo_description, is_published)
-                           VALUES (${s.slug}, ${title}, ${html}, ${s.seoDescription}, true) ON CONFLICT (slug) DO NOTHING`;
-      if (res.count) log.push(`страница «${title}»`);
-    }
-    await tx`INSERT INTO settings (key, value) VALUES (${FLAG}, '1') ON CONFLICT (key) DO NOTHING`;
-  });
+  for (const group of SEEDED) {
+    const [done] = await sql`SELECT 1 FROM settings WHERE key = ${group.flag}`;
+    if (done) continue;
+    await sql.begin(async (tx) => {
+      for (const s of group.pages) {
+        const raw = (await readFile(path.resolve(process.cwd(), 'seed', 'pages', `${s.slug}.html`), 'utf8')).trim();
+        const m = raw.match(/^<!--\s*title:\s*(.+?)\s*-->\s*/);
+        const title = m?.[1] ?? s.slug;
+        const html = m ? raw.slice(m[0].length) : raw;
+        const res = await tx`INSERT INTO pages (slug, title, content, seo_description, is_published)
+                             VALUES (${s.slug}, ${title}, ${html}, ${s.seoDescription}, true) ON CONFLICT (slug) DO NOTHING`;
+        if (res.count) log.push(`страница «${title}»`);
+      }
+      await tx`INSERT INTO settings (key, value) VALUES (${group.flag}, '1') ON CONFLICT (key) DO NOTHING`;
+    });
+  }
   return log;
 }
