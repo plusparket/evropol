@@ -314,6 +314,57 @@ h1, h2, h3 { font-weight: 500; }
   .gd h2 { font-size: 22px; }
   .gd h3 { margin-top: 18px; font-size: 17px; }
 }
+/* «Укладка» по шагам (GuideView, текст страницы внутри <div class="gs">): справа подменю «Укладка / Уход»; слева
+ * заголовок, справа цветная карточка шага 1; светлая полоса с тремя колонками шага 2; пары карточек; полоса «Направление
+ * ворса» со схемами 2×2 и плашкой-предупреждением; блок «Давайте обсудим». Картинки в карточках внизу справа и чуть
+ * выходят за край. Цвета сайта: зелёный вместо горчичного. На телефоне всё в одну колонку. */
+.gs { --gs-c: var(--g, #006338); --gs-soft: #8fb39b; color: var(--text); font-size: 15px; line-height: 1.6; }
+.gs p { margin: 0 0 14px; }
+.gs b { font-weight: 600; }
+.gs h1 { margin: 0 0 30px; max-width: 300px; color: var(--gs-c); font: 600 26px/1.2 var(--font); }
+.gs h2 { display: flex; align-items: center; gap: 10px; margin: 0 0 16px; color: var(--ink); font: 600 17px/1.3 var(--font); }
+.gs h3 { margin: 0 0 14px; color: var(--gs-c); font: 600 17px/1.3 var(--font); }
+.gs-num { flex: none; display: inline-grid; place-items: center; width: 23px; height: 23px; border-radius: 50%; background: var(--gs-c); color: #fff; font-size: 14px; line-height: 1; }
+.gs-sub { display: flex; flex-direction: column; align-items: flex-end; gap: 20px; margin: 10px 0 40px; }
+.gs-sub a { color: var(--muted); font-size: 15px; }
+.gs-sub a.active, .gs-sub a:hover { color: var(--gs-c); }
+.gs-top, .gs-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; margin: 0 0 84px; }
+.gs-card { display: grid; grid-template-columns: 1fr 34%; gap: 16px; padding: 34px 24px 0; background: var(--gs-c); color: #fff; }
+.gs-card h2, .gs-card h3 { color: #fff; }
+.gs-card .gs-num { background: #fff; color: var(--gs-c); }
+.gs-card a { color: #fff; text-decoration: underline; }
+.gs-card-text { padding-bottom: 30px; }
+.gs-card img { display: block; align-self: end; width: 100%; height: auto; margin-bottom: -36px; }
+.gs-band { margin: 0 0 84px; padding: 34px 24px 0; background: var(--band); }
+.gs-band > h2 { margin-bottom: 50px; }
+.gs-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+.gs-cols > div { display: flex; flex-direction: column; }
+.gs-cols img { display: block; width: 100%; height: auto; margin: 40px 0 -30px; }
+.gs-band--pile { padding-bottom: 0; }
+.gs-pile { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; padding-bottom: 6px; }
+.gs-patterns { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 20px; margin: 4px 0 0; padding: 0; list-style: none; }
+.gs-patterns li { display: flex; align-items: center; gap: 22px; color: var(--ink); }
+.gs-patterns img { flex: none; width: 78px; height: 78px; }
+.gs-alert { position: relative; top: 70px; width: 50%; margin: -18px 0 0 -24px; padding: 30px 24px 22px; background: var(--gs-soft); color: #fff; }
+.gs-alert h3 { color: #fff; font-size: 15px; }
+.gs-band--pile + .gs-pair { margin-top: 140px; }
+.gs-talk { margin: 0 auto 10px; max-width: 1080px; padding: 40px 24px 44px; background: var(--gs-soft); color: #fff; text-align: center; }
+.gs-talk h2 { display: block; margin-bottom: 18px; color: #fff; font: 400 26px/1.2 var(--font); }
+.gs-talk p { margin-bottom: 30px; }
+.gs-talk a { color: #fff; }
+.gs-talk a::before { content: ''; display: inline-block; width: 36px; height: 2px; margin-right: 18px; background: #fff; vertical-align: middle; }
+@media (max-width: 800px) {
+  .gs-top, .gs-pair, .gs-cols, .gs-pile { grid-template-columns: 1fr; gap: 50px; }
+  .gs-pile { gap: 20px; }
+  .gs-sub { flex-direction: row; justify-content: flex-end; margin-bottom: 24px; }
+  .gs-top, .gs-pair, .gs-band { margin-bottom: 60px; }
+  .gs-card { grid-template-columns: 1fr; }
+  .gs-card img { width: 70%; justify-self: end; }
+  .gs-band { padding: 26px 16px 0; margin-left: -16px; margin-right: -16px; }
+  .gs-patterns { grid-template-columns: 1fr; }
+  .gs-alert { top: 40px; width: auto; margin: 10px -16px 0; padding: 24px 16px 18px; }
+  .gs-band--pile + .gs-pair { margin-top: 100px; }
+}
 .ppage-text table { width: 100%; margin: 0 0 18px; border-collapse: collapse; }
 .ppage-text td, .ppage-text th { padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
 

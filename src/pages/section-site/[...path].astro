@@ -132,8 +132,13 @@ const catalog = { color: site.siteColor, layout: site.siteLayout };
       canonicalPath={guide.url}
       jsonLd={breadcrumbJsonLd(base, [{ name: site.name, url: at() }, { name: guide.title, url: guide.url }])}
     >
-      {guide.content.trimStart().startsWith('<div class="gd"') ? (
-        <GuideView title={guide.title} html={fillPlaceholders(guide.content, settings)} parents={[{ name: site.name, url: at() }]} />
+      {/^<div class="g[ds]"/.test(guide.content.trimStart()) ? (
+        <GuideView
+          title={guide.title}
+          html={fillPlaceholders(guide.content, settings)}
+          parents={[{ name: site.name, url: at() }]}
+          ownTitle={guide.content.trimStart().startsWith('<div class="gs"')}
+        />
       ) : (
         <PageView title={guide.title} html={fillPlaceholders(guide.content, settings)} parents={[{ name: site.name, url: at() }]} />
       )}
