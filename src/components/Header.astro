@@ -42,7 +42,7 @@ const here = (l: Link) =>
         links.map((l) =>
           l.products ? (
             <div class="ph-drop">
-              <a href={l.url} class:list={{ active: here(l) }}>{l.label}</a>
+              <button type="button" class:list={['ph-drop-btn', { active: here(l) }]} aria-haspopup="true" aria-expanded="false" data-drop>{l.label}</button>
               <div class="ph-drop-list">
                 {sections.map((s) => <a href={sectionHref(s)} class:list={{ active: path === sectionUrl(s) }}>{s.name}</a>)}
               </div>
