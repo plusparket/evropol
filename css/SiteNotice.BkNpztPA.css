@@ -1,0 +1,1 @@
+.truncate-p>p{text-overflow:ellipsis;white-space:nowrap;font-size:10px;line-height:1em;overflow:hidden}@media (width>=1024px){.truncate-p>p{font-size:12px}}.usp-text{opacity:0;transition:opacity .5s}.usp-text.active{opacity:1}

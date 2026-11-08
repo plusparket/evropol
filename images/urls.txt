@@ -1,0 +1,16 @@
+filename	original_url	alt
+install-01-kahrs-sabiano.webp	https://a.storyblok.com/f/336347/1564x2500/99ccb40b36/kahrs-sabiano.jpg/m/1534x0/filters:format(webp):quality(70)	
+install-02-originaljpg-schwarzwald-clw-172.webp	https://a.storyblok.com/f/336347/1785x3000/1b4a6bb5cf/originaljpg-schwarzwald-clw-172.jpg/m/1534x0/filters:format(webp):quality(70)	
+install-03-originaljpg-taiga-clw-172.webp	https://a.storyblok.com/f/336347/2500x1668/b0b6fba718/originaljpg-taiga-clw-172.jpg/m/2520x0/filters:format(webp):quality(70)	
+maintain-01-originaljpg-kahrs-amber-ltclw2412-228-int01.webp	https://a.storyblok.com/f/336347/1552x2500/8ad0af3c6f/originaljpg-kahrs-amber-ltclw2412-228-int01.jpg/m/1534x0/filters:format(webp):quality(70)	
+maintain-02-grossglockner_cls_ltcls3002-300_int01.webp	https://a.storyblok.com/f/336347/3543x5011/cf823f6b4d/grossglockner_cls_ltcls3002-300_int01.jpg/m/2520x0/filters:format(webp):quality(70)	Modern entryway with tall wooden doors, concrete walls, and a view of a small garden outside. A round mirror hangs on the left wall.
+maintain-03-originaljpg-kahrs-fusion-plank-241-ltclw2502-241-int01-digit.webp	https://a.storyblok.com/f/336347/1417x2004/bf277e9e61/originaljpg-kahrs-fusion-plank-241-ltclw2502-241-int01-digital-srgb.jpg/m/2520x0/filters:format(webp):quality(70)	
+maintain-04-originaljpg-kahrs-irati-ltclw2301-218-int01.webp	https://a.storyblok.com/f/336347/5500x4800/c078c7fff5/originaljpg-kahrs-irati-ltclw2301-218-int01.jpg/m/2520x0/filters:format(webp):quality(70)	
+maintain-05-97a05440-29c2-4eed-b1d7-69be6ab9e559.webp	https://kahrs.cdn-norce.tech/97a05440-29c2-4eed-b1d7-69be6ab9e559?w=1076&q=75&f=webp	KÄHRS CLEANER CONCENTRATE
+maintain-06-move-left-right.svg	https://www.kahrs.com/icons/move-left-right.svg	
+maintain-07-9d7fc886-70ad-4881-b239-5e0d24a59b3b.webp	https://kahrs.cdn-norce.tech/9d7fc886-70ad-4881-b239-5e0d24a59b3b.jpeg?w=1076&q=75&f=webp	KÄHRS SPRAY CLEANER
+maintain-08-1ec924c8-8a32-49e7-a1ce-3d9ee78e7774.webp	https://kahrs.cdn-norce.tech/1ec924c8-8a32-49e7-a1ce-3d9ee78e7774?w=1076&q=75&f=webp	KÄHRS SPRAY MOP KIT
+maintain-09-32a7ed31-84af-4987-b85a-0e0778f3e2fd.webp	https://kahrs.cdn-norce.tech/32a7ed31-84af-4987-b85a-0e0778f3e2fd?w=1076&q=75&f=webp	KÄHRS MOP PAD
+maintain-10-129b235e-be4b-44e6-9fac-ce351e7fd503.webp	https://kahrs.cdn-norce.tech/129b235e-be4b-44e6-9fac-ce351e7fd503?w=1076&q=75&f=webp	KÄHRS REPAIR KIT - LACQUERED AND VINYL FLOORS
+maintain-11-744c9b22-90e5-4348-8669-195d12ff2865.webp	https://kahrs.cdn-norce.tech/744c9b22-90e5-4348-8669-195d12ff2865?w=1076&q=75&f=webp	KÄHRS SPRAY MOP KIT CLEANER
+maintain-12-originaljpg-kahrs-perception-chevron-145-ltccw2501-145-int01.jpg	https://a.storyblok.com/f/336347/1770x2004/3eb332a4c7/originaljpg-kahrs-perception-chevron-145-ltccw2501-145-int01-print-srgb.jpg	
