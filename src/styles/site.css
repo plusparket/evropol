@@ -38,6 +38,8 @@ html { -webkit-text-size-adjust: 100%; }
 body { margin: 0; background: var(--bg); color: var(--text); font: 400 16px/1.6 var(--font); letter-spacing: .45px; }
 body.fixed { overflow: hidden; }
 img { max-width: 100%; }
+/* Кнопки и поля ввода по умолчанию берут системный шрифт: везде Nunito, как в остальном тексте */
+button, input, select, textarea { font-family: inherit; letter-spacing: inherit; }
 a { color: var(--accent); text-decoration: none; transition: color .15s, background .15s; }
 b, strong { font-weight: 600; }
 h1, h2, h3 { font-weight: 700; }
@@ -356,7 +358,7 @@ h1, h2, h3 { font-weight: 700; }
 .gd-acc details { position: relative; border-radius: 28px; background: var(--band); }
 .gd-acc summary { display: flex; align-items: center; gap: 18px; padding: 14px 24px 14px 18px; cursor: pointer; list-style: none; }
 .gd-acc summary::-webkit-details-marker { display: none; }
-.gd-acc-i { display: grid; flex: none; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--g, var(--accent)); color: #fff; font: 700 14px/1 Georgia, serif; }
+.gd-acc-i { display: grid; flex: none; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--g, var(--accent)); color: #fff; font: 700 14px/1 var(--font); }
 .gd-acc-t { flex: 1; color: var(--text); font-size: 16px; text-transform: uppercase; letter-spacing: .02em; }
 .gd-acc-b { flex: none; padding: 5px 16px; border-radius: 14px; background: var(--g, var(--accent)); color: #fff; font-size: 13px; line-height: 1.2; white-space: nowrap; }
 .gd-acc-b::before { content: '⌄  Подробнее'; }
