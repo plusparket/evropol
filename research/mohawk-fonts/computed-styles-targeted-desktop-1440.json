@@ -1,0 +1,406 @@
+{
+  "headerNavTop": [
+    {
+      "el": "span.label",
+      "text": "Shop",
+      "visible": true,
+      "fontFamily": "Nunito, Helvetica, sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "700",
+      "lineHeight": "24px",
+      "letterSpacing": "0.45px",
+      "textTransform": "capitalize",
+      "color": "rgb(21, 21, 21)"
+    }
+  ],
+  "headerSearch": [],
+  "breadcrumbHome": [
+    {
+      "el": "a",
+      "text": "Home",
+      "visible": true,
+      "fontFamily": "Nunito, Helvetica, sans-serif",
+      "fontSize": "12px",
+      "fontWeight": "300",
+      "lineHeight": "18px",
+      "letterSpacing": "0.45px",
+      "textTransform": "capitalize",
+      "color": "rgb(21, 21, 21)"
+    }
+  ],
+  "breadcrumbCurrent": [],
+  "findRetailer": [
+    {
+      "el": "span.search-heading.no-text-transform",
+      "text": "Find a Local Retailer",
+      "visible": true,
+      "fontFamily": "Nunito, Helvetica, sans-serif",
+      "fontSize": "12px",
+      "fontWeight": "700",
+      "lineHeight": "18px",
+      "letterSpacing": "0.45px",
+      "textTransform": "none",
+      "color": "rgb(21, 21, 21)"
+    }
+  ],
+  "filterBy": [
+    {
+      "el": "span.fill",
+      "text": "Filter By",
+      "visible": true,
+      "fontFamily": "Nunito, Helvetica, sans-serif",
+      "fontSize": "20px",
+      "fontWeight": "500",
+      "lineHeight": "30px",
+      "letterSpacing": "0.45px",
+      "textTransform": "none",
+      "color": "rgb(21, 21, 21)"
+    }
+  ],
+  "filterChip": [
+    {
+      "el": "span.chips-item__title",
+      "text": "Resilient / Vinyl",
+      "visible": true,
+      "fontFamily": "Nunito, Helvetica, sans-serif",
+      "fontSize": "15px",
+      "fontWeight": "600",
+      "lineHeight": "22.5px",
+      "letterSpacing": "0.45px",
+      "textTransform": "none",
+      "color": "rgb(84, 86, 91)"
+    },
+    {
+      "el": "label.mdc-label",
+      "text": "Resilient / Vinyl",
+      "visible": true,
+      "fontFamily": "Nunito, Helvetica, sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "500",
+      "lineHeight": "18px",
+      "letterSpacing": "0.45px",
+      "textTransform": "none",
+      "color": "rgb(74, 74, 74)"
+    }
+  ],
+  "clearAll": [
+    {
+      "el": "div.clear-all-chip",
+      "text": "Clear All",
+      "visible": true,
+      "fontFamily": "Nunito, Helvetica, sans-serif",
+      "fontSize": "15px",
+      "fontWeight": "700",
+      "lineHeight": "16px",
+      "letterSpacing": "0.45px",
+      "textTransform": "none",
+      "color": "rgb(206, 14, 45)"
+    }
+  ],
+  "expandAll": [
+    {
+      "el": "button.expand-collapse-buttons",
+      "text": "EXPAND ALL FILTERS",
+      "visible": true,
+      "fontFamily": "Nunito, Helvetica, sans-serif",
+      "fontSize": "13px",
+      "fontWeight": "700",
+      "lineHeight": "19.5px",
+      "letterSpacing": "0.45px",
+      "textTransform": "uppercase",
+      "color": "rgb(0, 0, 0)"
+    }
+  ],
+  "filterGroupTitles": [
+    {
+      "el": "mat-panel-title.mat-expansion-panel-header-title",
+      "text": "Flooring Type",
+      "visible": true,
+      "fontFamily": "Nunito, Helvetica, sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "500",
+      "lineHeight": "18px",
+      "letterSpacing": "0.45px",
+      "textTransform": "none",
+      "color": "rgb(74, 74, 74)"
+    },
+    {
+      "el": "span.",
+      "text": "Color",
+      "visible": true,
+      "fontFamily": "Nunito, Helvetica, sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "500",
+      "lineHeight": "15px",
+      "letterSpacing": "0.45px",
+      "textTransform": "none",
+      "color": "rgb(21, 21, 21)"
+    },
+    {
+      "el": "th.bgcolor",
+      "text": "Look",
+      "visible": false,
+      "fontFamily": "Nunito, Helvetica, sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "700",
+      "lineHeight": "19px",
+      "letterSpacing": "0.45px",
+      "textTransform": "none",
+      "color": "rgb(21, 21, 21)"
+    }
+  ],
+  "resultCount": [
+    {
+      "el": "div.showresult",
+      "text": "52 Results",
+      "visible": true,
+      "fontFamily": "Nunito, Helvetica, sans-serif",
+      "fontSize": "17px",
+      "fontWeight": "500",
+      "lineHeight": "25.5px",
+      "letterSpacing": "0.45px",
+      "textTransform": "none",
+      "color": "rgb(21, 21, 21)"
+    }
+  ],
+  "sort": [
+    {
+      "el": "span.sort-label",
+      "text": "A-Z",
+      "visible": true,
+      "fontFamily": "Nunito, Helvetica, sans-serif",
+      "fontSize": "17px",
+      "fontWeight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "color": "rgb(21, 21, 21)"
+    }
+  ],
+  "cardCollection": [
+    {
+      "el": "label.mdc-label",
+      "text": "Mohawk Sheet Vinyl",
+      "visible": true,
+      "fontFamily": "Nunito, Helvetica, sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "500",
+      "lineHeight": "18px",
+      "letterSpacing": "0.45px",
+      "textTransform": "none",
+      "color": "rgb(74, 74, 74)"
+    },
+    {
+      "el": "span.",
+      "text": "Mohawk Sheet Vinyl",
+      "visible": true,
+      "fontFamily": "Nunito, Helvetica, sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "700",
+      "lineHeight": "15px",
+      "letterSpacing": "0.45px",
+      "textTransform": "none",
+      "color": "rgb(21, 21, 21)"
+    }
+  ],
+  "cardProductLine": [
+    {
+      "el": "p.selected-product-line.product_line",
+      "text": "|",
+      "visible": true,
+      "fontFamily": "Nunito, \"Helvetica Neue\", sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "normal",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "color": "rgb(21, 21, 21)"
+    },
+    {
+      "el": "span.",
+      "text": "|",
+      "visible": true,
+      "fontFamily": "Nunito, Helvetica, sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "500",
+      "lineHeight": "15px",
+      "letterSpacing": "0.45px",
+      "textTransform": "none",
+      "color": "rgb(21, 21, 21)"
+    }
+  ],
+  "cardColorLabel": [
+    {
+      "el": "mat-panel-title.mat-expansion-panel-header-title",
+      "text": "Color",
+      "visible": true,
+      "fontFamily": "Nunito, Helvetica, sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "500",
+      "lineHeight": "18px",
+      "letterSpacing": "0.45px",
+      "textTransform": "none",
+      "color": "rgb(74, 74, 74)"
+    },
+    {
+      "el": "span.",
+      "text": "Color",
+      "visible": true,
+      "fontFamily": "Nunito, Helvetica, sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "500",
+      "lineHeight": "15px",
+      "letterSpacing": "0.45px",
+      "textTransform": "none",
+      "color": "rgb(21, 21, 21)"
+    }
+  ],
+  "cardColorValue": [
+    {
+      "el": "span.",
+      "text": "Umber",
+      "visible": true,
+      "fontFamily": "Nunito, Helvetica, sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "500",
+      "lineHeight": "15px",
+      "letterSpacing": "0.45px",
+      "textTransform": "none",
+      "color": "rgb(21, 21, 21)"
+    }
+  ],
+  "cardColorsCount": [
+    {
+      "el": "span.",
+      "text": "4 colors",
+      "visible": true,
+      "fontFamily": "Nunito, Helvetica, sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "500",
+      "lineHeight": "15px",
+      "letterSpacing": "0.45px",
+      "textTransform": "none",
+      "color": "rgb(21, 21, 21)"
+    }
+  ],
+  "cardRating": [
+    {
+      "el": "div.bv_avgRating_component_container.notranslate",
+      "text": "5.0",
+      "visible": true,
+      "fontFamily": "Nunito, Helvetica, sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "lineHeight": "normal",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "color": "rgb(0, 0, 0)"
+    }
+  ],
+  "loadMore": [],
+  "footerTitles": [
+    {
+      "el": "p.footer__menu__title",
+      "text": "SHOP",
+      "visible": true,
+      "fontFamily": "Nunito, Helvetica, sans-serif",
+      "fontSize": "13px",
+      "fontWeight": "600",
+      "lineHeight": "19.5px",
+      "letterSpacing": "0.45px",
+      "textTransform": "none",
+      "color": "rgb(255, 255, 255)"
+    }
+  ],
+  "footerLinks": [
+    {
+      "el": "div.link-section",
+      "text": "Carpet",
+      "visible": true,
+      "fontFamily": "Nunito, Helvetica, sans-serif",
+      "fontSize": "12px",
+      "fontWeight": "300",
+      "lineHeight": "15px",
+      "letterSpacing": "0.45px",
+      "textTransform": "none",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "el": "a.",
+      "text": "Terms & Conditions",
+      "visible": true,
+      "fontFamily": "Nunito, Helvetica, sans-serif",
+      "fontSize": "12px",
+      "fontWeight": "300",
+      "lineHeight": "18px",
+      "letterSpacing": "0.45px",
+      "textTransform": "none",
+      "color": "rgb(255, 255, 255)"
+    }
+  ],
+  "footerSmall": [
+    {
+      "el": "p.",
+      "text": "Mohawk Industries © Copyright 2026. All Rights Reserved.",
+      "visible": true,
+      "fontFamily": "Nunito, Helvetica, sans-serif",
+      "fontSize": "12px",
+      "fontWeight": "300",
+      "lineHeight": "18px",
+      "letterSpacing": "0.45px",
+      "textTransform": "none",
+      "color": "rgb(255, 255, 255)"
+    }
+  ],
+  "newsletter": [
+    {
+      "el": "h3",
+      "text": "SUBSCRIBE TO OUR EMAIL",
+      "visible": true,
+      "fontFamily": "Nunito, Helvetica, sans-serif",
+      "fontSize": "13px",
+      "fontWeight": "600",
+      "lineHeight": "19.5px",
+      "letterSpacing": "0.45px",
+      "textTransform": "none",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "el": "p",
+      "text": "Get Mohawk Flooring design inspiration, decor trends & more!",
+      "visible": true,
+      "fontFamily": "Nunito, Helvetica, sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "300",
+      "lineHeight": "26px",
+      "letterSpacing": "0.45px",
+      "textTransform": "none",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "el": "span",
+      "text": "Subscribe",
+      "visible": true,
+      "fontFamily": "Nunito, Helvetica, sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "700",
+      "lineHeight": "21px",
+      "letterSpacing": "0.45px",
+      "textTransform": "uppercase",
+      "color": "rgb(255, 255, 255)"
+    }
+  ],
+  "filterOptionLabels": [
+    {
+      "el": "label.mdc-label",
+      "text": "Resilient / Vinyl",
+      "fontFamily": "Nunito, Helvetica, sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "500",
+      "lineHeight": "18px",
+      "letterSpacing": "0.45px",
+      "textTransform": "none",
+      "color": "rgb(74, 74, 74)"
+    }
+  ]
+}
