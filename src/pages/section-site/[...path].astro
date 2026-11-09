@@ -61,6 +61,12 @@ const { items, groups } = isHome && !withGroups
   : { items: [], groups: [] };
 // Товар на сайте с категориями: крошки по первой категории, «похожие» — из неё же
 const productPath = product && withGroups ? categoryPaths(tree, product.id)[0] : undefined;
+// Цвета коллекции для страницы товара (как в карточке каталога): те же товары раздела с той же коллекцией,
+// в порядке каталога, то есть товары со склада первыми. У сайтов с группами категорий (строительная химия) коллекций нет.
+const collectionOf = (p: { collection: string; facets: { label: string; value: string }[]; specs: { label: string; value: string }[] }) =>
+  p.collection || p.facets.find((x) => x.label === 'Коллекция')?.value || p.specs.find((x) => x.label === 'Коллекция')?.value || '';
+const productCollection = product && !withGroups ? collectionOf(product) : '';
+const colors = productCollection ? products.filter((p) => collectionOf(p) === productCollection).map((p) => ({ name: p.name, href: at(p.slug), image: p.images[0] ?? '', current: p.id === product!.id })) : [];
 const related = product ? (withGroups ? relatedInCategory(products, product, productPath?.at(-1)) : relatedProducts(products, product)) : [];
 const productCrumbs = withGroups
   ? [{ name: site.name, url: at() }, ...(productPath ?? []).map((c) => ({ name: c.name, url: at(c.slug) }))]
@@ -118,7 +124,7 @@ const siteCrumb = { name: site.name, url: at() };
       jsonLd={breadcrumbJsonLd(base, [...productCrumbs, { name: product.name, url: at(product.slug) }])}
       crumbs={[...productCrumbs, { name: product.name }]}
     >
-      <ProductView product={product} related={related} settings={settings} crumbs={productCrumbs} samples={!withGroups} />
+      <ProductView product={product} related={related} settings={settings} crumbs={productCrumbs} samples={!withGroups} colors={colors} />
     </SiteLayout>
   ) : catPath && cat ? (
     <SiteLayout
