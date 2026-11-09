@@ -15,8 +15,10 @@ interface Props {
   crumbs?: { name: string; url: string }[];
   /** Строка про образцы в офисе (у строительной химии её нет) */
   samples?: boolean;
+  /** Цвета коллекции (сам товар среди них), товары со склада первыми; меньше двух — блок не показывается */
+  colors?: { name: string; href: string; image: string; current: boolean }[];
 }
-const { product: p, related, settings, crumbs = [{ name: 'Каталог', url: '/#catalog' }], samples = true } = Astro.props;
+const { product: p, related, settings, crumbs = [{ name: 'Каталог', url: '/#catalog' }], samples = true, colors = [] } = Astro.props;
 const sub = [p.brand, p.collection].filter(Boolean).join(' · ');
 const phoneHref = 'tel:' + settings.phone_main.replace(/[^\d+]/g, '');
 const waNumber = settings.panel_whatsapp.replace(/\D/g, '');
@@ -55,6 +57,23 @@ const alt = [p.brand, p.collection, p.name].filter(Boolean).join(' ');
       {sub && <div class="pcard2-sub">{sub}</div>}
       <h1 class="pcat-title">{p.name}</h1>
       {p.sku && <div class="ss-sku">Артикул {p.sku}</div>}
+      {
+        colors.length > 1 && (
+          <div class="ss-colors">
+            <p class="ss-colors-title">Цвет: <b>{p.name}</b> <span>({colors.length})</span></p>
+            <ul class="ss-colors-list">
+              {colors.map((c) => (
+                <li>
+                  <a class:list={['ss-color', { active: c.current }]} href={c.href} title={c.name} aria-current={c.current ? 'page' : undefined}>
+                    {c.image ? <img src={uploadUrl(productThumb(c.image))} alt="" width="96" height="96" loading="lazy" /> : <span class="ss-color-noimg" />}
+                    <span class="ss-color-name">{c.name}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )
+      }
       {
         p.attributes.length > 0 && (
           <dl class="ss-attrs">
