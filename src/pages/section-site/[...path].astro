@@ -145,7 +145,7 @@ const siteCrumb = { name: site.name, url: at() };
       jsonLd={breadcrumbJsonLd(base, [{ name: site.name, url: at() }, { name: guide.title, url: guide.url }])}
       crumbs={[siteCrumb, { name: guide.title }]}
     >
-      {/^<div class="g[ds]"/.test(guide.content.trimStart()) ? (
+      {/^<div class="g[ds][" ]/.test(guide.content.trimStart()) ? (
         <GuideView
           title={guide.title}
           html={fillPlaceholders(guide.content, settings)}

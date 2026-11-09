@@ -12,8 +12,8 @@ interface Props {
   ownTitle?: boolean;
 }
 const { title, html, parents = [], ownTitle = false } = Astro.props;
-// Свой первый экран «фото + заголовок» (блок gd-hero) — заголовок уже в тексте страницы
-const hasHero = html.includes('class="gd-hero"');
+// Свой первый экран «фото + заголовок» (блок gd-hero) или свой заголовок gd-h1 (ковролин) — заголовок уже в тексте страницы
+const hasHero = html.includes('class="gd-hero"') || html.includes('class="gd-h1');
 ---
 
 <article class="gd-page">
