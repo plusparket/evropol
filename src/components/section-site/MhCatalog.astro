@@ -5,8 +5,12 @@
 // под фото ряд образцов цветов (нажатие меняет фото, название и ссылку карточки), название коллекции, цвет,
 // число цветов и толщина. При наведении на фото — кнопки «Подробнее» и «Спросить в WhatsApp».
 // Всё работает формой GET (?f=Цвет:Серый&sort=az&q=дуб), скрипт только применяет выбор сразу (section-site.ts).
+// Раздел с группами и категориями (строительная химия): товар — своя карточка без образцов цветов, фильтры — группы
+// с категориями внутри; страница категории (/adhesives/<категория>) — тот же каталог из товаров категории.
 import Pager from './Pager.astro';
-import { applyFilters, paginate, parseFilters, productThumb, type ProductItem } from '../../server/products.ts';
+import {
+  applyFilters, categoryPaths, paginate, parseFilters, productThumb, type CategoryNode, type ProductItem,
+} from '../../server/products.ts';
 import { catalogPath, type Section } from '../../server/sections.ts';
 import type { Settings } from '../../server/settings.ts';
 import { uploadUrl } from '../../server/uploads.ts';
@@ -16,11 +20,31 @@ interface Props {
   site: Section;
   products: ProductItem[];
   settings: Settings;
+  /** Группы и категории раздела (вид 'groups'): по ним строятся фильтры, карточка на каждый товар */
+  tree?: CategoryNode[];
+  /** Адрес списка: каталог раздела или страница категории */
+  root?: string;
+  /** Заголовок страницы (h1): название раздела или категории */
+  heading?: string;
 }
-const { site, products, settings } = Astro.props;
-const root = catalogPath(site);
+const { site, settings, tree } = Astro.props;
+const root = Astro.props.root ?? catalogPath(site);
 const params = Astro.url.searchParams;
-const heading = site.heading || site.name;
+const heading = Astro.props.heading ?? (site.heading || site.name);
+// Товары по одному (строительная химия): у них нет цветов, карточка на каждый товар
+const single = !!tree;
+// У раздела с категориями фильтры — группы категорий: «Клеи для паркета» → «Паркетные клеи», «Грунтовки» …
+const OTHER = 'Другое';
+const products = tree
+  ? Astro.props.products.map((p) => ({
+      ...p,
+      facets: [
+        ...p.facets,
+        ...categoryPaths(tree, p.id).map((path) => (path.length > 1 ? { label: path[0].name, value: path[1].name } : { label: OTHER, value: path[0].name })),
+      ],
+    }))
+  : Astro.props.products;
+const fact = (p: ProductItem, label: string) => p.facets.find((f) => f.label === label)?.value ?? p.specs.find((s) => s.label === label)?.value ?? '';
 
 // Поиск из шапки: по названию, коллекции и артикулу
 const q = (params.get('q') ?? '').trim();
@@ -29,16 +53,22 @@ const searched = needle
   ? products.filter((p) => [p.name, p.collection, p.sku].some((x) => x.toLowerCase().includes(needle)))
   : products;
 const chosen = parseFilters(params);
-const { items, groups } = applyFilters(searched, chosen, { sortValues: true });
+const filtered = applyFilters(searched, chosen, { sortValues: true });
+const { items } = filtered;
+// Группы категорий в порядке, как в админке
+const treeOrder = tree ? [...tree.filter((g) => g.children.length).map((g) => g.name), OTHER] : [];
+const groups = tree ? [...filtered.groups].sort((a, b) => treeOrder.indexOf(a.label) - treeOrder.indexOf(b.label)) : filtered.groups;
 
 // Карточка на коллекцию: цвета коллекции, прошедшие фильтр, в порядке каталога (товары со склада первыми)
-type Card = { key: string; title: string; variants: ProductItem[]; isNew: boolean; order: number };
+type Card = { key: string; title: string; variants: ProductItem[]; isNew: boolean; order: number; collection: boolean };
 const byKey = new Map<string, Card>();
 items.forEach((p, i) => {
-  const key = p.collection || p.name;
+  // Коллекция: поле товара, иначе характеристика «Коллекция» (ковровая плитка)
+  const collection = single ? '' : p.collection || fact(p, 'Коллекция');
+  const key = collection || `#${p.id}`;
   let card = byKey.get(key);
   if (!card) {
-    card = { key, title: (p.collection || p.name).replace(/\s*\/\s*/g, ' | '), variants: [], isNew: false, order: i };
+    card = { key, title: (collection || p.name).replace(/\s*\/\s*/g, ' | '), variants: [], isNew: false, order: i, collection: !!collection };
     byKey.set(key, card);
   }
   card.variants.push(p);
@@ -76,9 +106,27 @@ const chips = [
 ];
 const clearAll = sort ? `${root}?sort=${sort}` : root;
 
-const countText = `${cards.length} ${pluralRu(cards.length, ['коллекция', 'коллекции', 'коллекций'])}`;
+// «31 коллекция», у товаров без коллекций — «91 товар»
+const allCollections = cards.every((c) => c.collection);
+const countText = allCollections
+  ? `${cards.length} ${pluralRu(cards.length, ['коллекция', 'коллекции', 'коллекций'])}`
+  : `${items.length} ${pluralRu(items.length, ['товар', 'товара', 'товаров'])}`;
 const colorsText = (n: number) => `${n} ${pluralRu(n, ['цвет', 'цвета', 'цветов'])}`;
-const fact = (p: ProductItem, label: string) => p.facets.find((f) => f.label === label)?.value ?? p.specs.find((s) => s.label === label)?.value ?? '';
+// Строка под цветом: две главные характеристики покрытия (толщина, формат или ширина рулона, класс)
+const META = [['Общая толщина', 'Толщина'], ['Размер плитки', 'Формат', 'Ширина рулона'], ['Класс нагрузки', 'Класс использования'], ['Высота ворса']];
+const metaText = (p: ProductItem) =>
+  META.map((labels) => {
+    const label = labels.find((l) => fact(p, l));
+    if (!label) return '';
+    // «6,3 мм (битумная подложка), 8,4 мм (войлочная)» → «6,3 мм»
+    const v = fact(p, label).split(' (')[0].split(', ')[0];
+    return label.startsWith('Класс') ? `класс ${v}` : v;
+  })
+    .filter(Boolean)
+    .slice(0, 2)
+    .join(', ');
+// Категория товара для карточки строительной химии
+const categoryOf = (p: ProductItem) => (tree ? categoryPaths(tree, p.id)[0]?.at(-1)?.name ?? '' : '');
 const waNumber = settings.panel_whatsapp.replace(/\D/g, '');
 const waHref = (p: ProductItem) =>
   waNumber ? `https://wa.me/${waNumber}?text=${encodeURIComponent(`Здравствуйте! Интересует ${site.name.toLowerCase()}: ${[p.collection, p.name].filter(Boolean).join(', ')}.`)}` : '';
@@ -152,8 +200,7 @@ const img = (p: ProductItem) => (p.images[0] ? uploadUrl(productThumb(p.images[0
             {slice.map((c) => {
               const p = c.variants[0];
               const href = catalogPath(site, p.slug);
-              const thick = fact(p, 'Общая толщина');
-              const klass = fact(p, 'Класс нагрузки');
+              const meta = metaText(p);
               return (
                 <article class="mhc" data-mhc>
                   <div class="mhc-img">
@@ -166,39 +213,47 @@ const img = (p: ProductItem) => (p.images[0] ? uploadUrl(productThumb(p.images[0
                       {waNumber && <a class="mhc-btn" href={waHref(p)} target="_blank" rel="noopener" data-mhc-wa>Спросить в WhatsApp</a>}
                     </div>
                   </div>
-                  <div class="mhc-sw">
-                    <button type="button" class="mhc-nav mhc-nav--prev" data-sw="-1" aria-label="Предыдущие цвета" disabled>
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m14 6-6 6 6 6" /></svg>
-                    </button>
-                    <ul class="mhc-sw-list" data-sw-list>
-                      {c.variants.map((v, i) => (
-                        <li>
-                          <button
-                            type="button"
-                            class:list={['mhc-sw-item', { active: i === 0 }]}
-                            style={img(v) ? `background-image:url('${img(v)}')` : undefined}
-                            title={v.name}
-                            aria-label={`Цвет ${v.name}`}
-                            aria-pressed={i === 0 ? 'true' : 'false'}
-                            data-href={catalogPath(site, v.slug)}
-                            data-img={img(v)}
-                            data-name={v.name}
-                            data-wa={waHref(v)}
-                          />
-                        </li>
-                      ))}
-                    </ul>
-                    <button type="button" class="mhc-nav mhc-nav--next" data-sw="1" aria-label="Следующие цвета" disabled={c.variants.length <= 5}>
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m10 6 6 6-6 6" /></svg>
-                    </button>
-                  </div>
+                  {!single && (
+                    <div class="mhc-sw">
+                      <button type="button" class="mhc-nav mhc-nav--prev" data-sw="-1" aria-label="Предыдущие цвета" disabled>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m14 6-6 6 6 6" /></svg>
+                      </button>
+                      <ul class="mhc-sw-list" data-sw-list>
+                        {c.variants.map((v, i) => (
+                          <li>
+                            <button
+                              type="button"
+                              class:list={['mhc-sw-item', { active: i === 0 }]}
+                              style={img(v) ? `background-image:url('${img(v)}')` : undefined}
+                              title={v.name}
+                              aria-label={`Цвет ${v.name}`}
+                              aria-pressed={i === 0 ? 'true' : 'false'}
+                              data-href={catalogPath(site, v.slug)}
+                              data-img={img(v)}
+                              data-name={v.name}
+                              data-wa={waHref(v)}
+                            />
+                          </li>
+                        ))}
+                      </ul>
+                      <button type="button" class="mhc-nav mhc-nav--next" data-sw="1" aria-label="Следующие цвета" disabled={c.variants.length <= 5}>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m10 6 6 6-6 6" /></svg>
+                      </button>
+                    </div>
+                  )}
                   <h2 class="mhc-title"><a href={href} data-mhc-link>{c.title}</a></h2>
-                  <p class="mhc-color">Цвет : <span data-mhc-name>{p.name}</span></p>
-                  <p class="mhc-meta">
-                    <span>{colorsText(c.variants.length)}</span>
-                    {(thick || klass) && <span class="mhc-sep" aria-hidden="true">|</span>}
-                    {(thick || klass) && <span>{[thick, klass && `класс ${klass}`].filter(Boolean).join(', ')}</span>}
-                  </p>
+                  {single ? (
+                    categoryOf(p) && <p class="mhc-color">{categoryOf(p)}</p>
+                  ) : (
+                    <Fragment>
+                      {c.collection && <p class="mhc-color">Цвет : <span data-mhc-name>{p.name}</span></p>}
+                      <p class="mhc-meta">
+                        {c.collection && <span>{colorsText(c.variants.length)}</span>}
+                        {c.collection && meta && <span class="mhc-sep" aria-hidden="true">|</span>}
+                        {meta && <span>{meta}</span>}
+                      </p>
+                    </Fragment>
+                  )}
                 </article>
               );
             })}

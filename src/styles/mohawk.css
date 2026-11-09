@@ -97,7 +97,7 @@
 .mhcat-expand[aria-expanded='true'] .mhcat-expand-open, .mhcat-expand[aria-expanded='false'] .mhcat-expand-close { display: none; }
 .mhcat-acc { border-radius: 4px; background: #fff; box-shadow: var(--mh-shadow); overflow: hidden; }
 .mhcat-panel + .mhcat-panel { border-top: 1px solid #ececec; }
-.mhcat-panel > summary { display: flex; align-items: center; justify-content: space-between; height: 48px; padding: 0 24px; color: var(--mh-grey); font: 400 16px/18px var(--font); letter-spacing: .45px; cursor: pointer; list-style: none; }
+.mhcat-panel > summary { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 48px; padding: 12px 24px; color: var(--mh-grey); font: 400 16px/18px var(--font); letter-spacing: .45px; cursor: pointer; list-style: none; }
 .mhcat-panel > summary::-webkit-details-marker { display: none; }
 .mhcat-panel > summary svg { flex: none; color: var(--mh-ink); transition: transform .2s; }
 .mhcat-panel[open] > summary svg { transform: rotate(180deg); }
@@ -143,6 +143,10 @@
 .mhc-sw-item:hover:not(.active) { box-shadow: 0 0 0 2px #fff, 0 0 0 3px #9a9a9a; }
 .mhc-title { margin: 0; font: 700 16px/22px var(--font); letter-spacing: .45px; }
 .mhc-title a { color: var(--mh-ink); }
+.mhc-img + .mhc-title { margin-top: 22px; }
+/* Строительная химия: упаковки целиком, на белом */
+.ss--groups .mhc-img { border: 1px solid var(--mh-line); background: #fff; }
+.ss--groups .mhc-img img { object-fit: contain; padding: 6%; }
 .mhc-title a:hover { color: var(--mh-g); }
 .mhc-color { margin: 12px 0 0; color: var(--mh-ink); font: 400 14px/15px var(--font); letter-spacing: .45px; }
 .mhc-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0 6px; margin: 20px 0 0; color: var(--mh-ink); font: 400 14px/15px var(--font); letter-spacing: .45px; }

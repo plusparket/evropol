@@ -18,7 +18,7 @@ import GuideView from '../../components/GuideView.astro';
 import { getSectionGuides } from '../../server/section-guides.ts';
 import { catalogPath, getActiveBrands, mainUrl, siteUrl } from '../../server/sections.ts';
 import {
-  applyFilters, categoryPaths, getCategoryTree, getProducts, parseFilters, relatedInCategory, relatedProducts, type CategoryNode,
+  applyFilters, categoryPaths, getCategoryTree, getProducts, parseFilters, productsOf, relatedInCategory, relatedProducts, type CategoryNode,
 } from '../../server/products.ts';
 import { fillPlaceholders, getSettings, isMohawkCatalog, siteSettings } from '../../server/settings.ts';
 import { plainText } from '../../server/util.ts';
@@ -80,7 +80,7 @@ const catTitle = cat && catPath && catPath.length > 1 && tree.flatMap((g) => [g,
 const paged = Astro.url.searchParams.has('page');
 const catalog = { color: site.siteColor, layout: site.siteLayout };
 // Дизайн по образцу mohawkflooring.com (настройка «mohawk_catalogs»): крошки в серой полосе под шапкой
-const mh = catalogOnly && isMohawkCatalog(allSettings, site.slug);
+const mh = (catalogOnly || withGroups) && isMohawkCatalog(allSettings, site.slug);
 const siteCrumb = { name: site.name, url: at() };
 ---
 
@@ -99,7 +99,7 @@ const siteCrumb = { name: site.name, url: at() };
       noindex={Astro.url.searchParams.has('f') || Astro.url.searchParams.has('q') || Astro.url.searchParams.has('sort') || paged}
     >
       {mh ? (
-        <MhCatalog site={site} products={products} settings={settings} />
+        <MhCatalog site={site} products={products} settings={settings} tree={withGroups ? tree : undefined} />
       ) : withGroups ? (
         <GroupsHome site={site} products={products} tree={tree} settings={settings} />
       ) : catalogOnly ? (
@@ -128,8 +128,13 @@ const siteCrumb = { name: site.name, url: at() };
       canonicalPath={at(cat.slug)}
       noindex={paged}
       jsonLd={breadcrumbJsonLd(base, [{ name: site.name, url: at() }, ...catPath.map((c) => ({ name: c.name, url: at(c.slug) }))])}
+      crumbs={[siteCrumb, ...catPath.map((c) => ({ name: c.name, url: at(c.slug) }))]}
     >
-      <CategoryView site={site} tree={tree} group={catPath[0]} category={catPath[1]} products={products} />
+      {mh ? (
+        <MhCatalog site={site} products={productsOf(products, cat)} settings={settings} tree={tree} root={at(cat.slug)} heading={catTitle} />
+      ) : (
+        <CategoryView site={site} tree={tree} group={catPath[0]} category={catPath[1]} products={products} />
+      )}
     </SiteLayout>
   ) : guide ? (
     <SiteLayout

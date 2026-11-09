@@ -18,6 +18,7 @@ import { upgradeBrand } from '../src/server/upgrade-brand.ts';
 import { upgradeAbout } from '../src/server/upgrade-about.ts';
 import { upgradeNoBrands } from '../src/server/upgrade-no-brands.ts';
 import { upgradeGuides } from '../src/server/section-guides.ts';
+import { upgradeMohawkAll } from '../src/server/settings.ts';
 
 const log = (msg: string) => console.log(`[prepare] ${msg}`);
 
@@ -48,6 +49,7 @@ export async function prepare(): Promise<void> {
   for (const msg of await setupSectionSites()) log(`сайты разделов: ${msg}`);
   for (const msg of await upgradeNoBrands()) log(`без брендов: ${msg}`);
   for (const msg of await upgradeGuides()) log(`укладка и уход: ${msg}`);
+  if (await upgradeMohawkAll()) log('дизайн Mohawk: включён во всех каталогах');
   await importLegacyPhotos(log).catch((err) => log(`фото со старого сайта: ошибка ${err?.message ?? err}`));
   const made = await ensureHomeVariants();
   if (made) log(`созданы уменьшенные копии фото главной: ${made}`);
