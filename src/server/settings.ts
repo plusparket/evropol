@@ -7,6 +7,7 @@ export const SETTINGS_SCHEMA = [
   { group: 'Общее', key: 'seo_description', label: 'Описание главной для поисковиков (meta description)', type: 'textarea',
     default: 'ЕвроПол: линолеум, ковролин, ковровая плитка, кварцвинил SPC и LVT, ламинат, паркет и строительная химия в Бишкеке. Образцы в магазине на ул. Матросова 6/1, тел. +996 (779) 37 72 73.' },
   { group: 'Общее', key: 'forest_design', label: 'Лесной дизайн главного сайта: зелёная полоса сверху, зелёные кнопки и заголовки, тёмно-зелёный подвал (снимите галочку — вернутся прежние цвета)', type: 'checkbox', default: '1' },
+  { group: 'Общее', key: 'mohawk_catalogs', label: 'Каталоги в дизайне по образцу mohawkflooring.com: адреса разделов через запятую (linoleum, vinyl, carpet …). Пусто — у всех каталогов прежний вид', default: 'linoleum' },
   { group: 'Общее', key: 'copyright', label: 'Текст в подвале ({year} — текущий год)', default: 'Copyright © {year} ЕвроПол. Все права защищены' },
 
   // Контакты: адрес, телефон и почта по просьбе владельца от 27.10.2026
@@ -136,4 +137,10 @@ export function fillPlaceholders(html: string, settings: Settings): string {
     if (link) return link + value.replace(/\D/g, '');
     return escapeHtml(value);
   });
+}
+
+/** Каталог раздела в дизайне по образцу mohawkflooring.com (настройка «mohawk_catalogs»: linoleum, vinyl …) */
+export function isMohawkCatalog(settings: Settings, slug: string | undefined): boolean {
+  if (!slug) return false;
+  return (settings.mohawk_catalogs ?? '').split(/[\s,;]+/).map((x) => x.trim().replace(/^\/+/, '')).includes(slug);
 }

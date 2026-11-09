@@ -9,6 +9,7 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
 import NotFound from '../../components/NotFound.astro';
 import SiteHome from '../../components/section-site/SiteHome.astro';
 import CatalogHome from '../../components/section-site/CatalogHome.astro';
+import MhCatalog from '../../components/section-site/MhCatalog.astro';
 import GroupsHome from '../../components/section-site/GroupsHome.astro';
 import CategoryView from '../../components/section-site/CategoryView.astro';
 import ProductView from '../../components/section-site/ProductView.astro';
@@ -19,7 +20,7 @@ import { catalogPath, getActiveBrands, mainUrl, siteUrl } from '../../server/sec
 import {
   applyFilters, categoryPaths, getCategoryTree, getProducts, parseFilters, relatedInCategory, relatedProducts, type CategoryNode,
 } from '../../server/products.ts';
-import { fillPlaceholders, getSettings, siteSettings } from '../../server/settings.ts';
+import { fillPlaceholders, getSettings, isMohawkCatalog, siteSettings } from '../../server/settings.ts';
 import { plainText } from '../../server/util.ts';
 import {
   breadcrumbJsonLd, categoryDescription, namesakeSuffix, productDescription, sectionSiteDescription, sectionSiteJsonLd, withSiteName,
@@ -78,6 +79,9 @@ const catTitle = cat && catPath && catPath.length > 1 && tree.flatMap((g) => [g,
 // Вторая и дальше страницы каталога (?page=N) не индексируем: товары и так есть в sitemap.xml
 const paged = Astro.url.searchParams.has('page');
 const catalog = { color: site.siteColor, layout: site.siteLayout };
+// Дизайн по образцу mohawkflooring.com (настройка «mohawk_catalogs»): крошки в серой полосе под шапкой
+const mh = catalogOnly && isMohawkCatalog(allSettings, site.slug);
+const siteCrumb = { name: site.name, url: at() };
 ---
 
 {
@@ -92,9 +96,11 @@ const catalog = { color: site.siteColor, layout: site.siteLayout };
         sectionSiteJsonLd(site, settings, siteUrl(site), base, site.image ? `${base}/uploads/${site.image}` : undefined),
         breadcrumbJsonLd(base, [{ name: site.name, url: at() }]),
       ]}
-      noindex={Astro.url.searchParams.has('f') || paged}
+      noindex={Astro.url.searchParams.has('f') || Astro.url.searchParams.has('q') || Astro.url.searchParams.has('sort') || paged}
     >
-      {withGroups ? (
+      {mh ? (
+        <MhCatalog site={site} products={products} settings={settings} />
+      ) : withGroups ? (
         <GroupsHome site={site} products={products} tree={tree} settings={settings} />
       ) : catalogOnly ? (
         <CatalogHome site={site} products={products} items={items} groups={groups} settings={settings} />
@@ -110,6 +116,7 @@ const catalog = { color: site.siteColor, layout: site.siteLayout };
       canonicalPath={at(product.slug)}
       image={product.images[0] ? `/uploads/${product.images[0]}` : undefined}
       jsonLd={breadcrumbJsonLd(base, [...productCrumbs, { name: product.name, url: at(product.slug) }])}
+      crumbs={[...productCrumbs, { name: product.name }]}
     >
       <ProductView product={product} related={related} settings={settings} crumbs={productCrumbs} samples={!withGroups} />
     </SiteLayout>
@@ -131,6 +138,7 @@ const catalog = { color: site.siteColor, layout: site.siteLayout };
       description={guide.seoDescription || plainText(guide.content) || undefined}
       canonicalPath={guide.url}
       jsonLd={breadcrumbJsonLd(base, [{ name: site.name, url: at() }, { name: guide.title, url: guide.url }])}
+      crumbs={[siteCrumb, { name: guide.title }]}
     >
       {/^<div class="g[ds]"/.test(guide.content.trimStart()) ? (
         <GuideView

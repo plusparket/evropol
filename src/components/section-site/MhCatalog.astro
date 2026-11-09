@@ -1,0 +1,222 @@
+---
+// Каталог раздела в дизайне по образцу mohawkflooring.com/shop/resilient (настройка «mohawk_catalogs»):
+// сверху строка «Фильтр · N коллекций · сортировка», слева выбранные значения плашками, «Очистить всё»,
+// «Раскрыть все фильтры» и группы фильтров в карточке-аккордеоне, справа плитка по три: одна карточка на коллекцию,
+// под фото ряд образцов цветов (нажатие меняет фото, название и ссылку карточки), название коллекции, цвет,
+// число цветов и толщина. При наведении на фото — кнопки «Подробнее» и «Спросить в WhatsApp».
+// Всё работает формой GET (?f=Цвет:Серый&sort=az&q=дуб), скрипт только применяет выбор сразу (section-site.ts).
+import Pager from './Pager.astro';
+import { applyFilters, paginate, parseFilters, productThumb, type ProductItem } from '../../server/products.ts';
+import { catalogPath, type Section } from '../../server/sections.ts';
+import type { Settings } from '../../server/settings.ts';
+import { uploadUrl } from '../../server/uploads.ts';
+import { pluralRu } from '../../server/util.ts';
+
+interface Props {
+  site: Section;
+  products: ProductItem[];
+  settings: Settings;
+}
+const { site, products, settings } = Astro.props;
+const root = catalogPath(site);
+const params = Astro.url.searchParams;
+const heading = site.heading || site.name;
+
+// Поиск из шапки: по названию, коллекции и артикулу
+const q = (params.get('q') ?? '').trim();
+const needle = q.toLowerCase();
+const searched = needle
+  ? products.filter((p) => [p.name, p.collection, p.sku].some((x) => x.toLowerCase().includes(needle)))
+  : products;
+const chosen = parseFilters(params);
+const { items, groups } = applyFilters(searched, chosen, { sortValues: true });
+
+// Карточка на коллекцию: цвета коллекции, прошедшие фильтр, в порядке каталога (товары со склада первыми)
+type Card = { key: string; title: string; variants: ProductItem[]; isNew: boolean; order: number };
+const byKey = new Map<string, Card>();
+items.forEach((p, i) => {
+  const key = p.collection || p.name;
+  let card = byKey.get(key);
+  if (!card) {
+    card = { key, title: (p.collection || p.name).replace(/\s*\/\s*/g, ' | '), variants: [], isNew: false, order: i };
+    byKey.set(key, card);
+  }
+  card.variants.push(p);
+  card.isNew ||= p.isNew;
+});
+const SORTS = [
+  { value: '', label: 'Рекомендуем' },
+  { value: 'az', label: 'А–Я' },
+  { value: 'za', label: 'Я–А' },
+  { value: 'new', label: 'Сначала новинки' },
+];
+const sort = SORTS.some((s) => s.value === params.get('sort')) ? params.get('sort')! : '';
+const byTitle = (a: Card, b: Card) => a.title.localeCompare(b.title, 'ru', { numeric: true });
+const cards = [...byKey.values()].sort(
+  sort === 'az' ? byTitle
+  : sort === 'za' ? (a, b) => byTitle(b, a)
+  : sort === 'new' ? (a, b) => Number(b.isNew) - Number(a.isNew) || a.order - b.order
+  : (a, b) => a.order - b.order,
+);
+// 12 рядов по три карточки
+const { page, pages, slice } = paginate(cards, params.get('page'), 36);
+
+// Плашки выбранных значений: ссылка без этого значения (остальной выбор, поиск и сортировка остаются)
+const without = (drop: (key: string, value: string) => boolean) => {
+  const next = new URLSearchParams();
+  for (const [k, v] of params) if (k !== 'page' && !drop(k, v)) next.append(k, v);
+  const s = next.toString();
+  return root + (s ? `?${s}` : '');
+};
+const chips = [
+  ...(q ? [{ label: `Поиск: ${q}`, href: without((k) => k === 'q') }] : []),
+  ...groups.flatMap((g) =>
+    g.values.filter((v) => v.checked).map((v) => ({ label: v.value, href: without((k, val) => k === 'f' && val === `${g.label}:${v.value}`) })),
+  ),
+];
+const clearAll = sort ? `${root}?sort=${sort}` : root;
+
+const countText = `${cards.length} ${pluralRu(cards.length, ['коллекция', 'коллекции', 'коллекций'])}`;
+const colorsText = (n: number) => `${n} ${pluralRu(n, ['цвет', 'цвета', 'цветов'])}`;
+const fact = (p: ProductItem, label: string) => p.facets.find((f) => f.label === label)?.value ?? p.specs.find((s) => s.label === label)?.value ?? '';
+const waNumber = settings.panel_whatsapp.replace(/\D/g, '');
+const waHref = (p: ProductItem) =>
+  waNumber ? `https://wa.me/${waNumber}?text=${encodeURIComponent(`Здравствуйте! Интересует ${site.name.toLowerCase()}: ${[p.collection, p.name].filter(Boolean).join(', ')}.`)}` : '';
+const img = (p: ProductItem) => (p.images[0] ? uploadUrl(productThumb(p.images[0])) : '');
+---
+
+<div class="mhcat" id="catalog">
+  <h1 class="sr-only">{heading}</h1>
+
+  <div class="mhcat-top">
+    <button type="button" class="mhcat-filter-by" data-mh-filters-toggle aria-controls="mh-filters">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 6h20M2 12h20M2 18h20" /><circle cx="8" cy="6" r="2.2" fill="#fff" /><circle cx="16" cy="12" r="2.2" fill="#fff" /><circle cx="6" cy="18" r="2.2" fill="#fff" /></svg>
+      <span role="heading" aria-level="2">Фильтр</span>
+    </button>
+    <div class="mhcat-count" role="status">{countText}</div>
+    <label class="mhcat-sort">
+      <span class="sr-only">Сортировка</span>
+      <select name="sort" form="mh-filters" data-mh-sort>
+        {SORTS.map((s) => <option value={s.value} selected={s.value === sort}>{s.label}</option>)}
+      </select>
+    </label>
+  </div>
+
+  <div class="mhcat-body">
+    <aside class="mhcat-side" data-filters-box>
+      {
+        chips.length > 0 && (
+          <div class="mhcat-chips">
+            {chips.map((c) => (
+              <a class="mhcat-chip" href={c.href}>
+                <span>{c.label}</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-label="Убрать"><path d="M5 5l14 14M19 5 5 19" /></svg>
+              </a>
+            ))}
+            <a class="mhcat-clear" href={clearAll}>Очистить всё</a>
+          </div>
+        )
+      }
+      <form class="mhcat-filters" id="mh-filters" method="get" action={root} data-filters>
+        {q && <input type="hidden" name="q" value={q} />}
+        <button type="button" class="mhcat-expand" data-mh-expand aria-expanded="false">
+          <span class="mhcat-expand-open">Раскрыть все фильтры</span>
+          <span class="mhcat-expand-close">Свернуть все фильтры</span>
+        </button>
+        <div class="mhcat-acc">
+          {groups.map((g) => (
+            <details class="mhcat-panel" open={g.values.some((v) => v.checked)}>
+              <summary>
+                <span>{g.label}</span>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m7 10 5 5 5-5" /></svg>
+              </summary>
+              <div class="mhcat-options">
+                {g.values.map((v) => (
+                  <label class:list={['mhcat-check', { 'mhcat-check--empty': v.count === 0 && !v.checked }]}>
+                    <input type="checkbox" name="f" value={`${g.label}:${v.value}`} checked={v.checked} />
+                    <span>{v.value}</span>
+                  </label>
+                ))}
+              </div>
+            </details>
+          ))}
+        </div>
+        <noscript><button class="mhcat-apply" type="submit">Показать</button></noscript>
+      </form>
+    </aside>
+
+    <div class="mhcat-main">
+      {
+        slice.length > 0 ? (
+          <div class="mhcat-grid">
+            {slice.map((c) => {
+              const p = c.variants[0];
+              const href = catalogPath(site, p.slug);
+              const thick = fact(p, 'Общая толщина');
+              const klass = fact(p, 'Класс нагрузки');
+              return (
+                <article class="mhc" data-mhc>
+                  <div class="mhc-img">
+                    <a href={href} data-mhc-link tabindex="-1" aria-hidden="true">
+                      {img(p) ? <img src={img(p)} alt="" width="600" height="600" loading="lazy" data-mhc-img /> : <span class="mhc-noimg" />}
+                    </a>
+                    {c.isNew && <span class="mhc-badge">Новинка</span>}
+                    <div class="mhc-btns">
+                      <a class="mhc-btn mhc-btn--dark" href={href} data-mhc-link>Подробнее</a>
+                      {waNumber && <a class="mhc-btn" href={waHref(p)} target="_blank" rel="noopener" data-mhc-wa>Спросить в WhatsApp</a>}
+                    </div>
+                  </div>
+                  <div class="mhc-sw">
+                    <button type="button" class="mhc-nav mhc-nav--prev" data-sw="-1" aria-label="Предыдущие цвета" disabled>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m14 6-6 6 6 6" /></svg>
+                    </button>
+                    <ul class="mhc-sw-list" data-sw-list>
+                      {c.variants.map((v, i) => (
+                        <li>
+                          <button
+                            type="button"
+                            class:list={['mhc-sw-item', { active: i === 0 }]}
+                            style={img(v) ? `background-image:url('${img(v)}')` : undefined}
+                            title={v.name}
+                            aria-label={`Цвет ${v.name}`}
+                            aria-pressed={i === 0 ? 'true' : 'false'}
+                            data-href={catalogPath(site, v.slug)}
+                            data-img={img(v)}
+                            data-name={v.name}
+                            data-wa={waHref(v)}
+                          />
+                        </li>
+                      ))}
+                    </ul>
+                    <button type="button" class="mhc-nav mhc-nav--next" data-sw="1" aria-label="Следующие цвета" disabled={c.variants.length <= 5}>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m10 6 6 6-6 6" /></svg>
+                    </button>
+                  </div>
+                  <h2 class="mhc-title"><a href={href} data-mhc-link>{c.title}</a></h2>
+                  <p class="mhc-color">Цвет : <span data-mhc-name>{p.name}</span></p>
+                  <p class="mhc-meta">
+                    <span>{colorsText(c.variants.length)}</span>
+                    {(thick || klass) && <span class="mhc-sep" aria-hidden="true">|</span>}
+                    {(thick || klass) && <span>{[thick, klass && `класс ${klass}`].filter(Boolean).join(', ')}</span>}
+                  </p>
+                </article>
+              );
+            })}
+          </div>
+        ) : (
+          <p class="mhcat-empty">Нет товаров с такими параметрами. <a href={clearAll}>Очистить всё</a></p>
+        )
+      }
+      <Pager page={page} pages={pages} path={root} />
+    </div>
+  </div>
+</div>
+
+{
+  site.description && (
+    <section class="mhcat-about" id="about">
+      <h2>О покрытии</h2>
+      <div class="psalon-text" set:html={site.description} />
+    </section>
+  )
+}

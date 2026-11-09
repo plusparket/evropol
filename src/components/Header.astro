@@ -13,8 +13,14 @@ interface Props {
   menus: Record<MenuName, MenuItem[]>;
   /** Каталог раздела: «Укладка» и «Уход» (src/server/section-guides.ts) — встают вместо «Новости и события» */
   guides?: { label: string; url: string }[];
+  /**
+   * Шапка по образцу mohawkflooring.com (каталоги из настройки «mohawk_catalogs»): логотип, меню, поле поиска
+   * по каталогу раздела, значки телефона и WhatsApp справа. search — адрес каталога, q — текущий запрос.
+   */
+  mh?: { search: string; q: string };
 }
-const { sections, settings, menus, guides = [] } = Astro.props;
+const { sections, settings, menus, guides = [], mh } = Astro.props;
+const waHref = 'https://wa.me/' + settings.panel_whatsapp.replace(/\D/g, '');
 const phoneHref = (p: string) => 'tel:' + p.replace(/[^\d+]/g, '');
 // На странице каталога раздела адрес внутри приложения другой (/section-site/…): берём адрес раздела
 const path = Astro.locals.site ? sectionUrl(Astro.locals.site) : Astro.url.pathname;
@@ -44,43 +50,93 @@ const here = (l: Link) =>
   l.children ? l.children.some((c) => fullPath === c.url) : l.products ? sections.some((s) => path === sectionUrl(s)) : l.url === '/' ? path === '/' : path === l.url || path.startsWith(l.url + '/');
 ---
 
-<header class="ph" id="ph">
-  <div class="ph-in">
-    <a href="/" class="ph-logo" aria-label={settings.site_name}>
-      <img src="/img/evropol-logo.svg" alt={settings.site_name} width="536" height="100" />
-    </a>
+{
+  mh ? (
+    <header class="ph mhh" id="ph">
+      <div class="mhh-in">
+        <button type="button" class="ph-burger" id="burger" aria-controls="main-menu" aria-label="Меню"><i></i><i></i><i></i></button>
+        <a href="/" class="mhh-logo" aria-label={settings.site_name}>
+          <img src="/img/evropol-logo.svg" alt={settings.site_name} width="536" height="100" />
+        </a>
+        <nav class="ph-nav" aria-label="Меню">
+          {
+            links.map((l) =>
+              l.products ? (
+                <div class="ph-drop">
+                  <button type="button" class:list={['ph-drop-btn', { active: here(l) }]} aria-haspopup="true" aria-expanded="false" data-drop>{l.label}</button>
+                  <div class="ph-drop-list">
+                    {sections.map((s) => <a href={sectionHref(s)} class:list={{ active: path === sectionUrl(s) }}>{s.name}</a>)}
+                  </div>
+                </div>
+              ) : l.children ? (
+                <div class="ph-drop">
+                  <button type="button" class:list={['ph-drop-btn', { active: here(l) }]} aria-haspopup="true" aria-expanded="false" data-drop>{l.label}</button>
+                  <div class="ph-drop-list">
+                    {l.children.map((c) => <a href={c.url} class:list={{ active: fullPath === c.url }}>{c.label}</a>)}
+                  </div>
+                </div>
+              ) : (
+                <a href={l.url} class:list={{ active: here(l) }} target={l.newTab ? '_blank' : undefined}>{l.label}</a>
+              ),
+            )
+          }
+        </nav>
+        <form class="mhh-search" action={mh.search} method="get" role="search">
+          <input type="search" name="q" value={mh.q} placeholder="Поиск" aria-label="Поиск по каталогу" />
+          <button type="submit" aria-label="Найти">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" /><path d="m15.5 15.5 5 5" /></svg>
+          </button>
+        </form>
+        <a class="mhh-icon" href={phoneHref(settings.phone_main)} aria-label={`Позвонить: ${settings.phone_main}`}>
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h3.2l1.6 4.2-2.1 1.4a11 11 0 0 0 5.2 5.2l1.4-2.1 4.2 1.6V17a2.5 2.5 0 0 1-2.7 2.5A15.5 15.5 0 0 1 2.5 6.2 2.5 2.5 0 0 1 5 3.5Z" /></svg>
+        </a>
+        {settings.panel_whatsapp && (
+          <a class="mhh-icon" href={waHref} target="_blank" rel="noopener" aria-label={`WhatsApp ${settings.panel_whatsapp}`}>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4.2a8.6 8.6 0 1 1 3.1 3l-4.4 1.2Z" /><path d="M9 8.6c.3 2.6 3.2 5.5 5.8 5.9l1.2-1.4-1.9-1-1 .8a5 5 0 0 1-2.4-2.4l.8-1-1-1.9Z" stroke-width="1.4" /></svg>
+          </a>
+        )}
+      </div>
+    </header>
+  ) : (
+    <header class="ph" id="ph">
+    <div class="ph-in">
+      <a href="/" class="ph-logo" aria-label={settings.site_name}>
+        <img src="/img/evropol-logo.svg" alt={settings.site_name} width="536" height="100" />
+      </a>
 
-    <nav class="ph-nav" aria-label="Меню">
-      {
-        links.map((l) =>
-          l.products ? (
-            <div class="ph-drop">
-              <button type="button" class:list={['ph-drop-btn', { active: here(l) }]} aria-haspopup="true" aria-expanded="false" data-drop>{l.label}</button>
-              <div class="ph-drop-list">
-                {sections.map((s) => <a href={sectionHref(s)} class:list={{ active: path === sectionUrl(s) }}>{s.name}</a>)}
+      <nav class="ph-nav" aria-label="Меню">
+        {
+          links.map((l) =>
+            l.products ? (
+              <div class="ph-drop">
+                <button type="button" class:list={['ph-drop-btn', { active: here(l) }]} aria-haspopup="true" aria-expanded="false" data-drop>{l.label}</button>
+                <div class="ph-drop-list">
+                  {sections.map((s) => <a href={sectionHref(s)} class:list={{ active: path === sectionUrl(s) }}>{s.name}</a>)}
+                </div>
               </div>
-            </div>
-          ) : l.children ? (
-            <div class="ph-drop">
-              <button type="button" class:list={['ph-drop-btn', { active: here(l) }]} aria-haspopup="true" aria-expanded="false" data-drop>{l.label}</button>
-              <div class="ph-drop-list">
-                {l.children.map((c) => <a href={c.url} class:list={{ active: fullPath === c.url }}>{c.label}</a>)}
+            ) : l.children ? (
+              <div class="ph-drop">
+                <button type="button" class:list={['ph-drop-btn', { active: here(l) }]} aria-haspopup="true" aria-expanded="false" data-drop>{l.label}</button>
+                <div class="ph-drop-list">
+                  {l.children.map((c) => <a href={c.url} class:list={{ active: fullPath === c.url }}>{c.label}</a>)}
+                </div>
               </div>
-            </div>
-          ) : (
-            <a href={l.url} class:list={{ active: here(l) }} target={l.newTab ? '_blank' : undefined}>{l.label}</a>
-          ),
-        )
-      }
-    </nav>
+            ) : (
+              <a href={l.url} class:list={{ active: here(l) }} target={l.newTab ? '_blank' : undefined}>{l.label}</a>
+            ),
+          )
+        }
+      </nav>
 
-    <div class="ph-aside">
-      <a class="ph-contact" href="/contact">Связаться с нами</a>
-      {settings.instagram_url && <a class="ph-insta" href={settings.instagram_url} target="_blank" rel="noopener" aria-label="Instagram">{forest ? <SocialIcon name="instagram" size={24} /> : <img src="/img/instagram.png" alt="" width="32" height="32" />}</a>}
+      <div class="ph-aside">
+        <a class="ph-contact" href="/contact">Связаться с нами</a>
+        {settings.instagram_url && <a class="ph-insta" href={settings.instagram_url} target="_blank" rel="noopener" aria-label="Instagram">{forest ? <SocialIcon name="instagram" size={24} /> : <img src="/img/instagram.png" alt="" width="32" height="32" />}</a>}
+      </div>
+      <button type="button" class="ph-burger" id="burger" aria-controls="main-menu" aria-label="Меню"><i></i><i></i><i></i></button>
     </div>
-    <button type="button" class="ph-burger" id="burger" aria-controls="main-menu" aria-label="Меню"><i></i><i></i><i></i></button>
-  </div>
-</header>
+    </header>
+  )
+}
 
 <!-- Выдвижное меню на телефонах: пункты меню, разделы, контакты -->
 <aside class="pdrawer" id="main-menu" aria-label="Меню">

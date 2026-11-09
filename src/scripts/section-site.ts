@@ -2,10 +2,85 @@
 // Обработчики через делегирование: страницы меняет ClientRouter без перезагрузки.
 
 // Фильтры: форма GET, отправляем при каждом изменении галочки
+// (сортировка в каталоге по образцу Mohawk стоит вне формы и привязана к ней атрибутом form)
 document.addEventListener('change', (e) => {
   const input = e.target as HTMLInputElement;
-  const form = input.closest<HTMLFormElement>('form[data-filters]');
-  if (form) form.requestSubmit();
+  const form = input.form ?? input.closest<HTMLFormElement>('form');
+  if (form?.matches('[data-filters]')) form.requestSubmit();
+});
+
+// Каталог по образцу Mohawk (MhCatalog.astro): кнопки, образцы цветов, форма WhatsApp в подвале
+document.addEventListener('click', (e) => {
+  const target = e.target as HTMLElement;
+
+  // «Раскрыть все фильтры» / «Свернуть все фильтры»
+  const expand = target.closest<HTMLButtonElement>('[data-mh-expand]');
+  if (expand) {
+    const open = expand.getAttribute('aria-expanded') !== 'true';
+    expand.setAttribute('aria-expanded', String(open));
+    expand.closest('form')?.querySelectorAll<HTMLDetailsElement>('details').forEach((d) => (d.open = open));
+    return;
+  }
+
+  // «Фильтр» на телефоне открывает и закрывает панель фильтров
+  const toggle = target.closest<HTMLElement>('[data-mh-filters-toggle]');
+  if (toggle) {
+    document.querySelector('.mhcat-body')?.classList.toggle('mh-filters-open');
+    return;
+  }
+
+  // Образец цвета: меняет фото, цвет и ссылки карточки
+  const sw = target.closest<HTMLButtonElement>('.mhc-sw-item');
+  if (sw) {
+    const card = sw.closest<HTMLElement>('[data-mhc]');
+    if (!card) return;
+    card.querySelectorAll('.mhc-sw-item').forEach((b) => {
+      b.classList.toggle('active', b === sw);
+      b.setAttribute('aria-pressed', String(b === sw));
+    });
+    const { href = '', img = '', name = '', wa = '' } = sw.dataset;
+    card.querySelectorAll<HTMLAnchorElement>('[data-mhc-link]').forEach((a) => (a.href = href));
+    const pic = card.querySelector<HTMLImageElement>('[data-mhc-img]');
+    if (pic && img) pic.src = img;
+    const label = card.querySelector('[data-mhc-name]');
+    if (label) label.textContent = name;
+    const waLink = card.querySelector<HTMLAnchorElement>('[data-mhc-wa]');
+    if (waLink && wa) waLink.href = wa;
+    return;
+  }
+
+  // Стрелки у ряда образцов: прокрутка на три образца
+  const nav = target.closest<HTMLButtonElement>('.mhc-nav');
+  if (nav) {
+    const list = nav.parentElement?.querySelector<HTMLElement>('[data-sw-list]');
+    const item = list?.querySelector<HTMLElement>('li');
+    if (list && item) list.scrollBy({ left: Number(nav.dataset.sw) * (item.offsetWidth + 12) * 3, behavior: 'smooth' });
+  }
+});
+
+// Стрелки неактивны у начала и конца ряда образцов
+document.addEventListener(
+  'scroll',
+  (e) => {
+    const list = e.target as HTMLElement;
+    if (!(list instanceof HTMLElement) || !list.matches('[data-sw-list]')) return;
+    const box = list.parentElement!;
+    box.querySelector<HTMLButtonElement>('.mhc-nav--prev')!.disabled = list.scrollLeft <= 1;
+    box.querySelector<HTMLButtonElement>('.mhc-nav--next')!.disabled = list.scrollLeft + list.clientWidth >= list.scrollWidth - 1;
+  },
+  true,
+);
+
+// Форма в подвале: имя и вопрос уходят в WhatsApp одним сообщением
+document.addEventListener('submit', (e) => {
+  const form = e.target as HTMLFormElement;
+  if (!form.matches('[data-wa-form]')) return;
+  e.preventDefault();
+  const data = new FormData(form);
+  const name = String(data.get('name') ?? '').trim();
+  const text = String(data.get('text') ?? '').trim();
+  const message = ['Здравствуйте!', name && `Меня зовут ${name}.`, text].filter(Boolean).join(' ');
+  window.open(`${form.action}?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
 });
 
 // На телефоне фильтры свёрнуты, пока ни один не выбран (без скрипта — всегда раскрыты)
