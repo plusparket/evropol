@@ -1,0 +1,105 @@
+{
+  "url": "http://localhost/vinyl",
+  "width": 1440,
+  "title": "Кварцвиниловые полы SPC и LVT в Бишкеке: каталог | ЕвроПол",
+  "bodyFont": "Nunito, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+  "loadedFonts": [
+    "Nunito 300 normal",
+    "Nunito 400 normal",
+    "Nunito 600 normal",
+    "Nunito 700 normal"
+  ],
+  "nunitoCheck": [
+    {
+      "w": "400",
+      "ok": true
+    },
+    {
+      "w": "600",
+      "ok": true
+    },
+    {
+      "w": "700",
+      "ok": true
+    }
+  ],
+  "docOverflowX": 0,
+  "header": {
+    "tag": "HEADER",
+    "cls": "ph",
+    "h": 104,
+    "overflowX": 0
+  },
+  "navItems": [
+    {
+      "text": "Главная",
+      "top": 32,
+      "left": 387,
+      "right": 496,
+      "h": 44,
+      "font": "Nunito 700 16px",
+      "wraps": true,
+      "clipped": false
+    },
+    {
+      "text": "О компании",
+      "top": 32,
+      "left": 496,
+      "right": 638,
+      "h": 44,
+      "font": "Nunito 700 16px",
+      "wraps": true,
+      "clipped": false
+    },
+    {
+      "text": "Продукты",
+      "top": 32,
+      "left": 638,
+      "right": 765,
+      "h": 44,
+      "font": "Nunito 700 16px",
+      "wraps": true,
+      "clipped": false
+    },
+    {
+      "text": "Укладка и уход",
+      "top": 32,
+      "left": 765,
+      "right": 935,
+      "h": 44,
+      "font": "Nunito 700 16px",
+      "wraps": true,
+      "clipped": false
+    },
+    {
+      "text": "Контакты",
+      "top": 32,
+      "left": 935,
+      "right": 1058,
+      "h": 44,
+      "font": "Nunito 700 16px",
+      "wraps": true,
+      "clipped": false
+    }
+  ],
+  "navTops": [
+    32
+  ],
+  "navOverlaps": [],
+  "wideElements": [
+    "DIV.pdrawer-head right=1761",
+    "IMG.pdrawer-logo right=1634",
+    "BUTTON.pdrawer-close right=1771",
+    "NAV.pdrawer-nav right=1761",
+    "A. right=1761",
+    "A. right=1761",
+    "DIV.pdrawer-label right=1761",
+    "A.pdrawer-sub right=1761"
+  ],
+  "h1": [
+    {
+      "text": "Кварцвиниловые полы SPC и LVT",
+      "font": "Nunito 700 40px"
+    }
+  ]
+}

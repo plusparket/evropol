@@ -1,0 +1,52 @@
+{
+  "url": "http://localhost/vinyl",
+  "width": 390,
+  "title": "Кварцвиниловые полы SPC и LVT в Бишкеке: каталог | ЕвроПол",
+  "bodyFont": "Nunito, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+  "loadedFonts": [
+    "Nunito 300 normal",
+    "Nunito 400 normal",
+    "Nunito 600 normal",
+    "Nunito 700 normal"
+  ],
+  "nunitoCheck": [
+    {
+      "w": "400",
+      "ok": true
+    },
+    {
+      "w": "600",
+      "ok": true
+    },
+    {
+      "w": "700",
+      "ok": true
+    }
+  ],
+  "docOverflowX": 0,
+  "header": {
+    "tag": "HEADER",
+    "cls": "ph",
+    "h": 102,
+    "overflowX": 0
+  },
+  "navItems": [],
+  "navTops": [],
+  "navOverlaps": [],
+  "wideElements": [
+    "DIV.pdrawer-head right=711",
+    "IMG.pdrawer-logo right=584",
+    "BUTTON.pdrawer-close right=721",
+    "NAV.pdrawer-nav right=711",
+    "A. right=711",
+    "A. right=711",
+    "DIV.pdrawer-label right=711",
+    "A.pdrawer-sub right=711"
+  ],
+  "h1": [
+    {
+      "text": "Кварцвиниловые полы SPC и LVT",
+      "font": "Nunito 700 28px"
+    }
+  ]
+}
