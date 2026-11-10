@@ -126,3 +126,23 @@ export async function upgradeContactsText(newPageHtml: string): Promise<string[]
   });
   return log;
 }
+
+const DAYS_FLAG = 'work_days_2026_11_10';
+
+/**
+ * Владелец 10.11.2026: у магазина «ЕвроПол» указать дни работы. Один раз меняет режим работы
+ * «с 9.00 до 17.00» на «Пн–Сб с 9.00 до 17.00», если его не правили в админке.
+ */
+export async function upgradeWorkDays(): Promise<string[]> {
+  const [done] = await sql`SELECT 1 FROM settings WHERE key = ${DAYS_FLAG}`;
+  if (done) return [];
+  const log: string[] = [];
+  const hours = SETTINGS_SCHEMA.find((s) => s.key === 'work_hours')?.default ?? '';
+  await sql.begin(async (tx) => {
+    if ((await tx`UPDATE settings SET value = ${hours} WHERE key = 'work_hours' AND value = 'с 9.00 до 17.00'`).count) {
+      log.push(`режим работы: ${hours}`);
+    }
+    await tx`INSERT INTO settings (key, value) VALUES (${DAYS_FLAG}, ${new Date().toISOString()}) ON CONFLICT (key) DO NOTHING`;
+  });
+  return log;
+}

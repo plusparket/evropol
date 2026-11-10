@@ -11,7 +11,7 @@ import { ensureNewsSlugs } from '../src/server/content.ts';
 import { importLegacyPhotos } from '../src/server/legacy-photos.ts';
 import { upgradeHome } from '../src/server/home.ts';
 import { upgradeSections } from '../src/server/upgrade-sections.ts';
-import { upgradeContactMap, upgradeContacts, upgradeContactsText, upgradeEmail, upgradeWhatsapp } from '../src/server/upgrade-contacts.ts';
+import { upgradeContactMap, upgradeContacts, upgradeContactsText, upgradeEmail, upgradeWorkDays, upgradeWhatsapp } from '../src/server/upgrade-contacts.ts';
 import { setupSectionSites } from '../src/server/section-sites.ts';
 import { upgradeSeo } from '../src/server/upgrade-seo.ts';
 import { upgradeBrand } from '../src/server/upgrade-brand.ts';
@@ -44,6 +44,7 @@ export async function prepare(): Promise<void> {
   if (await upgradeContactMap()) log('«Контакты»: убрана строка «Карта внизу страницы» (карта теперь справа)');
   const contactHtml = (await readFile(new URL('../seed/pages/contact.html', import.meta.url), 'utf8')).trim();
   for (const msg of await upgradeContactsText(contactHtml)) log(`контакты: ${msg}`);
+  for (const msg of await upgradeWorkDays()) log(`контакты: ${msg}`);
   for (const msg of await upgradeSeo()) log(`поиск Google: ${msg}`);
   const renamed = await upgradeBrand();
   if (renamed) log(`название ЕвроПол вместо Европроект: изменено записей ${renamed}`);
