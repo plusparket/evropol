@@ -3,7 +3,11 @@
 import { sql } from './db.ts';
 
 export type HomeContent = {
-  hero: { title: string; text: string; button: string; link: string; images: string[] };
+  hero: {
+    title: string; text: string; button: string; link: string; images: string[];
+    /** Слайды с фото разделов (public/img/home/banner) вместо загруженных фото; загруженные фото сохраняются */
+    sectionSlides: boolean;
+  };
   about: { title: string; text: string; linkText: string; link: string };
   sections: { title: string; text: string };
   brands: { title: string; text: string };
@@ -26,6 +30,7 @@ export const DEFAULT_HOME: HomeContent = {
     button: 'Разделы',
     link: '#razdely',
     images: [],
+    sectionSlides: true,
   },
   // Блоки «О компании», «Разделы» и «Производители» на старом europroject.kg на главной не было: заголовки пустые,
   // блоки скрыты. Чтобы показать блок, достаточно вписать заголовок в админке.
@@ -128,6 +133,12 @@ export async function saveHome(content: HomeContent): Promise<void> {
 
 /** Все пути картинок, на которые ссылается контент (чтобы удалять ненужные файлы). */
 /** Фото плиток разделов на главной: public/img/home/<slug>.webp, из каталогов (без водяных знаков и логотипов) */
+/** Слайды баннера по разделам (владелец, 10.11.2026): public/img/home/banner/<slug>.webp (1920 px) и -800/-1400.webp,
+ *  фото в интерьере из каталогов, «Паркет» с domparketa.kg. У «Строительной химии» крупного фото в интерьере нет. */
+export const HOME_BANNER: Record<string, number> = {
+  linoleum: 1920, carpet: 1706, 'carpet-tiles': 1422, vinyl: 1600, laminate: 1920, parquet: 1920,
+};
+
 export const HOME_TILE_IMAGES = ['linoleum', 'carpet', 'carpet-tiles', 'vinyl', 'laminate', 'parquet', 'adhesives'];
 
 export function homeImages(c: HomeContent): string[] {

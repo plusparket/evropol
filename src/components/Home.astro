@@ -4,7 +4,7 @@
 // WhatsApp. Подвал (Footer.astro) прежний. Тексты редактируются в админке: «Главная страница» (src/server/home.ts),
 // фото плиток — public/img/home/<slug раздела>.webp (для нового раздела берётся фото из «Разделов»).
 import Lines from './Lines.astro';
-import { HOME_TILE_IMAGES, type HomeContent } from '../server/home.ts';
+import { HOME_BANNER, HOME_TILE_IMAGES, type HomeContent } from '../server/home.ts';
 import { isExternal, sectionHref, type Section } from '../server/sections.ts';
 import type { Settings } from '../server/settings.ts';
 import { homeSrcset, uploadUrl } from '../server/uploads.ts';
@@ -15,29 +15,44 @@ interface Props {
   settings: Settings;
 }
 const { home, sections, settings } = Astro.props;
-const heroImages = home.hero.images.filter(Boolean);
+// Баннер: фото разделов с подписью раздела (галочка в админке) или загруженные фото, как раньше
+const bannerSections = home.hero.sectionSlides ? sections.filter((s) => HOME_BANNER[s.slug]) : [];
+const bannerSrcset = (slug: string) =>
+  [800, 1400].filter((w) => w < HOME_BANNER[slug]).map((w) => `/img/home/banner/${slug}-${w}.webp ${w}w`)
+    .concat(`/img/home/banner/${slug}.webp ${HOME_BANNER[slug]}w`).join(', ');
+type Slide = { src: string; srcset: string; section?: Section };
+const slides: Slide[] = bannerSections.length
+  ? bannerSections.map((s) => ({ src: `/img/home/banner/${s.slug}.webp`, srcset: bannerSrcset(s.slug), section: s }))
+  : home.hero.images.filter(Boolean).map((img) => ({ src: uploadUrl(img), srcset: homeSrcset(img) }));
+const heroImages = slides;
 const waNumber = settings.panel_whatsapp.replace(/\D/g, '');
 const consultHref = home.consult.link || (waNumber ? `https://wa.me/${waNumber}` : '/contact');
 const tileImg = (s: Section) => (HOME_TILE_IMAGES.includes(s.slug) ? `/img/home/${s.slug}.webp` : s.image ? uploadUrl(s.image) : '');
 const tileText = (s: Section) => home.catalog.texts[s.slug] || s.summary;
 const ext = (href: string) => (isExternal(href) ? { target: '_blank', rel: 'noopener' } : {});
-const WelcomeTag = home.hero.title ? 'h2' : 'h1';
+const WelcomeTag = home.hero.title && !bannerSections.length ? 'h2' : 'h1';
 ---
 
 <section class:list={['phero', { 'phero--noimg': heroImages.length === 0 }]} data-hero aria-label="Главный экран">
   {
-    heroImages.map((img, i) => (
+    slides.map((sl, i) => (
       <div class:list={['phero-slide', { active: i === 0 }]}>
         {i === 0 ? (
-          <img src={uploadUrl(img)} srcset={homeSrcset(img)} sizes="100vw" alt="" width="2560" height="1440" fetchpriority="high" />
+          <img src={sl.src} srcset={sl.srcset} sizes="100vw" alt={sl.section ? `${sl.section.name} в интерьере` : ''} width="1920" height="1080" fetchpriority="high" />
         ) : (
-          <img data-src={uploadUrl(img)} data-srcset={homeSrcset(img)} sizes="100vw" alt="" width="2560" height="1440" />
+          <img data-src={sl.src} data-srcset={sl.srcset} sizes="100vw" alt={sl.section ? `${sl.section.name} в интерьере` : ''} width="1920" height="1080" />
+        )}
+        {sl.section && (
+          <a class="phero-label" href={sectionHref(sl.section)} {...ext(sectionHref(sl.section))}>
+            <span class="phero-label-name">{sl.section.name}</span>
+            {home.catalog.button && <span class="phero-label-more">{home.catalog.button} →</span>}
+          </a>
         )}
       </div>
     ))
   }
   {
-    home.hero.title ? (
+    home.hero.title && !bannerSections.length ? (
       <div class="phero-caption">
         <h1 class="phero-title"><Lines text={home.hero.title} /></h1>
         {home.hero.text && <p class="phero-text">{home.hero.text}</p>}

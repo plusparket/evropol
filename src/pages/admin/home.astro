@@ -33,7 +33,10 @@ if (Astro.request.method === 'POST') {
     }
 
     const next: HomeContent = {
-      hero: { title: str(data, 'hero_title'), text: str(data, 'hero_text'), button: str(data, 'hero_button'), link: str(data, 'hero_link'), images: hero },
+      hero: {
+        title: str(data, 'hero_title'), text: str(data, 'hero_text'), button: str(data, 'hero_button'), link: str(data, 'hero_link'), images: hero,
+        sectionSlides: data.get('hero_sections') === '1',
+      },
       about: current.about,
       sections: current.sections,
       brands: current.brands,
@@ -75,6 +78,9 @@ const h = current;
   <form method="post" enctype="multipart/form-data">
     <div class="card">
       <h2>1. Главный экран</h2>
+      <label class="check"><input type="checkbox" name="hero_sections" value="1" checked={h.hero.sectionSlides} />
+        Показывать фото разделов (линолеум, ковролин, ковровая плитка, кварц-винил, ламинат, паркет) с названием раздела и кнопкой</label>
+      <p class="hint">Снимите галочку, чтобы вернуть загруженные ниже фото и заголовок главного экрана.</p>
       <div class="form-grid">
         <div class="field full">
           <label for="hero_title">Заголовок</label>
