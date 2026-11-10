@@ -21,6 +21,7 @@ import { upgradeGuides } from '../src/server/section-guides.ts';
 import { upgradeMohawkAll } from '../src/server/settings.ts';
 import { upgradeSectionTexts } from '../src/server/section-texts.ts';
 import { upgradeSeo2026 } from '../src/server/upgrade-seo-2026-11.ts';
+import { upgradeWatermarks } from '../src/server/upgrade-watermarks.ts';
 
 const log = (msg: string) => console.log(`[prepare] ${msg}`);
 
@@ -55,6 +56,7 @@ export async function prepare(): Promise<void> {
   if (await upgradeMohawkAll()) log('дизайн Mohawk: включён во всех каталогах');
   for (const msg of await upgradeSectionTexts()) log(`тексты разделов: ${msg}`);
   for (const msg of await upgradeSeo2026()) log(`поиск Google (10.11): ${msg}`);
+  for (const msg of await upgradeWatermarks()) log(msg);
   await importLegacyPhotos(log).catch((err) => log(`фото со старого сайта: ошибка ${err?.message ?? err}`));
   const made = await ensureHomeVariants();
   if (made) log(`созданы уменьшенные копии фото главной: ${made}`);
