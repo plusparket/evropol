@@ -682,6 +682,8 @@ h1, h2, h3 { font-weight: 700; }
 .bc p { margin: 0 0 24px; color: var(--text); font-size: 16px; line-height: 1.6; }
 .bc-btn { display: inline-block; padding: 16px 25px; background: var(--g, var(--ink)); color: #fff; font: 600 16px/1.2 var(--font); }
 .bc-btn:hover { background: #004b2a; color: #fff; }
+/* Заголовки главной зелёные, как заголовки страниц и блоков в «Лесном» дизайне */
+.theme-forest .bw-title, .theme-forest .bt-head, .theme-forest .bc-title { color: var(--g); }
 @media (max-width: 960px) {
   .bt-card { width: calc((100% - 32px) / 2); }
 }
