@@ -91,14 +91,16 @@ export const DEFAULT_HOME: HomeContent = {
   consult: {
     title: 'Не знаете, какое покрытие выбрать? Получите профессиональную консультацию прямо сейчас!',
     text:
-      'Мы знаем: вариантов много, у каждого свои цвета, фактуры и рисунки.\n' +
-      'Подобрать покрытие под ваш интерьер непросто, и мы с этим поможем.',
+      'Мы знаем: ассортимент напольных покрытий очень широк и у каждого свои цвета, фактуры и рисунки.\n' +
+      'Подобрать покрытие под ваш интерьер непросто, но мы Вам с этим поможем.',
     button: 'Связаться с нами',
     link: '',
   },
 };
 
 const KEY = 'home_content';
+const OLD_CONSULT_TEXT =
+  'Мы знаем: вариантов много, у каждого свои цвета, фактуры и рисунки.\nПодобрать покрытие под ваш интерьер непросто, и мы с этим поможем.';
 
 /** Контент главной: сохранённый JSON поверх значений по умолчанию (по блокам). */
 export async function getHome(): Promise<HomeContent> {
@@ -110,6 +112,8 @@ export async function getHome(): Promise<HomeContent> {
     for (const k of Object.keys(home) as (keyof HomeContent)[]) {
       if (saved[k]) Object.assign(home[k], saved[k]);
     }
+    // Первый текст консультации (10.11.2026) владелец заменил своим: сохранённый без правок меняем на новый
+    if (home.consult.text === OLD_CONSULT_TEXT) home.consult.text = DEFAULT_HOME.consult.text;
     return home;
   } catch {
     return home;
