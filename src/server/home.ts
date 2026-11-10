@@ -16,7 +16,7 @@ export type HomeContent = {
   /** Приветствие под главным экраном (по образцу berryalloc.com, 10.11.2026) */
   welcome: { title: string; text: string };
   /** Плитки разделов: заголовок блока, подпись кнопки, краткое описание раздела по его slug */
-  catalog: { title: string; button: string; texts: Record<string, string> };
+  catalog: { title: string; button: string; texts: Record<string, string>; /** slug разделов без плитки на главной */ hidden: string[] };
   /** Блок консультации с кнопкой WhatsApp (пустая ссылка — WhatsApp из настроек, без номера — страница контактов) */
   consult: { title: string; text: string; button: string; link: string };
 };
@@ -92,6 +92,8 @@ export const DEFAULT_HOME: HomeContent = {
       adhesives:
         'Клеи, грунтовки, наливные полы и лаки для укладки линолеума, ковролина, плитки и паркета.',
     },
+    // Владелец 10.11.2026: седьмая плитка стоит одна в ряду, «Строительная химия» остаётся в меню, подвале и каталоге
+    hidden: ['adhesives'],
   },
   consult: {
     title: 'Не знаете, какое покрытие выбрать? Получите профессиональную консультацию прямо сейчас!',

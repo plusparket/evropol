@@ -167,6 +167,7 @@ export async function buildLlmsTxt(origin: string): Promise<string> {
   out.push('## Optional', '');
   out.push(`- [Полная версия](${d.base}/llms-full.txt): тексты разделов, описания брендов, страницы и новости`);
   out.push(`- [Карта сайта](${d.base}/sitemap.xml)`);
+  out.push(`- Поиск по сайту (товары, разделы, страницы, новости): ${d.base}/search?q=<запрос>`);
   return out.join('\n') + '\n';
 }
 

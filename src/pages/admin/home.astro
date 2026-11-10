@@ -47,6 +47,7 @@ if (Astro.request.method === 'POST') {
         title: str(data, 'catalog_title'),
         button: str(data, 'catalog_button'),
         texts: Object.fromEntries(sections.map((s) => [s.slug, str(data, `tile_${s.slug}`)])),
+        hidden: sections.filter((s) => data.get(`tile_hide_${s.slug}`) === '1').map((s) => s.slug),
       },
       consult: { title: str(data, 'consult_title'), text: str(data, 'consult_text'), button: str(data, 'consult_button'), link: str(data, 'consult_link') },
     };
@@ -150,6 +151,7 @@ const h = current;
             <div class="field full">
               <label for={`tile_${s.slug}`}>{s.name}{!s.isPublished && ' (скрыт)'}: краткое описание</label>
               <textarea id={`tile_${s.slug}`} name={`tile_${s.slug}`} rows="2">{h.catalog.texts[s.slug] ?? ''}</textarea>
+              <label class="check small"><input type="checkbox" name={`tile_hide_${s.slug}`} value="1" checked={h.catalog.hidden.includes(s.slug)} /> не показывать плитку на главной</label>
             </div>
           ))
         }

@@ -20,7 +20,7 @@ const bannerSections = home.hero.sectionSlides ? sections.filter((s) => HOME_BAN
 const bannerSrcset = (slug: string) =>
   [800, 1400].filter((w) => w < HOME_BANNER[slug]).map((w) => `/img/home/banner/${slug}-${w}.webp ${w}w`)
     .concat(`/img/home/banner/${slug}.webp ${HOME_BANNER[slug]}w`).join(', ');
-type Slide = { src: string; srcset: string; section?: Section };
+type Slide = { src: string; srcset?: string; section?: Section };
 const slides: Slide[] = bannerSections.length
   ? bannerSections.map((s) => ({ src: `/img/home/banner/${s.slug}.webp`, srcset: bannerSrcset(s.slug), section: s }))
   : home.hero.images.filter(Boolean).map((img) => ({ src: uploadUrl(img), srcset: homeSrcset(img) }));
@@ -28,6 +28,7 @@ const heroImages = slides;
 const waNumber = settings.panel_whatsapp.replace(/\D/g, '');
 const consultHref = home.consult.link || (waNumber ? `https://wa.me/${waNumber}` : '/contact');
 const tileImg = (s: Section) => (HOME_TILE_IMAGES.includes(s.slug) ? `/img/home/${s.slug}.webp` : s.image ? uploadUrl(s.image) : '');
+const tileSections = sections.filter((s) => !home.catalog.hidden.includes(s.slug));
 const tileText = (s: Section) => home.catalog.texts[s.slug] || s.summary;
 const ext = (href: string) => (isExternal(href) ? { target: '_blank', rel: 'noopener' } : {});
 const WelcomeTag = home.hero.title && !bannerSections.length ? 'h2' : 'h1';
@@ -94,12 +95,12 @@ const WelcomeTag = home.hero.title && !bannerSections.length ? 'h2' : 'h1';
 }
 
 {
-  sections.length > 0 && (
+  tileSections.length > 0 && (
     <section class="bt" id="razdely" aria-label="Разделы">
       <div class="pin">
         {home.catalog.title && <h2 class="bt-head">{home.catalog.title}</h2>}
         <div class="bt-grid">
-          {sections.map((s) => (
+          {tileSections.map((s) => (
             <article class="bt-card">
               <a class="bt-img" href={sectionHref(s)} tabindex="-1" aria-hidden="true" {...ext(sectionHref(s))}>
                 {tileImg(s) ? <img src={tileImg(s)} alt="" width="900" height="514" loading="lazy" /> : <span />}
