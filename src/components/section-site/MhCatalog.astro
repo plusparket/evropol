@@ -15,6 +15,7 @@ import { catalogPath, type Section } from '../../server/sections.ts';
 import type { Settings } from '../../server/settings.ts';
 import { uploadUrl } from '../../server/uploads.ts';
 import { pluralRu } from '../../server/util.ts';
+import { productAlt } from '../../server/seo.ts';
 
 interface Props {
   site: Section;
@@ -205,7 +206,7 @@ const img = (p: ProductItem) => (p.images[0] ? uploadUrl(productThumb(p.images[0
                 <article class="mhc" data-mhc>
                   <div class="mhc-img">
                     <a href={href} data-mhc-link tabindex="-1" aria-hidden="true">
-                      {img(p) ? <img src={img(p)} alt="" width="600" height="600" loading="lazy" data-mhc-img /> : <span class="mhc-noimg" />}
+                      {img(p) ? <img src={img(p)} alt={productAlt(p, site.slug)} width="600" height="600" loading="lazy" data-mhc-img /> : <span class="mhc-noimg" />}
                     </a>
                     {c.isNew && <span class="mhc-badge">Новинка</span>}
                     <div class="mhc-btns">
@@ -231,6 +232,7 @@ const img = (p: ProductItem) => (p.images[0] ? uploadUrl(productThumb(p.images[0
                               data-href={catalogPath(site, v.slug)}
                               data-img={img(v)}
                               data-name={v.name}
+                              data-alt={productAlt(v, site.slug)}
                               data-wa={waHref(v)}
                             />
                           </li>

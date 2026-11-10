@@ -14,7 +14,7 @@ const [posts, settings] = await Promise.all([listNews(200), getSettings()]);
 const cover = (n: (typeof posts)[number]) => (n.image ? uploadUrl(n.image) : (n.content.match(/<img[^>]+src="([^"]+)"/)?.[1] ?? ''));
 ---
 
-<SiteLayout title={withSiteName('Новости и события', settings)} description={`Новости компании «${settings.site_name}»: новые коллекции, поставки, выполненные объекты.`} canonicalPath="/news">
+<SiteLayout title={withSiteName('Новости и события', settings)} description={`Новости компании «${settings.site_name}»: новые коллекции, поставки, выполненные объекты.`} canonicalPath="/news" noindex={posts.length === 0}>
   <section class="ppage">
     <header class="ppage-head">
       <div class="pin">

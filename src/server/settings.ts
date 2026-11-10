@@ -6,7 +6,7 @@ export const MOHAWK_ALL = 'linoleum, carpet, carpet-tiles, vinyl, laminate, adhe
 /** Все настройки сайта с подписями для админки и значениями по умолчанию. */
 export const SETTINGS_SCHEMA = [
   { group: 'Общее', key: 'site_name', label: 'Название компании (в заголовках страниц и разметке для Google)', default: 'ЕвроПол' },
-  { group: 'Общее', key: 'seo_title', label: 'Заголовок главной страницы (title)', default: 'ЕвроПол: линолеум, ковролин, ковровая плитка, кварцвинил, ламинат, паркет и строительная химия в Бишкеке' },
+  { group: 'Общее', key: 'seo_title', label: 'Заголовок главной страницы (title)', default: 'Напольные покрытия в Бишкеке: магазин ЕвроПол' },
   { group: 'Общее', key: 'seo_description', label: 'Описание главной для поисковиков (meta description)', type: 'textarea',
     default: 'ЕвроПол: линолеум, ковролин, ковровая плитка, кварцвинил SPC и LVT, ламинат, паркет и строительная химия в Бишкеке. Образцы в магазине на ул. Матросова 6/1, тел. +996 (779) 37 72 73.' },
   { group: 'Общее', key: 'forest_design', label: 'Лесной дизайн главного сайта: зелёная полоса сверху, зелёные кнопки и заголовки, тёмно-зелёный подвал (снимите галочку — вернутся прежние цвета)', type: 'checkbox', default: '1' },
@@ -17,7 +17,7 @@ export const SETTINGS_SCHEMA = [
   { group: 'Контакты: офис', key: 'phone_main', label: 'Телефон', default: '+996 (779) 37 72 73' },
   { group: 'Контакты: офис', key: 'address', label: 'Адрес', default: 'г. Бишкек, ул. Матросова 6/1' },
   { group: 'Контакты: офис', key: 'work_hours', label: 'Режим работы (пусто — не показывается)', default: 'с 9.00 до 17.00' },
-  { group: 'Контакты: офис', key: 'email', label: 'Email', default: 'info@bino.kg' },
+  { group: 'Контакты: офис', key: 'email', label: 'Email', default: 'info@evropol.kg' },
   { group: 'Контакты: офис', key: 'hours_schema', label: 'Часы работы для Google (Mo-Sa 09:00-17:00; дни: Mo Tu We Th Fr Sa Su)', default: 'Mo-Sa 09:00-17:00' },
   { group: 'Контакты: офис', key: 'geo', label: 'Координаты на карте для Google (широта, долгота)', default: '42.8597994, 74.6189611' },
 

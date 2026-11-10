@@ -17,6 +17,8 @@ interface Props {
   samples?: boolean;
   /** Цвета коллекции (сам товар среди них), товары со склада первыми; меньше двух — блок не показывается */
   colors?: { name: string; href: string; image: string; current: boolean }[];
+  /** Подпись фото для Google Картинок с видом покрытия: «Линолеум Дуб Какао 547, Texville» (seo.ts productAlt) */
+  alt?: string;
 }
 const { product: p, related, settings, crumbs = [{ name: 'Каталог', url: '/#catalog' }], samples = true, colors = [] } = Astro.props;
 const sub = [p.brand, p.collection].filter(Boolean).join(' · ');
@@ -26,7 +28,7 @@ const waText = `Здравствуйте! Интересует ${[p.brand, p.col
 const waHref = `https://wa.me/${waNumber}?text=${encodeURIComponent(waText)}`;
 const area = packArea(p);
 // Подпись фото для Google Картинок: бренд, коллекция и название, как ищут покупатели
-const alt = [p.brand, p.collection, p.name].filter(Boolean).join(' ');
+const alt = Astro.props.alt || [p.brand, p.collection, p.name].filter(Boolean).join(' ');
 ---
 
 <div class="pin ss-product">

@@ -648,3 +648,6 @@ h1, h2, h3 { font-weight: 700; }
 .theme-forest .pf-bottom { color: #8fae9b; }
 /* Сайты разделов (body.ss): заголовок страницы зелёный, остальное — из переменных выше */
 .theme-forest .ss h1 { color: var(--g); }
+.psalon-text ul { margin: 0 0 14px; padding-left: 22px; }
+.psalon-text li { margin-bottom: 6px; }
+.psalon-text a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }

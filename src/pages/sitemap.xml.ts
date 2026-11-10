@@ -34,7 +34,8 @@ export const GET: APIRoute = async ({ url }) => {
     ...sections.filter((s) => !s.siteHost && !s.link).map((s) => entry(`/${s.slug}`, s.updatedAt, [s.image])),
     ...catalogs,
     ...pages.map((p) => entry(pagePath(p.slug, sections), p.updatedAt)),
-    entry('/news'),
+    // Пустой список новостей в Google не нужен
+    ...(news.length ? [entry('/news')] : []),
     ...news.map((n) => entry(`/news/${n.slug}`, n.updatedAt)),
   ];
   const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n${urls.join('\n')}\n</urlset>`;
