@@ -1,36 +1,27 @@
 ---
-// Главная как на europroject.kg: слайдер фото во всю ширину, плитки разделов на его нижнем крае, слева
-// «Наши контакты», справа три новости. Карточки разделов, производители и текст о компании выводятся, только
-// если в админке у этих блоков есть заголовок (по умолчанию пусто, как на старом сайте).
-// Небольшая Google-карта с точкой ЕвроПол — в подвале главной, справа от контактов (Footer.astro).
-// Тексты редактируются в админке: «Главная страница» (src/server/home.ts), карточки — «Разделы», логотипы — «Бренды».
+// Главная по образцу berryalloc.com/en (владелец, 10.11.2026): слайдер фото во всю ширину, приветствие, плитки
+// разделов «Поиск по продуктам» (фото в интерьере, название, короткое описание, кнопка), блок консультации с кнопкой
+// WhatsApp. Подвал (Footer.astro) прежний. Тексты редактируются в админке: «Главная страница» (src/server/home.ts),
+// фото плиток — public/img/home/<slug раздела>.webp (для нового раздела берётся фото из «Разделов»).
 import Lines from './Lines.astro';
-import type { HomeContent } from '../server/home.ts';
-import type { News } from '../server/content.ts';
-import { isExternal, linkLabel, sectionHref, sectionLink, sectionUrl, type Brand, type Section } from '../server/sections.ts';
+import { HOME_TILE_IMAGES, type HomeContent } from '../server/home.ts';
+import { isExternal, sectionHref, type Section } from '../server/sections.ts';
 import type { Settings } from '../server/settings.ts';
 import { homeSrcset, uploadUrl } from '../server/uploads.ts';
-import { formatDate, plainText } from '../server/util.ts';
 
 interface Props {
   home: HomeContent;
-  /** HTML текста о компании с уже подставленными контактами */
-  aboutHtml: string;
   sections: Section[];
-  brands: Brand[];
-  news: News[];
   settings: Settings;
 }
-const { home, aboutHtml, sections, brands, news, settings } = Astro.props;
+const { home, sections, settings } = Astro.props;
 const heroImages = home.hero.images.filter(Boolean);
-const phoneHref = 'tel:' + settings.phone_main.replace(/[^\d+]/g, '');
-const waHref = 'https://wa.me/' + settings.panel_whatsapp.replace(/\D/g, '');
-// Логотип ведёт на сайт или страницу раздела бренда (там описание и ссылка на коллекции), без раздела — по ссылке бренда
-const brandHref = (b: Brand) => {
-  const s = sections.find((x) => x.id === b.sectionId);
-  return s ? sectionHref(s) : b.link;
-};
-const cover = (n: News) => (n.image ? uploadUrl(n.image) : (n.content.match(/<img[^>]+src="([^"]+)"/)?.[1] ?? ''));
+const waNumber = settings.panel_whatsapp.replace(/\D/g, '');
+const consultHref = home.consult.link || (waNumber ? `https://wa.me/${waNumber}` : '/contact');
+const tileImg = (s: Section) => (HOME_TILE_IMAGES.includes(s.slug) ? `/img/home/${s.slug}.webp` : s.image ? uploadUrl(s.image) : '');
+const tileText = (s: Section) => home.catalog.texts[s.slug] || s.summary;
+const ext = (href: string) => (isExternal(href) ? { target: '_blank', rel: 'noopener' } : {});
+const WelcomeTag = home.hero.title ? 'h2' : 'h1';
 ---
 
 <section class:list={['phero', { 'phero--noimg': heroImages.length === 0 }]} data-hero aria-label="Главный экран">
@@ -53,7 +44,7 @@ const cover = (n: News) => (n.image ? uploadUrl(n.image) : (n.content.match(/<im
         {home.hero.button && <a class="pbtn" href={home.hero.link}>{home.hero.button}</a>}
       </div>
     ) : (
-      <h1 class="sr-only">{settings.seo_title || settings.site_name}</h1>
+      !home.welcome.title && <h1 class="sr-only">{settings.seo_title || settings.site_name}</h1>
     )
   }
   {
@@ -77,90 +68,31 @@ const cover = (n: News) => (n.image ? uploadUrl(n.image) : (n.content.match(/<im
 </section>
 
 {
-  sections.length > 0 && (
-    <nav class="ptiles" id="razdely" aria-label="Разделы">
-      {sections.map((s) => <a href={sectionHref(s)}>{s.name}</a>)}
-    </nav>
-  )
-}
-
-{
-  (home.contact.title || (home.news.title && news.length > 0)) && (
-    <section class="pinfo">
-      <div class="pin pinfo-grid">
-        {home.contact.title && (
-          <div class="pinfo-contacts">
-            <h2 class="pinfo-title">{home.contact.title}</h2>
-            {home.contact.text && <p>{home.contact.text}</p>}
-            <hr />
-            <p>{settings.address}</p>
-            <p>
-              Тел.: <a href={phoneHref}>{settings.phone_main}</a>
-              {settings.panel_whatsapp && <Fragment><br />WhatsApp: <a href={waHref} target="_blank" rel="noopener">{settings.panel_whatsapp}</a></Fragment>}
-            </p>
-            {settings.work_hours && <p>{settings.work_hours}</p>}
-            {settings.email && <p><a href={`mailto:${settings.email}`}>{settings.email}</a></p>}
-            <a class="pbtn-light" href="/contact">Связаться</a>
-            <hr />
-          </div>
-        )}
-        {home.news.title && news.length > 0 && (
-          <div class="pinfo-news">
-            <h2 class="pinfo-title"><a href="/news">{home.news.title}</a></h2>
-            <div class="pnews-grid">
-              {news.map((n) => (
-                <article class="pnews-card">
-                  <a class="pnews-img" href={`/news/${n.slug}`} tabindex="-1" aria-hidden="true">{cover(n) && <img src={cover(n)} alt="" loading="lazy" />}</a>
-                  <h3 class="pnews-title"><a href={`/news/${n.slug}`}>{n.title}</a></h3>
-                  <div class="pnews-date">
-                    <svg width="10" height="11" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M12 192h424c6.6 0 12 5.4 12 12v260c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V204c0-6.6 5.4-12 12-12zm436-44v-36c0-26.5-21.5-48-48-48h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v36c0 6.6 5.4 12 12 12h424c6.6 0 12-5.4 12-12z" /></svg>
-                    {formatDate(n.publishedAt)}
-                  </div>
-                  {(n.excerpt || n.content) && <p class="pnews-excerpt">{plainText(n.excerpt || n.content, 120)}</p>}
-                  <a class="pnews-more" href={`/news/${n.slug}`}>Подробнее...</a>
-                </article>
-              ))}
-            </div>
-          </div>
-        )}
+  (home.welcome.title || home.welcome.text) && (
+    <section class="bw">
+      <div class="bw-in">
+        {home.welcome.title && <WelcomeTag class="bw-title">{home.welcome.title}</WelcomeTag>}
+        {home.welcome.text && <p>{home.welcome.text}</p>}
       </div>
     </section>
   )
 }
 
 {
-  home.sections.title && sections.length > 0 && (
-    <section class="psec psections">
+  sections.length > 0 && (
+    <section class="bt" id="razdely" aria-label="Разделы">
       <div class="pin">
-        <h2 class="ptitle">{home.sections.title}</h2>
-        {home.sections.text && <p class="psub">{home.sections.text}</p>}
-        <div class="psections-grid">
+        {home.catalog.title && <h2 class="bt-head">{home.catalog.title}</h2>}
+        <div class="bt-grid">
           {sections.map((s) => (
-            <article class="psection">
-              <a class="psection-img" href={sectionHref(s)} tabindex="-1" aria-hidden="true">
-                {s.image ? (
-                  <img src={uploadUrl(s.image)} srcset={homeSrcset(s.image)} sizes="(max-width: 768px) 96vw, 380px" alt="" width="760" height="500" loading="lazy" />
-                ) : (
-                  <span class="psection-noimg" />
-                )}
+            <article class="bt-card">
+              <a class="bt-img" href={sectionHref(s)} tabindex="-1" aria-hidden="true" {...ext(sectionHref(s))}>
+                {tileImg(s) ? <img src={tileImg(s)} alt="" width="900" height="514" loading="lazy" /> : <span />}
               </a>
-              <div class="psection-body">
-                <h3 class="psection-title"><a href={sectionHref(s)}>{s.name}</a></h3>
-                {s.summary && <p class="psection-text">{s.summary}</p>}
-                <div class="psection-links">
-                  {s.siteHost ? (
-                    <a class="pbtn" href={sectionUrl(s)}>Смотреть каталог</a>
-                  ) : (
-                    <Fragment>
-                      {sectionLink(s) && (
-                        <a class="pbtn" href={sectionLink(s)} target={isExternal(s.link) ? '_blank' : undefined} rel={isExternal(s.link) ? 'noopener' : undefined}>
-                          {linkLabel(s)}
-                        </a>
-                      )}
-                      <a class="plink" href={sectionUrl(s)}>Подробнее</a>
-                    </Fragment>
-                  )}
-                </div>
+              <div class="bt-body">
+                <h3 class="bt-title"><a href={sectionHref(s)} {...ext(sectionHref(s))}>{s.name}</a></h3>
+                {tileText(s) && <p>{tileText(s)}</p>}
+                {home.catalog.button && <a class="bt-btn" href={sectionHref(s)} {...ext(sectionHref(s))}>{home.catalog.button}</a>}
               </div>
             </article>
           ))}
@@ -171,31 +103,12 @@ const cover = (n: News) => (n.image ? uploadUrl(n.image) : (n.content.match(/<im
 }
 
 {
-  home.brands.title && brands.length > 0 && (
-    <section class="psec pbrands">
+  home.consult.title && (
+    <section class="bc">
       <div class="pin">
-        <h2 class="ptitle">{home.brands.title}</h2>
-        {home.brands.text && <p class="psub">{home.brands.text}</p>}
-        <div class="pbrands-grid">
-          {brands.map((b) => (
-            <a class="pbrand" href={brandHref(b) || undefined} title={b.name}
-              target={isExternal(brandHref(b)) ? '_blank' : undefined} rel={isExternal(brandHref(b)) ? 'noopener' : undefined}>
-              {b.logo ? <img src={uploadUrl(b.logo)} alt={b.name} loading="lazy" /> : <span>{b.name}</span>}
-            </a>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
-
-{
-  home.about.title && (
-    <section class="psec psalon">
-      <div class="pin">
-        <h2 class="ptitle">{home.about.title}</h2>
-        <div class="psalon-text" set:html={aboutHtml} />
-        {home.about.linkText && <a class="plink" href={home.about.link}>{home.about.linkText}</a>}
+        <h2 class="bc-title">{home.consult.title}</h2>
+        {home.consult.text && <p><Lines text={home.consult.text} /></p>}
+        {home.consult.button && <a class="bc-btn" href={consultHref} {...ext(consultHref)}>{home.consult.button}</a>}
       </div>
     </section>
   )
