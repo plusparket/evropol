@@ -121,6 +121,10 @@ h1, h2, h3 { font-weight: 700; }
 .phero-slide:first-child { position: relative; }
 .phero-slide.active { opacity: 1; }
 .phero-slide:not(.active) { pointer-events: none; }
+/* Фото разделов: баннер целиком на первом экране вместе с подписью (высота экрана минус шапка), фото по центру */
+.phero--sections { height: min(56.25vw, calc(100svh - 150px)); min-height: 220px; }
+.phero--sections .phero-slide:first-child { position: absolute; }
+.phero--sections .phero-slide img, .phero--sections .phero-slide:first-child img { height: 100%; object-position: 50% 60%; }
 /* Подпись слайда с фото раздела: белая плашка слева внизу, название раздела и ссылка на каталог */
 .phero-label {
   position: absolute; left: clamp(16px, 4vw, 64px); bottom: clamp(20px, 4vw, 56px); z-index: 2; display: flex; flex-direction: column; gap: 6px;

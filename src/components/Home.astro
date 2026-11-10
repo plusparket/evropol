@@ -33,7 +33,7 @@ const ext = (href: string) => (isExternal(href) ? { target: '_blank', rel: 'noop
 const WelcomeTag = home.hero.title && !bannerSections.length ? 'h2' : 'h1';
 ---
 
-<section class:list={['phero', { 'phero--noimg': heroImages.length === 0 }]} data-hero aria-label="Главный экран">
+<section class:list={['phero', { 'phero--noimg': heroImages.length === 0, 'phero--sections': bannerSections.length > 0 }]} data-hero aria-label="Главный экран">
   {
     slides.map((sl, i) => (
       <div class:list={['phero-slide', { active: i === 0 }]}>
