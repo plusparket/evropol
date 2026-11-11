@@ -3,6 +3,7 @@
 import SiteLayout from '../layouts/SiteLayout.astro';
 import NotFound from '../components/NotFound.astro';
 import SectionView from '../components/SectionView.astro';
+import LeadForm from '../components/LeadForm.astro';
 import PageView from '../components/PageView.astro';
 import OfficeMap from '../components/OfficeMap.astro';
 import { getPageBySlug } from '../server/content.ts';
@@ -69,6 +70,7 @@ const maps = page?.slug === 'contact' ? officeMaps(settings) : [];
     >
       <PageView title={page.title} html={pageContent}>
         {maps.length > 0 && <OfficeMap slot="aside" maps={maps} variant="side" />}
+        {page.slug === 'contact' && <LeadForm />}
       </PageView>
     </SiteLayout>
   ) : (

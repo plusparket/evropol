@@ -17,6 +17,14 @@ export const siteBase = (fallbackOrigin: string) => (process.env.SITE_URL || fal
 /** «Винил» → «Винил | ЕвроПол» */
 export const withSiteName = (title: string, s: Settings) => (title.includes(s.site_name) ? title : `${title} | ${s.site_name}`);
 
+/** Google показывает около 65 знаков заголовка. Берём первый вариант, который помещается, иначе самый короткий
+ *  (проверка SEO 11.11.2026, владелец: «делай как нужно»). Варианты идут от полного к короткому. */
+export const TITLE_MAX = 65;
+export function fitTitle(variants: string[], s: Settings): string {
+  const all = variants.filter(Boolean).map((v) => withSiteName(v, s));
+  return all.find((t) => t.length <= TITLE_MAX) ?? all.reduce((a, b) => (b.length < a.length ? b : a));
+}
+
 /**
  * Обрезка по границе слова для meta description. Google показывает в выдаче около 160 знаков,
  * поэтому главное — в начале, контакты — в конце, если помещаются.
@@ -228,8 +236,14 @@ const collectionAfter = (p: ProductItem) =>
  * Заголовок страницы товара без города и названия сайта: «Линолеум Дуб Какао 547, Texville»,
  * у одноимённых товаров с отличием: «Ламинат Дуб Натур, Classic, узкая доска».
  */
-export function productTitleText(p: ProductItem, all: ProductItem[], sectionSlug: string): string {
-  return [[p.brand, productNamed(p, sectionSlug)].filter(Boolean).join(' '), collectionAfter(p), namesakeSuffix(p, all)].filter(Boolean).join(', ');
+export function productTitleText(p: ProductItem, all: ProductItem[], sectionSlug: string, withCollection = true): string {
+  return [[p.brand, productNamed(p, sectionSlug)].filter(Boolean).join(' '), withCollection && collectionAfter(p), namesakeSuffix(p, all)].filter(Boolean).join(', ');
+}
+
+/** Заголовок страницы товара: «… в Бишкеке», без «в Бишкеке», без коллекции — первый, что не длиннее 65 знаков */
+export function productPageTitle(p: ProductItem, all: ProductItem[], sectionSlug: string, s: Settings): string {
+  const full = productTitleText(p, all, sectionSlug);
+  return fitTitle([`${full} в Бишкеке`, full, productTitleText(p, all, sectionSlug, false)], s);
 }
 
 /** Подпись фото товара для Google Картинок: «Линолеум Дуб Какао 547, Texville» */

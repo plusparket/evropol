@@ -798,3 +798,22 @@ h1, h2, h3 { font-weight: 700; }
   .ph--two .ph-in, .ph--two.ph--compact .ph-in { height: 64px; padding: 0 15px; }
   .ph--two .ph-logo img { height: 36px; }
 }
+
+/* --- Анкета «Оставьте контакты» на странице «Контакты» (владелец, 11.11.2026) -------------------------------------- */
+.plead { margin: 40px 0 var(--pad); padding: 32px; background: var(--band); max-width: 760px; }
+.plead-title { margin: 0 0 8px; color: var(--navy); font: 700 clamp(22px, 2.4vw, 28px)/1.25 var(--font); }
+.plead-text { margin: 0 0 22px; color: var(--text); }
+.plead-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+.plead-form label { display: grid; gap: 6px; color: var(--text); font-size: 14px; font-weight: 600; }
+.plead-form input { width: 100%; box-sizing: border-box; padding: 12px 14px; border: 1px solid var(--line); background: #fff;
+  font: 400 16px/1.3 var(--font); color: var(--text); border-radius: 0; }
+.plead-form input:focus { outline: 2px solid var(--navy); outline-offset: -1px; }
+.plead-form .pbtn { margin-top: 6px; cursor: pointer; }
+.plead-trap { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.plead-msg { margin: 0 0 18px; padding: 12px 14px; font-weight: 600; }
+.plead-msg--ok { background: #e3f1e8; color: #0b4d2c; }
+.plead-msg--err { background: #fbe9e7; color: #8a1f11; }
+@media (max-width: 640px) {
+  .plead { padding: 22px 16px; }
+  .plead-row { grid-template-columns: 1fr; }
+}

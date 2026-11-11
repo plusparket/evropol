@@ -129,7 +129,7 @@ function contacts(d: Data, mainContact = true): string[] {
   }
   lines.push(`- Email: ${s.email}${wa}.`);
   if (s.instagram_url) lines.push(`- Instagram: ${s.instagram_url}`);
-  if (mainContact) lines.push(`- [Контакты и карта](${d.base}/contact)`);
+  if (mainContact) lines.push(`- [Контакты, карта и анкета «Оставьте контакты»](${d.base}/contact): менеджер салона свяжется с вами`);
   return lines;
 }
 

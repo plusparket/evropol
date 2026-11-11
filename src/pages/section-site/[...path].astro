@@ -23,7 +23,7 @@ import {
 import { fillPlaceholders, getSettings, isMohawkCatalog, siteSettings } from '../../server/settings.ts';
 import { plainText } from '../../server/util.ts';
 import {
-  breadcrumbJsonLd, categoryDescription, clip, productAlt, productDescription, productTitleText, sectionSiteDescription, sectionSiteJsonLd, withSiteName,
+  breadcrumbJsonLd, categoryDescription, clip, productAlt, productDescription, productPageTitle, fitTitle, sectionSiteDescription, sectionSiteJsonLd, withSiteName,
 } from '../../server/seo.ts';
 
 const site = Astro.locals.site;
@@ -74,7 +74,6 @@ const productCrumbs = withGroups
     ? [{ name: site.name, url: at() }]
     : [{ name: site.name, url: `${at()}#catalog` }];
 // «Линолеум Дуб Какао 547, Texville», для одноимённых товаров с отличием: «…, узкая доска»
-const productTitle = product ? productTitleText(product, products, site.slug) : '';
 const cat = catPath?.at(-1);
 // Категория с тем же названием, что у другой («Разное» в двух группах): в заголовке и группа
 const catTitle = cat && catPath && catPath.length > 1 && tree.flatMap((g) => [g, ...g.children]).some((c) => c.id !== cat.id && c.name === cat.name)
@@ -120,7 +119,7 @@ const siteCrumb = { name: site.name, url: at() };
   ) : product ? (
     <SiteLayout
       catalog={catalog}
-      title={product.seoTitle || withSiteName(`${productTitle} в Бишкеке`, settings)}
+      title={product.seoTitle || productPageTitle(product, products, site.slug, settings)}
       description={productDescription(product, settings, products, site.slug)}
       canonicalPath={at(product.slug)}
       image={product.images[0] ? `/uploads/${product.images[0]}` : undefined}
@@ -132,7 +131,7 @@ const siteCrumb = { name: site.name, url: at() };
   ) : catPath && cat ? (
     <SiteLayout
       catalog={catalog}
-      title={withSiteName(`${catTitle}: ${heading} в Бишкеке${pageTitle}`, settings)}
+      title={fitTitle([`${catTitle}: ${heading} в Бишкеке${pageTitle}`, `${catTitle}: ${heading}${pageTitle}`, `${catTitle}${pageTitle}`], settings)}
       description={categoryDescription(cat.name, cat.description, cat.productIds.length, settings)}
       canonicalPath={at(cat.slug) + pageQuery}
       noindex={paged}

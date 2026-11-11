@@ -1,0 +1,53 @@
+---
+// Заявки из анкеты «Оставьте контакты» на странице «Контакты». Письмо о каждой заявке уходит на почту из настроек,
+// если на сервере задан SMTP (docs/leads.md).
+import AdminLayout from '../../layouts/AdminLayout.astro';
+import { deleteLead, listLeads, smtpConfigured } from '../../server/leads.ts';
+import { withFlash } from '../../server/admin.ts';
+import { str, toInt } from '../../server/util.ts';
+import { getSettings } from '../../server/settings.ts';
+
+if (Astro.request.method === 'POST') {
+  const id = toInt(str(await Astro.request.formData(), 'delete'));
+  if (id) await deleteLead(id);
+  return Astro.redirect(withFlash('/admin/leads', 'ok', 'deleted'));
+}
+const leads = await listLeads();
+const settings = await getSettings();
+const when = (d: Date) => new Date(d).toLocaleString('ru-RU', { day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+---
+
+<AdminLayout title="Заявки" section="leads">
+  <div class="toolbar"><h1>Заявки</h1></div>
+  <p class="muted">
+    Заявки из анкеты «Оставьте контакты» на странице «Контакты».
+    {smtpConfigured()
+      ? <>Письмо о каждой заявке уходит на {settings.email || 'почту из настроек'}.</>
+      : <>Отправка писем пока не настроена (нет SMTP на сервере), поэтому заявки видны только здесь.</>}
+  </p>
+  {
+    leads.length > 0 ? (
+      <form method="post" class="table-wrap">
+        <table class="list">
+          <thead>
+            <tr><th>Когда</th><th>Имя</th><th>Компания</th><th>Email</th><th>Письмо</th><th /></tr>
+          </thead>
+          <tbody>
+            {leads.map((l) => (
+              <tr>
+                <td>{when(l.createdAt)}</td>
+                <td>{[l.firstName, l.lastName].filter(Boolean).join(' ')}</td>
+                <td>{l.company || '—'}</td>
+                <td><a href={`mailto:${l.email}`}>{l.email}</a></td>
+                <td>{l.emailed ? 'отправлено' : l.mailError ? `ошибка: ${l.mailError}` : 'не отправлялось'}</td>
+                <td><button type="submit" name="delete" value={l.id} class="btn danger" data-confirm="Удалить заявку?">Удалить</button></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </form>
+    ) : (
+      <p class="card">Заявок пока нет.</p>
+    )
+  }
+</AdminLayout>
