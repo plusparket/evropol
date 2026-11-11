@@ -55,3 +55,29 @@ export async function upgradeCarpetSpecs(): Promise<string[]> {
   });
   return changed ? [`ковролин: характеристики производителей у ${changed} моделей`] : [];
 }
+
+/**
+ * Владелец 11.11.2026: «не надо писать про низкую износостойкость» и про шкалу из четырёх ступеней. Где первая версия
+ * уже записана: строка «Износостойкость: низкая…» убирается, из абзаца уходят шкала и «износостойкость низкая».
+ * Отметка carpet_specs_v2_2026_11_11.
+ */
+const FLAG_V2 = 'carpet_specs_v2_2026_11_11';
+const SCALE = ' по шкале из четырёх ступеней (низкая, средняя, высокая, очень высокая)';
+export async function upgradeCarpetWear(): Promise<string[]> {
+  const [done] = await sql`SELECT 1 FROM settings WHERE key = ${FLAG_V2}`;
+  if (done) return [];
+  let changed = 0;
+  await sql.begin(async (tx) => {
+    const rows = await tx<{ id: number; specs: Attr[]; description: string }[]>`
+      SELECT p.id, p.specs, p.description FROM products p JOIN sections s ON s.id = p.section_id
+      WHERE s.slug = 'carpet' AND (strpos(p.description, ${SCALE}) > 0 OR p.specs::text LIKE '%низкая (оценка производителя)%')`;
+    for (const r of rows) {
+      const specs = r.specs.filter((a) => !(a.label === 'Износостойкость' && a.value.startsWith('низкая')));
+      const description = r.description.split(SCALE).join('').split(', износостойкость низкая.').join('.');
+      await tx`UPDATE products SET specs = ${tx.json(specs)}, description = ${description}, updated_at = now() WHERE id = ${r.id}`;
+      changed++;
+    }
+    await tx`INSERT INTO settings (key, value) VALUES (${FLAG_V2}, '1') ON CONFLICT (key) DO NOTHING`;
+  });
+  return changed ? [`ковролин: без шкалы износостойкости у ${changed} моделей`] : [];
+}
