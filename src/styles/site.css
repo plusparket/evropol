@@ -94,11 +94,23 @@ h1, h2, h3 { font-weight: 700; }
   width: 200px; height: 32px; padding: 0 32px 0 12px; border: 1px solid var(--line); border-radius: 16px; background: #fff;
   color: var(--text); font-size: 14px; outline: none; transition: border-color .2s, width .25s;
 }
-.ph-search input:focus { width: 260px; border-color: var(--g, var(--navy)); }
+.ph-search input:focus { border-color: var(--g, var(--navy)); }
 .ph-search input::-webkit-search-cancel-button { display: none; }
 .ph-search button { position: absolute; top: 0; right: 4px; width: 28px; height: 32px; padding: 0; border: 0; background: none; color: var(--muted); cursor: pointer; }
 .ph-search button:hover { color: var(--g, var(--navy)); }
 .pdrawer-search { margin-bottom: 14px; }
+/* В шапке поле поиска стоит под «Связаться с нами» и Instagram, во всю их ширину, и не заходит на меню */
+.ph-aside { flex-wrap: wrap; justify-content: flex-end; row-gap: 8px; width: 210px; }
+.ph-aside .ph-search { flex-basis: 100%; }
+.ph-aside .ph-search input { width: 100%; }
+.ph-search-i { display: none; color: var(--g, var(--navy)); }
+/* Узкие экраны с меню в строку: поле не помещается рядом с меню, вместо него значок лупы, ведущий на /search */
+@media (max-width: 1180px) {
+  .ph-aside { width: auto; }
+  .ph-aside .ph-search { display: none; }
+  .ph-search-i { display: grid; place-items: center; width: 26px; height: 26px; }
+}
+@media (max-width: 860px) { .ph-search-i { display: none; } }
 .ph-search-m { display: none; }
 .pdrawer-search input, .pdrawer-search input:focus { width: 100%; height: 40px; border-radius: 20px; font-size: 15px; }
 .pdrawer-search button { height: 40px; }
@@ -588,6 +600,7 @@ h1, h2, h3 { font-weight: 700; }
   .ph-logo img, .ph--compact .ph-logo img { height: 36px; }
   .ph--compact .ph-aside { display: none; }
   .ph-aside .ph-search { display: none; }
+  .ph-aside { width: auto; }
   .ph-search-m { display: grid; place-items: center; position: absolute; left: 12px; top: 50%; width: 44px; height: 44px; color: var(--g, var(--navy)); }
   .ptiles { margin: 0; grid-template-columns: 1fr 1fr; }
   .ptiles a { border-left: 0; border-right: 1px solid var(--band); }

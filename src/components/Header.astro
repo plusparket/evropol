@@ -1,6 +1,6 @@
 ---
 // Шапка как на europroject.kg: тонкая синяя полоса сверху, логотип слева, меню в строку («Продукты» раскрывает
-// список разделов), справа сверху поле «Поиск по сайту» (/search), «Связаться с нами» и Instagram. На телефонах меню выдвигается сбоку.
+// список разделов), справа сверху «Связаться с нами» и Instagram, под ними поле «Поиск по сайту» (/search). На телефонах меню выдвигается сбоку.
 import type { MenuItem, MenuName } from '../server/content.ts';
 import { sectionHref, sectionUrl, type Section } from '../server/sections.ts';
 import type { Settings } from '../server/settings.ts';
@@ -129,14 +129,17 @@ const here = (l: Link) =>
       </nav>
 
       <div class="ph-aside">
+        <a class="ph-contact" href="/contact">Связаться с нами</a>
+        {settings.instagram_url && <a class="ph-insta" href={settings.instagram_url} target="_blank" rel="noopener" aria-label="Instagram">{forest ? <SocialIcon name="instagram" size={24} /> : <img src="/img/instagram.png" alt="" width="32" height="32" />}</a>}
+        <a class="ph-search-i" href="/search" aria-label="Поиск по сайту">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" /><path d="m15.5 15.5 5 5" /></svg>
+        </a>
         <form class="ph-search" action="/search" method="get" role="search">
           <input type="search" name="q" placeholder="Поиск по сайту" aria-label="Поиск по сайту" />
           <button type="submit" aria-label="Найти">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" /><path d="m15.5 15.5 5 5" /></svg>
           </button>
         </form>
-        <a class="ph-contact" href="/contact">Связаться с нами</a>
-        {settings.instagram_url && <a class="ph-insta" href={settings.instagram_url} target="_blank" rel="noopener" aria-label="Instagram">{forest ? <SocialIcon name="instagram" size={24} /> : <img src="/img/instagram.png" alt="" width="32" height="32" />}</a>}
       </div>
       <a class="ph-search-m" href="/search" aria-label="Поиск по сайту">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" /><path d="m15.5 15.5 5 5" /></svg>
