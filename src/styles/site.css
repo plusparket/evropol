@@ -457,6 +457,11 @@ h1, h2, h3 { font-weight: 700; }
 .gs-card .gs-num { background: #fff; color: var(--gs-c); }
 .gs-card a { color: #fff; text-decoration: underline; }
 .gs-card-text { padding-bottom: 30px; }
+/* Карточка без рисунка (владелец 11.11.2026: на «Укладке» ковровой плитки только текст) */
+.gs-card:not(:has(> img)) { grid-template-columns: 1fr; }
+.gs-band:not(.gs-band--pile):not(:has(img)) { padding-bottom: 30px; }
+.gs-pair:not(:has(img)) { align-items: stretch; }
+.gs-band:not(:has(img)) > h2 { margin-bottom: 30px; }
 .gs-card img { display: block; align-self: end; width: 100%; height: auto; margin-bottom: -36px; }
 .gs-band { margin: 0 0 84px; padding: 34px 24px 0; background: var(--band); }
 .gs-band > h2 { margin-bottom: 50px; }
