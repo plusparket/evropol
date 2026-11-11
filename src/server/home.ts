@@ -3,12 +3,22 @@
 import { sql } from './db.ts';
 
 export type HomeContent = {
-  hero: { title: string; text: string; button: string; link: string; images: string[] };
+  hero: {
+    title: string; text: string; button: string; link: string; images: string[];
+    /** Слайды с фото разделов (public/img/home/banner) вместо загруженных фото; загруженные фото сохраняются */
+    sectionSlides: boolean;
+  };
   about: { title: string; text: string; linkText: string; link: string };
   sections: { title: string; text: string };
   brands: { title: string; text: string };
   news: { title: string; count: number };
   contact: { title: string; text: string };
+  /** Приветствие под главным экраном (по образцу berryalloc.com, 10.11.2026) */
+  welcome: { title: string; text: string };
+  /** Плитки разделов: заголовок блока, подпись кнопки, краткое описание раздела по его slug */
+  catalog: { title: string; button: string; texts: Record<string, string>; /** slug разделов без плитки на главной */ hidden: string[] };
+  /** Блок консультации с кнопкой WhatsApp (пустая ссылка — WhatsApp из настроек, без номера — страница контактов) */
+  consult: { title: string; text: string; button: string; link: string };
 };
 
 export const HERO_SLOTS = 3;
@@ -20,6 +30,7 @@ export const DEFAULT_HOME: HomeContent = {
     button: 'Разделы',
     link: '#razdely',
     images: [],
+    sectionSlides: true,
   },
   // Блоки «О компании», «Разделы» и «Производители» на старом europroject.kg на главной не было: заголовки пустые,
   // блоки скрыты. Чтобы показать блок, достаточно вписать заголовок в админке.
@@ -47,9 +58,56 @@ export const DEFAULT_HOME: HomeContent = {
     title: 'Наши контакты',
     text: 'У вас есть вопросы о нашем сайте, продуктах или услугах?',
   },
+  // Главная по образцу berryalloc.com/en (владелец, 10.11.2026). Заголовки приветствия и консультации — слова владельца,
+  // остальное переведено и написано по скиллу stop-slop, без брендов.
+  welcome: {
+    title: 'Добро пожаловать в ЕвроПол! Здесь Вы найдете пол Вашей мечты!',
+    text:
+      'В нашем каталоге линолеум, ковролин, ковровая плитка, ламинат, SPC кварц-винил, паркет, паркетная доска, ' +
+      'инженерная доска, ёлочка, а также строительная химия и средства по уходу за полами. Покрытия сделаны из прочных ' +
+      'материалов, служат долго и выглядят современно.',
+  },
+  catalog: {
+    title: 'Поиск по продуктам',
+    button: 'Смотреть коллекции',
+    texts: {
+      linoleum:
+        'Бытовой и полукоммерческий линолеум толщиной от 1,8 до 4,1 мм, ширина рулона до 4 м. Рисунки под дерево, ' +
+        'камень и плитку для квартир, офисов и магазинов.',
+      carpet:
+        'Ковровое покрытие в рулонах шириной от 2 до 5 м. Тёплый мягкий пол для спальни, гостиной, гостиничного ' +
+        'номера и кабинета.',
+      'carpet-tiles':
+        'Квадраты 50 × 50 см и полосы 25 × 100 см. Из плиток собирают разные рисунки, а испачканную плитку меняют ' +
+        'по одной. Для офисов, гостиниц и школ.',
+      vinyl:
+        'Кварцвиниловая доска, ёлочка и плитка SPC и LVT. Вода покрытию не вредит, поэтому его кладут на кухне и ' +
+        'в прихожей.',
+      laminate:
+        'Ламинат толщиной 7, 8 и 12 мм с классами износостойкости от AC3 до AC6. Доска и ёлочка с рисунком дуба ' +
+        'для квартир и офисов.',
+      parquet:
+        'Паркет и паркетная доска из натурального дерева, инженерная доска и ёлочка. Каталог открывается на сайте ' +
+        'нашего салона паркета.',
+      adhesives:
+        'Клеи, грунтовки, наливные полы и лаки для укладки линолеума, ковролина, плитки и паркета.',
+    },
+    // Владелец 10.11.2026: седьмая плитка стоит одна в ряду, «Строительная химия» остаётся в меню, подвале и каталоге
+    hidden: ['adhesives'],
+  },
+  consult: {
+    title: 'Не знаете, какое покрытие выбрать? Получите профессиональную консультацию прямо сейчас!',
+    text:
+      'Мы знаем: ассортимент напольных покрытий очень широк и у каждого свои цвета, фактуры и рисунки.\n' +
+      'Подобрать покрытие под ваш интерьер непросто, но мы Вам с этим поможем.',
+    button: 'Связаться с нами',
+    link: '',
+  },
 };
 
 const KEY = 'home_content';
+const OLD_CONSULT_TEXT =
+  'Мы знаем: вариантов много, у каждого свои цвета, фактуры и рисунки.\nПодобрать покрытие под ваш интерьер непросто, и мы с этим поможем.';
 
 /** Контент главной: сохранённый JSON поверх значений по умолчанию (по блокам). */
 export async function getHome(): Promise<HomeContent> {
@@ -61,6 +119,8 @@ export async function getHome(): Promise<HomeContent> {
     for (const k of Object.keys(home) as (keyof HomeContent)[]) {
       if (saved[k]) Object.assign(home[k], saved[k]);
     }
+    // Первый текст консультации (10.11.2026) владелец заменил своим: сохранённый без правок меняем на новый
+    if (home.consult.text === OLD_CONSULT_TEXT) home.consult.text = DEFAULT_HOME.consult.text;
     return home;
   } catch {
     return home;
@@ -74,6 +134,15 @@ export async function saveHome(content: HomeContent): Promise<void> {
 }
 
 /** Все пути картинок, на которые ссылается контент (чтобы удалять ненужные файлы). */
+/** Фото плиток разделов на главной: public/img/home/<slug>.webp, из каталогов (без водяных знаков и логотипов) */
+/** Слайды баннера по разделам (владелец, 10.11.2026): public/img/home/banner/<slug>.webp (1920 px) и -800/-1400.webp,
+ *  фото в интерьере из каталогов, «Паркет» с domparketa.kg. У «Строительной химии» крупного фото в интерьере нет. */
+export const HOME_BANNER: Record<string, number> = {
+  linoleum: 1920, carpet: 1706, 'carpet-tiles': 1422, vinyl: 1600, laminate: 1920, parquet: 1920,
+};
+
+export const HOME_TILE_IMAGES = ['linoleum', 'carpet', 'carpet-tiles', 'vinyl', 'laminate', 'parquet', 'adhesives'];
+
 export function homeImages(c: HomeContent): string[] {
   return c.hero.images.filter(Boolean);
 }

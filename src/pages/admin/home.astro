@@ -1,14 +1,17 @@
 ---
-// Редактор главной страницы: главный экран, о компании, заголовки блоков разделов, брендов, новостей и контактов.
+// Редактор главной страницы (вид по образцу berryalloc.com, 10.11.2026): главный экран, приветствие, плитки разделов
+// с краткими описаниями, блок консультации. Прежние блоки (о компании, бренды, новости, контакты) на главной не выводятся,
+// их значения сохраняются как были.
 import AdminLayout from '../../layouts/AdminLayout.astro';
 import { getHome, homeImages, saveHome, type HomeContent } from '../../server/home.ts';
-import { PLACEHOLDER_KEYS } from '../../server/settings.ts';
+import { getSections } from '../../server/sections.ts';
 import { formFiles, removeUploads, saveImage, uploadUrl } from '../../server/uploads.ts';
 import { withFlash } from '../../server/admin.ts';
-import { int, str, strs } from '../../server/util.ts';
+import { str, strs } from '../../server/util.ts';
 
 let error = '';
 const current = await getHome();
+const sections = await getSections();
 
 if (Astro.request.method === 'POST') {
   const data = await Astro.request.formData();
@@ -30,17 +33,23 @@ if (Astro.request.method === 'POST') {
     }
 
     const next: HomeContent = {
-      hero: { title: str(data, 'hero_title'), text: str(data, 'hero_text'), button: str(data, 'hero_button'), link: str(data, 'hero_link'), images: hero },
-      about: {
-        title: str(data, 'about_title'),
-        text: String(data.get('about_text') ?? '').trim(),
-        linkText: str(data, 'about_linkText'),
-        link: str(data, 'about_link'),
+      hero: {
+        title: str(data, 'hero_title'), text: str(data, 'hero_text'), button: str(data, 'hero_button'), link: str(data, 'hero_link'), images: hero,
+        sectionSlides: data.get('hero_sections') === '1',
       },
-      sections: { title: str(data, 'sections_title'), text: str(data, 'sections_text') },
-      brands: { title: str(data, 'brands_title'), text: str(data, 'brands_text') },
-      news: { title: str(data, 'news_title'), count: Math.max(0, Math.min(12, int(data, 'news_count', 3))) },
-      contact: { title: str(data, 'contact_title'), text: str(data, 'contact_text') },
+      about: current.about,
+      sections: current.sections,
+      brands: current.brands,
+      news: current.news,
+      contact: current.contact,
+      welcome: { title: str(data, 'welcome_title'), text: str(data, 'welcome_text') },
+      catalog: {
+        title: str(data, 'catalog_title'),
+        button: str(data, 'catalog_button'),
+        texts: Object.fromEntries(sections.map((s) => [s.slug, str(data, `tile_${s.slug}`)])),
+        hidden: sections.filter((s) => data.get(`tile_hide_${s.slug}`) === '1').map((s) => s.slug),
+      },
+      consult: { title: str(data, 'consult_title'), text: str(data, 'consult_text'), button: str(data, 'consult_button'), link: str(data, 'consult_link') },
     };
     await saveHome(next);
     // Удаляем файлы, на которые больше нет ссылок
@@ -64,13 +73,15 @@ const h = current;
   {error && <div class="flash err">{error}</div>}
   <p class="muted small">
     Перенос строки в заголовке главного экрана — клавиша Enter. Пустой заголовок у блока — блок не показывается.
-    Карточки разделов и логотипы берутся из «Разделов» и «Брендов». В тексте о компании можно вставлять контакты:
-    {PLACEHOLDER_KEYS.map((k, i) => <Fragment>{i > 0 && ', '}<code>{`{{${k}}}`}</code></Fragment>)}.
+    Плитки разделов берутся из «Разделов»: название, ссылка, порядок.
   </p>
 
   <form method="post" enctype="multipart/form-data">
     <div class="card">
       <h2>1. Главный экран</h2>
+      <label class="check"><input type="checkbox" name="hero_sections" value="1" checked={h.hero.sectionSlides} />
+        Показывать фото разделов (линолеум, ковролин, ковровая плитка, кварц-винил, ламинат, паркет) с названием раздела и кнопкой</label>
+      <p class="hint">Снимите галочку, чтобы вернуть загруженные ниже фото и заголовок главного экрана.</p>
       <div class="form-grid">
         <div class="field full">
           <label for="hero_title">Заголовок</label>
@@ -111,84 +122,64 @@ const h = current;
     </div>
 
     <div class="card">
-      <h2>2. О компании</h2>
+      <h2>2. Приветствие</h2>
       <div class="form-grid">
         <div class="field full">
-          <label for="about_title">Заголовок</label>
-          <input type="text" id="about_title" name="about_title" value={h.about.title} />
+          <label for="welcome_title">Заголовок</label>
+          <input type="text" id="welcome_title" name="welcome_title" value={h.welcome.title} />
         </div>
         <div class="field full">
-          <label>Текст</label>
-          <textarea name="about_text" data-editor data-height="220">{h.about.text}</textarea>
-        </div>
-        <div class="field">
-          <label for="about_linkText">Текст ссылки</label>
-          <input type="text" id="about_linkText" name="about_linkText" value={h.about.linkText} />
-        </div>
-        <div class="field">
-          <label for="about_link">Ссылка</label>
-          <input type="text" id="about_link" name="about_link" value={h.about.link} />
+          <label for="welcome_text">Текст</label>
+          <textarea id="welcome_text" name="welcome_text" rows="4">{h.welcome.text}</textarea>
         </div>
       </div>
     </div>
 
     <div class="card">
-      <h2>3. Разделы</h2>
+      <h2>3. Разделы (плитки с фото)</h2>
       <div class="form-grid">
         <div class="field">
-          <label for="sections_title">Заголовок</label>
-          <input type="text" id="sections_title" name="sections_title" value={h.sections.title} />
+          <label for="catalog_title">Заголовок</label>
+          <input type="text" id="catalog_title" name="catalog_title" value={h.catalog.title} />
         </div>
         <div class="field">
-          <label for="sections_text">Текст под заголовком</label>
-          <input type="text" id="sections_text" name="sections_text" value={h.sections.text} />
+          <label for="catalog_button">Текст кнопки на плитке</label>
+          <input type="text" id="catalog_button" name="catalog_button" value={h.catalog.button} />
         </div>
+        {
+          sections.map((s) => (
+            <div class="field full">
+              <label for={`tile_${s.slug}`}>{s.name}{!s.isPublished && ' (скрыт)'}: краткое описание</label>
+              <textarea id={`tile_${s.slug}`} name={`tile_${s.slug}`} rows="2">{h.catalog.texts[s.slug] ?? ''}</textarea>
+              <label class="check small"><input type="checkbox" name={`tile_hide_${s.slug}`} value="1" checked={h.catalog.hidden.includes(s.slug)} /> не показывать плитку на главной</label>
+            </div>
+          ))
+        }
       </div>
-      <p class="hint">Сами карточки: <a href="/admin/sections">Разделы</a>.</p>
+      <p class="hint">Пустое описание — берётся краткое описание из <a href="/admin/sections">Разделов</a>. Порядок и видимость плиток — там же.</p>
     </div>
 
     <div class="card">
-      <h2>4. Производители</h2>
+      <h2>4. Консультация</h2>
       <div class="form-grid">
-        <div class="field">
-          <label for="brands_title">Заголовок</label>
-          <input type="text" id="brands_title" name="brands_title" value={h.brands.title} />
+        <div class="field full">
+          <label for="consult_title">Заголовок</label>
+          <input type="text" id="consult_title" name="consult_title" value={h.consult.title} />
+        </div>
+        <div class="field full">
+          <label for="consult_text">Текст (Enter — новая строка)</label>
+          <textarea id="consult_text" name="consult_text" rows="3">{h.consult.text}</textarea>
         </div>
         <div class="field">
-          <label for="brands_text">Текст под заголовком</label>
-          <input type="text" id="brands_text" name="brands_text" value={h.brands.text} />
+          <label for="consult_button">Текст кнопки</label>
+          <input type="text" id="consult_button" name="consult_button" value={h.consult.button} />
+        </div>
+        <div class="field">
+          <label for="consult_link">Ссылка кнопки</label>
+          <input type="text" id="consult_link" name="consult_link" value={h.consult.link} />
+          <div class="hint">Пусто — WhatsApp из «Настроек сайта»</div>
         </div>
       </div>
-      <p class="hint">Логотипы: <a href="/admin/brands">Бренды</a>.</p>
-    </div>
-
-    <div class="card">
-      <h2>5. Новости</h2>
-      <div class="form-grid">
-        <div class="field">
-          <label for="news_title">Заголовок</label>
-          <input type="text" id="news_title" name="news_title" value={h.news.title} />
-        </div>
-        <div class="field">
-          <label for="news_count">Сколько последних новостей показывать (0 — блок скрыт)</label>
-          <input type="number" id="news_count" name="news_count" value={h.news.count} min="0" max="12" />
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <h2>6. Контакты</h2>
-      <div class="form-grid">
-        <div class="field">
-          <label for="contact_title">Заголовок</label>
-          <input type="text" id="contact_title" name="contact_title" value={h.contact.title} />
-        </div>
-        <div class="field">
-          <label for="contact_text">Текст</label>
-          <input type="text" id="contact_text" name="contact_text" value={h.contact.text} />
-        </div>
-      </div>
-      <p class="hint">Адрес, телефон и почта берутся из «Настроек сайта».</p>
     </div>
 
     <div class="form-actions sticky-actions"><button class="btn" type="submit">Сохранить главную</button></div>
