@@ -11,7 +11,7 @@ import { getActiveBrands, getSectionBySlug, getSections } from '../server/sectio
 import { pagePath } from '../server/section-guides.ts';
 import { fillPlaceholders, getSettings, officeMaps } from '../server/settings.ts';
 import { plainText } from '../server/util.ts';
-import { breadcrumbJsonLd, clip, organizationJsonLd, sectionDescription, sectionTitle, siteBase, withSiteName } from '../server/seo.ts';
+import { aboutPageJsonLd, breadcrumbJsonLd, clip, organizationJsonLd, sectionDescription, sectionTitle, siteBase, withSiteName } from '../server/seo.ts';
 import { findRedirect } from '../server/redirects.ts';
 
 const raw = Astro.params.path ?? '';
@@ -45,7 +45,11 @@ const base = siteBase(Astro.url.origin);
 const heading = section ? section.heading || section.name : '';
 const crumbsLd = section ? breadcrumbJsonLd(base, [{ name: heading, url: `/${section.slug}` }]) : undefined;
 // На странице «Контакты» — разметка компании (адрес, телефон, часы работы)
-const pageLd = page?.slug === 'contact' ? organizationJsonLd(settings, base, `${base}/img/og-evropol.jpg`) : undefined;
+const pageLd = page?.slug === 'contact' ? organizationJsonLd(settings, base, `${base}/img/og-evropol.jpg`)
+  : page?.slug === 'about'
+    ? aboutPageJsonLd(settings, base, '/about', page.seoTitle || withSiteName(page.title, settings), page.seoDescription,
+        [...pageContent.matchAll(/<img[^>]+src="(\/[^"]+)"/g)].map((m) => m[1]))
+    : undefined;
 // На странице «Контакты» справа от текста — Google-карта с точкой офиса
 const maps = page?.slug === 'contact' ? officeMaps(settings) : [];
 ---

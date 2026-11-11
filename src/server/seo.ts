@@ -168,6 +168,41 @@ export function organizationJsonLd(s: Settings, base: string, image?: string) {
   };
 }
 
+/**
+ * Страница «О компании»: AboutPage с годом основания и фото заводов. Организация та же, что на главной (@id),
+ * поэтому Google связывает страницу с компанией.
+ */
+export function aboutPageJsonLd(s: Settings, base: string, path: string, title: string, description: string, images: string[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'AboutPage',
+        '@id': `${base}${path}#webpage`,
+        url: `${base}${path}`,
+        name: title,
+        description: description || undefined,
+        inLanguage: 'ru',
+        isPartOf: { '@id': `${base}/#website` },
+        about: { '@id': `${base}/#organization` },
+        primaryImageOfPage: images[0] ? `${base}${images[0]}` : undefined,
+        image: orUndef(images.map((src) => `${base}${src}`)),
+      },
+      {
+        '@type': 'Organization',
+        '@id': `${base}/#organization`,
+        name: s.site_name,
+        url: `${base}/`,
+        logo: `${base}/apple-touch-icon.png`,
+        foundingDate: '2000',
+        areaServed: 'KG',
+        address: { '@type': 'PostalAddress', streetAddress: streetOnly(s.address), addressLocality: CITY, addressCountry: 'KG' },
+        telephone: e164(s.phone_main),
+      },
+    ],
+  };
+}
+
 /** Хлебные крошки для Google: Главная → раздел. */
 export function breadcrumbJsonLd(base: string, items: { name: string; url: string }[]) {
   return {

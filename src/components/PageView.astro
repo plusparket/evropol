@@ -12,7 +12,9 @@ interface Props {
   meta?: string;
 }
 const { title, html, parents = [], meta } = Astro.props;
-const aside = Astro.slots.has('aside');
+// Пустой слот (например, {maps.length > 0 && …} без карт) Astro тоже считает заполненным: проверяем, что в нём есть разметка
+const asideHtml = Astro.slots.has('aside') ? (await Astro.slots.render('aside')).trim() : '';
+const aside = asideHtml !== '';
 const width = aside ? 'ppage-wide' : 'ppage-narrow';
 ---
 
@@ -30,7 +32,7 @@ const width = aside ? 'ppage-wide' : 'ppage-narrow';
       aside ? (
         <div class="ppage-cols">
           <div class="ppage-text" set:html={html} />
-          <aside class="ppage-aside"><slot name="aside" /></aside>
+          <aside class="ppage-aside" set:html={asideHtml} />
         </div>
       ) : (
         <div class="ppage-text" set:html={html} />
