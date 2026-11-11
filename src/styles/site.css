@@ -89,6 +89,31 @@ h1, h2, h3 { font-weight: 700; }
 .ph-drop-list a:hover, .ph-drop-list a.active { background: var(--band); color: var(--navy); }
 /* «Связаться с нами» и Instagram — над меню справа */
 .ph-aside { position: absolute; top: 12px; right: 15px; display: flex; align-items: center; gap: 14px; }
+.ph-search { position: relative; }
+.ph-search input {
+  width: 200px; height: 32px; padding: 0 32px 0 12px; border: 1px solid var(--line); border-radius: 16px; background: #fff;
+  color: var(--text); font-size: 14px; outline: none; transition: border-color .2s, width .25s;
+}
+.ph-search input:focus { border-color: var(--g, var(--navy)); }
+.ph-search input::-webkit-search-cancel-button { display: none; }
+.ph-search button { position: absolute; top: 0; right: 4px; width: 28px; height: 32px; padding: 0; border: 0; background: none; color: var(--muted); cursor: pointer; }
+.ph-search button:hover { color: var(--g, var(--navy)); }
+.pdrawer-search { margin-bottom: 14px; }
+/* В шапке поле поиска стоит под «Связаться с нами» и Instagram, во всю их ширину, и не заходит на меню */
+.ph-aside { flex-wrap: wrap; justify-content: flex-end; row-gap: 8px; width: 210px; }
+.ph-aside .ph-search { flex-basis: 100%; }
+.ph-aside .ph-search input { width: 100%; }
+.ph-search-i { display: none; color: var(--g, var(--navy)); }
+/* Узкие экраны с меню в строку: поле не помещается рядом с меню, вместо него значок лупы, ведущий на /search */
+@media (max-width: 1180px) {
+  .ph-aside { width: auto; }
+  .ph-aside .ph-search { display: none; }
+  .ph-search-i { display: grid; place-items: center; width: 26px; height: 26px; }
+}
+@media (max-width: 860px) { .ph-search-i { display: none; } }
+.ph-search-m { display: none; }
+.pdrawer-search input, .pdrawer-search input:focus { width: 100%; height: 40px; border-radius: 20px; font-size: 15px; }
+.pdrawer-search button { height: 40px; }
 .ph-contact { padding-right: 14px; border-right: 1px solid var(--line); color: var(--muted); font-size: 14px; letter-spacing: .5px; white-space: nowrap; }
 .ph-contact:hover { color: var(--navy); }
 .ph-insta { display: block; width: 26px; height: 26px; }
@@ -120,6 +145,19 @@ h1, h2, h3 { font-weight: 700; }
 .phero-slide { position: absolute; inset: 0; opacity: 0; transition: opacity 1.1s ease; }
 .phero-slide:first-child { position: relative; }
 .phero-slide.active { opacity: 1; }
+.phero-slide:not(.active) { pointer-events: none; }
+/* Фото разделов: баннер целиком на первом экране вместе с подписью (высота экрана минус шапка), фото по центру */
+.phero--sections { height: min(56.25vw, calc(100svh - 180px)); min-height: 220px; }
+.phero--sections .phero-slide:first-child { position: absolute; }
+.phero--sections .phero-slide img, .phero--sections .phero-slide:first-child img { height: 100%; object-position: 50% 60%; }
+/* Подпись слайда с фото раздела: белая плашка слева внизу, название раздела и ссылка на каталог */
+.phero-label {
+  position: absolute; left: clamp(16px, 4vw, 64px); bottom: clamp(20px, 4vw, 56px); z-index: 2; display: flex; flex-direction: column; gap: 6px;
+  padding: clamp(14px, 1.8vw, 24px) clamp(18px, 2.2vw, 30px); background: rgba(255, 255, 255, .9); color: var(--ink);
+}
+.phero-label-name { color: var(--g, var(--ink)); font: 700 clamp(22px, 2.6vw, 36px)/1.15 var(--font); }
+.phero-label-more { color: var(--text); font: 600 15px/1.3 var(--font); }
+.phero-label:hover .phero-label-more { color: var(--g, var(--accent)); }
 .phero-slide img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .phero-slide:first-child img { height: auto; }
 /* Без фото: светлый фон со штрихами, как полосы логотипа */
@@ -419,6 +457,11 @@ h1, h2, h3 { font-weight: 700; }
 .gs-card .gs-num { background: #fff; color: var(--gs-c); }
 .gs-card a { color: #fff; text-decoration: underline; }
 .gs-card-text { padding-bottom: 30px; }
+/* Карточка без рисунка (владелец 11.11.2026: на «Укладке» ковровой плитки только текст) */
+.gs-card:not(:has(> img)) { grid-template-columns: 1fr; }
+.gs-band:not(.gs-band--pile):not(:has(img)) { padding-bottom: 30px; }
+.gs-pair:not(:has(img)) { align-items: stretch; }
+.gs-band:not(:has(img)) > h2 { margin-bottom: 30px; }
 .gs-card img { display: block; align-self: end; width: 100%; height: auto; margin-bottom: -36px; }
 .gs-band { margin: 0 0 84px; padding: 34px 24px 0; background: var(--band); }
 .gs-band > h2 { margin-bottom: 50px; }
@@ -561,6 +604,9 @@ h1, h2, h3 { font-weight: 700; }
   .ph-burger { display: flex; position: absolute; right: 12px; top: 50%; }
   .ph-logo img, .ph--compact .ph-logo img { height: 36px; }
   .ph--compact .ph-aside { display: none; }
+  .ph-aside .ph-search { display: none; }
+  .ph-aside { width: auto; }
+  .ph-search-m { display: grid; place-items: center; position: absolute; left: 12px; top: 50%; width: 44px; height: 44px; color: var(--g, var(--navy)); }
   .ptiles { margin: 0; grid-template-columns: 1fr 1fr; }
   .ptiles a { border-left: 0; border-right: 1px solid var(--band); }
   .ptiles a:nth-child(2n) { border-right: 0; }
@@ -648,3 +694,131 @@ h1, h2, h3 { font-weight: 700; }
 .theme-forest .pf-bottom { color: #8fae9b; }
 /* Сайты разделов (body.ss): заголовок страницы зелёный, остальное — из переменных выше */
 .theme-forest .ss h1 { color: var(--g); }
+.psalon-text ul { margin: 0 0 14px; padding-left: 22px; }
+.psalon-text li { margin-bottom: 6px; }
+.psalon-text a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+
+/* --- Главная по образцу berryalloc.com/en (10.11.2026) -------------------------------------------------------------
+ * Приветствие узкой колонкой по центру, «Поиск по продуктам»: три плитки в ряд (фото 16:9, название цветом раздела,
+ * текст, кнопка-плашка того же цвета), блок консультации по центру с кнопкой. Цвета — оттенки зелёного логотипа. */
+.bw { padding: clamp(36px, 4vw, 48px) 0 clamp(40px, 5vw, 56px); }
+.bw-in { max-width: 894px; margin: 0 auto; padding: 0 15px; }
+.bw-title { margin: 0 0 16px; color: var(--ink); font: 700 clamp(24px, 2.2vw, 30px)/1.3 var(--font); }
+.bw p { margin: 0; color: var(--text); font-size: 17px; line-height: 1.6; }
+
+.bt { padding: 0 0 clamp(28px, 3vw, 40px); }
+.bt-head { margin: 0 0 30px; color: var(--ink); font: 700 clamp(24px, 2.2vw, 30px)/1.3 var(--font); }
+.bt-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 56px 32px; }
+.bt-card { --c: #006338; --c-text: #fff; display: flex; flex-direction: column; width: calc((100% - 64px) / 3); }
+.bt-card:nth-child(3n + 2) { --c: #557a64; }
+.bt-card:nth-child(3n) { --c: #a9bfae; --c-text: #10261b; }
+.bt-img { display: block; aspect-ratio: 416 / 232; overflow: hidden; background: var(--band); }
+.bt-img img, .bt-img span { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .6s; }
+.bt-card:hover .bt-img img { transform: scale(1.04); }
+.bt-body { display: flex; flex-direction: column; flex: 1; align-items: flex-start; padding: 26px 32px 0; }
+.bt-title { margin: 0 0 14px; font: 700 clamp(22px, 2vw, 28px)/1.2 var(--font); }
+.bt-title a { color: var(--c); }
+.bt-card:nth-child(3n) .bt-title a { color: #7f9c86; }
+.bt-body p { margin: 0 0 20px; color: var(--text); font-size: 16px; line-height: 1.5; }
+.bt-btn { margin-top: auto; padding: 14px 25px; background: var(--c); color: var(--c-text); font: 600 16px/1.2 var(--font); transition: filter .2s; }
+.bt-btn:hover { filter: brightness(.88); }
+
+.bc { padding: 16px 0 clamp(50px, 6vw, 72px); text-align: center; }
+.bc-title { max-width: 900px; margin: 0 auto 18px; color: var(--ink); font: 700 clamp(22px, 2.2vw, 30px)/1.3 var(--font); }
+.bc p { margin: 0 0 24px; color: var(--text); font-size: 16px; line-height: 1.6; }
+.bc-btn { display: inline-block; padding: 16px 25px; background: var(--g, var(--ink)); color: #fff; font: 600 16px/1.2 var(--font); }
+.bc-btn:hover { background: #004b2a; color: #fff; }
+/* Заголовки главной зелёные, как заголовки страниц и блоков в «Лесном» дизайне */
+.theme-forest .bw-title, .theme-forest .bt-head, .theme-forest .bc-title { color: var(--g); }
+@media (max-width: 960px) {
+  .bt-card { width: calc((100% - 32px) / 2); }
+}
+@media (max-width: 600px) {
+  .bt-grid { gap: 40px; }
+  .bt-card { width: 100%; }
+  .bt-body { padding: 20px 4px 0; }
+  .bc p br { display: none; }
+}
+@media (max-width: 600px) {
+  .phero-label { left: 12px; bottom: 12px; padding: 8px 12px; gap: 0; }
+  .phero-label-name { font-size: 18px; }
+  .phero-label-more { display: none; }
+}
+
+/* --- Поиск по сайту (/search) -------------------------------------------------------- */
+.psearch-form { display: flex; gap: 12px; max-width: 720px; margin-bottom: 26px; }
+.psearch-form input { flex: 1; min-width: 0; height: 48px; padding: 0 16px; border: 1px solid #cfd9d2; background: #fff; color: var(--text); font-size: 17px; outline: none; }
+.psearch-form input:focus { border-color: var(--g, var(--navy)); }
+.psearch-count, .psearch-none { margin: 0 0 30px; color: var(--muted); font-size: 16px; }
+.psearch-none { max-width: 720px; }
+.psearch-block { margin-bottom: 44px; }
+.psearch-block h2 { margin: 0 0 18px; color: var(--g, var(--ink)); font: 700 24px/1.2 var(--font); }
+.psearch-block h2 span { color: var(--muted); font-size: 16px; font-weight: 400; }
+.psearch-list { display: grid; gap: 18px; max-width: 860px; margin: 0; padding: 0; list-style: none; }
+.psearch-list a { color: var(--ink); font-size: 18px; font-weight: 700; }
+.psearch-list a:hover { color: var(--g, var(--accent)); }
+.psearch-list p { margin: 4px 0 0; color: var(--muted); font-size: 15px; line-height: 1.5; }
+.psearch-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 28px 24px; }
+.psearch-card { display: flex; flex-direction: column; gap: 4px; color: var(--ink); }
+.psearch-img { display: block; aspect-ratio: 1; margin-bottom: 8px; overflow: hidden; background: var(--band); }
+.psearch-img img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+.psearch-card:hover .psearch-img img { transform: scale(1.04); }
+.psearch-sec { color: var(--muted); font-size: 13px; }
+.psearch-name { font-weight: 700; line-height: 1.35; }
+.psearch-card:hover .psearch-name { color: var(--g, var(--accent)); }
+.psearch-pages { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 30px; }
+.psearch-pages a, .psearch-pages span { display: grid; place-items: center; min-width: 38px; height: 38px; padding: 0 8px; border: 1px solid var(--line); color: var(--text); }
+.psearch-pages span { border-color: var(--g, var(--ink)); background: var(--g, var(--ink)); color: #fff; }
+@media (max-width: 600px) {
+  .psearch-grid { grid-template-columns: repeat(2, 1fr); gap: 20px 14px; }
+  .psearch-form .pbtn { padding: 14px 18px; }
+}
+
+/* --- Шапка в две строки (владелец, 11.11.2026) ------------------------------------------------
+   Сверху тонкая строка: Главная, О нас, Новости и события, Контакты, справа Instagram и поиск.
+   Ниже логотип и все разделы продуктов. При прокрутке верхняя строка прячется. */
+.ph-top { border-bottom: 1px solid var(--line); background: #fff; }
+.ph-top-in { display: flex; align-items: center; justify-content: space-between; gap: 20px; max-width: 1200px; height: 44px; margin: 0 auto; padding: 0 15px; }
+.ph-top-nav { display: flex; align-items: center; gap: 4px; margin-left: -10px; }
+.ph-top-nav a { padding: 6px 10px; color: var(--muted); font-size: 14px; letter-spacing: .4px; white-space: nowrap; }
+.ph-top-nav a:hover, .ph-top-nav a.active { color: var(--g, var(--navy)); }
+.ph-top-aside { display: flex; align-items: center; gap: 14px; }
+.ph-top-aside .ph-insta { width: 22px; height: 22px; }
+.ph-top-aside .ph-search input { width: 230px; }
+.ph--two .ph-in { height: 84px; }
+.ph--two.ph--compact .ph-top { display: none; }
+.ph--two.ph--compact .ph-in { height: 68px; }
+.ph-nav--sections { flex: 1; justify-content: flex-end; margin-left: 20px; }
+.ph-nav--sections > a { padding: 10px 11px; font-size: 15px; letter-spacing: .3px; }
+@media (max-width: 1180px) {
+  .ph-nav--sections > a { padding: 10px 7px; font-size: 14px; letter-spacing: 0; }
+  .ph--two .ph-logo img { height: 40px; }
+}
+@media (max-width: 1000px) {
+  .ph-nav--sections > a { padding: 8px 5px; font-size: 13px; }
+  .ph--two .ph-logo img { height: 34px; }
+}
+@media (max-width: 860px) {
+  .ph--two .ph-top { display: none; }
+  .ph--two .ph-in, .ph--two.ph--compact .ph-in { height: 64px; padding: 0 15px; }
+  .ph--two .ph-logo img { height: 36px; }
+}
+
+/* --- Анкета «Оставьте контакты» на странице «Контакты» (владелец, 11.11.2026) -------------------------------------- */
+.plead { margin: 40px 0 var(--pad); padding: 32px; background: var(--band); max-width: 760px; }
+.plead-title { margin: 0 0 8px; color: var(--navy); font: 700 clamp(22px, 2.4vw, 28px)/1.25 var(--font); }
+.plead-text { margin: 0 0 22px; color: var(--text); }
+.plead-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+.plead-form label { display: grid; gap: 6px; color: var(--text); font-size: 14px; font-weight: 600; }
+.plead-form input { width: 100%; box-sizing: border-box; padding: 12px 14px; border: 1px solid var(--line); background: #fff;
+  font: 400 16px/1.3 var(--font); color: var(--text); border-radius: 0; }
+.plead-form input:focus { outline: 2px solid var(--navy); outline-offset: -1px; }
+.plead-form .pbtn { margin-top: 6px; cursor: pointer; }
+.plead-trap { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.plead-msg { margin: 0 0 18px; padding: 12px 14px; font-weight: 600; }
+.plead-msg--ok { background: #e3f1e8; color: #0b4d2c; }
+.plead-msg--err { background: #fbe9e7; color: #8a1f11; }
+@media (max-width: 640px) {
+  .plead { padding: 22px 16px; }
+  .plead-row { grid-template-columns: 1fr; }
+}

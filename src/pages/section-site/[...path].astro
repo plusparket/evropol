@@ -23,7 +23,7 @@ import {
 import { fillPlaceholders, getSettings, isMohawkCatalog, siteSettings } from '../../server/settings.ts';
 import { plainText } from '../../server/util.ts';
 import {
-  breadcrumbJsonLd, categoryDescription, namesakeSuffix, productDescription, sectionSiteDescription, sectionSiteJsonLd, withSiteName,
+  breadcrumbJsonLd, categoryDescription, clip, productAlt, productDescription, productPageTitle, fitTitle, sectionSiteDescription, sectionSiteJsonLd, withSiteName,
 } from '../../server/seo.ts';
 
 const site = Astro.locals.site;
@@ -73,17 +73,19 @@ const productCrumbs = withGroups
   : catalogOnly
     ? [{ name: site.name, url: at() }]
     : [{ name: site.name, url: `${at()}#catalog` }];
-// «HARO Oak Contura Smoked, TRITTY 100», для одноимённых товаров с отличием: «…, узкая доска Loft»
-const productTitle = product
-  ? [[product.brand, product.name].filter(Boolean).join(' '), product.collection, namesakeSuffix(product, products)].filter(Boolean).join(', ')
-  : '';
+// «Линолеум Дуб Какао 547, Texville», для одноимённых товаров с отличием: «…, узкая доска»
 const cat = catPath?.at(-1);
 // Категория с тем же названием, что у другой («Разное» в двух группах): в заголовке и группа
 const catTitle = cat && catPath && catPath.length > 1 && tree.flatMap((g) => [g, ...g.children]).some((c) => c.id !== cat.id && c.name === cat.name)
   ? `${catPath[0].name}: ${cat.name}`
   : cat?.name;
-// Вторая и дальше страницы каталога (?page=N) не индексируем: товары и так есть в sitemap.xml
-const paged = Astro.url.searchParams.has('page');
+// Вторая и дальше страницы каталога (?page=N) открыты для Google, у каждой свой адрес (canonical) и заголовок:
+// так Google доходит по ссылкам до всех коллекций. Неправильный номер (?page=1, ?page=abc) не индексируем.
+const pageParam = Astro.url.searchParams.get('page');
+const pageNo = pageParam && /^[1-9]\d*$/.test(pageParam) ? Number(pageParam) : 1;
+const paged = pageParam !== null && pageNo < 2;
+const pageQuery = pageNo > 1 ? `?page=${pageNo}` : '';
+const pageTitle = pageNo > 1 ? `, страница ${pageNo}` : '';
 const catalog = { color: site.siteColor, layout: site.siteLayout };
 // Дизайн по образцу mohawkflooring.com (настройка «mohawk_catalogs»): крошки в серой полосе под шапкой
 const mh = (catalogOnly || withGroups) && isMohawkCatalog(allSettings, site.slug);
@@ -94,9 +96,9 @@ const siteCrumb = { name: site.name, url: at() };
   isHome ? (
     <SiteLayout
       catalog={catalog}
-      title={site.seoTitle || withSiteName(`${heading} в Бишкеке: каталог`, settings)}
+      title={(!pageTitle && site.seoTitle) || withSiteName(`${heading} в Бишкеке: каталог${pageTitle}`, settings)}
       description={sectionSiteDescription(site, products, settings)}
-      canonicalPath={at()}
+      canonicalPath={at() + pageQuery}
       image={site.image ? `/uploads/${site.image}` : undefined}
       jsonLd={[
         sectionSiteJsonLd(site, settings, siteUrl(site), base, site.image ? `${base}/uploads/${site.image}` : undefined),
@@ -117,21 +119,21 @@ const siteCrumb = { name: site.name, url: at() };
   ) : product ? (
     <SiteLayout
       catalog={catalog}
-      title={product.seoTitle || withSiteName(`${productTitle} в Бишкеке`, settings)}
-      description={productDescription(product, settings)}
+      title={product.seoTitle || productPageTitle(product, products, site.slug, settings)}
+      description={productDescription(product, settings, products, site.slug)}
       canonicalPath={at(product.slug)}
       image={product.images[0] ? `/uploads/${product.images[0]}` : undefined}
       jsonLd={breadcrumbJsonLd(base, [...productCrumbs, { name: product.name, url: at(product.slug) }])}
       crumbs={[...productCrumbs, { name: product.name }]}
     >
-      <ProductView product={product} related={related} settings={settings} crumbs={productCrumbs} samples={!withGroups} colors={colors} />
+      <ProductView product={product} related={related} settings={settings} crumbs={productCrumbs} samples={!withGroups} colors={colors} alt={productAlt(product, site.slug)} />
     </SiteLayout>
   ) : catPath && cat ? (
     <SiteLayout
       catalog={catalog}
-      title={withSiteName(`${catTitle}: ${heading} в Бишкеке`, settings)}
+      title={fitTitle([`${catTitle}: ${heading} в Бишкеке${pageTitle}`, `${catTitle}: ${heading}${pageTitle}`, `${catTitle}${pageTitle}`], settings)}
       description={categoryDescription(cat.name, cat.description, cat.productIds.length, settings)}
-      canonicalPath={at(cat.slug)}
+      canonicalPath={at(cat.slug) + pageQuery}
       noindex={paged}
       jsonLd={breadcrumbJsonLd(base, [{ name: site.name, url: at() }, ...catPath.map((c) => ({ name: c.name, url: at(c.slug) }))])}
       crumbs={[siteCrumb, ...catPath.map((c) => ({ name: c.name, url: at(c.slug) }))]}
@@ -146,7 +148,7 @@ const siteCrumb = { name: site.name, url: at() };
     <SiteLayout
       catalog={catalog}
       title={guide.seoTitle || withSiteName(guide.title, settings)}
-      description={guide.seoDescription || plainText(guide.content) || undefined}
+      description={guide.seoDescription || clip(plainText(guide.content, 400)) || undefined}
       canonicalPath={guide.url}
       jsonLd={breadcrumbJsonLd(base, [{ name: site.name, url: at() }, { name: guide.title, url: guide.url }])}
       crumbs={[siteCrumb, { name: guide.title }]}

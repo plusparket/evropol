@@ -13105,7 +13105,7 @@
    ],
    "description": "<p>Линолеум «Гранада 764» из коллекции Atlas.</p>\n<p>Общая толщина 1,8 мм, защитный слой 0,15 мм, основа: с ворсом, класс нагрузки 21. Ширина рулона 2,5 / 3 / 3,5 / 4 м, пожарная опасность КМ5.</p>",
    "images": [
-    "https://www.magazinsaima.ru/image/cache2/data/linoleum/ivc/atlas/linoleum-ivc-atlas-granada-764-700x700.jpg"
+    "seed:photos/linoleum/granada-764-1.webp"
    ],
    "sourceUrl": "",
    "inStock": true
@@ -13201,9 +13201,8 @@
    ],
    "description": "<p>Линолеум «Шатель 531» из коллекции Ecotex.</p>\n<p>Общая толщина 2,1 мм, защитный слой 0,15 мм, основа: войлок, класс нагрузки 22. Пожарная опасность КМ5. Производство: Бельгия.</p>",
    "images": [
-    "https://linoleum.msk.ru/upload/iblock/800/800950a9338b4ed157688aaa693fcb51.jpg",
-    "https://33kvadrata.ru/image/cache/catalog/ivc/ecotex/chatel531-800x800.jpg",
-    "https://linoleum.msk.ru/upload/iblock/e16/e1649e7af2b1436405719f31e2348be4.jpg"
+    "seed:photos/linoleum/shatel-531-1.webp",
+    "seed:photos/linoleum/shatel-531-2.webp"
    ],
    "sourceUrl": "",
    "inStock": true
@@ -13295,8 +13294,8 @@
    ],
    "description": "<p>Линолеум «Кьянти 532» из коллекции Neo.</p>\n<p>Общая толщина 2,5 мм, защитный слой 0,2 мм, основа: ПВХ, класс нагрузки 22. Пожарная опасность КМ5. Производство: Бельгия.</p>",
    "images": [
-    "https://linoleum.msk.ru/upload/iblock/a9b/a9b656ecf805e08d45540f9b4f42c30e.jpg",
-    "https://linoleum.msk.ru/upload/iblock/2ff/2ffe7d8a3bc87e07d21eb8dd18bf0dac.jpg"
+    "seed:photos/linoleum/kyanti-532-1.webp",
+    "seed:photos/linoleum/kyanti-532-2.webp"
    ],
    "sourceUrl": "",
    "inStock": true
@@ -13638,7 +13637,7 @@
    ],
    "description": "<p>Линолеум «Тавел 42» из коллекции Smart Neo.</p>\n<p>Общая толщина 2,6 мм, защитный слой 0,21 мм, основа: вспененный ПВХ, класс нагрузки 22. Ширина рулона 2 / 2,5 / 3 / 3,5 / 4 м, пожарная опасность КМ5.</p>",
    "images": [
-    "https://ivc-rus.ru/attachments/4/9/490906c9faf9796e5fb979e007ee9c8e_m.jpg"
+    "seed:photos/linoleum/tavel-42-1.webp"
    ],
    "sourceUrl": "",
    "inStock": true
@@ -13742,9 +13741,9 @@
    ],
    "description": "<p>Линолеум «Марас T44» из коллекции Corsa.</p>\n<p>Общая толщина 2 мм, защитный слой 0,41 мм, основа: компакт ПВХ, класс нагрузки 32. Ширина рулона 2 / 2,5 / 3 / 3,5 / 4 м, пожарная опасность КМ2.</p>",
    "images": [
-    "https://linoleum.msk.ru/upload/iblock/eb3/eb3edf4826c3eb3bc6773ae240bcd248.jpg",
-    "https://ivc-rus.ru/attachments/1/1/111b3a4a8f5c20e75a28d40a5d7600e3_m.jpg",
-    "https://linoleum.msk.ru/upload/iblock/dd3/dd32211da06b596eeebcdb06e4f82e1e.jpg"
+    "seed:photos/linoleum/maras-t44-1.webp",
+    "seed:photos/linoleum/maras-t44-2.webp",
+    "seed:photos/linoleum/maras-t44-3.webp"
    ],
    "sourceUrl": "",
    "inStock": true
@@ -13848,9 +13847,9 @@
    ],
    "description": "<p>Линолеум «Картье W36» из коллекции Woodlike.</p>\n<p>Общая толщина 2,7 мм, защитный слой 0,4 мм, основа: вспененный ПВХ, класс нагрузки 31. Ширина рулона 2 / 2,5 / 3 / 3,5 / 4 м, пожарная опасность КМ5.</p>",
    "images": [
-    "https://linoleum.msk.ru/upload/iblock/bb2/bb2091e9cd7d531620989d5fa2114a34.jpg",
-    "https://ivc-rus.ru/attachments/0/1/01afe18f88fed69597b3925768cf55f4_m.jpg",
-    "https://linoleum.msk.ru/upload/iblock/cc7/cc72228ebea27e2f2da9cac8fb014840.jpg"
+    "seed:photos/linoleum/karte-w36-1.webp",
+    "seed:photos/linoleum/karte-w36-2.webp",
+    "seed:photos/linoleum/karte-w36-3.webp"
    ],
    "sourceUrl": "",
    "inStock": true
@@ -13962,9 +13961,8 @@
    ],
    "description": "<p>Линолеум «Шербур W48» из коллекции Greenline.</p>\n<p>Общая толщина 4,1 мм, защитный слой 0,4 мм, основа: двойная ПВХ + текстиль, класс нагрузки 32. Ширина рулона 2 / 2,5 / 3 / 3,5 / 4 м, пожарная опасность КМ5.</p>",
    "images": [
-    "https://linoleum.msk.ru/upload/iblock/43e/43ec27fe887dd015d79429536a74ac00.jpg",
-    "https://ivc-rus.ru/attachments/1/1/11eea89f200a3e33fb8785b12599d0e6_m.jpg",
-    "https://linoleum-kovrolin.ru/32048-large_default/greenline-cherbourg-oak-w48.jpg"
+    "seed:photos/linoleum/sherbur-w48-1.webp",
+    "seed:photos/linoleum/sherbur-w48-2.webp"
    ],
    "sourceUrl": "",
    "inStock": true
@@ -14076,8 +14074,8 @@
    ],
    "description": "<p>Линолеум «Осло 538» из коллекции Greenline.</p>\n<p>Общая толщина 4,1 мм, защитный слой 0,4 мм, основа: двойная ПВХ + текстиль, класс нагрузки 32. Ширина рулона 2 / 2,5 / 3 / 3,5 / 4 м, пожарная опасность КМ5.</p>",
    "images": [
-    "https://linoleum-kovrolin.ru/13945-large_default/greenline-oslo-538.jpg",
-    "https://ivc-rus.ru/attachments/6/6/66aa2928baaab3921526a7367ac1869f_m.jpg"
+    "seed:photos/linoleum/oslo-538-1.webp",
+    "seed:photos/linoleum/oslo-538-2.webp"
    ],
    "sourceUrl": "",
    "inStock": true
@@ -14169,8 +14167,8 @@
    ],
    "description": "<p>Линолеум «Аллюр 569» из коллекции Neotex.</p>\n<p>Общая толщина 2,5 мм, защитный слой 0,2 мм, основа: войлок, класс нагрузки 23. Пожарная опасность КМ5. Производство: Бельгия.</p>",
    "images": [
-    "https://linoleum.msk.ru/upload/iblock/1c2/1c254909a25cb452cd5acab4a0ea1061.jpg",
-    "https://linoleum.msk.ru/upload/iblock/995/995328e2670d020ec89967b14a4636b4.jpg"
+    "seed:photos/linoleum/allyur-569-1.webp",
+    "seed:photos/linoleum/allyur-569-2.webp"
    ],
    "sourceUrl": "",
    "inStock": true
@@ -14282,9 +14280,9 @@
    ],
    "description": "<p>Линолеум «Морзин 547» из коллекции Neotex.</p>\n<p>Общая толщина 2,5 мм, защитный слой 0,22 мм, основа: двойная ПВХ + текстиль, класс нагрузки 22. Ширина рулона 2 / 2,5 / 3 / 3,5 / 4 м, пожарная опасность КМ5.</p>",
    "images": [
-    "https://linoleum.msk.ru/upload/iblock/185/1855d856de4de7779af74adda19fef20.jpg",
-    "https://ivc-rus.ru/attachments/b/a/bac36805ad8bd72c8b11a374aa4c47dc_m.jpg",
-    "https://linoleum.msk.ru/upload/iblock/548/54814a14130f0888cc13d2a43127bd1c.jpg"
+    "seed:photos/linoleum/morzin-547-1.webp",
+    "seed:photos/linoleum/morzin-547-2.webp",
+    "seed:photos/linoleum/morzin-547-3.webp"
    ],
    "sourceUrl": "",
    "inStock": true
@@ -14396,9 +14394,9 @@
    ],
    "description": "<p>Линолеум «Торонто 506» из коллекции Neotex.</p>\n<p>Общая толщина 2,5 мм, защитный слой 0,22 мм, основа: двойная ПВХ + текстиль, класс нагрузки 22. Ширина рулона 2 / 2,5 / 3 / 3,5 / 4 м, пожарная опасность КМ5.</p>",
    "images": [
-    "https://linoleum.msk.ru/upload/iblock/e02/e02521234b5738e52eabd8afbfefae90.jpg",
-    "https://ivc-rus.ru/attachments/b/b/bb34a5b5b7f2423f5ea62fa26feda292_m.jpg",
-    "https://linoleum.msk.ru/upload/iblock/294/294514e0b8b1d51c487ec87bda9e2ad7.jpg"
+    "seed:photos/linoleum/toronto-506-1.webp",
+    "seed:photos/linoleum/toronto-506-2.webp",
+    "seed:photos/linoleum/toronto-506-3.webp"
    ],
    "sourceUrl": "",
    "inStock": true
@@ -14607,7 +14605,7 @@
    ],
    "description": "<p>Линолеум «Остин 796» из коллекции Texart.</p>\n<p>Общая толщина 3,5 мм, защитный слой 0,33 мм, основа: двойная ПВХ + текстиль, класс нагрузки 31. Ширина рулона 2 / 2,5 / 3 / 3,5 / 4 м, пожарная опасность КМ5.</p>",
    "images": [
-    "https://ivc-rus.ru/attachments/b/6/b60854df9c273b4241218cdb13501673_m.jpg"
+    "seed:photos/linoleum/ostin-796-1.webp"
    ],
    "sourceUrl": "",
    "inStock": true
@@ -14715,7 +14713,7 @@
    ],
    "description": "<p>Линолеум «Берлин 556» из коллекции Texart.</p>\n<p>Общая толщина 3,5 мм, защитный слой 0,3–0,33 мм, основа: двойная ПВХ + текстиль, класс нагрузки 31. Ширина рулона 2 / 2,5 / 3 / 3,5 / 4 м, пожарная опасность КМ5.</p>",
    "images": [
-    "https://ivc-rus.ru/attachments/6/f/6f830beed3ed4212b592ac17dc70a9c7_m.jpg"
+    "seed:photos/linoleum/berlin-556-1.webp"
    ],
    "sourceUrl": "",
    "inStock": true
@@ -14815,8 +14813,8 @@
    ],
    "description": "<p>Линолеум «Дуб Сатин 750» из коллекции Texmark.</p>\n<p>Общая толщина 2,8 мм, защитный слой 0,4 мм, основа: дублированная (ПВХ + полиэстер), класс нагрузки 32. Пожарная опасность КМ5. Производство: Россия.</p>",
    "images": [
-    "https://www.maxidom.ru/upload/iblock/583/58317e3e5a48b58bd298ad06863a7ad3.jpg",
-    "https://ivc-rus.ru/attachments/b/d/bd0a18f97ee6ebbfd5b7cd7550681dba_m.jpg"
+    "seed:photos/linoleum/dub-satin-750-1.webp",
+    "seed:photos/linoleum/dub-satin-750-2.webp"
    ],
    "sourceUrl": "",
    "inStock": true
@@ -14928,7 +14926,7 @@
    ],
    "description": "<p>Линолеум «Дуб Шелдон W42» из коллекции Texmark.</p>\n<p>Общая толщина 2,9 мм, защитный слой 0,45 мм, основа: текстильная (тёплая), класс нагрузки 32. Ширина рулона 2 / 2,5 / 3 / 3,5 / 4 м, пожарная опасность КМ5.</p>",
    "images": [
-    "https://ivc-rus.ru/attachments/4/5/45d9aafc92a64a51a0d0c53419f5e40a_m.jpg"
+    "seed:photos/linoleum/dub-sheldon-w42-1.webp"
    ],
    "sourceUrl": "",
    "inStock": true
@@ -15032,7 +15030,7 @@
    ],
    "description": "<p>Линолеум «Якобсен W32» из коллекции Texmark.</p>\n<p>Общая толщина 2,9 мм, защитный слой 0,45 мм, основа: текстильная (тёплая), класс нагрузки 32. Ширина рулона 2 / 2,5 / 3 / 3,5 / 4 м, пожарная опасность КМ5.</p>",
    "images": [
-    "https://ivc-rus.ru/attachments/4/f/4f311467fb9b72225047d7d43afb4e2a_m.jpg"
+    "seed:photos/linoleum/yakobsen-w32-1.webp"
    ],
    "sourceUrl": "",
    "inStock": true
@@ -15128,8 +15126,8 @@
    ],
    "description": "<p>Линолеум «Хелена 569» из коллекции Silverline.</p>\n<p>Общая толщина 3 мм, защитный слой 0,3 мм, основа: ПВХ, класс нагрузки 23–31. Пожарная опасность КМ5. Производство: Бельгия.</p>",
    "images": [
-    "https://linoleum.msk.ru/upload/iblock/6f1/6f1f90bef5a1f5c3aa6cf4113169bee5.jpg",
-    "https://linoleum.msk.ru/upload/iblock/4ce/4cec772c1ba18d07739e09b5cb15c683.jpg"
+    "seed:photos/linoleum/khelena-569-1.webp",
+    "seed:photos/linoleum/khelena-569-2.webp"
    ],
    "sourceUrl": "",
    "inStock": true
@@ -15225,8 +15223,8 @@
    ],
    "description": "<p>Линолеум «Валентина 558» из коллекции Silverline.</p>\n<p>Общая толщина 3 мм, защитный слой 0,3 мм, основа: ПВХ, класс нагрузки 23–31. Пожарная опасность КМ5. Производство: Бельгия.</p>",
    "images": [
-    "https://linoleum.msk.ru/upload/iblock/148/1486377b6a0faf489059e0d55478c13a.jpg",
-    "https://linoleum.msk.ru/upload/iblock/03d/03d59e584a8cebd994188dd7a36388eb.jpg"
+    "seed:photos/linoleum/valentina-558-1.webp",
+    "seed:photos/linoleum/valentina-558-2.webp"
    ],
    "sourceUrl": "",
    "inStock": true
@@ -15330,9 +15328,9 @@
    ],
    "description": "<p>Линолеум «Аня 589» из коллекции Silverline.</p>\n<p>Общая толщина 3 мм, защитный слой 0,3 мм, основа: ПВХ, класс нагрузки 23–31. Пожарная опасность КМ5. Производство: Бельгия.</p>",
    "images": [
-    "https://linoleum.msk.ru/upload/iblock/67a/67a665a3377037a6d3a4463c8d5c030a.jpg",
-    "https://www.strousnab.ru/wa-data/public/shop/products/27/04/10427/images/21098/21098.750x0.jpg",
-    "https://linoleum.msk.ru/upload/iblock/dee/dee7f95e471fe77e87235139b37c1718.jpg"
+    "seed:photos/linoleum/anya-589-1.webp",
+    "seed:photos/linoleum/anya-589-2.webp",
+    "seed:photos/linoleum/anya-589-3.webp"
    ],
    "sourceUrl": "",
    "inStock": true
@@ -15444,9 +15442,9 @@
    ],
    "description": "<p>Линолеум «Берлин 506» из коллекции Greenline.</p>\n<p>Общая толщина 4,1 мм, защитный слой 0,4 мм, основа: двойная ПВХ + текстиль, класс нагрузки 32. Ширина рулона 2 / 2,5 / 3 / 3,5 / 4 м, пожарная опасность КМ5.</p>",
    "images": [
-    "https://linoleum.msk.ru/upload/iblock/13c/13c206e762411a689c91dbb32f6f039e.jpg",
-    "https://ivc-rus.ru/attachments/4/d/4d7f1627615480640ff2a3256acf79fb_m.jpg",
-    "https://linoleum.msk.ru/upload/iblock/0e5/0e5ba721aac7b5a6d6954fb708a7117d.jpg"
+    "seed:photos/linoleum/berlin-506-1.webp",
+    "seed:photos/linoleum/berlin-506-2.webp",
+    "seed:photos/linoleum/berlin-506-3.webp"
    ],
    "sourceUrl": "",
    "inStock": true
@@ -15526,8 +15524,8 @@
    ],
    "description": "<p>Линолеум «Берлин 531» из коллекции Greenline.</p>\n<p>Общая толщина 4 мм, защитный слой 0,4 мм, класс нагрузки 23–32. Ширина рулона 1,5 / 2 / 2,5 / 3 / 3,5 / 4 м.</p>",
    "images": [
-    "https://dostroydom.by/published/publicdata/BYCHKOSERGEI1DOSTROY/attachments/SC/products_pictures/berlin-531_0.jpg",
-    "https://linoleum-kovrolin.ru/5519-large_default/greenline-berlin-531.jpg"
+    "seed:photos/linoleum/berlin-531-1.webp",
+    "seed:photos/linoleum/berlin-531-2.webp"
    ],
    "sourceUrl": "",
    "inStock": true
@@ -15639,9 +15637,9 @@
    ],
    "description": "<p>Линолеум «Морзин 832» из коллекции Greenline.</p>\n<p>Общая толщина 4,1 мм, защитный слой 0,4 мм, основа: двойная ПВХ + текстиль, класс нагрузки 32. Ширина рулона 2 / 2,5 / 3 / 3,5 / 4 м, пожарная опасность КМ5.</p>",
    "images": [
-    "https://linoleum.msk.ru/upload/iblock/1b5/1b5bb6c90b3950b42f8596074b060794.jpg",
-    "https://ivc-rus.ru/attachments/1/e/1e1330d26c5ec7e2d369a9b5639bb683_m.jpg",
-    "https://linoleum.msk.ru/upload/iblock/42e/42ef9c2e7af7cbf2201bd8fec7547aab.jpg"
+    "seed:photos/linoleum/morzin-832-1.webp",
+    "seed:photos/linoleum/morzin-832-2.webp",
+    "seed:photos/linoleum/morzin-832-3.webp"
    ],
    "sourceUrl": "",
    "inStock": true
@@ -15830,8 +15828,8 @@
    ],
    "description": "<p>Линолеум «Авалон 991» из коллекции Vision.</p>\n<p>Общая толщина 2,2 мм, защитный слой 0,4 мм, основа: ПВХ, класс нагрузки 23–32. Пожарная опасность КМ5. Производство: Бельгия.</p>",
    "images": [
-    "https://linoleum.msk.ru/upload/iblock/166/166f6d14be6862cf876bdb75045b130a.jpg",
-    "https://linoleum.msk.ru/upload/iblock/9ee/9ee2e69f4ad403dd41ed27a329cee987.jpg"
+    "seed:photos/linoleum/avalon-991-1.webp",
+    "seed:photos/linoleum/avalon-991-2.webp"
    ],
    "sourceUrl": "",
    "inStock": true
@@ -15927,8 +15925,8 @@
    ],
    "description": "<p>Линолеум «Авалон 917» из коллекции Vision.</p>\n<p>Общая толщина 2,2 мм, защитный слой 0,4 мм, основа: ПВХ, класс нагрузки 23–32. Пожарная опасность КМ5. Производство: Бельгия.</p>",
    "images": [
-    "https://linoleum.msk.ru/upload/iblock/cad/cad21c4f35debd06a4118d743ef55d01.jpg",
-    "https://linoleum.msk.ru/upload/iblock/89e/89eb92c3ca582f3ed587fc5492d2d705.jpg"
+    "seed:photos/linoleum/avalon-917-1.webp",
+    "seed:photos/linoleum/avalon-917-2.webp"
    ],
    "sourceUrl": "",
    "inStock": true

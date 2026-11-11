@@ -1,0 +1,27 @@
+---
+// Анкета по вопросам сотрудничества (владелец, 11.11.2026): имя, фамилия, компания, почта. Заявка уходит на
+// info@evropol.kg и сохраняется в админке «Заявки» (src/server/leads.ts, отправка — src/pages/lead.ts).
+const state = Astro.url.searchParams.get('lead');
+const page = Astro.url.pathname;
+---
+
+<section class="plead" id="lead" aria-labelledby="lead-title">
+  <h2 class="plead-title" id="lead-title">Оставьте контакты</h2>
+  <p class="plead-text">Менеджер салона свяжется с Вами и ответит на все Ваши вопросы.</p>
+  {state === 'ok' && <p class="plead-msg plead-msg--ok" role="status">Спасибо! Заявка отправлена, менеджер скоро с Вами свяжется.</p>}
+  {state === 'err' && <p class="plead-msg plead-msg--err" role="alert">Заявка не отправлена: укажите имя и проверьте адрес почты.</p>}
+  {state === 'busy' && <p class="plead-msg plead-msg--err" role="alert">Слишком много заявок подряд. Попробуйте через несколько минут или позвоните нам.</p>}
+  <form class="plead-form" action="/lead" method="post" data-astro-reload>
+    <input type="hidden" name="page" value={page} />
+    <div class="plead-row">
+      <label>Имя<input type="text" name="first_name" required maxlength="100" autocomplete="given-name" /></label>
+      <label>Фамилия<input type="text" name="last_name" maxlength="100" autocomplete="family-name" /></label>
+    </div>
+    <div class="plead-row">
+      <label>Компания<input type="text" name="company" maxlength="200" autocomplete="organization" /></label>
+      <label>Email<input type="email" name="email" required maxlength="200" autocomplete="email" /></label>
+    </div>
+    <label class="plead-trap" aria-hidden="true">Сайт<input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
+    <button type="submit" class="pbtn">Отправить</button>
+  </form>
+</section>

@@ -46,6 +46,12 @@ services:
       SEED_ON_START: ${SEED_ON_START:-false}
       # Ключ доступа Instagram для новостей (docs/news-instagram.md); пусто — посты не загружаются
       INSTAGRAM_TOKEN: ${INSTAGRAM_TOKEN:-}
+      # Почтовый сервер для писем о заявках из анкеты «Оставьте контакты» (docs/leads.md); пусто — заявки только в админке
+      SMTP_HOST: ${SMTP_HOST:-}
+      SMTP_PORT: ${SMTP_PORT:-465}
+      SMTP_USER: ${SMTP_USER:-}
+      SMTP_PASS: ${SMTP_PASS:-}
+      SMTP_FROM: ${SMTP_FROM:-}
       TZ: ${TZ:-Asia/Bishkek}
       PGTZ: ${TZ:-Asia/Bishkek}
     volumes:

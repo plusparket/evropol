@@ -38,10 +38,13 @@ document.addEventListener('click', (e) => {
       b.classList.toggle('active', b === sw);
       b.setAttribute('aria-pressed', String(b === sw));
     });
-    const { href = '', img = '', name = '', wa = '' } = sw.dataset;
+    const { href = '', img = '', name = '', wa = '', alt = '' } = sw.dataset;
     card.querySelectorAll<HTMLAnchorElement>('[data-mhc-link]').forEach((a) => (a.href = href));
     const pic = card.querySelector<HTMLImageElement>('[data-mhc-img]');
-    if (pic && img) pic.src = img;
+    if (pic && img) {
+      pic.src = img;
+      pic.alt = alt;
+    }
     const label = card.querySelector('[data-mhc-name]');
     if (label) label.textContent = name;
     const waLink = card.querySelector<HTMLAnchorElement>('[data-mhc-wa]');

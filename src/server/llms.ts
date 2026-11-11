@@ -99,6 +99,9 @@ const brandsOf = (d: Data, s: Section) => d.brands.filter((b) => b.sectionId ===
 /** Бренды без раздела */
 const looseBrands = (d: Data) => d.brands.filter((b) => !d.sections.some((s) => s.id === b.sectionId));
 
+/** Краткое описание раздела с плитки главной (как на сайте), иначе краткое описание раздела */
+const tileText = (d: Data, s: Section) => d.home.catalog.texts[s.slug] || s.summary || '';
+
 function summary(d: Data): string {
   const s = d.settings;
   // «Ковровая плитка» → «ковровая плитка», но аббревиатуры («SPC / LVT …») не трогаем
@@ -126,7 +129,7 @@ function contacts(d: Data, mainContact = true): string[] {
   }
   lines.push(`- Email: ${s.email}${wa}.`);
   if (s.instagram_url) lines.push(`- Instagram: ${s.instagram_url}`);
-  if (mainContact) lines.push(`- [Контакты и карта](${d.base}/contact)`);
+  if (mainContact) lines.push(`- [Контакты, карта и анкета «Оставьте контакты»](${d.base}/contact): менеджер салона свяжется с вами`);
   return lines;
 }
 
@@ -134,7 +137,7 @@ function contacts(d: Data, mainContact = true): string[] {
 export async function buildLlmsTxt(origin: string): Promise<string> {
   const d = await load(origin);
   const out: string[] = [`# ${d.settings.site_name}`, '', `> ${summary(d)}`, ''];
-  if (d.home.about.title && d.home.about.text) out.push(oneLine(htmlToMd(fillPlaceholders(d.home.about.text, d.settings), d.base), 600), '');
+  if (d.home.welcome.text) out.push(d.home.welcome.text, '');
   out.push(CATALOG_NOTE, '');
   out.push('## Контакты', '', ...contacts(d), '');
 
@@ -146,7 +149,8 @@ export async function buildLlmsTxt(origin: string): Promise<string> {
     // Страница раздела со ссылкой переадресует по ней: даём ссылку сразу
     const url = s.siteHost ? siteUrl(s) : link ? abs(d, link) : `${d.base}/${s.slug}`;
     const site = s.siteHost ? ` · каталог: ${countText(d, s)}, список товаров: ${siteUrl(s)}/llms.txt` : '';
-    out.push(`- [${s.heading || s.name}](${url})${brands ? `: ${brands}` : ''}${site}`);
+    const text = tileText(d, s);
+    out.push(`- [${s.heading || s.name}](${url})${text ? `: ${text}` : ''}${brands ? ` ${brands}` : ''}${site}`);
   }
   for (const b of looseBrands(d)) out.push(`- ${b.name}${b.link ? `: ${abs(d, b.link)}` : ''}`);
   out.push('');
@@ -163,6 +167,7 @@ export async function buildLlmsTxt(origin: string): Promise<string> {
   out.push('## Optional', '');
   out.push(`- [Полная версия](${d.base}/llms-full.txt): тексты разделов, описания брендов, страницы и новости`);
   out.push(`- [Карта сайта](${d.base}/sitemap.xml)`);
+  out.push(`- Поиск по сайту (товары, разделы, страницы, новости): ${d.base}/search?q=<запрос>`);
   return out.join('\n') + '\n';
 }
 
@@ -173,9 +178,10 @@ export async function buildLlmsFullTxt(origin: string): Promise<string> {
   const out: string[] = [`# ${d.settings.site_name}: полная информация`, '', `> ${summary(d)}`, ''];
   out.push(`Сайт: ${d.base}. Данные собраны с сайта ${new Date().toLocaleDateString('ru-RU')} и всегда совпадают с ним.`, '');
 
-  if (d.home.about.title && d.home.about.text) out.push('## О компании', '', md(d.home.about.text), '');
+  if (d.home.welcome.title || d.home.welcome.text) out.push('## О магазине', '', ...[d.home.welcome.title, d.home.welcome.text].filter(Boolean), '');
   out.push(CATALOG_NOTE, '');
   out.push('## Контакты', '', ...contacts(d), '');
+  if (d.home.consult.title) out.push(`${d.home.consult.title} ${d.home.consult.text.replace(/\s*\n\s*/g, ' ')}`.trim(), '');
 
   out.push('## Разделы', '');
   for (const s of d.sections) {
@@ -183,6 +189,7 @@ export async function buildLlmsFullTxt(origin: string): Promise<string> {
       ? `Каталог: ${siteUrl(s)} (${countText(d, s)}). Описания и характеристики товаров: ${siteUrl(s)}/llms-full.txt`
       : `Адрес: ${d.base}/${s.slug}`);
     if (sectionLink(s) && !s.siteHost) out.push(`${linkLabel(s)}: ${abs(d, sectionLink(s))}`);
+    if (tileText(d, s)) out.push('', tileText(d, s));
     if (s.description) out.push('', md(s.description));
     for (const b of brandsOf(d, s)) {
       out.push('', `**${b.name}**${b.link ? ` (коллекции: ${abs(d, b.link)})` : ''}`);
