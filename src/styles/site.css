@@ -147,7 +147,7 @@ h1, h2, h3 { font-weight: 700; }
 .phero-slide.active { opacity: 1; }
 .phero-slide:not(.active) { pointer-events: none; }
 /* Фото разделов: баннер целиком на первом экране вместе с подписью (высота экрана минус шапка), фото по центру */
-.phero--sections { height: min(56.25vw, calc(100svh - 150px)); min-height: 220px; }
+.phero--sections { height: min(56.25vw, calc(100svh - 180px)); min-height: 220px; }
 .phero--sections .phero-slide:first-child { position: absolute; }
 .phero--sections .phero-slide img, .phero--sections .phero-slide:first-child img { height: 100%; object-position: 50% 60%; }
 /* Подпись слайда с фото раздела: белая плашка слева внизу, название раздела и ссылка на каталог */
@@ -767,4 +767,34 @@ h1, h2, h3 { font-weight: 700; }
 @media (max-width: 600px) {
   .psearch-grid { grid-template-columns: repeat(2, 1fr); gap: 20px 14px; }
   .psearch-form .pbtn { padding: 14px 18px; }
+}
+
+/* --- Шапка в две строки (владелец, 11.11.2026) ------------------------------------------------
+   Сверху тонкая строка: Главная, О нас, Новости и события, Контакты, справа Instagram и поиск.
+   Ниже логотип и все разделы продуктов. При прокрутке верхняя строка прячется. */
+.ph-top { border-bottom: 1px solid var(--line); background: #fff; }
+.ph-top-in { display: flex; align-items: center; justify-content: space-between; gap: 20px; max-width: 1200px; height: 44px; margin: 0 auto; padding: 0 15px; }
+.ph-top-nav { display: flex; align-items: center; gap: 4px; margin-left: -10px; }
+.ph-top-nav a { padding: 6px 10px; color: var(--muted); font-size: 14px; letter-spacing: .4px; white-space: nowrap; }
+.ph-top-nav a:hover, .ph-top-nav a.active { color: var(--g, var(--navy)); }
+.ph-top-aside { display: flex; align-items: center; gap: 14px; }
+.ph-top-aside .ph-insta { width: 22px; height: 22px; }
+.ph-top-aside .ph-search input { width: 230px; }
+.ph--two .ph-in { height: 84px; }
+.ph--two.ph--compact .ph-top { display: none; }
+.ph--two.ph--compact .ph-in { height: 68px; }
+.ph-nav--sections { flex: 1; justify-content: flex-end; margin-left: 20px; }
+.ph-nav--sections > a { padding: 10px 11px; font-size: 15px; letter-spacing: .3px; }
+@media (max-width: 1180px) {
+  .ph-nav--sections > a { padding: 10px 7px; font-size: 14px; letter-spacing: 0; }
+  .ph--two .ph-logo img { height: 40px; }
+}
+@media (max-width: 1000px) {
+  .ph-nav--sections > a { padding: 8px 5px; font-size: 13px; }
+  .ph--two .ph-logo img { height: 34px; }
+}
+@media (max-width: 860px) {
+  .ph--two .ph-top { display: none; }
+  .ph--two .ph-in, .ph--two.ph--compact .ph-in { height: 64px; padding: 0 15px; }
+  .ph--two .ph-logo img { height: 36px; }
 }

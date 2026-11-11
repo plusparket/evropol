@@ -73,3 +73,39 @@ export async function upgradeSeo2026(): Promise<string[]> {
   await sql`INSERT INTO settings (key, value) VALUES (${FLAG}, ${new Date().toISOString()}) ON CONFLICT (key) DO NOTHING`;
   return log;
 }
+
+// --- 11.11.2026: описания для Google не длиннее 160 знаков ------------------------------------------
+// Google показывает в выдаче около 160 знаков. У главной было 182, у «О компании» и «Контактов» по 200 (начало текста
+// страницы). Меняется только то, что владелец не правил в админке: описание главной по умолчанию и пустые описания страниц.
+const FLAG_DESC = 'seo_descriptions_2026_11_11';
+const OLD_HOME_DESC =
+  'ЕвроПол: линолеум, ковролин, ковровая плитка, кварцвинил SPC и LVT, ламинат, паркет и строительная химия в Бишкеке. ' +
+  'Образцы в магазине на ул. Матросова 6/1, тел. +996 (779) 37 72 73.';
+export const HOME_DESC =
+  'Линолеум, ковролин, ковровая плитка, кварцвинил, ламинат, паркет и строительная химия в Бишкеке. ' +
+  'Магазин на ул. Матросова 6/1, тел. +996 (779) 37 72 73.';
+const PAGE_DESC: Record<string, string> = {
+  about:
+    'ЕвроПол продаёт напольные покрытия в Бишкеке с 2000 года и везёт товар с заводов Европы. ' +
+    'Магазины на ул. Матросова 6/1, Шабдан Баатыра 354 и в ЭлитСтрое.',
+  contact:
+    'Магазин «ЕвроПол»: г. Бишкек, ул. Матросова 6/1, тел. +996 (779) 37 72 73, Пн–Сб с 9.00 до 17.00. ' +
+    'Второй адрес, карта и WhatsApp на странице.',
+};
+
+export async function upgradeDescriptions2026(): Promise<string[]> {
+  const [done] = await sql`SELECT 1 FROM settings WHERE key = ${FLAG_DESC}`;
+  if (done) return [];
+  const log: string[] = [];
+  await sql.begin(async (tx) => {
+    const home = await tx`UPDATE settings SET value = ${HOME_DESC} WHERE key = 'seo_description' AND value = ${OLD_HOME_DESC}`;
+    if (home.count) log.push('описание главной для Google короче 160 знаков');
+    for (const [slug, text] of Object.entries(PAGE_DESC)) {
+      const res = await tx`UPDATE pages SET seo_description = ${text}, updated_at = now()
+                           WHERE slug = ${slug} AND coalesce(trim(seo_description), '') = ''`;
+      if (res.count) log.push(`описание страницы «${slug}» для Google`);
+    }
+    await tx`INSERT INTO settings (key, value) VALUES (${FLAG_DESC}, ${new Date().toISOString()}) ON CONFLICT (key) DO NOTHING`;
+  });
+  return log;
+}

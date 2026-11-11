@@ -20,7 +20,8 @@ import { upgradeNoBrands } from '../src/server/upgrade-no-brands.ts';
 import { upgradeGuides } from '../src/server/section-guides.ts';
 import { upgradeMohawkAll } from '../src/server/settings.ts';
 import { upgradeSectionTexts } from '../src/server/section-texts.ts';
-import { upgradeSeo2026 } from '../src/server/upgrade-seo-2026-11.ts';
+import { upgradeDescriptions2026, upgradeSeo2026 } from '../src/server/upgrade-seo-2026-11.ts';
+import { upgradeCarpetSpecs } from '../src/server/upgrade-carpet-specs.ts';
 import { upgradeWatermarks } from '../src/server/upgrade-watermarks.ts';
 
 const log = (msg: string) => console.log(`[prepare] ${msg}`);
@@ -56,6 +57,8 @@ export async function prepare(): Promise<void> {
   if (await upgradeMohawkAll()) log('дизайн Mohawk: включён во всех каталогах');
   for (const msg of await upgradeSectionTexts()) log(`тексты разделов: ${msg}`);
   for (const msg of await upgradeSeo2026()) log(`поиск Google (10.11): ${msg}`);
+  for (const msg of await upgradeDescriptions2026()) log(`поиск Google (11.11): ${msg}`);
+  for (const msg of await upgradeCarpetSpecs()) log(msg);
   for (const msg of await upgradeWatermarks()) log(msg);
   await importLegacyPhotos(log).catch((err) => log(`фото со старого сайта: ошибка ${err?.message ?? err}`));
   const made = await ensureHomeVariants();

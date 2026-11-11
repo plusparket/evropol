@@ -103,7 +103,7 @@ const WelcomeTag = home.hero.title && !bannerSections.length ? 'h2' : 'h1';
           {tileSections.map((s) => (
             <article class="bt-card">
               <a class="bt-img" href={sectionHref(s)} tabindex="-1" aria-hidden="true" {...ext(sectionHref(s))}>
-                {tileImg(s) ? <img src={tileImg(s)} alt="" width="900" height="514" loading="lazy" /> : <span />}
+                {tileImg(s) ? <img src={tileImg(s)} alt={`${s.name} в интерьере`} width="900" height="514" loading="lazy" /> : <span />}
               </a>
               <div class="bt-body">
                 <h3 class="bt-title"><a href={sectionHref(s)} {...ext(sectionHref(s))}>{s.name}</a></h3>

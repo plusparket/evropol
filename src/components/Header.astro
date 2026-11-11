@@ -1,8 +1,8 @@
 ---
-// Шапка как на europroject.kg: тонкая синяя полоса сверху, логотип слева, меню в строку («Продукты» раскрывает
-// список разделов), справа сверху «Связаться с нами» и Instagram, под ними поле «Поиск по сайту» (/search). На телефонах меню выдвигается сбоку.
+// Шапка главного сайта (владелец, 11.11.2026): верхняя строка «Главная, О нас, Новости и события, Контакты», справа
+// Instagram и «Поиск по сайту» (/search); ниже логотип и все разделы продуктов в строку. На телефонах меню выдвигается сбоку.
 import type { MenuItem, MenuName } from '../server/content.ts';
-import { sectionHref, sectionUrl, type Section } from '../server/sections.ts';
+import { isExternal, sectionHref, sectionUrl, type Section } from '../server/sections.ts';
 import type { Settings } from '../server/settings.ts';
 import SocialIcon from './SocialIcon.astro';
 import { GUIDES_LABEL } from '../server/section-guides.ts';
@@ -46,6 +46,11 @@ if (guides.length) {
   if (news >= 0) links.splice(news, 1, guideLink);
   else links.push(guideLink);
 }
+// Верхняя строка шапки: все пункты, кроме «Продукты»; «О компании» подписан «О нас» (владелец, 11.11.2026).
+// Подразделы «Укладка и уход» — ссылкой на первый подраздел
+const topLinks: Link[] = links
+  .filter((l) => !l.products)
+  .map((l) => (l.url === '/about' ? { ...l, label: 'О нас' } : l.children ? { ...l, url: l.children[0].url } : l));
 const here = (l: Link) =>
   l.children ? l.children.some((c) => fullPath === c.url) : l.products ? sections.some((s) => path === sectionUrl(s)) : l.url === '/' ? path === '/' : path === l.url || path.startsWith(l.url + '/');
 ---
@@ -98,49 +103,38 @@ const here = (l: Link) =>
       </div>
     </header>
   ) : (
-    <header class="ph" id="ph">
+    <header class="ph ph--two" id="ph">
+    {/* Верхняя строка (владелец, 11.11.2026): Главная, О нас, Новости и события, Контакты, справа Instagram и поиск */}
+    <div class="ph-top">
+      <div class="ph-top-in">
+        <nav class="ph-top-nav" aria-label="Разделы сайта">
+          {topLinks.map((l) => (
+            <a href={l.url} class:list={{ active: here(l) }} target={l.newTab ? '_blank' : undefined}>{l.label}</a>
+          ))}
+        </nav>
+        <div class="ph-top-aside">
+          {settings.instagram_url && <a class="ph-insta" href={settings.instagram_url} target="_blank" rel="noopener" aria-label="Instagram">{forest ? <SocialIcon name="instagram" size={20} /> : <img src="/img/instagram.png" alt="" width="32" height="32" />}</a>}
+          <form class="ph-search" action="/search" method="get" role="search">
+            <input type="search" name="q" placeholder="Поиск по сайту" aria-label="Поиск по сайту" />
+            <button type="submit" aria-label="Найти">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" /><path d="m15.5 15.5 5 5" /></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    {/* Основная строка: логотип и все разделы продуктов */}
     <div class="ph-in">
       <a href="/" class="ph-logo" aria-label={settings.site_name}>
         <img src="/img/evropol-logo.svg" alt={settings.site_name} width="536" height="100" />
       </a>
 
-      <nav class="ph-nav" aria-label="Меню">
-        {
-          links.map((l) =>
-            l.products ? (
-              <div class="ph-drop">
-                <button type="button" class:list={['ph-drop-btn', { active: here(l) }]} aria-haspopup="true" aria-expanded="false" data-drop>{l.label}</button>
-                <div class="ph-drop-list">
-                  {sections.map((s) => <a href={sectionHref(s)} class:list={{ active: path === sectionUrl(s) }}>{s.name}</a>)}
-                </div>
-              </div>
-            ) : l.children ? (
-              <div class="ph-drop">
-                <button type="button" class:list={['ph-drop-btn', { active: here(l) }]} aria-haspopup="true" aria-expanded="false" data-drop>{l.label}</button>
-                <div class="ph-drop-list">
-                  {l.children.map((c) => <a href={c.url} class:list={{ active: fullPath === c.url }}>{c.label}</a>)}
-                </div>
-              </div>
-            ) : (
-              <a href={l.url} class:list={{ active: here(l) }} target={l.newTab ? '_blank' : undefined}>{l.label}</a>
-            ),
-          )
-        }
+      <nav class="ph-nav ph-nav--sections" aria-label="Продукты">
+        {sections.map((s) => (
+          <a href={sectionHref(s)} class:list={{ active: path === sectionUrl(s) }} target={isExternal(sectionHref(s)) ? '_blank' : undefined} rel={isExternal(sectionHref(s)) ? 'noopener' : undefined}>{s.name}</a>
+        ))}
       </nav>
 
-      <div class="ph-aside">
-        <a class="ph-contact" href="/contact">Связаться с нами</a>
-        {settings.instagram_url && <a class="ph-insta" href={settings.instagram_url} target="_blank" rel="noopener" aria-label="Instagram">{forest ? <SocialIcon name="instagram" size={24} /> : <img src="/img/instagram.png" alt="" width="32" height="32" />}</a>}
-        <a class="ph-search-i" href="/search" aria-label="Поиск по сайту">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" /><path d="m15.5 15.5 5 5" /></svg>
-        </a>
-        <form class="ph-search" action="/search" method="get" role="search">
-          <input type="search" name="q" placeholder="Поиск по сайту" aria-label="Поиск по сайту" />
-          <button type="submit" aria-label="Найти">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" /><path d="m15.5 15.5 5 5" /></svg>
-          </button>
-        </form>
-      </div>
       <a class="ph-search-m" href="/search" aria-label="Поиск по сайту">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" /><path d="m15.5 15.5 5 5" /></svg>
       </a>

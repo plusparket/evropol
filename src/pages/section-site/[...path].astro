@@ -23,7 +23,7 @@ import {
 import { fillPlaceholders, getSettings, isMohawkCatalog, siteSettings } from '../../server/settings.ts';
 import { plainText } from '../../server/util.ts';
 import {
-  breadcrumbJsonLd, categoryDescription, productAlt, productDescription, productTitleText, sectionSiteDescription, sectionSiteJsonLd, withSiteName,
+  breadcrumbJsonLd, categoryDescription, clip, productAlt, productDescription, productTitleText, sectionSiteDescription, sectionSiteJsonLd, withSiteName,
 } from '../../server/seo.ts';
 
 const site = Astro.locals.site;
@@ -149,7 +149,7 @@ const siteCrumb = { name: site.name, url: at() };
     <SiteLayout
       catalog={catalog}
       title={guide.seoTitle || withSiteName(guide.title, settings)}
-      description={guide.seoDescription || plainText(guide.content) || undefined}
+      description={guide.seoDescription || clip(plainText(guide.content, 400)) || undefined}
       canonicalPath={guide.url}
       jsonLd={breadcrumbJsonLd(base, [{ name: site.name, url: at() }, { name: guide.title, url: guide.url }])}
       crumbs={[siteCrumb, { name: guide.title }]}
