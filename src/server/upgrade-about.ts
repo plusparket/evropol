@@ -9,6 +9,16 @@ import { sql } from './db.ts';
 import { DEFAULT_HOME, getHome, saveHome } from './home.ts';
 
 const FLAG = 'about_2026_11_06';
+/** 11.11.2026: текст по образцу domparketa.kg, заводы Бельгии, Нидерландов и Германии с фото (без названий брендов) */
+const FLAG_COUNTRIES = 'about_countries_2026_11_11';
+const ABOUT_SEO_TITLE = 'О компании ЕвроПол: напольные покрытия из Европы в Бишкеке';
+export const ABOUT_SEO_DESC =
+  'ЕвроПол с 2000 года везёт в Бишкек линолеум, ковролин, ламинат и клеи с заводов Бельгии, Нидерландов и Германии. ' +
+  'Три магазина, тел. +996 (779) 37 72 73.';
+/** Описание страницы для Google от 11.11.2026 (до нового текста): заменяем, если его не меняли в админке */
+const OLD_ABOUT_SEO_DESC =
+  'ЕвроПол продаёт напольные покрытия в Бишкеке с 2000 года и везёт товар с заводов Европы. ' +
+  'Магазины на ул. Матросова 6/1, Шабдан Баатыра 354 и в ЭлитСтрое.';
 const CONTACT_FLAG = 'contact_shops_2026_11_06';
 /** Текст «Контактов» от 05.11.2026 (один магазин): если его не меняли в админке, ставим список из трёх магазинов */
 const OLD_CONTACT_PAGE = `<p><b>Магазин «{{site_name}}»:</b><br>
@@ -29,6 +39,7 @@ const OLD_HOME_ABOUT_START = '<p>Мы поставляем в Кыргызста
 /** Возвращает список изменений для журнала запуска. */
 export async function upgradeAbout(): Promise<string[]> {
   const log = await upgradeContactShops();
+  log.push(...(await upgradeAboutCountries()));
   const fixed = await sql`UPDATE pages SET content = replace(content, ${OLD_SALON}, ${NEW_SALON}), updated_at = now()
                           WHERE slug IN ('about', 'contact') AND position(${OLD_SALON} in content) > 0`;
   if (fixed.count) log.push('адрес салона «Дом Паркета»: строительный комплекс «Монолит»');
@@ -63,6 +74,34 @@ async function upgradeContactShops(): Promise<string[]> {
       log.push('страница «Контакты»: добавлены салон «Дом Паркета» и магазин на рынке «ЭлитСтрой»');
     }
     await tx`INSERT INTO settings (key, value) VALUES (${CONTACT_FLAG}, '1') ON CONFLICT (key) DO NOTHING`;
+  });
+  return log;
+}
+
+/**
+ * Текст от 11.11.2026 вместо текста от 06.11.2026 (seed/pages/archive/about-2026-11-06.html), если его не меняли
+ * в админке. Ставит SEO-заголовок и описание страницы, если они пустые или прежние.
+ */
+async function upgradeAboutCountries(): Promise<string[]> {
+  const [done] = await sql`SELECT 1 FROM settings WHERE key = ${FLAG_COUNTRIES}`;
+  if (done) return [];
+  const log: string[] = [];
+  const dir = path.resolve(process.cwd(), 'seed', 'pages');
+  const html = (await readFile(path.join(dir, 'about.html'), 'utf8')).trim();
+  const prev = norm(await readFile(path.join(dir, 'archive', 'about-2026-11-06.html'), 'utf8'));
+  await sql.begin(async (tx) => {
+    for (const p of await tx<{ id: number; content: string }[]>`SELECT id, content FROM pages WHERE slug = 'about'`) {
+      if (norm(p.content) !== prev) continue;
+      await tx`UPDATE pages SET content = ${html}, updated_at = now() WHERE id = ${p.id}`;
+      log.push('страница «О компании»: заводы Бельгии, Нидерландов и Германии с фото');
+    }
+    const seo = await tx`UPDATE pages SET seo_title = ${ABOUT_SEO_TITLE},
+                           seo_description = CASE WHEN coalesce(trim(seo_description), '') IN ('', ${OLD_ABOUT_SEO_DESC})
+                                                  THEN ${ABOUT_SEO_DESC} ELSE seo_description END,
+                           updated_at = now()
+                         WHERE slug = 'about' AND coalesce(trim(seo_title), '') = ''`;
+    if (seo.count) log.push('страница «О компании»: заголовок и описание для Google');
+    await tx`INSERT INTO settings (key, value) VALUES (${FLAG_COUNTRIES}, '1') ON CONFLICT (key) DO NOTHING`;
   });
   return log;
 }

@@ -301,6 +301,22 @@ h1, h2, h3 { font-weight: 700; }
 .ppage-text li { margin-bottom: 6px; }
 .ppage-text img { max-width: 100%; height: auto; }
 /* «Укладка и уход» в каталоге раздела: фото слева, текст шага справа (на телефоне — фото над текстом) */
+/* «О компании»: фото заводов слева и справа от текста, как на domparketa.kg (seed/pages/about.html) */
+.pabout { display: flow-root; }
+.ppage-text .pabout p { margin: 0 0 26px; }
+.ppage-text .pabout h2 { clear: both; margin-top: 40px; }
+.ppage-text .pabout img { display: block; width: 100%; border-radius: 4px; }
+.pabout-photo { margin: 6px 0 22px; }
+.pabout-right { float: right; width: 44%; margin-left: 30px; }
+.pabout-left { float: left; width: 40%; margin-right: 30px; }
+.pabout-clear { clear: both; }
+.ppage-text .pabout-photo img { aspect-ratio: 4 / 3; object-fit: cover; }
+.pabout-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 6px; margin-bottom: 22px; }
+.pabout-grid.pabout-left { width: 44%; }
+.ppage-text .pabout-grid img { height: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+@media (max-width: 700px) {
+  .pabout-right, .pabout-left, .pabout-grid.pabout-left { float: none; width: 100%; margin-left: 0; margin-right: 0; }
+}
 .ppage-text .gstep { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; margin: 34px 0; }
 .ppage-text .gstep img { display: block; width: 100%; border-radius: 4px; }
 .ppage-text .gstep h2 { margin-top: 0; }
