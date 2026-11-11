@@ -16,6 +16,7 @@ PostgreSQL 18. Схема — `db/migrations/001_init.sql` и `002_section_sites
 | `menu_items` | ссылки меню: `menu` (`top` — шапка, `footer_company` — подвал), `label`, `url`, `sort_order`, `new_tab` |
 | `settings` | настройки «ключ — значение»; `home_content` — JSON главной, `instagram_token` — продлённый ключ Instagram, `section_site:<раздел>` — отметки первичной настройки сайтов разделов, `catalog_version:<раздел>` — версия загруженного стартового каталога |
 | `redirects` | 301: `from_path` → `to_path`, `hits`, `last_hit` |
+| `leads` | заявки анкеты «Оставьте контакты»: `first_name`, `last_name`, `company`, `email`, `page`, `emailed`, `mail_error` ([leads.md](leads.md)) |
 | `visits_daily` | посетители и просмотры по дням для обзора в админке |
 
 Пути картинок (`image`, `logo`) хранятся относительно тома `uploads` и отдаются по адресу `/uploads/…`.

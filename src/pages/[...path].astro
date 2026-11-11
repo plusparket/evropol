@@ -3,6 +3,7 @@
 import SiteLayout from '../layouts/SiteLayout.astro';
 import NotFound from '../components/NotFound.astro';
 import SectionView from '../components/SectionView.astro';
+import LeadForm from '../components/LeadForm.astro';
 import PageView from '../components/PageView.astro';
 import OfficeMap from '../components/OfficeMap.astro';
 import { getPageBySlug } from '../server/content.ts';
@@ -10,7 +11,7 @@ import { getActiveBrands, getSectionBySlug, getSections } from '../server/sectio
 import { pagePath } from '../server/section-guides.ts';
 import { fillPlaceholders, getSettings, officeMaps } from '../server/settings.ts';
 import { plainText } from '../server/util.ts';
-import { breadcrumbJsonLd, organizationJsonLd, sectionDescription, sectionTitle, siteBase, withSiteName } from '../server/seo.ts';
+import { breadcrumbJsonLd, clip, organizationJsonLd, sectionDescription, sectionTitle, siteBase, withSiteName } from '../server/seo.ts';
 import { findRedirect } from '../server/redirects.ts';
 
 const raw = Astro.params.path ?? '';
@@ -53,7 +54,7 @@ const maps = page?.slug === 'contact' ? officeMaps(settings) : [];
   section ? (
     <SiteLayout
       title={section.seoTitle || sectionTitle(heading, settings)}
-      description={section.seoDescription || plainText(section.description) || sectionDescription(heading, settings)}
+      description={section.seoDescription || clip(plainText(section.description, 400)) || sectionDescription(heading, settings)}
       canonicalPath={`/${section.slug}`}
       image={section.image ? `/uploads/${section.image}` : undefined}
       jsonLd={crumbsLd}
@@ -63,12 +64,13 @@ const maps = page?.slug === 'contact' ? officeMaps(settings) : [];
   ) : page ? (
     <SiteLayout
       title={page.seoTitle || withSiteName(page.title, settings)}
-      description={page.seoDescription || plainText(pageContent) || undefined}
+      description={page.seoDescription || clip(plainText(pageContent, 400)) || undefined}
       canonicalPath={`/${page.slug}`}
       jsonLd={pageLd}
     >
       <PageView title={page.title} html={pageContent}>
         {maps.length > 0 && <OfficeMap slot="aside" maps={maps} variant="side" />}
+        {page.slug === 'contact' && <LeadForm />}
       </PageView>
     </SiteLayout>
   ) : (

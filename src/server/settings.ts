@@ -1,19 +1,23 @@
 import { sql } from './db.ts';
 
+/** Каталоги в дизайне по образцу mohawkflooring.com: все разделы с каталогом (владелец, 09.11.2026) */
+export const MOHAWK_ALL = 'linoleum, carpet, carpet-tiles, vinyl, laminate, adhesives';
+
 /** Все настройки сайта с подписями для админки и значениями по умолчанию. */
 export const SETTINGS_SCHEMA = [
   { group: 'Общее', key: 'site_name', label: 'Название компании (в заголовках страниц и разметке для Google)', default: 'ЕвроПол' },
-  { group: 'Общее', key: 'seo_title', label: 'Заголовок главной страницы (title)', default: 'ЕвроПол: линолеум, ковролин, ковровая плитка, кварцвинил, ламинат, паркет и строительная химия в Бишкеке' },
+  { group: 'Общее', key: 'seo_title', label: 'Заголовок главной страницы (title)', default: 'Напольные покрытия в Бишкеке: магазин ЕвроПол' },
   { group: 'Общее', key: 'seo_description', label: 'Описание главной для поисковиков (meta description)', type: 'textarea',
-    default: 'ЕвроПол: линолеум, ковролин, ковровая плитка, кварцвинил SPC и LVT, ламинат, паркет и строительная химия в Бишкеке. Образцы в магазине на ул. Матросова 6/1, тел. +996 (779) 37 72 73.' },
+    default: 'Линолеум, ковролин, ковровая плитка, кварцвинил, ламинат, паркет и строительная химия в Бишкеке. Магазин на ул. Матросова 6/1, тел. +996 (779) 37 72 73.' },
   { group: 'Общее', key: 'forest_design', label: 'Лесной дизайн главного сайта: зелёная полоса сверху, зелёные кнопки и заголовки, тёмно-зелёный подвал (снимите галочку — вернутся прежние цвета)', type: 'checkbox', default: '1' },
+  { group: 'Общее', key: 'mohawk_catalogs', label: 'Каталоги в дизайне по образцу mohawkflooring.com: адреса разделов через запятую (linoleum, vinyl, carpet …). Пусто — у всех каталогов прежний вид', default: MOHAWK_ALL },
   { group: 'Общее', key: 'copyright', label: 'Текст в подвале ({year} — текущий год)', default: 'Copyright © {year} ЕвроПол. Все права защищены' },
 
   // Контакты: адрес, телефон и почта по просьбе владельца от 27.10.2026
   { group: 'Контакты: офис', key: 'phone_main', label: 'Телефон', default: '+996 (779) 37 72 73' },
   { group: 'Контакты: офис', key: 'address', label: 'Адрес', default: 'г. Бишкек, ул. Матросова 6/1' },
-  { group: 'Контакты: офис', key: 'work_hours', label: 'Режим работы (пусто — не показывается)', default: 'с 9.00 до 17.00' },
-  { group: 'Контакты: офис', key: 'email', label: 'Email', default: 'info@bino.kg' },
+  { group: 'Контакты: офис', key: 'work_hours', label: 'Режим работы (пусто — не показывается)', default: 'Пн–Сб с 9.00 до 17.00' },
+  { group: 'Контакты: офис', key: 'email', label: 'Email', default: 'info@evropol.kg' },
   { group: 'Контакты: офис', key: 'hours_schema', label: 'Часы работы для Google (Mo-Sa 09:00-17:00; дни: Mo Tu We Th Fr Sa Su)', default: 'Mo-Sa 09:00-17:00' },
   { group: 'Контакты: офис', key: 'geo', label: 'Координаты на карте для Google (широта, долгота)', default: '42.8597994, 74.6189611' },
 
@@ -127,10 +131,32 @@ export const PLACEHOLDER_KEYS = [
  */
 export function fillPlaceholders(html: string, settings: Settings): string {
   const allowed = new Set<string>(PLACEHOLDER_KEYS);
-  // В ссылке tel: только цифры и «+»: «tel:{{phone_main}}» → «tel:+996779377273»
-  return html.replace(/(tel:)?\{\{\s*([a-z_]+)\s*\}\}/g, (match, tel: string | undefined, key: string) => {
+  // В ссылке tel: только цифры и «+»: «tel:{{phone_main}}» → «tel:+996779377273»,
+  // в ссылке WhatsApp только цифры: «https://wa.me/{{panel_whatsapp}}» → «https://wa.me/996779377273»
+  return html.replace(/(tel:|https:\/\/wa\.me\/)?\{\{\s*([a-z_]+)\s*\}\}/g, (match, link: string | undefined, key: string) => {
     if (!allowed.has(key)) return match;
     const value = settings[key as SettingKey] ?? '';
-    return tel ? 'tel:' + value.replace(/[^\d+]/g, '') : escapeHtml(value);
+    if (link === 'tel:') return 'tel:' + value.replace(/[^\d+]/g, '');
+    if (link) return link + value.replace(/\D/g, '');
+    return escapeHtml(value);
   });
+}
+
+/** Каталог раздела в дизайне по образцу mohawkflooring.com (настройка «mohawk_catalogs»: linoleum, vinyl …) */
+export function isMohawkCatalog(settings: Settings, slug: string | undefined): boolean {
+  if (!slug) return false;
+  return (settings.mohawk_catalogs ?? '').split(/[\s,;]+/).map((x) => x.trim().replace(/^\/+/, '')).includes(slug);
+}
+
+/**
+ * Один раз при запуске (владелец, 09.11.2026: «давай остальные разделы в таком же стиле»): дизайн Mohawk у всех
+ * каталогов. Меняется только прежнее значение «linoleum»: свой список, сохранённый в админке, остаётся.
+ */
+export async function upgradeMohawkAll(): Promise<boolean> {
+  const FLAG = 'mohawk_all_2026_11_09';
+  const [done] = await sql`SELECT 1 FROM settings WHERE key = ${FLAG}`;
+  if (done) return false;
+  const updated = await sql`UPDATE settings SET value = ${MOHAWK_ALL} WHERE key = 'mohawk_catalogs' AND trim(value) = 'linoleum'`;
+  await sql`INSERT INTO settings (key, value) VALUES (${FLAG}, '1') ON CONFLICT (key) DO NOTHING`;
+  return updated.count > 0;
 }

@@ -1,0 +1,240 @@
+/*
+ * Каталог раздела в дизайне по образцу mohawkflooring.com/shop/resilient (настройка «mohawk_catalogs», класс mh на <body>).
+ * Размеры, отступы и шрифты сняты со страницы Mohawk 09.11.2026 (ветка claude/mohawk-fonts-data, research/mohawk-fonts),
+ * цвета свои: зелёный логотипа вместо красного и чёрного, тёмно-зелёный подвал вместо чёрного.
+ * Шапка (Header.astro, mh), серая полоса с крошками (SiteLayout.astro), каталог (MhCatalog.astro), подвал (Footer.astro, mh).
+ * Вернуть прежний вид: убрать раздел из настройки «Каталоги в дизайне по образцу mohawkflooring.com».
+ */
+.mh {
+  --mh-g: #006338;       /* зелёный логотипа: вместо красного Mohawk */
+  --mh-g-dark: #004b2a;
+  --mh-ink: #151515;     /* основной текст Mohawk */
+  --mh-grey: #4a4a4a;    /* фильтры */
+  --mh-chip: #54565b;
+  --mh-band: #f3f6f4;    /* серая полоса под шапкой, раскрытые фильтры */
+  --mh-line: #e2e2e2;
+  --mh-foot: #0f2a1d;    /* подвал: вместо #151515 */
+  --mh-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+  color: var(--mh-ink);
+  letter-spacing: .45px;
+}
+.mh .fab-wa { display: none; } /* WhatsApp уже в шапке, на карточках и в подвале */
+
+/* --- Шапка: логотип, меню, поиск, телефон и WhatsApp ----------------------------------------- */
+.mh .mhh { border-top: 0; box-shadow: 0 2px 6px rgba(0, 0, 0, .08); }
+.mhh-in { display: flex; align-items: center; gap: 0; max-width: 1400px; height: 80px; margin: 0 auto; padding: 0 40px; }
+.mhh-logo { flex: none; display: block; margin-right: 46px; }
+.mhh-logo img { display: block; width: auto; height: 34px; }
+.mhh .ph-nav { margin: 0; flex: none; }
+.mhh .ph-nav > a, .mhh .ph-drop-btn { padding: 10px 22px; color: var(--mh-ink); font: 700 16px/24px var(--font); letter-spacing: .45px; }
+.mhh .ph-nav > a:first-child { padding-left: 0; }
+.mhh .ph-nav > a:hover, .mhh .ph-drop-btn:hover, .mhh .ph-nav > a.active, .mhh .ph-drop-btn.active { color: var(--mh-g); }
+.mhh .ph-drop-list { border-top: 3px solid var(--mh-g); }
+.mhh .ph-drop-list a { color: var(--mh-ink); }
+.mhh .ph-drop-list a:hover, .mhh .ph-drop-list a.active { color: var(--mh-g); }
+.mhh-search { position: relative; flex: 1 1 332px; max-width: 332px; margin-left: auto; }
+.mhh-search input {
+  width: 100%; height: 38px; padding: 0 40px 0 20px; border: 1px solid #6f6f6f; border-radius: 20px; background: #fff;
+  color: var(--mh-ink); font: 600 13px/18px var(--font); letter-spacing: .45px; outline: none; -webkit-appearance: none; appearance: none;
+}
+.mhh-search input::placeholder { color: #6f6f6f; }
+.mhh-search input:focus { border-color: var(--mh-g); }
+.mhh-search input::-webkit-search-cancel-button { display: none; }
+.mhh-search button { position: absolute; top: 0; right: 6px; width: 34px; height: 38px; padding: 0; border: 0; background: none; color: #6f6f6f; cursor: pointer; }
+.mhh-search button:hover { color: var(--mh-g); }
+.mhh-icon { flex: none; display: grid; place-items: center; width: 44px; height: 44px; margin-left: 18px; color: var(--mh-ink); }
+.mhh-search + .mhh-icon { margin-left: 40px; }
+.mhh-icon:hover { color: var(--mh-g); }
+.mhh .ph-burger { position: static; margin: 0 8px 0 -8px; }
+.mhh .ph-burger i { background: var(--mh-ink); height: 2px; }
+
+/* --- Серая полоса: крошки слева, магазин по центру ------------------------------------------- */
+.mhs { background: var(--mh-band); }
+.mhs-in { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; min-height: 46px; padding: 0 22px; }
+.mhs-crumbs { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font: 300 12px/18px var(--font); letter-spacing: .45px; }
+.mhs-crumbs a { color: var(--mh-ink); }
+.mhs-crumbs a:hover { color: var(--mh-g); }
+.mhs-crumbs span { color: var(--mh-ink); }
+.mhs-crumbs b { font-weight: 700; }
+.mhs-shop { display: flex; align-items: center; gap: 25px; color: var(--mh-ink); font: 700 12px/18px var(--font); letter-spacing: .45px; }
+.mhs-shop span { min-width: 142px; padding: 4px 0 5px; border-bottom: 1px solid #b5b5b5; color: #6f6f6f; font-weight: 400; }
+.mhs-shop:hover span { color: var(--mh-g); border-color: var(--mh-g); }
+/* Свои крошки страниц товара и «Укладки» не нужны: они в серой полосе */
+.mh .container .pcrumbs { display: none; }
+
+/* --- Каталог --------------------------------------------------------------------------------- */
+.mhcat { max-width: 1240px; margin: 0 auto; padding: 32px 20px 90px; scroll-margin-top: 90px; }
+.mhcat-top, .mhcat-body { display: grid; grid-template-columns: 20% 1fr; column-gap: 48px; }
+.mhcat-top { grid-template-columns: 20% 1fr auto; align-items: center; margin-bottom: 40px; }
+.mhcat-filter-by { display: flex; align-items: center; gap: 12px; padding: 0; border: 0; background: none; color: var(--mh-ink); font: 400 20px/30px var(--font); letter-spacing: .45px; cursor: default; }
+.mhcat-filter-by svg { color: #8a8a8a; }
+.mhcat-count { color: var(--mh-ink); font: 400 17px/25.5px var(--font); letter-spacing: .45px; }
+.mhcat-sort { position: relative; }
+.mhcat-sort select {
+  height: 32px; padding: 0 44px 0 6px; border: 0; background: transparent; color: var(--mh-ink); font: 400 17px/20px var(--font); letter-spacing: .45px;
+  text-align: right; cursor: pointer; -webkit-appearance: none; appearance: none;
+}
+.mhcat-sort::after {
+  content: ''; position: absolute; top: 50%; right: 0; width: 28px; height: 28px; margin-top: -14px; border-radius: 50%; pointer-events: none;
+  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23151515' stroke-width='2.4'%3E%3Cpath d='m7 10 5 5 5-5'/%3E%3C/svg%3E") center / 18px no-repeat;
+}
+.mhcat-sort select:focus-visible { outline: 2px solid var(--mh-g); }
+
+/* Левая колонка: выбранное плашками, «Очистить всё», «Раскрыть все фильтры», группы карточкой-аккордеоном */
+.mhcat-side { position: sticky; top: 100px; align-self: start; max-height: calc(100vh - 120px); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; padding: 4px 4px 8px 0; }
+.mhcat-chips { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 10px 10px; margin-bottom: 28px; }
+.mhcat-chip { display: inline-flex; align-items: center; gap: 14px; padding: 8px 10px; border-radius: 6px; background: #f2f2f2; color: var(--mh-chip); font: 600 15px/22.5px var(--font); letter-spacing: .45px; }
+.mhcat-chip svg { flex: none; color: var(--mh-chip); }
+.mhcat-chip:hover { color: var(--mh-g); }
+.mhcat-chip:hover svg { color: var(--mh-g); }
+.mhcat-clear { flex-basis: 100%; padding: 2px 10px; color: var(--mh-g); font: 700 15px/16px var(--font); letter-spacing: .45px; }
+.mhcat-clear:hover { color: var(--mh-g-dark); text-decoration: underline; }
+.mhcat-expand {
+  display: block; width: 100%; height: 40px; margin-bottom: 20px; border: .5px solid #b5b5b5; border-radius: 5px; background: #fff; box-shadow: 0 3px 5px rgba(0, 0, 0, .07);
+  color: var(--mh-ink); font: 700 13px/1.5 var(--font); letter-spacing: .45px; text-transform: uppercase; cursor: pointer;
+}
+.mhcat-expand:hover { border-color: var(--mh-g); color: var(--mh-g); }
+.mhcat-expand[aria-expanded='true'] .mhcat-expand-open, .mhcat-expand[aria-expanded='false'] .mhcat-expand-close { display: none; }
+.mhcat-acc { border-radius: 4px; background: #fff; box-shadow: var(--mh-shadow); overflow: hidden; }
+.mhcat-panel + .mhcat-panel { border-top: 1px solid #ececec; }
+.mhcat-panel > summary { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 48px; padding: 12px 24px; color: var(--mh-grey); font: 400 16px/18px var(--font); letter-spacing: .45px; cursor: pointer; list-style: none; }
+.mhcat-panel > summary::-webkit-details-marker { display: none; }
+.mhcat-panel > summary svg { flex: none; color: var(--mh-ink); transition: transform .2s; }
+.mhcat-panel[open] > summary svg { transform: rotate(180deg); }
+.mhcat-panel > summary:hover { color: var(--mh-g); }
+.mhcat-options { display: grid; gap: 6px; padding: 10px 24px 16px; background: var(--mh-band); }
+.mhcat-check { display: flex; align-items: center; gap: 10px; color: var(--mh-grey); font: 400 16px/21px var(--font); letter-spacing: .45px; cursor: pointer; }
+.mhcat-check input {
+  flex: none; display: grid; place-items: center; width: 16px; height: 16px; margin: 0; border: 2px solid #6f6f6f; border-radius: 2px; background: #fff; cursor: pointer;
+  -webkit-appearance: none; appearance: none;
+}
+.mhcat-check input:checked { border-color: var(--mh-g); background: var(--mh-g) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3.4'%3E%3Cpath d='m4.5 12.5 5 5 10-11'/%3E%3C/svg%3E") center / 12px no-repeat; }
+.mhcat-check input:focus-visible { outline: 2px solid var(--mh-g); outline-offset: 2px; }
+.mhcat-check:hover { color: var(--mh-ink); }
+.mhcat-check--empty { opacity: .45; }
+.mhcat-apply { width: 100%; height: 40px; margin-top: 16px; border: 0; border-radius: 5px; background: var(--mh-g); color: #fff; font: 700 13px var(--font); text-transform: uppercase; }
+
+/* Плитка: по три карточки, одна на коллекцию */
+.mhcat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 70px 15px; }
+.mhc { min-width: 0; }
+.mhc-img { position: relative; aspect-ratio: 1; border-radius: 4px; overflow: hidden; background: var(--mh-band); }
+.mhc-img > a, .mhc-img img, .mhc-noimg { display: block; width: 100%; height: 100%; }
+.mhc-img img { object-fit: cover; }
+.mhc-badge { position: absolute; top: 12px; left: 12px; padding: 3px 10px; border-radius: 3px; background: var(--mh-g); color: #fff; font: 700 12px/18px var(--font); letter-spacing: .45px; }
+.mhc-btns { position: absolute; top: 50%; left: 50%; display: none; flex-direction: column; align-items: center; gap: 20px; transform: translate(-50%, -50%); }
+.mhc-img:hover .mhc-btns, .mhc-img:focus-within .mhc-btns { display: flex; }
+.mhc-img:hover > a::after { content: ''; position: absolute; inset: 0; background: rgba(255, 255, 255, .25); }
+.mhc-btn {
+  display: grid; place-items: center; min-width: 190px; height: 40px; padding: 0 20px; border-radius: 5px; background: var(--mh-g); color: #fff !important;
+  font: 700 13px/18px var(--font); letter-spacing: 0; text-transform: uppercase; white-space: nowrap;
+}
+.mhc-btn--dark { background: var(--mh-ink); }
+.mhc-btn:hover { background: var(--mh-g-dark); }
+.mhc-btn--dark:hover { background: #000; }
+
+.mhc-sw { display: flex; align-items: center; justify-content: center; gap: 4px; margin: 22px 0 26px; }
+.mhc-nav { flex: none; display: grid; place-items: center; width: 26px; height: 26px; padding: 0; border: 1px solid #d9d9d9; border-radius: 50%; background: #fff; color: var(--mh-ink); cursor: pointer; }
+.mhc-nav:disabled { border-color: #ececec; color: #d4d4d4; cursor: default; }
+.mhc-sw-list { flex: 0 1 auto; min-width: 0; display: flex; gap: 12px; max-width: calc(5 * 32px + 4 * 12px + 10px); margin: 0; padding: 5px; list-style: none; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+.mhc-sw-list::-webkit-scrollbar { display: none; }
+.mhc-sw-list li { flex: none; scroll-snap-align: start; }
+.mhc-sw-item { display: block; width: 32px; height: 32px; padding: 0; border: 0; border-radius: 2px; background: var(--mh-band) center / cover no-repeat; cursor: pointer; }
+.mhc-sw-item.active { box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--mh-ink); }
+.mhc-sw-item:hover:not(.active) { box-shadow: 0 0 0 2px #fff, 0 0 0 3px #9a9a9a; }
+.mhc-title { margin: 0; font: 700 16px/22px var(--font); letter-spacing: .45px; }
+.mhc-title a { color: var(--mh-ink); }
+.mhc-img + .mhc-title { margin-top: 22px; }
+/* Строительная химия: упаковки целиком, на белом */
+.ss--groups .mhc-img { border: 1px solid var(--mh-line); background: #fff; }
+.ss--groups .mhc-img img { object-fit: contain; padding: 6%; }
+.mhc-title a:hover { color: var(--mh-g); }
+.mhc-color { margin: 12px 0 0; color: var(--mh-ink); font: 400 14px/15px var(--font); letter-spacing: .45px; }
+.mhc-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0 6px; margin: 20px 0 0; color: var(--mh-ink); font: 400 14px/15px var(--font); letter-spacing: .45px; }
+.mhcat-empty { margin: 0; color: var(--mh-ink); font-size: 17px; }
+.mhcat-empty a { color: var(--mh-g); font-weight: 700; }
+
+/* Номера страниц */
+.mh .cat-pager { margin-top: 80px; }
+.mh .cat-pager-num, .mh .cat-pager-arrow { min-width: 38px; height: 38px; border: 0; border-radius: 50%; color: var(--mh-ink); font: 600 15px var(--font); }
+.mh a.cat-pager-num:hover, .mh a.cat-pager-arrow:hover { background: var(--mh-band); color: var(--mh-g); }
+.mh .cat-pager-num[aria-current] { background: var(--mh-g); color: #fff; }
+
+/* Текст о покрытии под каталогом */
+.mhcat-about { max-width: 1240px; margin: 0 auto; padding: 50px 20px 80px; border-top: 1px solid var(--mh-line); }
+.mhcat-about h2 { margin: 0 0 18px; color: var(--mh-ink); font: 700 20px/30px var(--font); letter-spacing: .45px; }
+.mhcat-about .psalon-text { max-width: 900px; color: #3b3b3b; font-size: 16px; line-height: 1.7; }
+
+/* --- Подвал: логотип, три колонки ссылок, форма WhatsApp, нижняя строка ------------------------ */
+.mh .mhf { background: var(--mh-foot); color: #fff; }
+.mhf a { color: #fff; }
+.mhf a:hover { color: #b9d8c4; }
+.mhf-cols { display: grid; grid-template-columns: 236px 1fr 1fr 1fr 365px; gap: 0; max-width: 1440px; margin: 0 auto; padding: 30px 70px 30px 60px; }
+.mhf-logo img { display: block; width: 150px; height: auto; filter: brightness(0) invert(1); }
+.mhf-title { margin-bottom: 18px; color: #fff; font: 700 13px/19.5px var(--font); letter-spacing: .45px; text-transform: uppercase; }
+.mhf-col ul { margin: 0; padding: 0; list-style: none; }
+.mhf-col li { margin-bottom: 12px; font: 600 12px/19px var(--font); letter-spacing: .45px; }
+.mhf-form { display: grid; align-content: start; gap: 16px; }
+.mhf-form .mhf-title { margin-bottom: 4px; }
+.mhf-lead { margin: 0 0 4px; color: #fff; font: 400 16px/26px var(--font); letter-spacing: .45px; }
+.mhf-form input { height: 43px; padding: 0 11px; border: 1px solid #fff; border-radius: 4px; background: #fff; color: var(--mh-ink); font: 400 14px var(--font); letter-spacing: .45px; }
+.mhf-form input::placeholder { color: #8a8a8a; }
+.mhf-form button { height: 40px; border: 0; border-radius: 4px; background: var(--mh-g); color: #fff; font: 700 14px/21px var(--font); letter-spacing: .45px; text-transform: uppercase; cursor: pointer; }
+.mhf-form button:hover { background: #007a45; }
+.mhf-bottom { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px 40px; padding: 18px 20px 22px; border-top: 1px solid rgba(255, 255, 255, .18); font: 600 12px/18px var(--font); letter-spacing: .45px; }
+.mhf-social { display: flex; gap: 24px; }
+.mhf-social a { display: grid; place-items: center; }
+.mhf-links { display: flex; flex-wrap: wrap; }
+.mhf-links a { padding: 0 10px; border-left: 1px solid rgba(255, 255, 255, .4); }
+.mhf-links a:first-child { border-left: 0; }
+
+/* --- Ниже 1240 px: меню за кнопкой, как у Mohawk ---------------------------------------------- */
+@media (max-width: 1240px) {
+  .mhh-in { padding: 0 20px; }
+  .mhh .ph-nav { display: none; }
+  .mhh .ph-burger { display: flex; }
+  .mhh-search { max-width: 420px; }
+  .mhc-sw-list { gap: 8px; max-width: calc(5 * 28px + 4 * 8px + 10px); }
+  .mhc-sw-item { width: 28px; height: 28px; }
+  .mhf-cols { grid-template-columns: 1fr 1fr 1fr; gap: 30px; padding: 40px 30px; }
+  .mhf-logo { grid-column: 1 / -1; }
+  .mhf-form { grid-column: 1 / -1; max-width: 520px; }
+}
+@media (max-width: 960px) {
+  .mhcat-grid { grid-template-columns: repeat(2, 1fr); gap: 50px 15px; }
+  .mhcat-top, .mhcat-body { grid-template-columns: 240px 1fr; column-gap: 30px; }
+  .mhcat-top { grid-template-columns: 240px 1fr auto; }
+}
+/* Телефоны: кнопка меню слева, логотип по центру, значки справа, поиск строкой ниже; фильтры по кнопке «Фильтр» */
+@media (max-width: 760px) {
+  .mhh-in { display: grid; grid-template-columns: 44px 1fr auto auto; height: auto; padding: 10px 12px 12px; row-gap: 10px; }
+  .mhh .ph-burger { margin: 0; }
+  .mhh-logo { justify-self: center; margin: 0; }
+  .mhh-logo img { height: 30px; }
+  .mhh-search { grid-column: 1 / -1; grid-row: 2; max-width: none; margin: 0; }
+  .mhh-icon, .mhh-search + .mhh-icon { width: 40px; height: 40px; margin-left: 4px; }
+  .mhs-in { grid-template-columns: 1fr; padding: 10px 20px; row-gap: 6px; }
+  .mhs-crumbs { font-size: 13px; }
+  .mhs-shop { gap: 12px; justify-content: space-between; padding-top: 8px; border-top: 1px solid #dfe5e1; }
+  .mhs-shop span { min-width: 0; flex: 1; }
+  .mhcat { padding: 0 10px 60px; }
+  .mhcat-top { grid-template-columns: 1fr auto; margin: 0 -10px 16px; padding: 18px 20px; border-bottom: 1px solid var(--mh-line); row-gap: 14px; }
+  .mhcat-filter-by { font-size: 16px; line-height: 24px; cursor: pointer; }
+  .mhcat-count { justify-self: end; font-size: 14px; font-weight: 300; }
+  .mhcat-sort { grid-column: 1 / -1; justify-self: end; }
+  .mhcat-body { grid-template-columns: 1fr; }
+  .mhcat-side { position: static; max-height: none; overflow: visible; padding: 0; }
+  .mhcat-side .mhcat-filters { display: none; }
+  .mh-filters-open .mhcat-side .mhcat-filters { display: block; margin-bottom: 24px; }
+  .mhcat-chips { margin-bottom: 18px; }
+  .mhcat-clear { flex-basis: auto; align-self: center; }
+  .mhcat-grid { gap: 26px 10px; }
+  .mhc-sw { display: none; }
+  .mhc-btns { display: none !important; }
+  .mhc-title { margin-top: 12px; font-size: 14px; line-height: 19px; }
+  .mhc-color { margin-top: 10px; font-size: 13px; line-height: 16px; }
+  .mhc-meta { flex-direction: column; align-items: flex-start; gap: 4px; margin-top: 10px; font-size: 12px; line-height: 15px; }
+  .mhc-sep { display: none; }
+  .mhcat-about { padding: 36px 16px 50px; }
+  .mhf-cols { grid-template-columns: 1fr 1fr; padding: 36px 20px; }
+  .mhf-bottom { flex-direction: column; gap: 14px; }
+}

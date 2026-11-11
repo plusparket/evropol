@@ -17,6 +17,14 @@ export const siteBase = (fallbackOrigin: string) => (process.env.SITE_URL || fal
 /** «Винил» → «Винил | ЕвроПол» */
 export const withSiteName = (title: string, s: Settings) => (title.includes(s.site_name) ? title : `${title} | ${s.site_name}`);
 
+/** Google показывает около 65 знаков заголовка. Берём первый вариант, который помещается, иначе самый короткий
+ *  (проверка SEO 11.11.2026, владелец: «делай как нужно»). Варианты идут от полного к короткому. */
+export const TITLE_MAX = 65;
+export function fitTitle(variants: string[], s: Settings): string {
+  const all = variants.filter(Boolean).map((v) => withSiteName(v, s));
+  return all.find((t) => t.length <= TITLE_MAX) ?? all.reduce((a, b) => (b.length < a.length ? b : a));
+}
+
 /**
  * Обрезка по границе слова для meta description. Google показывает в выдаче около 160 знаков,
  * поэтому главное — в начале, контакты — в конце, если помещаются.
@@ -69,11 +77,17 @@ export function categoryDescription(name: string, description: string, count: nu
   return withTail(lead, `Бишкек, тел. ${s.phone_main}.`);
 }
 
-/** Страница товара: начало описания, город и телефон */
-export function productDescription(p: ProductItem, s: Settings): string {
+/**
+ * Страница товара: начало описания, город и телефон. Если у другого товара раздела выходит то же описание (один декор
+ * в двух форматах), впереди заголовок товара: у разных страниц в Google должны быть разные описания.
+ */
+export function productDescription(p: ProductItem, s: Settings, all: ProductItem[] = [], sectionSlug = ''): string {
   if (p.seoDescription) return p.seoDescription;
-  const lead = plainText(p.description, 400) || [p.brand, p.collection, p.name].filter(Boolean).join(' ');
-  return withTail(lead, `Бишкек, тел. ${s.phone_main}.`);
+  const tail = `Бишкек, тел. ${s.phone_main}.`;
+  const plain = (x: ProductItem) => withTail(plainText(x.description, 400) || [x.brand, x.collection, x.name].filter(Boolean).join(' '), tail);
+  const own = plain(p);
+  const twin = all.some((o) => o.id !== p.id && !o.seoDescription && plain(o) === own);
+  return twin ? withTail(`${productTitleText(p, all, sectionSlug)}. ${plainText(p.description, 400)}`, tail) : own;
 }
 
 // --- Разметка schema.org ----------------------------------------------------------------
@@ -193,6 +207,48 @@ export function sectionSiteJsonLd(site: Section, s: Settings, base: string, main
       },
     ],
   };
+}
+
+/**
+ * Вид покрытия в начале заголовка и подписи фото товара: покупатели ищут «линолеум дуб серый», а не название декора.
+ * У строительной химии вида нет: название товара («Клей 58») и так говорит, что это.
+ */
+const PRODUCT_NOUN: Record<string, string> = {
+  linoleum: 'Линолеум',
+  carpet: 'Ковролин',
+  'carpet-tiles': 'Ковровая плитка',
+  vinyl: 'Кварцвинил',
+  laminate: 'Ламинат',
+};
+
+/** «Дуб Какао 547» → «Линолеум Дуб Какао 547»; если название уже начинается с вида, оно не меняется */
+export function productNamed(p: ProductItem, sectionSlug: string): string {
+  const noun = PRODUCT_NOUN[sectionSlug];
+  if (!noun || p.name.toLowerCase().startsWith(noun.toLowerCase())) return p.name;
+  return `${noun} ${p.name}`;
+}
+
+/** Коллекция после названия, если название с неё не начинается («Rubens 69, Rubens» → «Rubens 69») */
+const collectionAfter = (p: ProductItem) =>
+  p.collection && !p.name.toLowerCase().startsWith(p.collection.toLowerCase()) ? p.collection : '';
+
+/**
+ * Заголовок страницы товара без города и названия сайта: «Линолеум Дуб Какао 547, Texville»,
+ * у одноимённых товаров с отличием: «Ламинат Дуб Натур, Classic, узкая доска».
+ */
+export function productTitleText(p: ProductItem, all: ProductItem[], sectionSlug: string, withCollection = true): string {
+  return [[p.brand, productNamed(p, sectionSlug)].filter(Boolean).join(' '), withCollection && collectionAfter(p), namesakeSuffix(p, all)].filter(Boolean).join(', ');
+}
+
+/** Заголовок страницы товара: «… в Бишкеке», без «в Бишкеке», без коллекции — первый, что не длиннее 65 знаков */
+export function productPageTitle(p: ProductItem, all: ProductItem[], sectionSlug: string, s: Settings): string {
+  const full = productTitleText(p, all, sectionSlug);
+  return fitTitle([`${full} в Бишкеке`, full, productTitleText(p, all, sectionSlug, false)], s);
+}
+
+/** Подпись фото товара для Google Картинок: «Линолеум Дуб Какао 547, Texville» */
+export function productAlt(p: ProductItem, sectionSlug: string): string {
+  return [[p.brand, productNamed(p, sectionSlug)].filter(Boolean).join(' '), collectionAfter(p)].filter(Boolean).join(', ');
 }
 
 /**

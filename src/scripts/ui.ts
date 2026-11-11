@@ -30,13 +30,16 @@ function initHero(): void {
     img.src = img.dataset.src!;
     img.removeAttribute('data-src');
   };
-  const loadRest = () => timers.push(window.setTimeout(() => slides.forEach(load), 1500));
-  if (document.readyState === 'complete') loadRest();
-  else window.addEventListener('load', loadRest, { once: true });
+  // Заранее грузится только следующее фото: после загрузки страницы второе, при каждой смене — следующее за показанным.
+  // Так телефон не качает все фото баннера сразу (владелец, 11.11.2026)
+  const loadNext = () => timers.push(window.setTimeout(() => load(slides[1]), 1500));
+  if (document.readyState === 'complete') loadNext();
+  else window.addEventListener('load', loadNext, { once: true });
   let current = 0;
   const show = (i: number) => {
     current = (i + slides.length) % slides.length;
     load(slides[current]);
+    load(slides[(current + 1) % slides.length]);
     slides.forEach((s, k) => s.classList.toggle('active', k === current));
     dots.forEach((d, k) => d.classList.toggle('active', k === current));
   };

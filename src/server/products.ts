@@ -26,11 +26,11 @@ const NO_FILTER = new Set(['Класс нагрузки', 'Пожарная оп
 export const PER_PAGE = 24;
 
 /** Страница списка по параметру ?page=N: номер вне диапазона приводим к ближайшей странице */
-export function paginate<T>(items: T[], raw: string | null) {
-  const pages = Math.max(1, Math.ceil(items.length / PER_PAGE));
+export function paginate<T>(items: T[], raw: string | null, perPage = PER_PAGE) {
+  const pages = Math.max(1, Math.ceil(items.length / perPage));
   const page = Math.min(pages, Math.max(1, Number.parseInt(raw ?? '', 10) || 1));
-  const start = (page - 1) * PER_PAGE;
-  const slice = items.slice(start, start + PER_PAGE);
+  const start = (page - 1) * perPage;
+  const slice = items.slice(start, start + perPage);
   return { page, pages, slice, from: slice.length ? start + 1 : 0, to: start + slice.length };
 }
 
