@@ -19,6 +19,22 @@ export const GUIDES = [
 
 export type Guide = { key: string; label: string; url: string; title: string; content: string; seoTitle: string; seoDescription: string; updatedAt: Date };
 
+/** Концовка каждой страницы «Укладка» и «Уход» (владелец, 12.11.2026: везде одинаково) */
+export const GUIDE_CTA =
+  '<section class="gd-cta"><h2>Для более подробной информации свяжитесь с нами</h2>' +
+  '<a class="pbtn gd-wa" href="https://wa.me/{{panel_whatsapp}}" target="_blank" rel="noopener">Написать в WhatsApp</a></section>';
+
+/** Убирает из текста страницы прежние концовки («Давайте обсудим», «Свяжитесь с нами…», «Позвоните нам…») и ставит
+ *  одну общую GUIDE_CTA. Текст в базе не меняется. */
+export function withGuideEnding(html: string): string {
+  let out = html
+    .replace(/<section class="(?:gd-cta|gs-talk)">[\s\S]*?<\/section>\s*/g, '')
+    .replace(/\s*Вопросы задайте нам по номеру \{\{phone_main\}\}\./g, '');
+  // Последний абзац с призывом позвонить (линолеум, ламинат, строительная химия)
+  out = out.replace(/<p>[^<]*(?:<a [^>]*>[^<]*<\/a>[^<]*)*\{\{phone_main\}\}[^<]*<\/p>\s*$/, '');
+  return out.trimEnd() + '\n' + GUIDE_CTA;
+}
+
 const pageSlug = (sectionSlug: string, key: string) => `${sectionSlug}-${key}`;
 
 /** Опубликованные страницы «Укладка и уход» раздела, в порядке меню */
