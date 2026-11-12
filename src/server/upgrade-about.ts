@@ -40,6 +40,7 @@ const OLD_HOME_ABOUT_START = '<p>Мы поставляем в Кыргызста
 export async function upgradeAbout(): Promise<string[]> {
   const log = await upgradeContactShops();
   log.push(...(await upgradeAboutCountries()));
+  log.push(...(await upgradeAboutIntro()));
   const fixed = await sql`UPDATE pages SET content = replace(content, ${OLD_SALON}, ${NEW_SALON}), updated_at = now()
                           WHERE slug IN ('about', 'contact') AND position(${OLD_SALON} in content) > 0`;
   if (fixed.count) log.push('адрес салона «Дом Паркета»: строительный комплекс «Монолит»');
@@ -102,6 +103,26 @@ async function upgradeAboutCountries(): Promise<string[]> {
                          WHERE slug = 'about' AND coalesce(trim(seo_title), '') = ''`;
     if (seo.count) log.push('страница «О компании»: заголовок и описание для Google');
     await tx`INSERT INTO settings (key, value) VALUES (${FLAG_COUNTRIES}, '1') ON CONFLICT (key) DO NOTHING`;
+  });
+  return log;
+}
+
+/** 12.11.2026: вступление владельца, фото заводов одной галереей под ним (без ветряков, Ронсе и Вормервера), приглашение в салоны */
+const FLAG_INTRO = 'about_intro_2026_11_12';
+async function upgradeAboutIntro(): Promise<string[]> {
+  const [done] = await sql`SELECT 1 FROM settings WHERE key = ${FLAG_INTRO}`;
+  if (done) return [];
+  const log: string[] = [];
+  const dir = path.resolve(process.cwd(), 'seed', 'pages');
+  const html = (await readFile(path.join(dir, 'about.html'), 'utf8')).trim();
+  const prev = norm(await readFile(path.join(dir, 'archive', 'about-2026-11-11.html'), 'utf8'));
+  await sql.begin(async (tx) => {
+    for (const p of await tx<{ id: number; content: string }[]>`SELECT id, content FROM pages WHERE slug = 'about'`) {
+      if (norm(p.content) !== prev) continue;
+      await tx`UPDATE pages SET content = ${html}, updated_at = now() WHERE id = ${p.id}`;
+      log.push('страница «О компании»: вступление владельца и галерея фото заводов');
+    }
+    await tx`INSERT INTO settings (key, value) VALUES (${FLAG_INTRO}, '1') ON CONFLICT (key) DO NOTHING`;
   });
   return log;
 }
