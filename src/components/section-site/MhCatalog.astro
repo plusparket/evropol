@@ -272,7 +272,7 @@ const img = (p: ProductItem) => (p.images[0] ? uploadUrl(productThumb(p.images[0
 {
   site.description && (
     <section class="mhcat-about" id="about">
-      <h2>О покрытии</h2>
+      <h2>{site.siteLayout === 'groups' ? 'О продукции' : 'О покрытии'}</h2>
       <div class="psalon-text" set:html={site.description} />
     </section>
   )
