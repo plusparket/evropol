@@ -42,6 +42,7 @@ export async function upgradeAbout(): Promise<string[]> {
   log.push(...(await upgradeAboutCountries()));
   log.push(...(await upgradeAboutIntro()));
   log.push(...(await upgradeAboutPage('about_no_countries_2026_11_12', 'about-2026-11-12.html', 'страница «О компании»: без рассказов о заводах, первым фото немецкого завода')));
+  log.push(...(await upgradeAboutPage('about_trends_2026_11_12', 'about-2026-11-12b.html', 'страница «О компании»: «Шагаем в ногу с мировыми трендами»')));
   const fixed = await sql`UPDATE pages SET content = replace(content, ${OLD_SALON}, ${NEW_SALON}), updated_at = now()
                           WHERE slug IN ('about', 'contact') AND position(${OLD_SALON} in content) > 0`;
   if (fixed.count) log.push('адрес салона «Дом Паркета»: строительный комплекс «Монолит»');
