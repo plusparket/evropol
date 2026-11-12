@@ -1,12 +1,16 @@
 ---
 import { ClientRouter } from 'astro:transitions';
 import '../styles/site.css';
+import '../styles/section-site.css';
+import '../styles/mohawk.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { getSettings } from '../server/settings.ts';
+import SearchHead from '../components/SearchHead.astro';
+import { getSettings, isMohawkCatalog, officeMaps } from '../server/settings.ts';
 import { getMenus } from '../server/content.ts';
-import { getSections } from '../server/sections.ts';
+import { catalogPath, DEFAULT_SITE_COLOR, getSections } from '../server/sections.ts';
 import { siteBase } from '../server/seo.ts';
+import { getSectionGuides } from '../server/section-guides.ts';
 
 interface Props {
   title: string;
@@ -19,27 +23,35 @@ interface Props {
   ogType?: 'website' | 'article';
   /** Разметка schema.org (JSON-LD) */
   jsonLd?: object | object[];
+  /** Страница каталога раздела (/linoleum …): цвет раздела и оформление каталога (section-site.css) */
+  catalog?: { color: string; layout: string };
+  /** Крошки каталога для серой полосы под шапкой в дизайне по образцу mohawkflooring.com: [Линолеум, Товар] */
+  crumbs?: { name: string; url?: string }[];
 }
-const { title, description, noindex = false, canonicalPath, image, ogType = 'website', jsonLd } = Astro.props;
+const { title, description, noindex = false, canonicalPath, image, ogType = 'website', jsonLd, catalog, crumbs } = Astro.props;
+const catalogColor = catalog && /^#[0-9a-f]{6}$/i.test(catalog.color) ? catalog.color : DEFAULT_SITE_COLOR;
 
 const [settings, menus, sections] = await Promise.all([getSettings(), getMenus(), getSections({ publishedOnly: true })]);
+// В каталоге раздела (/linoleum …) «Укладка и уход» встаёт в меню вместо «Новости и события»
+const guides = Astro.locals.site ? (await getSectionGuides(Astro.locals.site)).map((g) => ({ label: g.label, url: g.url })) : [];
 const countersOn = settings.counters_enabled === '1';
+const forest = settings.forest_design === '1'; // набор цветов «Лесной» (настройка «Лесной дизайн главного сайта»)
 const siteUrl = siteBase(Astro.url.origin);
 const canonical = siteUrl + (canonicalPath ?? Astro.url.pathname);
-const ogImage = siteUrl + (image || '/img/og-europroject.jpg');
+const ogImage = siteUrl + (image || '/img/og-evropol.jpg');
 const ldBlocks = (Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : []).map((o) => JSON.stringify(o).replace(/</g, '\\u003c'));
-const ga4 = countersOn && /^G-[A-Z0-9]+$/i.test(settings.ga4_id) ? settings.ga4_id : '';
 const copyright = settings.copyright.replaceAll('{year}', String(new Date().getFullYear()));
 const waHref = 'https://wa.me/' + settings.panel_whatsapp.replace(/\D/g, '');
-const secondName = settings.name_second || 'Второй адрес';
-const maps = [
-  { src: settings.map_embed_url, title: `Офис: ${settings.address}` },
-  { src: settings.map_embed_url_second, title: `${secondName}: ${settings.address_second}` },
-].filter((m) => m.src.startsWith('https://') && Astro.url.pathname === '/contact'); // карта — только на странице «Контакты»
+// Небольшая карта в подвале — только на главной (на «Контактах» карта справа от текста)
+const footerMap = Astro.url.pathname === '/' ? officeMaps(settings)[0] : undefined;
+// Каталог в дизайне по образцу mohawkflooring.com (настройка «mohawk_catalogs»): своя шапка с поиском,
+// серая полоса с крошками и адресом магазина, тёмный подвал с колонками (src/styles/mohawk.css)
+const mhSite = catalog && Astro.locals.site && isMohawkCatalog(settings, Astro.locals.site.slug) ? Astro.locals.site : undefined;
+const mhCrumbs = mhSite ? (crumbs ?? [{ name: mhSite.name }]) : [];
 ---
 
 <!doctype html>
-<html lang="ru">
+<html lang="ru" class:list={{ 'theme-forest': forest }}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -48,9 +60,9 @@ const maps = [
     {description && <meta name="description" content={description} />}
     {noindex && <meta name="robots" content="noindex" />}
     <link rel="canonical" href={canonical} />
-    <link rel="icon" href="/favicon.ico?v=4" sizes="48x48" />
-    <link rel="icon" href="/favicon.svg?v=4" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=4" />
+    <link rel="icon" href="/favicon.ico?v=5" sizes="48x48" />
+    <link rel="icon" href="/favicon.svg?v=5" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=5" />
     <meta property="og:type" content={ogType} />
     <meta property="og:title" content={title} />
     {description && <meta property="og:description" content={description} />}
@@ -59,30 +71,37 @@ const maps = [
     <meta property="og:locale" content="ru_RU" />
     <meta property="og:site_name" content={settings.site_name} />
     <meta name="twitter:card" content="summary_large_image" />
-    {settings.google_site_verification && <meta name="google-site-verification" content={settings.google_site_verification} />}
-    {settings.yandex_verification && <meta name="yandex-verification" content={settings.yandex_verification} />}
-    <meta name="theme-color" content="#011e46" />
+    <meta name="theme-color" content={forest ? '#006338' : '#011e46'} />
     {ldBlocks.map((json) => <script type="application/ld+json" set:html={json} />)}
     <ClientRouter fallback="swap" />
-    {
-      ga4 && (
-        <Fragment>
-          <script async src={`https://www.googletagmanager.com/gtag/js?id=${ga4}`} />
-          <script is:inline define:vars={{ ga4 }}>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
-            gtag('config', ga4);
-          </script>
-        </Fragment>
-      )
-    }
+    <SearchHead settings={settings} />
     {countersOn && settings.head_code && <Fragment set:html={settings.head_code} />}
   </head>
-  <body>
+  <body class:list={{ ss: !!catalog, 'ss--groups': catalog?.layout === 'groups', mh: !!mhSite }} style={catalog ? `--site: ${catalogColor}` : undefined}>
     <div class="wrapper" id="overlay"></div>
 
-    <Header sections={sections} settings={settings} menus={menus} />
+    <Header sections={sections} settings={settings} menus={menus} guides={guides} mh={mhSite ? { search: catalogPath(mhSite), q: Astro.url.searchParams.get('q') ?? '' } : undefined} />
+    {
+      mhSite && (
+        <div class="mhs">
+          <div class="mhs-in">
+            <nav class="mhs-crumbs" aria-label="Вы здесь">
+              <a href="/">Главная</a>
+              {mhCrumbs.map((c, i) => (
+                <Fragment>
+                  <span aria-hidden="true">/</span>
+                  {c.url && i < mhCrumbs.length - 1 ? <a href={c.url}>{c.name}</a> : <b aria-current="page">{c.name}</b>}
+                </Fragment>
+              ))}
+            </nav>
+            <a class="mhs-shop" href="/contact">
+              <b>Магазин «{settings.site_name}»</b>
+              <span>{settings.address}</span>
+            </a>
+          </div>
+        </div>
+      )
+    }
 
     <div class="loading" id="loading"></div>
 
@@ -90,7 +109,7 @@ const maps = [
       <slot />
     </main>
 
-    <Footer settings={settings} menus={menus} sections={sections} maps={maps} copyright={copyright} />
+    <Footer settings={settings} menus={menus} sections={sections} copyright={copyright} map={footerMap} mh={mhSite ? { guides } : undefined} />
 
     {
       settings.panel_whatsapp && (
@@ -106,6 +125,7 @@ const maps = [
     <script>
       import '../scripts/site.ts';
       import '../scripts/ui.ts';
+      import '../scripts/section-site.ts';
     </script>
   </body>
 </html>

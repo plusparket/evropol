@@ -23,9 +23,32 @@ export function normalizePath(input: string): string {
 export async function findRedirect(pathname: string): Promise<string | undefined> {
   const [row] = await sql<{ id: number; toPath: string }[]>`
     SELECT id, to_path FROM redirects WHERE from_path = ${normalizePath(pathname)}`;
-  if (!row) return undefined;
+  if (!row) return legacyJoomlaTarget(pathname);
   sql`UPDATE redirects SET hits = hits + 1, last_hit = now() WHERE id = ${row.id}`.catch(() => {});
   return row.toPath;
+}
+
+// Старый сайт evropol.kg (Joomla, до ноября 2026): каталог /katalog-bishkek/…, товары …/product/view/N/M.html,
+// страницы вроде /паркетная-доска-в-бишкеке.html. Их около 200 и все они в Google, поэтому не по одному в таблице,
+// а по словам в адресе: каждый старый адрес ведёт на каталог того же покрытия. Порядок правил важен:
+// «moduleo-виниловая-плитка» лежит внутри старой папки «линолеум-…», поэтому винил проверяется раньше линолеума.
+// Таблица в админке главнее: адрес из неё сюда не доходит.
+const LEGACY_RULES: [RegExp, string][] = [
+  [/moduleo|disano|виниловый-паркет/, '/vinyl'],
+  [/линолеум/, '/linoleum'],
+  [/modulyss|ковровые-плитки/, '/carpet-tiles'],
+  [/ковролин|ковровое-покрытие|ковры|циновки|коврики|трава/, '/carpet'],
+  [/ламинат|\/component\/jshopping\/product\/view\/5\//, '/laminate'],
+  [/паркет|пробков|celenio|haro/, '/parquet'],
+  [/^\/доставка$/, '/contact'],
+  [/^\/(katalog-bishkek|component\/jshopping|плинтус|напольные-покрытия|отделочные-материалы|инновации-напольных-покрытий|подложка)/, '/'],
+];
+
+/** Куда вести адрес старого сайта на Joomla, или undefined, если адрес не оттуда. */
+export function legacyJoomlaTarget(pathname: string): string | undefined {
+  const p = normalizePath(pathname);
+  if (!/^\/(katalog-bishkek|component\/jshopping)(\/|\.html|$)|^\/[^/]*[а-яё][^/]*(\.html)?$/.test(p)) return undefined;
+  return LEGACY_RULES.find(([re]) => re.test(p))?.[1];
 }
 
 export const listRedirects = () =>

@@ -1,0 +1,46 @@
+---
+// Номера страниц каталога: ‹ 1 … 4 5 6 … 12 ›. Ссылки сохраняют фильтры (?f=…) и ведут к началу каталога.
+interface Props {
+  page: number;
+  pages: number;
+  /** Адрес списка в каталоге раздела: «/» или «/<категория>» (Astro.url здесь внутренний, /section-site/…) */
+  path: string;
+}
+const { page, pages, path } = Astro.props;
+
+const href = (n: number) => {
+  const params = new URLSearchParams(Astro.url.search);
+  if (n > 1) params.set('page', String(n));
+  else params.delete('page');
+  const q = params.toString();
+  return `${path}${q ? `?${q}` : ''}#catalog`;
+};
+
+// Первая, последняя и по одной рядом с текущей; пропуск в одну страницу показываем номером, а не «…»
+const shown = [...new Set([1, page - 1, page, page + 1, pages])].filter((n) => n >= 1 && n <= pages).sort((a, b) => a - b);
+const cells: (number | null)[] = [];
+for (const n of shown) {
+  const prev = cells.at(-1);
+  if (typeof prev === 'number' && n - prev === 2) cells.push(n - 1);
+  else if (typeof prev === 'number' && n - prev > 2) cells.push(null);
+  cells.push(n);
+}
+---
+
+{
+  pages > 1 && (
+    <nav class="cat-pager" aria-label="Страницы каталога">
+      {page > 1 ? <a class="cat-pager-arrow" href={href(page - 1)} rel="prev" aria-label="Предыдущая страница">‹</a> : <span class="cat-pager-arrow" aria-hidden="true">‹</span>}
+      {cells.map((n) =>
+        n === null ? (
+          <span class="cat-pager-gap">…</span>
+        ) : n === page ? (
+          <span class="cat-pager-num" aria-current="page">{n}</span>
+        ) : (
+          <a class="cat-pager-num" href={href(n)}>{n}</a>
+        ),
+      )}
+      {page < pages ? <a class="cat-pager-arrow" href={href(page + 1)} rel="next" aria-label="Следующая страница">›</a> : <span class="cat-pager-arrow" aria-hidden="true">›</span>}
+    </nav>
+  )
+}

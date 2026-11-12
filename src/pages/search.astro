@@ -1,0 +1,103 @@
+---
+// Поиск по сайту: /search?q=…&page=N (src/server/search.ts). Разделы, товары каталогов с фото, страницы, новости.
+// Страница результатов закрыта от индексации.
+import SiteLayout from '../layouts/SiteLayout.astro';
+import Crumbs from '../components/Crumbs.astro';
+import { getSettings } from '../server/settings.ts';
+import { SEARCH_PAGE_SIZE, siteSearch } from '../server/search.ts';
+import { withSiteName } from '../server/seo.ts';
+import { uploadUrl } from '../server/uploads.ts';
+import { pluralRu } from '../server/util.ts';
+
+const q = (Astro.url.searchParams.get('q') ?? '').trim();
+const page = Math.max(1, Number(Astro.url.searchParams.get('page')) || 1);
+const [settings, r] = await Promise.all([getSettings(), siteSearch(q, page)]);
+const total = r.productTotal + r.sections.length + r.pages.length + r.news.length;
+const pages = Math.ceil(r.productTotal / SEARCH_PAGE_SIZE);
+const pageHref = (n: number) => `/search?q=${encodeURIComponent(r.query)}${n > 1 ? `&page=${n}` : ''}`;
+const ext = (external?: boolean) => (external ? { target: '_blank', rel: 'noopener' } : {});
+---
+
+<SiteLayout title={withSiteName(q ? `Поиск: ${q}` : 'Поиск по сайту', settings)} noindex>
+  <section class="ppage psearch">
+    <header class="ppage-head">
+      <div class="pin">
+        <Crumbs items={[{ name: 'Поиск по сайту' }]} />
+        <h1 class="ppage-title">Поиск по сайту</h1>
+      </div>
+    </header>
+    <div class="pin">
+      <form class="psearch-form" action="/search" method="get" role="search">
+        <input type="search" name="q" value={q} placeholder="Например: линолеум дуб, ковровая плитка, клей" aria-label="Поиск по сайту" autofocus={!q} />
+        <button type="submit" class="pbtn">Найти</button>
+      </form>
+
+      {q && total === 0 && (
+        <p class="psearch-none">
+          По запросу «{q}» ничего не нашлось. Проверьте написание или напишите короче: «дуб» вместо «дубовый ламинат».
+          Можно спросить нас в WhatsApp или по телефону {settings.phone_main}.
+        </p>
+      )}
+      {q && total > 0 && (
+        <p class="psearch-count">
+          По запросу «{q}» найдено: {total} {pluralRu(total, ['результат', 'результата', 'результатов'])}
+        </p>
+      )}
+
+      {r.sections.length > 0 && (
+        <div class="psearch-block">
+          <h2>Разделы</h2>
+          <ul class="psearch-list">
+            {r.sections.map((s) => (
+              <li><a href={s.href} {...ext(s.external)}>{s.title}</a>{s.text && <p>{s.text}</p>}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {r.productTotal > 0 && (
+        <div class="psearch-block">
+          <h2>Товары <span>{r.productTotal}</span></h2>
+          <div class="psearch-grid">
+            {r.products.map((p) => (
+              <a class="psearch-card" href={p.href}>
+                <span class="psearch-img">{p.image && <img src={uploadUrl(p.image)} alt={`${p.section} ${p.name}`} width="600" height="600" loading="lazy" />}</span>
+                <span class="psearch-sec">{p.section}{p.collection && ` · ${p.collection}`}</span>
+                <span class="psearch-name">{p.name}</span>
+              </a>
+            ))}
+          </div>
+          {pages > 1 && (
+            <nav class="psearch-pages" aria-label="Страницы результатов">
+              {Array.from({ length: pages }, (_, i) => i + 1).map((n) =>
+                n === page ? <span aria-current="page">{n}</span> : <a href={pageHref(n)}>{n}</a>,
+              )}
+            </nav>
+          )}
+        </div>
+      )}
+
+      {r.pages.length > 0 && (
+        <div class="psearch-block">
+          <h2>Страницы</h2>
+          <ul class="psearch-list">
+            {r.pages.map((p) => (
+              <li><a href={p.href}>{p.title}</a>{p.text && <p>{p.text}</p>}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {r.news.length > 0 && (
+        <div class="psearch-block">
+          <h2>Новости</h2>
+          <ul class="psearch-list">
+            {r.news.map((n) => (
+              <li><a href={n.href}>{n.title}</a>{n.text && <p>{n.text}</p>}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  </section>
+</SiteLayout>

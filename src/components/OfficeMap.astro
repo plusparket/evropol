@@ -1,0 +1,37 @@
+---
+// Google-карта с точкой ЕвроПол: справа на странице «Контакты» и внизу главной.
+// Карта тяжёлая (сотни КБ скриптов Google), поэтому iframe получает адрес, только когда подходит к экрану
+// (data-src, src/scripts/site.ts). Под картой — название, адрес и ссылка в Google Карты.
+import type { OfficeMap } from '../server/settings.ts';
+
+interface Props {
+  maps: OfficeMap[];
+  /** side — колонка справа (Контакты), wide — во всю ширину (главная) */
+  variant?: 'side' | 'wide';
+}
+const { maps, variant = 'wide' } = Astro.props;
+---
+
+{
+  maps.length > 0 && (
+    <div class:list={['pmaps', `pmaps--${variant}`, { 'pmaps--two': maps.length > 1 }]}>
+      {maps.map((m) => (
+        <figure class="pmap">
+          <div class="pmap-frame">
+            <iframe data-src={m.src} title={`Карта: ${m.name}, ${m.address}`} allowfullscreen referrerpolicy="strict-origin-when-cross-origin" />
+          </div>
+          <figcaption class="pmap-card">
+            <span class="pmap-pin" aria-hidden="true">
+              <svg width="18" height="24" viewBox="0 0 18 24" fill="currentColor"><path d="M9 0a9 9 0 0 0-9 9c0 6.8 9 15 9 15s9-8.2 9-15a9 9 0 0 0-9-9Zm0 12.5A3.5 3.5 0 1 1 9 5.5a3.5 3.5 0 0 1 0 7Z" /></svg>
+            </span>
+            <span class="pmap-text">
+              <strong>{m.name}</strong>
+              {m.address && <span>{m.address}</span>}
+            </span>
+            <a class="pmap-link" href={m.link} target="_blank" rel="noopener">Открыть в Google Картах</a>
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+  )
+}

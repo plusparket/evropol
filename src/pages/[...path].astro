@@ -3,12 +3,15 @@
 import SiteLayout from '../layouts/SiteLayout.astro';
 import NotFound from '../components/NotFound.astro';
 import SectionView from '../components/SectionView.astro';
+import LeadForm from '../components/LeadForm.astro';
 import PageView from '../components/PageView.astro';
+import OfficeMap from '../components/OfficeMap.astro';
 import { getPageBySlug } from '../server/content.ts';
-import { getActiveBrands, getSectionBySlug } from '../server/sections.ts';
-import { fillPlaceholders, getSettings } from '../server/settings.ts';
+import { getActiveBrands, getSectionBySlug, getSections } from '../server/sections.ts';
+import { pagePath } from '../server/section-guides.ts';
+import { fillPlaceholders, getSettings, officeMaps } from '../server/settings.ts';
 import { plainText } from '../server/util.ts';
-import { breadcrumbJsonLd, organizationJsonLd, sectionDescription, sectionTitle, siteBase, withSiteName } from '../server/seo.ts';
+import { aboutPageJsonLd, breadcrumbJsonLd, clip, organizationJsonLd, sectionDescription, sectionTitle, siteBase, withSiteName } from '../server/seo.ts';
 import { findRedirect } from '../server/redirects.ts';
 
 const raw = Astro.params.path ?? '';
@@ -17,9 +20,17 @@ const single = !path.includes('/');
 const section = single && path ? await getSectionBySlug(path) : undefined;
 const page = single && path && !section ? await getPageBySlug(path) : undefined;
 
+// Страница «Укладка и уход» раздела (linoleum-ukladka) открывается в каталоге: /linoleum/ukladka
+if (page) {
+  const target = pagePath(page.slug, await getSections({ publishedOnly: true }));
+  if (target !== `/${page.slug}`) return Astro.redirect(target, 301);
+}
 // Один адрес у страницы: /vinyl/ → /vinyl (постоянная переадресация, как любит Google)
 const canonicalPath = section ? `/${section.slug}` : page ? `/${page.slug}` : undefined;
 if (canonicalPath && Astro.url.pathname !== canonicalPath) return Astro.redirect(canonicalPath + Astro.url.search, 301);
+// Раздел с каталогом (/linoleum) сюда не попадает: его страницы показывает src/pages/section-site/ (src/middleware.ts).
+// Раздел без каталога, но со ссылкой (например, «Паркет» → domparketa.kg/parquet): страница раздела ведёт туда
+if (section && !section.siteHost && section.link) return Astro.redirect(section.link, 302);
 // Адреса старого сайта (/o-kompanii.html, /kontakty …) — по таблице переадресаций (админка → «Переадресации»)
 if (!canonicalPath) {
   const target = await findRedirect(Astro.url.pathname);
@@ -34,14 +45,20 @@ const base = siteBase(Astro.url.origin);
 const heading = section ? section.heading || section.name : '';
 const crumbsLd = section ? breadcrumbJsonLd(base, [{ name: heading, url: `/${section.slug}` }]) : undefined;
 // На странице «Контакты» — разметка компании (адрес, телефон, часы работы)
-const pageLd = page?.slug === 'contact' ? organizationJsonLd(settings, base, `${base}/img/og-europroject.jpg`) : undefined;
+const pageLd = page?.slug === 'contact' ? organizationJsonLd(settings, base, `${base}/img/og-evropol.jpg`)
+  : page?.slug === 'about'
+    ? aboutPageJsonLd(settings, base, '/about', page.seoTitle || withSiteName(page.title, settings), page.seoDescription,
+        [...pageContent.matchAll(/<img[^>]+src="(\/[^"]+)"/g)].map((m) => m[1]))
+    : undefined;
+// На странице «Контакты» справа от текста — Google-карта с точкой офиса
+const maps = page?.slug === 'contact' ? officeMaps(settings) : [];
 ---
 
 {
   section ? (
     <SiteLayout
       title={section.seoTitle || sectionTitle(heading, settings)}
-      description={section.seoDescription || plainText(section.description) || sectionDescription(heading, settings)}
+      description={section.seoDescription || clip(plainText(section.description, 400)) || sectionDescription(heading, settings)}
       canonicalPath={`/${section.slug}`}
       image={section.image ? `/uploads/${section.image}` : undefined}
       jsonLd={crumbsLd}
@@ -51,11 +68,14 @@ const pageLd = page?.slug === 'contact' ? organizationJsonLd(settings, base, `${
   ) : page ? (
     <SiteLayout
       title={page.seoTitle || withSiteName(page.title, settings)}
-      description={page.seoDescription || plainText(pageContent) || undefined}
+      description={page.seoDescription || clip(plainText(pageContent, 400)) || undefined}
       canonicalPath={`/${page.slug}`}
       jsonLd={pageLd}
     >
-      <PageView title={page.title} html={pageContent} />
+      <PageView title={page.title} html={pageContent}>
+        {maps.length > 0 && <OfficeMap slot="aside" maps={maps} variant="side" />}
+        {page.slug === 'contact' && <LeadForm />}
+      </PageView>
     </SiteLayout>
   ) : (
     <SiteLayout title="Страница не найдена" noindex>

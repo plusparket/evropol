@@ -1,0 +1,32 @@
+---
+// Страница «Укладка и уход» с блоками по образцу страниц производителей (текст страницы начинается с <div class="gd"> или <div class="gs">).
+// Шапка страницы такая же, как у всех текстовых страниц (PageView): светлая полоса, крошки, зелёный заголовок h1.
+// Свои заголовки h1 и надпись «Инструкция» из текста убираются (владелец, 12.11.2026: на всех страницах один стиль),
+// оформление блоков внутри текста — в site.css (разделы «gd», «gs» и «Единый стиль»).
+import Crumbs from './Crumbs.astro';
+
+interface Props {
+  title: string;
+  html: string;
+  parents?: { name: string; url: string }[];
+  /** Заголовок h1 уже есть в тексте страницы (больше не используется: h1 всегда в шапке страницы) */
+  ownTitle?: boolean;
+}
+const { title, html, parents = [] } = Astro.props;
+const body = html
+  .replace(/<h1\b[^>]*>[\s\S]*?<\/h1>\s*/g, '')
+  .replace(/<p class="gd-eyebrow">[\s\S]*?<\/p>\s*/g, '')
+  .replace(/<nav class="gs-sub"[\s\S]*?<\/nav>\s*/g, '');
+---
+
+<article class="ppage gd-page">
+  <header class="ppage-head">
+    <div class="pin ppage-wide">
+      <Crumbs items={[...parents, { name: title }]} />
+      <h1 class="ppage-title">{title}</h1>
+    </div>
+  </header>
+  <div class="pin ppage-wide gd-wrap">
+    <div set:html={body} />
+  </div>
+</article>

@@ -1,0 +1,172 @@
+---
+// Каталог раздела на главном сайте. Сюда попадают запросы /<раздел>/… (src/middleware.ts), path — часть после раздела:
+//   /linoleum              → каталог раздела (вид 'groups': все товары, слева группы и категории)
+//   /linoleum/<товар>      → страница товара
+//   /linoleum/<категория>  → группа или категория товаров (вид 'groups')
+//   /linoleum/ukladka, /uhod → «Укладка и уход» (страницы linoleum-ukladka, linoleum-uhod; src/server/section-guides.ts)
+//   остальное              → 404
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import NotFound from '../../components/NotFound.astro';
+import SiteHome from '../../components/section-site/SiteHome.astro';
+import CatalogHome from '../../components/section-site/CatalogHome.astro';
+import MhCatalog from '../../components/section-site/MhCatalog.astro';
+import GroupsHome from '../../components/section-site/GroupsHome.astro';
+import CategoryView from '../../components/section-site/CategoryView.astro';
+import ProductView from '../../components/section-site/ProductView.astro';
+import PageView from '../../components/PageView.astro';
+import GuideView from '../../components/GuideView.astro';
+import { getSectionGuides, withGuideEnding } from '../../server/section-guides.ts';
+import { catalogPath, getActiveBrands, mainUrl, siteUrl } from '../../server/sections.ts';
+import {
+  applyFilters, categoryPaths, getCategoryTree, getProducts, parseFilters, productsOf, relatedInCategory, relatedProducts, type CategoryNode,
+} from '../../server/products.ts';
+import { fillPlaceholders, getSettings, isMohawkCatalog, siteSettings } from '../../server/settings.ts';
+import { plainText } from '../../server/util.ts';
+import {
+  breadcrumbJsonLd, categoryDescription, clip, productAlt, productDescription, productPageTitle, fitTitle, sectionSiteDescription, sectionSiteJsonLd, withSiteName,
+} from '../../server/seo.ts';
+
+const site = Astro.locals.site;
+if (!site) return new Response('Not found', { status: 404 });
+
+const path = (Astro.params.path ?? '').replace(/\/+$/, '');
+
+const [allSettings, products] = await Promise.all([getSettings(), getProducts(site.id)]);
+const settings = siteSettings(allSettings, site);
+const product = path && !path.includes('/') ? products.find((p) => p.slug === path) : undefined;
+const isHome = !path;
+
+const base = mainUrl();
+const at = (rest = '') => catalogPath(site, rest);
+const heading = site.heading || site.name;
+const catalogOnly = site.siteLayout === 'catalog';
+const withGroups = site.siteLayout === 'groups';
+const tree = withGroups ? await getCategoryTree(site.id) : [];
+// Группа или категория по адресу: [группа] или [группа, категория]
+let catPath: CategoryNode[] | undefined;
+if (withGroups && path && !product && !path.includes('/')) {
+  for (const g of tree) {
+    if (g.slug === path) catPath = [g];
+    const c = g.children.find((x) => x.slug === path);
+    if (c) catPath = [g, c];
+  }
+}
+// «Укладка и уход»: /linoleum/ukladka, /linoleum/uhod
+const guide = path && !product && !catPath ? (await getSectionGuides(site)).find((g) => g.key === path) : undefined;
+if (!isHome && !product && !catPath && !guide) Astro.response.status = 404;
+
+const brands = isHome && !catalogOnly && !withGroups ? await getActiveBrands(site.id) : [];
+const { items, groups } = isHome && !withGroups
+  ? applyFilters(products, parseFilters(Astro.url.searchParams), { sortValues: catalogOnly })
+  : { items: [], groups: [] };
+// Товар на сайте с категориями: крошки по первой категории, «похожие» — из неё же
+const productPath = product && withGroups ? categoryPaths(tree, product.id)[0] : undefined;
+// Цвета коллекции для страницы товара (как в карточке каталога): те же товары раздела с той же коллекцией,
+// в порядке каталога, то есть товары со склада первыми. У сайтов с группами категорий (строительная химия) коллекций нет.
+const collectionOf = (p: { collection: string; facets: { label: string; value: string }[]; specs: { label: string; value: string }[] }) =>
+  p.collection || p.facets.find((x) => x.label === 'Коллекция')?.value || p.specs.find((x) => x.label === 'Коллекция')?.value || '';
+const productCollection = product && !withGroups ? collectionOf(product) : '';
+const colors = productCollection ? products.filter((p) => collectionOf(p) === productCollection).map((p) => ({ name: p.name, href: at(p.slug), image: p.images[0] ?? '', current: p.id === product!.id })) : [];
+const related = product ? (withGroups ? relatedInCategory(products, product, productPath?.at(-1)) : relatedProducts(products, product)) : [];
+const productCrumbs = withGroups
+  ? [{ name: site.name, url: at() }, ...(productPath ?? []).map((c) => ({ name: c.name, url: at(c.slug) }))]
+  : catalogOnly
+    ? [{ name: site.name, url: at() }]
+    : [{ name: site.name, url: `${at()}#catalog` }];
+// «Линолеум Дуб Какао 547, Texville», для одноимённых товаров с отличием: «…, узкая доска»
+const cat = catPath?.at(-1);
+// Категория с тем же названием, что у другой («Разное» в двух группах): в заголовке и группа
+const catTitle = cat && catPath && catPath.length > 1 && tree.flatMap((g) => [g, ...g.children]).some((c) => c.id !== cat.id && c.name === cat.name)
+  ? `${catPath[0].name}: ${cat.name}`
+  : cat?.name;
+// Вторая и дальше страницы каталога (?page=N) открыты для Google, у каждой свой адрес (canonical) и заголовок:
+// так Google доходит по ссылкам до всех коллекций. Неправильный номер (?page=1, ?page=abc) не индексируем.
+const pageParam = Astro.url.searchParams.get('page');
+const pageNo = pageParam && /^[1-9]\d*$/.test(pageParam) ? Number(pageParam) : 1;
+const paged = pageParam !== null && pageNo < 2;
+const pageQuery = pageNo > 1 ? `?page=${pageNo}` : '';
+const pageTitle = pageNo > 1 ? `, страница ${pageNo}` : '';
+const catalog = { color: site.siteColor, layout: site.siteLayout };
+// Дизайн по образцу mohawkflooring.com (настройка «mohawk_catalogs»): крошки в серой полосе под шапкой
+const mh = (catalogOnly || withGroups) && isMohawkCatalog(allSettings, site.slug);
+const siteCrumb = { name: site.name, url: at() };
+---
+
+{
+  isHome ? (
+    <SiteLayout
+      catalog={catalog}
+      title={(!pageTitle && site.seoTitle) || withSiteName(`${heading} в Бишкеке: каталог${pageTitle}`, settings)}
+      description={sectionSiteDescription(site, products, settings)}
+      canonicalPath={at() + pageQuery}
+      image={site.image ? `/uploads/${site.image}` : undefined}
+      jsonLd={[
+        sectionSiteJsonLd(site, settings, siteUrl(site), base, site.image ? `${base}/uploads/${site.image}` : undefined),
+        breadcrumbJsonLd(base, [{ name: site.name, url: at() }]),
+      ]}
+      noindex={Astro.url.searchParams.has('f') || Astro.url.searchParams.has('q') || Astro.url.searchParams.has('sort') || paged}
+    >
+      {mh ? (
+        <MhCatalog site={site} products={products} settings={settings} tree={withGroups ? tree : undefined} />
+      ) : withGroups ? (
+        <GroupsHome site={site} products={products} tree={tree} settings={settings} />
+      ) : catalogOnly ? (
+        <CatalogHome site={site} products={products} items={items} groups={groups} settings={settings} />
+      ) : (
+        <SiteHome site={site} products={products} items={items} groups={groups} brands={brands} settings={settings} />
+      )}
+    </SiteLayout>
+  ) : product ? (
+    <SiteLayout
+      catalog={catalog}
+      title={product.seoTitle || productPageTitle(product, products, site.slug, settings)}
+      description={productDescription(product, settings, products, site.slug)}
+      canonicalPath={at(product.slug)}
+      image={product.images[0] ? `/uploads/${product.images[0]}` : undefined}
+      jsonLd={breadcrumbJsonLd(base, [...productCrumbs, { name: product.name, url: at(product.slug) }])}
+      crumbs={[...productCrumbs, { name: product.name }]}
+    >
+      <ProductView product={product} related={related} settings={settings} crumbs={productCrumbs} samples={!withGroups} colors={colors} alt={productAlt(product, site.slug)} />
+    </SiteLayout>
+  ) : catPath && cat ? (
+    <SiteLayout
+      catalog={catalog}
+      title={fitTitle([`${catTitle}: ${heading} в Бишкеке${pageTitle}`, `${catTitle}: ${heading}${pageTitle}`, `${catTitle}${pageTitle}`], settings)}
+      description={categoryDescription(cat.name, cat.description, cat.productIds.length, settings)}
+      canonicalPath={at(cat.slug) + pageQuery}
+      noindex={paged}
+      jsonLd={breadcrumbJsonLd(base, [{ name: site.name, url: at() }, ...catPath.map((c) => ({ name: c.name, url: at(c.slug) }))])}
+      crumbs={[siteCrumb, ...catPath.map((c) => ({ name: c.name, url: at(c.slug) }))]}
+    >
+      {mh ? (
+        <MhCatalog site={site} products={productsOf(products, cat)} settings={settings} tree={tree} root={at(cat.slug)} heading={catTitle} />
+      ) : (
+        <CategoryView site={site} tree={tree} group={catPath[0]} category={catPath[1]} products={products} />
+      )}
+    </SiteLayout>
+  ) : guide ? (
+    <SiteLayout
+      catalog={catalog}
+      title={guide.seoTitle || withSiteName(guide.title, settings)}
+      description={guide.seoDescription || clip(plainText(guide.content, 400)) || undefined}
+      canonicalPath={guide.url}
+      jsonLd={breadcrumbJsonLd(base, [{ name: site.name, url: at() }, { name: guide.title, url: guide.url }])}
+      crumbs={[siteCrumb, { name: guide.title }]}
+    >
+      {/^<div class="g[ds][" ]/.test(guide.content.trimStart()) ? (
+        <GuideView
+          title={guide.title}
+          html={fillPlaceholders(withGuideEnding(guide.content), settings)}
+          parents={[{ name: site.name, url: at() }]}
+          ownTitle={guide.content.trimStart().startsWith('<div class="gs"')}
+        />
+      ) : (
+        <PageView title={guide.title} html={fillPlaceholders(withGuideEnding(guide.content), settings)} parents={[{ name: site.name, url: at() }]} />
+      )}
+    </SiteLayout>
+  ) : (
+    <SiteLayout catalog={catalog} title="Страница не найдена" noindex>
+      <NotFound />
+    </SiteLayout>
+  )
+}

@@ -1,4 +1,4 @@
-# Сайт «Европроект»: Postgres + приложение Astro + Caddy (reverse proxy, HTTPS).
+# Сайт «ЕвроПол»: Postgres + приложение Astro + Caddy (reverse proxy, HTTPS).
 # Запуск:  docker compose up -d --build
 # Подробности: docs/development.md и docs/deployment.md
 
@@ -46,6 +46,12 @@ services:
       SEED_ON_START: ${SEED_ON_START:-false}
       # Ключ доступа Instagram для новостей (docs/news-instagram.md); пусто — посты не загружаются
       INSTAGRAM_TOKEN: ${INSTAGRAM_TOKEN:-}
+      # Почтовый сервер для писем о заявках из анкеты «Оставьте контакты» (docs/leads.md); пусто — заявки только в админке
+      SMTP_HOST: ${SMTP_HOST:-}
+      SMTP_PORT: ${SMTP_PORT:-465}
+      SMTP_USER: ${SMTP_USER:-}
+      SMTP_PASS: ${SMTP_PASS:-}
+      SMTP_FROM: ${SMTP_FROM:-}
       TZ: ${TZ:-Asia/Bishkek}
       PGTZ: ${TZ:-Asia/Bishkek}
     volumes:
@@ -64,6 +70,11 @@ services:
       - "443:443/udp"
     environment:
       SITE_ADDRESS: ${SITE_ADDRESS:-http://localhost}
+      # Адреса сайтов разделов (vinyl.localhost …), см. Caddyfile
+      SECTION_SITES_ADDRESS: ${SECTION_SITES_ADDRESS:-http://*.localhost}
+      # Старый домен: всё переадресуется на SITE_URL (docs/seo.md)
+      OLD_SITE_ADDRESS: ${OLD_SITE_ADDRESS:-http://old-site.localhost}
+      SITE_URL: ${SITE_URL:-http://localhost}
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
       - uploads:/srv/uploads:ro

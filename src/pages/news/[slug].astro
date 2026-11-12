@@ -31,7 +31,7 @@ const text = content.replace(/<p>\s*<img[^>]*>\s*<\/p>\s*/g, '').replace(/<img[^
   item ? (
     <SiteLayout
       title={`${item.title} | ${settings.site_name}`}
-      description={item.excerpt || plainText(content) || undefined}
+      description={item.excerpt || plainText(text, 160) || `${item.title}. Новости компании «${settings.site_name}», ${formatDate(item.publishedAt)}.`}
       canonicalPath={`/news/${item.slug}`}
       ogType="article"
       image={item.image ? uploadUrl(item.image) : undefined}

@@ -1,9 +1,9 @@
 {
-  "name": "europroject",
+  "name": "evropol",
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Сайт «Европроект» (europroject.kg): Astro + Postgres + собственная панель управления",
+  "description": "Сайт «ЕвроПол» (evropol.kg): Astro + Postgres + собственная панель управления",
   "engines": {
     "node": ">=24"
   },
@@ -19,7 +19,9 @@
   },
   "dependencies": {
     "@astrojs/node": "^11.1.6",
+    "@types/nodemailer": "^6.4.17",
     "astro": "^7.3.5",
+    "nodemailer": "^6.9.16",
     "postgres": "^3.4.9",
     "sharp": "^0.35.5"
   },

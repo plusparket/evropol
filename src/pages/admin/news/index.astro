@@ -2,8 +2,26 @@
 import AdminLayout from '../../../layouts/AdminLayout.astro';
 import { sql } from '../../../server/db.ts';
 import type { News } from '../../../server/content.ts';
-import { formatDate } from '../../../server/util.ts';
+import { formatDate, str } from '../../../server/util.ts';
+import { withFlash } from '../../../server/admin.ts';
+import { instagramStatus, saveInstagramToken, syncInstagram, KEEP_POSTS } from '../../../server/instagram.ts';
 
+// Посты Instagram: ключ доступа вставляется здесь, кнопка загружает последние посты (docs/news-instagram.md)
+if (Astro.request.method === 'POST') {
+  const data = await Astro.request.formData();
+  try {
+    const token = str(data, 'instagram_token');
+    const account = token ? await saveInstagramToken(token) : '';
+    // Все последние посты, без ограничения по дате: останутся KEEP_POSTS самых новых
+    const r = await syncInstagram(3650);
+    const who = account ? `Аккаунт @${account} подключён. ` : '';
+    return Astro.redirect(withFlash('/admin/news', 'ok', `${who}Новых постов: ${r.added}, уже были на сайте: ${r.skipped}`));
+  } catch (err) {
+    return Astro.redirect(withFlash('/admin/news', 'err', (err as Error).message));
+  }
+}
+
+const insta = await instagramStatus();
 const news = await sql<News[]>`SELECT id, title, published_at, is_published, views, source_url FROM news ORDER BY published_at DESC, id DESC`;
 ---
 
@@ -12,6 +30,41 @@ const news = await sql<News[]>`SELECT id, title, published_at, is_published, vie
     <h1>Новости</h1>
     <div class="actions"><a class="btn" href="/admin/news/new">+ Добавить новость</a></div>
   </div>
+  <div class="card">
+    <h2>Посты из Instagram</h2>
+    {
+      insta.hasToken ? (
+        <p>
+          Instagram подключён. В новостях постов из Instagram: {insta.posts} (сайт держит {KEEP_POSTS} самых новых).
+          {insta.syncedAt && <Fragment> Последняя загрузка: {formatDate(insta.syncedAt)}.</Fragment>} Новые посты сайт
+          загружает сам раз в две недели.
+        </p>
+      ) : (
+        <p>Instagram не подключён. Вставьте ключ доступа к аккаунту evropolkg, и сайт загрузит последние {KEEP_POSTS} постов.</p>
+      )
+    }
+    <form method="post" class="form-grid">
+      <div class="field full">
+        <label for="instagram_token">{insta.hasToken ? 'Новый ключ доступа (если старый перестал работать)' : 'Ключ доступа Instagram'}</label>
+        <input type="password" id="instagram_token" name="instagram_token" autocomplete="off" placeholder="IGAA…" required={!insta.hasToken} />
+        <div class="hint">Ключ даёт доступ к аккаунту, никому его не пересылайте. Сайт сам продлевает его каждые две недели</div>
+        <details class="hint">
+          <summary>Как получить ключ</summary>
+          <ol>
+            <li>В приложении Instagram у evropolkg: Настройки → «Тип аккаунта и инструменты» → профессиональный аккаунт (если ещё не так).</li>
+            <li>Откройте developers.facebook.com → «Мои приложения» и выберите приложение, через которое подключали domparketa (или создайте новое: сценарий «Управление сообщениями и контентом в Instagram»).</li>
+            <li>В приложении: Instagram → «Настройка API со входом через Instagram» → «Создать маркеры доступа» → «Добавить аккаунт», войдите как evropolkg и разрешите доступ.</li>
+            <li>Если Instagram не пускает: «Роли приложения» → «Роли» → «Добавить людей» → «Тестировщик Instagram», впишите evropolkg; затем в Instagram: Настройки → «Приложения и сайты» → «Приглашения тестировщиков» → принять. После этого повторите шаг 3.</li>
+            <li>Нажмите «Создать маркер» у evropolkg, скопируйте ключ (начинается с IG) и вставьте в поле выше.</li>
+          </ol>
+        </details>
+      </div>
+      <div class="field full">
+        <button class="btn" type="submit">{insta.hasToken ? 'Загрузить новые посты сейчас' : 'Подключить и загрузить посты'}</button>
+      </div>
+    </form>
+  </div>
+
   <div class="table-wrap">
     <table class="list">
       <thead><tr><th>Заголовок</th><th>Дата</th><th>Просм.</th></tr></thead>

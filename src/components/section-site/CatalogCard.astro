@@ -1,0 +1,36 @@
+---
+// Карточка товара в плитке каталога (виды «только каталог» и «группы и категории»): квадратное фото с меткой
+// «Новинка», бренд (если их в разделе несколько) и коллекция, название, кнопка «Подробно».
+import { productThumb, type ProductItem } from '../../server/products.ts';
+import { uploadUrl } from '../../server/uploads.ts';
+import { catalogPath } from '../../server/sections.ts';
+
+interface Props {
+  product: ProductItem;
+  /** Писать бренд перед коллекцией (в разделе несколько брендов) */
+  showBrand?: boolean;
+}
+const { product: p, showBrand = false } = Astro.props;
+const href = catalogPath(Astro.locals.site!, p.slug);
+const sub = [showBrand && p.brand, p.collection].filter(Boolean).join(' · ');
+---
+
+<article class="cat-card">
+  <a class="cat-card-img" href={href}>
+    {p.images[0] ? (
+      <img src={uploadUrl(productThumb(p.images[0]))} alt={[p.brand, p.name].filter(Boolean).join(' ')} width="600" height="600" loading="lazy" />
+    ) : (
+      <span class="pcard2-noimg" />
+    )}
+    {p.isNew && (
+      <span class="ss-badges">
+        <span class="ss-badge">Новинка</span>
+      </span>
+    )}
+  </a>
+  <div class="cat-card-body">
+    {sub && <div class="cat-card-sub">{sub}</div>}
+    <h2 class="cat-card-name"><a href={href}>{p.name}</a></h2>
+    <a class="pbtn cat-card-btn" href={href}>Подробно</a>
+  </div>
+</article>
