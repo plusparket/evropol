@@ -1,5 +1,5 @@
 // «Укладка и уход» в каталоге раздела: две текстовые страницы, /linoleum/ukladka и /linoleum/uhod
-// (так же /carpet-tiles/…, /vinyl/…, /carpet/…, /laminate/… и /adhesives/ukladka).
+// (так же /carpet-tiles/…, /vinyl/…, /carpet/…, /laminate/…; /adhesives/ukladka скрыта владельцем 12.11.2026).
 // Тексты хранятся как обычные страницы (админка → «Страницы») с адресом <раздел>-<подраздел>: linoleum-ukladka,
 // linoleum-uhod. Показываются по адресу внутри каталога, а в шапке каталога пункт «Укладка и уход» с двумя
 // подразделами встаёт вместо «Новости и события». Нет страницы или она скрыта — нет и пункта меню.
@@ -184,6 +184,17 @@ export async function upgradeGuides(): Promise<string[]> {
         if (res.count) log.push(`страница «${title}»`);
       }
       await tx`INSERT INTO settings (key, value) VALUES (${group.flag}, '1') ON CONFLICT (key) DO NOTHING`;
+    });
+  }
+  // Владелец, 12.11.2026: у строительной химии вкладка «Укладка» не нужна. Страница скрывается один раз и остаётся
+  // в админке («Страницы» → adhesives-ukladka): если её снова опубликовать, вкладка вернётся.
+  const hideFlag = 'guides_adhesives_hidden_2026_11_12';
+  const [hidden] = await sql`SELECT 1 FROM settings WHERE key = ${hideFlag}`;
+  if (!hidden) {
+    await sql.begin(async (tx) => {
+      const res = await tx`UPDATE pages SET is_published = false, updated_at = now() WHERE slug = 'adhesives-ukladka' AND is_published`;
+      if (res.count) log.push('скрыта страница «Укладка» строительной химии');
+      await tx`INSERT INTO settings (key, value) VALUES (${hideFlag}, '1') ON CONFLICT (key) DO NOTHING`;
     });
   }
   return log;
