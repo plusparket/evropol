@@ -41,6 +41,7 @@ export async function upgradeAbout(): Promise<string[]> {
   const log = await upgradeContactShops();
   log.push(...(await upgradeAboutCountries()));
   log.push(...(await upgradeAboutIntro()));
+  log.push(...(await upgradeAboutPage('about_no_countries_2026_11_12', 'about-2026-11-12.html', 'страница «О компании»: без рассказов о заводах, первым фото немецкого завода')));
   const fixed = await sql`UPDATE pages SET content = replace(content, ${OLD_SALON}, ${NEW_SALON}), updated_at = now()
                           WHERE slug IN ('about', 'contact') AND position(${OLD_SALON} in content) > 0`;
   if (fixed.count) log.push('адрес салона «Дом Паркета»: строительный комплекс «Монолит»');
@@ -123,6 +124,25 @@ async function upgradeAboutIntro(): Promise<string[]> {
       log.push('страница «О компании»: вступление владельца и галерея фото заводов');
     }
     await tx`INSERT INTO settings (key, value) VALUES (${FLAG_INTRO}, '1') ON CONFLICT (key) DO NOTHING`;
+  });
+  return log;
+}
+
+/** Ставит seed/pages/about.html, если на странице текст из архива archive/<prev> (страницу не правили в админке). */
+async function upgradeAboutPage(flag: string, prev: string, message: string): Promise<string[]> {
+  const [done] = await sql`SELECT 1 FROM settings WHERE key = ${flag}`;
+  if (done) return [];
+  const log: string[] = [];
+  const dir = path.resolve(process.cwd(), 'seed', 'pages');
+  const html = (await readFile(path.join(dir, 'about.html'), 'utf8')).trim();
+  const old = norm(await readFile(path.join(dir, 'archive', prev), 'utf8'));
+  await sql.begin(async (tx) => {
+    for (const p of await tx<{ id: number; content: string }[]>`SELECT id, content FROM pages WHERE slug = 'about'`) {
+      if (norm(p.content) !== old) continue;
+      await tx`UPDATE pages SET content = ${html}, updated_at = now() WHERE id = ${p.id}`;
+      log.push(message);
+    }
+    await tx`INSERT INTO settings (key, value) VALUES (${flag}, '1') ON CONFLICT (key) DO NOTHING`;
   });
   return log;
 }
