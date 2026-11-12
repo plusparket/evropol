@@ -43,6 +43,10 @@ export async function upgradeAbout(): Promise<string[]> {
   log.push(...(await upgradeAboutIntro()));
   log.push(...(await upgradeAboutPage('about_no_countries_2026_11_12', 'about-2026-11-12.html', 'страница «О компании»: без рассказов о заводах, первым фото немецкого завода')));
   log.push(...(await upgradeAboutPage('about_trends_2026_11_12', 'about-2026-11-12b.html', 'страница «О компании»: «Шагаем в ногу с мировыми трендами»')));
+  log.push(...(await upgradeAboutPage('about_seo_2026_11_12', 'about-2026-11-12c.html', 'страница «О компании»: первое фото грузится сразу')));
+  // Заголовок страницы (H1) с названием компании, если его не меняли в админке
+  const h1 = await sql`UPDATE pages SET title = 'О компании ЕвроПол', updated_at = now() WHERE slug = 'about' AND title = 'О компании'`;
+  if (h1.count) log.push('страница «О компании»: заголовок «О компании ЕвроПол»');
   const fixed = await sql`UPDATE pages SET content = replace(content, ${OLD_SALON}, ${NEW_SALON}), updated_at = now()
                           WHERE slug IN ('about', 'contact') AND position(${OLD_SALON} in content) > 0`;
   if (fixed.count) log.push('адрес салона «Дом Паркета»: строительный комплекс «Монолит»');
