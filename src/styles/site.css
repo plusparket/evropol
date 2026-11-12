@@ -516,6 +516,62 @@ h1, h2, h3 { font-weight: 700; }
   .gs-alert { top: 40px; width: auto; margin: 10px -16px 0; padding: 24px 16px 18px; }
   .gs-band--pile + .gs-pair { margin-top: 100px; }
 }
+/* --- Единый стиль текстовых страниц (владелец, 12.11.2026) ---------------------------------------------------------
+ * Все страницы «Укладка и уход», «О нас», «Контакты» и прочие текстовые страницы выглядят одинаково: шапка страницы —
+ * светлая полоса с зелёным заголовком h1 (.ppage-title), подзаголовки h2 зелёные 28 px обычными буквами, h3 зелёные
+ * 20 px, текст 16 px цвета --text. Никаких заголовков прописными, гигантских заголовков и заливок зелёным с белым
+ * текстом: карточки и плашки — светлые (--band), акцент — зелёная полоса слева или зелёный кружок с номером. */
+.ppage-text h2, .gd h2, .gs h2 { margin: 40px 0 16px; color: var(--g, var(--accent)); font: 700 clamp(22px, 2.4vw, 28px)/1.25 var(--font); letter-spacing: normal; text-transform: none; }
+.ppage-text h3, .gd h3, .gs h3, .gd-aw h3 { margin: 26px 0 12px; color: var(--g, var(--accent)); font: 700 clamp(18px, 1.6vw, 20px)/1.3 var(--font); letter-spacing: normal; text-transform: none; }
+.ppage-text h4, .gd h4 { margin: 0 0 12px; color: var(--ink); font: 700 17px/1.3 var(--font); }
+.ppage-text > h2:first-child, .ppage-text > h3:first-child { margin-top: 0; }
+.gd-page { padding-top: 0; background: none; }
+.gd, .gs, .gd-aw { color: var(--text); font-size: 16px; line-height: 1.7; }
+.gd p, .gs p { margin: 0 0 16px; }
+.gd h2::before { display: none; }
+.gd ul, .gs ul { margin: 0 0 16px; padding-left: 22px; list-style: disc; }
+.gd li, .gs li, .gd-aw li { margin: 0 0 6px; }
+.gd li::marker { color: inherit; font-size: inherit; }
+/* Вступление — обычный текст чуть крупнее, без огромных отступов */
+.gd-lead, .gd-aw .gd-caps { max-width: 860px; margin: 0 0 40px !important; color: var(--text); font: 400 18px/1.6 var(--font); text-transform: none; }
+.gd-intro { max-width: 860px; margin: 0 0 40px; padding: 0; }
+.gd-row, .gd-two, .gd-hero, .gd-steps, .gd-split, .gd-acc, .gd-band, .gd-three { margin-bottom: 56px; }
+.gd-row > .gd-text { padding: 0; }
+.gd-row h2:first-child, .gd-two h2:first-child, .gd-col h2:first-child, .gd-text > h2:first-child, .gd-text > h3:first-child, .gd-hero-text > :first-child, .gd-band h3:first-child { margin-top: 0; }
+.gd-card h2 { white-space: normal; }
+.gd-col h3, .gd-steps-list h3, .gd-band h3, .gd-three--cards h3 { font-size: clamp(18px, 1.6vw, 20px); }
+.gd-hero { grid-template-columns: 1fr 1fr; column-gap: 60px; }
+.gd-hero .gd-media img { aspect-ratio: 4 / 3; }
+.gd-hero-text { max-width: none; }
+.gd-num { width: 36px; height: 36px; border-radius: 50%; font-size: 17px; }
+.gd-aw .gd-acc-body h3 { font-size: 18px; }
+.gd-acc-t { color: var(--ink); font-size: 16px; font-weight: 600; text-transform: none; letter-spacing: normal; }
+.gd-cta, .gs-talk { background: var(--band); color: var(--text); }
+.gd-cta h2, .gs-talk h2 { margin: 0 auto 16px; color: var(--g, var(--accent)); }
+/* Шаги ковровой плитки: светлые карточки с зелёной полосой слева вместо зелёных с белым текстом */
+.gs h2 { display: flex; align-items: center; gap: 12px; margin: 0 0 16px; }
+.gs-num { width: 32px; height: 32px; font-size: 16px; font-weight: 700; }
+.gs-top, .gs-pair { margin-bottom: 56px; }
+.gs-top { grid-template-columns: 1fr; gap: 24px; }
+.gs-talk h2 { display: block; text-align: center; }
+.gs-intro p { font-size: 18px; }
+.gs-card { padding: 28px 24px 0; border-left: 4px solid var(--gs-c); background: var(--band); color: var(--text); }
+.gs-card h2 { color: var(--g, var(--accent)); }
+.gs-card h3 { color: var(--g, var(--accent)); }
+.gs-card .gs-num { background: var(--gs-c); color: #fff; }
+.gs-card a { color: var(--accent); }
+.gs-band { margin-bottom: 56px; padding-top: 28px; border-left: 4px solid var(--gs-c); }
+.gs-band > h2 { margin-bottom: 26px; }
+.gs-alert { border-left: 4px solid var(--gs-c); background: #fff; color: var(--text); box-shadow: 0 2px 12px rgba(0, 0, 0, .08); }
+.gs-alert h3 { color: var(--g, var(--accent)); font-size: 18px; }
+.gs-talk a { color: var(--accent); font-weight: 700; }
+.gs-talk a::before { background: var(--accent); }
+@media (max-width: 800px) {
+  .gd-hero { grid-template-columns: 1fr; }
+  .gd-lead, .gd-aw .gd-caps, .gs-intro p { font-size: 17px; }
+  .gd-row, .gd-two, .gd-hero, .gd-steps, .gd-split, .gd-acc, .gd-band, .gd-three, .gs-top, .gs-pair, .gs-band { margin-bottom: 40px; }
+}
+
 .ppage-text table { width: 100%; margin: 0 0 18px; border-collapse: collapse; }
 .ppage-text td, .ppage-text th { padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
 

@@ -9,6 +9,8 @@ import { sql } from './db.ts';
 import { catalogPath, type Section } from './sections.ts';
 
 export const GUIDES_LABEL = 'Укладка и уход';
+/** Подпись пункта меню: у раздела с одной страницей — её название («Укладка» у строительной химии, у неё нет ухода) */
+export const guidesLabel = (guides: { label: string }[]) => (guides.length === 1 ? guides[0].label : GUIDES_LABEL);
 /** Подразделы: адрес внутри каталога и подпись в меню */
 export const GUIDES = [
   { key: 'ukladka', label: 'Укладка' },

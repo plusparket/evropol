@@ -5,7 +5,7 @@ import type { MenuItem, MenuName } from '../server/content.ts';
 import { isExternal, sectionHref, sectionUrl, type Section } from '../server/sections.ts';
 import type { Settings } from '../server/settings.ts';
 import SocialIcon from './SocialIcon.astro';
-import { GUIDES_LABEL } from '../server/section-guides.ts';
+import { guidesLabel } from '../server/section-guides.ts';
 
 interface Props {
   sections: Section[];
@@ -41,7 +41,7 @@ if (sections.length) {
   links.splice(about >= 0 ? about + 1 : 1, 0, { label: 'Продукты', url: '/#razdely', products: true });
 }
 if (guides.length) {
-  const guideLink: Link = { label: GUIDES_LABEL, url: guides[0].url, children: guides };
+  const guideLink: Link = { label: guidesLabel(guides), url: guides[0].url, children: guides };
   const news = links.findIndex((l) => l.url === '/news');
   if (news >= 0) links.splice(news, 1, guideLink);
   else links.push(guideLink);

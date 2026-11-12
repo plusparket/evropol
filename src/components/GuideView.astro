@@ -1,25 +1,32 @@
 ---
-// Страница «Укладка и уход» с вёрсткой как у страниц производителя (текст страницы начинается с <div class="gd">):
-// крошки, крупный заголовок (или первый экран gd-hero со своим заголовком) на белом фоне, широкая колонка. Блоки внутри текста описаны в site.css (раздел «gd»).
-// Вёрстка «по шагам» (<div class="gs">, раздел «gs» в site.css) несёт заголовок h1 в самом тексте: ownTitle.
+// Страница «Укладка и уход» с блоками по образцу страниц производителей (текст страницы начинается с <div class="gd"> или <div class="gs">).
+// Шапка страницы такая же, как у всех текстовых страниц (PageView): светлая полоса, крошки, зелёный заголовок h1.
+// Свои заголовки h1 и надпись «Инструкция» из текста убираются (владелец, 12.11.2026: на всех страницах один стиль),
+// оформление блоков внутри текста — в site.css (разделы «gd», «gs» и «Единый стиль»).
 import Crumbs from './Crumbs.astro';
 
 interface Props {
   title: string;
   html: string;
   parents?: { name: string; url: string }[];
-  /** Заголовок h1 уже есть в тексте страницы */
+  /** Заголовок h1 уже есть в тексте страницы (больше не используется: h1 всегда в шапке страницы) */
   ownTitle?: boolean;
 }
-const { title, html, parents = [], ownTitle = false } = Astro.props;
-// Свой первый экран «фото + заголовок» (блок gd-hero) или свой заголовок gd-h1 (ковролин) — заголовок уже в тексте страницы
-const hasHero = html.includes('class="gd-hero"') || html.includes('class="gd-h1');
+const { title, html, parents = [] } = Astro.props;
+const body = html
+  .replace(/<h1\b[^>]*>[\s\S]*?<\/h1>\s*/g, '')
+  .replace(/<p class="gd-eyebrow">[\s\S]*?<\/p>\s*/g, '')
+  .replace(/<nav class="gs-sub"[\s\S]*?<\/nav>\s*/g, '');
 ---
 
-<article class="gd-page">
-  <div class="gd-wrap">
-    <Crumbs items={[...parents, { name: title }]} />
-    {!hasHero && !ownTitle && <h1 class="gd-title">{title}</h1>}
-    <div set:html={html} />
+<article class="ppage gd-page">
+  <header class="ppage-head">
+    <div class="pin ppage-wide">
+      <Crumbs items={[...parents, { name: title }]} />
+      <h1 class="ppage-title">{title}</h1>
+    </div>
+  </header>
+  <div class="pin ppage-wide gd-wrap">
+    <div set:html={body} />
   </div>
 </article>

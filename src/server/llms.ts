@@ -11,7 +11,7 @@ import { getActiveBrands, getSections, linkLabel, sectionLink, siteUrl, type Bra
 import { categoryPaths, getCategoryTree, getProducts, type CategoryNode, type ProductItem } from './products.ts';
 import { pluralRu } from './util.ts';
 import { fillPlaceholders, getSettings, officeMaps, siteSettings, type Settings } from './settings.ts';
-import { GUIDES_LABEL, getSectionGuides, pagePath } from './section-guides.ts';
+import { getSectionGuides, guidesLabel, pagePath } from './section-guides.ts';
 
 const ENTITIES: Record<string, string> = {
   nbsp: ' ', amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", laquo: '«', raquo: '»',
@@ -279,7 +279,7 @@ export async function buildSiteLlmsTxt(site: Section): Promise<string> {
   if (d.tree.length) out.push('## Группы и категории', '', ...categoryList(d, md), '');
   const guides = await getSectionGuides(site);
   if (guides.length) {
-    out.push(`## ${GUIDES_LABEL}`, '');
+    out.push(`## ${guidesLabel(guides)}`, '');
     for (const g of guides) out.push(`- [${g.title}](${d.base}${g.url}): ${oneLine(md(g.content), 160)}`);
     out.push('');
   }
@@ -320,7 +320,7 @@ export async function buildSiteLlmsFullTxt(site: Section): Promise<string> {
   if (d.tree.length) out.push('## Группы и категории', '', ...categoryList(d, md), '');
   const guides = await getSectionGuides(site);
   if (guides.length) {
-    out.push(`## ${GUIDES_LABEL}`, '');
+    out.push(`## ${guidesLabel(guides)}`, '');
     for (const g of guides) out.push(`### ${g.title}`, '', `Адрес: ${d.base}${g.url}`, '', md(g.content), '');
   }
   if (d.products.length) {
