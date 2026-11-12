@@ -168,7 +168,7 @@
 .mh .mhf { background: var(--mh-foot); color: #fff; }
 .mhf a { color: #fff; }
 .mhf a:hover { color: #b9d8c4; }
-.mhf-cols { display: grid; grid-template-columns: 236px 1fr 1fr 1fr 365px; gap: 0; max-width: 1440px; margin: 0 auto; padding: 30px 70px 30px 60px; }
+.mhf-cols { display: grid; grid-template-columns: 200px 1fr 1fr 1.25fr 340px; gap: 0 40px; max-width: 1440px; margin: 0 auto; padding: 30px 70px 30px 60px; }
 .mhf-logo img { display: block; width: 150px; height: auto; filter: brightness(0) invert(1); }
 .mhf-title { margin-bottom: 18px; color: #fff; font: 700 13px/19.5px var(--font); letter-spacing: .45px; text-transform: uppercase; }
 .mhf-col ul { margin: 0; padding: 0; list-style: none; }
