@@ -48,3 +48,23 @@ docker compose restart app
 
 Список лежит в `seed/content.json` и в админке → «Переадресации». Если в Search Console появятся другие старые
 адреса с ошибкой 404, их добавляют там же.
+
+## Старый сайт evropol.kg на Joomla
+
+До запуска нового сайта на evropol.kg работал сайт на Joomla. В ноябре 2026 года в нём было около 200 адресов:
+каталог `/katalog-bishkek/…`, товары `…/product/view/N/M.html` и `/component/jshopping/…`, страницы вроде
+`/паркетная-доска-в-бишкеке.html`. Все они ведут на каталог того же покрытия (301), по словам в адресе
+(`legacyJoomlaTarget()` в `src/server/redirects.ts`):
+
+| В старом адресе | Новый адрес |
+|---|---|
+| moduleo, disano, «виниловый паркет» | `/vinyl` |
+| «линолеум» | `/linoleum` |
+| modulyss, «ковровые плитки» | `/carpet-tiles` |
+| «ковролин», «ковры», «циновки», «коврики», «трава» | `/carpet` |
+| «ламинат», товары HARO `/component/jshopping/product/view/5/…` | `/laminate` |
+| «паркет», «пробковый», celenio, haro | `/parquet` (дальше на domparketa.kg/parquet) |
+| `/доставка` | `/contact` |
+| каталог, плинтусы, подложка, остальные страницы | `/` |
+
+Таблица «Переадресации» в админке главнее этих правил.

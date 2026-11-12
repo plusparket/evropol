@@ -32,6 +32,37 @@ docker compose up -d --build
 - свои `POSTGRES_PASSWORD` и `ADMIN_PASSWORD`. Пароль базы задаётся один раз: база создаётся с ним при первом запуске;
 - `INSTAGRAM_TOKEN` — по желанию, см. [news-instagram.md](news-instagram.md).
 
+## Переезд с компьютера владельца на сервер
+
+Сайт наполняли на компьютере владельца, поэтому база и загруженные фото переезжают оттуда, а не создаются заново.
+
+На компьютере (папка сайта, Docker запущен):
+
+```bash
+docker compose exec -T db pg_dump -U europroject -Fc europroject > evropol.dump
+docker compose cp app:/app/data/uploads ./uploads-export
+```
+
+На сервере, после `docker compose up -d --build` (файлы `evropol.dump` и папка `uploads-export` скопированы
+в `/opt/europroject`):
+
+```bash
+docker compose exec -T db pg_restore -U europroject -d europroject --clean --if-exists --no-owner < evropol.dump
+docker compose cp ./uploads-export/. app:/app/data/uploads/
+docker compose restart app
+```
+
+Пароль администратора и всё содержимое после этого такие же, как на компьютере.
+
+## Переключение домена
+
+Сейчас evropol.kg указывает на старый сайт на Joomla (хостинг hoster.kg). Порядок:
+
+1. Сайт запущен на сервере, проверен по IP: `curl -H 'Host: evropol.kg' http://IP/`.
+2. В панели hoster.kg у домена evropol.kg A-записи `@` и `www` меняются на IP сервера.
+3. Через 5–30 минут Caddy сам выпускает сертификат, сайт открывается по https://evropol.kg.
+4. Старые адреса Joomla ведут на новые страницы (301), см. [legacy-site.md](legacy-site.md).
+
 После запуска — шаги в Google по [seo.md](seo.md): Search Console, карты сайтов, Analytics.
 
 ## Обновление
